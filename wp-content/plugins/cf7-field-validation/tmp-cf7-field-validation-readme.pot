@@ -1,0 +1,58 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Contact form 7 Custom validation"
+msgstr ""
+
+#. Short description.
+msgid "Contact Form 7 validation messages provide custom error messages for each field."
+msgstr ""
+
+#. Screenshot description.
+msgid "Screenshot-1.png shows front-end custom error messages in contact form."
+msgstr ""
+
+#. Screenshot description.
+msgid "Screenshot-2.png shows How to set custom error messages for each fields in contact form message Tab."
+msgstr ""
+
+#. Found in description list item.
+msgid "Add Custom Validation Message to Contact Form Fields."
+msgstr ""
+
+#. Found in description list item.
+msgid "Allows field to be validated for text, text area, email, url, radio, phone number and more."
+msgstr ""
+
+#. Found in description list item.
+msgid "Error message for individual fields."
+msgstr ""
+
+#. Found in description list item.
+msgid "You can add custom validation with multiple forms."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "This plugin add custom validation messages to individual fields of your contact form 7. You will be able to add your custom error message for text, text area, email, url, radio, phone number etc fields in contact form 7."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Features of this plugin."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload plugin to the /wp-content/plugins/ directory."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the \\'Plugins\\' menu in WordPress admin. "
+msgstr ""
+
+#. Found in installation list item.
+msgid "Add messages in contact form7 message tab after creating any form."
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "1.0 first release."
+msgstr ""

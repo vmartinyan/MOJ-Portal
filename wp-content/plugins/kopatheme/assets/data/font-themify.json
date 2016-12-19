@@ -1,0 +1,3170 @@
+[
+  {
+    "selector": ".ti-wand:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e600\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-volume:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e601\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-user:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e602\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-unlock:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e603\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-unlink:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e604\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-trash:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e605\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-thought:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e606\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-target:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e607\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-tag:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e608\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-tablet:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e609\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-star:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e60a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-spray:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e60b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-signal:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e60c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shopping-cart:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e60d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shopping-cart-full:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e60e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-settings:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e60f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-search:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e610\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-zoom-in:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e611\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-zoom-out:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e612\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-cut:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e613\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-ruler:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e614\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-ruler-pencil:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e615\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-ruler-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e616\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bookmark:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e617\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bookmark-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e618\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-reload:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e619\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-plus:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e61a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pin:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e61b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pencil:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e61c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pencil-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e61d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-paint-roller:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e61e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-paint-bucket:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e61f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-na:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e620\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-mobile:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e621\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-minus:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e622\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-medall:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e623\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-medall-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e624\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-marker:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e625\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-marker-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e626\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e627\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e628\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e629\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e62a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-lock:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e62b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-location-arrow:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e62c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-link:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e62d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e62e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layers:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e62f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layers-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e630\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-key:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e631\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-import:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e632\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-image:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e633\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-heart:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e634\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-heart-broken:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e635\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hand-stop:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e636\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hand-open:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e637\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hand-drag:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e638\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-folder:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e639\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-flag:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e63a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-flag-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e63b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-flag-alt-2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e63c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-eye:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e63d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-export:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e63e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-exchange-vertical:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e63f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-desktop:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e640\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-cup:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e641\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-crown:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e642\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-comments:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e643\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-comment:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e644\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-comment-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e645\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-close:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e646\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-clip:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e647\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e648\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e649\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e64a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e64b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-check:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e64c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-check-box:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e64d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-camera:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e64e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-announcement:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e64f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-brush:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e650\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-briefcase:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e651\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bolt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e652\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bolt-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e653\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-blackboard:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e654\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bag:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e655\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-move:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e656\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrows-vertical:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e657\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrows-horizontal:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e658\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-fullscreen:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e659\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-top-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e65a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-top-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e65b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-circle-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e65c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-circle-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e65d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-circle-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e65e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrow-circle-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e65f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-double-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e660\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-double-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e661\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-double-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e662\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-angle-double-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e663\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-zip:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e664\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-world:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e665\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-wheelchair:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e666\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-view-list:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e667\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-view-list-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e668\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-view-grid:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e669\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-uppercase:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e66a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-upload:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e66b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-underline:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e66c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-truck:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e66d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-timer:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e66e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-ticket:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e66f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-thumb-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e670\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-thumb-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e671\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-text:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e672\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-stats-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e673\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-stats-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e674\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-split-v:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e675\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-split-h:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e676\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-smallcap:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e677\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shine:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e678\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shift-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e679\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shift-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e67a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shield:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e67b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-notepad:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e67c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-server:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e67d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-quote-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e67e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-quote-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e67f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pulse:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e680\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-printer:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e681\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-power-off:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e682\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-plug:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e683\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pie-chart:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e684\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-paragraph:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e685\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-panel:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e686\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-package:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e687\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-music:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e688\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-music-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e689\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-mouse:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e68a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-mouse-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e68b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-money:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e68c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-microphone:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e68d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-menu:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e68e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-menu-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e68f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-map:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e690\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-map-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e691\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-loop:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e692\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-location-pin:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e693\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-list:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e694\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-light-bulb:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e695\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-Italic:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e696\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-info:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e697\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-infinite:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e698\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-id-badge:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e699\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hummer:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e69a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-home:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e69b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-help:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e69c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-headphone:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e69d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-harddrives:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e69e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-harddrive:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e69f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-gift:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a0\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-game:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a1\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-filter:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a2\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-files:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a3\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-file:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a4\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-eraser:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a5\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-envelope:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a6\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-download:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a7\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-direction:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a8\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-direction-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6a9\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-dashboard:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6aa\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-stop:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ab\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-shuffle:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ac\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-play:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ad\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-pause:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ae\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-forward:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6af\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-backward:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b0\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-cloud:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b1\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-cloud-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b2\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-cloud-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b3\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-clipboard:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b4\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-car:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b5\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-calendar:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b6\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-book:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b7\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bell:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b8\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-basketball:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6b9\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bar-chart:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ba\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-bar-chart-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6bb\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-back-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6bc\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-back-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6bd\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-arrows-corner:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6be\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-archive:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6bf\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-anchor:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c0\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-align-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c1\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-align-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c2\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-align-justify:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c3\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-align-center:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c4\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-alert:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c5\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-alarm-clock:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c6\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-agenda:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c7\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-write:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c8\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-window:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6c9\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-widgetized:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ca\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-widget:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6cb\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-widget-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6cc\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-wallet:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6cd\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-video-clapper:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ce\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-video-camera:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6cf\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-vector:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d0\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-themify-logo:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d1\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-themify-favicon:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d2\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-themify-favicon-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d3\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-support:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d4\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-stamp:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d5\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-split-v-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d6\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-slice:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d7\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shortcode:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d8\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shift-right-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6d9\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-shift-left-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6da\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-ruler-alt-2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6db\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-receipt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6dc\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pin2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6dd\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pin-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6de\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pencil-alt2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6df\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-palette:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e0\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-more:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e1\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-more-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e2\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-microphone-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e3\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-magnet:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e4\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-line-double:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e5\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-line-dotted:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e6\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-line-dashed:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e7\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-width-full:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e8\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-width-default:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6e9\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-width-default-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ea\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-tab:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6eb\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-tab-window:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ec\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-tab-v:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ed\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-tab-min:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ee\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-slider:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ef\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-slider-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f0\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-sidebar-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f1\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-sidebar-none:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f2\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-sidebar-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f3\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-placeholder:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f4\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-menu:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f5\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-menu-v:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f6\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-menu-separated:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f7\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-menu-full:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f8\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-right-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6f9\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6fa\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-overlay:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6fb\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-overlay-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6fc\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-overlay-alt-2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6fd\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-left-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6fe\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e6ff\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-center-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e700\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-media-center:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e701\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-list-thumb:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e702\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-list-thumb-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e703\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-list-post:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e704\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-list-large-image:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e705\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-line-solid:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e706\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-grid4:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e707\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-grid3:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e708\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-grid2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e709\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-grid2-thumb:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e70a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-cta-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e70b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-cta-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e70c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-cta-center:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e70d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-cta-btn-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e70e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-cta-btn-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e70f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-column4:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e710\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-column3:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e711\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-column2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e712\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-accordion-separated:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e713\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-accordion-merged:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e714\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-accordion-list:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e715\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-ink-pen:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e716\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-info-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e717\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-help-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e718\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-headphone-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e719\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hand-point-up:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e71a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hand-point-right:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e71b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hand-point-left:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e71c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-hand-point-down:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e71d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-gallery:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e71e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-face-smile:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e71f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-face-sad:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e720\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-credit-card:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e721\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-skip-forward:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e722\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-skip-backward:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e723\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-record:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e724\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-control-eject:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e725\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-comments-smiley:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e726\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-brush-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e727\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-youtube:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e728\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-vimeo:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e729\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-twitter:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e72a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-time:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e72b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-tumblr:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e72c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-skype:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e72d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-share:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e72e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-share-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e72f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-rocket:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e730\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pinterest:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e731\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-new-window:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e732\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-microsoft:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e733\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-list-ol:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e734\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-linkedin:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e735\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-sidebar-2:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e736\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-grid4-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e737\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-grid3-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e738\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-grid2-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e739\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-column4-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e73a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-column3-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e73b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-layout-column2-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e73c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-instagram:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e73d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-google:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e73e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-github:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e73f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-flickr:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e740\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-facebook:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e741\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-dropbox:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e742\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-dribbble:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e743\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-apple:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e744\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-android:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e745\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-save:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e746\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-save-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e747\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-yahoo:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e748\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-wordpress:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e749\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-vimeo-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e74a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-twitter-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e74b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-tumblr-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e74c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-trello:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e74d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-stack-overflow:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e74e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-soundcloud:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e74f\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-sharethis:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e750\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-sharethis-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e751\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-reddit:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e752\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-pinterest-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e753\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-microsoft-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e754\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-linux:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e755\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-jsfiddle:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e756\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-joomla:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e757\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-html5:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e758\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-flickr-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e759\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-email:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e75a\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-drupal:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e75b\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-dropbox-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e75c\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-css3:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e75d\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-rss:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e75e\""
+      }
+    ]
+  },
+  {
+    "selector": ".ti-rss-alt:before",
+    "rules": [
+      {
+        "directive": "content",
+        "value": "\"\\e75f\""
+      }
+    ]
+  }
+]

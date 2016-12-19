@@ -1,0 +1,19 @@
+{
+  "name": "kopatheme",
+  "version": "1.2.3",
+  "license": "GPL-3.0",
+  "repository": "https://192.168.100.50/svn/framework-plugin/trunk",
+  "description": "A WordPress framework by Kopatheme.",
+  "main": "Gruntfile.js",
+  "author": "kopatheme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "jshint-stylish": "latest"  	
+  }
+}

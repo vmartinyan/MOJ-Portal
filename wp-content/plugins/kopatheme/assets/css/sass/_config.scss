@@ -1,0 +1,16 @@
+$color__action--01: #455a64;
+$color_action--02: #9e9e9e;
+
+@mixin transition($time) {
+    transition: all $time;
+    -ms-transition: all $time;
+    -webkit-transition: all $time;
+    -moz-transition: all $time;
+}
+
+@mixin transition_m($var, $time) {
+    transition: $var $time;
+    -ms-transition: $var $time;
+    -webkit-transition: $var $time;
+    -moz-transition: $var $time;
+}
