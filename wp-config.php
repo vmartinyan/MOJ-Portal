@@ -23,13 +23,13 @@
 define('DB_NAME', 'db_9bd244_moj_1');
 
 /** MySQL database username */
-define('DB_USER', '9bd244_moj_1');
+define('DB_USER', 'root');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'ASDqwe123');
 
 /** MySQL hostname */
-define('DB_HOST', 'MYSQL5015.SmarterASP.NET');
+define('DB_HOST', '192.168.7.57');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
