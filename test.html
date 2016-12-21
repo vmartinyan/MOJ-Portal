@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="form-group">
+        <label for="name">Անուն Ազգանուն</label>
+        [text* name id:name class:form-control]
+    </div>
+    <div class="form-group">
+        <label for="email">Էլ․ Փոստ (պարտադիր)</label>
+        [email* email id:email class:form-control]
+    </div>
+    <div class="form-group">
+        <label for="phone">Հեռախոս</label>
+        [tel phone id:phone class:form-control]
+    </div>
+    <div class="form-group">
+        <label for="address">Հասցե</label>
+        [text address id:address class:form-control]
+    </div>
+    <div class="form-group">
+        <label for="sphere">Ոլորտ</label>
+        [select sphere id:sphere "ՔԿԱԳ" "ԴԱՀԿ" "ՔԿՀ" class:form-control]
+    </div>
+    <div class="form-group">
+        <label for="message">Հաղորդագրություն</label>
+        [textarea* message id:message class:form-control]
+    </div>
+    [submit id:sbmt class:btn class:btn-info "Ուղարկել"]
+
+
+    <label for="message">
+        Հաղորդագրություն
+        
+    </label>
+
+    [submit id:sbmt class:btn class:btn-success "Ուղարկել"]
+
+
+
+                
+
+
+
+</body>
+</html>

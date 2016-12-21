@@ -5,7 +5,7 @@ $sb_footer_14       = apply_filters('nictitate_lite_get_sidebar', 'sidebar_14', 
 
     <?php get_template_part( 'templates/content/content', 'page-title' ); ?>
 
-    <div class="wrapper">
+    <div class="wrapper container">
 
         <div class="row-fluid">
 

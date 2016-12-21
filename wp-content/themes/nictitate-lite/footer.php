@@ -37,10 +37,10 @@ if ( is_active_sidebar( $sb_footer_10 ) || is_active_sidebar( $sb_footer_11 ) ||
 
 
 <footer id="page-footer">
-    <div class="wrapper">
+    <div class="wrapper container">
         <div class="row-fluid">
             <div class="span12">
-                <p id="copyright"><?php echo stripslashes(get_theme_mod('nictitate_lite_options_copyright', 'Copyrights. &copy; 2014')); ?></p>
+                <p id="copyright"><?php echo stripslashes(get_theme_mod('nictitate_lite_options_copyright', 'Copyrights. &copy; 2017')); ?></p>
                 <?php
                 if (has_nav_menu('bottom-nav')) {
                     wp_nav_menu(array(

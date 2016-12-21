@@ -434,7 +434,7 @@ a,
 Colunms
 ============================================================ */
 .wrapper{
-    width:1086px;
+    /*width:1086px;*/
     margin: 0 auto;
 }
 .wrapper.full-width {
@@ -505,6 +505,7 @@ Header
     float:right;
     margin-left:50px;
     position:relative;
+    height:40px;
 }
 #header-top .search-icon {
     background:url(images/icons/search-icon.png) no-repeat center center #194A73;
@@ -3369,4 +3370,11 @@ p.hot-line a{
 
 p.hot-line a:hover{
     color: #428AB2 !important;
+}
+
+/* For Contact form*/
+.wpcf7-form input, 
+.wpcf7-form select,
+.wpcf7-form textarea{
+    border-radius:0;
 }

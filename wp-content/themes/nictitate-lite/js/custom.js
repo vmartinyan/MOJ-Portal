@@ -703,34 +703,44 @@ jQuery(document).ready(function() {
     }
 });
 
+/* =========================================================
+Main Vahram Martinyan
+ ============================================================ */
+/* main height*/
+var windowHeight = jQuery(window).height();
+var headerHeight = jQuery("header#page-header").height();
+var footerHeight = jQuery("footer#page-footer").height();
+var mainContHeight = windowHeight - headerHeight - footerHeight;
+jQuery("#main-content").css("min-height", mainContHeight)
 
 
+/* for scrol*/
 jQuery(window).scroll(function(){
     if(jQuery(this).scrollTop()>40){
-//        jQuery("#header-logo").animate({
-//            width: "40px",
-//            height: "40px",
-//            "padding-top": "5px"
-//        }, 500);
-//        jQuery("#header-logo").next("h1").animate({
-//            "margin-left": "70px"
-//        }, 500)
-        jQuery("#header-logo").height(40).css("padding-top", "5px");
-        jQuery("#header-logo").width(40);
-        jQuery("#header-logo").next("h1").css("margin-left", "70px");
+        jQuery("#header-logo").stop().animate({
+            width: "40px",
+            height: "40px",
+            "margin-top": "7px"
+        }, 500);
+        jQuery("#header-logo").next("h1").stop().animate({
+            "margin-left": "70px"
+        }, 500)
+        //jQuery("#header-logo").height(40).css("padding-top", "5px");
+        //jQuery("#header-logo").width(40);
+        //jQuery("#header-logo").next("h1").css("margin-left", "70px");
     }
     else {
-        jQuery("#header-logo").height(100).css("padding-top", "0");
-        jQuery("#header-logo").width(100);
-        jQuery("#header-logo").next("h1").css("margin-left", "130px");
-//jQuery("#header-logo").animate({
-//            width: "100px",
-//            height: "100px",
-//            "padding-top": "0"
-//        }, 500);
-//        jQuery("#header-logo").next("h1").animate({
-//            "margin-left": "130px"
-//        }, 500)
+        //jQuery("#header-logo").height(100).css("padding-top", "0");
+        //jQuery("#header-logo").width(100);
+        //jQuery("#header-logo").next("h1").css("margin-left", "130px");
+        jQuery("#header-logo").stop().animate({
+            width: "100px",
+            height: "100px",
+            "margin-top": "0"
+        });
+        jQuery("#header-logo").next("h1").stop().animate({
+            "margin-left": "130px"
+        }, 500)
         
     }
   });

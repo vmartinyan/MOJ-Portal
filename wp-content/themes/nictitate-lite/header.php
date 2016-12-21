@@ -21,7 +21,7 @@
             <header id="page-header">
                 
 <div id="header-top">
-                    <div class="wrapper">
+                    <div class="wrapper container">
                         <div class="row-fluid">
                             <div class="span12 clearfix">
                                 <p class="hot-line">
@@ -59,8 +59,8 @@
                 if ('enable' === get_theme_mod('nictitate_lite_options_sticky_menu_status', 'enable')) {
                     echo 'cbp-af-header';
                 }
-                ?>">
-                    <div class="wrapper">
+                                               ?>">
+                    <div class="wrapper container">
                         <div class="row-fluid">
                             <div class="span12 clearfix">                                
                                 <?php
