@@ -6,6 +6,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Title
+ * Use in Layout Manage
  * 
  * @author kopatheme <http://kopatheme.com>
  * 

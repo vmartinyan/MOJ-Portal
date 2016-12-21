@@ -1,7 +1,7 @@
 <?php
 
-if ( !defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (!defined('ABSPATH')) {
+    die('-1');
 }
 
 /**
@@ -16,7 +16,6 @@ require_once 'default_fields.php';
 require_once 'deprecated_fields.php';
 
 //Load advanced fields
-require_once 'field_icon.php';
 require_once 'field_icon_picker.php';
 require_once 'field_color.php';
 require_once 'field_gallery_sortable.php';
@@ -32,52 +31,48 @@ require_once 'field_title.php';
 require_once 'field_caption.php';
 require_once 'field_quote.php';
 require_once 'field_chosen.php';
-require_once 'field_chosen_singular.php';
 require_once 'field_repeater.php';
 require_once 'field_repeater_link.php';
 require_once 'field_radio_image.php';
-
+require_once 'field_taxonomy.php';
+require_once 'field_singular.php';
+require_once 'field_link.php';
 /**
  * Register form fields in global list
  */
 global $kopa_form_fields;
+
 $kopa_form_fields = array(
-	'text',
-	'url',
-	'email',
-	'number',
-	'password',
-	'select',
-	'multiselect',
-	'textarea',
-	'checkbox',
-	'multicheck',
-	'radio',
-	'textarea',
-	'datetime',	
-	// Advanced
-	'icon',
-	'icon_picker',
-	'color',
-	'gallery',
-	'gallery_sortable',
-	'upload',
-	'image',
-	'import',
-	'export',
-	'select_font',
-	'custom_font_manager',
-	'groupstart',
-	'groupend',
-	'layout_manager',
-	'restore_default',
-	'sidebar_manager',
-	'title',
-	'caption',
-	'quote',
-	'chosen',
-	'chosen_singular',
-	'repeater',
-	'repeater_link',
-	'radio_image'
+    'text',
+    'url',
+    'email',
+    'number',
+    'password',
+    'select',
+    'multiselect',
+    'textarea',
+    'checkbox',
+    'multicheck',
+    'radio',
+    'textarea',
+    'datetime',
+    //Deprecated
+    'icon',
+    'gallery',
+    'chosen_singular',
+    //Advanced
+    'icon_picker',
+    'color',
+    'gallery_sortable',
+    'upload',
+    'image',
+    'caption',
+    'quote',
+    'chosen',
+    'repeater',
+    'repeater_link',
+    'radio_image',
+    'taxonomy',
+    'singular',
+    'link'
 );

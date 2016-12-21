@@ -6,6 +6,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Layout Manager
+ * Use in Theme option Layout
  * 
  * @author kopatheme <http://kopatheme.com>
  * 

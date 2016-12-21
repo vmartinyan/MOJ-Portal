@@ -1,7 +1,7 @@
 <?php
 
-if ( !defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (!defined('ABSPATH')) {
+    die('-1');
 }
 
 /**
@@ -17,44 +17,44 @@ if ( !defined( 'ABSPATH' ) ) {
  * @since 1.0.5
  * @return string - html string.
  */
-function kopa_form_field_upload( $wrap_start, $wrap_end, $settings, $value ) {
-	// make sure mimes key is set
-	$settings = wp_parse_args( $settings, array( 'mimes' => '' ) );
+function kopa_form_field_upload($wrap_start, $wrap_end, $settings, $value) {
+    // make sure mimes key is set
+    $settings = wp_parse_args($settings, array('mimes' => ''));
 
-	$output = $wrap_start;
+    $output = $wrap_start;
 
-	$output .= '<div class="kopa_section">';
+    $output .= '<div class="kopa-field_upload__outer">';
 
-	$output .= '<input type="text" class="large-text kopa_upload" name="' . esc_attr( $settings['id'] ) . '" id="' . esc_attr( $settings['id'] ) . '" value="' . esc_attr( $value ) . '" data-type="' . esc_attr( $settings['mimes'] ) . '">';
+    $output .= '<input type="text" class="large-text kopa_upload" name="' . esc_attr($settings['name']) . '" id="' . esc_attr($settings['id']) . '" value="' . esc_attr($value) . '" data-type="' . esc_attr($settings['mimes']) . '">';
 
-	$output .= '<br>';
+    $output .= '<br>';
 
-	if ( function_exists( 'wp_enqueue_media' ) ) {
-		if ( $value == '' ) {
-			$output .= '<a style="margin-top: 3px" class="kopa_upload_button button">' . esc_html__( 'Upload', 'kopatheme' ) . '</a>';
-		} else {
-			$output .= '<a style="margin-top: 3px" class="kopa_remove_file button">' . esc_html__( 'Remove', 'kopatheme' ) . '</a>';
-		}
-	} else {
-		$output .= '<small class="kopa_upload_notice">' . esc_html__( 'Upgrade your version of WordPress for full media support.', 'kopatheme' ) . '</small>';
-	}
+    if (function_exists('wp_enqueue_media')) {
+        if ($value == '') {
+            $output .= '<a style="margin-top: 3px" class="kopa_upload_button button">' . esc_html__('Upload', 'kopatheme') . '</a>';
+        } else {
+            $output .= '<a style="margin-top: 3px" class="kopa_remove_file button">' . esc_html__('Remove', 'kopatheme') . '</a>';
+        }
+    } else {
+        $output .= '<small class="kopa_upload_notice">' . esc_html__('Upgrade your version of WordPress for full media support.', 'kopatheme') . '</small>';
+    }
 
-	$output .= '<p class="kopa_screenshot">';
+    $output .= '<p class="kopa_screenshot">';
 
-	if ( $value ) {
-		$remove = '<a class="button kopa_remove_image">' . esc_html__( 'Remove', 'kopatheme' ) . '</a>';
-		$image = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $value );
-		if ( $image ) {
-			$output .= '<img style="max-width: 300px" src="' . esc_attr( $value ) . '" alt=""><br>' . $remove;
-		}
-	}
+    if ($value) {
+        $remove = '<a class="button kopa_remove_image">' . esc_html__('Remove', 'kopatheme') . '</a>';
+        $image = preg_match('/(^.*\.jpg|jpeg|png|gif|ico*)/i', $value);
+        if ($image) {
+            $output .= '<img style="max-width: 300px" src="' . esc_attr($value) . '" alt=""><br>' . $remove;
+        }
+    }
 
-	$output .= '</p>';
+    $output .= '</p>';
 
 
-	$output .= '</div>';
-	
-	$output .= $wrap_end;
+    $output .= '</div>';
 
-	return $output;
+    $output .= $wrap_end;
+
+    return $output;
 }

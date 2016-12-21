@@ -250,8 +250,9 @@
       color: #fff; }
   #kopa_options_wrap .kopa_controls .kopa_upload_button, #kopa_options_wrap .kopa_controls .kopa_remove_file {
     position: absolute;
-    right: -1px;
-    top: 16px;
+    margin-top: 0 !important;
+    right: 0px;
+    top: 0px;
     display: inline-block;
     width: auto;
     background: #f7f7f7;
@@ -267,12 +268,6 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07) inset;
     border: 1px solid #d3d7da;
     display: inline-block; }
-  #kopa_options_wrap .kopa_controls .kopa_select_font,
-  #kopa_options_wrap .kopa_controls .kopa_select_font_style,
-  #kopa_options_wrap .kopa_controls .kopa_select_font_size,
-  #kopa_options_wrap .kopa_controls .wp-picker-container {
-    float: left;
-    margin-right: 20px; }
   #kopa_options_wrap .kopa_controls .kopa_select_font {
     width: 300px; }
     #kopa_options_wrap .kopa_controls .kopa_select_font optgroup {
@@ -609,6 +604,14 @@
   padding: 2px;
   border: 1px solid #ddd;
   background-color: #fafafa; }
+
+.kopa_section_select_font .kopa_select_font,
+.kopa_section_select_font .kopa_select_font_style,
+.kopa_section_select_font .kopa_select_font_size,
+.kopa_section_select_font .wp-picker-container {
+  display: block;
+  float: left;
+  margin-right: 20px !important; }
 
 @media screen and (max-width: 1023px) {
   #kopa_options_wrap .postbox {

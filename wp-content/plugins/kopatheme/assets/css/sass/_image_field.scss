@@ -1,108 +1,108 @@
 .kopa-field{
 
-	&.kopa-field-image-thumb{
-		width: 150px;		 
-		height: 100px;
-	
-		.item-add{
-			width: 150px;		 			   
-      .img{
-        width: 100%;
+    &.kopa-field-image-thumb{
+        width: 150px;		 
         height: 100px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-      }
-		}		
-	}
 
-
-	&.kopa-field-image-full{
-		.item-add{      
-      height: 102px;
-      .img{
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-      }
-		}
-	}
-
-  &.kopa-field-image{
-    &{
-        position: relative;
+        .item-add{
+            width: 150px;		 			   
+            .img{
+                width: 100%;
+                height: 100px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+            }
+        }		
     }
-    &.hasimage{
-			background: url( ../images/transp_bg.png ) repeat center center transparent;	
-	
-      .item-add{
-          border: none;
-      }
-    }
-    .item-add{
-      &{
-        display: block;
-        height: 102px;
-        overflow: hidden;
-        position: relative;
-        border: 1px dashed rgba(125, 125, 125, 0.4);
-      }
 
-      &:before{
-        content: "";
+    &.kopa-field-image-full{
+        .item-add{      
+            height: 102px;
+            .img{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
+    &.kopa-field-image{
+        position: relative;
+        
+        .item-add{
+            &{
+                display: block;
+                height: 102px;
+                overflow: hidden;
+                position: relative;
+                border: 1px dashed rgba(125, 125, 125, 0.4);
+            }
+
+            &:before{
+                content: "";
+                display: block;
+                width: 39px;
+                height: 38px;
+                background-image: url('../images/empty_row_sprite.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                border: none !important;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                margin: auto;
+            }
+            &:hover:before{
+                background-position: bottom center;
+            }
+        }
+
+        &.hasimage{
+            background-image: url(' ../images/transp_bg.png' );
+            background-position: center;
+
+            .item-add{
+                border: none;
+            }
+        }
+
+        .item-remove{
+            display: none;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            width: 25px;
+            height: 25px;
+            background: url("../images/remove.png") no-repeat;
+            background-size: 10px;
+            background-position: center;
+            display: none;
+            cursor: pointer;
+            border: none;
+        }
+    }
+
+    img{
+        border:1px solid #d5d5d5;
+        max-width: 100%;
+    }
+
+    &.hasimage:hover .item-remove{
         display: block;
-        width: 39px;
-        height: 38px;
-        background-image: url('../images/empty_row_sprite.png');
-        background-position: top center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        border: none !important;
+    }
+
+    &.hasimage .item-add:before{
+        display: none;
+    }
+
+    &.header_image a img{
+        height: auto;
         position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        margin: auto;
-      }
-      &:hover:before{
-        background-position: bottom center;
-      }
     }
-
-    .item-remove{
-      display: none;
-      position: absolute;
-      top: 1px;
-      right: 1px;
-      width: 25px;
-      height: 25px;
-      background: url("../images/remove.png") no-repeat;
-      background-size: 10px;
-      background-position: center;
-      display: none;
-      cursor: pointer;
-      border: none;
-    }
-  }
-
-  img{
-    border:1px solid #d5d5d5;
-    max-width: 100%;
-  }
-
-  &.hasimage:hover .item-remove{
-    display: block;
-  }
-
-  &.hasimage .item-add:before{
-    display: none;
-  }
-
-  &.header_image a img{
-    height: auto;
-    position: absolute;
-  }
 }
 

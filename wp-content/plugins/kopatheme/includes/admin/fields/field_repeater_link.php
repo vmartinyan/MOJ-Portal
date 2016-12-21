@@ -11,7 +11,7 @@ function kopa_form_field_repeater_link( $wrap_start, $wrap_end, $field, $value )
 	$field_id   = str_replace( '[', '-', $field_id );
 	$field_id   = str_replace( ']', '', $field_id );
 	
-	$field_name = $field['id'];
+	$field_name = $field['name'];
 
 
 	$ui_classes = array( 'kopa-ui-repeater-links' );

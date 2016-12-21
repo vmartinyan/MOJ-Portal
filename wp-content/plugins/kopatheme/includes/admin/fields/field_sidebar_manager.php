@@ -6,6 +6,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Sidebar manager
+ * Use in Theme option sidebar
  * 
  * @author kopatheme <http://kopatheme.com>
  * 

@@ -109,8 +109,10 @@ if (!class_exists('Kopa_Admin_Term_Meta')) {
             foreach ($this->settings['fields'] as $settings) {
 
                 $settings['id'] = isset($settings['id']) ? $settings['id'] : '';
+                $settings['name'] = isset($settings['name']) ? $settings['name'] : $settings['id'];
 
                 $value = '';
+
                 if ($term_id) {
                     if (metadata_exists('term', $term_id, $settings['id'])) {
                         $value = get_term_meta($term_id, $settings['id'], true);
@@ -130,11 +132,10 @@ if (!class_exists('Kopa_Admin_Term_Meta')) {
                  * Search field index
                  * @since 1.1.9
                  */
-                $field_keys = array_keys($kopa_form_fields, $settings['type']);
+                $form_field_callback = false;
 
-                $form_field_callback = 'kopa_form_field_';
-                if (isset($field_keys[0])) {
-                    $form_field_callback = $form_field_callback . $kopa_form_fields[$field_keys[0]];
+                if (in_array($settings['type'], $kopa_form_fields)) {
+                    $form_field_callback = 'kopa_form_field_' . $settings['type'];
                 }
 
 
@@ -142,7 +143,7 @@ if (!class_exists('Kopa_Admin_Term_Meta')) {
                  * Check form field is exist then call function
                  * @since 1.1.9
                  */
-                if (function_exists($form_field_callback)) {
+                if ($form_field_callback && function_exists($form_field_callback)) {
                     $output.=call_user_func($form_field_callback, $wrap_start, $wrap_end, $settings, $value);
                 } else {
                     $output .= apply_filters('kopa_admin_taxonomy_field_' . $settings['type'], '', $wrap_start, $wrap_end, $settings, $value);

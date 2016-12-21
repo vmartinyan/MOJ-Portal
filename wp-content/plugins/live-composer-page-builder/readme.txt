@@ -2,8 +2,8 @@
 Contributors: LiveComposer
 Tags: page builder, visual composer, visual editor, visual builder, drag and drop builder, landing page builder, frontend editor, frontend builder, landing pages, landing page, website builder, theme builder, site-builder, layout builder, drag-and-drop, builder, editor, responsive, mobile, layout, front end, frontend, Page Layout, squeeze page, page builder plugin, drag-n-drop page builder
 Requires at least: 4.3
-Tested up to: 4.6
-Stable tag: 1.1.3
+Tested up to: 4.7
+Stable tag: 1.2
 License: GPLv3
 
 Front-end page builder for WordPress with drag and drop editing. Build PRO responsive websites and landing pages. Visually customize any page element.
@@ -11,7 +11,7 @@ Front-end page builder for WordPress with drag and drop editing. Build PRO respo
 == Description ==
 
 > <strong>NO Premium Version Available!</strong><br>
-> Unlike other page builders, <strong>Live Composer is 100% free</strong> and open source. We provide full functionality out of the box without asking to buy a premium version. There is no premium version of the page builder to up-sell, no hidden ads or annoying notices trying to sell something. We make money from our other business (premium themes) were we use Live Composer as part of a deal, so it's our best interest to improve and update it.
+> Unlike other page builders, <strong>Live Composer is 100% free</strong> and open source. We provide full functionality out of the box. We make money from our other business (premium themes) were we use Live Composer as part of a deal. It's our best interest to constantly improve it and keep updated.
 
 > <strong>Use Live Composer in your premium themes</strong><br>
 > Live Composer is open source page builder. You can use it to build any free or premium theme. It's easy to ship your designs with Live Composer and create new additional modules.
@@ -22,23 +22,23 @@ Front-end page builder for WordPress with drag and drop editing. Build PRO respo
 
 Do it yourself with easy content editing in real-time. Save your money on expensive coding and customization services. No tech skills needed. Live Composer is a great tool for web designers, digital marketing specialists, WordPress theme developers and freelance consultants. Create an exceptional landing page, portfolio or fully featured pro website for your client.
 
-= As Featured Onâ€¦ =
+= As Featured On =
 
-* [WPLift](http://wplift.com/) â€“ WPLift is a blog all about WordPress, they cover tips & tutorials, theme & plugin reviews and everything else related to WordPress.
+* [WPLift](http://wplift.com/) - WPLift is a blog all about WordPress, they cover tips & tutorials, theme & plugin reviews and everything else related to WordPress.
 
-* [TORQUE](http://torquemag.io/) â€“ The WordPress News Core. Dedicated to informing new and advanced WordPress users about the industry
+* [TORQUE](http://torquemag.io/) - The WordPress News Core. Dedicated to informing new and advanced WordPress users about the industry
 
-* [WPExplorer.com](http://www.wpexplorer.com/) â€“ number one source for all things WordPress related.
+* [WPExplorer.com](http://www.wpexplorer.com/) - number one source for all things WordPress related.
 
-* [ATHEMES](http://athemes.com/blog/) â€“ WordPress reviews, collections and performance tips
+* [ATHEMES](http://athemes.com/blog/) - WordPress reviews, collections and performance tips
 
 = Over 30,000 Site Owners Chose Live Composer =
 
-You can trust our page builder. Itâ€™s a proven solution for your business. 100% open source and backed by the experienced team of web developers. We are on the market for more than 2 years. All the major bugs already fixed and new updates released regularly. Every day our developers work on code improvement and new features. Our support is exceptional but still free.
+You can trust our page builder. It's a proven solution for your business. 100% open source and backed by the experienced team of web developers. We are on the market for more than 2 years. All the major bugs already fixed and new updates released regularly. Every day our developers work on code improvement and new features. Our support is exceptional but still free.
 
 = Get Started Without Reading Any Documentation =
 
-Site design customization or page layout changes shouldn't be difficult or expensive. Our page builder is easy to use without reading any documentation. You'll be building beautiful custom WordPress site designs in no time. Create multi-media rich pages with very little effort: add new sections, rearrange columns, and add media from the same screen. Itâ€™s a perfect solution for ALL users. No technical skills required.
+Site design customization or page layout changes shouldn't be difficult or expensive. Our page builder is easy to use without reading any documentation. You'll be building beautiful custom WordPress site designs in no time. Create multi-media rich pages with very little effort: add new sections, rearrange columns, and add media from the same screen. It's a perfect solution for ALL users. No technical skills required.
 
 = Create Custom Page Layouts in Minutes =
 
@@ -46,11 +46,11 @@ Live Composer is a simple but very powerful [WordPress site builder](https://liv
 
 = Well Integrated With WordPress =
 
-Our page builder works with works with any standard compliant WordPress theme. Itâ€™s fully compatible with other plugins like Yoast WP SEO or contact form builders. We also have a [marketplace with free and premium themes](https://livecomposerplugin.com/themes/) created especially for Live Composer.
+Our page builder works with works with any standard compliant WordPress theme. It's fully compatible with other plugins like Yoast WP SEO or contact form builders. We also have a [marketplace with free and premium themes](https://livecomposerplugin.com/themes/) created especially for Live Composer.
 
 = No Code Left Behind When the Plugin Deactivated =
 
-Unlike other page builders, Live Composer doesn't leave behind horrible amount of shortcodes when the plugin deactivated. It's not a commitment to a single plugin. We donâ€™t lock you. Itâ€™s easy to start using any other page builder without a need to remove all the custom shortcodes before implementing a new solution.
+Unlike other page builders, Live Composer doesn't leave behind horrible amount of shortcodes when the plugin deactivated. It's not a commitment to a single plugin. We don't lock you. It's easy to start using any other page builder without a need to remove all the custom shortcodes before implementing a new solution.
 
 = 100% Free and Open Source =
 
@@ -89,7 +89,7 @@ When you visit a page you'll see a green "activate editor" button in the bottom 
 
 = Why is the "activate editor" button missing from the homepage =
 
-In most of the cases, this is because the homepage is not a real WordPress page, itâ€™s custom content generated by the themeâ€™s index.php. Publish a new page and set it as the homepage ( WP Admin > Settings > Reading > Front Page ). Now you can use LC on the homepage.
+In most of the cases, this is because the homepage is not a real WordPress page, it's custom content generated by the theme's index.php. Publish a new page and set it as the homepage ( WP Admin > Settings > Reading > Front Page ). Now you can use LC on the homepage.
 
 = Live Composer vs. Other Page Builders =
 
@@ -97,7 +97,7 @@ Live Composer is 100% free and open source. There is no premium or paid version 
 
 We make money from our other business (premium themes) were we use Live Composer as part of a deal, so it's our best interest to improve and update it.
 
-* Visual Composer â€“ Page Builder for WordPress
+* Visual Composer - Page Builder for WordPress
 
 Visual Composer is not an open source software, you'll have to follow strict license policies and pay for every service provided.
 One website license for Visual Composer starts from $34, that includes 6 months of support. After first 6 months, you will need to buy extra Visual Composer support coverage for $23.80 per year.
@@ -110,7 +110,7 @@ Page Builder by SiteOrigin available on WordPress.org is a popular free page bui
 
 The Beaver Builder available on WordPress.org is a light version of The Beaver Builder Pro plugin that costs $199 per year. The free version of The Beaver Builder comes with limited features and very limited support (according to the plugin description).
 
-* Cornerstone â€“ The WordPress Page Builder
+* Cornerstone - The WordPress Page Builder
 
 Cornerstone Page Builder is not an open source software, you'll have to follow strict license policies and pay for every service provided. One website license for Cornerstone starts from $35, that includes 6 months of support. After first 6 months, you will need to buy extra Cornerstone support coverage for $24.50 per year.
 
@@ -131,16 +131,43 @@ The Page Builder Sandwich available on WordPress.org is a light version of Page 
 
 Upcoming Releases:
 
-* PREMIUM EXTENSION: WooCommerce Integration > [Get 50% off coupon](https://livecomposerplugin.com/halfprice-coupon/?utm_source=changelog)
-* PREMIUM EXTENSION: bbPress Forums Integration > [Get 50% off coupon](https://livecomposerplugin.com/halfprice-coupon/?utm_source=changelog)
-* PREMIUM THEME: Digital Marketer & SEO Theme > [Get 50% off coupon](https://livecomposerplugin.com/halfprice-coupon/?utm_source=changelog)
+* [Please, report any bugs on GitHub](https://github.com/livecomposer/live-composer-page-builder/issues/)
+* [You can download any previous version here](https://wordpress.org/plugins/live-composer-page-builder/developers/)
+
+= 1.2 - December 21st 2016 =
+
+= New features: =
+
+* Learn about this plugin update [in our blog post](https://livecomposerplugin.com/blog/live-composer-1-2/)
+
+= Bug fixes: =
+
+* [See closed issues for milestone 1.2 on GitHub](https://github.com/live-composer/live-composer-page-builder/issues?page=1&q=is%3Aissue+milestone%3A1.2+is%3Aclosed)
+
+= Thanks to the next contributors for helping with this update: =
+
+* [Luke Perrie](https://github.com/lukeperrie)
+* [Jessica Hawkins](https://github.com/jessicahawkins3344)
+* [Dean Phillips](https://www.thesuperhumanlab.com)
+* [mozalan](https://github.com/mozalan)
+* [kadoogan55](https://github.com/kadoogan55)
+* [tristanleboss](https://github.com/tristanleboss)
+* [Zakiy Fadhil Muhsin](https://github.com/zakiyfadhilmuhsin)
+* [delorimier](https://github.com/delorimier)
+* [talesg](https://github.com/talesg)
+* [thecomputeraide](https://github.com/thecomputeraide)
+* [Ike Ten](https://github.com/IkeTen)
+* [ElementalCrisis](https://github.com/ElementalCrisis)
+* [Stelios Djiongouros](https://github.com/urbanimatic)
+* [pezomatic](https://github.com/pezomatic)
+
+
+
+
+
 
 
 = 1.1.4 - September 12th 2016 =
-
-* [Please, report any bugs on GitHub](https://github.com/livecomposer/live-composer-page-builder/issues/)
-* [You can download any previous version here](https://wordpress.org/plugins/live-composer-page-builder/developers/)
-* [See the latest major changes in details with animated gifs and videos](https://livecomposerplugin.com/blog/live-composer-1-1-released/)
 
 = Improved: =
 

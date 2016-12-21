@@ -232,7 +232,7 @@ function wpcf7_recaptcha_register_service() {
 add_action( 'wpcf7_enqueue_scripts', 'wpcf7_recaptcha_enqueue_scripts' );
 
 function wpcf7_recaptcha_enqueue_scripts() {
-	$url = 'https://www.google.com/recaptcha/api.js';
+	$url = 'https://www.google.com/recaptcha/api.js?hl=hy';
 	$url = add_query_arg( array(
 		'onload' => 'recaptchaCallback',
 		'render' => 'explicit' ), $url );

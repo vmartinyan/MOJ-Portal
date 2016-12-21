@@ -1,10 +1,10 @@
 === Kopa Framework ===
 Contributors: kopatheme, vutuan.sw, tranthethang
 Tags: framework, tool, feature, theme-options, sidebar-manager, layout-manager, custom-layouts
-Donate link: 
+Donate link:
 Requires at least: 4.1
-Tested up to: 4.6.1
-Stable tag: 1.2.9
+Tested up to: 4.7
+Stable tag: 1.3.3
 License: GPLv3
 
 A WordPress framework by Kopatheme
@@ -21,30 +21,50 @@ The Kopa Framework plugin is an easy way to get theme options, sidebar manager, 
 
 == Changelog ==
 
-1.2.9
+= 1.3.3 =
+* Fix: add new function to escape data for field "datetime"
+
+= 1.3.2 =
+* Edit field's description. Allow tags 'b', 'i', 'p'
+* Fix field link not working with "compress mode"
+
+= 1.3.1 =
+* Fix saving field meta in Metabox Group
+
+= 1.3.0 =
+* Deprecated 'chosen_singular' use 'singular' with 'multiple'=>'true' instead.
+* Deprecated 'icon' use 'icon_picker' instead.
+* Add widget_start(), widget_end() to Kopa_Widget Class
+* Add form field files in /include/admin/fields in Kopa_Widget
+* Add new field 'link'
+* Add Group Tab in Metabox
+* Add the case Show metabox only 'front_page' or 'posts_page'
+* Register icon fonts: "font-awesome" and "themify" for front-end.
+
+= 1.2.9 =
 *Fix: default checkbox field in term meta
 *Fix: image field js
 *Add new filter: kopa_admin_assets_allow_other_pages
 
-1.2.8
+= 1.2.8 =
 * Fix: field "chosen_singular" display blank.
 
-1.2.7
+ =1.2.7 =
 * Fix: invalid attribute "class" of field "textarea"
 * Add field: "radio_image"
 
-= 1.2.6 = 
+= 1.2.6 =
 * Improve: hook "admin_enqueue_scripts"
 
-= 1.2.5 = 
+= 1.2.5 =
 * Add new 4 fields: chosen, chosen_singular, repeater, repeater_link ( widget )
 
-= 1.2.4 = 
+= 1.2.4 =
 * Tested up to: WordPress version 4.6
 * Apply filter: "kopa_is_load_compiled_assets"
 * Replace function __(), _e() by esc_html__(), esc_html_e()
 
-= 1.2.3 = 
+= 1.2.3 =
 * Add new 5 fields: chosen, chosen_singular, repeater, repeater_link, icon_picker ( metabox, theme-options )
 
 = 1.2.2 =
@@ -65,7 +85,7 @@ The Kopa Framework plugin is an easy way to get theme options, sidebar manager, 
 = 1.1.8 =
 * English wording.
 
-= 1.1.7 = 
+= 1.1.7 =
 * Fix bug advance field don't working with older themes.
 
 = 1.1.6 =
@@ -73,13 +93,13 @@ The Kopa Framework plugin is an easy way to get theme options, sidebar manager, 
 * Update font-awesome to version 4.6.3
 * Remove flaticon.css with font files
 
-= 1.1.5 = 
+= 1.1.5 =
 * Add new metabox-field: gallery_sortable
 
-= 1.1.4 = 
+= 1.1.4 =
 * Add new action: kopa_{metabox-id}_saved
 
-= 1.1.3 = 
+= 1.1.3 =
 * Add new filter: kopa_get_custom_layouts_for_private_object
 * Add new filter: kopa_get_selected_layout_for_private_object
 
@@ -111,11 +131,11 @@ The Kopa Framework plugin is an easy way to get theme options, sidebar manager, 
 * Updated: add hooks for optional include theme options, sidebar manager, layout manager, backup manager
 
 = 1.0.9 =
-* Fix: "The Called Constructor Method For WP_Widget Is Deprecated Since Version 4.3.0! Use __construct()". 
+* Fix: "The Called Constructor Method For WP_Widget Is Deprecated Since Version 4.3.0! Use __construct()".
 
 = 1.0.8 =
 * Updated: FontAwesome from 4.0.3 to 4.3.0
-* Fix: move include Master widget "Kopa_Widget" from hook "widgets_init" to __construct 
+* Fix: move include Master widget "Kopa_Widget" from hook "widgets_init" to __construct
 * Add: filter kopa_widget_form_field_[field_type]
 
 = 1.0.7 =

@@ -5,6 +5,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Group Start
+ * Use in theme option
  * 
  * @author kopatheme <http://kopatheme.com>
  * 
@@ -35,6 +36,7 @@ function kopa_form_field_groupstart( $wrap_start, $wrap_end, $settings, $value )
 
 /**
  * Group End
+ * Use in theme option
  * 
  * @author kopatheme <http://kopatheme.com>
  * 

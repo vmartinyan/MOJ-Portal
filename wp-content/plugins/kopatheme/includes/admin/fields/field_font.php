@@ -6,6 +6,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Select Font
+ * Use in Theme options
  * 
  * @author kopatheme <http://kopatheme.com>
  * 

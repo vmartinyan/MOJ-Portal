@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kopa Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-29 11:24+0700\n"
+"POT-Creation-Date: 2016-12-20 10:37+0700\n"
 "PO-Revision-Date: 2015-05-17 23:17+0700\n"
 "Last-Translator: thanh4890 <thanh4890@gmail.com>\n"
 "Language-Team: Kopasoft\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.8.10\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
@@ -21,181 +21,158 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/abstracts/abstract-kopa-widget.php:368
-#: includes/admin/fields/field_upload.php:39
-msgid "Upgrade your version of WordPress for full media support."
-msgstr ""
-
-#: includes/abstracts/abstract-kopa-widget.php:420
-msgid "Config"
-msgstr ""
-
-#: includes/abstracts/abstract-kopa-widget.php:442
-#: includes/abstracts/abstract-kopa-widget.php:483
-#: includes/abstracts/abstract-kopa-widget.php:488
-msgid "-- Select --"
-msgstr ""
-
-#: includes/abstracts/abstract-kopa-widget.php:517
-msgid "Activated Page:"
-msgstr ""
-
-#: includes/abstracts/abstract-kopa-widget.php:517
-msgid "click to edit on new tab."
-msgstr ""
-
-#: includes/admin/class-kopa-admin-assets.php:125
-#: includes/admin/fields/field_font.php:89
+#: includes/admin/class-kopa-admin-assets.php:135
+#: includes/admin/fields/field_font.php:90
 msgid "Enter font name"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:127
+#: includes/admin/class-kopa-admin-assets.php:137
 msgid "Custom font"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:131
-#: includes/admin/fields/field_font.php:94
+#: includes/admin/class-kopa-admin-assets.php:141
+#: includes/admin/fields/field_font.php:95
 msgid "Upload .woff font file"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:136
-#: includes/admin/fields/field_font.php:99
+#: includes/admin/class-kopa-admin-assets.php:146
+#: includes/admin/fields/field_font.php:100
 msgid "Upload .ttf font file"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:141
-#: includes/admin/fields/field_font.php:104
+#: includes/admin/class-kopa-admin-assets.php:151
+#: includes/admin/fields/field_font.php:105
 msgid "Upload .eot font file"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:146
-#: includes/admin/fields/field_font.php:109
+#: includes/admin/class-kopa-admin-assets.php:156
+#: includes/admin/fields/field_font.php:110
 msgid "Upload .svg font file"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:154
-#: includes/admin/fields/field_font.php:168
+#: includes/admin/class-kopa-admin-assets.php:164
+#: includes/admin/fields/field_font.php:169
 #: includes/admin/fields/field_upload.php:34
 msgid "Upload"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:155
-#: includes/admin/class-kopa-admin-assets.php:206
-#: includes/admin/fields/field_font.php:170
+#: includes/admin/class-kopa-admin-assets.php:165
+#: includes/admin/class-kopa-admin-assets.php:216
+#: includes/admin/fields/field_font.php:171
 #: includes/admin/fields/field_upload.php:36
 #: includes/admin/fields/field_upload.php:45
 msgid "Remove"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:156
+#: includes/admin/class-kopa-admin-assets.php:166
 msgid "Click OK to reset. Any selected settings will be lost!"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:157
+#: includes/admin/class-kopa-admin-assets.php:167
 msgid "Click OK to import. Any selected settings will be lost!"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:158
 #: includes/admin/class-kopa-admin-assets.php:168
+#: includes/admin/class-kopa-admin-assets.php:178
 msgid "Are you sure you want to delete?"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:165
+#: includes/admin/class-kopa-admin-assets.php:175
 msgid "Warning"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:166
+#: includes/admin/class-kopa-admin-assets.php:176
 msgid "Error"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:167
+#: includes/admin/class-kopa-admin-assets.php:177
 msgid "Info"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:169
-#: includes/admin/fields/field_font.php:180
-#: includes/admin/fields/field_sidebar_manager.php:114
+#: includes/admin/class-kopa-admin-assets.php:179
+#: includes/admin/fields/field_font.php:181
+#: includes/admin/fields/field_sidebar_manager.php:115
 msgid "Close"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:170
-#: includes/admin/fields/field_font.php:178
-#: includes/admin/fields/field_sidebar_manager.php:112
+#: includes/admin/class-kopa-admin-assets.php:180
+#: includes/admin/fields/field_font.php:179
+#: includes/admin/fields/field_sidebar_manager.php:113
 msgid "Delete"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:171
-#: includes/admin/fields/field_sidebar_manager.php:97
+#: includes/admin/class-kopa-admin-assets.php:181
+#: includes/admin/fields/field_sidebar_manager.php:98
 msgid "Advanced Settings"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:173
-#: includes/admin/fields/field_sidebar_manager.php:33
+#: includes/admin/class-kopa-admin-assets.php:183
+#: includes/admin/fields/field_sidebar_manager.php:34
 msgid "Name"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:174
-#: includes/admin/fields/field_sidebar_manager.php:34
+#: includes/admin/class-kopa-admin-assets.php:184
+#: includes/admin/fields/field_sidebar_manager.php:35
 msgid "Description"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:175
-#: includes/admin/fields/field_sidebar_manager.php:35
+#: includes/admin/class-kopa-admin-assets.php:185
+#: includes/admin/fields/field_sidebar_manager.php:36
 msgid "Before Widget"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:176
-#: includes/admin/fields/field_sidebar_manager.php:36
+#: includes/admin/class-kopa-admin-assets.php:186
+#: includes/admin/fields/field_sidebar_manager.php:37
 msgid "After Widget"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:177
-#: includes/admin/fields/field_sidebar_manager.php:37
+#: includes/admin/class-kopa-admin-assets.php:187
+#: includes/admin/fields/field_sidebar_manager.php:38
 msgid "Before Title"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:178
-#: includes/admin/fields/field_sidebar_manager.php:38
+#: includes/admin/class-kopa-admin-assets.php:188
+#: includes/admin/fields/field_sidebar_manager.php:39
 msgid "After Title"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:194
-#: includes/admin/class-kopa-admin-assets.php:202
+#: includes/admin/class-kopa-admin-assets.php:204
+#: includes/admin/class-kopa-admin-assets.php:212
 msgid "Icon Picker"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:195
+#: includes/admin/class-kopa-admin-assets.php:205
 #: includes/admin/fields/field_repeater.php:36
-#: includes/admin/fields/field_repeater.php:57
+#: includes/admin/fields/field_repeater.php:56
 #: includes/admin/fields/field_repeater_link.php:45
 #: includes/admin/fields/field_repeater_link.php:68
 msgid "Untitle"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:203
+#: includes/admin/class-kopa-admin-assets.php:213
 #: includes/admin/fields/field_icon_picker.php:17
 msgid "Add"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:204
+#: includes/admin/class-kopa-admin-assets.php:214
 msgid "Use"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:205
+#: includes/admin/class-kopa-admin-assets.php:215
 #: includes/admin/views/html-admin-settings.php:59
 msgid "Cancel"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:207
+#: includes/admin/class-kopa-admin-assets.php:217
 #: includes/admin/fields/field_icon_picker.php:15
 msgid "Edit"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:211
+#: includes/admin/class-kopa-admin-assets.php:221
 msgid "Awesome"
 msgstr ""
 
-#: includes/admin/class-kopa-admin-assets.php:216
+#: includes/admin/class-kopa-admin-assets.php:226
 msgid "Themify"
 msgstr ""
 
@@ -305,27 +282,27 @@ msgstr ""
 msgid "Select images"
 msgstr ""
 
-#: includes/admin/fields/field_backup.php:23
+#: includes/admin/fields/field_backup.php:24
 msgid "Import"
 msgstr ""
 
-#: includes/admin/fields/field_backup.php:48
+#: includes/admin/fields/field_backup.php:49
 msgid "Download Export File"
 msgstr ""
 
-#: includes/admin/fields/field_chosen.php:13
+#: includes/admin/fields/field_chosen.php:11
 msgid "Select an option"
 msgstr ""
 
-#: includes/admin/fields/field_font.php:28
+#: includes/admin/fields/field_font.php:29
 msgid "preview text"
 msgstr ""
 
-#: includes/admin/fields/field_font.php:59
+#: includes/admin/fields/field_font.php:60
 msgid "Font size"
 msgstr ""
 
-#: includes/admin/fields/field_font.php:195
+#: includes/admin/fields/field_font.php:196
 msgid "Add New Font"
 msgstr ""
 
@@ -337,14 +314,26 @@ msgstr ""
 msgid "Select an image"
 msgstr ""
 
-#: includes/admin/fields/field_layout_manager.php:38
+#: includes/admin/fields/field_layout_manager.php:39
 #: includes/admin/layouts/class-kopa-layout-box.php:68
 msgid "Select layout"
 msgstr ""
 
-#: includes/admin/fields/field_layout_manager.php:67
+#: includes/admin/fields/field_layout_manager.php:68
 #: includes/admin/layouts/class-kopa-layout-box.php:96
 msgid "&mdash;Select sidebar&mdash;"
+msgstr ""
+
+#: includes/admin/fields/field_link.php:48
+msgid "Select URL"
+msgstr ""
+
+#: includes/admin/fields/field_link.php:50
+msgid "Link Text:"
+msgstr ""
+
+#: includes/admin/fields/field_link.php:54
+msgid "URL:"
 msgstr ""
 
 #: includes/admin/fields/field_quote.php:16
@@ -359,11 +348,11 @@ msgstr ""
 msgid "Add new option"
 msgstr ""
 
-#: includes/admin/fields/field_repeater.php:93
+#: includes/admin/fields/field_repeater.php:91
 msgid "Name:"
 msgstr ""
 
-#: includes/admin/fields/field_repeater.php:98
+#: includes/admin/fields/field_repeater.php:96
 msgid "Content:"
 msgstr ""
 
@@ -391,12 +380,21 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: includes/admin/fields/field_restore_default.php:28
+#: includes/admin/fields/field_restore_default.php:29
 msgid "Restore Defaults"
 msgstr ""
 
-#: includes/admin/fields/field_sidebar_manager.php:61
+#: includes/admin/fields/field_sidebar_manager.php:62
 msgid "Add New"
+msgstr ""
+
+#: includes/admin/fields/field_singular.php:22
+#: includes/admin/fields/field_taxonomy.php:20
+msgid "-- Select --"
+msgstr ""
+
+#: includes/admin/fields/field_upload.php:39
+msgid "Upgrade your version of WordPress for full media support."
 msgstr ""
 
 #: includes/admin/layouts/class-kopa-layout-box.php:56

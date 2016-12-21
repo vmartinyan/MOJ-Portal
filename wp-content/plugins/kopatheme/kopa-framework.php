@@ -2,13 +2,13 @@
 /**
  * Plugin Name: Kopa Framework
  * Description: A WordPress framework by Kopatheme.
- * Version: 1.2.9
+ * Version: 1.3.3
  * Author: Kopa Theme
  * Author URI: http://kopatheme.com
  * License: GNU General Public License v3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Requires at least: 4.1
- * Tested up to: 4.6.1
+ * Tested up to: 4.7
  *
  * Text Domain: kopatheme
  * Domain Path: /languages/
@@ -298,9 +298,9 @@ if ( ! class_exists( 'Kopa_Framework' ) ) {
 
 		public function meta_box_wrap_start($wrap, $value, $loop_index){
 			if(0 == $loop_index){
-				$wrap = '<div class="kopa-metabox-wrap kopa-metabox-wrap-first kopa-row">';
+				$wrap = '<div class="clearfix kopa-metabox-wrap kopa-metabox-wrap-first kopa-row">';
 			}else{
-				$wrap = '<div class="kopa-metabox-wrap kopa-row">';
+				$wrap = '<div class="clearfix kopa-metabox-wrap kopa-row">';
 			}
 
 			if ( $value['title'] ) {

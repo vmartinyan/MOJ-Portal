@@ -285,8 +285,9 @@ $bg:#f8f8f8;
         }
         .kopa_upload_button,.kopa_remove_file {
             position: absolute;
-            right: -1px;
-            top: 16px;
+            margin-top: 0 !important;
+            right: 0px;
+            top: 0px;
             @extend %form-control;
             display: inline-block;
             width: auto;
@@ -306,13 +307,8 @@ $bg:#f8f8f8;
             border: 1px solid #d3d7da;
             display: inline-block;
         }
-        .kopa_select_font,
-        .kopa_select_font_style,
-        .kopa_select_font_size,
-        .wp-picker-container {
-            float: left;
-            margin-right: 20px;
-        }
+
+
         .kopa_select_font {
             width: 300px;
             optgroup {
@@ -659,6 +655,17 @@ $bg:#f8f8f8;
     }
 }
 
+
+.kopa_section_select_font{
+  .kopa_select_font,
+  .kopa_select_font_style,
+  .kopa_select_font_size,
+  .wp-picker-container {
+		display: block;
+    float: left;
+    margin-right: 20px !important;
+  }
+}
 
 @media screen and (max-width: 1023px) {
 

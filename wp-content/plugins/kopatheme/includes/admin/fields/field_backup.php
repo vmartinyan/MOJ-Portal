@@ -6,6 +6,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Import
+ * Use in Theme option Backup
  * 
  * @author kopatheme <http://kopatheme.com>
  * 

@@ -24,7 +24,7 @@ if ( ! class_exists( 'Kopa_Frontend_Assets' ) ) {
 		 * @access public
 		 */
 		public function __construct() {
-			add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ), 0 );
 		}
 
 		/**

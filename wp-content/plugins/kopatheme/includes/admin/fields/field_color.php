@@ -1,7 +1,7 @@
 <?php
 
-if ( !defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (!defined('ABSPATH')) {
+    die('-1');
 }
 
 /**
@@ -15,21 +15,21 @@ if ( !defined( 'ABSPATH' ) ) {
  * @since 1.0.11
  * @return string - html string.
  */
-function kopa_form_field_color( $wrap_start, $wrap_end, $settings, $value ) {
-	$default_color = '';
-	$field_class = '';
-	
-	if ( 'color' === $settings['type'] ) {
-		$field_class = ' kopa_color';
+function kopa_form_field_color($wrap_start, $wrap_end, $settings, $value) {
+    $default_color = '';
+    $field_class = '';
 
-		if ( $settings['default'] ) {
-			$default_color = ' data-default-color="' . esc_attr( $settings['default'] ) . '" ';
-		} // end check empty option value
-	} // end check color type
+    if ('color' === $settings['type']) {
+        $field_class = ' kopa_color';
 
-	$output = $wrap_start;
-	$output .= '<input class="' . esc_attr( $field_class ) . '" style="' . esc_attr( $settings['css'] ) . '" type="text" name="' . esc_attr( $settings['id'] ) . '" id="' . esc_attr( $settings['id'] ) . '" value="' . esc_attr( $value ) . '"' . $default_color . '>';
-	$output .= $wrap_end;
+        if (!empty($settings['default'])) {
+            $default_color = ' data-default-color="' . esc_attr($settings['default']) . '" ';
+        } // end check empty option value
+    } // end check color type
 
-	return $output;
+    $output = $wrap_start;
+    $output .= '<input class="' . esc_attr($field_class) . '" style="' . esc_attr($settings['css']) . '" type="text" name="' . esc_attr($settings['name']) . '" id="' . esc_attr($settings['id']) . '" value="' . esc_attr($value) . '"' . $default_color . '>';
+    $output .= $wrap_end;
+
+    return $output;
 }

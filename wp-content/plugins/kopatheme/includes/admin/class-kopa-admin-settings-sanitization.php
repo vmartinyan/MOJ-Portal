@@ -29,7 +29,7 @@ class Kopa_Admin_Settings_Sanitization {
 		// option type => sanitize function
 		$sanitize_options = array(
 			'text'                => 'sanitize_string',
-			'email'               => 'sanitize_string',
+			'email'               => array( 'sanitize_string', 'sanitize_email' ),
 			'url'                 => 'sanitize_string',
 			'number'              => array( 'sanitize_string', 'sanitize_number' ),
 			'select'              => 'sanitize_string',
@@ -45,6 +45,7 @@ class Kopa_Admin_Settings_Sanitization {
 			'sidebar_manager'     => 'sanitize_sidebar_manager',
 			'select_font'         => array( 'sanitize_array', 'sanitize_select_font' ),
 			'layout_manager'      => 'sanitize_array',
+			'datetime'            => 'sanitize_datetime',
 		);
 
 		foreach ( $sanitize_options as $type => $sanitize_function ) {
@@ -65,15 +66,13 @@ class Kopa_Admin_Settings_Sanitization {
 		 */
 		// Remove data of deleted sidebars
 		add_action( 'kopa_remove_data_of_deleted_sidebars', array( $this, 'remove_data_of_deleted_sidebars' ) );
-
-		add_filter( 'kopa_sanitize_option_email', 'sanitize_email' );
 		add_filter( 'kopa_sanitize_option_url', 'esc_url' );
 	}
 
 	/**
 	 * Sanitize text, email, url, number,
 	 * select, color, password, radio
-	 * 
+	 *
 	 * @param string $input input data
 	 * @param array $option option arguments
 	 * @return string empty string if nothing submitted
@@ -97,7 +96,7 @@ class Kopa_Admin_Settings_Sanitization {
 	 * Sanitize array, for multicheck, multiselect, custom_font_manager
 	 *
 	 * @param array $input input data
-	 * @param array $option option arguments 
+	 * @param array $option option arguments
 	 * @return array $input clean version of submitted data
 	 * @return array empty array if nothing submitted
 	 *
@@ -128,7 +127,7 @@ class Kopa_Admin_Settings_Sanitization {
 	 * Sanitize number
 	 *
 	 * @param string $input input data
-	 * @param array $option option arguments 
+	 * @param array $option option arguments
 	 * @return string $input sanitized number
 	 * @return string empty string if not is numeric
 	 *
@@ -147,7 +146,7 @@ class Kopa_Admin_Settings_Sanitization {
 	 * Sanitize checkbox option type
 	 *
 	 * @param string|int $input input data
-	 * @param array $option option arguments 
+	 * @param array $option option arguments
 	 * @return int 0 if checkbox is unchecked
 	 * @return int 1 if checkbox is checked
 	 *
@@ -155,7 +154,7 @@ class Kopa_Admin_Settings_Sanitization {
 	 * @access public
 	 */
 	public function sanitize_checkbox( $input, $option ) {
-		if ( is_null( $input ) || 
+		if ( is_null( $input ) ||
 			 empty( $input ) ) { // for restore default
 			return 0;
 		}
@@ -167,7 +166,7 @@ class Kopa_Admin_Settings_Sanitization {
 	 * Sanitize multicheck option type
 	 *
 	 * @param array $input input data
-	 * @param array $option option arguments 
+	 * @param array $option option arguments
 	 * @return array $output
 	 *
 	 * @since 1.0.0
@@ -192,7 +191,7 @@ class Kopa_Admin_Settings_Sanitization {
 	 * Sanitize textarea field
 	 *
 	 * @param string $input input data
-	 * @param array $option option arguments 
+	 * @param array $option option arguments
 	 * @return string empty string if nothing submitted
 	 * @return string clean version of input data
 	 *
@@ -220,7 +219,7 @@ class Kopa_Admin_Settings_Sanitization {
 	 * Sanitize sidebar_manager
 	 *
 	 * @param array $input input data
-	 * @param array $option option arguments 
+	 * @param array $option option arguments
 	 * @return array $input
 	 *
 	 * @since 1.0.0
@@ -292,6 +291,17 @@ class Kopa_Admin_Settings_Sanitization {
 		return $input;
 	}
 
+	public function sanitize_datetime( $input, $option ) {
+		$input = trim( $input );
+
+		if( !empty( $input ) && !is_numeric( $input ) ) {
+			$datetime_format = ( isset( $option['format'] ) && !empty( $option['format'] ) ) ? esc_attr( $option['format'] ) : 'Y-m-d';
+			$input           = DateTime::createFromFormat( $datetime_format, $input)->format( $datetime_format );
+			$input           = strtotime( $input );
+		}
+		return $input;
+	}
+
 	/**
 	 * Remove data of deleted sidebars
 	 * @param array | $deleted_sidebars | List of deleted sidebars
@@ -319,8 +329,8 @@ class Kopa_Admin_Settings_Sanitization {
 
 		// after removing data, update sidebars_widgets
 		update_option( 'sidebars_widgets', $sidebars_widgets );
-
 	}
+
 } // end class Kopa_Admin_Settings_Sanitization
 
 }

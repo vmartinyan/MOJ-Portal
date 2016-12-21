@@ -85,6 +85,7 @@ function dslc_plugin_options_display( $tab = '' ) {
 			<a href="#" data-nav-to="tab-settings" class="nav-tab <?php echo 'dslc_settings' === $anchor ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Settings', 'live-composer-page-builder' ) ?></a>
 			<a href="#" data-nav-to="tab-extensions" class="nav-tab <?php echo 'dslc_extensions' === $anchor ? 'nav-tab-active' : ''; ?>"><?php  echo esc_html__( 'Extensions', 'live-composer-page-builder' ) . ' <span class="tag">' . esc_html__( 'Free', 'live-composer-page-builder' ) . '</span>'; ?></a>
 			<a href="#" data-nav-to="tab-themes" class="nav-tab <?php echo 'dslc_themes' === $anchor ? 'nav-tab-active' : ''; ?>"><?php  echo esc_html__( 'Themes', 'live-composer-page-builder' ) . ' <span class="tag">' . esc_html__( 'Free', 'live-composer-page-builder' ) . '</span>'; ?></a>
+			<a href="#" data-nav-to="tab-designs" class="nav-tab <?php echo 'dslc_designs' === $anchor ? 'nav-tab-active' : ''; ?>"><?php  echo esc_html__( 'Designs', 'live-composer-page-builder' ) . ' <span class="tag">' . esc_html__( 'New', 'live-composer-page-builder' ) . '</span>'; ?></a>
 			<a href="#" data-nav-to="tab-docs" class="nav-tab <?php echo 'dslc_docs' === $anchor ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Docs &amp; Support', 'live-composer-page-builder' ) ?></a>
 		</h2>
 
@@ -105,6 +106,10 @@ function dslc_plugin_options_display( $tab = '' ) {
 				<!-- Extensions tab -->
 				<div class="tab" id="tab-for-tab-extensions">
 					<?php include DS_LIVE_COMPOSER_ABS . '/includes/plugin-options-framework/tab-extensions.php'; ?>
+				</div>
+				<!-- Designs tab -->
+				<div class="tab" id="tab-for-tab-designs">
+					<?php include DS_LIVE_COMPOSER_ABS . '/includes/plugin-options-framework/tab-designs.php'; ?>
 				</div>
 				<!-- Docs & Support tab -->
 				<div class="tab" id="tab-for-tab-docs">
@@ -259,23 +264,29 @@ function dslc_plugin_options_input_sanitize( $input ) {
 
 	$new_input = array();
 
-	foreach ( $input as $key => $option_value ) {
+	if ( is_array( $input ) ) {
+		foreach ( $input as $key => $option_value ) {
 
-		if ( ! is_array( $option_value ) ) {
+			if ( ! is_array( $option_value ) ) {
 
-			$new_input[ $key ] = sanitize_text_field( $option_value );
+				$new_input[ $key ] = sanitize_text_field( $option_value );
 
-		} else {
+			} else {
 
-			foreach ( $option_value as $inner_key => $inner_option_value ) {
+				foreach ( $option_value as $inner_key => $inner_option_value ) {
 
-				$new_input[ $key ][ $inner_key ] = sanitize_text_field( $inner_option_value );
+					$new_input[ $key ][ $inner_key ] = sanitize_text_field( $inner_option_value );
 
+				}
 			}
 		}
+
+		return $new_input;
+
+	} else {
+		return $input;
 	}
 
-	return $new_input;
 }
 
 /**

@@ -1,7 +1,7 @@
 <?php
 
-if ( !defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (!defined('ABSPATH')) {
+    die('-1');
 }
 
 /**
@@ -17,9 +17,15 @@ if ( !defined( 'ABSPATH' ) ) {
  * @since 1.2.0
  * @return string - html string.
  */
-function kopa_form_field_caption( $wrap_start, $wrap_end, $settings, $value ) {
+function kopa_form_field_caption($wrap_start, $wrap_end, $settings, $value) {
 
-	$el_class = isset( $settings['class'] ) ? $settings['class'] : '';
+    $el_class = isset($settings['class']) ? $settings['class'] : '';
 
-	return sprintf( '<div class="kopa-field kopa-field-caption %s"><h4>%s</h4></div>', $el_class, $settings['title'] );
+    $title = isset($settings['label']) ? $settings['label'] : '';
+
+    $icon = isset($settings['icon']) ? sprintf('<i class="%s"></i>', $settings['icon']) : '';
+
+    $title = $icon . $title;
+
+    return sprintf('<div class="kopa-field kopa-field-caption %s"><h4>%s</h4></div>', $el_class, $title);
 }

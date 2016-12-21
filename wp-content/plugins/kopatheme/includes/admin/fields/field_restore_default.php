@@ -6,6 +6,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Restore Default
+ * Use in Theme option backup
  * 
  * @author kopatheme <http://kopatheme.com>
  * @see Kopa_Admin_Settings:reset_fields()

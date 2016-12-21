@@ -45,7 +45,7 @@ function kopa_form_field_image( $wrap_start, $wrap_end, $settings, $value ) {
 			printf( '<div class="img" style="background-image:url(%s)"></div>', esc_url( $image_url ) );
 			?>
 		</a>
-		<input id="<?php echo esc_attr( $settings['id'] ) ?>" name="<?php echo esc_attr( $settings['id'] ) ?>" type="hidden" value="<?php echo esc_attr( $thumbnail_id ) ?>"/>
+		<input id="<?php echo esc_attr( $settings['id'] ) ?>" name="<?php echo esc_attr( $settings['name'] ) ?>" type="hidden" value="<?php echo esc_attr( $thumbnail_id ) ?>"/>
 		<button class="item-remove"></button>
 	</div>
 

@@ -190,11 +190,11 @@ jQuery(document).ready(function($) {
 	}
 
 	$('body').on('click', '.kopa_remove_image, .kopa_remove_file', function( event ) {
-		kopaframework_remove_file(event, $(this).closest('.kopa_section'));
+		kopaframework_remove_file(event, $(this).closest('.kopa_section, .kopa-field_upload__outer'));
 	});
 
 	$('body').on('click', '.kopa_upload_button', function( event ) {
-		kopaframework_add_file(event, $(this).closest('.kopa_section'));
+		kopaframework_add_file(event, $(this).closest('.kopa_section, .kopa-field_upload__outer'));
 	});
 	/* ========================================================================
 	 * END >>> Media Uploader
