@@ -1,0 +1,6181 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Second touch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-16 10:27+0200\n"
+"POT-Revision-Date: Wed Mar 16 2016 10:29:51 GMT+0200 (Финляндия (зима))\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js"
+
+#: 404.php:13
+msgid "<strong>404 Error </strong>- no page here"
+msgstr ""
+
+#: 404.php:17
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+
+#: 404.php:21
+msgid "Look it in archives"
+msgstr ""
+
+#: 404.php:30
+msgid "Search can be used"
+msgstr ""
+
+#: 404.php:36
+msgid "Most Used Categoriesd"
+msgstr ""
+
+#: 404.php:45 posts-sidebar-sel.php:155 templates/content-search.php:17
+#: templates/content.php:22
+msgid "Tags also can be used"
+msgstr ""
+
+#: buddypress/activity/activity-loop.php:28
+msgid "Load More"
+msgstr ""
+
+#: buddypress/activity/activity-loop.php:42
+msgid "Sorry, there was no activity found. Please try a different filter."
+msgstr ""
+
+#. translators: 1: user profile link, 2: user name, 3: activity permalink, 4: activity timestamp
+#: buddypress/activity/comment.php:27
+#, php-format
+msgid ""
+"<a href=\"%1$s\">%2$s</a> replied <a href=\"%3$s\" class=\"activity-time-"
+"since\"><span class=\"time-since\">%4$s</span></a>"
+msgstr ""
+
+#: buddypress/activity/comment.php:37
+msgid "Reply"
+msgstr ""
+
+#: buddypress/activity/comment.php:43
+#: inc/custom_metabox/portfolio-boxes.php:150
+#: inc/custom_metabox/portfolio-boxes.php:210
+#: options/ReduxCore/inc/fields/slides/field_slides.php:167
+#: options/ReduxCore/inc/fields/slides/field_slides.php:220
+msgid "Delete"
+msgstr ""
+
+#: buddypress/activity/entry.php:50
+msgid "View Conversation"
+msgstr ""
+
+#: buddypress/activity/entry.php:58
+#, php-format
+msgid "Comment <span>%s</span>"
+msgstr ""
+
+#: buddypress/activity/entry.php:66
+msgid "Mark as Favorite"
+msgstr ""
+
+#: buddypress/activity/entry.php:66
+msgid "Favorite"
+msgstr ""
+
+#: buddypress/activity/entry.php:70
+msgid "Remove Favorite"
+msgstr ""
+
+#: buddypress/activity/entry.php:102
+msgid "Post"
+msgstr ""
+
+#: buddypress/activity/entry.php:102
+msgid "Cancel"
+msgstr ""
+
+#: buddypress/activity/index.php:19
+msgid "The public activity for everyone on this site."
+msgstr ""
+
+#: buddypress/activity/index.php:19
+#, php-format
+msgid "All Members <span>%s</span>"
+msgstr ""
+
+#: buddypress/activity/index.php:29
+msgid "The activity of my friends only."
+msgstr ""
+
+#: buddypress/activity/index.php:29
+#, php-format
+msgid "My Friends <span>%s</span>"
+msgstr ""
+
+#: buddypress/activity/index.php:41
+msgid "The activity of groups I am a member of."
+msgstr ""
+
+#: buddypress/activity/index.php:41
+#, php-format
+msgid "My Groups <span>%s</span>"
+msgstr ""
+
+#: buddypress/activity/index.php:51
+msgid "The activity I've marked as a favorite."
+msgstr ""
+
+#: buddypress/activity/index.php:51
+#, php-format
+msgid "My Favorites <span>%s</span>"
+msgstr ""
+
+#: buddypress/activity/index.php:59
+msgid "Activity that I have been mentioned in."
+msgstr ""
+
+#: buddypress/activity/index.php:59
+msgid "Mentions"
+msgstr ""
+
+#: buddypress/activity/index.php:59
+#, php-format
+msgctxt "Number of new activity mentions"
+msgid "%s new"
+msgid_plural "%s new"
+msgstr[0] ""
+msgstr[1] ""
+
+#: buddypress/activity/index.php:71
+msgid "RSS Feed"
+msgstr ""
+
+#: buddypress/activity/index.php:71 options/options.php:724
+msgid "RSS"
+msgstr ""
+
+#: buddypress/activity/index.php:76
+msgid "Show:"
+msgstr ""
+
+#: buddypress/activity/index.php:78
+msgid "Everything"
+msgstr ""
+
+#: buddypress/activity/index.php:79
+msgid "Updates"
+msgstr ""
+
+#: buddypress/activity/index.php:83
+msgid "Posts"
+msgstr ""
+
+#: buddypress/activity/index.php:84 inc/widgets/widget-tabs.php:52
+#: inc/widgets/widget-tabs.php:58 templates/dopinfo.php:9
+#: templates/entry-meta.php:10
+msgid "Comments"
+msgstr ""
+
+#: buddypress/activity/index.php:90
+msgid "Forum Topics"
+msgstr ""
+
+#: buddypress/activity/index.php:91
+msgid "Forum Replies"
+msgstr ""
+
+#: buddypress/activity/index.php:97
+msgid "New Groups"
+msgstr ""
+
+#: buddypress/activity/index.php:98
+msgid "Group Memberships"
+msgstr ""
+
+#: buddypress/activity/index.php:104
+msgid "Friendships"
+msgstr ""
+
+#: buddypress/activity/index.php:108
+msgid "New Members"
+msgstr ""
+
+#: buddypress/activity/post-form.php:23
+#, php-format
+msgid "What's new in %s, %s?"
+msgstr ""
+
+#: buddypress/activity/post-form.php:25
+#, php-format
+msgid "What's new, %s?"
+msgstr ""
+
+#: buddypress/activity/post-form.php:35
+msgid "Post Update"
+msgstr ""
+
+#: buddypress/activity/post-form.php:42
+msgid "Post in"
+msgstr ""
+
+#: buddypress/activity/post-form.php:45
+msgid "My Profile"
+msgstr ""
+
+#: comments.php:13
+msgid "Posted by"
+msgstr ""
+
+#: comments.php:16
+msgid "on"
+msgstr ""
+
+#: comments.php:16
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: comments.php:21
+msgid "(Edit)"
+msgstr ""
+
+#: comments.php:31
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:48
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:58
+#, php-format
+msgid "There are <span>1</span> Comment"
+msgid_plural "There are <span>%1$s</span> Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:87
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:87
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:92
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:99
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\" class=\"com-author\">%s</a>."
+msgstr ""
+
+#: comments.php:100
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:100
+msgid "Log out &raquo;"
+msgstr ""
+
+#: comments.php:104 factory/mvb-custom/modules/mvb_skills/mvb_skills.php:52
+#: options/ReduxCore/inc/welcome/views/status_report.php:710
+msgid "Name"
+msgstr ""
+
+#: comments.php:104 comments.php:107
+msgid "*"
+msgstr ""
+
+#: comments.php:107
+msgid "Email (will not be published)"
+msgstr ""
+
+#: comments.php:110
+msgid "Website"
+msgstr ""
+
+#: comments.php:115
+msgid "Comment"
+msgstr ""
+
+#: comments.php:121
+msgid "Submit Comment"
+msgstr ""
+
+#: factory/mvb-custom/modules/module_sections.php:7
+msgid "Content modules"
+msgstr ""
+
+#: factory/mvb-custom/modules/module_sections.php:12
+msgid "Presentation Modules"
+msgstr ""
+
+#: factory/mvb-custom/modules/module_sections.php:17
+msgid "Video Modules"
+msgstr ""
+
+#: factory/mvb-custom/modules/module_sections.php:22
+msgid "Custom Content Modules"
+msgstr ""
+
+#: factory/mvb-custom/modules/module_sections.php:27
+msgid "Social Modules"
+msgstr ""
+
+#: factory/mvb-custom/modules/module_sections.php:32
+msgid "Misc modules"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/html/public/mvb_3_posts.php:65
+#: factory/mvb-custom/modules/mvb_4_posts/html/public/mvb_4_posts.php:67
+#: factory/mvb-custom/modules/mvb_blog_posts/html/public/mvb_blog_posts.php:71
+#: templates/content.php:149 templates/content.php:205
+#: templates/loop-content.php:36 templates/loop-grid.php:78
+#: templates/post-gallery.php:77 templates/post-video.php:73
+#: tmp-posts-left-img.php:111 tmp-posts-right-img.php:137
+msgid "No Comments"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/html/public/mvb_3_posts.php:65
+#: factory/mvb-custom/modules/mvb_4_posts/html/public/mvb_4_posts.php:67
+#: factory/mvb-custom/modules/mvb_blog_posts/html/public/mvb_blog_posts.php:71
+#: inc/widgets/widget-category-news.php:79 templates/content.php:149
+#: templates/content.php:205 templates/entry-meta.php:10
+#: templates/loop-content.php:36 templates/loop-grid.php:78
+#: templates/post-gallery.php:77 templates/post-video.php:73
+#: tmp-posts-left-img.php:111 tmp-posts-right-img.php:137
+msgid "1 Comment"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/html/public/mvb_3_posts.php:65
+#: factory/mvb-custom/modules/mvb_4_posts/html/public/mvb_4_posts.php:67
+#: factory/mvb-custom/modules/mvb_blog_posts/html/public/mvb_blog_posts.php:71
+#: inc/widgets/widget-category-news.php:79 templates/content.php:149
+#: templates/content.php:205 templates/dopinfo.php:9
+#: templates/entry-meta.php:10 templates/loop-content.php:36
+#: templates/loop-grid.php:78 templates/post-gallery.php:77
+#: templates/post-video.php:73 tmp-posts-left-img.php:111
+#: tmp-posts-right-img.php:137
+#, c-format
+msgid "% Comments"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:16
+msgid "Last 3 posts"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:17
+msgid "Display 3 latest posts from some category"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:40
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:40
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:40
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:40
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:40
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:40
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:40
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:40
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:53
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:42
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:40
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:40
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:40
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:40
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:58
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:40
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:40
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:40
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:69
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:40
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:56
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:40
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:60
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:40
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:61
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:46
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:40
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:40
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:40
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:40
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:40
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:41
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:40
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:40
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:40
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:79
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:40
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:41
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:40
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:40
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:40
+#: inc/widgets/widget-facebook.php:46
+#: options/ReduxCore/inc/fields/slides/field_slides.php:145
+#: options/ReduxCore/inc/fields/slides/field_slides.php:200
+#: options/options.php:962
+msgid "Title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:45
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:46
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:45
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:45
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:45
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:45
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:44
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:53
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:53
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:44
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:45
+#: inc/widgets/widget-category-news.php:151
+msgid "Select category"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:46
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:47
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:46
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:46
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:46
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:46
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:45
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:54
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:54
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:45
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:46
+#: inc/widgets/widget_categories.php:19 inc/widgets/widget_categories.php:115
+msgid "Categories"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:53
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:55
+msgid "Select order of sorting"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:54
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:56
+msgid "Order"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:60
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:62
+msgid "Select orderby of sorting"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:61
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:63
+msgid "Orderby"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:70
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:71
+msgid "Post offset"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:71
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:72
+msgid "Number of post to skip"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:77
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:78
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:81
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:80
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:86
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:88
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:108
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:120
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:78
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:80
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:65
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:84
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:98
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:87
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:167
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:71
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:143
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:136
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:104
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:134
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:63
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:126
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:62
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:85
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:52
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:93
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:103
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:53
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:122
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:46
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:74
+msgid "Appear effects"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:78
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:79
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:82
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:81
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:87
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:89
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:109
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:121
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:79
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:81
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:66
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:85
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:99
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:88
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:168
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:72
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:144
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:137
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:105
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:135
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:64
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:127
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:63
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:86
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:53
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:94
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:104
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:54
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:123
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:47
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:75
+msgid "Select one of appear effects for block"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:86
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:87
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:90
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:121
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:89
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:95
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:97
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:117
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:129
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:153
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:95
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:89
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:74
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:93
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:107
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:95
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:176
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:187
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:80
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:160
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:171
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:145
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:156
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:113
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:124
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:143
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:72
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:66
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:135
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:71
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:94
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:61
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:102
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:82
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:73
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:121
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:62
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:131
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:55
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:83
+msgid "Additional CSS classes"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_3_posts/mvb_3_posts.php:87
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:88
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:91
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:122
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:90
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:96
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:98
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:118
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:130
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:154
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:96
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:90
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:75
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:94
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:108
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:96
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:177
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:188
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:81
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:161
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:172
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:146
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:157
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:114
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:125
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:144
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:73
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:67
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:136
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:72
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:95
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:62
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:103
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:83
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:74
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:122
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:63
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:132
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:56
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:84
+msgid "Separated by space"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:16
+msgid "Last 4 posts"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_4_posts/mvb_4_posts.php:17
+msgid "Display 4 latest posts from some category"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:16
+msgid "Accordion module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:17
+msgid "Add an accordion"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:45
+msgid "Add section"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:46
+msgid "Section"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:47
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:52
+msgid "Section Title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:58
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:45
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:63
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:89
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:69
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:90
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:57
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:93
+msgid "Icon"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:64
+msgid "Section content"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:73
+msgid "Close all section on load"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:98
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:146
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:112
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:96
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:82
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:101
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:88
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:143
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:90
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:81
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:129
+msgid "Unique ID"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_accordion/mvb_accordion.php:99
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:83
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:102
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:89
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:144
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:91
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:82
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:130
+msgid "Must be unique for every tab on the page."
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/html/public/mvb_blog_posts.php:112
+msgid "Post tags: "
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:16
+msgid "Blog Posts module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:17
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:17
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:17
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:17
+msgid "Add your blog posts"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:54
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:54
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:54
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:54
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:65
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:47
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:47
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:60
+#: inc/widgets/widget-category-news.php:144
+msgid "Number of posts"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:60
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:86
+msgid "Display a short excerpt"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:69
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:62
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:61
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:71
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:109
+msgid "Length of excerpt"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:70
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:63
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:62
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:72
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:110
+msgid "Number of words"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:76
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:116
+msgid "Display read more button"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:84
+msgid "Display the Thumbnail"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:92
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:70
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:76
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:68
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:53
+msgid "Display the meta"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:100
+msgid "Display Info box (date of post or author avatar)"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts/mvb_blog_posts.php:108
+msgid "Select, what content will be displayed in Info box"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_1/mvb_blog_posts_1.php:16
+msgid "Blog Posts right image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:16
+msgid "Tiny Post list"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:61
+msgid "Select width of thumbnail"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:62
+msgid "Select custom width of thumbnail. If empty, width is set to default 80px."
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:69
+msgid "Select height of thumbnail"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_2/mvb_blog_posts_2.php:70
+msgid "Select custom height of thumbnail. If empty, height is set to default 80px."
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:16
+msgid "Blog Posts Big image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_blog_posts_3/mvb_blog_posts_3.php:80
+msgid "Alignment of thumbnail"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:16
+msgid "Call to Action"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:17
+msgid "Add call to action module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:40
+msgid "Button text"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:50
+msgid "Button main color"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:56
+msgid "Button text and icon color"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:62
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:103
+msgid "Opens in new tab"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:69
+msgid "Select alignment of button"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:72
+#: options/ReduxCore/inc/fields/border/field_border.php:159
+#: options/ReduxCore/inc/fields/spacing/field_spacing.php:236
+msgid "Left"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:73
+#: options/ReduxCore/inc/fields/border/field_border.php:145
+#: options/ReduxCore/inc/fields/spacing/field_spacing.php:222
+msgid "Right"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:74
+msgid "Center"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:83
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:97
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:66
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:63
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:106
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:99
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:81
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:75
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:52
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:58
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:99
+msgid "Link (URL)"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:89
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:103
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:71
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:69
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:112
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:105
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:87
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:80
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:58
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:63
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:105
+msgid "Link to page"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_call_to_action/mvb_call_to_action.php:101
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:112
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:100
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:120
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:113
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:97
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:119
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:56
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:91
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:46
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:74
+msgid "Content"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:16
+msgid "Pie chart module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:17
+msgid "Add Charts"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:45
+msgid "Add Pie Chart"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:46
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:47
+msgid "Pie Chart"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:58
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:74
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:61
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:66
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:66
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:46
+msgid "Subtitle"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:68
+msgid "Select size"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:74
+msgid "Percent"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:82
+msgid "Chart main color"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:88
+msgid "Chart secondary color"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_charts/mvb_charts.php:147
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:113
+msgid "Must be unique for every module on the page."
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:16
+msgid "Client Logos Carousel"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:17
+msgid "Add clients logos carousel"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:49
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:45
+msgid "Add client"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:50
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:46
+msgid "Client"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:51
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:62
+msgid "Client Name"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:55
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:43
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:53
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:54
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:53
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:54
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:40
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:46
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:52
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:51
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:52
+msgid "Image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:68
+msgid "Client URL"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:87
+msgid "Animate slider automatically"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_clients/mvb_clients.php:121
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:45
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:64
+#: inc/widgets/widget-audio.php:45 inc/widgets/widget-video.php:44
+#: options/ReduxCore/inc/fields/slides/field_slides.php:149
+#: options/ReduxCore/inc/fields/slides/field_slides.php:204
+#: single-my-product.php:133
+msgid "Description"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:16
+msgid "Featured posts"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:17
+msgid "Add featured post row"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:54
+msgid "Label for row"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_featured_news/mvb_featured_news.php:59
+msgid "Link (URL) for row"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:16
+msgid "Portfolio carousel"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_folio_carousel/mvb_folio_carousel.php:17
+msgid "Display portfolio items slider"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:16
+msgid "Google Maps"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:17
+msgid "Adds a Google map"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:45
+msgid "Add Address"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:46
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:53
+msgid "Address"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:47
+msgid "for map pointer"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:65
+msgid "Height (in px) ! Only Digits !"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:70
+msgid "Map zoom (from 0 to 21+)"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_gmaps/mvb_gmaps.php:77
+msgid "Additional information"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:16
+msgid "Horizontal skills"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:17
+msgid "Add a skills section"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:45
+msgid "Start point label"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:50
+msgid "Finish point label"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:56
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:69
+msgid "Add skill"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:57
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:70
+msgid "Skill"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:58
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:63
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:71
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:76
+msgid "Skill Title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:68
+msgid "Skill Subitle"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:74
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:82
+msgid "Skill percent"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:80
+msgid "Skill align"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_horizontal_skills/mvb_horizontal_skills.php:87
+msgid "Skill position"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:16
+msgid "Image module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:17
+msgid "Add an image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:48
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:56
+msgid "Select custom height for image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:53
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:61
+msgid "Select custom width for image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_image/mvb_image.php:78
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:70
+msgid "Open link in new window"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:16
+msgid "Our team"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:17
+msgid "Team members"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:47
+msgid "Add team member"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:48
+msgid "Member"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:49
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:89
+msgid "Member name"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:58
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:60
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:57
+msgid "Flip Image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:77
+msgid "Link target window"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:78
+msgid "Open link in new window?"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_our_team/mvb_our_team.php:94
+msgid "Member additional"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:16
+msgid "Post carousel"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:17
+msgid "Display posts slider"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_posts_carousel/mvb_posts_carousel.php:61
+msgid "Display description on slides"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:16
+msgid "Presentation Boxes"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:17
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:17
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:17
+msgid "Add a presentation box"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:47
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:47
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:47
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:47
+msgid "Add box"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:48
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:48
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:48
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:48
+msgid "Box"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:49
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:49
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:49
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:49
+msgid "Box Title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:82
+msgid "Background Color"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:95
+msgid "Icon alignment"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:125
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:118
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:68
+msgid "Display the \"read more\" link"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:133
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:126
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:76
+msgid "\"Read more\" link text"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:134
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:127
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:77
+#: functions.php:64
+msgid "Read more"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_presentation_boxes/mvb_presentation_boxes.php:152
+msgid "Disable flip animation"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:16
+msgid "Presentation Big Icon"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:17
+msgid "Add a presentation box with large icon"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:76
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:97
+msgid "Icon Color"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:83
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:104
+msgid "Icon Hover Color"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_icon/mvb_presentation_boxes_icon.php:90
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:111
+msgid "Icon size (in px)"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:16
+msgid "Presentation image"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_img/mvb_presentation_boxes_img.php:74
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:54
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:79
+msgid "Color"
+msgstr ""
+
+#: factory/mvb-
+#: custom/modules/mvb_presentation_boxes_vertical/mvb_presentation_boxes_vertical.
+#: php:16
+msgid "Presentation Vertical"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:16
+msgid "Promo row"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_promo_row/mvb_promo_row.php:17
+msgid "Print your promo"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:16
+msgid "Raw HTML Module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:17
+msgid "Adds html code"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:46
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:46
+msgid "Heading"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_html/mvb_raw_html.php:61
+msgid "HTML Code"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_javascript/mvb_raw_javascript.php:16
+msgid "Raw Javascript Module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_javascript/mvb_raw_javascript.php:17
+msgid "Adds Javascript code"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_javascript/mvb_raw_javascript.php:41
+msgid "Javascript Code"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_raw_javascript/mvb_raw_javascript.php:46
+msgid "The &lt;script&gt; tag will be automatically added."
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:16
+msgid "Recent post row"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:17
+msgid "Add recent news list"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:53
+msgid "Number of columns"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:65
+msgid "Display title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:72
+msgid "Display meta"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:79
+msgid "Display comments count"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:93
+msgid "Enable auto scroll"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:101
+msgid "Auto scroll speed"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_news/mvb_recent_news.php:102
+msgid "Rotation interval in seconds"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_works/html/public/mvb_recent_works.php:32
+#: inc/widgets/widget-category-news.php:155
+#: options/ReduxCore/inc/fields/border/field_border.php:125
+#: options/ReduxCore/inc/fields/spacing/field_spacing.php:191
+#: tmp-portfolio-masonry-4-sidebar.php:76 tmp-portfolio-template-2.php:78
+#: tmp-portfolio-template-3.php:77 tmp-portfolio-template-4-r.php:77
+#: tmp-portfolio-template-4.php:77 woocommerce/archive-product.php:96
+msgid "All"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:16
+msgid "Recent portfolio items"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_works/mvb_recent_works.php:17
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:17
+msgid "Add portfolio items list"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_recent_works_desc/mvb_recent_works_desc.php:16
+msgid "Portfolio items + description"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:15
+msgid "Shortcode Module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:16
+msgid "Add a custom shortcode"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_shortcode/mvb_shortcode.php:45
+msgid "Shortcode"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:16
+msgid "Personal skills"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:17
+msgid "Add a skill section"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_skills/mvb_skills.php:58
+msgid "Job position"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:16
+msgid "Tabs module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:17
+msgid "Add tabs to the page"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:54
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:45
+msgid "Add tab"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:55
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:46
+msgid "Tab"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:56
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:61
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:47
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:52
+msgid "Tab Title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:67
+msgid "Selected"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs/mvb_tabs.php:75
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:66
+msgid "Tab content"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:16
+msgid "Vertical tabs"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tabs_list/mvb_tabs_list.php:17
+msgid "Add vertical tabs to the page"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:16
+msgid "Testimonials module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:17
+msgid "Add a testimonials section"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:47
+msgid "Client Title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:85
+msgid "Client Job"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:112
+msgid "Autoslideshow"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_testimonials/mvb_testimonials.php:113
+msgid "Enable or disable auto scrolling of blocks"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:16
+msgid "Text module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_text/mvb_text.php:17
+msgid "Adds a text block"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:16
+msgid "Text with image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:17
+msgid "Add text with image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_text_image/mvb_text_image.php:66
+msgid "Alignment of image"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:16
+msgid "Tiles module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:17
+msgid "Add tiles to the page"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:45
+msgid "Add tile"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:46
+msgid "Tile"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:47
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:74
+msgid "Tile title"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:63
+msgid "Disable flip"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:64
+msgid "Turn off flip effect"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:85
+msgid "Hover color"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_tiles/mvb_tiles.php:113
+msgid "Backflip content"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:15
+msgid "Timeline"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:16
+msgid "Display timeline items"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:62
+msgid "Posts order"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_timeline/mvb_timeline.php:63
+msgid "Select order of displayed posts"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:16
+msgid "Video module"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:17
+msgid "Adds a oEmbed video"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:45
+msgid "Video URL"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:50
+#: inc/custom_metabox/portfolio-boxes.php:76
+#: inc/custom_metabox/post-boxes.php:43
+msgid "Self hosted video file in mp4 format"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:55
+#: inc/custom_metabox/portfolio-boxes.php:82
+#: inc/custom_metabox/post-boxes.php:49
+msgid "Self hosted video file in webM format"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:60
+msgid "Video width"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:61
+msgid "Set custom width for video block. Leave empty for default value"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:66
+msgid "Video height"
+msgstr ""
+
+#: factory/mvb-custom/modules/mvb_video/mvb_video.php:67
+msgid "Set custom height for video block. Leave empty for default value"
+msgstr ""
+
+#: functions.php:94
+msgid "Primary Navigation"
+msgstr ""
+
+#: functions.php:95
+msgid "Footer navigation"
+msgstr ""
+
+#: functions.php:246
+msgid "Previous"
+msgstr ""
+
+#: functions.php:247 inc/actions.php:175 single-my-product.php:115
+msgid "Next"
+msgstr ""
+
+#: functions.php:278 inc/components.php:42
+msgid "View your shopping cart"
+msgstr ""
+
+#: functions.php:278 inc/components.php:42
+#, php-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/actions.php:174 single-my-product.php:111
+msgid "Prev"
+msgstr ""
+
+#: inc/actions.php:196 templates/top-folio.php:74 templates/top-forum.php:73
+msgid "Home"
+msgstr ""
+
+#: inc/actions.php:197
+#, php-format
+msgid "Archive by Category \"%s\""
+msgstr ""
+
+#: inc/actions.php:198
+#, php-format
+msgid "Search Results for \"%s\" Query"
+msgstr ""
+
+#: inc/actions.php:199
+#, php-format
+msgid "Posts Tagged \"%s\""
+msgstr ""
+
+#: inc/actions.php:200
+#, php-format
+msgid "Articles Posted by %s"
+msgstr ""
+
+#: inc/actions.php:201
+msgid "Error 404"
+msgstr ""
+
+#: inc/actions.php:338
+msgid "Page"
+msgstr ""
+
+#: inc/components.php:10 inc/widgets/widget-search.php:50
+#: templates/searchform.php:2
+msgid "Search for:"
+msgstr ""
+
+#: inc/components.php:11 inc/components.php:12 templates/searchform.php:3
+#: templates/searchform.php:4
+msgid "Search"
+msgstr ""
+
+#: inc/components.php:222 inc/components.php:225
+msgid "I like this article"
+msgstr ""
+
+#: inc/custom_metabox/custom-sidebar.php:30
+#: inc/custom_metabox/custom-sidebar.php:59
+#: inc/custom_metabox/custom-sidebar.php:82
+msgid "Select custom sidebar"
+msgstr ""
+
+#: inc/custom_metabox/features-boxes.php:26
+msgid "Feature box options"
+msgstr ""
+
+#: inc/custom_metabox/features-boxes.php:34
+msgid "Icon for features box"
+msgstr ""
+
+#: inc/custom_metabox/headers-boxes.php:30
+msgid "Page header background"
+msgstr ""
+
+#: inc/custom_metabox/headers-boxes.php:37 inc/custom_metabox/post-boxes.php:71
+msgid "Hide stunning header"
+msgstr ""
+
+#: inc/custom_metabox/headers-boxes.php:44
+msgid "Select image pattern for header background"
+msgstr ""
+
+#: inc/custom_metabox/headers-boxes.php:52
+msgid "Select color for header background"
+msgstr ""
+
+#: inc/custom_metabox/headers-boxes.php:59 inc/custom_metabox/post-boxes.php:65
+msgid "Page subtitle"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:25 inc/custom_metabox/page-boxes.php:71
+msgid "Select Blog parameters"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:102
+msgid "Boxed Page background options"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:109
+msgid "Background color"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:110
+msgid "Color of body of page (page will be set to boxed)"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:116
+msgid "Fixed backrgound"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:117
+msgid "Check if you want to bg will be fixed on page scroll"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:122
+msgid "Background image"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:123
+msgid "Upload an image or enter an URL."
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:128 options/options.php:1201
+msgid "Background image repeat"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:145
+msgid "Block before content"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:153
+msgid "Full-width shortcode"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:154
+msgid "Block that displayed before content and sidebars"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:164
+msgid "Additional Text fields"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:172 inc/widgets/widget-text.php:9
+msgid "Text block"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:186
+msgid "QR Code address"
+msgstr ""
+
+#: inc/custom_metabox/page-boxes.php:191 options/options.php:1266
+msgid "Custom Form Shortcode"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:32
+msgid "Custom loop parameters"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:53
+msgid "Number of items"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:54
+msgid "Number of portfolio items that will be show on page"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:63
+msgid "Portfolio Video"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:109
+msgid "Images gallery"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:150
+#: inc/custom_metabox/portfolio-boxes.php:210
+msgid "Delete image"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:161
+msgid "Add gallery images"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:187
+msgid "Add Images to Product Gallery"
+msgstr ""
+
+#: inc/custom_metabox/portfolio-boxes.php:189
+msgid "Add to gallery"
+msgstr ""
+
+#: inc/custom_metabox/post-boxes.php:23
+msgid "Post Video"
+msgstr ""
+
+#: inc/custom_metabox/post-boxes.php:31
+msgid "YouTube video ID"
+msgstr ""
+
+#: inc/custom_metabox/post-boxes.php:37
+msgid "Vimeo video ID"
+msgstr ""
+
+#: inc/custom_metabox/post-boxes.php:58
+msgid "Post stunning header options"
+msgstr ""
+
+#: inc/custom_metabox/testimonial-boxes.php:26
+msgid "Testimonial info"
+msgstr ""
+
+#: inc/custom_metabox/testimonial-boxes.php:33
+msgid "Author of testimonial"
+msgstr ""
+
+#: inc/custom_metabox/testimonial-boxes.php:39
+msgid "Author additional"
+msgstr ""
+
+#: inc/icon_manager/icon-manager.php:447 inc/icon_manager/icon-manager.php:448
+#: inc/icon_manager/icon-manager.php:456 inc/icon_manager/icon-manager.php:457
+msgid "Icon Manager"
+msgstr ""
+
+#: inc/icon_manager/icon-manager.php:478
+msgid "Icon Fonts Manager"
+msgstr ""
+
+#: inc/icon_manager/icon-manager.php:479
+msgid "Upload New Icons"
+msgstr ""
+
+#: inc/icon_manager/icon-manager.php:494
+msgid "No font icons uploaded. Upload some font icons to display here."
+msgstr ""
+
+#: inc/icon_manager/icon-manager.php:587
+msgid "Crum Icons"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_ajax.php:47
+msgid "Please Try Again"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_ajax.php:131
+msgid "Remove Embed"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_ajax.php:134
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_field.php:449
+msgid "Add Group"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_field.php:450
+msgid "Remove Group"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:249
+msgid "Add Row"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:305
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:705
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:765
+#: options/ReduxCore/inc/fields/background/field_background.php:321
+#: options/ReduxCore/inc/fields/media/field_media.php:205
+#: options/ReduxCore/inc/fields/multi_text/field_multi_text.php:69
+#: options/ReduxCore/inc/fields/multi_text/field_multi_text.php:73
+#: options/ReduxCore/inc/fields/multi_text/field_multi_text.php:76
+#: options/ReduxCore/inc/fields/slides/field_slides.php:133
+#: options/ReduxCore/inc/fields/slides/field_slides.php:190
+msgid "Remove"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:600
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:634
+msgid "No terms"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:673
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:727
+msgid "Add or Upload File"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:694
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:757
+msgid "Remove Image"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:705
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:765
+msgid "File:"
+msgstr ""
+
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:705
+#: inc/lib/metabox/helpers/cmb_Meta_Box_types.php:765
+msgid "Download"
+msgstr ""
+
+#: inc/lib/metabox/init.php:251
+msgid "Clear"
+msgstr ""
+
+#: inc/lib/metabox/init.php:252 options/ReduxCore/framework.php:1896
+#: options/options.php:767
+msgid "Default"
+msgstr ""
+
+#: inc/lib/metabox/init.php:253
+msgid "Select Color"
+msgstr ""
+
+#: inc/lib/metabox/init.php:254
+msgid "Current Color"
+msgstr ""
+
+#: inc/lib/metabox/init.php:1155
+msgid "Save"
+msgstr ""
+
+#: inc/menu.php:6
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+
+#: inc/menu.php:7
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr ""
+
+#: inc/menu.php:10
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr ""
+
+#: inc/post-type.php:11
+msgid "Portfolios"
+msgstr ""
+
+#: inc/post-type.php:12
+msgid "Portfolio"
+msgstr ""
+
+#: inc/post-type.php:13
+msgid "Add New"
+msgstr ""
+
+#: inc/post-type.php:14
+msgid "Add New Portfolio item"
+msgstr ""
+
+#: inc/post-type.php:15
+msgid "Edit Portfolio item"
+msgstr ""
+
+#: inc/post-type.php:16
+msgid "New Portfolio item"
+msgstr ""
+
+#: inc/post-type.php:17
+msgid "All Portfolio items"
+msgstr ""
+
+#: inc/post-type.php:18
+msgid "View Portfolio item"
+msgstr ""
+
+#: inc/post-type.php:19
+msgid "Search Portfolios item"
+msgstr ""
+
+#: inc/post-type.php:20
+msgid "No products found"
+msgstr ""
+
+#: inc/post-type.php:21
+msgid "No products found in the Trash"
+msgstr ""
+
+#: inc/post-type.php:74
+#, php-format
+msgid "Portfolio updated. <a href=\"%s\">View product</a>"
+msgstr ""
+
+#: inc/post-type.php:75
+msgid "Custom field updated."
+msgstr ""
+
+#: inc/post-type.php:76
+msgid "Custom field deleted."
+msgstr ""
+
+#: inc/post-type.php:77
+msgid "Portfolio updated."
+msgstr ""
+
+#: inc/post-type.php:78
+#, php-format
+msgid "Portfolio restored to revision from %s"
+msgstr ""
+
+#: inc/post-type.php:79
+#, php-format
+msgid "Portfolio published. <a href=\"%s\">View product</a>"
+msgstr ""
+
+#: inc/post-type.php:80
+msgid "Portfolio saved."
+msgstr ""
+
+#: inc/post-type.php:81
+#, php-format
+msgid "Portfolio submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr ""
+
+#: inc/post-type.php:82
+#, php-format
+msgid ""
+"Portfolio scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" "
+"href=\"%2$s\">Preview product</a>"
+msgstr ""
+
+#: inc/post-type.php:82
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: inc/post-type.php:83
+#, php-format
+msgid "Portfolio draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr ""
+
+#: inc/post-type.php:120 inc/post-type.php:130
+msgid "Portfolio Categories"
+msgstr ""
+
+#: inc/post-type.php:121
+msgid "Portfolio Category"
+msgstr ""
+
+#: inc/post-type.php:122
+msgid "Search Portfolio Categories"
+msgstr ""
+
+#: inc/post-type.php:123
+msgid "All Portfolio Categories"
+msgstr ""
+
+#: inc/post-type.php:124
+msgid "Parent Portfolio Category"
+msgstr ""
+
+#: inc/post-type.php:125
+msgid "Parent Portfolio Category:"
+msgstr ""
+
+#: inc/post-type.php:126
+msgid "Edit Portfolio Category"
+msgstr ""
+
+#: inc/post-type.php:127
+msgid "Update Portfolio Category"
+msgstr ""
+
+#: inc/post-type.php:128
+msgid "Add New Portfolio Category"
+msgstr ""
+
+#: inc/post-type.php:129
+msgid "New Portfolio Category"
+msgstr ""
+
+#: inc/post-type.php:160 inc/post-type.php:161
+msgid "Time Line"
+msgstr ""
+
+#: inc/post-type.php:162
+msgid "Add New Time Line Item"
+msgstr ""
+
+#: inc/post-type.php:163
+msgid "Edit Time Line Item"
+msgstr ""
+
+#: inc/post-type.php:164
+msgid "Search Time Line Items"
+msgstr ""
+
+#: inc/post-type.php:165
+msgid "Sorry: Time Line Item Not Found"
+msgstr ""
+
+#: inc/post-type.php:166
+msgid "Sorry: Time Line Item Not Found In Trash"
+msgstr ""
+
+#: inc/widgets.php:8
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/widgets.php:16
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/widgets.php:26
+msgid "Footer column 1"
+msgstr ""
+
+#: inc/widgets.php:34
+msgid "Footer column 2"
+msgstr ""
+
+#: inc/widgets.php:42
+msgid "Footer column 3"
+msgstr ""
+
+#: inc/widgets.php:53
+msgid "Sidebar for shop"
+msgstr ""
+
+#: inc/widgets/widget-audio.php:13
+msgid "Include audio with oEmbed"
+msgstr ""
+
+#: inc/widgets/widget-audio.php:27 inc/widgets/widget-audio.php:150
+#: inc/widgets/widget-category-news.php:140 inc/widgets/widget-count.php:103
+#: inc/widgets/widget-flickr.php:94 inc/widgets/widget-gallery.php:71
+#: inc/widgets/widget-instagram.php:152 inc/widgets/widget-menu.php:53
+#: inc/widgets/widget-menu.php:129 inc/widgets/widget-recent.php:185
+#: inc/widgets/widget-search.php:88 inc/widgets/widget-styled-list.php:64
+#: inc/widgets/widget-tabs.php:151 inc/widgets/widget-tags.php:75
+#: inc/widgets/widget-text.php:51 inc/widgets/widget-video.php:27
+#: inc/widgets/widget-video.php:151 inc/widgets/widget_categories.php:115
+#: inc/widgets/widget_categories.php:118
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widget-audio.php:35 inc/widgets/widget-video.php:34
+msgid "Embed URL"
+msgstr ""
+
+#: inc/widgets/widget-audio.php:40 inc/widgets/widget-video.php:39
+msgid "Embed width in pixels"
+msgstr ""
+
+#: inc/widgets/widget-audio.php:154 inc/widgets/widget-video.php:155
+msgid "Embed URL:"
+msgstr ""
+
+#: inc/widgets/widget-audio.php:158 inc/widgets/widget-video.php:159
+msgid "Embed width:"
+msgstr ""
+
+#: inc/widgets/widget-audio.php:162 inc/widgets/widget-video.php:163
+msgid "Embed Description:"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:10
+msgid "Widget: Posts"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:11
+msgid "Posts from some category"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:24
+msgid "Latest articles"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:79
+msgid "0 Comments"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:171
+msgid "Order posts"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:174 options/options.php:954
+msgid "Descending"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:175 options/options.php:954
+msgid "Ascending"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:180
+msgid "Order posts by"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:183
+msgid "No order"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:184
+msgid "Order by post id"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:185
+msgid "Order by title"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:186
+msgid "Order by post name (post slug)"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:187
+msgid "Order by date"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:188
+msgid "Order by last modified date"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:189
+msgid "Random order"
+msgstr ""
+
+#: inc/widgets/widget-category-news.php:190
+msgid "Order by number of comments"
+msgstr ""
+
+#: inc/widgets/widget-count.php:10
+msgid "Subscribe to social and rss"
+msgstr ""
+
+#: inc/widgets/widget-count.php:42 inc/widgets/widget-instagram.php:103
+msgid "followers"
+msgstr ""
+
+#: inc/widgets/widget-count.php:52
+msgid "fans"
+msgstr ""
+
+#: inc/widgets/widget-count.php:62
+msgid "subscribers"
+msgstr ""
+
+#: inc/widgets/widget-count.php:107
+msgid "Feedburner Feed Name:"
+msgstr ""
+
+#: inc/widgets/widget-count.php:111
+msgid "Textbox Label:"
+msgstr ""
+
+#: inc/widgets/widget-count.php:116
+msgid "Open links in a new window"
+msgstr ""
+
+#: inc/widgets/widget-count.php:120
+msgid "Facebook Page URL"
+msgstr ""
+
+#: inc/widgets/widget-count.php:125
+msgid "Enable Twitter"
+msgstr ""
+
+#: inc/widgets/widget-count.php:131
+msgid "Youtube Channel URL"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:13
+msgid "Facebook Social widget"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:23
+msgid "Facebook"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:51
+msgid "URL:"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:56
+#: options/ReduxCore/inc/fields/dimensions/field_dimensions.php:162
+msgid "Width"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:61
+#: options/ReduxCore/inc/fields/dimensions/field_dimensions.php:178
+#: options/ReduxCore/inc/fields/typography/field_typography.php:442
+msgid "Height"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:67
+msgid "Small header"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:71
+msgid "Hide Cover Photo"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:75
+msgid "Show Friend's Faces"
+msgstr ""
+
+#: inc/widgets/widget-facebook.php:79
+msgid "Show Page Posts"
+msgstr ""
+
+#: inc/widgets/widget-flickr.php:13
+msgid "Displays your Flickr feed"
+msgstr ""
+
+#: inc/widgets/widget-flickr.php:98
+msgid "ID:"
+msgstr ""
+
+#: inc/widgets/widget-flickr.php:103
+msgid "Number of photos:"
+msgstr ""
+
+#: inc/widgets/widget-gallery.php:20
+msgid "Random work from portfolio"
+msgstr ""
+
+#: inc/widgets/widget-gallery.php:36
+msgid "Random work"
+msgstr ""
+
+#: inc/widgets/widget-gallery.php:77
+msgid "Width(px):"
+msgstr ""
+
+#: inc/widgets/widget-gallery.php:84
+msgid "Height(px):"
+msgstr ""
+
+#: inc/widgets/widget-gallery.php:93
+msgid "Images number:"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:15
+msgid "Instagram feed"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:17
+msgid "Crumina: Instagram Feed"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:47
+msgid "Please fill all widget settings!"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:99
+msgid "items"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:107 inc/widgets/widget-instagram.php:113
+msgid "follow"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:139
+msgid "Instagram"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:158 options/options.php:1485
+msgid "Username:"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:163
+msgid "Cache time (hours)"
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:182
+msgid "Unable to communicate with Instagram."
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:186
+msgid "Instagram did not return a 200."
+msgstr ""
+
+#: inc/widgets/widget-instagram.php:194
+msgid "Instagram has returned invalid data."
+msgstr ""
+
+#: inc/widgets/widget-menu.php:10
+msgid "Add a custom menu to your sidebar."
+msgstr ""
+
+#: inc/widgets/widget-menu.php:11
+msgid "Custom Menu"
+msgstr ""
+
+#: inc/widgets/widget-menu.php:48 inc/widgets/widget-menu.php:124
+#, php-format
+msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
+msgstr ""
+
+#: inc/widgets/widget-menu.php:57 inc/widgets/widget-menu.php:133
+msgid "Select Menu:"
+msgstr ""
+
+#: inc/widgets/widget-menu.php:75
+msgid "Use this widget to add one of your custom menu as a link list widget."
+msgstr ""
+
+#: inc/widgets/widget-menu.php:76
+msgid "Crumina: Tiled Menu"
+msgstr ""
+
+#: inc/widgets/widget-recent.php:12
+msgid "Advanced recent posts widget."
+msgstr ""
+
+#: inc/widgets/widget-recent.php:84 inc/widgets/widget-recent.php:118
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: inc/widgets/widget-recent.php:189
+msgid "Limit:"
+msgstr ""
+
+#: inc/widgets/widget-recent.php:197
+msgid "Display date?"
+msgstr ""
+
+#: inc/widgets/widget-recent.php:201
+msgid "Display excerpt?"
+msgstr ""
+
+#: inc/widgets/widget-recent.php:205
+msgid "Excerpt length:"
+msgstr ""
+
+#: inc/widgets/widget-recent.php:210
+msgid "Display thumbnail?"
+msgstr ""
+
+#: inc/widgets/widget-recent.php:215
+msgid "Limit to category: "
+msgstr ""
+
+#: inc/widgets/widget-recent.php:216
+msgid "All categories"
+msgstr ""
+
+#: inc/widgets/widget-search.php:13
+msgid "Search widget"
+msgstr ""
+
+#: inc/widgets/widget-search.php:93
+msgid "Placeholder"
+msgstr ""
+
+#: inc/widgets/widget-styled-list.php:9
+msgid "List of "
+msgstr ""
+
+#: inc/widgets/widget-styled-list.php:55
+msgid "Styled list"
+msgstr ""
+
+#: inc/widgets/widget-styled-list.php:70
+msgid "Items wrapped in: li HTML tags"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:16
+msgid "Tabs: Popular posts, Recent Posts, Comments"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:50 inc/widgets/widget-tabs.php:57
+msgid "Popular"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:51 inc/widgets/widget-tabs.php:56
+msgid "Recent"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:156
+msgid "Number of posts:"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:163
+msgid "Select header format:"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:168
+msgid "Popular-Recent"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:170
+msgid "Recent-Popular"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:176
+msgid "Display date or thumb:"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:180
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/widgets/widget-tabs.php:181
+msgid "Post format"
+msgstr ""
+
+#: inc/widgets/widget-tags.php:10
+msgid "Displays tags list"
+msgstr ""
+
+#: inc/widgets/widget-tags.php:24 options/options.php:59
+msgid "Tags"
+msgstr ""
+
+#: inc/widgets/widget-tags.php:79
+msgid "Number tags:"
+msgstr ""
+
+#: inc/widgets/widget-text.php:8
+msgid "Widget: Text block"
+msgstr ""
+
+#: inc/widgets/widget-tweets.php:16
+msgid "Displays your latest Tweets"
+msgstr ""
+
+#: inc/widgets/widget-tweets.php:175
+msgid "Follow me"
+msgstr ""
+
+#: inc/widgets/widget-vcard.php:20
+msgid "Use this widget to add a vCard"
+msgstr ""
+
+#: inc/widgets/widget-vcard.php:22
+msgid "Crumina: vCard"
+msgstr ""
+
+#: inc/widgets/widget-vcard.php:48
+msgid "vCard"
+msgstr ""
+
+#: inc/widgets/widget-vcard.php:76
+msgid "E-Mail"
+msgstr ""
+
+#: inc/widgets/widget-vcard.php:77
+msgid "Twitter"
+msgstr ""
+
+#: inc/widgets/widget-video.php:13
+msgid "Include video with oEmbed"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:10
+msgid "In one widget"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:11
+msgid "Widget: Categories + Archives"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:21 inc/widgets/widget_categories.php:118
+msgid "Archives"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:40
+msgid "Select Category"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:76
+msgid "Select Month"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:123
+msgid "Display as dropdown"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:126
+msgid "Show post counts"
+msgstr ""
+
+#: inc/widgets/widget_categories.php:129
+msgid "Show hierarchy"
+msgstr ""
+
+#: options/ReduxCore/core/enqueue.php:453
+#: options/ReduxCore/inc/extensions/customizer/extension_customizer.php:687
+msgid "You have changes that are not saved. Would you like to save them now?"
+msgstr ""
+
+#: options/ReduxCore/core/enqueue.php:461
+#: options/ReduxCore/inc/extensions/customizer/extension_customizer.php:688
+msgid "Are you sure? Resetting will lose all custom values."
+msgstr ""
+
+#: options/ReduxCore/core/enqueue.php:469
+msgid "Are you sure? Resetting will lose all custom values in this section."
+msgstr ""
+
+#: options/ReduxCore/core/enqueue.php:477
+#: options/ReduxCore/inc/extensions/customizer/extension_customizer.php:689
+msgid ""
+"Your current options will be replaced with the values of this preset. Would "
+"you like to proceed?"
+msgstr ""
+
+#: options/ReduxCore/core/enqueue.php:484
+msgid "Please Wait"
+msgstr ""
+
+#: options/ReduxCore/core/enqueue.php:495
+msgid "There was an error saving. Here is the result of your action:"
+msgstr ""
+
+#: options/ReduxCore/core/enqueue.php:496
+msgid "There was a problem with your action. Please try again or reload the page."
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:65
+msgid "Warning- This options panel will not work properly without javascript!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:141
+msgid "Settings Imported!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:156
+msgid "All Defaults Restored!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:170
+msgid "Section Defaults Restored!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:184
+msgid "Settings Saved!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:204
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:212
+msgid "error(s) were found!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:220
+msgid "warning(s) were found!"
+msgstr ""
+
+#: options/ReduxCore/core/panel.php:312
+msgid ""
+"<strong>Your panel has bundled outdated copies of Redux Framework template "
+"files</strong> &#8211; if you encounter functionality issues this could be "
+"the reason. Ensure you update or remove them."
+msgstr ""
+
+#: options/ReduxCore/framework.php:237
+#, php-format
+msgid "Options panel created using %1$s"
+msgstr ""
+
+#: options/ReduxCore/framework.php:237
+#: options/ReduxCore/inc/welcome/welcome.php:199
+msgid "Redux Framework"
+msgstr ""
+
+#: options/ReduxCore/framework.php:241 options/ReduxCore/framework.php:245
+#: options/options.php:162 options/options.php:166
+msgid "Options"
+msgstr ""
+
+#: options/ReduxCore/framework.php:1747
+msgid "Enable"
+msgstr ""
+
+#: options/ReduxCore/framework.php:1752
+msgid "Disable"
+msgstr ""
+
+#: options/ReduxCore/framework.php:1758
+msgid "moving the mouse over"
+msgstr ""
+
+#: options/ReduxCore/framework.php:1760
+msgid "clicking"
+msgstr ""
+
+#: options/ReduxCore/framework.php:1764
+#, php-format
+msgid ""
+"Hints are tooltips that popup when %d the hint icon, offering addition "
+"information about the field in which they appear.  They can be %d d by using "
+"the link below."
+msgstr ""
+
+#: options/ReduxCore/framework.php:1769
+msgid "Hints"
+msgstr ""
+
+#: options/ReduxCore/framework.php:2775
+msgid "Invalid security credential.  Please reload the page and try again."
+msgstr ""
+
+#: options/ReduxCore/framework.php:2784
+msgid "Invalid user capability.  Please reload the page and try again."
+msgstr ""
+
+#: options/ReduxCore/framework.php:2860
+msgid "Your panel has no fields. Nothing to save."
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_admin_notices.php:97
+msgid "Dismiss"
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_cdn.php:74
+msgid ""
+"Please wait a few minutes, then try refreshing the page. Unable to load some "
+"remotely hosted scripts."
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_cdn.php:76
+#, php-format
+msgid ""
+"If you are developing offline, please download and install the <a href=\"%s\" "
+"target=\"_blank\">Redux Vendor Support</a> plugin/extension to bypass the our "
+"CDN and avoid this warning"
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_cdn.php:81
+msgid "Redux Framework Warning"
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_cdn.php:81
+#, php-format
+msgid "%s CDN unavailable.  Some controls may not render properly."
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_cdn.php:113
+#, php-format
+msgid ""
+"The <a href=\"%s\">Vendor Support plugin</a> (or extension) is either not "
+"installed or not activated and thus, some controls may not render properly.  "
+"Please ensure that it is installed and <a href=\"%s\">activated</a>"
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_filesystem.php:31
+#: options/ReduxCore/inc/class.redux_filesystem.php:60
+#: options/ReduxCore/inc/class.redux_filesystem.php:270
+msgid "File Permission Issues"
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_filesystem.php:31
+#, php-format
+msgid ""
+"We were unable to modify required files. Please check your permissions, or "
+"modify your wp-config.php file to contain your FTP login credentials as <a "
+"href=\"%s\" target=\"_blank\">outlined here</a>."
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_filesystem.php:60
+#: options/ReduxCore/inc/class.redux_filesystem.php:270
+#, php-format
+msgid ""
+"We were unable to modify required files. Please ensure that <code>%1s</code> "
+"has the proper read-write permissions, or modify your wp-config.php file to "
+"contain your FTP login credentials as <a href=\"%2s\" target=\"_blank\">outlined "
+"here</a>."
+msgstr ""
+
+#: options/ReduxCore/inc/class.redux_helpers.php:604
+#, php-format
+msgid ""
+"<code>%s</code> version <strong style=\"color:red\">%s</strong> is out of date."
+" The core version is %s"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/extension_customizer.php:722
+msgid "You have changes that are not saved.  Would you like to save them now?"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/extension_customizer.php:723
+msgid "Are you sure?  Resetting will lose all custom values."
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/extension_customizer.php:724
+msgid ""
+"Your current options will be replaced with the values of this preset.  Would "
+"you like to proceed?"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:89
+msgid "Press return or enter to open this panel"
+msgstr ""
+
+#. translators: %s is the site/panel title in the Customizer
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:114
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:142
+#, php-format
+msgid "You are customizing %s"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:138
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:79
+msgid "Back"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:146
+msgid "Help"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:72
+msgid "Press return or enter to open"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:122
+msgid "Press return or enter to expand"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/extension_import_export.php:120
+msgid "Import / Export"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:91
+msgid "Import Options"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:95
+msgid "Import from File"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:98
+msgid "Import from URL"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:104
+msgid ""
+"Input your backup file below and hit Import to restore your sites options "
+"from a backup."
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:111
+msgid ""
+"Input the URL to another sites options set and hit Import to load the "
+"options from that site."
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:116
+msgid "Import"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:116
+msgid ""
+"WARNING! This will overwrite all existing option values, please proceed with "
+"caution!"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:120
+msgid "Export Options"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:124
+msgid ""
+"Here you can copy/download your current option settings. Keep this safe as "
+"you can use it as a backup should anything go wrong, or you can use it to "
+"restore your settings on this site (or any other site)."
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:132
+msgid "Copy Data"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:133
+msgid "Download Data File"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/import_export/import_export/field_import_export
+#: .php:134
+msgid "Copy Export URL"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/options_object/extension_options_object.php:82
+#: options/ReduxCore/inc/extensions/options_object/options_object/field_options_obj
+#: ect.php:104
+msgid "Options Object"
+msgstr ""
+
+#: options/ReduxCore/inc/extensions/options_object/options_object/field_options_obj
+#: ect.php:107
+msgid "Show Object in Javascript Console Object"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:124
+#: options/ReduxCore/inc/fields/color/field_color.php:73
+#: options/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:79
+#: options/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:91
+msgid "Transparent"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:141
+msgid "Background Repeat"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:157
+msgid "Background Clip"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:173
+msgid "Background Origin"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:188
+msgid "Background Size"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:203
+msgid "Background Attachment"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:223
+msgid "Background Position"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:277
+#: options/ReduxCore/inc/fields/media/field_media.php:149
+msgid "No media selected"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/background/field_background.php:314
+#: options/ReduxCore/inc/fields/media/field_media.php:198
+#: options/ReduxCore/inc/fields/slides/field_slides.php:126
+#: options/ReduxCore/inc/fields/slides/field_slides.php:188
+msgid "Upload"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/border/field_border.php:138
+#: options/ReduxCore/inc/fields/spacing/field_spacing.php:215
+msgid "Top"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/border/field_border.php:152
+#: options/ReduxCore/inc/fields/spacing/field_spacing.php:229
+msgid "Bottom"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/border/field_border.php:174
+msgid "Border style"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:68
+msgid "From "
+msgstr ""
+
+#: options/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:82
+msgid "To "
+msgstr ""
+
+#: options/ReduxCore/inc/fields/dimensions/field_dimensions.php:189
+#: options/ReduxCore/inc/fields/dimensions/field_dimensions.php:190
+#: options/ReduxCore/inc/fields/spacing/field_spacing.php:245
+#: options/ReduxCore/inc/fields/spacing/field_spacing.php:246
+msgid "Units"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/gallery/field_gallery.php:73
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/gallery/field_gallery.php:74
+msgid "Clear Gallery"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/link_color/field_link_color.php:88
+msgid "Regular"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/link_color/field_link_color.php:92
+msgid "Hover"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/link_color/field_link_color.php:96
+msgid "Visited"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/link_color/field_link_color.php:100
+#: plugins/class-tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/multi_text/field_multi_text.php:61
+msgid "Add More"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/password/field_password.php:62
+msgid "Password"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/password/field_password.php:63
+msgid "Username"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/select/field_select.php:83
+#: options/ReduxCore/inc/fields/select_image/field_select_image.php:63
+msgid "Select an item"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/select/field_select.php:134
+#: options/ReduxCore/inc/fields/select_image/field_select_image.php:144
+msgid "No items of this type were found."
+msgstr ""
+
+#: options/ReduxCore/inc/fields/slides/field_slides.php:68
+msgid "Slide"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/slides/field_slides.php:73
+#: options/ReduxCore/inc/fields/slides/field_slides.php:174
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/slides/field_slides.php:153
+#: options/ReduxCore/inc/fields/slides/field_slides.php:207
+msgid "URL"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/slides/field_slides.php:223
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/switch/field_switch.php:41
+#: options/options.php:296 options/options.php:322 options/options.php:332
+#: options/options.php:342 options/options.php:367 options/options.php:374
+#: options/options.php:382 options/options.php:400 options/options.php:756
+#: options/options.php:781 options/options.php:804 options/options.php:838
+#: options/options.php:854 options/options.php:862 options/options.php:870
+#: options/options.php:909 options/options.php:971 options/options.php:980
+#: options/options.php:996 options/options.php:1064 options/options.php:1090
+#: options/options.php:1210 options/options.php:1275 options/options.php:1440
+#: options/options.php:1464 options/options.php:1532
+msgid "On"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/switch/field_switch.php:44
+#: options/options.php:296 options/options.php:322 options/options.php:332
+#: options/options.php:342 options/options.php:367 options/options.php:374
+#: options/options.php:382 options/options.php:400 options/options.php:756
+#: options/options.php:781 options/options.php:804 options/options.php:838
+#: options/options.php:854 options/options.php:862 options/options.php:870
+#: options/options.php:909 options/options.php:971 options/options.php:980
+#: options/options.php:996 options/options.php:1064 options/options.php:1090
+#: options/options.php:1210 options/options.php:1275 options/options.php:1440
+#: options/options.php:1464 options/options.php:1532
+msgid "Off"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:231
+msgid "Font Family"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:232
+msgid "Font family"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:258
+#: options/ReduxCore/inc/fields/typography/field_typography.php:259
+msgid "Backup Font Family"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:273
+#: options/ReduxCore/inc/fields/typography/field_typography.php:281
+msgid "Font style"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:274
+msgid "Font Weight &amp; Style"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:281
+msgid "Style"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:321
+msgid "Font subsets"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:323
+msgid "Font Subsets"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:325
+msgid "Subsets"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:325
+msgid "Font script"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:342
+#: options/ReduxCore/inc/fields/typography/field_typography.php:343
+#: options/ReduxCore/inc/fields/typography/field_typography.php:344
+msgid "Text Align"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:365
+#: options/ReduxCore/inc/fields/typography/field_typography.php:366
+#: options/ReduxCore/inc/fields/typography/field_typography.php:367
+msgid "Text Transform"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:388
+#: options/ReduxCore/inc/fields/typography/field_typography.php:389
+#: options/ReduxCore/inc/fields/typography/field_typography.php:390
+msgid "Font Variant"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:408
+#: options/ReduxCore/inc/fields/typography/field_typography.php:409
+#: options/ReduxCore/inc/fields/typography/field_typography.php:410
+msgid "Text Decoration"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:432
+#: options/ReduxCore/inc/fields/typography/field_typography.php:433
+msgid "Font Size"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:433
+msgid "Size"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:441
+#: options/ReduxCore/inc/fields/typography/field_typography.php:442
+msgid "Line Height"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:450
+#: options/ReduxCore/inc/fields/typography/field_typography.php:451
+msgid "Word Spacing"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:459
+#: options/ReduxCore/inc/fields/typography/field_typography.php:460
+msgid "Letter Spacing"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:478
+msgid "Font Color"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:480
+msgid "Font color"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:890
+msgid "Standard Fonts"
+msgstr ""
+
+#: options/ReduxCore/inc/fields/typography/field_typography.php:991
+msgid "Google Webfonts"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/embedded.php:15
+#, php-format
+msgid ""
+"<span class=\"tc-lead tc-recommended\">RECOMMENDED</span>: If you are "
+"submitting to WordPress.org Theme Repository, it is "
+"<strong>strongly</strong> suggested that you read <a href=\"%s\" "
+"target=\"_blank\">this document</a>, or your theme will be rejected because of "
+"Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/embedded.php:24
+#, php-format
+msgid ""
+"<span class=\"tc-lead tc-required\">REQUIRED</span>: You MUST delete <strong> "
+"%s </strong>, or your theme will be rejected by WP.org theme submission "
+"because of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/embedded.php:38
+msgid "Optional"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/embedded.php:40
+msgid ""
+"<span class=\"tc-lead tc-recommended\">RECOMMENDED</span>: The following "
+"arguments MUST be used for WP.org submissions, or you will be rejected "
+"because of your Redux configuration."
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:16
+msgid "Redux localization utilities"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:17
+msgid "Redux Resting Diles"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:18
+msgid "Redux Code Styles"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:19
+msgid "Redux Unit Testing"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:20
+msgid "Redux Plugin File"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:21
+msgid "Redux Boostrap Tests"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:22
+msgid "CI Testing FIle"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:23
+msgid "PHP Unit Testing"
+msgstr ""
+
+#: options/ReduxCore/inc/themecheck/checks/full_package.php:36
+msgid ""
+"It appears that you have embedded the full Redux package inside your theme. "
+"You need only embed the <strong>ReduxCore</strong> folder. Embedding "
+"anything else will get your rejected from theme submission. Suspected Redux "
+"package file(s):"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:129
+msgid "Help improve Our Panel"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:130
+msgid ""
+"Please helps us improve our panel by allowing us to gather anonymous usage "
+"stats so we know which configurations, plugins and themes to test to ensure "
+"compatibility."
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:135
+msgid "Allow tracking"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:140
+msgid "Do not allow tracking"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:151
+msgid "Welcome to the Redux Demo Panel"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:152 options/options.php:259
+msgid "Getting Started"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:152
+#, php-format
+msgid ""
+"This panel demonstrates the many features of Redux.  Before digging in, we "
+"suggest you get up to speed by reviewing %1$s."
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:152
+msgid "our documentation"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:153
+msgid "Redux Generator"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:153
+#, php-format
+msgid ""
+"Want to get a head start? Use the %1$s. It will create a customized "
+"boilerplate theme or a standalone admin folder complete with all things "
+"Redux (with the help of Underscores and TGM). Save yourself a headache and "
+"try it today."
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:154
+#: options/ReduxCore/inc/welcome/welcome.php:223
+msgid "Redux Extensions"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:154
+#, php-format
+msgid ""
+"Did you know we have extensions, which greatly enhance the features of Redux?"
+"  Visit our %1$s to learn more!"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:154
+msgid "extensions directory"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:155
+msgid "Like Redux?"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:155
+#, php-format
+msgid ""
+"If so, please %1$s and consider making a %2$s to keep development of Redux "
+"moving forward."
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:155
+msgid "leave us a favorable review on WordPress.org"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:155
+msgid "donation"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:156
+msgid "Newsletter"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:156
+msgid ""
+"If you'd like to keep up to with all things Redux, please subscribe to our "
+"newsletter"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:157
+msgid "Email address"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:157
+msgid "Subscribe"
+msgstr ""
+
+#: options/ReduxCore/inc/tracking.php:166
+msgid "Close"
+msgstr ""
+
+#: options/ReduxCore/inc/validation/color/validation_color.php:15
+#: options/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php:14
+#: options/ReduxCore/inc/validation/colorrgba/validation_colorrgba.php:16
+msgid "This field must be a valid color value."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php:16
+msgid "You must provide a comma separated list of numerical values for this option."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/css/validation_css.php:39
+msgid "Unsafe strings were found in your CSS and have been filtered out."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/date/validation_date.php:16
+msgid "This field must be a valid date."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/email/validation_email.php:16
+#: options/ReduxCore/inc/validation/email_not_empty/validation_email_not_empty.
+#: php:16
+msgid "You must provide a valid email for this option."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/no_html/validation_no_html.php:15
+msgid "You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.
+#: php:16
+msgid ""
+"You must not enter any special characters in this field, all special "
+"characters have been removed."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/not_empty/validation_not_empty.php:16
+msgid "This field cannot be empty. Please provide a value."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/numeric/validation_numeric.php:16
+#: options/ReduxCore/inc/validation/numeric_not_empty/validation_numeric_not_empty.
+#: php:16
+msgid "You must provide a numerical value for this option."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/unique_slug/validation_unique_slug.php:16
+#, php-format
+msgid ""
+"That URL slug is in use, please choose another. <code>%s</code> is open for "
+"use."
+msgstr ""
+
+#: options/ReduxCore/inc/validation/url/validation_url.php:16
+msgid "You must provide a valid URL for this option."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/about.php:2
+#, php-format
+msgid "Welcome to Redux Framework %s"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/about.php:5
+#, php-format
+msgid ""
+"Thank you for updating to the latest version! Redux Framework %s is a huge "
+"step forward in Redux Development. Look at all that's new."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/about.php:8
+#: options/ReduxCore/inc/welcome/views/changelog.php:10
+#: options/ReduxCore/inc/welcome/views/credits.php:10
+#: options/ReduxCore/inc/welcome/views/extensions.php:81
+#: options/ReduxCore/inc/welcome/views/status_report.php:34
+#: options/ReduxCore/inc/welcome/views/support.php:8 options/options.php:58
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/about.php:15
+msgid "What is Redux Framework?"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/about.php:17
+msgid ""
+"Redux Framework is the core of many products on the web. It is an option "
+"framework which developers use to\n"
+"            enhance their products."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/about.php:22
+msgid "Learn More"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/about.php:28
+msgid "New in this Release"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/changelog.php:2
+msgid "Redux Framework - Changelog"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/changelog.php:5
+#: options/ReduxCore/inc/welcome/views/status_report.php:30
+msgid ""
+"Our core mantra at Redux is backwards compatibility. With hundreds of "
+"thousands of instances worldwide, you can be assured that we will take care "
+"of you and your clients."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/credits.php:2
+msgid "Redux Framework - A Community Effort"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/credits.php:5
+msgid ""
+"We recognize we are nothing without our community. We would like to thank "
+"all of those who help Redux to be what it is. Thank you for your involvement."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/credits.php:18
+#, php-format
+msgid ""
+"Redux is created by a community of developers world wide. Want to have your "
+"name listed too? <a href=\"%d\" target=\"_blank\">Contribute to Redux</a>."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/extensions.php:73
+msgid "Redux Framework - Extensions"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/extensions.php:76
+msgid ""
+"Supercharge your Redux experience. Our extensions provide you with features "
+"that will take your products to the next level."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/extensions.php:89
+msgid ""
+"While some are built specificially for developers, extensions such as Custom "
+"Fonts are sure to make any user happy."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:26
+msgid "Redux Framework - System Status"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:43
+msgid ""
+"Please copy and paste this information in your ticket when contacting "
+"support:"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:48
+msgid "Get System Report"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:53
+msgid "Understanding the Status Report"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:62
+msgid "Copied!"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:63
+msgid "Copy for Support"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:73
+msgid "WordPress Environment"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:80
+msgid "Home URL"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:83
+msgid "The URL of your site's homepage."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:89
+msgid "Site URL"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:92
+msgid "The root URL of your site."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:100
+msgid "Redux Version"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:103
+msgid "The version of Redux Framework installed on your site."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:111
+msgid "Redux Data Directory Writable"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:114
+msgid ""
+"Redux and its extensions write data to the <code>uploads</code> directory. "
+"This directory must be writable."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:120
+#, php-format
+msgid "To allow data saving, make <code>%s</code> writable."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:126
+msgid "WP Content URL"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:129
+msgid "The location of Wordpress's content URL."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:137
+msgid "WP Version"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:140
+msgid "The version of WordPress installed on your site."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:148
+msgid "WP Multisite"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:151
+msgid "Whether or not you have WordPress Multisite enabled."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:162
+msgid "Permalink Structure"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:165
+msgid "The current permalink structure as defined in Wordpress Settings->Permalinks."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:174
+msgid "Front Page Display"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:176
+msgid "The current Reading mode of Wordpress."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:185
+msgid "Front Page"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:188
+msgid "The currently selected page which acts as the site's Front Page."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:196
+msgid "Posts Page"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:199
+msgid "The currently selected page in where blog posts are displayed."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:210
+msgid "WP Memory Limit"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:213
+msgid "The maximum amount of memory (RAM) that your site can use at one time."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:220
+#, php-format
+msgid ""
+"%s - We recommend setting memory to at least 40MB. See: <a href=\"%s\" "
+"target=\"_blank\">Increasing memory allocated to PHP</a>"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:229
+msgid "Database Table Prefix"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:232
+msgid "The prefix structure of the current Wordpress database."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:240
+msgid "WP Debug Mode"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:243
+msgid "Displays whether or not WordPress is in Debug Mode."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:255
+msgid "Language"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:258
+msgid "The current language used by WordPress. Default = English"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:270
+msgid "Browser"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:277
+msgid "Browser Info"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:280
+msgid "Information about web browser current in use."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:297
+msgid "Server Environment"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:304
+msgid "Server Info"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:307
+msgid "Information about the web server that is currently hosting your site."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:315
+msgid "Localhost Environment"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:318
+msgid "Is the server running in a localhost environment."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:332
+msgid "PHP Version"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:335
+msgid "The version of PHP installed on your hosting server."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:343
+msgid "ABSPATH"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:346
+msgid "The ABSPATH variable on the server."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:355
+msgid "PHP Memory Limit"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:356
+#: options/ReduxCore/inc/welcome/views/status_report.php:361
+msgid "The largest filesize that can be contained in one post."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:360
+msgid "PHP Post Max Size"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:365
+msgid "PHP Time Limit"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:366
+msgid ""
+"The amount of time (in seconds) that your site will spend on a single "
+"operation before timing out (to avoid server lockups)"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:370
+msgid "PHP Max Input Vars"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:371
+msgid ""
+"The maximum number of variables your server can use for a single function to "
+"avoid overloads."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:375
+msgid "PHP Display Errors"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:376
+msgid "Determines if PHP will display errors within the browser."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:387
+msgid "SUHOSIN Installed"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:388
+msgid ""
+"Suhosin is an advanced protection system for PHP installations. It was "
+"designed to protect your servers on the one hand against a number of well "
+"known problems in PHP applications and on the other hand against potential "
+"unknown vulnerabilities within these applications or the PHP core itself.  "
+"If enabled on your server, Suhosin may need to be configured to increase its "
+"data submission limits."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:399
+msgid "MySQL Version"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:400
+msgid "The version of MySQL installed on your hosting server."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:404
+msgid "Max Upload Size"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:405
+msgid "The largest filesize that can be uploaded to your WordPress installation."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:410
+msgid "Default Timezone is UTC"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:412
+msgid "The default timezone for your server."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:416
+#, php-format
+msgid "Default timezone is %s - it should be UTC"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:428
+msgid "Used when communicating with remote services with PHP."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:434
+msgid ""
+"Your server does not have fsockopen or cURL enabled - cURL is used to "
+"communicate with other servers. Please contact your hosting provider."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:473
+msgid "Remote Post"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:474
+msgid "Used to send data to remote servers."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:479
+msgid ""
+"wp_remote_post() failed. Many advanced features may not function. Contact "
+"your hosting provider."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:482
+#: options/ReduxCore/inc/welcome/views/status_report.php:497
+#, php-format
+msgid "Error: %s"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:489
+msgid "Remote Get"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:490
+msgid "Used to grab information from remote servers for updates updates."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:495
+msgid ""
+"wp_remote_get() failed. This is needed to get information from remote "
+"servers. Contact your hosting provider."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:531
+msgid "Active Plugins"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:546
+msgid "Visit plugin homepage"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:553
+#, php-format
+msgctxt "by author"
+msgid "by %s"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:572
+msgid "Redux Instance: "
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:579
+msgid "The opt_name argument for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:587
+msgid "The global_variable argument for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:595
+msgid "Indicates if developer mode is enabled for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:600
+msgid "Indicates if ajax based saving is enabled for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:605
+msgid ""
+"The page slug denotes the string used for the options panel page for this "
+"instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:610
+msgid ""
+"The page permissions variable sets the permission level required to access "
+"the options panel for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:615
+msgid ""
+"This variable set whether or not the menu is displayed as an admin menu item "
+"for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:620
+msgid ""
+"The page parent variable sets where the options menu will be placed on the "
+"WordPress admin sidebar for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:626
+msgid "Indicates if the compiler flag is enabled for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:631
+msgid ""
+"Indicates if output flag for globally shutting off all CSS output is enabled "
+"for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:636
+msgid ""
+"The output_tag variable sets whether or not dynamic CSS will be generated "
+"for the customizer and Google fonts for this instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:645
+msgid ""
+"The specified template path containing custom template files for this "
+"instance of Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:650
+msgid "List of template files overriding the default Redux template files."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:676
+msgid "Indicates the installed Redux extensions and their version numbers."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:705
+msgid "Theme"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:711
+msgid "The name of the current active theme."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:715
+#: plugins/class-tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:716
+msgid "The installed version of the current active theme."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:722
+msgid "is available"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:728
+msgid "Author URL"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:729
+msgid "The theme developers URL."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:733
+msgid "Child Theme"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:734
+msgid "Displays whether or not the current theme is a child theme."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:737
+#, php-format
+msgid ""
+"If you're modifying Redux Framework or a parent theme you didn't build "
+"personally, we recommend using a child theme. See: <a href=\"%s\" "
+"target=\"_blank\">How to create a child theme</a>"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:745
+msgid "Parent Theme Name"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:747
+msgid "The name of the parent theme."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:752
+msgid "Parent Theme Version"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:754
+msgid "The installed version of the parent theme."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:759
+msgid "Parent Theme Author URL"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/status_report.php:761
+msgid "The parent theme developers URL."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:2
+msgid "Redux Framework - Support"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:4
+msgid ""
+"We are an open source project used by developers to make powerful control "
+"panels."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:19
+#: options/ReduxCore/inc/welcome/views/support.php:40
+msgid "Generate a Support URL"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:20
+msgid "Select Support Type"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:21
+#: options/ReduxCore/inc/welcome/views/support.php:87
+msgid "How to Get Support"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:27
+msgid "Submit a Support Request"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:31
+msgid "To get started, we will need to generate a support hash."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:35
+#, php-format
+msgid ""
+"This will provide to your developer all the information they may need to "
+"remedy your issue. This action WILL send information securely to a remote "
+"server. To see the type of information sent, please look at the  <a "
+"href=\"%s\">Status tab</a>."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:52
+msgid "Select Your Support Type"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:56
+msgid "What type of user are you?"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:63
+msgid "User"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:65
+msgid "I am a user, using a pre-built product."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:70
+msgid "Developer"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:72
+msgid "I am a developer, building a product using Redux."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:92
+msgid ""
+"Please proceed to the Redux Framework issue tracker and supply us with your "
+"support URL below. Please also provide any information that will help us to "
+"reproduce your issue."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:101
+msgid ""
+"Listed below are the Wordpress plugins and/or theme installed on your site "
+"that utilize Redux Framework. We do not directly support products created "
+"with our framework.  It is the responsibility of the plugin or theme "
+"developer to support their work. You will need to contact the author(s) of "
+"the products listed below with your support questions."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:105
+msgid ""
+"Please be sure to include for your developer - via cut and paste - the "
+"Support URL in the box below."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/views/support.php:134
+#, php-format
+msgid ""
+"Should the developer not be responsive, read the <a href=\"%s\" "
+"target=\"_blank\">following article</a> before asking for support from us "
+"directly."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:102
+msgid ""
+"If you like <strong>Redux</strong> please leave us a <a href=\"https:"
+"//wordpress.org/support/view/plugin-reviews/redux-framework?"
+"filter=5#postform\" target=\"_blank\" class=\"redux-rating-link\" data-"
+"rated=\"Thanks :)\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating. A huge "
+"thank you from Redux in advance!"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:177
+msgid "Support hash could not be generated. Please try again later."
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:199
+msgid "Welcome to Redux Framework"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:207
+msgid "Redux Framework Changelog"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:215
+msgid "Get Support"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:232
+msgid "The people that develop Redux Framework"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:240
+msgid "Redux Framework Status"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:340
+msgid "What's New"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:343
+msgid "Extensions"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:346
+msgid "Changelog"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:349
+msgid "Credits"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:352
+msgid "Support"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:355
+#: plugins/class-tgm-plugin-activation.php:2443
+msgid "Status"
+msgstr ""
+
+#: options/ReduxCore/inc/welcome/welcome.php:512
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/footer.tpl.php:50
+#: options/ReduxCore/templates/panel/header_stickybar.tpl.php:21
+msgid "Save Changes"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/footer.tpl.php:54
+#: options/ReduxCore/templates/panel/header_stickybar.tpl.php:25
+msgid "Reset Section"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/footer.tpl.php:55
+#: options/ReduxCore/templates/panel/header_stickybar.tpl.php:26
+msgid "Reset All"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/footer.tpl.php:60
+#: options/ReduxCore/templates/panel/header_stickybar.tpl.php:29
+msgid "Working..."
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header.tpl.php:11
+#: options/ReduxCore/templates/panel/header.tpl.php:49
+msgid "Developer Mode Enabled"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header.tpl.php:20
+msgid "WP_DEBUG is enabled"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header.tpl.php:26
+msgid "you are working in a localhost environment"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header.tpl.php:31
+msgid "and"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header.tpl.php:34
+msgid "This has been automatically enabled because"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header.tpl.php:36
+msgid ""
+"If you are not a developer, your theme/plugin author shipped with developer "
+"mode enabled. Contact them directly to fix it."
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header.tpl.php:58
+msgid "FORCED DEV MODE OFF ENABLED"
+msgstr ""
+
+#: options/ReduxCore/templates/panel/header_stickybar.tpl.php:15
+msgid "Expand"
+msgstr ""
+
+#: options/options.php:38
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: options/options.php:45 options/options.php:48
+msgid "Current theme preview"
+msgstr ""
+
+#: options/options.php:57
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: options/options.php:63
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: options/options.php:64
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: options/options.php:275
+msgid "Main Options"
+msgstr ""
+
+#: options/options.php:276
+msgid "<p class=\"description\">Main options of site</p>"
+msgstr ""
+
+#: options/options.php:286
+msgid "Item purchase code"
+msgstr ""
+
+#: options/options.php:287
+msgid "<p>Insert item purchase code to receive automatic theme updates.</p>"
+msgstr ""
+
+#: options/options.php:294
+msgid "Page scroll animation"
+msgstr ""
+
+#: options/options.php:295
+msgid "Enable or disable page scroll animation"
+msgstr ""
+
+#: options/options.php:303
+msgid "Favicon"
+msgstr ""
+
+#: options/options.php:304
+msgid ""
+"Select a 16px X 16px image from the file location on your computer and "
+"upload it as a favicon of your site"
+msgstr ""
+
+#: options/options.php:309
+msgid "Header Logotype image"
+msgstr ""
+
+#: options/options.php:310
+msgid ""
+"Select an image from the file location on your computer and upload it as a "
+"header logotype"
+msgstr ""
+
+#: options/options.php:319
+msgid "Top block with address"
+msgstr ""
+
+#: options/options.php:321
+msgid "Enable or disable address block"
+msgstr ""
+
+#: options/options.php:329
+msgid "Top block with login"
+msgstr ""
+
+#: options/options.php:331
+msgid "Enable or disable login block"
+msgstr ""
+
+#: options/options.php:339
+msgid "Breadcrumbs on page title panel"
+msgstr ""
+
+#: options/options.php:341
+msgid "Enable or disable breadcrumbs block"
+msgstr ""
+
+#: options/options.php:348
+msgid "Custom slug for portfolio items"
+msgstr ""
+
+#: options/options.php:349
+msgid ""
+"<p>After change please go to <a href=\"options-permalink.php\">Settings -> "
+"Permalinks</a> and press \"Save changes\" button to Save New permalinks</p>"
+msgstr ""
+
+#: options/options.php:350
+msgid "<p>Please write on latin without spaces</p>"
+msgstr ""
+
+#: options/options.php:356
+msgid "Top adress panel"
+msgstr ""
+
+#: options/options.php:357
+msgid "Please do not use single qoute here"
+msgstr ""
+
+#: options/options.php:358
+msgid "This is top adress info block."
+msgstr ""
+
+#: options/options.php:365
+msgid "Woocommerce cart in top panel"
+msgstr ""
+
+#: options/options.php:366
+msgid ""
+"If \"On\" woocommerce card will be displayed in top panel (If Woocommerce is "
+"enabled)"
+msgstr ""
+
+#: options/options.php:373
+msgid "Search field in top panel"
+msgstr ""
+
+#: options/options.php:380
+msgid "Responsive CSS"
+msgstr ""
+
+#: options/options.php:381
+msgid "Enable or disable site responsive design"
+msgstr ""
+
+#: options/options.php:388
+msgid "Language selection shortcode"
+msgstr ""
+
+#: options/options.php:390
+msgid "You can type shortcode of language select tht your translating plugin provide"
+msgstr ""
+
+#: options/options.php:397
+msgid "WPML language switcher"
+msgstr ""
+
+#: options/options.php:399
+msgid ""
+"WPML plugin must be installed. It is not packed with theme. You can find it "
+"here: http://wpml.org/"
+msgstr ""
+
+#: options/options.php:406
+msgid "Custom JS"
+msgstr ""
+
+#: options/options.php:407
+msgid "Generate your tracking code at Google Analytics Service and insert it here."
+msgstr ""
+
+#: options/options.php:412
+msgid "Custom CSS"
+msgstr ""
+
+#: options/options.php:413
+msgid "You may add any other styles for your theme to this field."
+msgstr ""
+
+#: options/options.php:420
+msgid "Disable fixed menu?"
+msgstr ""
+
+#: options/options.php:421
+msgid "Enable or disable sticky menu"
+msgstr ""
+
+#: options/options.php:422 options/options.php:944
+msgid "Yes"
+msgstr ""
+
+#: options/options.php:422 options/options.php:945
+msgid "No"
+msgstr ""
+
+#: options/options.php:428
+msgid "Mobile menu button"
+msgstr ""
+
+#: options/options.php:429
+msgid "Hide items udnder button"
+msgstr ""
+
+#: options/options.php:430 options/options.php:1057 options/options.php:1107
+msgid "Hide"
+msgstr ""
+
+#: options/options.php:430 options/options.php:1057 options/options.php:1107
+msgid "Show"
+msgstr ""
+
+#: options/options.php:438
+msgid "Social accounts"
+msgstr ""
+
+#: options/options.php:439
+msgid "<p class=\"description\">Type links for social accounts</p>"
+msgstr ""
+
+#: options/options.php:448
+msgid "Facebook link"
+msgstr ""
+
+#: options/options.php:449 options/options.php:464 options/options.php:480
+#: options/options.php:496 options/options.php:512 options/options.php:528
+#: options/options.php:544 options/options.php:560 options/options.php:576
+#: options/options.php:592 options/options.php:608 options/options.php:624
+#: options/options.php:640 options/options.php:656 options/options.php:673
+#: options/options.php:691 options/options.php:708
+msgid "Paste link to your account"
+msgstr ""
+
+#: options/options.php:455 options/options.php:470 options/options.php:486
+#: options/options.php:502 options/options.php:518 options/options.php:534
+#: options/options.php:550 options/options.php:566 options/options.php:582
+#: options/options.php:598 options/options.php:614 options/options.php:630
+#: options/options.php:646 options/options.php:663 options/options.php:680
+#: options/options.php:698 options/options.php:715 options/options.php:732
+msgid "Show in header"
+msgstr ""
+
+#: options/options.php:456 options/options.php:471 options/options.php:487
+#: options/options.php:503 options/options.php:519 options/options.php:535
+#: options/options.php:551 options/options.php:567 options/options.php:583
+#: options/options.php:599 options/options.php:615 options/options.php:631
+#: options/options.php:647 options/options.php:664 options/options.php:681
+#: options/options.php:699 options/options.php:716 options/options.php:733
+msgid "If checked - will be display in header of theme "
+msgstr ""
+
+#: options/options.php:463
+msgid "Twitter link"
+msgstr ""
+
+#: options/options.php:478
+msgid "Instagram link"
+msgstr ""
+
+#: options/options.php:494
+msgid "Vimeo link"
+msgstr ""
+
+#: options/options.php:510
+msgid "Last FM link"
+msgstr ""
+
+#: options/options.php:526
+msgid "Vkontakte link"
+msgstr ""
+
+#: options/options.php:542
+msgid "YouTube link"
+msgstr ""
+
+#: options/options.php:558
+msgid "Deviantart link"
+msgstr ""
+
+#: options/options.php:574
+msgid "LinkedIN link"
+msgstr ""
+
+#: options/options.php:590
+msgid "Google + link"
+msgstr ""
+
+#: options/options.php:606
+msgid "Picasa link"
+msgstr ""
+
+#: options/options.php:622
+msgid "Pinterest link"
+msgstr ""
+
+#: options/options.php:638
+msgid "Wordpress link"
+msgstr ""
+
+#: options/options.php:654
+msgid "Dropbox link"
+msgstr ""
+
+#: options/options.php:671
+msgid "Flickr link"
+msgstr ""
+
+#: options/options.php:689
+msgid "Tumblr link"
+msgstr ""
+
+#: options/options.php:707
+msgid "Xing link"
+msgstr ""
+
+#: options/options.php:726
+msgid "Paste alternative link to Rss"
+msgstr ""
+
+#: options/options.php:741
+msgid "Posts list options"
+msgstr ""
+
+#: options/options.php:742
+msgid ""
+"<p class=\"description\">Parameters for posts and archives (social share "
+"etc)</p>"
+msgstr ""
+
+#: options/options.php:754
+msgid "Share post block"
+msgstr ""
+
+#: options/options.php:755
+msgid "Small share buttons on standard posts"
+msgstr ""
+
+#: options/options.php:763
+msgid "Archive page style"
+msgstr ""
+
+#: options/options.php:768
+msgid "Posts grid 2 columns"
+msgstr ""
+
+#: options/options.php:769
+msgid "Posts grid 3 columns"
+msgstr ""
+
+#: options/options.php:770
+msgid "Posts with left aligned image"
+msgstr ""
+
+#: options/options.php:771
+msgid "Posts with right aligned image"
+msgstr ""
+
+#: options/options.php:779
+msgid "Crop thumbnails"
+msgstr ""
+
+#: options/options.php:780
+msgid "Post thumbnails image crop"
+msgstr ""
+
+#: options/options.php:788
+msgid "Post thumbnail width (in px)"
+msgstr ""
+
+#: options/options.php:795
+msgid "Post  thumbnail height (in px)"
+msgstr ""
+
+#: options/options.php:802
+msgid "Post info"
+msgstr ""
+
+#: options/options.php:803
+msgid ""
+"It is information about the post (time and date of creation, author, "
+"comments on the post)."
+msgstr ""
+
+#: options/options.php:810
+msgid "Excerpt length"
+msgstr ""
+
+#: options/options.php:811
+msgid "You can set excerpt length, that will be displayed on your blog page."
+msgstr ""
+
+#: options/options.php:818
+msgid "Read more button"
+msgstr ""
+
+#: options/options.php:819
+msgid "Select style of read more button"
+msgstr ""
+
+#: options/options.php:820
+msgid "Link with text"
+msgstr ""
+
+#: options/options.php:820
+msgid "Button"
+msgstr ""
+
+#: options/options.php:829
+msgid "<h3 class=\"description\">Inner post page options</h3>"
+msgstr ""
+
+#: options/options.php:836
+msgid "Social share buttons"
+msgstr ""
+
+#: options/options.php:837
+msgid ""
+"With this option you may activate or deactivate social share buttons. and "
+"date on inner post page"
+msgstr ""
+
+#: options/options.php:844
+msgid "Custom share code"
+msgstr ""
+
+#: options/options.php:845
+msgid "You may add any other social share buttons to this field."
+msgstr ""
+
+#: options/options.php:851
+msgid "Author Info"
+msgstr ""
+
+#: options/options.php:853
+msgid "This option enables you to insert information about the author of the post."
+msgstr ""
+
+#: options/options.php:860
+msgid "Thumbnail on inner page"
+msgstr ""
+
+#: options/options.php:861
+msgid "Display featured image on single post"
+msgstr ""
+
+#: options/options.php:868
+msgid "Comments on pages"
+msgstr ""
+
+#: options/options.php:869
+msgid ""
+"Display comments block on pages. If you want to disable comments on "
+"particular page, edit that page and uncheck \"Allow comments\" in \"Discussion\" "
+"section. "
+msgstr ""
+
+#: options/options.php:880
+msgid "Portfolio Options"
+msgstr ""
+
+#: options/options.php:890 options/options.php:900
+msgid "Portfolio page"
+msgstr ""
+
+#: options/options.php:891
+msgid "Please select main portfolio page (for proper urls)"
+msgstr ""
+
+#: options/options.php:898
+msgid "Breadcrumb type "
+msgstr ""
+
+#: options/options.php:899
+msgid "Select which page to display in breadcrumbs on single portfolio page."
+msgstr ""
+
+#: options/options.php:900
+msgid "Portfolio category"
+msgstr ""
+
+#: options/options.php:907
+msgid "Panel for items sorting "
+msgstr ""
+
+#: options/options.php:908
+msgid "Display panel for portfolio isotope items sorting by category"
+msgstr ""
+
+#: options/options.php:915
+msgid "Portfolio text location"
+msgstr ""
+
+#: options/options.php:916
+msgid "Select text layout on inner page"
+msgstr ""
+
+#: options/options.php:919
+msgid "To the right"
+msgstr ""
+
+#: options/options.php:920 options/options.php:1124
+msgid "Full width"
+msgstr ""
+
+#: options/options.php:927
+msgid "Portfolio image display"
+msgstr ""
+
+#: options/options.php:928
+msgid "Display attached images of inner portfolio page as:"
+msgstr ""
+
+#: options/options.php:931
+msgid "Slider"
+msgstr ""
+
+#: options/options.php:932
+msgid "Items"
+msgstr ""
+
+#: options/options.php:940
+msgid "Limit navigation by category"
+msgstr ""
+
+#: options/options.php:941
+msgid "Limit portfolio navigation links only inside current category"
+msgstr ""
+
+#: options/options.php:953
+msgid "Order of portfolio sorting"
+msgstr ""
+
+#: options/options.php:961
+msgid "Sort portfolios by"
+msgstr ""
+
+#: options/options.php:962
+msgid "Date of publication"
+msgstr ""
+
+#: options/options.php:962
+msgid "Display random"
+msgstr ""
+
+#: options/options.php:962
+msgid "By menu order"
+msgstr ""
+
+#: options/options.php:969
+msgid "Display block under single item"
+msgstr ""
+
+#: options/options.php:970
+msgid "Block with recent items"
+msgstr ""
+
+#: options/options.php:978
+msgid "Display Custom Excerpt "
+msgstr ""
+
+#: options/options.php:979
+msgid ""
+"If enabled custom excerpt will be displayed under portfolio featured images "
+"on portfolio Grid pages"
+msgstr ""
+
+#: options/options.php:987
+msgid "<h3 class=\"description\">Single portfolio page</h3>"
+msgstr ""
+
+#: options/options.php:993
+msgid "Featured image"
+msgstr ""
+
+#: options/options.php:1003
+msgid "Block shortcode"
+msgstr ""
+
+#: options/options.php:1004
+msgid ""
+"By default here is displayed Block with recent items [mvb_recent_works  "
+"main_title=\"Recent projects\"][/mvb_recent_works]"
+msgstr ""
+
+#: options/options.php:1012
+msgid "Styling Options"
+msgstr ""
+
+#: options/options.php:1013
+msgid "<p class=\"description\">Style parameters of body and footer</p>"
+msgstr ""
+
+#: options/options.php:1023
+msgid "<h3 class=\"description\">Main site colors setup</h3>"
+msgstr ""
+
+#: options/options.php:1029
+msgid "Main site color"
+msgstr ""
+
+#: options/options.php:1030
+msgid "Color of buttons, tabs, links, borders etc."
+msgstr ""
+
+#: options/options.php:1036
+msgid "Secondary site color"
+msgstr ""
+
+#: options/options.php:1037
+msgid "Color of inactive or hovered elements"
+msgstr ""
+
+#: options/options.php:1043
+msgid "Color of text"
+msgstr ""
+
+#: options/options.php:1044
+msgid "Main text color"
+msgstr ""
+
+#: options/options.php:1051
+msgid "<h3 class=\"description\">Page title background options</h3>"
+msgstr ""
+
+#: options/options.php:1056
+msgid "Stunning header display"
+msgstr ""
+
+#: options/options.php:1063
+msgid "Page title background"
+msgstr ""
+
+#: options/options.php:1071
+msgid "Default background color for header"
+msgstr ""
+
+#: options/options.php:1078
+msgid "Default background image for header"
+msgstr ""
+
+#: options/options.php:1079 options/options.php:1166 options/options.php:1196
+#: options/options.php:1453
+msgid "Upload your own background image or pattern."
+msgstr ""
+
+#: options/options.php:1089
+msgid "Fix image position"
+msgstr ""
+
+#: options/options.php:1098
+msgid "Select stunning header font color"
+msgstr ""
+
+#: options/options.php:1106
+msgid "Show page title"
+msgstr ""
+
+#: options/options.php:1115
+msgid "<h3 class=\"description\">Body styling options</h3>"
+msgstr ""
+
+#: options/options.php:1121
+msgid "Body layout"
+msgstr ""
+
+#: options/options.php:1124
+msgid "Boxed"
+msgstr ""
+
+#: options/options.php:1131
+msgid "Layout width"
+msgstr ""
+
+#: options/options.php:1132
+msgid "You can set custom width of layout. Leave empty for default width."
+msgstr ""
+
+#: options/options.php:1140
+msgid "Width units"
+msgstr ""
+
+#: options/options.php:1142
+msgid "px"
+msgstr ""
+
+#: options/options.php:1142
+msgid "%"
+msgstr ""
+
+#: options/options.php:1149
+msgid "<h4 class=\"description\">Content style options</h4>"
+msgstr ""
+
+#: options/options.php:1158
+msgid "Content background color"
+msgstr ""
+
+#: options/options.php:1159 options/options.php:1188
+msgid "Select background color."
+msgstr ""
+
+#: options/options.php:1165
+msgid "Content background image"
+msgstr ""
+
+#: options/options.php:1171
+msgid "Content bg image repeat"
+msgstr ""
+
+#: options/options.php:1172 options/options.php:1202 options/options.php:1248
+msgid "Select type background image repeat"
+msgstr ""
+
+#: options/options.php:1173 options/options.php:1203 options/options.php:1249
+msgid "vertically"
+msgstr ""
+
+#: options/options.php:1173 options/options.php:1203 options/options.php:1249
+msgid "horizontally"
+msgstr ""
+
+#: options/options.php:1173 options/options.php:1203 options/options.php:1249
+msgid "no-repeat"
+msgstr ""
+
+#: options/options.php:1173 options/options.php:1203 options/options.php:1249
+msgid "both vertically and horizontally"
+msgstr ""
+
+#: options/options.php:1181
+msgid "<h4 class=\"description\">Boxed site body options</h4>"
+msgstr ""
+
+#: options/options.php:1187
+msgid "Body background color"
+msgstr ""
+
+#: options/options.php:1194
+msgid "Custom background image"
+msgstr ""
+
+#: options/options.php:1209
+msgid "Fixed body background"
+msgstr ""
+
+#: options/options.php:1217
+msgid "<h3 class=\"description\">Footer section options</h3>"
+msgstr ""
+
+#: options/options.php:1223
+msgid "Footer background color"
+msgstr ""
+
+#: options/options.php:1225
+msgid "Select footer background color. "
+msgstr ""
+
+#: options/options.php:1231
+msgid "Footer font color"
+msgstr ""
+
+#: options/options.php:1233
+msgid "Select footer font color."
+msgstr ""
+
+#: options/options.php:1239
+msgid "Custom footer background image"
+msgstr ""
+
+#: options/options.php:1241
+msgid "Upload your own footer background image or pattern."
+msgstr ""
+
+#: options/options.php:1246
+msgid "Footer background image repeat"
+msgstr ""
+
+#: options/options.php:1256
+msgid "Contact page options"
+msgstr ""
+
+#: options/options.php:1257
+msgid "<p class=\"description\">Contact page options</p>"
+msgstr ""
+
+#: options/options.php:1268
+msgid "You can paste your shorcode custom form"
+msgstr ""
+
+#: options/options.php:1274
+msgid "Display map on contacts page?"
+msgstr ""
+
+#: options/options.php:1281
+msgid "Height of Google Map (in px)"
+msgstr ""
+
+#: options/options.php:1288
+msgid "Zoom Level"
+msgstr ""
+
+#: options/options.php:1294
+msgid "Address on Google Map "
+msgstr ""
+
+#: options/options.php:1295
+msgid "Fill in your address to be shown on Google map."
+msgstr ""
+
+#: options/options.php:1301
+msgid "Coordinates on Google Map "
+msgstr ""
+
+#: options/options.php:1302
+msgid ""
+"Set address coordinates to be shown on Google map. If you want to display "
+"tooltip with address, separate it with a pipe \"|\""
+msgstr ""
+
+#: options/options.php:1307
+msgid "Form address"
+msgstr ""
+
+#: options/options.php:1308
+msgid "Email address for contact form"
+msgstr ""
+
+#: options/options.php:1314
+msgid "Type the antispam question"
+msgstr ""
+
+#: options/options.php:1315 options/options.php:1323
+msgid "Antispam question will protect you from spamers"
+msgstr ""
+
+#: options/options.php:1322
+msgid "Type the answer for antispam question"
+msgstr ""
+
+#: options/options.php:1330
+msgid "Additional form description"
+msgstr ""
+
+#: options/options.php:1331
+msgid "Will be displayed under contact form"
+msgstr ""
+
+#: options/options.php:1341
+msgid "Layouts Settings"
+msgstr ""
+
+#: options/options.php:1342
+msgid "<p class=\"description\">Configure layouts of different pages</p>"
+msgstr ""
+
+#: options/options.php:1347
+msgid "Single pages layout"
+msgstr ""
+
+#: options/options.php:1348
+msgid "Select one type of layout for single pages"
+msgstr ""
+
+#: options/options.php:1351 options/options.php:1367 options/options.php:1383
+#: options/options.php:1399 options/options.php:1415
+msgid "No sidebars"
+msgstr ""
+
+#: options/options.php:1352 options/options.php:1368 options/options.php:1384
+#: options/options.php:1400 options/options.php:1416
+msgid "Sidebar on left"
+msgstr ""
+
+#: options/options.php:1353 options/options.php:1369 options/options.php:1385
+#: options/options.php:1401 options/options.php:1417
+msgid "Sidebar on right"
+msgstr ""
+
+#: options/options.php:1354 options/options.php:1370 options/options.php:1386
+#: options/options.php:1402 options/options.php:1418
+msgid "2 left sidebars"
+msgstr ""
+
+#: options/options.php:1355 options/options.php:1371 options/options.php:1387
+#: options/options.php:1403 options/options.php:1419
+msgid "Sidebar on either side"
+msgstr ""
+
+#: options/options.php:1356 options/options.php:1372 options/options.php:1388
+#: options/options.php:1404 options/options.php:1420
+msgid "2 right sidebars"
+msgstr ""
+
+#: options/options.php:1363
+msgid "Archive Pages Layout"
+msgstr ""
+
+#: options/options.php:1364
+msgid "Select one type of layout for archive pages"
+msgstr ""
+
+#: options/options.php:1379
+msgid "Single posts layout"
+msgstr ""
+
+#: options/options.php:1380
+msgid "Select one type of layout for single posts"
+msgstr ""
+
+#: options/options.php:1395
+msgid "Search results layout"
+msgstr ""
+
+#: options/options.php:1396
+msgid "Select one type of layout for search results"
+msgstr ""
+
+#: options/options.php:1411
+msgid "404 Page Layout"
+msgstr ""
+
+#: options/options.php:1412
+msgid "Select one of layouts for 404 page"
+msgstr ""
+
+#: options/options.php:1428
+msgid "Twitter panel options"
+msgstr ""
+
+#: options/options.php:1429
+msgid ""
+"<p class=\"description\">More information about api keys and how to get it you "
+"can find in that tutorial <a href=\"http://crumina.net/how-do-i-get-consumer-"
+"key-for-sign-in-with-twitter/\">http://crumina.net/how-do-i-get-consumer-key-"
+"for-sign-in-with-twitter/</a></a></p>"
+msgstr ""
+
+#: options/options.php:1439
+msgid "Section padding"
+msgstr ""
+
+#: options/options.php:1446
+msgid "Background color for twitter panel"
+msgstr ""
+
+#: options/options.php:1452
+msgid "Background image for twitter panel"
+msgstr ""
+
+#: options/options.php:1463
+msgid "Display twitter statuses before footer"
+msgstr ""
+
+#: options/options.php:1471
+msgid "Cache Tweets in every:"
+msgstr ""
+
+#: options/options.php:1472
+msgid "In minutes"
+msgstr ""
+
+#: options/options.php:1478
+msgid "Number of latest tweets display:"
+msgstr ""
+
+#: options/options.php:1492
+msgid "Consumer key:"
+msgstr ""
+
+#: options/options.php:1499
+msgid "Consumer secret:"
+msgstr ""
+
+#: options/options.php:1505
+msgid "Access token:"
+msgstr ""
+
+#: options/options.php:1512
+msgid "Access token secret:"
+msgstr ""
+
+#: options/options.php:1519
+msgid "Footer section options"
+msgstr ""
+
+#: options/options.php:1520
+msgid "<p class=\"description\">Footer section options</p>"
+msgstr ""
+
+#: options/options.php:1531
+msgid "Display Social networks links in footer"
+msgstr ""
+
+#: options/options.php:1539
+msgid "Logotype in footer"
+msgstr ""
+
+#: options/options.php:1540
+msgid "Will be displayed before copyright text"
+msgstr ""
+
+#: options/options.php:1549
+msgid "Show copyright"
+msgstr ""
+
+#: options/options.php:1551
+msgid "Fill in the copyright text."
+msgstr ""
+
+#: options/options.php:1560
+msgid "Additional settings"
+msgstr ""
+
+#: options/options.php:1561
+msgid "<p class=\"description\">New theme features</p>"
+msgstr ""
+
+#: options/options.php:1567
+msgid "Type of sorting panel on shop page"
+msgstr ""
+
+#: options/options.php:1568
+msgid "Like on portfolio"
+msgstr ""
+
+#: options/options.php:1568
+msgid "Default woocommerce"
+msgstr ""
+
+#: options/options.php:1593
+msgid "<strong>Theme URL:</strong> "
+msgstr ""
+
+#: options/options.php:1594
+msgid "<strong>Author:</strong> "
+msgstr ""
+
+#: options/options.php:1595
+msgid "<strong>Version:</strong> "
+msgstr ""
+
+#: options/options.php:1597
+msgid "<strong>Tags:</strong> "
+msgstr ""
+
+#: options/options.php:1603 options/options.php:1623
+msgid "Documentation"
+msgstr ""
+
+#: options/options.php:1615
+msgid "Theme Information"
+msgstr ""
+
+#: page-contacts.php:143
+msgid "Contact us"
+msgstr ""
+
+#: page-contacts.php:162
+msgid "You need enter email in options panel"
+msgstr ""
+
+#: page-contacts.php:166
+msgid "Please enter correct antispam answer."
+msgstr ""
+
+#: page-contacts.php:180
+msgid "Enter your name"
+msgstr ""
+
+#: page-contacts.php:183
+msgid "Your email"
+msgstr ""
+
+#: page-contacts.php:186
+msgid "Mail subject"
+msgstr ""
+
+#: page-contacts.php:189
+msgid "Message"
+msgstr ""
+
+#: page-contacts.php:192
+msgid "Please answer antispam question"
+msgstr ""
+
+#: page-contacts.php:210
+msgid "Send message"
+msgstr ""
+
+#: page-contacts.php:221
+msgid "Thank you for your message!</h2>"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:333 plugins/tgm-config.php:111
+msgid "Install Required Plugins"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:334 plugins/tgm-config.php:112
+msgid "Install Plugins"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:335 plugins/tgm-config.php:113
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:336 plugins/tgm-config.php:114
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:338 plugins/tgm-config.php:115
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:343 plugins/tgm-config.php:116
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:353 plugins/tgm-config.php:121
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:358
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:363
+#, php-format
+msgid "Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:368 plugins/tgm-config.php:118
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:373 plugins/tgm-config.php:119
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:378
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:383 plugins/tgm-config.php:123
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:388
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:393
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:397 plugins/tgm-config.php:125
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:399
+#: plugins/class-tgm-plugin-activation.php:3029 plugins/tgm-config.php:126
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:400
+#: plugins/class-tgm-plugin-activation.php:2832
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:520
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:521
+msgid "Update Required"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:635
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:828
+#: plugins/class-tgm-plugin-activation.php:3438
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:935
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:935
+#: plugins/class-tgm-plugin-activation.php:938
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:938
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:1116
+#: plugins/class-tgm-plugin-activation.php:2828
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:1881
+#, php-format
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2235
+#, php-format
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2280
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:2283
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:2286
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:2289
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/class-tgm-plugin-activation.php:2371
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2491
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2495
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2500
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2570
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2788
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:2814
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3369
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3370
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3370
+#: plugins/class-tgm-plugin-activation.php:3376
+msgid "Show Details"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3370
+#: plugins/class-tgm-plugin-activation.php:3376
+msgid "Hide Details"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3371
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3372
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3375
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3376
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3377
+msgid "All installations have been completed."
+msgstr ""
+
+#: plugins/class-tgm-plugin-activation.php:3378
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: plugins/tgm-config.php:117
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s plugins."
+" Contact the administrator of this site for help on getting the plugins "
+"installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/tgm-config.php:120
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s plugin."
+" Contact the administrator of this site for help on getting the plugin "
+"activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/tgm-config.php:122
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/tgm-config.php:124
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/tgm-config.php:127
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: posts-sidebar-sel.php:143 templates/content-search.php:7
+#: templates/content.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: posts-sidebar-sel.php:148 templates/content-search.php:11
+#: templates/content.php:16
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: single.php:68
+msgid "Pages:"
+msgstr ""
+
+#: single.php:72 templates/dopinfo.php:7 templates/entry-meta.php:3
+msgid "By"
+msgstr ""
+
+#: taxonomy.php:12 tmp-posts-left-img.php:67 tmp-posts-masonry-2-side.php:64
+#: tmp-posts-masonry-2.php:64 tmp-posts-masonry-3.php:60
+#: tmp-posts-right-img.php:67
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: templates/author-box.php:21
+msgid "Post author"
+msgstr ""
+
+#: templates/entry-meta-date.php:21 templates/entry-meta-date.php:28
+msgid " "
+msgstr ""
+
+#: templates/entry-meta.php:5
+msgid "in"
+msgstr ""
+
+#: templates/loop-portfolio.php:38 templates/portfolio-item.php:38
+msgid "Read details"
+msgstr ""
+
+#: templates/section-panel.php:26
+msgid "Login site"
+msgstr ""
+
+#: templates/section-panel.php:30
+msgid "Register"
+msgstr ""
+
+#: templates/section-panel.php:72
+msgid "Change language"
+msgstr ""
+
+#: templates/section-panel.php:109
+msgid "Follow us:"
+msgstr ""
+
+#: templates/top-page.php:63 templates/top-page.php:164
+msgid "Latest Posts"
+msgstr ""
+
+#: templates/top-page.php:73 templates/top-page.php:174
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: templates/top-page.php:75 templates/top-page.php:176
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: templates/top-page.php:77 templates/top-page.php:178
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: templates/top-page.php:85 templates/top-page.php:186
+msgid "Author Archives:"
+msgstr ""
+
+#: templates/top-page.php:89 templates/top-page.php:190
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: templates/top-page.php:96 templates/top-page.php:197
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: templates/top-page.php:98 templates/top-page.php:199
+msgid "File Not Found"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:14
+msgid "Your cart is currently empty."
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:18
+msgid "&larr; Return To Shop"
+msgstr ""
+
+#: woocommerce/cart/cart.php:27 woocommerce/checkout/form-pay.php:19
+#: woocommerce/checkout/review-order.php:17
+msgid "Product"
+msgstr ""
+
+#: woocommerce/cart/cart.php:28
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:29
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:30 woocommerce/checkout/review-order.php:18
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:47
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:74
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:119
+msgid "Coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:119 woocommerce/checkout/form-coupon.php:25
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:119 woocommerce/checkout/form-coupon.php:29
+msgid "Apply Coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:126
+msgid "Update Cart"
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:16
+msgid ""
+"There are some issues with the items in your cart (shown above). Please go "
+"back to the cart page and resolve these issues before checking out."
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:20
+msgid "&larr; Return To Cart"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:17
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:20
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:14
+msgid "Returning customer?"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:17
+msgid "Click here to login"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:22
+msgid ""
+"If you have shopped with us before, please enter your details in the boxes "
+"below. If you are a new customer please proceed to the Billing &amp; "
+"Shipping section."
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:20
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:21
+msgid "Totals"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:61
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:50
+msgid "Cart Subtotal"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:97
+msgid "Order Total"
+msgstr ""
+
+#: woocommerce/content-product.php:104
+msgid "Details"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:19
+msgid "Sort by:"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:20
+msgid "Sort by popularity"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:21
+msgid "Sort by newness"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:22
+msgid "Sort by price: low to high"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:23
+msgid "Sort by price: high to low"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:19
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:22
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/meta.php:24
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/product-attributes.php:28
+msgid "Weight"
+msgstr ""
+
+#: woocommerce/single-product/product-attributes.php:37
+msgid "Dimensions"
+msgstr ""
+
+#: woocommerce/single-product/review.php:28
+#, php-format
+msgid "Rated %d out of 5"
+msgstr ""
+
+#: woocommerce/single-product/review.php:29
+msgid "out of 5"
+msgstr ""
+
+#: woocommerce/single-product/review.php:38
+msgid "Your comment is awaiting approval"
+msgstr ""
+
+#: woocommerce/single-product/review.php:47
+msgid "verified owner"
+msgstr ""
+
+#: woocommerce/single-product/tabs/additional-information.php:14
+msgid "Additional Information"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:14
+msgid "Product Description"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Second touch"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://theme.crumina.net/second/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Second touch • Clean & Easy stylish theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Crumina"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://crumina.net/"
+msgstr ""

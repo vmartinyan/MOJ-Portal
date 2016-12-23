@@ -1,0 +1,268 @@
+/* -----------------------------------------
+   Style Changer
+----------------------------------------- */
+
+#custom-style-colorpicker {
+    position: absolute;
+    left: -44%;
+    margin-left: -100px;
+    top: 225px;
+    display: none;
+    z-index: 9999;
+}
+
+#custom-style-colorpicker a.close{
+    position: absolute;
+    top:0;
+    right:10px;
+    cursor: pointer;
+	width:20px;
+	height:20px;
+	border-radius:8px;
+	text-align:center;
+    color: red;
+    background: #fff;
+}
+
+.style_changer {
+    width:250px;
+    position:fixed;
+    color:#fff;
+    top:25%;
+    right: 0;
+    margin-right:-250px;
+    z-index:999;
+}
+
+.style_changer .wrap {
+    position: relative;
+}
+.style_changer h3 {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.style_changer label {
+    font-size: 12px;
+    color: #7a7f80;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.changer_button {
+    position:absolute;
+    top:0;
+    left:-46px;
+    display:block;
+    width:46px;
+    height:46px;
+    background: #ff6565;
+    text-align: center;
+}
+.changer_button i {
+    font-size: 32px;
+    line-height:46px;
+    color: #fff;
+}
+
+.layout-change {
+    margin: 15px 0 20px -6px;
+    overflow: hidden;
+}
+.layout-change .item {
+    position: relative;
+    margin-left: 6px;
+    float: left;
+}
+.layout-change a {
+    position: absolute;
+    width: 100%;
+    line-height: 70px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    height: 71px;
+}
+.layout-change a:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ff6565;
+    background: url(../assets/img/current.png) right top no-repeat;
+}
+
+
+.boxed_bg {
+    display: none;
+    padding: 10px 0;
+}
+.boxed_bg a {
+    margin-right: 5px;
+}
+.boxed_bg img {
+    width: 40px;
+}
+
+.style_changer label {
+	color:#8a8a8a;
+}
+
+.changer_content {
+    background: #fff;
+    border: 1px solid #ebebeb;
+	position:relative;
+	padding:15px 10px;
+}
+
+
+.fl {
+	float:left;
+	padding:0 2% 0 0;
+}
+
+
+.ch_button {
+	padding:10px 25px;
+    margin: 0 0 5px;
+    color: #fff !important;
+    border-radius: 3px;
+	font-weight: 300;
+
+}
+
+
+.boxed_wrap {
+	margin-bottom:14px;
+}
+.check_wrap {
+	position:relative;
+	overflow:hidden;
+	margin:5px 0;
+}
+.check_wrap label {
+    padding: 6px 20px 0 11px;
+    float: left;
+}
+.style_changer .line {
+    position: relative;
+    width: 249px;
+    margin-left: -10px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.style_changer input[type="checkbox"] {
+	opacity:0;
+	float:left;
+	display:block;
+    position: absolute;
+    left: -999em;
+}
+.lt-ie9 .boxed_layout:before {
+	display:none;
+}
+.lt-ie9 .check_wrap input {
+	margin-top:4px;
+}
+.lt-ie9 .version_check_wrap,
+.lt-ie9 .version_check_wrap label span.check_dark,
+.lt-ie9 .version_check_wrap label span.check_light {
+	background:none;
+}
+.lt-ie9 .version_check_wrap input {
+	margin-top:6px;
+}
+.boxed_layout.active:before,
+.wide_layout.active:before{
+    background: url(../assets/img/pipt-active.png) no-repeat ;
+}
+.check_wrap label:before {
+	content:"";
+    float: left;
+	display:block;
+	width:17px;
+	height:17px;
+    position: relative;
+    left: -10px;
+    top: 0;
+    background: url(../assets/img/pipt.png) no-repeat ;
+}
+
+.ch_picker {
+	display:block;
+	float:right;
+    height: 22px;
+    width: 27px;
+	margin:5px 5px 5px 0;
+	background:url(../stylechanger/picker.png) no-repeat 100% 50%;
+}
+.drop_top .drop_list {
+	top:auto;
+	bottom:34px;
+}
+
+.drop_list {
+    padding: 6px;
+    width: 195px;
+}
+.color_scheme_wrap {
+    padding: 15px 0 25px 0;
+    overflow: hidden;
+}
+.color_scheme_wrap h3 {
+    margin-bottom: 5px;
+}
+.color_scheme_wrap p {
+	margin:6px 5px 8px;
+    float: left;
+    color: #8a8a8a;
+}
+.color_scheme_wrap label {
+    position: relative;
+    top: 2px;
+}
+
+.first_color,
+.second_color {
+	float:left;
+	margin-top:7px;
+	line-height:18px;
+}
+.first_color .round_color {
+	background:#ff6565;
+}
+.second_color .round_color {
+	background:#47ccec;
+}
+.round_color {
+	float:right;
+	display:block;
+	width:21px;
+	height:21px;
+	margin:0 10px;
+    font-size: 23px;
+
+}
+
+.boxed_lay {
+	max-width: 1220px;
+	margin: 0 auto;
+	box-shadow:0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+body > div:first-child {
+	background: #fff;
+}
+
+body > div.dark-skin {
+	background: #32353B;
+}
+
+
+@media only screen and (max-width: 767px){
+	.style_changer {
+		display:none;
+	}
+}

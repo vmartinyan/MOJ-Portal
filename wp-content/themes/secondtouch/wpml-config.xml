@@ -1,0 +1,22 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">my-product</custom-type>
+		<custom-type translate="1">layerslider</custom-type>
+		<custom-type translate="1">revslider</custom-type>
+		<custom-type translate="1">timeline</custom-type>
+	</custom-types>
+	<custom-fields>
+		<custom-field action="translate">_bshaper_artist_content</custom-field>
+	</custom-fields>
+	<taxonomies>
+		<taxonomy translate="1">my-product_category</taxonomy>
+	</taxonomies>
+	<admin-texts>
+        <key name="second-touch">
+            <key name="portfolio_page_select" />
+            <key name="antispam_question" />
+            <key name="antispam_answer" />
+            <key name="add_form_text" />
+        </key>
+    </admin-texts>
+</wpml-config>
