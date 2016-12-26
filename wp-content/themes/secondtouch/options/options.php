@@ -443,6 +443,51 @@ function setup_framework_options(){
 		//Lets leave this as a blank section, no options just some intro text set above.
 		'fields' => array(
 			array(
+				'id' => 'vb_link',
+				'type' => 'text',
+				'title' => __('Viber link', 'crum'),
+				'desc' => __('Paste link to your account', 'crum'),
+				'default' => 'http://viber.com'
+			),
+			array(
+				'id' => 'vb_show',
+				'type' => 'checkbox',
+				'title' => __('Show in header', 'crum'),
+				'sub_desc' => __('If checked - will be display in header of theme ', 'crum'),
+
+				'default' => '1'// 1 = on | 0 = off
+			),
+			array(
+				'id' => 'sk_link',
+				'type' => 'text',
+				'title' => __('Skype link', 'crum'),
+				'desc' => __('Paste link to your account', 'crum'),
+				'default' => 'http://skype.com'
+			),
+			array(
+				'id' => 'sk_show',
+				'type' => 'checkbox',
+				'title' => __('Show in header', 'crum'),
+				'sub_desc' => __('If checked - will be display in header of theme ', 'crum'),
+
+				'default' => '1'// 1 = on | 0 = off
+			),
+			array(
+				'id' => 'wa_link',
+				'type' => 'text',
+				'title' => __('Whatsapp link', 'crum'),
+				'desc' => __('Paste link to your account', 'crum'),
+				'default' => 'http://whatsapp.com'
+			),
+			array(
+				'id' => 'wa_show',
+				'type' => 'checkbox',
+				'title' => __('Show in header', 'crum'),
+				'sub_desc' => __('If checked - will be display in header of theme ', 'crum'),
+
+				'default' => '1'// 1 = on | 0 = off
+			),
+			array(
 				'id' => 'fb_link',
 				'type' => 'text',
 				'title' => __('Facebook link', 'crum'),

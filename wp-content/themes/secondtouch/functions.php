@@ -436,7 +436,7 @@ function second_typography_customization( $tag ) {
 		}
 
 		if ( isset( $custom_typography['font-size'] ) && ! ( $custom_typography['font-size'] == '' ) ) {
-			$custom_css .= $print_tag . '{font-size:' . $custom_typography['font-size'] . 'px}';
+			$custom_css .= $print_tag . '{font-size:' . $custom_typography['font-size'] . '}';
 		}
 
 		if ( isset( $custom_typography['line-height'] ) && ! ( $custom_typography['line-height'] == '' ) ) {
@@ -455,3 +455,4 @@ function second_typography_customization( $tag ) {
 	return $custom_css;
 
 }
+

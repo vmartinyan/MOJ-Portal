@@ -6,15 +6,12 @@
 
 <div class="module module_posts <?php echo $css ?>">
 
-    <?php if ($main_title != ''): ?>
-
+    <?php if ( ! empty( $main_title ) ) { ?>
         <h3 class="widget-title">
-
             <?php echo $main_title ?>
-
         </h3>
+    <?php } ?>
 
-    <?php endif; ?>
 
     <div class="blog-posts">
 

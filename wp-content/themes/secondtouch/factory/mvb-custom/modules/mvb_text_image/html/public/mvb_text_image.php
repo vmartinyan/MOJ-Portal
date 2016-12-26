@@ -1,10 +1,10 @@
 <div class="module module-text">
 
-	<?php if( $main_title != '' ): ?>
+	<?php if ( ! empty( $main_title ) ) { ?>
 		<h3 class="widget-title">
 			<?php echo $main_title ?>
 		</h3>
-	<?php endif; ?>
+	<?php } ?>
 
 	<?php if ( $image ) {
 		$img_url = mvb_get_image_url( $image );

@@ -54,6 +54,9 @@ function crum_social_networks ($show){
     $options = get_option('second-touch');
 
     $social_networks = array(
+	    "sk" => "Skype",
+	    "wa" => "Whatsapp",
+	    "vb" => "Viber",
         "fb"=>"Facebook",
         "gp"=>"Google +",
         "tw"=>"Twitter",
@@ -74,6 +77,9 @@ function crum_social_networks ($show){
         "rss"=>"RSS",
     );
     $social_icons = array(
+	    "sk" => "soc_icon-skype",
+	    "wa" => "soc_icon-whatsapp",
+	    "vb" => "soc_icon-viber",
         "fb" => "soc_icon-facebook",
         "gp" => "soc_icon-google__x2B_",
         "tw" => "soc_icon-twitter-3",
@@ -231,35 +237,7 @@ function getPostLikeLink($post_id)
 
 
 function crumina_get_header() {
-	$options = get_option( 'second-touch' );
-
-	get_header();?>
-
-	<body <?php body_class( '' ); ?> >
-
-
-	<?php $site_boxed = $options["site_boxed"];
-	$meta_layout_width = get_post_meta(get_the_ID(),'meta_full_width_layout_width',true);
-	if(isset($meta_layout_width) && !empty($meta_layout_width)){
-		$site_boxed = '0';
-	}
-
-	?>
-
-	<div id="change_wrap_div" class="  <?php if ( $site_boxed ) {
-		echo ' boxed_lay';
-	} ?>">
-
-	<?php
-	if ( $options["top_adress_block"] ) {
-		get_template_part( 'templates/section', 'panel' );
-	}
-
-	get_template_part( 'templates/section', 'header' );
-
-	do_action( 'crum_after_header' );?>
-
-<?php
+	get_header();
 }
 
 add_action( 'crum_header', 'crumina_get_header', 1 );

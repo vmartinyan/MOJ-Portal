@@ -29,11 +29,12 @@ $unique_id = uniqid('sticky-news-');
 
 <div class="module module-sticky-news <?php echo $css ?> <?php echo $cr_effect; ?>">
 
-	<?php if ( isset($main_title) && !($main_title == '') ): ?>
+	<?php if ( ! empty( $main_title ) ) { ?>
 		<h3 class="widget-title">
 			<?php echo $main_title ?>
 		</h3>
-	<?php endif; ?>
+	<?php } ?>
+
 
 	<div class="crum_stiky_news">
 

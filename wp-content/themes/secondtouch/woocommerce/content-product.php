@@ -40,18 +40,22 @@ $term = get_term_by('name', strip_tags($categ), 'product_cat');
 
 $terms = get_the_terms( $product->ID, 'product_cat' );
 
-if (!is_wp_error($terms)){
-	$terms_list = '';
 
-	foreach ($terms as $single_term){
-		$terms_list .= strtolower(preg_replace('/\s+/', '-', $single_term->slug)) . ' ';
+
+	if (is_wp_error($terms)){
+		$terms_list = '';
+
+		foreach ($terms as $single_term){
+
+				$terms_list .= strtolower( preg_replace( '/\s+/', '-', $single_term->slug ) ) . ' ';
+
+		}
+
+		$data_category = 'data-category="'.$terms_list.'"';
+
+	}else{
+		$data_category = '';
 	}
-
-	$data_category = 'data-category="'.$terms_list.'"';
-
-}else{
-	$data_category = '';
-}
 
 ?>
 <li <?php post_class($classes); ?> <?php echo $data_category;?>>

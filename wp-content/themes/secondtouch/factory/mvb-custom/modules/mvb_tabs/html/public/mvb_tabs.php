@@ -1,14 +1,10 @@
 <div class="tabs_module module <?php echo $css ?>">
 
-    <?php if ($main_title != ''): ?>
-
-        <h3 class="widget-title">
-
-            <?php echo $main_title ?>
-
-        </h3>
-
-    <?php endif; ?>
+	<?php if ( ! empty( $main_title ) ) { ?>
+		<h3 class="widget-title">
+			<?php echo $main_title ?>
+		</h3>
+	<?php } ?>
 
     <dl class="tabs horisontal clearfix">
 

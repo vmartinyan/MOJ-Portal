@@ -1,0 +1,32 @@
+<?php foreach((array) $table as $i => $column) : ?>
+    <div class="<?php print implode(' ', $column['classes']) ?>" style="width:<?php print $column['width'] ?>%">
+<ul class="pricing-table">
+    <li class="title">
+        <div class="icon"><i class="<?php echo $column['icon'] ?>"></i></div>
+        <div class="nazv"><?php print $column['title'] ?></div>
+        <div class="item-price">
+            <span class="price"><?php echo $column['price'] ?></span>
+            <span class="period"><?php echo $column['detail'] ?></span>
+        </div>
+        <div class="mini-desc">
+            <?php echo $column['addinfo'] ?>
+        </div>
+    </li>
+
+    <?php if(!empty($column['features'])) : ?>
+    <?php foreach($column['features'] as $j => $feature) : ?>
+
+            <li class="bullet-item"><?php print $feature['title'] ?></li>
+
+        <?php endforeach ?>
+    <?php endif; ?>
+
+
+    <li class="cta-button">
+        <a class="button red flat square" href="<?php print empty($column['url']) ? '#' : $column['url'] ?>">
+            <?php print empty($column['button']) ? __('Select', 'pricetable') : $column['button'] ?>
+        </a>
+    </li>
+</ul>
+    </div>
+<?php endforeach ?>

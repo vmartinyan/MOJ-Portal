@@ -17,15 +17,12 @@
     wp_enqueue_script( 'googleMaps', 'https://maps.googleapis.com/maps/api/js?key=' . $api_key . '&libraries=places&language=' . $language, null, null, true );
     ?>
 
-    <?php if ($main_title != ''): ?>
-
-        <h3 class="twelve columns widget-title">
-
+    <?php if ( ! empty( $main_title ) ) { ?>
+        <h3 class="widget-title twelve columns">
             <?php echo $main_title ?>
-
         </h3>
+    <?php } ?>
 
-    <?php endif; ?>
 
     <?php if (isset($additional_info) && $additional_info) {$columns = 'six';} else {$columns = 'twelve';} ?>
 

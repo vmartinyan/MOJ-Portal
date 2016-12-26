@@ -2,6 +2,7 @@
 
 // Buttons
 function crum_flexslider( $atts, $content = null ) {
+    $id =0;
     extract( shortcode_atts( array(
         'id' => '', /* some unique id */
     ), $atts ) );
@@ -23,7 +24,7 @@ function crum_flexslider( $atts, $content = null ) {
                     direction: "horizontal",
                     itemWidth: 280,                     //{NEW} Integer: Box-model width of individual carousel items, including horizontal borders and padding.
                     itemMargin: 20,                     //{NEW} Integer: Margin between carousel items.
-                    minItems: 2,                        //{NEW} Integer: Minimum number of carousel items that should be visible. Items will resize fluidly when below this.
+                    minItems: 1,                        //{NEW} Integer: Minimum number of carousel items that should be visible. Items will resize fluidly when below this.
                     maxItems: 4,
                     controlsContainer: ".extra-links",
                     slideshow: false,

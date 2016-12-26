@@ -536,12 +536,11 @@ article.post {
 	padding-bottom: 35px;
 	box-shadow: 0 1px 0 rgba(210, 211, 211, 0.4); }
 article.post h3.entry-title {
-	font-size: 20px;
 	font-weight: 600;
-	color: #44505a;
 	margin-bottom: 5px; }
 article.post h3.entry-title a {
-	color: inherit; }
+	color: inherit;
+}
 article.post h3.entry-title a:hover {
 	color: #ff6565; }
 article.post .entry-content {
@@ -597,7 +596,6 @@ article.post:hover .link-read-more {
 h1.entry-title {
 	margin-top: 0;
 	margin-bottom: 30px;
-	font-size: 25px;
 	font-weight: 600; }
 
 h2.entry-title {
@@ -904,7 +902,7 @@ article.post .entry-title {
 	@font-face {
 		font-family: 'soc-icons';
 		src: url("../fonts/soc-icons.svg#soc-icons") format("svg"); } }
-.soc_icon-xing, .soc_icon-html5-01, .soc_icon-html5-02, .soc_icon-css3-01, .soc_icon-css3-02, .soc_icon-rus-vk-02, .soc_icon-rus-vk-01, .soc_icon-livejournal, .soc_icon-dropbox, .soc_icon-os-win-04, .soc_icon-dbs-mysql, .soc_icon-dbs-postgresql, .soc_icon-os-apple, .soc_icon-brw-chrome, .soc_icon-brw-safari-02, .soc_icon-brw-firefox, .soc_icon-brw-explorer, .soc_icon-brw-opera, .soc_icon-android, .soc_icon-instagram, .soc_icon-wordpress, .soc_icon-vimeo, .soc_icon-twitter-2, .soc_icon-twitter-3, .soc_icon-tumblr, .soc_icon-skype, .soc_icon-rss, .soc_icon-pinterest, .soc_icon-picasa, .soc_icon-paypal, .soc_icon-odnoklassniki, .soc_icon-mail, .soc_icon-linkedin, .soc_icon-last_fm, .soc_icon-google__x2B_, .soc_icon-google, .soc_icon-gmail, .soc_icon-foursquare_2, .soc_icon-flickr, .soc_icon-feedburner, .soc_icon-facebook, .soc_icon-evernote, .soc_icon-dribbble, .soc_icon-digg, .soc_icon-deviantart, .soc_icon-blogger, .soc_icon-behance, .soc_icon-youtube, .soc_icon-apple, .soc_icon-amazon {
+.soc_icon-xing, .soc_icon-html5-01, .soc_icon-html5-02,.soc_icon-viber,.soc_icon-skype,.soc_icon-whatsapp, .soc_icon-css3-01, .soc_icon-css3-02, .soc_icon-rus-vk-02, .soc_icon-rus-vk-01, .soc_icon-livejournal, .soc_icon-dropbox, .soc_icon-os-win-04, .soc_icon-dbs-mysql, .soc_icon-dbs-postgresql, .soc_icon-os-apple, .soc_icon-brw-chrome, .soc_icon-brw-safari-02, .soc_icon-brw-firefox, .soc_icon-brw-explorer, .soc_icon-brw-opera, .soc_icon-android, .soc_icon-instagram, .soc_icon-wordpress, .soc_icon-vimeo, .soc_icon-twitter-2, .soc_icon-twitter-3, .soc_icon-tumblr, .soc_icon-skype, .soc_icon-rss, .soc_icon-pinterest, .soc_icon-picasa, .soc_icon-paypal, .soc_icon-odnoklassniki, .soc_icon-mail, .soc_icon-linkedin, .soc_icon-last_fm, .soc_icon-google__x2B_, .soc_icon-google, .soc_icon-gmail, .soc_icon-foursquare_2, .soc_icon-flickr, .soc_icon-feedburner, .soc_icon-facebook, .soc_icon-evernote, .soc_icon-dribbble, .soc_icon-digg, .soc_icon-deviantart, .soc_icon-blogger, .soc_icon-behance, .soc_icon-youtube, .soc_icon-apple, .soc_icon-amazon {
 	font-family: 'soc-icons';
 	speak: none;
 	font-style: normal;
@@ -914,9 +912,17 @@ article.post .entry-title {
 	line-height: 1;
 	-webkit-font-smoothing: antialiased; }
 
-
+.soc_icon-skype:before{
+	content: '\e046';
+}
+.soc_icon-whatsapp:before{
+	content: '\e01b ';
+}
+.soc_icon-viber:before{
+	content: '\e071';
+}
 .soc_icon-rus-vk-01:before {
-    content: '\e800';
+    content: '\e01a';
 }
 
 .soc_icon-dropbox:before {
@@ -928,7 +934,7 @@ article.post .entry-title {
 }
 
 .soc_icon-instagram:before {
-    content: '\e810';
+    content: '\e057';
 }
 .soc_icon-xing:before {
 	content: "\e0c4";
@@ -945,15 +951,16 @@ article.post .entry-title {
 }
 
 .soc_icon-wordpress:before {
-    content: '\e807';
+    content: '\e058 ';
 }
 .soc_icon-vimeo:before {
-    content: '\e813';
+    content: '\e052';
 }
 
 .soc_icon-twitter-3:before {
-    content: '\e815';
+    content: '\e040';
 }
+
 .soc_icon-tumblr:before {
     content: '\e809';
 }
@@ -961,32 +968,30 @@ article.post .entry-title {
 .soc_icon-stumble_upon:before {
     content: '\e80a';
 }
-.soc_icon-skype:before {
-    content: '\e808';
-}
+
 
 .soc_icon-rss:before {
     content: '\e818';
 }
 .soc_icon-pinterest:before {
-    content: '\e803';
+    content: '\e043';
 }
 .soc_icon-picasa:before {
     content: '\e816';
 }
 
 .soc_icon-linkedin:before {
-    content: '\e805';
+    content: '\e049';
 }
 .soc_icon-last_fm:before {
-    content: '\e80b';
+    content: '\e050 ';
 }
 .soc_icon-google__x2B_:before {
-    content: '\e801';
+    content: '\e042';
 }
 
 .soc_icon-facebook:before {
-    content: '\e802';
+    content: '\e041';
 }
 .soc_icon-dribbble:before {
     content: '\e80c';
@@ -995,7 +1000,7 @@ article.post .entry-title {
     content: '\e80d';
 }
 .soc_icon-deviantart:before {
-    content: '\e814';
+    content: '\e029';
 }
 
 .soc_icon-behance:before {
@@ -1003,7 +1008,7 @@ article.post .entry-title {
 }
 
 .soc_icon-youtube:before {
-    content: '\e806';
+    content: '\e051';
 }
 
 .soc_icon-github:before {
@@ -1161,9 +1166,19 @@ body.admin-bar {
 
 .soc-icons a.rss, .soc-icons a.li {
 	background: #ff9a00; }
-
+.soc-icons a.sk{
+	background: #28abe3;
+}
+.soc-icons a.vb{
+	background:  #7b519d;
+}
+.soc-icons a.wa{
+	background: #20B038;
+}
 .soc-icons a.gp {
 	background: #ff4a35; }
+.soc-icons a.wp {
+	background: #464646; }
 
 .soc-icons a.xi {
     background: #006567; }
@@ -1171,8 +1186,23 @@ body.admin-bar {
 .soc-icons a.vi {
 	background: #2ea1af; }
 
+.soc-icons a.pt {
+	background: #c92619; }
+
 .soc-icons a.in {
 	background: #205877; }
+
+.soc-icons a.vk {
+	background: #5a7fa6; }
+
+.soc-icons a.yt {
+	background: #e02a20; }
+
+.soc-icons a.de {
+	background: #c5d200; }
+
+.soc-icons a.li {
+	background: #3371b7; }
 
 /* -----------------------------------------
    Searchform
@@ -1224,6 +1254,7 @@ body.admin-bar {
 	font-weight: 300;
 	display: table-cell;
 	padding: 35px 35px 35px 0;
+	padding: 35px;
 	height: 140px;
 	box-shadow: 1px 0 0 rgba(255, 255, 255, 0.3);
 	vertical-align: middle;
@@ -4965,4 +4996,21 @@ Upcoming events header hide
     font-size: inherit;
     line-height: inherit;
     color: inherit;
+}
+
+.accodion_module .accordion .active .icon_active{
+	opacity: 1;
+	transition: 0.3s;
+}
+.accodion_module .accordion .icon_active{
+	opacity: 0;
+	transition: 0.3s;
+}
+.accodion_module .accordion .active .icon_no_active{
+	opacity: 0;
+	transition: 0.2s;
+}
+.accodion_module .accordion .icon_no_active{
+	opacity: 1;
+	transition: 0.2s;
 }

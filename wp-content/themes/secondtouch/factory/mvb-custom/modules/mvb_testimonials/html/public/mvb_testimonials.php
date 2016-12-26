@@ -9,12 +9,11 @@ $module_style = isset( $module_style ) ? $module_style : 0;
 
 <div class="testimonials_module <?php echo $css ?> <?php echo $cr_effect; ?>">
 
-    <h3 class="widget-title">
-
-        <?php echo $main_title ?>
-
-    </h3>
-
+    <?php if ( ! empty( $main_title ) ) { ?>
+        <h3 class="widget-title">
+            <?php echo $main_title ?>
+        </h3>
+    <?php } ?>
     <div id="<?php echo $unique_id ?>">
 
         <div class="testimonials-slide">

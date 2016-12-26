@@ -1,14 +1,11 @@
 <div class="pie_charts_module module row <?php echo $css ?> ">
 
-    <?php if ($main_title != ''): ?>
-
+    <?php if ( ! empty( $main_title ) ) { ?>
         <h3 class="widget-title">
-
             <?php echo $main_title ?>
-
         </h3>
+    <?php } ?>
 
-    <?php endif; ?>
 
     <?php if (count($r_items) > 0): ?>
 

@@ -23,6 +23,7 @@
         </div>
 
         <div class="share-icons">
+         
             <?php if (get_the_author_meta('twitter')) {  echo '<a href="',the_author_meta('twitter'),'"><i class="soc_icon-twitter-3"></i></a>';  } ?>
             <?php if (get_the_author_meta('cr_facebook')) {  echo '<a href="',the_author_meta('cr_facebook'),'"><i class="soc_icon-facebook"></i></a>';  } ?>
             <?php if (get_the_author_meta('googleplus')) {  echo '<a href="',the_author_meta('googleplus'),'"><i class="soc_icon-google__x2B_"></i></a>';  } ?>

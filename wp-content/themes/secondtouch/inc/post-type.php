@@ -86,7 +86,7 @@ function my_updated_messages( $messages ) {
 }
 add_filter( 'post_updated_messages', 'my_updated_messages' );
 
-function my_contextual_help( $contextual_help, $screen, $screen) {
+function my_contextual_help( $contextual_help, $screen) {
 	$options = get_option('second-touch');
 
 

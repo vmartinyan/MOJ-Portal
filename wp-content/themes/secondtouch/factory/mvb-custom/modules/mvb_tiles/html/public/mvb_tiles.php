@@ -6,16 +6,11 @@
 
 <div class="tiles-block tiles_module module <?php echo $css ?>">
 
-    <?php if ($main_title != ''): ?>
-
+    <?php if ( ! empty( $main_title ) ) { ?>
         <h3 class="widget-title">
-
             <?php echo $main_title ?>
-
         </h3>
-
-
-    <?php endif; ?>
+    <?php } ?>
 
     <?php foreach( $r_items as $item ): ?>
 

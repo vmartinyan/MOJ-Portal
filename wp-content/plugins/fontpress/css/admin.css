@@ -1,0 +1,331 @@
+.lcwp_opt_block {
+	margin: 0 0 35px;	
+}
+.lcwp_opt_table td {
+	padding: 10px 0;	
+	
+	background: #fdfdfd;
+    border-bottom: 1px solid #fff;
+	border-top: 1px solid #E9E9E9;
+    color: #444444;
+}
+.lcwp_opt_table td label {
+	padding-left: 7px !important;	
+}
+.lcwp_form h2 {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #DFDFDF;	
+}
+.lcwp_form h3 {
+	border-bottom: 1px solid #DFDFDF;	
+	padding: 10px 1.4em;
+	margin: 20px 0 0;
+}
+.lcwp_form ul {
+	margin: 0;	
+}
+.lcwp_form li {
+	padding: 15px 1.4em;	
+	border-bottom: 1px solid #DFDFDF;
+    border-top: 1px solid #FFFFFF;
+	margin: 0;
+}
+.lcwp_form label {
+	display: inline-block;
+	width: 270px;
+	padding-right: 20px;
+}
+.lcwp_form label.longlabel {
+	display: block;
+}
+.lcwp_form .fieldlegend {
+	color: #666;
+	font-style: italic;
+	font-family: sans-serif;
+    font-size: 12px;
+	padding-left: 10px;	
+}
+.lcwp_form .jui_slider {
+	display: inline-block;
+	width: 260px;	
+}
+.lcwp_form .jui_slider .lcwp_slider {
+	width: 150px;		
+	float: left;
+	margin-top: 8px;
+	margin-right: 15px;
+}
+.lcwp_form .jui_slider input {
+	width: 50px;
+	padding: 3px;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.lcwp_form #user_form table td {
+	padding: 0 20px;	
+	width: 340px;
+	vertical-align: top;
+}
+
+.lcwp_form #lcwp_bar_text_ifr {
+	background-color: #fff;
+}
+
+.lcwp_form .elements {
+	margin-left: 1.4em !important;
+	margin-right: 1.4em !important; 	
+}
+.lcwp_req_field {
+	color: #F30;	
+}
+.lcwp_field_legend {
+	padding-left: 20px;
+	color: #666;
+	font-family: sans-serif;
+    font-size: 12px;
+    font-style: italic;	
+}
+
+.lcwp_infobox {
+	border-radius: 4px 4px 4px 4px;
+	margin: 10px 1.4em 0;
+	padding: 15px 10px;
+	border: 1px solid #AACEE6;
+	background-color: #F0F5FB;
+}
+.lcwp_infobox strong {
+	display: inline-block;
+	min-width: 80px;
+	padding-right: 10px;	
+	line-height: 20px;
+}
+
+
+#lcwp_ulist_filter {
+	width: 200px;	
+}
+#lcwp_ulist_action {
+	width: 130px;
+}
+.v_divider {
+	padding: 0 5px;	
+}
+.lcwp_trigger {
+	cursor: pointer;	
+}
+.del_lcwp_user {
+	color: #21759B;	
+}
+.del_lcwp_user:hover {
+	color: #d54e21;	
+}
+.lcwp_form optgroup {
+	padding-top: 2px;	
+}
+.lcwp_form optgroup option {
+	padding-left: 7px !important;	
+}
+
+.lcwp_table .content_row td {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+#lcwp_cats_wrap input {
+	margin-bottom: -2px;	
+}
+#lcwp_tinymce_table .tbl_last {
+	border-bottom: none !important;	
+}
+#lcwp_tinymce_table textarea {
+	width: 340px;	
+}
+
+/* colpick - colorpicker */
+.lcwp_colpick {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.lcwp_colpick .lcwp_colblock {
+	height: 98%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 29px;
+	border: 1px solid #DDDDDD;
+	
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.lcwp_colpick input {
+	padding-right: 28px; 	
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	width: 110px;
+	min-width: 110px;
+	max-width: 110px;
+}
+.colpick {
+	z-index: 9999999;	
+}
+
+
+.lcwp_loading {
+	display: inline-block;
+	background: url(../img/loader.gif) no-repeat top left transparent;
+	width: 20px;
+	height: 20px;	
+	margin-bottom: -4px;
+}
+.fp_page_title {
+	background: url(../img/lcweb_logo.png) no-repeat bottom right transparent;	
+}
+
+
+/************************** */
+
+#pageicon-fontface {
+	background: url(../img/fontpress_big.png) no-repeat top left transparent;	
+}
+.fp_font_preview {
+	padding-left: 40px;
+	font-size: 27px;	
+}
+.fp_del_font {
+	width: 35px;
+}
+.fp_del_font span {
+	display: block;
+	margin: auto;
+	height: 15px;
+	width: 15px;
+	background: url(../img/del_icons.png) no-repeat bottom left transparent;
+	cursor: pointer;		
+}
+.fp_del_font span:hover {
+	background-position: top left;	
+}
+#rules_table td,
+.fp_font_list_table td {
+	vertical-align: middle;	
+	background-color: #fff;
+}
+#rules_table tr:hover td,
+.fp_font_list_table tr:hover td {
+	background-color: #fdfdfd;
+}
+#rules_table input,
+#rules_table select {
+	margin-left: 5px;
+	width: 90%; 	
+}
+.fp_size_choose input,
+.fp_line_height input {
+	width: 40% !important;
+}
+.fp_size_choose select,
+.fp_line_height select {
+	width: 43% !important;
+	margin-left: -5px !important;
+}
+.fp_del_rule {
+	display: block;
+	margin: auto;
+	height: 15px;
+	width: 15px;
+	background: url(../img/del_icons.png) no-repeat bottom left transparent;
+	cursor: pointer;	
+}
+.fp_del_rule:hover {
+	background-position: top left;	
+}
+.fp_move_rule {
+	display: block;
+	margin: auto;
+	height: 15px;
+	width: 15px;
+	background: url(../img/move_icons.png) no-repeat bottom left transparent;
+	cursor: move;		
+}
+.fp_move_rule:hover {
+	background-position: top left;	
+}
+.fp_shadow label {
+	display: inline-block;
+	width: auto !important;
+	padding: 0px !important;	
+}
+.fp_shadow > input {
+	width: 25px !important;
+	margin: 0px !important;	
+}
+.fp_shadow .lcwp_colpick {
+	margin-top: 7px !important;	
+	margin-left: 12px;
+}
+
+#fp_tinymce_table td {
+	border-bottom: 1px solid #DFDFDF !important;
+    border-top-color:  1px solid #FFFFFF !important;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+#fp_tinymce_table .tbl_last td {
+	border-bottom: none !important;
+}
+
+.mce-ico.mce-i-fp_btn {
+	display: inline-block !important;
+	width: 20px !important;
+	height: 20px !important;
+	background: url(../img/fp_icon_tinymce.png) no-repeat top left transparent !important;	
+}
+
+
+/* typekit manager icons */
+.fp_typekit_th {
+	padding-top: 16px !important;
+	background-color: #fdfdfd !important;	
+}
+.fp_typekit_th span {
+	float: right;	
+	position: relative;
+	top: 3px;
+}
+.fp_typekit_sync {
+	display: block;
+	margin-right: 15px;
+	height: 15px;
+	width: 15px;
+	background: url(../img/sync_icons.png) no-repeat bottom left transparent;
+	cursor: pointer;	
+}
+.fp_typekit_sync:hover {
+	background-position: top left;	
+}
+.fp_typekit_enable_wrap {
+	padding-right: 25px;
+	float: right;
+	position: relative;
+	top: -4px;
+}
+.fp_typekit_enable_wrap:after {
+	content: "|";
+	position: relative;
+	left: 9px;	
+}
+
+
+/* colorpicker */
+#mColorPicker {
+	z-index: 9999 !important;	
+}
+
+
+/* WP 4 - remove "view details" link in plugins page */
+body.plugins-php #fontpress .plugin-version-author-uri a:last-child {
+	display: none !important;	
+}

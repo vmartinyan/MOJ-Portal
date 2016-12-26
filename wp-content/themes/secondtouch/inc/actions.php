@@ -713,3 +713,15 @@ function crum_twitter_convert_links( $status, $targetBlank = true, $linkMaxLen =
     return $status;
 }
 }
+
+add_action( 'wp_login_failed', 'second_login_failed' );
+function second_login_failed( $username )
+{
+    $referrer = wp_get_referer();
+
+    if ( $referrer && ! strstr($referrer, 'wp-login') && ! strstr($referrer,'wp-admin') )
+    {
+        wp_redirect( add_query_arg('login', 'failed', wp_login_url()) );
+        exit;
+    }
+}

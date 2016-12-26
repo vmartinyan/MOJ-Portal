@@ -37,6 +37,9 @@
             }
 
             $social_networks = array(
+                "sk" => "Skype",
+                "wa" => "Whatsapp",
+                "vb" => "Viber",
                 "tw" => "Twitter",
                 "fb" => "Facebook",
                 "li" => "LinkedIN",
@@ -53,6 +56,9 @@
                 "db" => "Dropbox",
             );
             $social_icons = array(
+                "sk" => "socicon-skype",
+                "wa" => "socicon-whatsapp",
+                "vb" => "socicon-viber",
                 "fb" => "soc_icon-facebook",
                 "gp" => "soc_icon-google__x2B_",
                 "tw" => "soc_icon-twitter-3",

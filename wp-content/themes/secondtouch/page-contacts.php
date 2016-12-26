@@ -128,12 +128,25 @@ get_template_part('templates/top', 'page');
                     <?php the_content(); ?>
                 <?php endwhile; ?>
 
-                <div class="in-content-social">
-                    <div class="soc-icons">
-                        <?php crum_social_networks(false); ?>
 
-                    </div>
-                </div>
+	            <?php
+	            $icon_show = get_post_meta( get_the_ID(), '_top_page_text' ,'true');
+
+	            if ($icon_show == 'Yes'){
+
+		            ?>
+		            <div class="in-content-social">
+			            <div class="soc-icons">
+
+				            <?php crum_social_networks(false); ?>
+
+			            </div>
+		            </div>
+		            <?php
+	            }else{
+		            echo '';
+	            } ?>
+
             </div>
         </div>
 
@@ -154,7 +167,7 @@ get_template_part('templates/top', 'page');
                 echo do_shortcode($options["custom_form_shortcode"]);
 
             } else {
-
+	            
                 $admin_email = $options["contacts_form_mail"];
                 $antispam_answer = $options["antispam_answer"];
 
@@ -203,7 +216,6 @@ get_template_part('templates/top', 'page');
                                     <?php }	?>
                                 </div>
                             </div>
-
                             <button class="button flat" name="submit">
                                 <span class="icon"><img
                                         src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-right.gif"

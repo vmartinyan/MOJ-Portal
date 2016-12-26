@@ -5,11 +5,11 @@
 } ?>
 
 <div class="module module-last-x-posts  <?php echo $css ?>">
-<?php if ($main_title != ''): ?>
-    <h3 class="widget-title">
-        <?php echo $main_title ?>
-    </h3>
-<?php endif; ?>
+<?php if ( ! empty( $main_title ) ) { ?>
+        <h3 class="widget-title">
+            <?php echo $main_title ?>
+        </h3>
+    <?php } ?>
 
 <?php
 

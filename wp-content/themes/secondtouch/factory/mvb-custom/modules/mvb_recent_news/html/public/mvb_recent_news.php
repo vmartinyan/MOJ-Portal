@@ -5,17 +5,15 @@
 } ?>
 
 <div class="module recent-block" id="<?php echo $unique_id ?>">
-    <?php if ($main_title != ''): ?>
-        <h3 class="widget-title">
-            <?php echo $main_title ?>
-
-            <span class="extra-links"></span>
-        </h3>
-    <?php else: ?>
+	<?php if ( ! empty( $main_title ) ) { ?>
+		<h3 class="widget-title">
+			<?php echo $main_title ?>
+		</h3>
+	<?php } else { ?>
 	<div class="widget-title">
 		<span class="extra-links"></span>
 	</div>
-	<?php endif;?>
+	<?php } ?>
 
    <div class="news-row ">
 	<?php

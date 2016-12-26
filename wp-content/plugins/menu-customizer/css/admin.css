@@ -1,0 +1,52 @@
+.metro-menu-items{
+    display: none;
+}
+.metro-menu-item {
+    margin-left: 10px;
+    overflow: visible;
+    width: 130px;
+    line-height: 34px;
+    display: block;
+    float: left;
+}
+
+.metro-menu-item input{
+    width:100%;
+    max-width: 125px;
+}
+
+.menu-tile{
+    display:block;
+    position: relative;
+    height: 130px;
+    width:100%;
+    text-decoration: none;
+    background-color: #FFAA31;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.metro-menu-item .item-title{
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.metro-menu-settings .wp-picker-container{
+    max-width: 125px;
+    position: relative;
+}
+.metro-menu-settings .wp-picker-holder {
+    position: absolute;
+}
+
+
+.tile-icon{
+    position: absolute;
+    font-size: 48px;
+    text-align: center;
+    top: 50%;
+    margin-top: -24px;
+    width: 100%;
+    color: #fff;
+}

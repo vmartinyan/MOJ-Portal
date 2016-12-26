@@ -56,3 +56,30 @@
 
 </head>
 
+<body <?php body_class( '' ); ?> >
+
+
+<?php $site_boxed = $options["site_boxed"];
+$meta_layout_width = get_post_meta(get_the_ID(),'meta_full_width_layout_width',true);
+if(isset($meta_layout_width) && !empty($meta_layout_width)){
+    $site_boxed = '0';
+}
+
+?>
+
+<div id="change_wrap_div" class="  <?php if ( $site_boxed ) {
+    echo ' boxed_lay';
+} ?>">
+
+<?php
+
+if (  ! is_page_template( 'page-blank.php' ) ) {
+    if ( $options["top_adress_block"] ) {
+        get_template_part( 'templates/section', 'panel' );
+    }
+
+    get_template_part( 'templates/section', 'header' );
+
+    do_action( 'crum_after_header' );
+}
+

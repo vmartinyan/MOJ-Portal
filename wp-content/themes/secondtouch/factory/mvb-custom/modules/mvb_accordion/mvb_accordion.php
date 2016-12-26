@@ -63,6 +63,11 @@ class MVB_Accordion
                         'type'      =>      'textarea',
                         'label'     =>      __('Section content', 'mvb'),
                     ),
+                    'icon_2' => array(
+	                    'type'      =>      'icon',
+	                    'label'     =>      __('Icon ( open )', 'mvb'),
+	                    'col_span'  =>      'lbl_half_text'
+                    ),
                 )//end repeater_fields
             ),
 
@@ -146,7 +151,8 @@ class MVB_Accordion
             return $mvb_metro_factory->_load_view('html/private/mvb_form.php', $load);
         }//endif
 
-    }//end admin_render();
+    }
+	//end admin_render();
 
     /**
 	 * The private code for the repeater shortcode. used in the custom editor
