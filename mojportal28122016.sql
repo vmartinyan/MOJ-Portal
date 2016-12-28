@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `mojportal`
 --
-CREATE DATABASE IF NOT EXISTS `mojportal` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `mojportal`;
+-- CREATE DATABASE IF NOT EXISTS `mojportal` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+-- USE `mojportal`;
 
 -- --------------------------------------------------------
 
@@ -3413,8 +3413,8 @@ ALTER TABLE `wp_users`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;--
 -- Database: `phpmyadmin`
 --
-CREATE DATABASE IF NOT EXISTS `phpmyadmin` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `phpmyadmin`;
+-- CREATE DATABASE IF NOT EXISTS `phpmyadmin` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+-- USE `phpmyadmin`;
 
 -- --------------------------------------------------------
 
@@ -3858,8 +3858,8 @@ ALTER TABLE `pma__savedsearches`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;--
 -- Database: `test`
 --
-CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `test`;
+-- CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+-- USE `test`;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
