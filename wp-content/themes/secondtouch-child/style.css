@@ -40,3 +40,9 @@ License URI:        http://www.gnu.org/licenses/gpl-2.0.html
 	box-shadow:none;
 	vertical-align: middle;
 }
+
+.slideButton a {
+    color: #fff;
+    text-decoration:none;
+    font-family: "Source Sans Pro", "Segoe UI Light", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
