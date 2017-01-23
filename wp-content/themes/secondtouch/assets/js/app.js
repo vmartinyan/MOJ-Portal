@@ -332,7 +332,7 @@ jQuery(document).ready(function () {
             share: {
                 facebook: true
             },
-            template: '<a href="#"><i class="soc_icon-twitter-3"></i> <span class="total">{total}</span></a>',
+            template: '<a href="#"><i class="soc_icon-twitter"></i> <span class="total">{total}</span></a>',
             enableHover: false,
             urlCurl: $share_container.data('directory') + '/inc' + '/sharrre.php',
 
@@ -361,7 +361,7 @@ jQuery(document).ready(function () {
             share: {
                 googlePlus: true
             },
-            template: '<a href="#"><i class="soc_icon-google__x2B_"></i> <span class="total">{total}</span></a>',
+            template: '<a href="#"><i class="soc_icon-googleplus"></i> <span class="total">{total}</span></a>',
             enableHover: false,
             urlCurl: $share_container.data('directory') + '/inc' + '/sharrre.php',
 
@@ -401,7 +401,7 @@ jQuery(document).ready(function () {
                 facebook: true,
                 pinterest: true
             },
-            template: '<div class="box"><div class="left"><i class="linecon-like"></i></div><div class="middle"><a href="#" class="facebook"><i class="soc_icon-facebook"></i></a><a href="#" class="twitter"><i class="soc_icon-twitter-3"></i></a><a href="#" class="pinterest"><i class="soc_icon-pinterest"></i></a></div><div class="right">{total}</div></div>',
+            template: '<div class="box"><div class="left"><i class="linecon-like"></i></div><div class="middle"><a href="#" class="facebook"><i class="soc_icon-facebook"></i></a><a href="#" class="twitter"><i class="soc_icon-twitter"></i></a><a href="#" class="pinterest"><i class="soc_icon-pinterest"></i></a></div><div class="right">{total}</div></div>',
             enableHover: false,
             enableTracking: true,
             render: function (api, options) {

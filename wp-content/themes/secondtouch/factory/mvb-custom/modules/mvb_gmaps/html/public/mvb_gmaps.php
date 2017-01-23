@@ -32,28 +32,57 @@
         <div class="<?php echo $columns; ?> columns">
 
             <div id="map-<?php echo $unique_id; ?>" style="height: <?php echo $height; ?>px;"></div>
-
             <script type="text/javascript">
                 jQuery(document).ready(function () {
                     jQuery("#map-<?php echo $unique_id; ?>").gmap3({
-
                         marker: {
-                            <?php if ($r_items): ?>
                             values: [
-                                <?php foreach ($r_items as $address):
-                                echo '{address: " '. $address['address'] .'"},';
-                                endforeach; ?>
-                            ]
-                            <?php else:
-
-                            echo '{address: " '. $address .'"},';
-
-                            endif; ?>
+                                <?php
+                                $resultstr = array();
+                                foreach ( $r_items as $k => $val ) {
+                                    $val = $val['address'];
+                                    if ( ! empty( $val ) ) {
+                                        if ( false === strpos( $val, '|' ) ) {
+                                            $resultstr[] = '{address: " ' . $val . '" , data:"' . $val . '"}';
+                                        } else {
+                                            $atts        = explode( '|', $val );
+                                            $resultstr[] = '{latLng:[' . $atts[0] . '], data:"' . $atts[1] . '"}';
+                                        }
+                                    }
+                                }
+                                $result_names = implode(",",$resultstr);
+                                echo $result_names;
+                                ?>
+                            ],
+                            events:{
+                                mouseover: function(marker, event, context){
+                                    var map = jQuery(this).gmap3("get"),
+                                            infowindow = jQuery(this).gmap3({get:{name:"infowindow"}});
+                                    if (infowindow){
+                                        infowindow.open(map, marker);
+                                        infowindow.setContent(context.data);
+                                    } else {
+                                        jQuery(this).gmap3({
+                                            infowindow:{
+                                                anchor:marker,
+                                                options:{content: context.data}
+                                            }
+                                        });
+                                    }
+                                },
+                                mouseout: function(){
+                                    var infowindow = jQuery(this).gmap3({get:{name:"infowindow"}});
+                                    if (infowindow){
+                                        infowindow.close();
+                                    }
+                                }
+                            }
                         },
                         map: {
                             options: {
                                 zoom: <?php if ($zoom) {echo $zoom;}  else {echo '14';}  ?>,
                                 navigationControl: true,
+                                mapTypeControl: false,
                                 scrollwheel: false,
                                 streetViewControl: true
                             }

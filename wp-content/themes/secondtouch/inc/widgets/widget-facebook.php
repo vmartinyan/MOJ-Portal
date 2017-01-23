@@ -127,6 +127,12 @@ class Crum_Facebook_Widget extends WP_Widget {
 		} else {
 			$url = 'https://www.facebook.com/' . $instance['url'];
 		}
+		$widget_locale = get_locale();
+		if (strpos($widget_locale,'es') !== false){
+            if ($widget_locale !== 'es_ES'){
+                $widget_locale = 'es_LA';
+            }
+		}
 
 		$width = $instance['width'];
 
@@ -163,7 +169,6 @@ class Crum_Facebook_Widget extends WP_Widget {
 		} else {
 			$page_posts_show = 'false';
 		}
-
 		?>
 
 		<?php echo $args['before_widget'];
@@ -194,7 +199,7 @@ class Crum_Facebook_Widget extends WP_Widget {
 				if (d.getElementById(id)) return;
 				js = d.createElement(s);
 				js.id = id;
-				js.src = "//connect.facebook.net/<?php echo esc_html( get_locale() ) ?>/sdk.js#xfbml=1&version=v2.3";
+				js.src = "//connect.facebook.net/<?php echo esc_html( $widget_locale ) ?>/sdk.js#xfbml=1&version=v2.3";
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 

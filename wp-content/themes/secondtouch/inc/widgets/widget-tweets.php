@@ -189,7 +189,7 @@ class crum_latest_tweets extends WP_Widget
             print '<div class="tweet-list">';
             $fctr = '1';
             foreach ($tp_twitter_plugin_tweets as $tweet) {
-                print '<div class="tweet"><i class="soc_icon-twitter-3"></i>' . convert_links($tweet['text']) . '<div class="time">' . relative_time($tweet['created_at']) . '</div></div>';
+                print '<div class="tweet"><i class="soc_icon-twitter"></i>' . convert_links($tweet['text']) . '<div class="time">' . relative_time($tweet['created_at']) . '</div></div>';
                 if ($fctr == $instance['tweetstoshow']) {
                     break;
                 }

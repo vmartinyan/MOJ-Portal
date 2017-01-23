@@ -46,3 +46,38 @@ License URI:        http://www.gnu.org/licenses/gpl-2.0.html
     text-decoration:none;
     font-family: "Source Sans Pro", "Segoe UI Light", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
+
+.footer-menu a {
+	color: rgb(79, 85, 89); }
+	
+.footer-menu a:hover {
+	color: #2D6296;
+	text-decoration:underline;	}
+	
+#logo {
+    float: left;
+    padding: 23px 0 0;
+}
+
+#top-panel > div {
+    float: right;
+}
+
+.head-soc-icons span {
+	text-transform: capitalize;
+}
+.secondMenu a{
+	color: #787878;
+}
+.secondMenu a:hover{
+	text-decoration:none;
+}
+.secondMenu a span:before {
+	content: "\00a0";
+}
+
+@media only screen and (max-width: 1024px){
+#logo {
+    float: none;
+}
+}

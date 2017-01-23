@@ -12,7 +12,7 @@
     ">
         <div class="row">
             <div class="twitter-row">
-                <div class="icon"><i class="soc_icon-twitter-3"></i></div>
+                <div class="icon"><i class="soc_icon-twitter"></i></div>
 
                 <?php
                 $numTweets = $options["numb_lat_tw"]; // Number of tweets to display.

@@ -82,8 +82,8 @@ class Crumina_Metro_Nav_Menu extends Walker_Nav_Menu {
     }
 
 // add main/sub classes to li's and links
-	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-
+//	function start_el( &$output, $item, $depth = 0, $args = array()) {
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
         if ($this->item_id) {
             $slug_menu = $this->item_id;
         } else {
@@ -228,6 +228,6 @@ class Crumina_Metro_Nav_Menu extends Walker_Nav_Menu {
 
 
         // build html
-        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 }

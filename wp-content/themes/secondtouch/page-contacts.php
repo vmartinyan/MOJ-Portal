@@ -6,6 +6,8 @@ crum_header();
 $options = get_option('second-touch');
 get_template_part('templates/top', 'page');
 
+$api_key = isset( $options['map-api'] ) && ! empty( $options['map-api'] ) ? $options['map-api'] : '';
+
 ?>
 
 <section id="layout">
@@ -22,9 +24,9 @@ get_template_part('templates/top', 'page');
         $qr_code = get_post_meta($post->ID, '_contacts_page_qr', true);
 	    $custom_shortcode = get_post_meta($post->ID, '_contacts_page_custom_shortcode', true);
 
+        $language = substr( get_locale(), 0, 2 );
+        wp_enqueue_script( 'googleMaps', 'https://maps.googleapis.com/maps/api/js?key=' . $api_key . '&libraries=places&language=' . $language, null, null, true );
         ?>
-
-        <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
 
         <div class="row map-holder">
             <div id="map"></div>
@@ -50,7 +52,6 @@ get_template_part('templates/top', 'page');
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 jQuery("#map")<?php if ($options["cont_m_height"]) echo '.height("' . $options["cont_m_height"] . 'px")'; ?>.gmap3({
-
                     marker: {
                         values: [
 							<?php
@@ -127,26 +128,15 @@ get_template_part('templates/top', 'page');
                 <?php while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 <?php endwhile; ?>
-
-
-	            <?php
-	            $icon_show = get_post_meta( get_the_ID(), '_top_page_text' ,'true');
-
-	            if ($icon_show == 'Yes'){
-
-		            ?>
-		            <div class="in-content-social">
-			            <div class="soc-icons">
-
-				            <?php crum_social_networks(false); ?>
-
-			            </div>
-		            </div>
-		            <?php
-	            }else{
-		            echo '';
-	            } ?>
-
+                <?php
+                $icon_show = isset( $options['cont_p_social_icons'] ) ? $options['cont_p_social_icons'] : 1;
+                if ( $icon_show ) { ?>
+                    <div class="in-content-social">
+                        <div class="soc-icons">
+                            <?php crum_social_networks( false ); ?>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
 
@@ -175,7 +165,7 @@ get_template_part('templates/top', 'page');
                     echo __('You need enter email in options panel', 'crum');
                 } else  {
                     if ( isset( $_POST['submit'] ) ) {
-                        if (trim (strtolower($_POST['antispam_answer']))!== strtolower($antispam_answer)){
+                        if (trim (strtolower($_POST['antispam_answer']))!== strtolower($antispam_answer) && !empty($options["antispam_question"])){
                             $antispamError = apply_filters('reactor_antispam_error_message', '<small class="error">' . __('Please enter correct antispam answer.','reactor') . '</small>');
                             $errorClass = 'error';
                             $hasError = true;
@@ -202,8 +192,10 @@ get_template_part('templates/top', 'page');
                             <label for="letter_text"><?php _e('Message', 'crum'); ?></label>
                             <textarea id="letter_text" rows="5" name="letter_text" required="required"><?php if ( isset( $_POST['letter_text'] ) ) { if ( function_exists('stripslashes') ) { echo stripslashes( $_POST['letter_text'] ); } else { echo $_POST['letter_text']; } } ?></textarea>
 
-                            <label for="antispam_answer"><?php _e('Please answer antispam question', 'crum'); ?></label>
 
+
+                            <?php if (!empty($options["antispam_question"])){ ?>
+                        <label for="antispam_answer"><?php _e('Please answer antispam question', 'crum'); ?></label>
                             <div class="row">
                                 <div class="eight columns">
                                     <p class="anti-spam-question"><?php echo $options["antispam_question"]; ?></p>
@@ -216,6 +208,7 @@ get_template_part('templates/top', 'page');
                                     <?php }	?>
                                 </div>
                             </div>
+                                <?php } ?>
                             <button class="button flat" name="submit">
                                 <span class="icon"><img
                                         src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-right.gif"

@@ -13,13 +13,14 @@ get_template_part('templates/top','page'); ?>
             <section id="main-content" role="main" class="nine columns">
 
                 <?php get_template_part('templates/content', 'page'); ?>
-
-            </section>
-			<?php
-			if ($options['page_comments_display'] == '1'){
+				<div class="twelve columns"><?php
+				if ($options['page_comments_display'] == '1'){
 				comments_template();
-			}
-			?>
+				}
+				?>
+			    </div>
+            </section>
+		
             <?php get_template_part('templates/sidebar', 'right'); ?>
         </div>
 

@@ -11,13 +11,6 @@ Template Name: For page builder
 
         <?php get_template_part('templates/content', 'page'); ?>
 
-		<?php
-		if ($options['page_comments_display'] == '1'){
-
-			comments_template();
-		}
-		?>
-
 
 </section>
 <?php crum_footer();?>

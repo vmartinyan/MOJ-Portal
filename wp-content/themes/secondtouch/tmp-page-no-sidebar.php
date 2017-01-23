@@ -12,14 +12,14 @@ get_template_part('templates/top','page'); ?>
             <section id="main-content" role="main" class="twelve columns">
 
                 <?php get_template_part('templates/content', 'page'); ?>
-
+			<div class="twelve columns"><?php
+				if ($options['page_comments_display'] == '1'){
+				comments_template();
+				}
+				?>
+			</div>
             </section>
 
-		<?php
-		if ($options['page_comments_display'] == '1'){
-			comments_template();
-		}
-		?>
 
     </div>
 </section>

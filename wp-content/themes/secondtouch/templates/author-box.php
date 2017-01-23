@@ -24,15 +24,15 @@
 
         <div class="share-icons">
          
-            <?php if (get_the_author_meta('twitter')) {  echo '<a href="',the_author_meta('twitter'),'"><i class="soc_icon-twitter-3"></i></a>';  } ?>
+            <?php if (get_the_author_meta('twitter')) {  echo '<a href="',the_author_meta('twitter'),'"><i class="soc_icon-twitter"></i></a>';  } ?>
             <?php if (get_the_author_meta('cr_facebook')) {  echo '<a href="',the_author_meta('cr_facebook'),'"><i class="soc_icon-facebook"></i></a>';  } ?>
-            <?php if (get_the_author_meta('googleplus')) {  echo '<a href="',the_author_meta('googleplus'),'"><i class="soc_icon-google__x2B_"></i></a>';  } ?>
+            <?php if (get_the_author_meta('googleplus')) {  echo '<a href="',the_author_meta('googleplus'),'"><i class="soc_icon-googleplus"></i></a>';  } ?>
             <?php if (get_the_author_meta('linkedin')) {  echo '<a  href="',the_author_meta('linkedin'),'"><i class="soc_icon-linkedin"></i></a>';  } ?>
             <?php if (get_the_author_meta('vimeo')) {  echo '<a  href="',the_author_meta('vimeo'),'"><i class="soc_icon-vimeo"></i></a>';  } ?>
             <?php if (get_the_author_meta('lastfm')) {  echo '<a  href="',the_author_meta('lastfm'),'"><i class="soc_icon-last_fm"></i></a>';  } ?>
             <?php if (get_the_author_meta('tumblr')) {  echo '<a  href="',the_author_meta('tumblr'),'"><i class="soc_icon-tumblr"></i></a>';  } ?>
             <?php if (get_the_author_meta('skype')) {  echo '<a  href="',the_author_meta('skype'),'"><i class="soc_icon-skype"></i></a>';  } ?>
-            <?php if (get_the_author_meta('vkontakte')) {  echo '<a  href="',the_author_meta('vkontakte'),'"><i class="soc_icon-rus-vk-01"></i></a>';  } ?>
+            <?php if (get_the_author_meta('vkontakte')) {  echo '<a  href="',the_author_meta('vkontakte'),'"><i class="soc_icon-vkontakte"></i></a>';  } ?>
             <?php if (get_the_author_meta('deviantart')) {  echo '<a  href="',the_author_meta('deviantart'),'"><i class="soc_icon-deviantart"></i></a>';  } ?>
             <?php if (get_the_author_meta('picasa')) {  echo '<a  href="',the_author_meta('picasa'),'"><i class="soc_icon-picasa"></i></a>';  } ?>
             <?php if (get_the_author_meta('wordpress')) {  echo '<a  href="',the_author_meta('wordpress'),'"><i class="soc_icon-wordpress"></i></a>';  } ?>

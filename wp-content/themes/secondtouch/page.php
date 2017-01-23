@@ -24,10 +24,12 @@ if(isset($custom_layout) && !empty($custom_layout)){
 
         get_template_part('templates/content', 'page');
 
-
-			if ($options['page_comments_display'] == '1'){
-				comments_template();
-			}
+?>
+		<div class="twelve columns"><?php
+		if ($options['page_comments_display'] == '1'){
+		comments_template();
+		}?>
+		</div><?php
 
 
         set_layout($layout, false, $custom);

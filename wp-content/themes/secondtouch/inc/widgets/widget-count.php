@@ -36,7 +36,7 @@ class Counter_Mail_Subscribe extends WP_Widget {
         <?php if( $twitter_id ):
         $twitter = tie_followers_count(); ?>
         <a href="<?php echo $twitter['page_url'] ?>"<?php echo $new_window ?> class="tw">
-            <i class="soc_icon-twitter-3"></i>
+            <i class="soc_icon-twitter"></i>
 
             <span class="number"><?php echo @number_format($twitter['followers_count']) ?></span> <br>
             <span class="text"><?php _e('followers' , 'crum' ) ?></span>

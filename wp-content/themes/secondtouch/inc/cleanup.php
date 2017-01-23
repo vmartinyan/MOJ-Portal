@@ -264,24 +264,6 @@ function crum_excerpt_more($more)
 
 add_filter('excerpt_more', 'crum_excerpt_more');
 
-/**
- * Allow more tags in TinyMCE including <iframe> and <script>
- */
-function crum_change_mce_options($options)
-{
-    $ext = 'pre[id|name|class|style],iframe[align|longdesc|name|width|height|frameborder|scrolling|marginheight|marginwidth|src],script[charset|defer|language|src|type]';
-
-    if (isset($initArray['extended_valid_elements'])) {
-        $options['extended_valid_elements'] .= ',' . $ext;
-    } else {
-        $options['extended_valid_elements'] = $ext;
-    }
-
-    return $options;
-}
-
-add_filter('tiny_mce_before_init', 'crum_change_mce_options');
-
 
 /**
  * Fix for get_search_query() returning +'s between search terms

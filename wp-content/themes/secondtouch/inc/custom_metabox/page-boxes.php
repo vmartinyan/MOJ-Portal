@@ -239,55 +239,9 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 		        'type' => 'text',
 		        'std' => '',
 	        ),
+
         ),
     );
-
-	$meta_boxes[] = array(
-		'id'         => 'socicon_vkl',
-		'title'      => __('Social icons','crum'),
-		'pages'      => array( 'page', ), // Post type
-
-		'context'    => 'normal',
-		'priority'   => 'high',
-		'show_names' => true, // Show field names on the left
-		'fields'     => array(
-			array(
-				'name' =>  __('Show social icons ?','crum'),
-				'desc' => __('Yes or No','crum'),
-				'id' =>   '_top_page_text',
-				'type'	=> 'radio',
-				'options' => array(
-					'Yes' => 'Yes',
-					'No'  => 'No',
-				)
-
-			),
-		),
-	);
-
-	$meta_boxes[] = array(
-		'id'         => 'captcha_contact_page',
-		'title'      => __('Contact form','crum'),
-		'pages'      => array( 'page', ), // Post type
-
-		'context'    => 'normal',
-		'priority'   => 'high',
-		'show_names' => true, // Show field names on the left
-		'fields'     => array(
-			array(
-				'name' =>  __('Show captcha in contact form?','crum'),
-				'desc' => __('Yes or No','crum'),
-				'id' =>   '_captcha_contact_form',
-				'type'	=> 'radio',
-				'options' => array(
-					'Yes' => 'Yes',
-					'No'  => 'No',
-				)
-			),
-		),
-	);
-
-	// Add other metaboxes as needed
 
 	return $meta_boxes;
 }

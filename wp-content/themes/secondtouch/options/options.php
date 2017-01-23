@@ -1464,16 +1464,23 @@ function setup_framework_options(){
 				'validate' => 'html', //see http://codex.wordpress.org/Function_Reference/wp_kses_post
 				'default' =>'4'
 			),
-			array(
-				'id' => 'add_form_text',
-				'type' => 'textarea',
-				'title' => __('Additional form description', 'crum'),
-				'desc' => __('Will be displayed under contact form', 'crum'),
-				'validate' => 'html', //see http://codex.wordpress.org/Function_Reference/wp_kses_post
-				'default' =>''
-			),
+                array(
+                        'id'       => 'add_form_text',
+                        'type'     => 'textarea',
+                        'title'    => __( 'Additional form description', 'crum' ),
+                        'desc'     => __( 'Will be displayed under contact form', 'crum' ),
+                        'validate' => 'html', //see http://codex.wordpress.org/Function_Reference/wp_kses_post
+                        'default'  => ''
+                ),
+                array(
+                        'title'    => __( 'Show social icons ?', 'crum' ),
+                        'id'      => 'cont_p_social_icons',
+                        'type'    => 'button_set',
+                        'options' => array( '1' => __( 'On', 'crum' ), '0' => __( 'Off', 'crum' ) ),
+                        'default' => '1'// 1 = on | 0 = off
+                ),
 
-		),
+        ),
 	);
 
 	$sections[] = array(

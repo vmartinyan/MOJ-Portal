@@ -3,7 +3,7 @@
 Plugin Name: Metro Visual Builder
 Plugin URI: http://www.crumina.net/
 Description: Content builder with drag and drop function
-Version: 1.9.5
+Version: 1.9.6
 Author: Crumina
 Author URI: http://www.crumina.net/
 */

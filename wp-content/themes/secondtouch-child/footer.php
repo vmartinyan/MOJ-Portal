@@ -46,7 +46,7 @@
 					<img src="<?php echo site_url(); ?>/wp-content/uploads/2013/02/moj-logo-hf.png"/>
 				</a>
 			</div>
-            <?php wp_nav_menu(array('theme_location' => 'footer_menu','depth'=> 1, 'container' => 'nav', 'fallback_cb' => 'false', 'menu_class' => 'footer-menu', 'walker' => new crum_clean_walker())); ?>
+            <!--<?php wp_nav_menu(array('theme_location' => 'footer_menu','depth'=> 1, 'container' => 'nav', 'fallback_cb' => 'false', 'menu_class' => 'footer-menu', 'walker' => new crum_clean_walker())); ?>-->
 
         </div>
     </div>

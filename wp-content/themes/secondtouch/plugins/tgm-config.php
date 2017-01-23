@@ -22,7 +22,7 @@
 				'slug'     				=> 'menu-customizer', // The plugin slug (typically the folder name)
 				'source'   				=> 'http://up.crumina.net/plugins/menu-customizer.zip', // The plugin source
 				'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
-				'version' 				=> '1.5.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
+				'version' 				=> '1.5.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -42,7 +42,7 @@
 				'slug'     				=> 'metro-visual-builder', // The plugin slug (typically the folder name)
 				'source'   				=> 'http://up.crumina.net/plugins/metro-visual-builder.zip', // The plugin source
 				'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
-				'version' 				=> '1.9.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
+				'version' 				=> '1.9.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -63,7 +63,7 @@
 				'slug'     				=> 'LayerSlider', // The plugin slug (typically the folder name)
 				'source'   				=> 'http://up.crumina.net/plugins/layersliderwp.zip', // The plugin source
 				'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-				'version' 				=> '5.6.10', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
+				'version' 				=> '6.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
