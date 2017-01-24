@@ -76,6 +76,22 @@ License URI:        http://www.gnu.org/licenses/gpl-2.0.html
 	content: "\00a0";
 }
 
+.lang-sel {
+    cursor:pointer;
+}
+
+.lang-sel ul {
+    top: 5px;
+}
+
+.lang-sel img {
+    margin: 0px 5px 0 7px;
+}
+
+.lang-sel img.gb-img {
+    margin-top:2px;
+}
+
 @media only screen and (max-width: 1024px){
 #logo {
     float: none;

@@ -12,4 +12,3 @@ function crum_child_css() {
 
 add_action( 'wp_enqueue_scripts', 'crum_child_css', 99 );
 
-

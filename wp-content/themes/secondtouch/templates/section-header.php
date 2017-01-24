@@ -46,9 +46,9 @@ if(isset($options['mobile_menu_show']) && ('1' === $options['mobile_menu_show'])
 
                     <div id="logo">
 
-                        <a href="<?php echo home_url(); ?>/"><img src="<?php echo $options['custom_logo_image']['url']; ?>" alt="<?php bloginfo('name'); ?>"></a>
-
-                        <a href="<?php echo home_url(); ?>/"><img class="for-panel" src="<?php echo $options['custom_logo_image']['url']; ?>" alt="<?php bloginfo('name'); ?>"></a>
+                        <!--<a href="<?php echo home_url(); ?>/"><img src="<?php echo $options['custom_logo_image']['url']; ?>" alt="<?php bloginfo('name'); ?>"></a>-->
+						<a href="<?php echo home_url(); ?>/"><img src="<?php echo site_url(); ?>/wp-content/uploads/2013/02/<?php echo __('[:hy]moj-logo-ex-big.png[:en]moj-logo-ex-big-en.png[:ru]moj-logo-ex-big-ru.png');?>" alt="<?php bloginfo('name'); ?>"></a>
+                        <a href="<?php echo home_url(); ?>/"><img class="for-panel" src="<?php echo site_url(); ?>/wp-content/uploads/2013/02/<?php echo __('[:hy]moj-logo-ex-big.png[:en]moj-logo-ex-big-en.png[:ru]moj-logo-ex-big-ru.png');?>" alt="<?php bloginfo('name'); ?>"></a>
 
                     </div>
 
