@@ -207,3 +207,85 @@
 	// AMD requirement
 	return $scrollTo;
 });
+
+
+
+jQuery(".ult_tabmenu li").bind('click', function () {
+    var liIndex = jQuery('.ult_tabmenu li').index(this);
+    return liIndex;
+});
+alert(liIndex);
+jQuery(".faq-tab .ult_a").click(function () {
+    alert(liIndex);
+    var innerP = jQuery(".ult_tab_min_contain .ult_tabitemname:nth-child(" + liIndex + ") .faq-info .vc_column-inner");
+    innerP.height(innerP.parent().next(".vc_col-sm-9").height());
+});
+var divContenet = jQuery(".faq-tab .ult_tabcontent");
+jQuery(".lvca-panel-title").toggle(function () {
+    event.preventDefault();
+    if (!jQuery(this).next(".lvca-panel-content").is(':visible')) {
+        var addHeight = divContenet.height() + jQuery(this).next(".lvca-panel-content").innerHeight();
+        divContenet.animate({ height: addHeight }, 300);
+        jQuery(".faq-info p").animate({ height: addHeight }, 300);
+    }
+}, function () {
+    event.preventDefault();
+    if (jQuery(this).next(".lvca-panel-content").is(':visible')) {
+        var remHeight = divContenet.height() - jQuery(this).next(".lvca-panel-content").innerHeight();
+        divContenet.animate({ height: remHeight }, 300);
+        jQuery(".faq-info p").animate({ height: remHeight }, 300);
+    }
+});
+jQuery(".ult_tabmenu li").click(function () {
+    alert(liIndex);
+    var innerP = jQuery(".ult_tab_min_contain .ult_tabitemname:nth-child(" + liIndex + ") .faq-info .vc_column-inner");
+    innerP.height(innerP.parent().next(".vc_col-sm-9").height());
+});
+
+
+
+var innerQ = jQuery(".ult_tab_min_contain .ult_tabitemname .faq-info .vc_column-inner");
+innerQ.height(innerQ.closest(".faq-info").next(".vc_col-sm-9").height());
+jQuery(".ult_tabmenu li").bind('click', function () {
+    var liIndex = jQuery('.ult_tabmenu li').index(this);
+    var liChild = liIndex + 1;
+    var innerP = jQuery(".ult_tab_min_contain .ult_tabitemname:nth-child(" + liChild + ") .faq-info .vc_column-inner");
+    innerP.height(innerP.closest(".faq-info").next(".vc_col-sm-9").height());
+    return liChild;
+});
+
+var divContenet = jQuery(".faq-tab .ult_tabcontent");
+jQuery(".lvca-panel-title").toggle(function () {
+    event.preventDefault();
+    if (!jQuery(this).next(".lvca-panel-content").is(':visible')) {
+        var addHeight = divContenet.height() + jQuery(this).next(".lvca-panel-content").innerHeight();
+        divContenet.animate({ height: addHeight }, 300);
+        //jQuery(".ult_tab_min_contain .ult_tabitemname:nth-child(" + liChild + ") .faq-info .vc_column-inner").animate({ height: addHeight }, 300);
+    }
+}, function () {
+    event.preventDefault();
+    if (jQuery(this).next(".lvca-panel-content").is(':visible')) {
+        var remHeight = divContenet.height() - jQuery(this).next(".lvca-panel-content").innerHeight();
+        divContenet.animate({ height: remHeight }, 300);
+        //jQuery(".ult_tab_min_contain .ult_tabitemname:nth-child(" + liChild + ") .faq-info .vc_column-inner").animate({ height: remHeight }, 300);
+    }
+});
+
+
+var divContenet = jQuery(".faq-tab .ult_tabcontent");
+jQuery(".lvca-panel-title").toggle(function () {
+    event.preventDefault();
+    if (!jQuery(this).next(".lvca-panel-content").is(':visible')) {
+        var addHeight = divContenet.height() + jQuery(this).next(".lvca-panel-content").innerHeight();
+        divContenet.animate({ height: addHeight }, 300);
+        jQuery(".ult_tab_min_contain .ult_tabitemname .faq-info .vc_column-inner").animate({ height: addHeight }, 300);
+    }
+}, function () {
+    event.preventDefault();
+    if (jQuery(this).next(".lvca-panel-content").is(':visible')) {
+        var remHeight = divContenet.height() - jQuery(this).next(".lvca-panel-content").innerHeight();
+        divContenet.animate({ height: remHeight }, 300);
+        jQuery(".ult_tab_min_contain .ult_tabitemname .faq-info .vc_column-inner").animate({ height: remHeight }, 300);
+    }
+});
+

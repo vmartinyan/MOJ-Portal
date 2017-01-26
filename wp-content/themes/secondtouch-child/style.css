@@ -92,6 +92,12 @@ License URI:        http://www.gnu.org/licenses/gpl-2.0.html
     margin-top:2px;
 }
 
+.lvca-accordion.lvca-style3 .lvca-panel .lvca-panel-title {
+    font-size: 14px;
+    font-family: "Source Sans Pro";
+    text-transform:none;
+}
+
 @media only screen and (max-width: 1024px){
 #logo {
     float: none;
