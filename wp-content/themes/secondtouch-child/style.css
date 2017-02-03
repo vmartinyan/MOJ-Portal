@@ -102,4 +102,21 @@ License URI:        http://www.gnu.org/licenses/gpl-2.0.html
 #logo {
     float: none;
 }
+
+.panel-left a{
+    font-size: 10px;
+}
+}
+
+a[rel~="wp-video-lightbox"] {
+    height: 28px;
+    display: block;
+    margin:0 10px;
+}
+
+.mejs-container {
+        width: 350px !important;
+    height: 28px !important;
+    float: left !important;
+    margin-right:10px;
 }

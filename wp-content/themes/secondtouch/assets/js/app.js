@@ -764,6 +764,4 @@ jQuery(window).load(function () {
     var maxHeight = Math.max.apply(Math,  jQuery(".products .product").map(function() { return jQuery(this).height(); }));
 
     jQuery(".products .product").css({"height" : maxHeight });
-
-
 });

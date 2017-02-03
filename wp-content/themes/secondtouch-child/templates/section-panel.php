@@ -59,8 +59,9 @@ if (isset($options['top_login_block']) && $options['top_login_block'] == '0'){
 
             </div>
             <!--<div class="top-info"><?php echo $options["top_adress_field"]; ?></div>-->
-			
-			
+			<div class="panel-left" style="float:left; height:45px;">
+			<a href="moj.am" style="color:#2D6296" target="_blank"><img src="<?php echo site_url(); ?>/wp-content/uploads/2013/02/armenia-gerb.png" width="30"/> <span style="float: right;padding: 7px;"><?php echo __('[:hy]ՀՀ ԱՐԴԱՐԱԴԱՏՈւԹՅԱՆ ՆԱԽԱՐԱՐՈւԹՅՈւՆ[:en]MINISTRY OF JUSTICE RA[:ru]МИНИСТЕРСТВО ЮСТИЦИИ РА');?></span></a>
+			</div>
 			<div class="head-soc-icons"><!--<span><?php _e('Follow us:', 'crum'); ?></span>-->
 				<div class="secondMenu">
 					<?php wp_nav_menu(array('theme_location' => 'footer_menu', 'container' => 'nav', 'fallback_cb' => 'false', 'menu_class' => 'footer-menu', 'walker' => new crum_clean_walker())); ?>

@@ -59,7 +59,7 @@ if ( isset( $options['stan_header_show_hide'] ) && ! ( $options['stan_header_sho
 						} ?>
 					</h1>
 					<?php if ( is_single() ) { ?>
-						<?php echo '<div class="page-title">'; ?>
+						<?php echo '<h2 class="page-title">'; ?>
 					<?php } else { ?>
 						<?php echo '<h2 class="page-title">'; ?>
 					<?php } ?>
@@ -110,18 +110,18 @@ if ( isset( $options['stan_header_show_hide'] ) && ! ( $options['stan_header_sho
 						the_title();
 					} elseif ( is_single() && function_exists( 'tribe_is_event' ) && ! ( tribe_is_event() ) ) {
 						global $post;
-						$category = get_the_category( $post->ID );
+						$category = single_post_title( );
 						echo $category[0]->name; // first category name
 					} elseif ( is_single() ) {
 						global $post;
-						$category = get_the_category( $post->ID );
+						$category = single_post_title(  );
 						echo $category[0]->name; // first category name
 					} else {
 						the_title();
 					}
 					?>
 					<?php if ( is_single() ) { ?>
-						<?php echo '</div>'; ?>
+						<?php echo '</h2>'; ?>
 					<?php } else { ?>
 						<?php echo '</h2>'; ?>
 					<?php } ?>
@@ -144,7 +144,7 @@ if ( isset( $options['stan_header_show_hide'] ) && ! ( $options['stan_header_sho
 			<div class="twelve columns">
 
 				<?php if ( is_single() ) { ?>
-					<?php echo '<div class="page-title">'; ?>
+					<?php echo '<h2 class="page-title">'; ?>
 				<?php } else { ?>
 					<?php echo '<h1 class="page-title">'; ?>
 				<?php } ?>
@@ -195,18 +195,18 @@ if ( isset( $options['stan_header_show_hide'] ) && ! ( $options['stan_header_sho
 					the_title();
 				} elseif ( is_single() && function_exists( 'tribe_is_event' ) && ! ( tribe_is_event() ) ) {
 					global $post;
-					$category = get_the_category( $post->ID );
+					$category = single_post_title( );
 					echo $category[0]->name; // first category name
 				} elseif ( is_single() ) {
 					global $post;
-					$category = get_the_category( $post->ID );
+					$category = single_post_title( );
 					echo $category[0]->name; // first category name
 				} else {
 					the_title();
 				}
 				?>
 				<?php if ( is_single() ) { ?>
-					<?php echo '</div>'; ?>
+					<?php echo '</h2>'; ?>
 				<?php } else { ?>
 					<?php echo '</h1>'; ?>
 				<?php } ?>
