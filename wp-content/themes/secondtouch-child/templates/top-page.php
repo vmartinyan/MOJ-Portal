@@ -108,7 +108,12 @@ if ( isset( $options['stan_header_show_hide'] ) && ! ( $options['stan_header_sho
 						echo 'Upcoming Events';
 					} elseif ( function_exists( 'tribe_is_event' ) && tribe_is_event() ) {
 						the_title();
-					} elseif ( is_single() && function_exists( 'tribe_is_event' ) && ! ( tribe_is_event() ) ) {
+					} 
+                    elseif ( get_post_type( get_the_ID() ) == 'ufaq' ) {
+                    echo ("");
+}
+
+elseif ( is_single() && function_exists( 'tribe_is_event' ) && ! ( tribe_is_event() ) ) {
 						global $post;
 						$category = single_post_title( );
 						echo $category[0]->name; // first category name
@@ -121,7 +126,7 @@ if ( isset( $options['stan_header_show_hide'] ) && ! ( $options['stan_header_sho
 					}
 					?>
 					<?php if ( is_single() ) { ?>
-						<?php echo '</h2>'; ?>
+					    <?php echo '</h2>'; ?>
 					<?php } else { ?>
 						<?php echo '</h2>'; ?>
 					<?php } ?>

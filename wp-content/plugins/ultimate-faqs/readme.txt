@@ -247,6 +247,9 @@ Video 3 - FAQs Ordering
 13. View of FAQ custom fields in the admin
 
 == Changelog ==
+= 1.5.19 =
+- Minor admin area update
+
 = 1.5.18 =
 - Removed a number of notices
 

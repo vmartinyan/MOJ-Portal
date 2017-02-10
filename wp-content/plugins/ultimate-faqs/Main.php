@@ -7,7 +7,7 @@ Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: EWD_UFAQ
-Version: 1.5.18
+Version: 1.5.19
 */
 
 global $ewd_ufaq_message;
@@ -219,7 +219,7 @@ function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Install_Flag") == "") {update_option("EWD_UFAQ_Update_Flag", "Yes");}
 	if (get_option("EWD_UFAQ_Install_Flag") == "") {update_option("EWD_UFAQ_Install_Flag", "Yes");}
 
-	if (get_option("EWD_UFAQ_Install_Version") == "") {update_option("EWD_UFAQ_Install_Version", 1.5);}
+	if (get_option("EWD_UFAQ_Install_Version") == "") {update_option("EWD_UFAQ_Install_Version", 1.6);}
 }
 
 $UFAQ_Full_Version = get_option("EWD_UFAQ_Full_Version");

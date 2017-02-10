@@ -120,3 +120,19 @@ a[rel~="wp-video-lightbox"] {
     float: left !important;
     margin-right:10px;
 }
+
+#faqGrid .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-entry-text-wrap {
+    text-align: right;
+    max-width: 100%;
+    margin: 20px 20px 0;
+}
+
+.wpcf7-form div.vc_col-sm-6,
+.wpcf7-form div.vc_col-sm-12 {
+    padding:5px;
+    margin: 0;
+}
+
+.ufaq-faq-title-text h4 {
+	line-height: 150%;
+}

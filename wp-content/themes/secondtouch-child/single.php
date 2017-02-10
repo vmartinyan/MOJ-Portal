@@ -27,9 +27,16 @@ get_template_part('templates/top', 'page'); ?>
                 <div class="ovh">
 					<!--<?php if(is_single()){ ?>
                     <h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php }else{?>
+					<?php }
+                    else{?>
 					<h2 class="entry-title"><?php the_title(); ?></h2>
 					<?php }?>-->
+                    <?php if( get_post_type( get_the_ID() ) == 'ufaq' ){ ?>
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+					<?php }
+                    else{?>
+					
+					<?php }?>
                     <?php
                     if ($options['thumb_inner_disp'] == '1' && !(has_post_format('video')) && !(has_post_format('gallery')) && !(has_post_format('audio'))) {
                         if (has_post_thumbnail()) {
