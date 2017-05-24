@@ -400,22 +400,31 @@ function generate_property_fields( $key, $std, $name, $type, $saved_values, $sel
                 $test = ( $std["style"] == "border-top" || $std["style"] == "border-right" || $std["style"] == "border-bottom" || $std["style"] == "border-left") ? '-width' : '' ;
                 $saved_one = ( array_key_exists( $name . "_". $std["style"].$test.$selector_type, $saved_values)) ? $saved_values [ $name . "_". $std["style"].$test.$selector_type ] : "";
                 switch ($type){
-                    case "width" : $temp .= '<span class="icon"><i class="fa fa-arrows-h" aria-hidden="true"></i></span>'; break;
-                    case "height" : $temp .= '<span class="icon"><i class="fa fa-arrows-v" aria-hidden="true"></i></span>'; break;
+                    case "width" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-arrows-h" aria-hidden="true"></i></span>'; break;
+                    case "height" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-arrows-v" aria-hidden="true"></i></span>'; break;
                     case "border" :
                     case "margin" :
-                    case "padding": $temp .= '<span class="icon"><i class="fa fa-long-arrow-'.$arrows[$indexer++].'" aria-hidden="true"></i></span>'; break;
-                    case "font" : $temp .= '<span class="icon"><i class="fa fa-'.$fonts[$std["style"]].'" aria-hidden="true"></i></span>';break;
+                    case "padding": $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-long-arrow-'.$arrows[$indexer++].'" aria-hidden="true"></i></span>'; break;
+                    case "font" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-'.$fonts[$std["style"]].'" aria-hidden="true"></i></span>';break;
                 }
-                $temp .= "<input type='number' min='0' max='1000' id='". $name . "_". $std["style"].$test.$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"].$test.$selector_type."]' value='". $saved_one ."' />";
+                $min_val = ("margin" == $type) ? '-1000' : '0';
+                $temp .= "<input type='number' min='".$min_val."' max='1000' id='". $name . "_". $std["style"].$test.$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"].$test.$selector_type."]' value='". $saved_one ."' />";
                 
                 $temp .= "<select id='". $name . "_". $std["style"] .$test . "_unit".$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"] .$test ."_unit".$selector_type."]'>";
+
                 foreach( $std["unit"] as $unit_val ) {
                     $saved_one_unit =  ( array_key_exists( $name . "_". $std["style"]. "_unit".$selector_type, $saved_values) ) ? $saved_values[ $name . "_". $std["style"]. "_unit".$selector_type ] : "";
                     $temp .= "<option ". selected( $saved_one_unit , $unit_val, false ) . ">". $unit_val ."</option>";
                 }
                 $temp .= "</select>";
-                
+                switch ($type){
+                    case "width" : 
+                    case "height" :
+                    case "border" :
+                    case "margin" :
+                    case "padding": 
+                    case "font" : $temp .= '</span>';break;
+                }
             }
             $temp .= "</label></li>";
             return $temp;

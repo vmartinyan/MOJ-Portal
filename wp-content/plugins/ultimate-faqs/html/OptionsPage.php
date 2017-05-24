@@ -48,6 +48,7 @@
 	$Search_Label = get_option("EWD_UFAQ_Search_Label");
 	$Permalink_Label = get_option("EWD_UFAQ_Permalink_Label");
 	$Back_To_Top_Label = get_option("EWD_UFAQ_Back_To_Top_Label");
+	$WooCommerce_Tab_Label = get_option("EWD_UFAQ_WooCommerce_Tab_Label");
 
 	$Thank_You_Submit_Label = get_option("EWD_UFAQ_Thank_You_Submit_Label");
 	$Submit_Question_Label = get_option("EWD_UFAQ_Submit_Question_Label");
@@ -63,8 +64,10 @@
 
 	$UFAQ_Styling_Default_Bg_Color = get_option("EWD_UFAQ_Styling_Default_Bg_Color");
 	$UFAQ_Styling_Default_Font_Color = get_option("EWD_UFAQ_Styling_Default_Font_Color");
-	$UFAQ_Styling_Default_Border = get_option("EWD_UFAQ_Styling_Default_Border");
+	$UFAQ_Styling_Default_Border_Size = get_option("EWD_UFAQ_Styling_Default_Border_Size");
+	$UFAQ_Styling_Default_Border_Color = get_option("EWD_UFAQ_Styling_Default_Border_Color");
 	$UFAQ_Styling_Default_Border_Radius = get_option("EWD_UFAQ_Styling_Default_Border_Radius");
+	$UFAQ_Styling_Toggle_Symbol_Size = get_option("EWD_UFAQ_Styling_Toggle_Symbol_Size");
 	$UFAQ_Styling_Block_Bg_Color = get_option("EWD_UFAQ_Styling_Block_Bg_Color");
 	$UFAQ_Styling_Block_Font_Color = get_option("EWD_UFAQ_Styling_Block_Font_Color");
 	$UFAQ_Styling_List_Font = get_option("EWD_UFAQ_Styling_List_Font");
@@ -119,6 +122,15 @@
 <form method="post" action="admin.php?page=EWD-UFAQ-Options&DisplayPage=Options&Action=EWD_UFAQ_UpdateOptions">
 <div id='Basic' class='ufaq-option-set'>
 <h2 id='label-basic-options' class='ufaq-options-page-tab-title'>Basic Options</h2>
+<br />
+
+<div class="ewd-ufaq-shortcode-reminder">
+	<div class="ewd-ufaq-shortcode-reminder-message">REMINDER</div>
+	<div class="ewd-ufaq-shortcode-reminder-display">To display FAQs, place the <strong>[ultimate-faqs]</strong> shortcode on a page</div>
+</div>
+
+<br />
+<h3 id="general-options" class="ufaq-options-page-tab-title"><?php _e('General', 'EWD_UFAQ'); ?></h3>
 <table class="form-table">
 <tr>
 <th scope="row">Custom CSS</th>
@@ -130,134 +142,12 @@
 </td>
 </tr>
 <tr>
-<th scope="row">FAQ Toggle</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>FAQ Toggle</span></legend>
-	<label title='Yes'><input type='radio' name='faq_toggle' value='Yes' <?php if($FAQ_Toggle == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='faq_toggle' value='No' <?php if($FAQ_Toggle == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQs hide/open when they are clicked? </p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">FAQ Category Toggle</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>FAQ Category Toggle</span></legend>
-	<label title='Yes'><input type='radio' name='faq_category_toggle' value='Yes' <?php if($FAQ_Category_Toggle == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='faq_category_toggle' value='No' <?php if($FAQ_Category_Toggle == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQ categories hide/open when they are clicked, if FAQs are being grouped by category ("Group FAQs by Category" in the "Ordering" area)? </p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">FAQ Expand/Collapse All</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>FAQ Toggle</span></legend>
-	<label title='Yes'><input type='radio' name='expand_collapse_all' value='Yes' <?php if($Expand_Collapse_All == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='expand_collapse_all' value='No' <?php if($Expand_Collapse_All == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQs hide/open when they are clicked? </p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">FAQ Accordion</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>FAQ Accordion</span></legend>
-	<label title='Yes'><input type='radio' name='faq_accordion' value='Yes' <?php if($FAQ_Accordion == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='faq_accordion' value='No' <?php if($FAQ_Accordion == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQs accordion? (Only one FAQ is open at a time, requires FAQ Toggle)</p>
-	</fieldset>
-</td>
-</tr>
-
-<tr>
-<th scope="row">Hide Categories</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Hide Categories</span></legend>
-	<label title='Yes'><input type='radio' name='hide_categories' value='Yes' <?php if($Hide_Categories == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='hide_categories' value='No' <?php if($Hide_Categories == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the categories for each FAQ be hidden?</p>
-	</fieldset>
-</td>
-</tr>
-
-<tr>
-<th scope="row">Hide Tags</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Hide Tags</span></legend>
-	<label title='Yes'><input type='radio' name='hide_tags' value='Yes' <?php if($Hide_Tags == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='hide_tags' value='No' <?php if($Hide_Tags == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the tags for each FAQ be hidden?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
 <th scope="row">Scroll To Top</th>
 <td>
 	<fieldset><legend class="screen-reader-text"><span>Scroll To Top</span></legend>
 	<label title='Yes'><input type='radio' name='scroll_to_top' value='Yes' <?php if($Scroll_To_Top == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='scroll_to_top' value='No' <?php if($Scroll_To_Top == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
 	<p>Should the browser scroll to the top of the FAQ when it's opened?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Display All Answers</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Display All Answers</span></legend>
-	<label title='Yes'><input type='radio' name='display_all_answers' value='Yes' <?php if($Display_All_Answers == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='display_all_answers' value='No' <?php if($Display_All_Answers == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should all answers be displayed when the page loads? (Careful if FAQ Accordian is on)</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Display Post Author</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Display Post Author</span></legend>
-	<label title='Yes'><input type='radio' name='display_author' value='Yes' <?php if($Display_Author == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='display_author' value='No' <?php if($Display_Author == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the display name of the post's author be show beneath the FAQ title?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Display Post Date</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Display Post Date</span></legend>
-	<label title='Yes'><input type='radio' name='display_date' value='Yes' <?php if($Display_Date == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='display_date' value='No' <?php if($Display_Date == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the date the post was created be show beneath the FAQ title?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Display 'Back to Top'</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Display 'Back to Top'</span></legend>
-	<label title='Yes'><input type='radio' name='display_back_to_top' value='Yes' <?php if($Display_Back_To_Top == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='display_back_to_top' value='No' <?php if($Display_Back_To_Top == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should a link to return to the top of the page be added to each FAQ post?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Include Permalink Icon</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Include Permalink Icon</span></legend>
-	<label title='Yes'><input type='radio' name='include_permalink' value='Yes' <?php if($Include_Permalink == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='include_permalink' value='No' <?php if($Include_Permalink == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should an icon to link directly to each question be displayed?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Permalink Type</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Include Permalink Icon</span></legend>
-	<label title='SamePage'><input type='radio' name='permalink_type' value='SamePage' <?php if($Permalink_Type == "SamePage") {echo "checked='checked'";} ?> /> <span>Main FAQ Page</span></label><br />
-	<label title='IndividualPage'><input type='radio' name='permalink_type' value='IndividualPage' <?php if($Permalink_Type == "IndividualPage") {echo "checked='checked'";} ?> /> <span>Individual FAQ Page</span></label><br />
-	<p>Should the permalink icon link to the main FAQ page, or to the individual FAQ post?</p>
 	</fieldset>
 </td>
 </tr>
@@ -281,11 +171,146 @@
 	</fieldset>
 </td>
 </tr>
+<tr>
+<th scope="row">Include Permalink Icon</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Include Permalink Icon</span></legend>
+	<label title='Yes'><input type='radio' name='include_permalink' value='Yes' <?php if($Include_Permalink == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='include_permalink' value='No' <?php if($Include_Permalink == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should an icon to link directly to each question be displayed?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Permalink Type</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Include Permalink Icon</span></legend>
+	<label title='SamePage'><input type='radio' name='permalink_type' value='SamePage' <?php if($Permalink_Type == "SamePage") {echo "checked='checked'";} ?> /> <span>Main FAQ Page</span></label><br />
+	<label title='IndividualPage'><input type='radio' name='permalink_type' value='IndividualPage' <?php if($Permalink_Type == "IndividualPage") {echo "checked='checked'";} ?> /> <span>Individual FAQ Page</span></label><br />
+	<p>Should the permalink icon link to the main FAQ page, or to the individual FAQ post?</p>
+	</fieldset>
+</td>
+</tr>
+</table>
+
+<br />
+<h3 id="functionality-options" class="ufaq-options-page-tab-title"><?php _e('Functionality', 'EWD_UFAQ'); ?></h3>
+
+<table class="form-table">
+<tr>
+<th scope="row">FAQ Toggle</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Toggle</span></legend>
+	<label title='Yes'><input type='radio' name='faq_toggle' value='Yes' <?php if($FAQ_Toggle == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='faq_toggle' value='No' <?php if($FAQ_Toggle == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should the FAQs hide/open when they are clicked? </p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">FAQ Category Toggle</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Category Toggle</span></legend>
+	<label title='Yes'><input type='radio' name='faq_category_toggle' value='Yes' <?php if($FAQ_Category_Toggle == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='faq_category_toggle' value='No' <?php if($FAQ_Category_Toggle == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should the FAQ categories hide/open when they are clicked, if FAQs are being grouped by category ("Group FAQs by Category" in the "Ordering" area)? </p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">FAQ Expand/Collapse All</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Expand/Collapse All</span></legend>
+	<label title='Yes'><input type='radio' name='expand_collapse_all' value='Yes' <?php if($Expand_Collapse_All == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='expand_collapse_all' value='No' <?php if($Expand_Collapse_All == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should there be a control to open and close all FAQs simultaneously?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">FAQ Accordion</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Accordion</span></legend>
+	<label title='Yes'><input type='radio' name='faq_accordion' value='Yes' <?php if($FAQ_Accordion == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='faq_accordion' value='No' <?php if($FAQ_Accordion == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should the FAQs accordion? (Only one FAQ is open at a time, requires FAQ Toggle)</p>
+	</fieldset>
+</td>
+</tr>
+</table>
+
+<br />
+<h3 id="display-options" class="ufaq-options-page-tab-title"><?php _e('Display', 'EWD_UFAQ'); ?></h3>
+
+<table class="form-table">
+<tr>
+<th scope="row">Hide Categories</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Hide Categories</span></legend>
+	<label title='Yes'><input type='radio' name='hide_categories' value='Yes' <?php if($Hide_Categories == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='hide_categories' value='No' <?php if($Hide_Categories == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should the categories for each FAQ be hidden?</p>
+	</fieldset>
+</td>
+</tr>
+
+<tr>
+<th scope="row">Hide Tags</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Hide Tags</span></legend>
+	<label title='Yes'><input type='radio' name='hide_tags' value='Yes' <?php if($Hide_Tags == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='hide_tags' value='No' <?php if($Hide_Tags == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should the tags for each FAQ be hidden?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Display All Answers</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Display All Answers</span></legend>
+	<label title='Yes'><input type='radio' name='display_all_answers' value='Yes' <?php if($Display_All_Answers == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='display_all_answers' value='No' <?php if($Display_All_Answers == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should all answers be displayed when the page loads? (Careful if FAQ Accordian is on)</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Display Post Author</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Display Post Author</span></legend>
+	<label title='Yes'><input type='radio' name='display_author' value='Yes' <?php if($Display_Author == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='display_author' value='No' <?php if($Display_Author == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should the display name of the post's author be displayed beneath the FAQ title?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Display Post Date</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Display Post Date</span></legend>
+	<label title='Yes'><input type='radio' name='display_date' value='Yes' <?php if($Display_Date == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='display_date' value='No' <?php if($Display_Date == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should the date the post was created be displayed beneath the FAQ title?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Display 'Back to Top'</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Display 'Back to Top'</span></legend>
+	<label title='Yes'><input type='radio' name='display_back_to_top' value='Yes' <?php if($Display_Back_To_Top == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='display_back_to_top' value='No' <?php if($Display_Back_To_Top == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should a link to return to the top of the page be added to each FAQ post?</p>
+	</fieldset>
+</td>
+</tr>
 </table>
 </div>
 
 <div id='Premium' class='ufaq-option-set ufaq-hidden'>
 <h2 id='label-premium-options' class='ufaq-options-page-tab-title'>Premium Options</h2>
+<br />
+<h3 id="premium-display-options" class="ufaq-options-page-tab-title"><?php _e('Display', 'EWD_UFAQ'); ?></h3>
 <table class="form-table">
 <tr>
 <th scope="row">FAQ Display Style</th>
@@ -308,36 +333,6 @@
 	<label title='Square'><input type='radio' name='color_block_shape' value='Square' <?php if($Color_Block_Shape == "Square") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Square</span></label><br />
 	<label title='Circle'><input type='radio' name='color_block_shape' value='Circle' <?php if($Color_Block_Shape == "Circle") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Circle</span></label><br />
 	<p>If "Color Block" is selected for "FAQ Display Style", should the block be square or circle?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">FAQ Ratings</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>FAQ Ratings</span></legend>
-	<label title='Yes'><input type='radio' name='faq_ratings' value='Yes' <?php if($FAQ_Ratings == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='faq_ratings' value='No' <?php if($FAQ_Ratings == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
-	<p>Should visitors be able to up or down vote FAQs to let others know if they found them helpful?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">WooCommerce FAQs</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>WooCommerce FAQs</span></legend>
-	<label title='Yes'><input type='radio' name='woocommerce_faqs' value='Yes' <?php if($WooCommerce_FAQs == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='woocommerce_faqs' value='No' <?php if($WooCommerce_FAQs == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
-	<p>Should FAQs for a given product be displayed as an extra tab on the WooCommerce product page?<br/> For this to work correctly, an FAQ category needs to be created with the same name as a given WooCommerce product.</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Use WooCommerce Product Object</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Use WooCommerce Product Object</span></legend>
-	<label title='Yes'><input type='radio' name='use_product' value='Yes' <?php if($Use_Product == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='use_product' value='No' <?php if($Use_Product == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQ tab be set up using the WooCommerce product object, as in the WC documentation, or just using the ID of the page?</p>
 	</fieldset>
 </td>
 </tr>
@@ -368,6 +363,22 @@
 	</fieldset>
 </td>
 </tr>
+</table>
+
+<br />
+<h3 id="premium-general-options" class="ufaq-options-page-tab-title"><?php _e('General', 'EWD_UFAQ'); ?></h3>
+
+<table class="form-table">
+<tr>
+<th scope="row">FAQ Ratings</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Ratings</span></legend>
+	<label title='Yes'><input type='radio' name='faq_ratings' value='Yes' <?php if($FAQ_Ratings == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='faq_ratings' value='No' <?php if($FAQ_Ratings == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
+	<p>Should visitors be able to up or down vote FAQs to let others know if they found them helpful?</p>
+	</fieldset>
+</td>
+</tr>
 <tr>
 <th scope="row">Pretty Permalinks</th>
 <td>
@@ -379,32 +390,12 @@
 </td>
 </tr>
 <tr>
-<th scope="row">Allow Proposed Answer</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Allow Proposed Answer</span></legend>
-	<label title='Yes'><input type='radio' name='allow_proposed_answer' value='Yes' <?php if($Allow_Proposed_Answer == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='allow_proposed_answer' value='No' <?php if($Allow_Proposed_Answer == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
-	<p>When using the user-submitted question shortcode, should users be able to propose an answer to the question they're submitting?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
-<th scope="row">Admin Question Notification</th>
-<td>
-	<fieldset><legend class="screen-reader-text"><span>Admin Question Notification</span></legend>
-	<label title='Yes'><input type='radio' name='admin_question_notification' value='Yes' <?php if($Admin_Question_Notification == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
-	<label title='No'><input type='radio' name='admin_question_notification' value='No' <?php if($Admin_Question_Notification == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should an email be sent to the site administrator when a question is submitted?</p>
-	</fieldset>
-</td>
-</tr>
-<tr>
 <th scope="row">FAQ Auto Complete Titles</th>
 <td>
 	<fieldset><legend class="screen-reader-text"><span>FAQ Auto Complete Titles</span></legend>
 	<label title='Yes'><input type='radio' name='faq_auto_complete_titles' value='Yes' <?php if($FAQ_Auto_Complete_Titles == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='faq_auto_complete_titles' value='No' <?php if($FAQ_Auto_Complete_Titles == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQ Titles auto complete? </p>
+	<p>Should the FAQ Titles auto complete when using the FAQ search shortcode?</p>
 	</fieldset>
 </td>
 </tr>
@@ -429,6 +420,58 @@
         <label title='Email'><input type='checkbox' name='Socialmedia[]' value='Email' <?php if(in_array("Email", $Socialmedia)) {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Email</span></label><br />
         <div style='display:none;'><label title='Blank'><input type='checkbox' name='Socialmedia[]' value='Blank' checked='checked'/> <span>Blank</span></label></div>
     </fieldset>
+</td>
+</tr>
+</table>
+
+<br />
+<h3 id="premium-woocommerce-options" class="ufaq-options-page-tab-title"><?php _e('WooCommerce', 'EWD_UFAQ'); ?></h3>
+
+<table class="form-table">
+<tr>
+<th scope="row">WooCommerce FAQs</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>WooCommerce FAQs</span></legend>
+	<label title='Yes'><input type='radio' name='woocommerce_faqs' value='Yes' <?php if($WooCommerce_FAQs == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='woocommerce_faqs' value='No' <?php if($WooCommerce_FAQs == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
+	<p>Should FAQs for a given product be displayed as an extra tab on the WooCommerce product page?<br/> For this to work correctly, an FAQ category needs to be created with the same name as a given WooCommerce product.</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Use WooCommerce Product Object</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Use WooCommerce Product Object</span></legend>
+	<label title='Yes'><input type='radio' name='use_product' value='Yes' <?php if($Use_Product == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='use_product' value='No' <?php if($Use_Product == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
+	<p>Should the FAQ tab be set up using the WooCommerce product object, as in the WC documentation, or just using the ID of the page?</p>
+	</fieldset>
+</td>
+</tr>
+</table>
+
+<br />
+<h3 id="premium-submit-faq-options" class="ufaq-options-page-tab-title"><?php _e('Submit FAQ', 'EWD_UFAQ'); ?></h3>
+
+<table class="form-table">
+<tr>
+<th scope="row">Allow Proposed Answer</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Allow Proposed Answer</span></legend>
+	<label title='Yes'><input type='radio' name='allow_proposed_answer' value='Yes' <?php if($Allow_Proposed_Answer == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='allow_proposed_answer' value='No' <?php if($Allow_Proposed_Answer == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
+	<p>When using the user-submitted question shortcode, should users be able to propose an answer to the question they're submitting?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Admin Question Notification</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Admin Question Notification</span></legend>
+	<label title='Yes'><input type='radio' name='admin_question_notification' value='Yes' <?php if($Admin_Question_Notification == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='admin_question_notification' value='No' <?php if($Admin_Question_Notification == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should an email be sent to the site administrator when a question is submitted?</p>
+	</fieldset>
 </td>
 </tr>
 </table>
@@ -687,6 +730,12 @@
 						<input type='text' name='back_to_top_label' value='<?php echo $Back_To_Top_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
+				<div class='ufaq-option ufaq-label-option'>
+					<?php _e("WooCommerce Tab Label", 'EWD_UFAQ')?>
+					<fieldset>
+						<input type='text' name='woocommerce_tab_label' value='<?php echo $WooCommerce_Tab_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
+					</fieldset>
+				</div>
 				</div>
 				</div>
 				<div class='ufaq-subsection'>
@@ -788,8 +837,12 @@
 		</div>
 	</div>
 	<div class='ufaq-subsection'>
-		<div class='ufaq-subsection-header'>Color Block Theme</div>
-			<div class='ufaq-subsection-content'>
+		<div class='ufaq-subsection-header'>Toggle Symbol Styling</div>
+		<div class='ufaq-subsection-content'>
+			<div class='ufaq-option ufaq-styling-option'>
+				<div class='ufaq-option-label'>Icon Size (e.g. 16px)</div>
+				<div class='ufaq-option-input'><input type='text' name='ufaq_styling_toggle_symbol_size' value='<?php echo $UFAQ_Styling_Toggle_Symbol_Size; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /></div>
+			</div>
 			<div class='ufaq-option ufaq-styling-option'>
 				<div class='ufaq-option-label'>Icon Background Color</div>
 				<div class='ufaq-color-option-input'><input type='text' class='ewd-ufaq-spectrum' name='ufaq_styling_default_bg_color' value='<?php echo $UFAQ_Styling_Default_Bg_Color; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /></div>
@@ -799,11 +852,15 @@
 				<div class='ufaq-option-input'><input type='text' class='ewd-ufaq-spectrum' name='ufaq_styling_default_font_color' value='<?php echo $UFAQ_Styling_Default_Font_Color; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /></div>
 			</div>
 			<div class='ufaq-option ufaq-styling-option'>
-				<div class='ufaq-option-label'>Icon Border Color</div>
-				<div class='ufaq-option-input'><input type='text' name='ufaq_styling_default_border' value='<?php echo $UFAQ_Styling_Default_Border_Color; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /></div>
+				<div class='ufaq-option-label'>Icon Border size (e.g. 1px)</div>
+				<div class='ufaq-option-input'><input type='text' name='ufaq_styling_default_border_size' value='<?php echo $UFAQ_Styling_Default_Border_Size; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /></div>
 			</div>
 			<div class='ufaq-option ufaq-styling-option'>
-				<div class='ufaq-option-label'>Icon Border Radius</div>
+				<div class='ufaq-option-label'>Icon Border Color</div>
+				<div class='ufaq-option-input'><input type='text' class='ewd-ufaq-spectrum' name='ufaq_styling_default_border_color' value='<?php echo $UFAQ_Styling_Default_Border_Color; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /></div>
+			</div>
+			<div class='ufaq-option ufaq-styling-option'>
+				<div class='ufaq-option-label'>Icon Border Radius (e.g. 3px)</div>
 				<div class='ufaq-option-input'><input type='text' name='ufaq_styling_default_border_radius' value='<?php echo $UFAQ_Styling_Default_Border_Radius; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /></div>
 			</div>
 		</div>

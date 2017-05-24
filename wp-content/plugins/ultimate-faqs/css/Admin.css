@@ -132,6 +132,8 @@ FLEXBOX STYLING
 .ufaq-option-set h3,
 .ufaq-styling-set h3 {
   padding-top:10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #eee;
 }
 .ufaq-options-table th {
   padding:15px 5px;
@@ -508,6 +510,10 @@ EXTRA
   text-decoration: underline;
 }
 
+.ewd-dashboard-box-value.ewd-font-22 {
+  font-size: 22px;
+}
+
 /*
 ==============================================
 Toggle Font
@@ -719,4 +725,209 @@ input[name=toggle_symbol] {
 }
 .ewd-ufaq-postbox-collapsible {
   overflow: hidden;
+}
+
+
+
+/***********************************************************
+WOOCOMMERCE PRODUCT FAQ AREA
+***********************************************************/
+.ewd-ufaq-explanation {
+	margin: 24px 2%;
+	font-size: 1.1em;
+}
+.ewd-ufaq-category-filter {
+	margin-bottom: 10px !important;
+}
+#ewd_ufaq_faqs.woocommerce_options_panel th {
+  padding: 15px 10px;
+}
+#ewd_ufaq_faqs.woocommerce_options_panel th:first-of-type {
+  width: 10%;
+}
+#ewd_ufaq_faqs.woocommerce_options_panel tr {
+  border-bottom: 1px solid #eee;
+}
+#ewd-ufaq-add-delete-faq-form-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+#ewd-ufaq-add-faq-form-div, #ewd-ufaq-delete-faq-form-div {
+  position: relative;
+  float: left;
+  width: 45%;
+  padding: 0 2%;
+}
+#ewd-ufaq-delete-faq-form-div {
+  margin-top: 31px;
+  border-left: 1px solid #eee;
+}
+@media screen and (max-width: 1200px) {
+  #ewd-ufaq-add-faq-form-div, #ewd-ufaq-delete-faq-form-div {
+    width: 96%;
+  }
+  #ewd-ufaq-delete-faq-form-div {
+    border-left: none;
+  }
+}
+.ewd-ufaq-delete-faq-button, .ewd-ufaq-add-faq-button {
+  clear: both;
+  position: relative;
+  margin: 12px 0 12px 10px;
+  padding: 5px 8px;
+  border: none;
+  background: #bbb;
+  color: #fff;
+  cursor: pointer;
+}
+.ewd-ufaq-delete-faq-button:hover, .ewd-ufaq-add-faq-button:hover {
+  background: #ccc;
+}
+
+
+/*************************************************
+SHORTCODE REMINDER IN BASIC AREA OF OPTIONS TAB
+*************************************************/
+.ewd-ufaq-shortcode-reminder {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 42px;
+  background: #fafafa;
+  margin: -12px 0 24px;
+}
+.ewd-ufaq-shortcode-reminder-message {
+  position: relative;
+  float: left;
+  width: 15%;
+  height: 18px;
+  padding: 12px 2.5%;
+  background: #f4f4f4;
+  text-align: center;
+  font-weight: bold;
+}
+.ewd-ufaq-shortcode-reminder-display {
+  position: relative;
+  float: left;
+  width: 75%;
+  height: 18px;
+  padding: 12px 2.5%;
+}
+@media screen and (max-width: 1140px) {
+  .ewd-ufaq-shortcode-reminder {
+    height: 60px;
+  }
+  .ewd-ufaq-shortcode-reminder-message {
+    height: 27px;
+    padding: 21px 2.5% 12px;
+  }
+  .ewd-ufaq-shortcode-reminder-display {
+    height: 36px;
+  }
+}
+
+
+/***********************************************************
+NEW ASK FOR REVIEW POPUP
+***********************************************************/
+#ewd-ufaq-review-ask-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  background: rgba(0,0,0,.825);
+  z-index: 1001;
+}
+.ewd-ufaq-review-ask-popup {
+  position: absolute;
+  top: 48px;
+  left: 25%;
+  width: 50%;
+  height: auto;
+  /*padding: 16px;*/
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+}
+@media screen and (max-width: 900px) {
+  .ewd-ufaq-review-ask-popup {
+    width: 90%;
+    left: 5%;
+  }
+}
+.ewd-ufaq-review-ask-popup p, .ewd-ufaq-review-ask-popup a {
+  font-size: 15px;
+}
+.ewd-ufaq-review-ask-popup p:first-of-type {
+  margin-top: 0;
+}
+.ewd-ufaq-review-ask-title {
+  position: relative;
+  float: left;
+  width: calc(100% - 32px);
+  padding: 16px;
+  background: #9D64BC;
+  color: #fff;
+  font-size: 20px;
+}
+.ewd-ufaq-review-ask-content {
+  position: relative;
+  float: left;
+  width: calc(100% - 74px);
+  margin: 16px 37px 16px 16px;
+  border-left: 5px solid #9d64bc;
+  padding-left: 16px;
+}
+.ewd-ufaq-review-ask-content-link {
+  background: #262262;
+  color: #fff;
+  position: relative;
+  float: left;
+  width: 160px;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+.ewd-ufaq-review-ask-content-link:hover {
+  background: #9D64BC;
+  color: #fff;
+}
+.ewd-ufaq-review-ask-footer-links {
+  position: relative;
+  float: left;
+  width: calc(100% - 74px);
+  margin: 18px 37px 12px;
+}
+.ewd-ufaq-hide-review-ask {
+  position: relative;
+  float: left;
+  width: 160px;
+  padding: 4px 0;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+#ewd-ufaq-hide-review-ask-week {
+  background: transparent;
+  border: 2px solid #c6ab55;
+  color: #c6ab55;
+  margin-right: 16px;
+}
+#ewd-ufaq-hide-review-ask-week:hover {
+  background: #c6ab55;
+  color: #fff;
+}
+#ewd-ufaq-hide-review-ask-never {
+  background: transparent;
+  border: 2px solid #c6ab55;
+  color: #c6ab55;
+}
+#ewd-ufaq-hide-review-ask-never:hover {
+  background: #c6ab55;
+  color: #fff;
 }

@@ -6,17 +6,12 @@
 	$Slug_Base = get_option("EWD_UFAQ_Slug_Base");
 
 	//start review box
-	if(get_option('EWD_UFAQ_Hide_Dash_Review_Ask')){
-		$hideReview = get_option('EWD_UFAQ_Hide_Dash_Review_Ask');
-	}
-	else {
-		add_option('EWD_UFAQ_Hide_Dash_Review_Ask', 'No');
-	}
-	$hideReviewBox = $_POST["hide_ufaq_review_box_hidden"];
-	if($hideReviewBox == 'Yes'){
-		update_option('EWD_UFAQ_Hide_Dash_Review_Ask', 'Yes');
-		header('Location: admin.php?page=EWD-UFAQ-Options');
-	}
+	if (isset($_POST['hide_ufaq_review_box_hidden'])) {update_option('EWD_UFAQ_Hide_Dash_Review_Ask', $_POST['hide_ufaq_review_box_hidden']);}
+	$hideReview = get_option('EWD_UFAQ_Hide_Dash_Review_Ask');
+	$Ask_Review_Date = get_option('EWD_UFAQ_Ask_Review_Date');
+	if ($Ask_Review_Date == "") {$Ask_Review_Date = time() - 3600*24;}
+
+	$Install_Time = get_option("EWD_UFAQ_Install_Time");
 	//end review box
 ?>
 
@@ -247,12 +242,12 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 </div>
 </div>
 
-<?php if($hideReview != 'Yes'){ ?>
+<?php if($hideReview != 'Yes' and $Ask_Review_Date < time()){ ?>
 <div id='ewd-ufaq-dashboard-leave-review' class='ewd-ufaq-leave-review postbox ewd-ufaq-postbox-collapsible'>
 	<h3 class='hndle ewd-ufaq-dashboard-h3'>Leave a Review <span></span></h3>
 	<div class='ewd-dashboard-content'>
 		<div class="ewd-dashboard-leave-review-text">
-			If you enjoy this plugin and have a minute, please consider leaving a 5-star review. Thank you!
+			If you enjoy this plugin and have a minute, please consider leaving a 5-star review. Thank you in advance!
 		</div>
 		<a href="https://wordpress.org/support/plugin/ultimate-faqs/reviews/" class="ewd-dashboard-leave-review-link" target="_blank">Leave a Review!</a>
 		<div class="clear"></div>
@@ -263,6 +258,23 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 	</form>
 </div>
 <div class="clear"></div>
+<?php } ?>
+
+<?php if ($Ask_Review_Date < time() and $Install_Time < time() - 3600*24*4) { ?>
+<div id='ewd-ufaq-review-ask-overlay'></div>
+<div class='ewd-ufaq-review-ask-popup'>
+	<div class='ewd-ufaq-review-ask-title'><?php _e('Thank You!', 'EWD_UFAQ'); ?></div>
+	<div class='ewd-ufaq-review-ask-content'>
+		<p><?php _e('We wanted to thank the users of our plugins for all of their great reviews recently.', 'EWD_UFAQ'); ?></p>
+		<p><?php _e('Your positive feedback and constructive suggestions on how to improve our plugins make coming in to work every day worth it for us.', 'EWD_UFAQ'); ?></p>
+		<p><strong><?php _e("Haven't had a chance to leave a review yet? You can do so at:", 'EWD_UFAQ'); ?></strong></p>
+		<a href='https://wordpress.org/support/plugin/ultimate-faqs/reviews/' target="_blank" class='ewd-ufaq-review-ask-content-link'>Leave a Review!</a>
+	</div>
+	<div class='ewd-ufaq-review-ask-footer-links'>
+		<div class='ewd-ufaq-hide-review-ask' id="ewd-ufaq-hide-review-ask-week" data-askreviewdelay='7'><?php _e('Ask me in a week', 'EWD_UFAQ'); ?></div>
+		<div class='ewd-ufaq-hide-review-ask' id="ewd-ufaq-hide-review-ask-never" data-askreviewdelay='2000'><?php _e('Never ask me again', 'EWD_UFAQ'); ?></div>
+	</div>
+</div>
 <?php } ?>
 
 <!-- END MIDDLE BOX -->

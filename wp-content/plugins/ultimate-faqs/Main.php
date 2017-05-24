@@ -2,19 +2,20 @@
 /*
 Plugin Name: FAQ
 Plugin URI: http://www.EtoileWebDesign.com/wordpress-plugins/
-Description: A plugin that lets you create FAQs (frequently asked questions), organize them, publicize them, etc.
+Description: FAQ plugin that lets you create FAQ, organize FAQ and publicize your FAQ in no time through your Wordpress admin panel.
 Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: EWD_UFAQ
-Version: 1.5.19
+Version: 1.5.30
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.5.11';
+$EWD_UFAQ_Version = '1.5.25';
+if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'EWD_UFAQ_CD_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -29,7 +30,7 @@ add_filter('upgrader_post_install', 'Set_EWD_UFAQ_Options');
 if ( is_admin() ){
 	add_action('widgets_init', 'Update_EWD_UFAQ_Content');
 	add_action('admin_notices', 'EWD_UFAQ_Error_Notices');
-	add_action('admin_init', 'Add_EWD_UFAQ_Scripts');
+	add_action('admin_enqueue_scripts', 'Add_EWD_UFAQ_Scripts', 10, 1);
 	add_action('admin_head', 'EWD_UFAQ_Admin_Options');
 }
 
@@ -107,8 +108,10 @@ function EWD_UFAQ_plugin_settings_link($links) {
 $plugin = plugin_basename(__FILE__);
 add_filter("plugin_action_links_$plugin", 'EWD_UFAQ_plugin_settings_link' );
 
-function Add_EWD_UFAQ_Scripts() {
-	if ((isset($_GET['post_type']) && $_GET['post_type'] == 'ufaq') or 
+function Add_EWD_UFAQ_Scripts($hook) {
+	global $post, $EWD_UFAQ_Version;
+
+	if ((isset($_GET['post_type']) && $_GET['post_type'] == 'ufaq') or
 		(isset($_GET['page']) && $_GET['page'] == 'EWD-UFAQ-Options')) {
 		$url_one = plugins_url("ultimate-faqs/js/sorttable.js");
 		$url_two = plugins_url("ultimate-faqs/js/Admin.js");
@@ -116,23 +119,31 @@ function Add_EWD_UFAQ_Scripts() {
 
 		wp_enqueue_script('jquery-ui-sortable');
 		wp_enqueue_script('sortable', $url_one, array('jquery'));
-		wp_enqueue_script('UFAQ Admin', $url_two, array('jquery'));
+		wp_enqueue_script('UFAQ Admin', $url_two, array('jquery'), $EWD_UFAQ_Version);
 		wp_enqueue_script('spectrum', $url_three, array('jquery'));
+	}
+
+	if ($hook == 'edit.php' or $hook == 'post-new.php' or $hook == 'post.php') {
+        if ($post->post_type == 'product') {
+			wp_enqueue_script('ewd-ufaq-wc-admin', plugins_url("js/ewd-ufaq-wc-admin.js", __FILE__, array('jquery')));
+		}
 	}
 }
 
 function EWD_UFAQ_Admin_Options() {
-	wp_enqueue_style( 'ewd-ufaq-admin', plugins_url("ultimate-faqs/css/Admin.css"));
+	global $EWD_UFAQ_Version;
+
+	wp_enqueue_style( 'ewd-ufaq-admin', plugins_url("ultimate-faqs/css/Admin.css"), array(), $EWD_UFAQ_Version);
 	wp_enqueue_style( 'ewd-ufaq-spectrum', plugins_url("ultimate-faqs/css/spectrum.css"));
 }
 
 add_action( 'wp_enqueue_scripts', 'Add_EWD_UFAQ_FrontEnd_Scripts' );
 function Add_EWD_UFAQ_FrontEnd_Scripts() {
 	wp_enqueue_script('ewd-ufaq-js', plugins_url( '/js/ewd-ufaq-js.js' , __FILE__ ), array( 'jquery' ));
-	
+
 	$Retrieving_Results = get_option("EWD_UFAQ_Retrieving_Results");
 	if ($Retrieving_Results == "") {$Retrieving_Results = __("Retrieving Results", 'EWD_UFAQ') . "...";}
-	
+
 	$ewd_ufaq_php_data = array(
 								'retrieving_results' => $Retrieving_Results
 	);
@@ -143,18 +154,20 @@ function Add_EWD_UFAQ_FrontEnd_Scripts() {
 	wp_enqueue_script("jquery-effects-core");
 	wp_enqueue_script('jquery-ui-autocomplete');
 
-	wp_enqueue_script("jquery-effects-blind");
-	wp_enqueue_script("jquery-effects-bounce");
-	wp_enqueue_script("jquery-effects-clip");
-	wp_enqueue_script("jquery-effects-drop");
-	wp_enqueue_script("jquery-effects-explode");
-	wp_enqueue_script("jquery-effects-fade");
-	wp_enqueue_script("jquery-effects-fold");
-	wp_enqueue_script("jquery-effects-highlight");
-	wp_enqueue_script("jquery-effects-pulsate");
+	$Reveal_Effect = get_option("EWD_UFAQ_Reveal_Effect");
+
+	if ($Reveal_Effect == "blind") {wp_enqueue_script("jquery-effects-blind");}
+	if ($Reveal_Effect == "bounce") {wp_enqueue_script("jquery-effects-bounce");}
+	if ($Reveal_Effect == "clip") {wp_enqueue_script("jquery-effects-clip");}
+	if ($Reveal_Effect == "drop") {wp_enqueue_script("jquery-effects-drop");}
+	if ($Reveal_Effect == "explode") {wp_enqueue_script("jquery-effects-explode");}
+	if ($Reveal_Effect == "fade") {wp_enqueue_script("jquery-effects-fade");}
+	if ($Reveal_Effect == "fold") {wp_enqueue_script("jquery-effects-fold");}
+	if ($Reveal_Effect == "highlight") {wp_enqueue_script("jquery-effects-highlight");}
+	if ($Reveal_Effect == "pulsate") {wp_enqueue_script("jquery-effects-pulsate");}
 	wp_enqueue_script("jquery-effects-scale");
-	wp_enqueue_script("jquery-effects-shake");
-	wp_enqueue_script("jquery-effects-slide");
+	if ($Reveal_Effect == "shake") {wp_enqueue_script("jquery-effects-shake");}
+	if ($Reveal_Effect == "slide") {wp_enqueue_script("jquery-effects-slide");}
 	wp_enqueue_script("jquery-effects-transfer");
 }
 
@@ -220,6 +233,7 @@ function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Install_Flag") == "") {update_option("EWD_UFAQ_Install_Flag", "Yes");}
 
 	if (get_option("EWD_UFAQ_Install_Version") == "") {update_option("EWD_UFAQ_Install_Version", 1.6);}
+	if (get_option("EWD_UFAQ_Install_Time") == "") {update_option("EWD_UFAQ_Install_Time", time());}
 }
 
 $UFAQ_Full_Version = get_option("EWD_UFAQ_Full_Version");
@@ -248,7 +262,7 @@ function EWD_UFAQ_Register_TinyMCE_Buttons( $buttons ) {
    array_push( $buttons, 'separator', 'UFAQ_Shortcodes' );
    return $buttons;
 }
- 
+
 function EWD_UFAQ_Register_TinyMCE_Javascript( $plugin_array ) {
    $plugin_array['UFAQ_Shortcodes'] = plugins_url( '/js/tinymce-plugin.js',__FILE__ );
 
@@ -268,7 +282,7 @@ function EWD_UFAQ_Output_TinyMCE_Vars() {
 function Run_UFAQ_Tutorial() {
 	update_option("UFAQ_Run_Tutorial", "Yes");
 }
-	
+
 if (get_option("UFAQ_Run_Tutorial") == "Yes" and isset($_GET['page']) and $_GET['page'] == 'EWD-UFAQ-Options') {
 	add_action( 'admin_enqueue_scripts', 'UFAQ_Set_Pointers', 10, 1);
 }

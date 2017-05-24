@@ -161,11 +161,12 @@ function Ufaq_Ajax_Reload() {
     var orderby = jQuery('#ufaq-orderby').val();
     var order = jQuery('#ufaq-order').val();
     var post_count = jQuery('#ufaq-post-count').val();
+    var current_url = jQuery('#ufaq-current-url').val();
 
     jQuery('#ufaq-ajax-results').html('<h3>' + ewd_ufaq_php_data.retrieving_results + '</h3>');
     RequestCount = RequestCount + 1;
 
-    var data = 'Q=' + Question + '&include_category=' + include_cat + '&exclude_category=' + exclude_cat + '&orderby=' + orderby + '&order=' + order + '&post_count=' + post_count + '&request_count=' + RequestCount + '&action=ufaq_search';
+    var data = 'Q=' + Question + '&include_category=' + include_cat + '&exclude_category=' + exclude_cat + '&orderby=' + orderby + '&order=' + order + '&post_count=' + post_count + '&request_count=' + RequestCount + '&current_url=' + current_url + '&action=ufaq_search';
     jQuery.post(ajaxurl, data, function(response) {
         response = response.substring(0, response.length - 1);
 		var parsed_response = jQuery.parseJSON(response);

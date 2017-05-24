@@ -43,6 +43,8 @@ function EWD_UFAQ_Version_Update() {
 	if (get_option("EWD_UFAQ_Styling_Category_Heading_Type") == "") {update_option("EWD_UFAQ_Styling_Category_Heading_Type", "h4");}
 	if (get_option("EWD_UFAQ_Styling_FAQ_Heading_Type") == "") {update_option("EWD_UFAQ_Styling_FAQ_Heading_Type", "h4");}
 
+	if (get_option("EWD_UFAQ_Install_Time") == "") {update_option("EWD_UFAQ_Install_Time", time() - 3600*24*4);}
+
 	update_option('EWD_UFAQ_Version', $EWD_UFAQ_Version);
 }
 

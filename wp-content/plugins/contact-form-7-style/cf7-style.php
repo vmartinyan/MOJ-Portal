@@ -3,7 +3,7 @@
 Plugin Name: Contact Form 7 Style
 Plugin URI: http://wordpress.reea.net/contact-form-7-style/
 Description: Simple style customization and templating for Contact Form 7 forms. Requires Contact Form 7 plugin installed.
-Version: 3.1.1
+Version: 3.1.2
 Author: Johnny, dorumarginean, mlehelsz, MirceaR
 Author URI: http://cf7style.com
 License: GPL2
@@ -16,7 +16,7 @@ License: GPL2
 define( 'WPCF7S_PLUGIN', __FILE__ );	
 define( 'WPCF7S_PLUGIN_DIR', untrailingslashit( dirname( WPCF7S_PLUGIN ) ) );
 define( 'WPCF7S_LOCATION',plugin_dir_url( WPCF7S_PLUGIN ) );
-define( 'WPCF7S_PLUGIN_VER', '3.1.1' );
+define( 'WPCF7S_PLUGIN_VER', '3.1.2' );
 
 
 function get_predefined_cf7_style_template_data() {
@@ -108,8 +108,10 @@ function cf7_style_custom_css_generator(){
 	$forms = new WP_Query( $args );
 	$total_num_posts = $forms->found_posts;
 	$style = "";
-	$cf7s_manual_style = html_entity_decode(stripslashes(get_option( 'cf7_style_manual_style', true )),ENT_QUOTES);
+	$cf7s_manual_style = html_entity_decode( stripslashes(get_option( 'cf7_style_manual_style', true )),ENT_QUOTES );
 	$cf7s_manual_style = ( $cf7s_manual_style == '1' ) ? "" : $cf7s_manual_style;
+	$cf7s_force_css = get_option( 'cf7_style_forcecss', true );
+	$cf7s_force_css = (1 == $cf7s_force_css ) ? " !important" : "";
 	$active_styles = array();
 	$style_number = 0;
 	if( $forms->have_posts() ) :
@@ -117,10 +119,7 @@ function cf7_style_custom_css_generator(){
 			$id = get_the_ID();
 			$cf7s_id = get_post_meta( $id, 'cf7_style_id', true );
 			$form_title = get_the_title($cf7s_id);
-			if ( ( ! empty( $cf7s_id ) || $cf7s_id !== 0 ) && ! in_array( $cf7s_id, $active_styles ) ) {
-				/*if( empty( $active_styles ) ) {
-					$style 	.= "\n<style class='cf7-style' media='screen' type='text/css'>\n";
-				}*/	
+			if ( ( ! empty( $cf7s_id ) || $cf7s_id !== 0 ) && ! in_array( $cf7s_id, $active_styles ) ) {	
 				array_push( $active_styles, $cf7s_id );
 				$cf7_style_data = get_post( $cf7s_id, OBJECT );	
 				$check_custom_style = has_term( 'custom-style', 'style_category', $cf7_style_data );
@@ -134,7 +133,7 @@ function cf7_style_custom_css_generator(){
 					$groundzero_hover = "";
 					$groundone = "";
 					$groundone_hover = "";
-					$tempSave = "0";
+					$tempSave = "";
 					$bleah = array();
 					$bleah_hover = array();
 					$i = 0;
@@ -151,9 +150,9 @@ function cf7_style_custom_css_generator(){
 						$endtag = ( $i == 0 ) ? "" : "}\n";
 						$endtag_hover = ( $i_hover == 0 ) ? "" : "}\n";
 						$curr_tag_gen = $classelem.$html_element;
-						if(!empty( $setting )){
+						if( $setting != "" ){
 							$setting = ($setting_key_part[1] == "background-image") ? 'url("'.$setting.'")' : $setting;
-							$cur_property_gen = "\t\t".$setting_key_part[1].": ".$setting. ";\n";
+							$cur_property_gen = "\t\t".$setting_key_part[1].": ".$setting.$cf7s_force_css. ";\n";
 						}
 						$the_hover = ( array_key_exists (3,$setting_key_part) && $setting_key_part[3] == "hover" ) ? "yes" :
 							( array_key_exists (2,$setting_key_part) &&  $setting_key_part[2] == "hover" ) ? "yes" : "no";
@@ -166,7 +165,7 @@ function cf7_style_custom_css_generator(){
 								$groundzero_hover =  $setting_key_part[0];
 							}
 							$i_hover++;
-							if(!empty( $setting )){
+							if( $setting != "" ){
 								if ( $groundone_hover != $setting_key_part[1]) {
 									$groundone_hover = $setting_key_part[1];
 									$tempSave  = $setting;
@@ -174,8 +173,8 @@ function cf7_style_custom_css_generator(){
 										$bleah_hover[$i_hover]  = $cur_property_gen;
 									}
 								} else {
-									$bleah_hover[--$i_hover] = ( $tempSave != "0" ) ? ( "\t\t".$setting_key_part[1].": ".$tempSave.$setting. ";\n") : "";
-									$tempSave = "0";
+									$bleah_hover[--$i_hover] = ( $tempSave != "done" ) ? ( "\t\t".$setting_key_part[1].": ".$tempSave.$setting.$cf7s_force_css. ";\n") : "";
+									$tempSave = "done";
 								}
 							}	
 						} else {
@@ -188,17 +187,16 @@ function cf7_style_custom_css_generator(){
 								$groundzero =  $setting_key_part[0];
 							}
 							$i++;
-							if(!empty( $setting )){
+							if( $setting != "" ){
 								if ( $groundone != $setting_key_part[1]) {
 									$groundone = $setting_key_part[1];
 									$tempSave = $setting;
 									if( $setting != "px" && $setting != "%" && $setting != "em" ){
 										$bleah[$i] = $cur_property_gen;
 									}
-
 								} else {
-									$bleah[--$i] = ( $tempSave != "0" ) ? ( "\t\t".$setting_key_part[1].": ".$tempSave.$setting. ";\n") : "";
-									$tempSave = "0";
+									$bleah[--$i] = ( $tempSave != "done" ) ? ( "\t\t".$setting_key_part[1].": ".$tempSave.$setting.$cf7s_force_css. ";\n") : "";
+									$tempSave = "done";
 								}
 							}
 						}
@@ -241,6 +239,7 @@ function cf7_style_custom_css_generator(){
 		if( ( $style_number !== 0 ) && $style_number == count( $active_styles ) ) {
 			$cur_css .= "\n</style>\n";
 		}
+		$cur_css = str_replace(' 0px;', ' 0;', $cur_css);
 		echo $cur_css;
 		wp_reset_postdata();
 	endif;	
@@ -263,7 +262,7 @@ function cf7_style_admin_scripts($hook){
 		wp_enqueue_style( 'thickbox' );
 		wp_enqueue_script( 'media-upload' );
 	}
-	if( 'plugins.php'== $hook || 'cf7_style' == $post_type || 'toplevel_page_wpcf7' == $hook || 'cf7_style_page_cf7style-css-editor' == $hook || 'cf7_style_page_system-status' == $hook ){
+	if( 'plugins.php'== $hook || 'cf7_style' == $post_type || 'toplevel_page_wpcf7' == $hook || 'cf7_style_page_cf7style-css-editor' == $hook || 'cf7_style_page_system-status' == $hook || 'cf7_style_page_cf7style-settings' == $hook ){
 		wp_enqueue_style('cf7-style-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css');
 		wp_enqueue_style( "cf7-style-admin-style", WPCF7S_LOCATION . "admin/css/admin.css", false, WPCF7S_PLUGIN_VER, "all");  
 		wp_enqueue_script( "cf7_style_admin_js", WPCF7S_LOCATION . "admin/js/admin-min.js", array( 'wp-color-picker', 'jquery' ), WPCF7S_PLUGIN_VER, true );
@@ -483,14 +482,14 @@ function cf7style_load_elements(){
 	);
 	//register tax
 	register_taxonomy( 'style_category', array( 'cf7_style' ), $args );
-	$cf7_style_templates = get_option( 'cf7_style_no_temps' );
 
 	foreach ( get_predefined_cf7_style_template_data() as $style ) {
 		cf7_style_create_post( strtolower( str_replace( " ", "-", $style['title'] ) ), $style['title'], $style['image'] );
 	}
 	if( get_option( 'cf7_style_add_categories', 0 ) == 0 ){
 		$cf7_style_args = array(
-			'post_type' => 'cf7_style'
+			'post_type' => 'cf7_style',
+			'posts_per_page' => '-1'
 		);
 		
 		$cf7_style_query = new WP_Query( $cf7_style_args );

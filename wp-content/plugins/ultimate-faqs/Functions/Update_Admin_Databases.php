@@ -16,9 +16,9 @@ function EWD_UFAQ_UpdateOptions() {
     $Custom_CSS = $_POST['custom_css'];
     $Social_Media_Array = $_POST['Socialmedia'];
     if (is_array($Social_Media_Array)) {$Social_Media = implode(",", $Social_Media_Array);}
-    
+
     $Custom_CSS = stripslashes_deep($Custom_CSS);
-    
+
     if (isset($_POST['custom_css'])) {update_option('EWD_UFAQ_Custom_CSS', $Custom_CSS);}
     if (isset($_POST['faq_toggle'])) {update_option('EWD_UFAQ_Toggle',  $_POST['faq_toggle']);}
     if (isset($_POST['faq_category_toggle'])) {update_option('EWD_UFAQ_Category_Toggle',  $_POST['faq_category_toggle']);}
@@ -60,13 +60,13 @@ function EWD_UFAQ_UpdateOptions() {
     while ($Counter < 30) {
         if (isset($_POST['Custom_Field_' . $Counter . '_Name'])) {
             $Prefix = 'Custom_Field_' . $Counter;
-            
+
             $Custom_Field_Item['FieldID'] = sanitize_text_field($_POST[$Prefix . '_ID']);
             $Custom_Field_Item['FieldName'] = sanitize_text_field($_POST[$Prefix . '_Name']);
             $Custom_Field_Item['FieldType'] = sanitize_text_field($_POST[$Prefix . '_Type']);
             $Custom_Field_Item['FieldValues'] = sanitize_text_field($_POST[$Prefix . '_Values']);
 
-            $Custom_Fields[] = $Custom_Field_Item; 
+            $Custom_Fields[] = $Custom_Field_Item;
             unset($Custom_Field_Item);
         }
         $Counter++;
@@ -84,6 +84,7 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['search_label'])) {update_option('EWD_UFAQ_Search_Label',  $_POST['search_label']);}
     if (isset($_POST['permalink_label'])) {update_option('EWD_UFAQ_Permalink_Label',  $_POST['permalink_label']);}
     if (isset($_POST['back_to_top_label'])) {update_option('EWD_UFAQ_Back_To_Top_Label',  $_POST['back_to_top_label']);}
+    if (isset($_POST['woocommerce_tab_label'])) {update_option('EWD_UFAQ_WooCommerce_Tab_Label',  $_POST['woocommerce_tab_label']);}
 
     if (isset($_POST['thank_you_submit_label'])) {update_option('EWD_UFAQ_Thank_You_Submit_Label',  $_POST['thank_you_submit_label']);}
     if (isset($_POST['submit_question_label'])) {update_option('EWD_UFAQ_Submit_Question_Label',  $_POST['submit_question_label']);}
@@ -99,8 +100,10 @@ function EWD_UFAQ_UpdateOptions() {
 
     if (isset($_POST['ufaq_styling_default_bg_color'])) {update_option('EWD_UFAQ_Styling_Default_Bg_Color',  $_POST['ufaq_styling_default_bg_color']);}
     if (isset($_POST['ufaq_styling_default_font_color'])) {update_option('EWD_UFAQ_Styling_Default_Font_Color',  $_POST['ufaq_styling_default_font_color']);}
-    if (isset($_POST['ufaq_styling_default_border'])) {update_option('EWD_UFAQ_Styling_Default_Border',  $_POST['ufaq_styling_default_border']);}
+    if (isset($_POST['ufaq_styling_default_border_size'])) {update_option('EWD_UFAQ_Styling_Default_Border_Size',  $_POST['ufaq_styling_default_border_size']);}
+    if (isset($_POST['ufaq_styling_default_border_color'])) {update_option('EWD_UFAQ_Styling_Default_Border_Color',  $_POST['ufaq_styling_default_border_color']);}
     if (isset($_POST['ufaq_styling_default_border_radius'])) {update_option('EWD_UFAQ_Styling_Default_Border_Radius',  $_POST['ufaq_styling_default_border_radius']);}
+    if (isset($_POST['ufaq_styling_toggle_symbol_size'])) {update_option('EWD_UFAQ_Styling_Toggle_Symbol_Size',  $_POST['ufaq_styling_toggle_symbol_size']);}
     if (isset($_POST['ufaq_styling_block_bg_color'])) {update_option('EWD_UFAQ_Styling_Block_Bg_Color',  $_POST['ufaq_styling_block_bg_color']);}
     if (isset($_POST['ufaq_styling_block_font_color'])) {update_option('EWD_UFAQ_Styling_Block_Font_Color',  $_POST['ufaq_styling_block_font_color']);}
     if (isset($_POST['ufaq_styling_list_font'])) {update_option('EWD_UFAQ_Styling_List_Font',  $_POST['ufaq_styling_list_font']);}
@@ -108,7 +111,7 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['ufaq_styling_list_font_color'])) {update_option('EWD_UFAQ_Styling_List_Font_Color',  $_POST['ufaq_styling_list_font_color']);}
     if (isset($_POST['ufaq_styling_list_margin'])) {update_option('EWD_UFAQ_Styling_List_Margin',  $_POST['ufaq_styling_list_margin']);}
     if (isset($_POST['ufaq_styling_list_padding'])) {update_option('EWD_UFAQ_Styling_List_Padding',  $_POST['ufaq_styling_list_padding']);}
-   
+
     if (isset($_POST['ufaq_styling_question_font'])) {update_option('EWD_UFAQ_Styling_Question_Font',  $_POST['ufaq_styling_question_font']);}
     if (isset($_POST['ufaq_styling_question_font_size'])) {update_option('EWD_UFAQ_Styling_Question_Font_Size',  $_POST['ufaq_styling_question_font_size']);}
     if (isset($_POST['ufaq_styling_question_font_color'])) {update_option('EWD_UFAQ_Styling_Question_Font_Color',  $_POST['ufaq_styling_question_font_color']);}
@@ -130,7 +133,7 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['ufaq_styling_category_font_color'])) {update_option('EWD_UFAQ_Styling_Category_Font_Color',  $_POST['ufaq_styling_category_font_color']);}
     if (isset($_POST['ufaq_styling_category_margin'])) {update_option('EWD_UFAQ_Styling_Category_Margin',  $_POST['ufaq_styling_category_margin']);}
     if (isset($_POST['ufaq_styling_category_padding'])) {update_option('EWD_UFAQ_Styling_Category_Padding',  $_POST['ufaq_styling_category_padding']);}
-    
+
     if (isset($_POST['ufaq_styling_category_heading_type'])) {update_option('EWD_UFAQ_Styling_Category_Heading_Type',  $_POST['ufaq_styling_category_heading_type']);}
     if (isset($_POST['ufaq_styling_faq_heading_type'])) {update_option('EWD_UFAQ_Styling_FAQ_Heading_Type',  $_POST['ufaq_styling_faq_heading_type']);}
     if (isset($_POST['toggle_symbol'])) {update_option('EWD_UFAQ_Toggle_Symbol',  $_POST['toggle_symbol']);}

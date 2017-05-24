@@ -1,6 +1,6 @@
 === FAQ ===
 Contributors: Rustaurius, EtoileWebDesign
-Tags: FAQ, FAQs, easy FAQ, simple FAQ, FAQ categories, FAQ answer, faq page, FAQ Plugin, WooCommerce FAQ, frequently asked questions, questions, FAQ questions, wordpress faq, FAQ list, FAQ custom post type, faq list, faq accordion, jquery faq, jquery-ui, faq shortcode, faq widget, AJAX FAQ, responsive faq, submit questions, microdata
+Tags: FAQ, FAQs, easy FAQ, simple FAQ, FAQ categories, FAQ answer, faq page, FAQ Plugin, WooCommerce FAQ, frequently asked questions, questions, FAQ questions, wordpress faq, FAQ list, FAQ custom post type, faq list, faq accordion, jquery faq, jquery-ui, faq shortcode, faq widget, AJAX FAQ, responsive faq, submit questions, microdata, accordion, faq accordion, answer, question, css3 faq, css3 accordion
 Requires at least: 3.9.0
 Tested up to: 4.7
 License: GPLv3
@@ -10,10 +10,9 @@ FAQ plugin that lets you easily create, order and publicize FAQs, insert 3 style
 
 == Description ==
 
-
 <a href='http://www.etoilewebdesign.com/ultimate-faq-demo/'>FAQ Demo</a>
 
-FAQ plugin that lets you create FAQ, organize FAQ and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. You can use either the toggle FAQ and/or accordion FAQ style, to display one expanded FAQ answer on click, or choose to display all FAQs on page load, with the optional list FAQ style that offers a more traditional FAQ layout.
+FAQ plugin that lets you create FAQ, organize FAQ and publicize your FAQs in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. You can use either the toggle FAQ and/or accordion FAQ style, to display one expanded FAQ answer on click, or choose to display all FAQs on page load, with the optional list FAQ style that offers a more traditional FAQ layout.
 
 <strong>With WooCommerce Integration!</strong> See the "Add FAQ to WooCommerce" section below for full details and features.
 
@@ -247,6 +246,39 @@ Video 3 - FAQs Ordering
 13. View of FAQ custom fields in the admin
 
 == Changelog ==
+= 1.5.30 =
+- Minor CSS styling updates
+
+= 1.5.29 =
+- Fixed an error where a number of widget titles weren't displaying correctly in the admin area
+
+= 1.5.28 =
+- Updated some PHPExcel files for increased import/export compatibility with PHP7
+
+= 1.5.27 =
+- Added an option for a title on a number of the FAQ widgets
+
+= 1.5.26 =
+- Made a number of changes to speed up page loads for longer FAQs
+- Fixed an issue with the "Random FAQ" widget where an FAQ would be displayed multiple times if it was in multiple categories
+
+= 1.5.24 =
+- Fixed a missing slash on the WooCommerce FAQs tab in the admin area
+
+= 1.5.23 =
+- Added a "Random FAQ" widget
+- Added in options to change the toggle icon size and color
+- Fixed a couple of small issues with the AJAX search
+
+= 1.5.22 =
+- Small admin CSS and typo correction in relation to previous update
+
+= 1.5.21 =
+- Split the basic and premium options into a few sub-sections, to make it easier to find the right option
+
+= 1.5.20 =
+- Added a new, simpler way to select which FAQs to display on a product page, directly from the edit product screen
+
 = 1.5.19 =
 - Minor admin area update
 

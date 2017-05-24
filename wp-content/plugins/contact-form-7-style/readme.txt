@@ -3,8 +3,8 @@ Contributors: ionut.iclanzan, dorumarginean, mlehelsz, mircear
 Donate link: http://cf7style.com/back-this-project/
 Tags: contact form 7, contact form 7 style, contact form 7 css, contact form 7 styling, CF7, CF7 style, styling contact form, styling contact form 7, multiple form styling, custom form styling, CF7 addon, customize, templates, valentine's day templates, Christmas templates, manual styling, live preview, hover state styling, CF7 form messages styling
 Requires at least: 3.0.1
-Tested up to: 4.7
-Stable tag: 3.1.1
+Tested up to: 4.7.2
+Stable tag: 3.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,12 +12,15 @@ Simple style customization and templating for Contact Form 7 forms. Requires Con
 
 == Description ==
 
- [Contact Form 7 Style](http://cf7style.com/) plugin is an addon for [Contact Form 7](http://wordpress.org/plugins/contact-form-7/) which needs to be installed on your wordpress blog.
+ [Contact Form 7 Style](http://cf7style.com/) plugin is an addon for [Contact Form 7](http://wordpress.org/plugins/contact-form-7/) which needs to be installed on your WordPress website.
+ > This plugin requires the <a href="http://wordpress.org/extend/plugins/contact-form-7/" rel="nofollow">Contact Form 7 plugin</a><BR>
+ <BR>
+ > <a href="http://cf7style.com/downloads-history/" target="_blank">Downloads history</a> can be checked out on the cf7style.com website.<BR>
+ 
+[youtube https://www.youtube.com/watch?v=dByaDeVlmAc]
+ 
 Supports custom styling, which can be easily managed via admin dashboard. Also has predefined templates like Simple Pattern, Valentine's Day, Christmas that can be activated on your Contact Form 7.  <BR>
 
-> This plugin requires the <a href="http://wordpress.org/extend/plugins/contact-form-7/" rel="nofollow">Contact Form 7 plugin</a><BR>
-
-[youtube https://www.youtube.com/watch?v=dByaDeVlmAc]
 
 **Custom style options: <BR>**
 - color styling, <BR>
@@ -25,6 +28,7 @@ Supports custom styling, which can be easily managed via admin dashboard. Also h
 - styling for input fields, text, textarea, labels, submit button, messages <BR>
 - border-color, <BR>
 - form background-color, <BR>
+- form transparent background-color, <BR>
 - form background-image, <BR>
 - form container styling, <BR>
 - form container background-image styling, <BR>
@@ -61,8 +65,22 @@ You will find 'Contact Style' menu in your WordPress admin panel.
 6. Manual CSS Editor on the pages/posts which contains one or more Contact Form 7 forms.
 7. Form Selector on the new Custom Style Setup Page.
 8. Google Font Selector with all the Google Fonts included in one Dropdown with preview on the right side of the Dropdown.
+9. Enable / disable forcing the CSS on the actual setup (it adds !important to every style property changed on the form)
+10. Transparent background
 
 == Changelog ==
+
+= 3.1.2 =
+* [Small Fix](https://wordpress.org/support/topic/block-disappeared/) de-activated the possibility to drag boxes around
+* [Small Fix](https://wordpress.org/support/topic/transparentclear-input-background/) added possibility to add transparent background
+* [Small Fix](https://wordpress.org/support/topic/custom-submit-button-settings-not-working/) added new Force CSS settings possibility to plugin
+* [Small Fix](https://wordpress.org/support/topic/successfully-sent-message-styles-not-working-properly/) customized styling to remove this issue
+* [Small Fix](https://wordpress.org/support/topic/changing-default-padding-and-margins/) added possibility to add 0 padding / 0 margin
+* [Small Improvement] Possible to add negative margins on custom templates
+* [Small Improvement] Possible to add decimal values for "%" and "em" units
+* [Small Improvement] Added tooltip on settings page for better understanding
+* general bugfixing
+* user interface improvements
 
 = 3.1.1 =
 * [Major Fix](https://wordpress.org/support/topic/custom-styles-not-working/) for custom styles
@@ -210,8 +228,15 @@ You will find 'Contact Style' menu in your WordPress admin panel.
 * First plugin version.
 
 == Upgrade Notice ==
-= Contact Form 7 Style Version 3.1.1 =
+= Contact Form 7 Style Version 3.1.2 =
 
-* [Major Fix](https://wordpress.org/support/topic/custom-styles-not-working/) for custom styles
-* [Small Fix] Styling issue on buttons
-* [Small Fix] CSS generator core upgraded 
+* [Small Fix](https://wordpress.org/support/topic/block-disappeared/) de-activated the possibility to drag boxes around
+* [Small Fix](https://wordpress.org/support/topic/transparentclear-input-background/) added possibility to add transparent background
+* [Small Fix](https://wordpress.org/support/topic/custom-submit-button-settings-not-working/) added new Force CSS settings possibility to plugin
+* [Small Fix](https://wordpress.org/support/topic/successfully-sent-message-styles-not-working-properly/) customized styling to remove this issue
+* [Small Fix](https://wordpress.org/support/topic/changing-default-padding-and-margins/) added possibility to add 0 padding / 0 margin
+* [Small Improvement] Possible to add negative margins on custom templates
+* [Small Improvement] Possible to add decimal values for "%" and "em" units
+* [Small Improvement] Added tooltip settings for better explanations
+* general bugfixing
+* user interface improvements

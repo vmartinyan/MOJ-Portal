@@ -7,7 +7,7 @@ function UFAQ_Search() {
     $Path = ABSPATH . 'wp-load.php';
     include_once($Path);
 
-    $response = do_shortcode("[ultimate-faqs search_string='" . strtolower($_POST['Q']) . "' include_category='" . $_POST['include_category'] . "' exclude_category='" . $_POST['exclude_category'] . "' orderby='" . $_POST['orderby'] . "' order='" . $_POST['order'] . "' post_count='" . $_POST['post_count'] . "' ajax='Yes']");
+    $response = do_shortcode("[ultimate-faqs search_string='" . strtolower($_POST['Q']) . "' include_category='" . $_POST['include_category'] . "' exclude_category='" . $_POST['exclude_category'] . "' orderby='" . $_POST['orderby'] . "' order='" . $_POST['order'] . "' post_count='" . $_POST['post_count'] . "' current_url='" . $_POST['current_url'] . "' ajax='Yes']");
 
     $ReturnArray['request_count'] = $_POST['request_count'];
     $ReturnArray['message'] = $response;
@@ -65,3 +65,87 @@ function EWD_UFAQ_Save_Order(){
     
 }
 add_action('wp_ajax_UFAQ_update_order','EWD_UFAQ_Save_Order');
+
+function EWD_UFAQ_Add_WC_FAQs(){   
+    $Post_ID = $_POST['Post_ID'];
+
+    $Current_FAQs = get_post_meta($Post_ID, 'EWD_UFAQ_WC_Selected_FAQs', true );
+    if (!is_array($Current_FAQs)) {$Current_FAQs = array();}
+
+    $FAQs = json_decode(stripslashes_deep($_POST['FAQs']));
+    if (!is_array($FAQs)) {$FAQs = array();}
+
+    $Added_FAQs = array();
+    foreach ($FAQs as $FAQ) {
+        if (!in_array($FAQ, $Current_FAQs)) {
+            $Current_FAQs[] = $FAQ;
+
+            $FAQ_Post = get_post($FAQ);
+            $Added_FAQs[] = array("ID" => $FAQ, "Name" => $FAQ_Post->post_title);
+        }
+    }
+
+    update_post_meta($Post_ID, 'EWD_UFAQ_WC_Selected_FAQs', $Current_FAQs);
+
+    echo json_encode($Added_FAQs);
+
+    die();
+}
+add_action('wp_ajax_ewd_ufaq_add_wc_faqs','EWD_UFAQ_Add_WC_FAQs');
+
+function EWD_UFAQ_Delete_WC_FAQs(){   
+    $Post_ID = $_POST['Post_ID'];
+
+    $Current_FAQs = get_post_meta($Post_ID, 'EWD_UFAQ_WC_Selected_FAQs', true );
+    if (!is_array($Current_FAQs)) {$Current_FAQs = array();}
+
+    $FAQs = json_decode(stripslashes_deep($_POST['FAQs']));
+    if (!is_array($FAQs)) {$FAQs = array();}
+
+    $Remaining_FAQs = array_diff($Current_FAQs, $FAQs);
+
+    update_post_meta($Post_ID, 'EWD_UFAQ_WC_Selected_FAQs', $Remaining_FAQs);
+
+    die();
+}
+add_action('wp_ajax_ewd_ufaq_delete_wc_faqs','EWD_UFAQ_Delete_WC_FAQs');
+
+function EWD_UFAQ_WC_FAQ_Category() {   
+    $Cat_ID = $_POST['Cat_ID'];
+    
+    $args = array("numberposts" => -1, "post_type" => 'ufaq');
+    if ($Cat_ID != "") {
+        $args['tax_query'] = array(array(
+            'taxonomy' => 'ufaq-category',
+            'terms' => $Cat_ID
+            ));
+    }
+    $All_FAQs = get_posts($args);
+
+    $ReturnString .= "<table class='form-table ewd-ufaq-faq-add-table'>";
+    $ReturnString .= "<tr>";
+    $ReturnString .= "<th>" . __("Add?", 'EWD_UFAQ') . "</th>";
+    $ReturnString .= "<th>" . __("FAQ", 'EWD_UFAQ') . "</th>";
+    $ReturnString .= "</tr>";
+    foreach ($All_FAQs as $FAQ) {
+        $ReturnString .= "<tr class='ewd-ufaq-faq-row' data-faqid='" . $FAQ->ID . "'>";
+        $ReturnString .= "<td><input type='checkbox' class='ewd-ufaq-add-faq' name='Add_FAQs[]' value='" . $FAQ->ID . "'/></td>";
+        $ReturnString .= "<td>" . $FAQ->post_title . "</td>";
+        $ReturnString .= "</tr>";
+    }
+    $ReturnString .= "</table>";
+    
+    echo $ReturnString;
+
+    die();
+}
+add_action('wp_ajax_ewd_ufaq_wc_faq_category','EWD_UFAQ_WC_FAQ_Category');
+
+function EWD_UFAQ_Hide_Review_Ask(){   
+    $Ask_Review_Date = $_POST['Ask_Review_Date'];
+
+    update_option('EWD_UFAQ_Ask_Review_Date', time()+3600*24*$Ask_Review_Date);
+
+    die();
+}
+add_action('wp_ajax_ewd_ufaq_hide_review_ask','EWD_UFAQ_Hide_Review_Ask');

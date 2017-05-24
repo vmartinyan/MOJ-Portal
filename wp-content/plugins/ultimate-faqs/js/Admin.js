@@ -97,6 +97,20 @@ function SetCustomFieldDeleteHandlers() {
 }
 
 jQuery(document).ready(function() {
+    jQuery('.ewd-ufaq-hide-review-ask').on('click', function() {
+        var Ask_Review_Date = jQuery(this).data('askreviewdelay');
+
+        jQuery('.ewd-ufaq-review-ask-popup, #ewd-ufaq-review-ask-overlay').addClass('ufaq-hidden');
+
+        var data = 'Ask_Review_Date=' + Ask_Review_Date + '&action=ewd_ufaq_hide_review_ask';
+        jQuery.post(ajaxurl, data, function() {});
+    });
+    jQuery('#ewd-ufaq-review-ask-overlay').on('click', function() {
+    	jQuery('.ewd-ufaq-review-ask-popup, #ewd-ufaq-review-ask-overlay').addClass('ufaq-hidden');
+    })
+});
+
+jQuery(document).ready(function() {
 	jQuery('.ewd-ufaq-spectrum').spectrum({
 		showInput: true,
 		showInitial: true,

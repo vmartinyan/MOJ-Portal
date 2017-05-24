@@ -131,15 +131,22 @@ jQuery(document).ready(function($) {
 
     function autoCompleteOtherValues() {
         $("input[type='number']").on("change", function() {
-            var value = $(this).val(),
-                indexor = $(this).index(),
-                allInput = $(this).parent().find("input[type=number]");
+            var _t = $(this),
+                value = _t.val(),
+                indexor = _t.parent().index(),
+                allInput = _t.parent().parent().find("input[type=number]");
             switch (indexor) {
-                case 2:
-                    allInput.val(value);
+                case 1:
+                    allInput.each(function() {
+                        if (parseFloat($(this).attr('step')) == parseFloat(_t.attr('step'))) {
+                            $(this).val(value);
+                        }
+                    });
                     break;
-                case 5:
-                    allInput.eq(3).val(value);
+                case 2:
+                    if (parseFloat(allInput.eq(3).attr('step')) == parseFloat(_t.attr('step'))) {
+                        allInput.eq(3).val(value);
+                    }
                     break;
             }
         });
@@ -281,18 +288,17 @@ jQuery(document).ready(function($) {
 
     function updateHiddenInput(current) {
         var loadedString = "",
-            loadedArray = $.parseJSON( $('input[name="cf7styleallvalues"]').val().replace(/'/g, '"'));
+            loadedArray = $.parseJSON($('input[name="cf7styleallvalues"]').val().replace(/'/g, '"'));
         $.each(current.serializeObject(), function(index, value) {
             if (loadedArray.length == 0) {
                 loadedArray = {};
             }
-            loadedArray[ index.replace(/cf7stylecustom\[/g, '').replace(/]/g, '') ] = value;
+            loadedArray[index.replace(/cf7stylecustom\[/g, '').replace(/]/g, '')] = value;
         });
-
         loadedString = JSON.stringify(loadedArray);
-        loadedString = loadedString.replace(/cf7stylecustom\[/g, '').replace(/]/g, '');
-        $('input[name="cf7styleallvalues"]').val(loadedString.replace(/"/g, "'"));
-        $('input[name="cf7styleallvalues"]').attr('value', loadedString.replace(/"/g, "'"));
+        loadedString = loadedString.replace(/cf7stylecustom\[/g, '').replace(/]/g, '').replace(/"/g, "'");
+        $('input[name="cf7styleallvalues"]').val(loadedString);
+        $('input[name="cf7styleallvalues"]').attr('value', loadedString);
     }
 
     function showTheOption() {
@@ -344,6 +350,8 @@ jQuery(document).ready(function($) {
                                     currentElement.stop(true, true).animate({
                                         'opacity': 1
                                     }, 300);
+                                    injectCheckbox();
+                                    changeInputStep();
                                 }
                             });
 
@@ -511,6 +519,48 @@ jQuery(document).ready(function($) {
         });
     });
 
+    function injectCheckbox() {
+        $('<label><input type="checkbox" class="transparent-box" name="transparent-box">Transparent</label>').insertAfter('.wp-picker-container');
+        $('.transparent-box').each(function() {
+            var curParent = $(this).parent().parent();
+            if (curParent.find('.cf7-style-color-field').val() == "transparent") {
+                $(this).prop("checked", true);
+            }
+        });
+        $('.transparent-box').on('click', function() {
+            var curParent = $(this).parent().parent();
+            if ($(this).is(':checked')) {
+                curParent.find('.cf7-style-color-field').val('transparent');
+                curParent.find('.cf7-style-color-field').attr('value', 'transparent');
+                curParent.find('.wp-color-result').css('background-color', 'transparent');
+            } else {
+                curParent.find('.cf7-style-color-field').val('');
+                curParent.find('.cf7-style-color-field').attr('value', '');
+            }
+            updateHiddenInput($(this).parents('.panel').find('[name^="cf7stylecustom"]'));
+        });
+    }
+
+    function returnStep(element) {
+        return (("%" == element.val() || "em" == element.val()) ? "0.01" : "1");
+    }
+
+    function changeInputStep() {
+        $('.panel input[type="number"]').each(function() {
+            var _t = $(this);
+            _t.attr('step', returnStep(_t.next()));
+        });
+        $('.panel select[name*="unit"]').off("change").on("change", function() {
+            var _t = $(this);
+            _t.prev().attr('step', returnStep(_t));
+            if( _t.val() == "px"){
+               var curVal = Math.floor(_t.prev().val());
+               _t.prev().val(curVal);
+               _t.prev().attr('value',curVal);
+            }
+        });
+    }
+
     var previewEl = $(".generate-preview"),
         cf7StylePostType = $(".post-type-cf7_style "),
         selectAll = $('#select_all'),
@@ -519,7 +569,11 @@ jQuery(document).ready(function($) {
         previewForm = $('.preview-form-container'),
         options = {
             change: function(event, ui) {
-                updateHiddenInput($(this).parents('.panel').find('[name^="cf7stylecustom"]'));
+                var _t = $(this);
+                _t.parents('.wp-picker-container').parent().find('.transparent-box').prop("checked", false);
+                setTimeout(function() {
+                    updateHiddenInput(_t.parents('.panel').find('[name^="cf7stylecustom"]'));
+                }, 0);
                 if ($('input[name="element-type"]:checked').val() == "hover") {
                     initialPreview('hover');
                 } else {
@@ -591,4 +645,6 @@ jQuery(document).ready(function($) {
             }
         });
     });
+    injectCheckbox();
+    changeInputStep();
 }); /*doc.ready end*/

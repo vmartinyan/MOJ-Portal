@@ -2,12 +2,6 @@
 /* The function that creates the HTML on the front-end, based on the parameters
 * supplied in the product-catalog shortcode */
 function Display_FAQs($atts) {
-	$current_url = $_SERVER['REQUEST_URI'];
-	if (strpos($current_url,'faq-tag') !== false) {$current_url = substr($current_url,0,strpos($current_url,'faq-tag'));}
-    if (strpos($current_url,'faq-category') !== false) {$current_url = substr($current_url,0,strpos($current_url,'faq-category'));}
-    if (strpos($current_url,'?include_tag') !== false) {$current_url = substr($current_url,0,strpos($current_url,'?include_tag'));}
-    if (strpos($current_url,'?include_category') !== false) {$current_url = substr($current_url,0,strpos($current_url,'?include_category'));}
-
 	$Custom_CSS = get_option("EWD_UFAQ_Custom_CSS");
 	$FAQ_Toggle = get_option("EWD_UFAQ_Toggle");
 	$Category_Toggle = get_option("EWD_UFAQ_Category_Toggle");
@@ -76,6 +70,7 @@ function Display_FAQs($atts) {
 	extract( shortcode_atts( array(
 			'search_string' => "",
 			'post__in' => "",
+			'post__in_string' => "",
 			'include_category' => "",
 			'exclude_category' => "",
 			'include_category_ids' => "",
@@ -84,12 +79,19 @@ function Display_FAQs($atts) {
 			'orderby' => "",
 			'order' => "",
 			'ajax' => "No",
+			'current_url' => "",
 			'only_titles' => "No",
 			'display_all_answers' => "",
             'post_count'=>-1),
 			$atts
 		)
 	);
+
+	if ($current_url == "") {$current_url = $_SERVER['REQUEST_URI'];}
+	if (strpos($current_url,'faq-tag') !== false) {$current_url = substr($current_url,0,strpos($current_url,'faq-tag'));}
+    if (strpos($current_url,'faq-category') !== false) {$current_url = substr($current_url,0,strpos($current_url,'faq-category'));}
+    if (strpos($current_url,'?include_tag') !== false) {$current_url = substr($current_url,0,strpos($current_url,'?include_tag'));}
+    if (strpos($current_url,'?include_category') !== false) {$current_url = substr($current_url,0,strpos($current_url,'?include_category'));}
 
 	if (strpos($No_Results_Found_Text, "%s")) {$No_Results_Found_Text = str_replace("%s", $search_string, $No_Results_Found_Text);}
 	
@@ -99,7 +101,9 @@ function Display_FAQs($atts) {
 
 	if ($post__in != "") {
 		$post_id_array = json_decode(str_replace(array("&lsqb;", "&rsqb;"), array("[", "]"), $post__in));
+		$post_id_array[] = 0;
 	}
+	elseif ($post__in_string != "") {$post_id_array = explode(",", $post__in_string);}
 	else {$post_id_array = "";}
 	
 	if ($orderby == "") {$orderby = $Order_By_Setting;}
@@ -221,8 +225,9 @@ function Display_FAQs($atts) {
 		if (isset($exclude_category_filter_array)) {$tax_query_array[] = $exclude_category_filter_array;}
 		if (isset($include_tag_filter_array)) {$tax_query_array[] = $include_tag_filter_array;}
 		if (isset($category_array)) {$tax_query_array[] = $category_array;}
-	
+		
 		$params = array('posts_per_page' => $post_count,
+						'post_status' => 'publish',
 						'post_type' => 'ufaq',
 						'orderby' => $orderby,
 						'order' => $order,
@@ -258,6 +263,10 @@ function Display_FAQs($atts) {
 	    		$faq = get_post();
 				$Category_Terms = wp_get_post_terms($faq->ID, 'ufaq-category');
 				$Tag_Terms = wp_get_post_terms($faq->ID, 'ufaq-tag');
+
+				if (is_array($post_id_array)) {
+					if (($key = array_search($faq->ID, $post_id_array)) !== false) {unset($post_id_array[$key]);}
+				}
 
 				if ($Permalink_Type == "IndividualPage") {
 					$FAQ_Permalink = get_permalink($faq->ID);
