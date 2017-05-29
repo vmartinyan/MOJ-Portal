@@ -101,25 +101,18 @@ class crum_latest_tweets extends WP_Widget
 
         //convert links to clickable format
         if (!function_exists('convert_links')) {
-            function convert_links($status, $targetBlank = true, $linkMaxLen = 250)
-            {
+	        function convert_links( $status ) {
 
-                // the target
-                $target = $targetBlank ? " target=\"_blank\" " : "";
+		        $status = preg_replace_callback( '/((http:\/\/|https:\/\/)[^ )]+)/', function ( $matches ) {
+			        return '<a href="' . $matches[1] . '" class="link" title="' . $matches[1] . '" target="_blank" ><strong>' . ( ( strlen( $matches[1] ) >= 450 ? substr( $matches[1], 0, 450 ) . '...' : $matches[1] ) ) . '</strong></a>';
+		        }, $status );
 
-                // convert link to url
-                $status = preg_replace("/((http:\/\/|https:\/\/)[^ )
-]+)/e", "'<a href=\"$1\" title=\"$1\" $target >'. ((strlen('$1')>=$linkMaxLen ? substr('$1',0,$linkMaxLen).'...':'$1')).'</a>'", $status);
 
-                // convert @ to follow
-                $status = preg_replace("/(@([_a-z0-9\-]+))/i", "<a href=\"http://twitter.com/$2\" title=\"Follow $2\" $target >$1</a>", $status);
+		        $status = preg_replace( "/(#([_a-z0-9\-]+))/i", "<a href=\"https://twitter.com/search?q=$2\" class=\"link\" title=\"Search $1\" target=\"_blank\"><strong>$1</strong></a>", $status );
 
-                // convert # to search
-                $status = preg_replace("/(#([_a-z0-9\-]+))/i", "<a href=\"https://twitter.com/search?q=$2\" title=\"Search $1\" $target >$1</a>", $status);
+		        return $status;
+	        }
 
-                // return the status
-                return $status;
-            }
         }
 
         if (!function_exists('relative_time')) {

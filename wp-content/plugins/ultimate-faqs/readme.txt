@@ -1,8 +1,8 @@
 === FAQ ===
 Contributors: Rustaurius, EtoileWebDesign
-Tags: FAQ, FAQs, easy FAQ, simple FAQ, FAQ categories, FAQ answer, faq page, FAQ Plugin, WooCommerce FAQ, frequently asked questions, questions, FAQ questions, wordpress faq, FAQ list, FAQ custom post type, faq list, faq accordion, jquery faq, jquery-ui, faq shortcode, faq widget, AJAX FAQ, responsive faq, submit questions, microdata, accordion, faq accordion, answer, question, css3 faq, css3 accordion
+Tags: faq, faqs, woocommerce faq, frequently asked questions, faq widget
 Requires at least: 3.9.0
-Tested up to: 4.7
+Tested up to: 4.7.5
 License: GPLv3
 License URI:http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,7 +12,7 @@ FAQ plugin that lets you easily create, order and publicize FAQs, insert 3 style
 
 <a href='http://www.etoilewebdesign.com/ultimate-faq-demo/'>FAQ Demo</a>
 
-FAQ plugin that lets you create FAQ, organize FAQ and publicize your FAQs in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. You can use either the toggle FAQ and/or accordion FAQ style, to display one expanded FAQ answer on click, or choose to display all FAQs on page load, with the optional list FAQ style that offers a more traditional FAQ layout.
+FAQ plugin that lets you create FAQ, organize FAQs and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. You can use either the toggle FAQ and/or accordion FAQ style, to display one expanded FAQ answer on click, or choose to display all FAQs on page load, with the optional list FAQ style that offers a more traditional FAQ layout.
 
 <strong>With WooCommerce Integration!</strong> See the "Add FAQ to WooCommerce" section below for full details and features.
 
@@ -88,10 +88,14 @@ Ultimate FAQ uses the WordPress custom post type functionality to create an FAQ 
 
 For further information and purchasing options, please visit our <strong><a href="http://www.etoilewebdesign.com/plugins/ultimate-faq/">WordPress FAQ plugin</a></strong> homepage.
 
+= Translations =
+- Italian (Thanks to <a href='http://www.nimdaweb.it/'>Nimdaweb</a>)
+
 For help and support, please see:
 
 * Our FAQ page, here: https://wordpress.org/plugins/ultimate-faqs/faq/
-* Our installation guide, here: https://wordpress.org/plugins/ultimate-faqs/installation/
+* Our installation page, here: https://wordpress.org/plugins/ultimate-faqs/installation/
+* Our getting-started guide, here: http://www.etoilewebdesign.com/wp-content/uploads/getting-started-guides/FAQ_Getting_Started_Guide.pdf
 * Our documentation, here: http://www.etoilewebdesign.com/plugins/ultimate-faq/documentation-ultimate-faq/
 * Our tutorial videos, here: https://www.youtube.com/playlist?list=PLEndQUuhlvSrNdfu5FKa1uGHsaKZxgdWt
 * The Ultimate FAQ support forum, here: https://wordpress.org/support/plugin/ultimate-faqs
@@ -246,6 +250,25 @@ Video 3 - FAQs Ordering
 13. View of FAQ custom fields in the admin
 
 == Changelog ==
+= 1.5.35 =
+- Changed the menu icon
+- Added missing filters for the title
+- Made it possible to change the email address that submitted question notifications get sent to
+- Add an Italian translation (Thanks to Nimbaweb)
+- Fixed an error where custom CSS wasn't being applied to the search shortcode
+
+= 1.5.34 =
+- Added an option to display the number of FAQs in a category, when FAQs are grouped by category
+
+= 1.5.33 =
+- Updated the text domain of the plugin, to use the improved WordPress standard
+
+= 1.5.32 =
+- Minor admin CSS update
+
+= 1.5.31 =
+- Fixed a small admin CSS issue
+
 = 1.5.30 =
 - Minor CSS styling updates
 
@@ -527,3 +550,6 @@ Video 3 - FAQs Ordering
 
 = 1.0.0 =
 - Premium version release, check out our website for all of the details <http://www.etoilewebdesign.com/ultimate-faq/>
+
+
+

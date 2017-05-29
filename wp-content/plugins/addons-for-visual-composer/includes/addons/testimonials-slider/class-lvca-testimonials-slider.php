@@ -4,7 +4,7 @@
 Widget Name: Livemesh Testimonials Slider
 Description: Display responsive touch friendly slider of testimonials from clients/customers.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 
@@ -31,11 +31,11 @@ class LVCA_Testimonials_Slider {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-flexslider', LVCA_PLUGIN_URL . 'assets/js/jquery.flexslider' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-flexslider', LVCA_PLUGIN_URL . 'assets/js/jquery.flexslider' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-flexslider', LVCA_PLUGIN_URL . 'assets/css/flexslider.css', array(), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-testimonials-slider', plugin_dir_url(__FILE__) . 'js/testimonials' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-testimonials-slider', plugin_dir_url(__FILE__) . 'js/testimonials' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-testimonials-slider', plugin_dir_url(__FILE__) . 'css/style.css', array(), LVCA_VERSION);
 
@@ -215,7 +215,7 @@ class LVCA_Testimonials_Slider {
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_testimonials_slider'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-testimonials-slide',
-                    "category" => __('Testimonials', 'livemesh-vc-addons'),
+                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
                     "params" => $testimonial_params
                 )
 
@@ -234,4 +234,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_testimonial_slide extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Testimonials_Slider')) {
+    new LVCA_Testimonials_Slider();
 }

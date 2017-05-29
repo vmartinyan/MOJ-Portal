@@ -4,7 +4,7 @@
 Widget Name: Livemesh Odometers
 Description: Display one or more animated odometer statistics in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Odometers {
@@ -30,11 +30,11 @@ class LVCA_Odometers {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-waypoints', LVCA_PLUGIN_URL . 'assets/js/jquery.waypoints' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-waypoints', LVCA_PLUGIN_URL . 'assets/js/jquery.waypoints' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-stats', LVCA_PLUGIN_URL . 'assets/js/jquery.stats' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-stats', LVCA_PLUGIN_URL . 'assets/js/jquery.stats' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-odometers', plugin_dir_url(__FILE__) . 'js/odometer' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-odometers', plugin_dir_url(__FILE__) . 'js/odometer' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-odometers', plugin_dir_url(__FILE__) . 'css/style.css', array(), LVCA_VERSION);
 
@@ -357,4 +357,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_odometer_item extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Odometers')) {
+    new LVCA_Odometers();
 }

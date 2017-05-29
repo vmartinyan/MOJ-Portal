@@ -4,7 +4,7 @@
 Widget Name: Livemesh Pricing Table
 Description: Display pricing plans in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Pricing_Table {
@@ -74,10 +74,10 @@ class LVCA_Pricing_Table {
 
     public function shortcode_func($atts, $content = null, $tag) {
 
-        $per_line = $style = '';
+        $per_line = '';
 
         extract(shortcode_atts(array(
-            'per_line' => '4',
+            'per_line' => '4'
 
         ), $atts));
 
@@ -313,4 +313,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_pricing_plan extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Pricing_Table')) {
+    new LVCA_Pricing_Table();
 }

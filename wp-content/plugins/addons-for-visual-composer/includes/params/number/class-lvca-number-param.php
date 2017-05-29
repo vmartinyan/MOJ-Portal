@@ -36,3 +36,9 @@ if (!class_exists('LVCA_Number_Param')) {
 
     }
 }
+
+
+// Initialize Number Paramater Class
+if (class_exists('LVCA_Number_Param')) {
+    new LVCA_Number_Param();
+}

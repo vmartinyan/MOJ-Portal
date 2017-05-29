@@ -300,17 +300,7 @@ jQuery('.entry-thumb').on('touchstart', function(){
  -----------------------------------*/
 
 jQuery(document).ready(function () {
-
-
-	jQuery("a[href$='.jpg']:not(.fancybox), a[href$='.jpeg']:not(.fancybox), a[href$='.gif']:not(.fancybox), a[href$='.png']:not(.fancybox)").prettyPhoto({
-		animationSpeed: 'normal', /* fast/slow/normal */
-		padding: 40, /* padding for each side of the picture */
-		opacity: 0.35, /* Value betwee 0 and 1 */
-		showTitle: true /* true/false */
-	});
-
-	jQuery("a[rel^='prettyPhoto']").prettyPhoto({showTitle: true});
-	jQuery("a.zoom-link").prettyPhoto({showTitle: true});
+    jQuery("a.zoom-link").prettyPhoto({showTitle: true});
 	jQuery("a.thumbnail").prettyPhoto({showTitle: true});
 });
 
@@ -764,4 +754,6 @@ jQuery(window).load(function () {
     var maxHeight = Math.max.apply(Math,  jQuery(".products .product").map(function() { return jQuery(this).height(); }));
 
     jQuery(".products .product").css({"height" : maxHeight });
+
+
 });

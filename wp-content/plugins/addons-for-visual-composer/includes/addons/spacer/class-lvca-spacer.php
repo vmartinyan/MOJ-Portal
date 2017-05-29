@@ -4,7 +4,7 @@
 Widget Name: Livemesh Spacer
 Description: Add spacer between rows and elements that changes based on device resolution.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Spacer {
@@ -24,7 +24,7 @@ class LVCA_Spacer {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-spacer', plugin_dir_url(__FILE__) . 'js/spacer' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-spacer', plugin_dir_url(__FILE__) . 'js/spacer' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
     }
 
     public function shortcode_func($atts, $content = null, $tag) {
@@ -65,11 +65,9 @@ class LVCA_Spacer {
             vc_map(array(
                 "name" => __("Livemesh Spacer", "livemesh-vc-addons"),
                 "base" => "lvca_spacer",
-                "as_parent" => array('only' => 'lvca_statsbar_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => false,
                 "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
-                "is_container" => true,
                 'description' => __('Add spacer between rows and elements.', 'livemesh-vc-addons'),
                 "icon" => 'icon-lvca-spacer',
                 "params" => array(
@@ -145,4 +143,9 @@ class LVCA_Spacer {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_spacer extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Spacer')) {
+    new LVCA_Spacer();
 }

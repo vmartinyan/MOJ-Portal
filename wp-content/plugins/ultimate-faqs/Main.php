@@ -2,19 +2,19 @@
 /*
 Plugin Name: FAQ
 Plugin URI: http://www.EtoileWebDesign.com/wordpress-plugins/
-Description: FAQ plugin that lets you create FAQ, organize FAQ and publicize your FAQ in no time through your Wordpress admin panel.
+Description: A plugin that lets you create FAQs (frequently asked questions), organize them, publicize them, etc.
 Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
-Text Domain: EWD_UFAQ
-Version: 1.5.30
+Text Domain: ultimate-faqs
+Version: 1.5.35
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.5.25';
+$EWD_UFAQ_Version = '1.5.34';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -41,7 +41,7 @@ function EWD_UFAQ_Enable_Sub_Menu() {
 
 	remove_menu_page('edit.php?post_type=ufaq');
 
-	add_menu_page( 'Ultimate FAQs', 'FAQs', 'edit_posts', 'EWD-UFAQ-Options', 'EWD_UFAQ_Output_Pages', null, '49.1' );
+	add_menu_page( 'Ultimate FAQs', 'FAQs', 'edit_posts', 'EWD-UFAQ-Options', 'EWD_UFAQ_Output_Pages', 'dashicons-format-chat', '49.1' );
 	add_submenu_page('EWD-UFAQ-Options', 'FAQ Options', 'FAQ Settings', 'edit_posts', 'EWD-UFAQ-Options&DisplayPage=Options', 'EWD_UFAQ_Output_Pages');
 	if ($Admin_Approval == "Yes") {
 		$submenu['EWD-UFAQ-Options'][6] = $submenu['EWD-UFAQ-Options'][1];
@@ -75,19 +75,19 @@ function EWD_UFAQ_Add_Header_Bar($Called = "No") {
 
 	<div class="EWD_UFAQ_Menu">
 		<h2 class="nav-tab-wrapper">
-		<a id="Dashboard_Menu" href='admin.php?page=EWD-UFAQ-Options' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and ($_GET['DisplayPage'] == '' or $_GET['DisplayPage'] == 'Dashboard')) {echo 'nav-tab-active';}?>"><?php _e("Dashboard", "EWD_UFAQ"); ?></a>
+		<a id="Dashboard_Menu" href='admin.php?page=EWD-UFAQ-Options' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and ($_GET['DisplayPage'] == '' or $_GET['DisplayPage'] == 'Dashboard')) {echo 'nav-tab-active';}?>"><?php _e("Dashboard", 'ultimate-faqs'); ?></a>
 		<?php if ($Admin_Approval == "Yes") { ?>
-			<a id="Approved_FAQs_Menu" href='edit.php?post_type=ufaq&post_status=publish' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit.php' and (!isset($_GET['post_status']) or $_GET['post_status'] == 'publish')) {echo 'nav-tab-active';}?>"><?php _e("Approved FAQs", "EWD_UFAQ"); ?></a>
-			<a id="FAQs_Awaiting_Approval_Menu" href='edit.php?post_type=ufaq&post_status=draft' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit.php' and $_GET['post_status'] == 'draft') {echo 'nav-tab-active';}?>"><?php _e("Awaiting Approval", "EWD_UFAQ"); ?></a>
+			<a id="Approved_FAQs_Menu" href='edit.php?post_type=ufaq&post_status=publish' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit.php' and (!isset($_GET['post_status']) or $_GET['post_status'] == 'publish')) {echo 'nav-tab-active';}?>"><?php _e("Approved FAQs", 'ultimate-faqs'); ?></a>
+			<a id="FAQs_Awaiting_Approval_Menu" href='edit.php?post_type=ufaq&post_status=draft' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit.php' and $_GET['post_status'] == 'draft') {echo 'nav-tab-active';}?>"><?php _e("Awaiting Approval", 'ultimate-faqs'); ?></a>
 		<?php } else { ?>
-			<a id="FAQs_Menu" href='edit.php?post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit.php') {echo 'nav-tab-active';}?>"><?php _e("FAQs", "EWD_UFAQ"); ?></a>
+			<a id="FAQs_Menu" href='edit.php?post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit.php') {echo 'nav-tab-active';}?>"><?php _e("FAQs", 'ultimate-faqs'); ?></a>
 		<?php } ?>
-		<a id="Add_New_Menu" href='post-new.php?post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'post-new.php') {echo 'nav-tab-active';}?>"><?php _e("Add New", "EWD_UFAQ"); ?></a>
-		<a id="FAQ_Categories_Menu" href='edit-tags.php?taxonomy=ufaq-category&post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit-tags.php' and $_GET['taxonomy'] == "ufaq-category") {echo 'nav-tab-active';}?>"><?php _e("Categories", "EWD_UFAQ"); ?></a>
-		<a id="FAQ_Categories_Menu" href='edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit-tags.php' and $_GET['taxonomy'] == "ufaq-tag") {echo 'nav-tab-active';}?>"><?php _e("Tags", "EWD_UFAQ"); ?></a>
-		<a id="Options_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=Options' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and $_GET['DisplayPage'] == 'Options') {echo 'nav-tab-active';}?>"><?php _e("Settings", "EWD_UFAQ"); ?></a>
-		<a id="WooCommerce_Import_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=Export' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and $_GET['DisplayPage'] == 'Export') {echo 'nav-tab-active';}?>"><?php _e("Export", "EWD_UFAQ"); ?></a>
-		<a id="WooCommerce_Import_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=ImportPosts' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and $_GET['DisplayPage'] == 'ImportPosts') {echo 'nav-tab-active';}?>"><?php _e("Import", "EWD_UFAQ"); ?></a>
+		<a id="Add_New_Menu" href='post-new.php?post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'post-new.php') {echo 'nav-tab-active';}?>"><?php _e("Add New", 'ultimate-faqs'); ?></a>
+		<a id="FAQ_Categories_Menu" href='edit-tags.php?taxonomy=ufaq-category&post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit-tags.php' and $_GET['taxonomy'] == "ufaq-category") {echo 'nav-tab-active';}?>"><?php _e("Categories", 'ultimate-faqs'); ?></a>
+		<a id="FAQ_Categories_Menu" href='edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit-tags.php' and $_GET['taxonomy'] == "ufaq-tag") {echo 'nav-tab-active';}?>"><?php _e("Tags", 'ultimate-faqs'); ?></a>
+		<a id="Options_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=Options' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and $_GET['DisplayPage'] == 'Options') {echo 'nav-tab-active';}?>"><?php _e("Settings", 'ultimate-faqs'); ?></a>
+		<a id="WooCommerce_Import_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=Export' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and $_GET['DisplayPage'] == 'Export') {echo 'nav-tab-active';}?>"><?php _e("Export", 'ultimate-faqs'); ?></a>
+		<a id="WooCommerce_Import_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=ImportPosts' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and $_GET['DisplayPage'] == 'ImportPosts') {echo 'nav-tab-active';}?>"><?php _e("Import", 'ultimate-faqs'); ?></a>
 		</h2>
 	</div>
 <?php }
@@ -95,7 +95,7 @@ add_action('admin_notices', 'EWD_UFAQ_Add_Header_Bar');
 
 /* Add localization support */
 function EWD_UFAQ_localization_setup() {
-		load_plugin_textdomain('EWD_UFAQ', false, dirname(plugin_basename(__FILE__)) . '/lang/');
+		load_plugin_textdomain('ultimate-faqs', false, dirname(plugin_basename(__FILE__)) . '/lang/');
 }
 add_action('after_setup_theme', 'EWD_UFAQ_localization_setup');
 
@@ -132,7 +132,7 @@ function Add_EWD_UFAQ_Scripts($hook) {
 
 function EWD_UFAQ_Admin_Options() {
 	global $EWD_UFAQ_Version;
-
+	
 	wp_enqueue_style( 'ewd-ufaq-admin', plugins_url("ultimate-faqs/css/Admin.css"), array(), $EWD_UFAQ_Version);
 	wp_enqueue_style( 'ewd-ufaq-spectrum', plugins_url("ultimate-faqs/css/spectrum.css"));
 }
@@ -142,7 +142,7 @@ function Add_EWD_UFAQ_FrontEnd_Scripts() {
 	wp_enqueue_script('ewd-ufaq-js', plugins_url( '/js/ewd-ufaq-js.js' , __FILE__ ), array( 'jquery' ));
 
 	$Retrieving_Results = get_option("EWD_UFAQ_Retrieving_Results");
-	if ($Retrieving_Results == "") {$Retrieving_Results = __("Retrieving Results", 'EWD_UFAQ') . "...";}
+	if ($Retrieving_Results == "") {$Retrieving_Results = __("Retrieving Results", 'ultimate-faqs') . "...";}
 
 	$ewd_ufaq_php_data = array(
 								'retrieving_results' => $Retrieving_Results
@@ -217,6 +217,7 @@ function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Slug_Base") == "") {update_option("EWD_UFAQ_Slug_Base", "ufaqs");}
 
 	if (get_option("EWD_UFAQ_Group_By_Category") == "") {update_option("EWD_UFAQ_Group_By_Category", "No");}
+	if (get_option("EWD_UFAQ_Group_By_Category_Count") == "") {update_option("EWD_UFAQ_Group_By_Category_Count", "No");}
 	if (get_option("EWD_UFAQ_Group_By_Order_By") == "") {update_option("EWD_UFAQ_Group_By_Order_By", "name");}
 	if (get_option("EWD_UFAQ_Group_By_Order") == "") {update_option("EWD_UFAQ_Group_By_Order", "ASC");}
 	if (get_option("EWD_UFAQ_Order_By") == "") {update_option("EWD_UFAQ_Order_By", "date");}

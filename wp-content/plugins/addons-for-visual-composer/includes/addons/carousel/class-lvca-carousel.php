@@ -4,7 +4,7 @@
 Widget Name: Livemesh Carousel
 Description: Display a list of custom HTML content as a carousel.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 
@@ -29,7 +29,7 @@ class LVCA_Carousel {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-slick-carousel', LVCA_PLUGIN_URL . 'assets/js/slick' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-slick-carousel', LVCA_PLUGIN_URL . 'assets/js/slick' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-slick', LVCA_PLUGIN_URL . 'assets/css/slick.css', array(), LVCA_VERSION);
 
@@ -49,11 +49,9 @@ class LVCA_Carousel {
 
         ?>
 
-        <div id="lvca-carousel-<?php echo $uniqueid; ?>" class="lvca-carousel lvca-container"<?php foreach ($settings as $key => $val) {
-            if (!empty($val)) {
-                echo ' data-' . $key . '="' . esc_attr($val) . '"';
-            }
-        } ?>>
+        <div id="lvca-carousel-<?php echo $uniqueid; ?>"
+             class="lvca-carousel lvca-container"
+             data-settings='<?php echo wp_json_encode($settings); ?>'>
 
             <?php
 
@@ -136,7 +134,7 @@ class LVCA_Carousel {
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_carousel'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-carousel-item',
-                    "category" => __('Carousel', 'livemesh-vc-addons'),
+                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
                     "params" => array(
                         array(
                             'type' => 'textfield',
@@ -169,4 +167,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_carousel_item extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Carousel')) {
+    new LVCA_Carousel();
 }

@@ -4,7 +4,7 @@
 Widget Name: Livemesh Piecharts
 Description: Display one or more piecharts depicting a percentage value in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Piecharts {
@@ -32,11 +32,11 @@ class LVCA_Piecharts {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-waypoints', LVCA_PLUGIN_URL . 'assets/js/jquery.waypoints' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-waypoints', LVCA_PLUGIN_URL . 'assets/js/jquery.waypoints' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-stats', LVCA_PLUGIN_URL . 'assets/js/jquery.stats' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-stats', LVCA_PLUGIN_URL . 'assets/js/jquery.stats' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-piecharts', plugin_dir_url(__FILE__) . 'js/piechart' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-piecharts', plugin_dir_url(__FILE__) . 'js/piechart' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-piecharts', plugin_dir_url(__FILE__) . 'css/style.css', array(), LVCA_VERSION);
 
@@ -204,4 +204,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_piechart_item extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Piecharts')) {
+    new LVCA_Piecharts();
 }

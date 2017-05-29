@@ -20,9 +20,9 @@
 			array(
 				'name'     				=> 'Crumina Menu Customizer', // The plugin name
 				'slug'     				=> 'menu-customizer', // The plugin slug (typically the folder name)
-				'source'   				=> 'http://up.crumina.net/plugins/menu-customizer.zip', // The plugin source
+				'source'   				=> 'https://up.crumina.net/plugins/menu-customizer.zip', // The plugin source
 				'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
-				'version' 				=> '1.5.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
+				'version' 				=> '1.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -30,7 +30,7 @@
 			array(
 				'name'     				=> 'Crumina page slider', // The plugin name
 				'slug'     				=> 'crumina-page-slider', // The plugin slug (typically the folder name)
-				'source'   				=> 'http://up.crumina.net/plugins/Secondtouch/crumina-page-slider.zip', // The plugin source
+				'source'   				=> 'https://up.crumina.net/plugins/Secondtouch/crumina-page-slider.zip', // The plugin source
 				'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
 				'version' 				=> '1.4.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
@@ -40,7 +40,7 @@
 			array(
 				'name'     				=> 'Metro Visual Builder', // The plugin name
 				'slug'     				=> 'metro-visual-builder', // The plugin slug (typically the folder name)
-				'source'   				=> 'http://up.crumina.net/plugins/metro-visual-builder.zip', // The plugin source
+				'source'   				=> 'https://up.crumina.net/plugins/metro-visual-builder.zip', // The plugin source
 				'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
 				'version' 				=> '1.9.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
@@ -50,7 +50,7 @@
 			array(
 				'name'     				=> 'Price Table', // The plugin name
 				'slug'     				=> 'pricetable', // The plugin slug (typically the folder name)
-				'source'   				=> 'http://up.crumina.net/plugins/Secondtouch/pricetable.zip', // The plugin source
+				'source'   				=> 'https://up.crumina.net/plugins/Secondtouch/pricetable.zip', // The plugin source
 				'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 				'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
@@ -61,9 +61,9 @@
 			array(
 				'name'     				=> 'LayerSlider WP', // The plugin name
 				'slug'     				=> 'LayerSlider', // The plugin slug (typically the folder name)
-				'source'   				=> 'http://up.crumina.net/plugins/layersliderwp.zip', // The plugin source
+				'source'   				=> 'https://up.crumina.net/plugins/layersliderwp.zip', // The plugin source
 				'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-				'version' 				=> '6.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
+				'version' 				=> '6.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -71,7 +71,7 @@
 			array(
 				'name'     				=> 'Installer Plugin', // The plugin name
 				'slug'     				=> 'easy_installer', // The plugin slug (typically the folder name)
-				'source'   				=> 'http://up.crumina.net/plugins/Secondtouch/easy_installer.zip', // The plugin source
+				'source'   				=> 'https://up.crumina.net/plugins/Secondtouch/easy_installer.zip', // The plugin source
 				'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 				'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented. If the plugin version is higher than the plugin version installed , the user will be notified to update the plugin
 				'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch

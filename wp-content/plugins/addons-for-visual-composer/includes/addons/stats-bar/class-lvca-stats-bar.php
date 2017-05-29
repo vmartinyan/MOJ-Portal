@@ -4,7 +4,7 @@
 Widget Name: Livemesh Stats Bars
 Description: Display multiple stats bars that talk about skills or other percentage stats.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Stats_Bars {
@@ -31,9 +31,9 @@ class LVCA_Stats_Bars {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-waypoints', LVCA_PLUGIN_URL . 'assets/js/jquery.waypoints' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-waypoints', LVCA_PLUGIN_URL . 'assets/js/jquery.waypoints' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-stats-bar', plugin_dir_url(__FILE__) . 'js/stats-bar' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-stats-bar', plugin_dir_url(__FILE__) . 'js/stats-bar' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-stats-bar', plugin_dir_url(__FILE__) . 'css/style.css', array(), LVCA_VERSION);
     }
@@ -189,4 +189,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_statsbar_item extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Stats_Bars')) {
+    new LVCA_Stats_Bars();
 }

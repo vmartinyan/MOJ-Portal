@@ -19,7 +19,7 @@ function EWD_UFAQ_UpdateOptions() {
 
     $Custom_CSS = stripslashes_deep($Custom_CSS);
 
-    if (isset($_POST['custom_css'])) {update_option('EWD_UFAQ_Custom_CSS', $Custom_CSS);}
+    if (isset($_POST['Options_Submit'])) {update_option('EWD_UFAQ_Custom_CSS', $Custom_CSS);}
     if (isset($_POST['faq_toggle'])) {update_option('EWD_UFAQ_Toggle',  $_POST['faq_toggle']);}
     if (isset($_POST['faq_category_toggle'])) {update_option('EWD_UFAQ_Category_Toggle',  $_POST['faq_category_toggle']);}
     if (isset($_POST['expand_collapse_all'])) {update_option('EWD_UFAQ_Expand_Collapse_All',  $_POST['expand_collapse_all']);}
@@ -46,11 +46,13 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['pretty_permalinks']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Pretty_Permalinks', $_POST['pretty_permalinks']);}
     if (isset($_POST['allow_proposed_answer']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Allow_Proposed_Answer',  $_POST['allow_proposed_answer']);}
     if (isset($_POST['admin_question_notification']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Admin_Question_Notification', $_POST['admin_question_notification']);}
+    if (isset($_POST['Options_Submit']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Admin_Notification_Email', $_POST['admin_notification_email']);}
     if (isset($_POST['faq_auto_complete_titles']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Auto_Complete_Titles', $_POST['faq_auto_complete_titles']);}
     if (isset($_POST['slug_base']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Slug_Base', $_POST['slug_base']);}
     if (isset($_POST['Socialmedia']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Social_Media',  $Social_Media);}
 
     if (isset($_POST['group_by_category'])) {update_option('EWD_UFAQ_Group_By_Category', $_POST['group_by_category']);}
+    if (isset($_POST['group_by_category_count'])) {update_option('EWD_UFAQ_Group_By_Category_Count', $_POST['group_by_category_count']);}
     if (isset($_POST['group_by_order_by'])) {update_option('EWD_UFAQ_Group_By_Order_By', $_POST['group_by_order_by']);}
     if (isset($_POST['group_by_order'])) {update_option('EWD_UFAQ_Group_By_Order', $_POST['group_by_order']);}
     if (isset($_POST['order_by_setting'])) {update_option('EWD_UFAQ_Order_By', $_POST['order_by_setting']);}

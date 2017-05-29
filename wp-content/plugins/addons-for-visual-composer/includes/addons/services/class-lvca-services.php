@@ -4,7 +4,7 @@
 Widget Name: Livemesh Services
 Description: Capture services in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Services {
@@ -356,4 +356,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_service_item extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Services')) {
+    new LVCA_Services();
 }

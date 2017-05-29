@@ -4,7 +4,7 @@
 Widget Name: Livemesh Heading
 Description: Create heading for display on the top of a section.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Heading {
@@ -86,30 +86,6 @@ class LVCA_Heading {
                 "params" => array(
                     // add params same as with any other content element
                     array(
-                        "type" => "dropdown",
-                        "param_name" => "style",
-                        "heading" => __("Choose Style", "livemesh-vc-addons"),
-                        "description" => __("Choose the particular style of heading you need", "livemesh-vc-addons"),
-                        'value' => array(
-                            __('Style 1', 'livemesh-vc-addons') => 'style1',
-                            __('Style 2', 'livemesh-vc-addons') => 'style2',
-                            __('Style 3', 'livemesh-vc-addons') => 'style3',
-                        ),
-                        'std' => 'style1',
-                    ),
-                    array(
-                        "type" => "dropdown",
-                        "param_name" => "align",
-                        "heading" => __("Align", "livemesh-vc-addons"),
-                        "description" => __("Alignment of the heading", "livemesh-vc-addons"),
-                        'value' => array(
-                            __('Center', 'livemesh-vc-addons') => 'center',
-                            __('Left', 'livemesh-vc-addons') => 'left',
-                            __('Right', 'livemesh-vc-addons') => 'right',
-                        ),
-                        'std' => 'center',
-                    ),
-                    array(
                         'type' => 'textfield',
                         'param_name' => 'heading',
                         "admin_label" => true,
@@ -136,6 +112,32 @@ class LVCA_Heading {
                             'value' => array('style1' , 'style2'),
                         ),
                     ),
+                    array(
+                        "type" => "dropdown",
+                        "param_name" => "style",
+                        "heading" => __("Choose Style", "livemesh-vc-addons"),
+                        "description" => __("Choose the particular style of heading you need", "livemesh-vc-addons"),
+                        'value' => array(
+                            __('Style 1', 'livemesh-vc-addons') => 'style1',
+                            __('Style 2', 'livemesh-vc-addons') => 'style2',
+                            __('Style 3', 'livemesh-vc-addons') => 'style3',
+                        ),
+                        'std' => 'style1',
+                        'group' => __('Settings', 'livemesh-vc-addons')
+                    ),
+                    array(
+                        "type" => "dropdown",
+                        "param_name" => "align",
+                        "heading" => __("Align", "livemesh-vc-addons"),
+                        "description" => __("Alignment of the heading", "livemesh-vc-addons"),
+                        'value' => array(
+                            __('Center', 'livemesh-vc-addons') => 'center',
+                            __('Left', 'livemesh-vc-addons') => 'left',
+                            __('Right', 'livemesh-vc-addons') => 'right',
+                        ),
+                        'std' => 'center',
+                        'group' => __('Settings', 'livemesh-vc-addons')
+                    ),
                 ),
             ));
 
@@ -148,4 +150,9 @@ class LVCA_Heading {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_heading extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Heading')) {
+    new LVCA_Heading();
 }

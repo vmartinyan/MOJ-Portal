@@ -110,7 +110,7 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
         unset($Tag_IDs);
     }
 
-    return __("FAQs added successfully.", 'EWD_UFAQ');
+    return __("FAQs added successfully.", 'ultimate-faqs');
 }
 
 function EWD_UFAQ_Import_From_Spreadsheet() {
@@ -122,40 +122,40 @@ function EWD_UFAQ_Import_From_Spreadsheet() {
                 {
 
                 case '1':
-                        $error = __('The uploaded file exceeds the upload_max_filesize directive in php.ini', 'EWD_UFAQ');
+                        $error = __('The uploaded file exceeds the upload_max_filesize directive in php.ini', 'ultimate-faqs');
                         break;
                 case '2':
-                        $error = __('The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form', 'EWD_UFAQ');
+                        $error = __('The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form', 'ultimate-faqs');
                         break;
                 case '3':
-                        $error = __('The uploaded file was only partially uploaded', 'EWD_UFAQ');
+                        $error = __('The uploaded file was only partially uploaded', 'ultimate-faqs');
                         break;
                 case '4':
-                        $error = __('No file was uploaded.', 'EWD_UFAQ');
+                        $error = __('No file was uploaded.', 'ultimate-faqs');
                         break;
 
                 case '6':
-                        $error = __('Missing a temporary folder', 'EWD_UFAQ');
+                        $error = __('Missing a temporary folder', 'ultimate-faqs');
                         break;
                 case '7':
-                        $error = __('Failed to write file to disk', 'EWD_UFAQ');
+                        $error = __('Failed to write file to disk', 'ultimate-faqs');
                         break;
                 case '8':
-                        $error = __('File upload stopped by extension', 'EWD_UFAQ');
+                        $error = __('File upload stopped by extension', 'ultimate-faqs');
                         break;
                 case '999':
                         default:
-                        $error = __('No error code avaiable', 'EWD_UFAQ');
+                        $error = __('No error code avaiable', 'ultimate-faqs');
                 }
         }
         /* Make sure that the file exists */        
         elseif (empty($_FILES['FAQs_Spreadsheet']['tmp_name']) || $_FILES['FAQs_Spreadsheet']['tmp_name'] == 'none') {
-                $error = __('No file was uploaded here..', 'EWD_UFAQ');
+                $error = __('No file was uploaded here..', 'ultimate-faqs');
         }
         /* Move the file and store the URL to pass it onwards*/   
         /* Check that it is a .xls or .xlsx file */
         if(!preg_match("/\.(xls.?)$/", $_FILES['FAQs_Spreadsheet']['name']) and !preg_match("/\.(csv.?)$/", $_FILES['FAQs_Spreadsheet']['name'])) {
-            $error = __('File must be .csv, .xls or .xlsx', 'EWD_UFAQ');
+            $error = __('File must be .csv, .xls or .xlsx', 'ultimate-faqs');
         }      
         else {               
                       $msg .= $_FILES['FAQs_Spreadsheet']['name'];

@@ -4,11 +4,9 @@
 <div class="post-social">
 
     <time datetime="<?php echo get_the_time('c'); ?>"  class="date updated">
-    <time datetime="<?php echo get_the_time('c'); ?>"  class="date updated">
         <span class="day"><?php echo get_the_date('d'); ?></span>
         <span class="month"><?php echo get_the_date('M Y'); ?></span>
     </time>
-
 
     <div class="post-format clearfix">
 

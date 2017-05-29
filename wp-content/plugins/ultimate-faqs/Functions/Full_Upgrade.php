@@ -5,7 +5,7 @@ function EWD_UFAQ_Upgrade_To_Full() {
 	$Key = $_POST['Key'];
 	
 	if ($Key == "EWD Trial" and !get_option("EWD_UFAQ_Trial_Happening")) {
-		$ewd_urp_message = array("Message_Type" => "Update", "Message" => __("Trial successfully started!", 'EWD_UFAQ'));
+		$ewd_urp_message = array("Message_Type" => "Update", "Message" => __("Trial successfully started!", 'ultimate-faqs'));
 
 		update_option("EWD_UFAQ_Trial_Expiry_Time", time() + (7*24*60*60));
 		update_option("EWD_UFAQ_Trial_Happening", "Yes");

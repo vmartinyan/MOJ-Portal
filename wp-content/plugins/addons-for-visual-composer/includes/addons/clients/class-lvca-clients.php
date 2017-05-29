@@ -4,7 +4,7 @@
 Widget Name: Livemesh Clients
 Description: Display list of your clients in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Clients {
@@ -192,4 +192,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_single_client extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Clients')) {
+    new LVCA_Clients();
 }

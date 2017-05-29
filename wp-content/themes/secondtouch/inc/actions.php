@@ -670,7 +670,7 @@ if(!(function_exists('crum_portfolio_list'))){
 		$portfolio_list = array();
 
 		$args = array(
-			'post_type' => 'my-product',
+			'post_type' => 'page',
 			'post_status' => 'publish',
 			'posts_per_page' => -1,
 		);

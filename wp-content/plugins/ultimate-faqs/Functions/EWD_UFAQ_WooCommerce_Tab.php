@@ -75,7 +75,7 @@ function EWD_UFAQ_Woo_FAQ_Tab_Content() {
 
 function EWD_UFAQ_Add_FAQs_Product_Tab($array) {
 	$Add_Tab = array(
-						'label' => __('FAQs', 'EWD_UFAQ'),
+						'label' => __('FAQs', 'ultimate-faqs'),
 						'target' => 'ewd_ufaq_faqs',
 						'class' => array()
 		);
@@ -101,20 +101,20 @@ function EWD_UFAQ_WooCommerce_Product_Page_FAQs() {
 	echo "<div id='ewd_ufaq_faqs' class='panel woocommerce_options_panel'>";
 
 	echo "<div class='ewd-ufaq-explanation'>";
-	echo __("You can use the form below to select which FAQs to display for this product, or leave it blank to use the default category naming system.", 'EWD_UFAQ');
+	echo __("You can use the form below to select which FAQs to display for this product, or leave it blank to use the default category naming system.", 'ultimate-faqs');
 	echo "</div>";
 
 	echo "<div id='ewd-ufaq-add-delete-faq-form-container'>";
 	echo "<div id='ewd-ufaq-add-faq-form-div'>";
 	echo "<form id='ewd-ufaq-add-faq-form'>";
 	echo "<select class='ewd-ufaq-category-filter' name='ewd-ufaq-category-filter'>";
-	echo "<option value=''>" . __("All Categories", 'EWD_UFAQ') . "</option>";
+	echo "<option value=''>" . __("All Categories", 'ultimate-faqs') . "</option>";
 	foreach ($Categories as $Category) {echo "<option value='" . $Category->term_id . "'>" . $Category->name . "</option>";}
 	echo "</select>";
 	echo "<table class='form-table ewd-ufaq-faq-add-table'>";
 	echo "<tr>";
-	echo "<th>" . __("Add?", 'EWD_UFAQ') . "</th>";
-	echo "<th>" . __("FAQ", 'EWD_UFAQ') . "</th>";
+	echo "<th>" . __("Add?", 'ultimate-faqs') . "</th>";
+	echo "<th>" . __("FAQ", 'ultimate-faqs') . "</th>";
 	echo "</tr>";
 	foreach ($All_FAQs as $FAQ) {
 		echo "<tr class='ewd-ufaq-faq-row' data-faqid='" . $FAQ->ID . "'>";
@@ -124,7 +124,7 @@ function EWD_UFAQ_WooCommerce_Product_Page_FAQs() {
 	}
 	echo "</table>";
 	echo "</form>";
-	echo "<button class='ewd-ufaq-add-faq-button'>" . __('Add FAQs', 'EWD_UFAQ') . "</button>";
+	echo "<button class='ewd-ufaq-add-faq-button'>" . __('Add FAQs', 'ultimate-faqs') . "</button>";
 	echo "</div>"; // ewd-ufaq-add-faq-form-div
 
 	echo "<div id='ewd-ufaq-delete-faq-form-div'>";
@@ -132,8 +132,8 @@ function EWD_UFAQ_WooCommerce_Product_Page_FAQs() {
 	echo "<input type='hidden' id='ewd-ufaq-post-id' value='" . $thepostid . "' />";
 	echo "<table class='form-table ewd-ufaq-delete-table'>";
 	echo "<tr>";
-	echo "<th>" . __("Delete?", 'EWD_UFAQ') . "</th>";
-	echo "<th>" . __("FAQ", 'EWD_UFAQ') . "</th>";
+	echo "<th>" . __("Delete?", 'ultimate-faqs') . "</th>";
+	echo "<th>" . __("FAQ", 'ultimate-faqs') . "</th>";
 	echo "</tr>";
 	foreach ($Current_FAQs as $FAQ_ID) {
 		$FAQ = get_post($FAQ_ID);
@@ -145,7 +145,7 @@ function EWD_UFAQ_WooCommerce_Product_Page_FAQs() {
 	}
 	echo "</table>";
 	echo "</form>";
-	echo "<button class='ewd-ufaq-delete-faq-button'>" . __('Delete FAQs', 'EWD_UFAQ') . "</button>";
+	echo "<button class='ewd-ufaq-delete-faq-button'>" . __('Delete FAQs', 'ultimate-faqs') . "</button>";
 	echo "</div>"; // ewd-ufaq-delete-faq-form-div
 	echo "</div>"; // ewd-ufaq-add-delete-faq-form-container
 	echo "</div>";

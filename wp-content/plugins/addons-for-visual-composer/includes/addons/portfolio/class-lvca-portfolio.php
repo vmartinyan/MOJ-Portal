@@ -1,10 +1,10 @@
 <?php
 
 /*
-Widget Name: Livemesh Portfolio
-Description: Display portfolio items from Jetpack custom post types in multi-column grid.
+Widget Name: Livemesh Grid
+Description: Display posts or custom post types in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Portfolio {
@@ -60,11 +60,11 @@ class LVCA_Portfolio {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-isotope', LVCA_PLUGIN_URL . 'assets/js/isotope.pkgd' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-isotope', LVCA_PLUGIN_URL . 'assets/js/isotope.pkgd' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-imagesloaded', LVCA_PLUGIN_URL . 'assets/js/imagesloaded.pkgd' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-imagesloaded', LVCA_PLUGIN_URL . 'assets/js/imagesloaded.pkgd' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-portfolio', plugin_dir_url(__FILE__) . 'js/portfolio' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-portfolio', plugin_dir_url(__FILE__) . 'js/portfolio' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-portfolio', plugin_dir_url(__FILE__) . 'css/style.css', array(), LVCA_VERSION);
 
@@ -125,14 +125,15 @@ class LVCA_Portfolio {
 
             ob_start(); ?>
 
-            <div class="lvca-portfolio-wrap lvca-container">
+            <?php
+            // Check if any taxonomy filter has been applied
+            $chosen_terms = $this->get_chosen_terms($query_args);
+            if (empty($chosen_terms))
+                $this->_taxonomy_filter = $settings['taxonomy_filter'];
 
-                <?php
-                // Check if any taxonomy filter has been applied
-                $chosen_terms = $this->get_chosen_terms($query_args);
-                if (empty($chosen_terms))
-                    $this->_taxonomy_filter = $settings['taxonomy_filter'];
-                ?>
+            ?>
+
+            <div class="lvca-portfolio-wrap lvca-container">
 
                 <?php $column_style = lvca_get_column_class(intval($settings['per_line'])); ?>
 
@@ -160,7 +161,7 @@ class LVCA_Portfolio {
                      data-tablet_width="<?php echo $settings['tablet_width']; ?>"
                      data-mobile_gutter="<?php echo $settings['mobile_gutter']; ?>"
                      data-mobile_width="<?php echo $settings['mobile_width']; ?>"
-                     data-isotope-options='{ "itemSelector": ".lvca-portfolio-item", "layoutMode": "<?php echo esc_attr($settings['layout_mode']); ?>" }'>
+                     data-isotope='{ "itemSelector": ".lvca-portfolio-item", "layoutMode": "<?php echo esc_attr($settings['layout_mode']); ?>" }'>
 
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
@@ -487,4 +488,9 @@ class LVCA_Portfolio {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_portfolio extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Portfolio')) {
+    new LVCA_Portfolio();
 }

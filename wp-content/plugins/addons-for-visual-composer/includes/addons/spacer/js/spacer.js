@@ -25,7 +25,7 @@ jQuery(function ($) {
         custom_css += ' @media only screen and (max-width: ' + mobile_width + 'px) { ' + id_selector + ' { height:' + mobile_spacing + 'px; } } ';
 
     });
-    if (custom_css != '') {
+    if (custom_css !== '') {
         custom_css = '<style type="text/css">' + custom_css + '</style>';
         $('head').append(custom_css);
     }

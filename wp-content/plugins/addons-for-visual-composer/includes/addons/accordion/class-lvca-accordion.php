@@ -4,7 +4,7 @@
 Widget Name: Livemesh Accordion
 Description: Displays collapsible content panels to help display information when space is limited.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 
@@ -29,7 +29,7 @@ class LVCA_Accordion {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-accordion', plugin_dir_url(__FILE__) . 'js/accordion' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-accordion', plugin_dir_url(__FILE__) . 'js/accordion' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-accordion', plugin_dir_url(__FILE__) . 'css/style.css', array(), LVCA_VERSION);
     }
@@ -173,4 +173,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_panel extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Accordion')) {
+    new LVCA_Accordion();
 }

@@ -15,6 +15,7 @@ if (typeof (jQuery) != 'undefined') {
 
                 init: function () {
                     this.carousel();
+                    this.output_custom_css();
                 },
 
                 isMobile: function () {
@@ -41,6 +42,16 @@ if (typeof (jQuery) != 'undefined') {
                     return prefix;
                 },
 
+                output_custom_css: function () {
+
+                    var custom_css = lvca_settings['custom_css'];
+                    if (custom_css !== undefined && custom_css !== '') {
+                        custom_css = '<style type="text/css">' + custom_css + '</style>';
+                        $('head').append(custom_css);
+                    }
+                },
+
+
                 carousel: function () {
 
                     if ($().slick === undefined) {
@@ -53,35 +64,37 @@ if (typeof (jQuery) != 'undefined') {
 
                         var carousel_elem = $(this);
 
-                        var arrows = carousel_elem.data('arrows') ? true : false;
+                        var settings = carousel_elem.data('settings');
 
-                        var dots = carousel_elem.data('dots') ? true : false;
+                        var arrows = settings['arrows'] ? true : false;
 
-                        var autoplay = carousel_elem.data('autoplay') ? true : false;
+                        var dots = settings['dots'] ? true : false;
 
-                        var autoplay_speed = carousel_elem.data('autoplay_speed') || 3000;
+                        var autoplay = settings['autoplay'] ? true : false;
 
-                        var animation_speed = carousel_elem.data('animation_speed') || 300;
+                        var autoplay_speed = parseInt(settings['autoplay_speed']) || 3000;
 
-                        var fade = carousel_elem.data('fade') ? true : false;
+                        var animation_speed = parseInt(settings['animation_speed']) || 300;
 
-                        var pause_on_hover = carousel_elem.data('pause_on_hover') ? true : false;
+                        var fade = settings['fade'] ? true : false;
 
-                        var display_columns = carousel_elem.data('display_columns') || 4;
+                        var pause_on_hover = settings['pause_on_hover'] ? true : false;
 
-                        var scroll_columns = carousel_elem.data('scroll_columns') || 4;
+                        var display_columns = parseInt(settings['display_columns']) || 4;
 
-                        var tablet_width = carousel_elem.data('tablet_width') || 800;
+                        var scroll_columns = parseInt(settings['scroll_columns']) || 4;
 
-                        var tablet_display_columns = carousel_elem.data('tablet_display_columns') || 2;
+                        var tablet_width = parseInt(settings['tablet_width']) || 800;
 
-                        var tablet_scroll_columns = carousel_elem.data('tablet_scroll_columns') || 2;
+                        var tablet_display_columns = parseInt(settings['tablet_display_columns']) || 2;
 
-                        var mobile_width = carousel_elem.data('mobile_width') || 480;
+                        var tablet_scroll_columns = parseInt(settings['tablet_scroll_columns']) || 2;
 
-                        var mobile_display_columns = carousel_elem.data('mobile_display_columns') || 1;
+                        var mobile_width = parseInt(settings['mobile_width']) || 480;
 
-                        var mobile_scroll_columns = carousel_elem.data('mobile_scroll_columns') || 1;
+                        var mobile_display_columns = parseInt(settings['mobile_display_columns']) || 1;
+
+                        var mobile_scroll_columns = parseInt(settings['mobile_scroll_columns']) || 1;
 
                         carousel_elem.slick({
                             arrows: arrows,

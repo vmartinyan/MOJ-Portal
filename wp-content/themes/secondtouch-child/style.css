@@ -182,8 +182,6 @@ a[rel~="wp-video-lightbox"] {
     color: #787878;
 }
 
-
-
 #sub-footer > div{
     background-color: #f5f5f5 !important;
     padding-top: 10px !important;
@@ -200,9 +198,6 @@ a[rel~="wp-video-lightbox"] {
 .ult_tabmenu.style2 li.current a, .ult_tabmenu.style2 li.ult_tab_li a:hover {
     margin-top: 7px;
 }
-
-
-
 
 /*Tables*/
 .tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc {

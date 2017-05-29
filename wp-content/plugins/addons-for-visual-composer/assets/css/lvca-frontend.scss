@@ -6,9 +6,6 @@
 
 /* --------------- Reset styles --------- */
 
-.panel-grid .widget {
-  overflow: initial;
-  }
 .lvca-container {
   ol, ul, ol li, ul li, ol:hover, ul:hover, ul li:hover, ol li:hover, ol li a, ul li a, ol li a:hover, ul li a:hover, img {
     padding: 0;
@@ -230,6 +227,10 @@ $grid-columns: 12;
 /* --------------- Flexslider Styles -------------- */
 
 .lvca-container {
+  .lvca-flex-direction-nav {
+    padding: 0 !important;
+    margin: 0 !important;
+    }
   .lvca-flex-direction-nav li {
     position: initial;
     }
@@ -251,6 +252,7 @@ $grid-columns: 12;
     text-align: center;
     color: #aaa;
     @include vendorize(transition, all 0.3s ease-in-out 0s);
+    outline: none;
     &:before, &:hover:before {
       margin: 2px;
       vertical-align: middle;
@@ -288,6 +290,8 @@ $grid-columns: 12;
     position: absolute;
     bottom: -40px;
     text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
     li, li:hover {
       margin: 0 8px 0 0;
       padding: 0;
@@ -304,7 +308,7 @@ $grid-columns: 12;
       @include vendorize(transition, all 0.2s ease-in 0s);
       display: inline-block;
       vertical-align: middle;
-
+      outline: none;
       .lvca-dark-bg & {
         background: #ccc;
         border-color: #ccc;
@@ -349,6 +353,7 @@ $grid-columns: 12;
     @include vendorize(transition, all 0.3s ease-in-out 0s);
     overflow: hidden;
     box-shadow: none;
+    outline: none;
     &:before {
       margin: 2px;
       vertical-align: middle;
@@ -382,10 +387,13 @@ $grid-columns: 12;
   ul.slick-dots {
     width: 100%;
     position: absolute;
-    bottom: -40px;
+    bottom: -30px;
     text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
     li {
-      margin: 0 8px 0 0;
+      margin: 0 8px 0 0 !important;
+      padding: 0 !important;
       display: inline-block;
       font-size: 0;
       }
@@ -397,19 +405,24 @@ $grid-columns: 12;
       width: 12px;
       height: 12px;
       box-shadow: none;
-      @include vendorize(transition, all 0.3s ease-in-out 0s);
+      @include vendorize(transition, background 0.3s ease-in-out 0s);
       font-size: 0;
       .lvca-dark-bg & {
         background: #888 !important;
         border-color: #888 !important;
         }
       }
-    li button:hover {
+    li button:hover, li.slick-active button {
       background: none !important;
       border-color: #aaa !important;
       }
+    li.slick-active button {
+      width: 14px;
+      height: 14px;
     }
   }
+  }
+
 /* -------- Widget separator headline ------------ */
 
 .lvca-widget-heading {

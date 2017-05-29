@@ -30,7 +30,7 @@ jQuery(function ($) {
         
         /* --------- Custom CSS Generation --------------- */
 
-        portfolio_elem = $(this).find('.lvca-portfolio');
+        var portfolio_elem = $(this).find('.lvca-portfolio');
 
         var id_selector = '#' + portfolio_elem.attr('id');
 
@@ -53,7 +53,7 @@ jQuery(function ($) {
         custom_css += ' @media only screen and (max-width: ' + mobile_width + 'px) { ' + id_selector + '.lvca-portfolio { margin-left: -' + mobile_gutter + 'px; margin-right: -' + mobile_gutter + 'px; } ' + id_selector + '.lvca-portfolio .lvca-portfolio-item { padding:' + mobile_gutter + 'px; } } ';
     });
 
-    if (custom_css != '') {
+    if (custom_css !== '') {
         custom_css = '<style type="text/css">' + custom_css + '</style>';
         $('head').append(custom_css);
     }

@@ -4,7 +4,7 @@
 Widget Name: Livemesh Testimonials
 Description: Display testimonials from your clients/customers in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 
@@ -45,7 +45,7 @@ class LVCA_Testimonials {
         ), $atts));
 
         $this->_per_line = $per_line;
-        
+
         ob_start();
 
         ?>
@@ -152,7 +152,7 @@ class LVCA_Testimonials {
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_testimonials'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-testimonial',
-                    "category" => __('Testimonials', 'livemesh-vc-addons'),
+                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
                     "params" => array(
                         // add params same as with any other content element
                         array(
@@ -198,4 +198,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_testimonial extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Testimonials')) {
+    new LVCA_Testimonials();
 }

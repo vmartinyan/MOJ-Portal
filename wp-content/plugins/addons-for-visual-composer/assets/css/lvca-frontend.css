@@ -11,9 +11,6 @@ html {
   box-sizing: inherit; }
 
 /* --------------- Reset styles --------- */
-.panel-grid .widget {
-  overflow: initial; }
-
 .lvca-container ol, .lvca-container ul, .lvca-container ol li, .lvca-container ul li, .lvca-container ol:hover, .lvca-container ul:hover, .lvca-container ul li:hover, .lvca-container ol li:hover, .lvca-container ol li a, .lvca-container ul li a, .lvca-container ol li a:hover, .lvca-container ul li a:hover, .lvca-container img {
   padding: 0;
   margin: 0;
@@ -225,6 +222,9 @@ html {
     width: 100%; } }
 
 /* --------------- Flexslider Styles -------------- */
+.lvca-container .lvca-flex-direction-nav {
+  padding: 0 !important;
+  margin: 0 !important; }
 .lvca-container .lvca-flex-direction-nav li {
   position: initial; }
 .lvca-container .lvca-flex-direction-nav a, .lvca-container .lvca-flex-direction-nav a:hover {
@@ -255,7 +255,8 @@ html {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -ms-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s; }
+  transition: all 0.3s ease-in-out 0s;
+  outline: none; }
   .lvca-container .lvca-flex-direction-nav a:before, .lvca-container .lvca-flex-direction-nav a:hover:before, .lvca-container .lvca-flex-direction-nav a:hover:before, .lvca-container .lvca-flex-direction-nav a:hover:hover:before {
     margin: 2px;
     vertical-align: middle;
@@ -284,7 +285,9 @@ html {
   width: 100%;
   position: absolute;
   bottom: -40px;
-  text-align: center; }
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important; }
   .lvca-container .lvca-flex-control-nav li, .lvca-container .lvca-flex-control-nav li:hover {
     margin: 0 8px 0 0;
     padding: 0;
@@ -302,7 +305,8 @@ html {
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    outline: none; }
     .lvca-dark-bg .lvca-container .lvca-flex-control-nav li a, .lvca-dark-bg .lvca-container .lvca-flex-control-nav li a:hover {
       background: #ccc;
       border-color: #ccc; }
@@ -349,7 +353,8 @@ html {
   -ms-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   overflow: hidden;
-  box-shadow: none; }
+  box-shadow: none;
+  outline: none; }
   .lvca-container button.slick-prev:before, .lvca-container button.slick-next:before {
     margin: 2px;
     vertical-align: middle; }
@@ -375,10 +380,13 @@ html {
 .lvca-container ul.slick-dots {
   width: 100%;
   position: absolute;
-  bottom: -40px;
-  text-align: center; }
+  bottom: -30px;
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important; }
   .lvca-container ul.slick-dots li {
-    margin: 0 8px 0 0;
+    margin: 0 8px 0 0 !important;
+    padding: 0 !important;
     display: inline-block;
     font-size: 0; }
   .lvca-container ul.slick-dots li button {
@@ -389,17 +397,20 @@ html {
     width: 12px;
     height: 12px;
     box-shadow: none;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    -ms-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: background 0.3s ease-in-out 0s;
+    -moz-transition: background 0.3s ease-in-out 0s;
+    -ms-transition: background 0.3s ease-in-out 0s;
+    transition: background 0.3s ease-in-out 0s;
     font-size: 0; }
     .lvca-dark-bg .lvca-container ul.slick-dots li button {
       background: #888 !important;
       border-color: #888 !important; }
-  .lvca-container ul.slick-dots li button:hover {
+  .lvca-container ul.slick-dots li button:hover, .lvca-container ul.slick-dots li.slick-active button {
     background: none !important;
     border-color: #aaa !important; }
+  .lvca-container ul.slick-dots li.slick-active button {
+    width: 14px;
+    height: 14px; }
 
 /* -------- Widget separator headline ------------ */
 .lvca-widget-heading {

@@ -64,7 +64,7 @@
                 "tw" => "soc_icon-twitter",
                 "in" => "soc_icon-instagram",
                 "vi" => "soc_icon-vimeo",
-                "lf" => "soc_icon-last_fm",
+                "lf" => "soc_icon-lastfm",
                 "vk" => "soc_icon-rus-vk-01",
                 "yt" => "soc_icon-youtube",
                 "de" => "soc_icon-deviantart",
@@ -72,7 +72,7 @@
                 "pi" => "soc_icon-picasa",
                 "pt" => "soc_icon-pinterest",
                 "wp" => "soc_icon-wordpress",
-                "db" => "soc_icon-dropbox",
+                "db" => "fa fa-dropbox",
                 "rss" => "soc_icon-rss",
             );
 

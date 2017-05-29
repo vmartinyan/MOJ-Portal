@@ -85,7 +85,7 @@ function crum_social_networks ($show){
         "tw" => "soc_icon-twitter",
         "in" => "soc_icon-instagram",
         "vi" => "soc_icon-vimeo",
-        "lf" => "soc_icon-last_fm",
+        "lf" => "soc_icon-lastfm",
         "vk" => "soc_icon-vkontakte",
         "yt" => "soc_icon-youtube",
         "de" => "soc_icon-deviantart",

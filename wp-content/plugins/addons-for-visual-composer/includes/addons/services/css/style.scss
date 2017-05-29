@@ -9,8 +9,8 @@
       font-size: 96px;
       line-height: 1;
       margin-bottom: 20px;
-      color: #aaa;
-    }
+      @include lvca-transition(color);
+      }
     .lvca-image-wrapper img {
       display: block;
       max-width: 100%;

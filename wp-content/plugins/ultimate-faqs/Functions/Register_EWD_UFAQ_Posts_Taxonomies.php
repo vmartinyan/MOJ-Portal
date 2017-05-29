@@ -4,17 +4,17 @@ function EWD_UFAQ_Create_Posttype() {
 		$Slug_Base = get_option("EWD_UFAQ_Slug_Base");
 		
 		$labels = array(
-				'name' => __('FAQs', 'EWD_UFAQ'),
-				'singular_name' => __('FAQ', 'EWD_UFAQ'),
-				'menu_name' => __('FAQs', 'EWD_UFAQ'),
-				'add_new' => __('Add New', 'EWD_UFAQ'),
-				'add_new_item' => __('Add New FAQ', 'EWD_UFAQ'),
-				'edit_item' => __('Edit FAQ', 'EWD_UFAQ'),
-				'new_item' => __('New FAQ', 'EWD_UFAQ'),
-				'view_item' => __('View FAQ', 'EWD_UFAQ'),
-				'search_items' => __('Search FAQs', 'EWD_UFAQ'),
-				'not_found' =>  __('Nothing found', 'EWD_UFAQ'),
-				'not_found_in_trash' => __('Nothing found in Trash', 'EWD_UFAQ'),
+				'name' => __('FAQs', 'ultimate-faqs'),
+				'singular_name' => __('FAQ', 'ultimate-faqs'),
+				'menu_name' => __('FAQs', 'ultimate-faqs'),
+				'add_new' => __('Add New', 'ultimate-faqs'),
+				'add_new_item' => __('Add New FAQ', 'ultimate-faqs'),
+				'edit_item' => __('Edit FAQ', 'ultimate-faqs'),
+				'new_item' => __('New FAQ', 'ultimate-faqs'),
+				'view_item' => __('View FAQ', 'ultimate-faqs'),
+				'search_items' => __('Search FAQs', 'ultimate-faqs'),
+				'not_found' =>  __('Nothing found', 'ultimate-faqs'),
+				'not_found_in_trash' => __('Nothing found in Trash', 'ultimate-faqs'),
 				'parent_item_colon' => ''
 		);
 
@@ -43,17 +43,17 @@ function EWD_UFAQ_Create_Category_Taxonomy() {
 		'hierarchical' => true,
 		// This array of options controls the labels displayed in the WordPress Admin UI
 		'labels' => array(
-			'name' => __('FAQ Categories', 'EWD_UFAQ'),
-			'singular_name' => __('FAQ Category', 'EWD_UFAQ'),
-			'search_items' =>  __('Search FAQ Categories', 'EWD_UFAQ'),
-			'all_items' => __('All FAQ Categories', 'EWD_UFAQ'),
-			'parent_item' => __('Parent FAQ Category', 'EWD_UFAQ'),
-			'parent_item_colon' => __('Parent FAQ Category:', 'EWD_UFAQ'),
-			'edit_item' => __('Edit FAQ Category', 'EWD_UFAQ'),
-			'update_item' => __('Update FAQ Category', 'EWD_UFAQ'),
-			'add_new_item' => __('Add New FAQ Category', 'EWD_UFAQ'),
-			'new_item_name' => __('New FAQ Category Name', 'EWD_UFAQ'),
-			'menu_name' => __('FAQ Categories', 'EWD_UFAQ'),
+			'name' => __('FAQ Categories', 'ultimate-faqs'),
+			'singular_name' => __('FAQ Category', 'ultimate-faqs'),
+			'search_items' =>  __('Search FAQ Categories', 'ultimate-faqs'),
+			'all_items' => __('All FAQ Categories', 'ultimate-faqs'),
+			'parent_item' => __('Parent FAQ Category', 'ultimate-faqs'),
+			'parent_item_colon' => __('Parent FAQ Category:', 'ultimate-faqs'),
+			'edit_item' => __('Edit FAQ Category', 'ultimate-faqs'),
+			'update_item' => __('Update FAQ Category', 'ultimate-faqs'),
+			'add_new_item' => __('Add New FAQ Category', 'ultimate-faqs'),
+			'new_item_name' => __('New FAQ Category Name', 'ultimate-faqs'),
+			'menu_name' => __('FAQ Categories', 'ultimate-faqs'),
 		),
 		'query_var' => true
 	));
@@ -63,17 +63,17 @@ function EWD_UFAQ_Create_Category_Taxonomy() {
 		'hierarchical' => false,
 		// This array of options controls the labels displayed in the WordPress Admin UI
 		'labels' => array(
-			'name' => __('FAQ Tags', 'EWD_UFAQ'),
-			'singular_name' => __('FAQ Tag', 'EWD_UFAQ'),
-			'search_items' =>  __('Search FAQ Tags', 'EWD_UFAQ'),
-			'all_items' => __('All FAQ Tags', 'EWD_UFAQ'),
-			'parent_item' => __('Parent FAQ Tag', 'EWD_UFAQ'),
-			'parent_item_colon' => __('Parent FAQ Tag:', 'EWD_UFAQ'),
-			'edit_item' => __('Edit FAQ Tag', 'EWD_UFAQ'),
-			'update_item' => __('Update FAQ Tag', 'EWD_UFAQ'),
-			'add_new_item' => __('Add New FAQ Tag', 'EWD_UFAQ'),
-			'new_item_name' => __('New FAQ Tag Name', 'EWD_UFAQ'),
-			'menu_name' => __('FAQ Tags', 'EWD_UFAQ'),
+			'name' => __('FAQ Tags', 'ultimate-faqs'),
+			'singular_name' => __('FAQ Tag', 'ultimate-faqs'),
+			'search_items' =>  __('Search FAQ Tags', 'ultimate-faqs'),
+			'all_items' => __('All FAQ Tags', 'ultimate-faqs'),
+			'parent_item' => __('Parent FAQ Tag', 'ultimate-faqs'),
+			'parent_item_colon' => __('Parent FAQ Tag:', 'ultimate-faqs'),
+			'edit_item' => __('Edit FAQ Tag', 'ultimate-faqs'),
+			'update_item' => __('Update FAQ Tag', 'ultimate-faqs'),
+			'add_new_item' => __('Add New FAQ Tag', 'ultimate-faqs'),
+			'new_item_name' => __('New FAQ Tag Name', 'ultimate-faqs'),
+			'menu_name' => __('FAQ Tags', 'ultimate-faqs'),
 		)
 	));
 }

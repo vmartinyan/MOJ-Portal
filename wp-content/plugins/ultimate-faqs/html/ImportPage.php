@@ -20,7 +20,7 @@
 <h4>Import FAQs from a spreadsheet</h4>
 <form method="post" action="admin.php?page=EWD-UFAQ-Options&DisplayPage=ImportPosts&Action=EWD_UFAQ_ImportFaqsFromSpreadsheet" enctype="multipart/form-data">
 <div class="form-field form-required">
-		<label for="FAQs_Spreadsheet"><?php _e("Spreadhsheet Containing FAQs", 'EWD_UFAQ') ?></label><br />
+		<label for="FAQs_Spreadsheet"><?php _e("Spreadhsheet Containing FAQs", 'ultimate-faqs') ?></label><br />
 		<input name="FAQs_Spreadsheet" id="FAQs_Spreadsheet" type="file" value=""/>
 </div>
 

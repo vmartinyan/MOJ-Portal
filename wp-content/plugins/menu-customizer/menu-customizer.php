@@ -11,7 +11,7 @@
  * Plugin Name: Crumina Menu Customizer
  * Plugin URI:  http://crumina.net
  * Description: Customization of wordpress menu items
- * Version:     1.5.9
+ * Version:     1.6
  * Author:      Liondekam
  * Author URI:  http://crumina.net
  * Text Domain: crum

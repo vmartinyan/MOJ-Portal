@@ -888,14 +888,13 @@ article.post .entry-title {
 * https://pictonic.co/license
 --------------------------------------------------------------*/
 @font-face {
-    font-family: 'soc-icons';
-    src: url('../fonts/soc-icons.eot?66917052');
-    src: url('../fonts/soc-icons.eot?66917052#iefix') format('embedded-opentype'),
-    url('../fonts/soc-icons.woff?66917052') format('woff'),
-    url('../fonts/soc-icons.ttf?66917052') format('truetype'),
-    url('../fonts/soc-icons.svg?66917052#soc-icons') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'soc-icons';
+	src:
+			url('../fonts/soc-icons.ttf?tehhot') format('truetype'),
+			url('../fonts/soc-icons.woff?tehhot') format('woff'),
+			url('../fonts/soc-icons.svg?tehhot#soc-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 [class^="soc_icon-"], [class*=" soc_icon-"] {
@@ -913,6 +912,10 @@ article.post .entry-title {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+
+.soc_icon-dropbox:before {
+	content: "\e900";
+}
 .soc_icon-modelmayhem:before {
 	content: "\e000";
 }
@@ -1174,6 +1177,9 @@ article.post .entry-title {
 .soc_icon-500px:before {
 	content: "\e056";
 }
+.soc_icon-instagram:before {
+	content: "\e057";
+}
 .soc_icon-wordpress:before {
 	content: "\e058";
 }
@@ -1237,6 +1243,9 @@ article.post .entry-title {
 .soc_icon-deezer:before {
 	content: "\e06c";
 }
+.soc_icon-medium:before {
+	content: "\e06d";
+}
 .soc_icon-telegram:before {
 	content: "\e06e";
 }
@@ -1288,9 +1297,6 @@ article.post .entry-title {
 .soc_icon-mumble:before {
 	content: "\e07e";
 }
-.soc_icon-medium:before {
-	content: "\e06d";
-}
 .soc_icon-bebee:before {
 	content: "\e07f";
 }
@@ -1302,9 +1308,6 @@ article.post .entry-title {
 }
 .soc_icon-formulr:before {
 	content: "\e082";
-}
-.soc_icon-instagram:before {
-	content: "\e057";
 }
 .soc_icon-battlenet:before {
 	content: "\e083";
@@ -1336,11 +1339,11 @@ article.post .entry-title {
 .soc_icon-overwatch:before {
 	content: "\e08c";
 }
-.soc_icon-warcraft:before {
-	content: "\e08e";
-}
 .soc_icon-opera:before {
 	content: "\e08d";
+}
+.soc_icon-warcraft:before {
+	content: "\e08e";
 }
 .soc_icon-starcraft:before {
 	content: "\e08f";
@@ -1366,6 +1369,7 @@ article.post .entry-title {
 .soc_icon-zapier:before {
 	content: "\e096";
 }
+
 
 
 

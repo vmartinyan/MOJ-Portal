@@ -32,7 +32,7 @@ function curum_scripts() {
      * Check if WooCommerce is active
      **/
 	if ( class_exists('woocommerce')  ) {
-		wp_enqueue_style('woocommerce-css', get_template_directory_uri() . '/assets/css/woocommerce.css', false, null);
+		wp_enqueue_style('woocommerce-theme', get_template_directory_uri() . '/assets/css/woocommerce.css', false, null);
 	}
 
     if ( in_array( 'js_composer/js_composer.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {

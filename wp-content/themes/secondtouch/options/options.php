@@ -343,14 +343,6 @@ function setup_framework_options(){
 				'default' => '0'
 			),
 			array(
-				'id' => 'custom_portfolio-slug',
-				'type' => 'text',
-				'title' => __('Custom slug for portfolio items', 'crum'),
-				'sub_desc' => __('<p>After change please go to <a href="options-permalink.php">Settings -> Permalinks</a> and press "Save changes" button to Save New permalinks</p>', 'crum'),
-				'desc' => __('<p>Please write on latin without spaces</p>', 'crum'),
-				'default' => ''
-			),
-			array(
 				'id' => 'top_adress_field',
 				'type' => 'textarea',
 				'title' => __('Top adress panel', 'crum'),
@@ -928,7 +920,6 @@ function setup_framework_options(){
 		'icon' => 'awesome-camera',
 		//Lets leave this as a blank section, no options just some intro text set above.
 		'fields' => array(
-
 			array(
 				'id' => 'portfolio_page_select',
 				'type' => 'select',
@@ -936,7 +927,14 @@ function setup_framework_options(){
 				'desc' => __('Please select main portfolio page (for proper urls)', 'crum'),
 				'options' => crum_portfolio_list(),
 			),
-
+			array(
+				'id' => 'custom_portfolio-slug',
+				'type' => 'text',
+				'title' => __('Custom slug for portfolio items', 'crum'),
+				'sub_desc' => __('<p>After change please go to <a href="options-permalink.php">Settings -> Permalinks</a> and press "Save changes" button to Save New permalinks</p>', 'crum'),
+				'desc' => __('<p>Please write on latin without spaces</p>', 'crum'),
+				'default' => ''
+			),
 			array(
 				'id' => 'folio_breadcrumb_type',
 				'type' => 'button_set', //the field type

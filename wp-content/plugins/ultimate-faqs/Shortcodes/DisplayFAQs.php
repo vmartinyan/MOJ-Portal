@@ -27,6 +27,7 @@ function Display_FAQs($atts) {
     $Socialmedia = explode(",", $Socialmedia_String);
 
     $Group_By_Category = get_option("EWD_UFAQ_Group_By_Category");
+    $Group_By_Category_Count = get_option("EWD_UFAQ_Group_By_Category_Count");
 	$Group_By_Order_By = get_option("EWD_UFAQ_Group_By_Order_By");
 	$Group_By_Order = get_option("EWD_UFAQ_Group_By_Order");
 	$Order_By_Setting = get_option("EWD_UFAQ_Order_By");
@@ -37,19 +38,19 @@ function Display_FAQs($atts) {
 	$Hide_Blank_Fields = get_option("EWD_UFAQ_Hide_Blank_Fields");
 	
 	$Posted_Label = get_option("EWD_UFAQ_Posted_Label");
-		if ($Posted_Label == "") {$Posted_Label = __("Posted ", 'EWD_UFAQ');}
+		if ($Posted_Label == "") {$Posted_Label = __("Posted ", 'ultimate-faqs');}
 	$By_Label = get_option("EWD_UFAQ_By_Label");
-		if ($By_Label == "") {$By_Label = __("by ", 'EWD_UFAQ');}
+		if ($By_Label == "") {$By_Label = __("by ", 'ultimate-faqs');}
 	$On_Label = get_option("EWD_UFAQ_On_Label");
-		if ($On_Label == "") {$On_Label = __("on ", 'EWD_UFAQ');}
+		if ($On_Label == "") {$On_Label = __("on ", 'ultimate-faqs');}
 	$Category_Label = get_option("EWD_UFAQ_Category_Label");
 	$Tag_Label = get_option("EWD_UFAQ_Tag_Label");
 	$Back_To_Top_Label = get_option("EWD_UFAQ_Back_To_Top_Label");
-		if ($Back_To_Top_Label == "") {$Back_To_Top_Label = __("Back to Top", 'EWD_UFAQ');}
+		if ($Back_To_Top_Label == "") {$Back_To_Top_Label = __("Back to Top", 'ultimate-faqs');}
 	$Permalink_Label = get_option("EWD_UFAQ_Permalink_Label");
-		if ($Permalink_Label == "") {$Permalink_Label = __("Permalink", 'EWD_UFAQ');}
+		if ($Permalink_Label == "") {$Permalink_Label = __("Permalink", 'ultimate-faqs');}
 	$No_Results_Found_Text = get_option("EWD_UFAQ_No_Results_Found_Text");
-		if ($No_Results_Found_Text == "") {$No_Results_Found_Text = __("No result FAQ's contained the term '%s'", 'EWD_UFAQ');}
+		if ($No_Results_Found_Text == "") {$No_Results_Found_Text = __("No result FAQ's contained the term '%s'", 'ultimate-faqs');}
 
 	$UFAQ_Styling_Category_Heading_Type = get_option("EWD_UFAQ_Styling_Category_Heading_Type");
 	$UFAQ_Styling_FAQ_Heading_Type = get_option("EWD_UFAQ_Styling_FAQ_Heading_Type");
@@ -199,8 +200,8 @@ function Display_FAQs($atts) {
 
 	if ($Expand_Collapse_All == "Yes") {
 		$ReturnString .= "<div class='ewd-ufaq-expand-collapse-div'><a>";
-		$ReturnString .= "<span class='ewd-ufaq-expand-all'><span class='ewd-ufaq-toggle-all-symbol'>c</span> " . __("Expand All", 'EWD_UFAQ') . "</span>";
-		$ReturnString .= "<span class='ewd-ufaq-collapse-all ewd-ufaq-hidden'><span class='ewd-ufaq-toggle-all-symbol'>C</span> " . __("Collapse All", 'EWD_UFAQ') . "</span>";
+		$ReturnString .= "<span class='ewd-ufaq-expand-all'><span class='ewd-ufaq-toggle-all-symbol'>c</span> " . __("Expand All", 'ultimate-faqs') . "</span>";
+		$ReturnString .= "<span class='ewd-ufaq-collapse-all ewd-ufaq-hidden'><span class='ewd-ufaq-toggle-all-symbol'>C</span> " . __("Collapse All", 'ultimate-faqs') . "</span>";
 		$ReturnString .= "</div></a>";
 	}
 
@@ -247,7 +248,7 @@ function Display_FAQs($atts) {
 			$ReturnString .= "<div class='ufaq-faq-category-title";
 			if ($Category_Toggle == "Yes") {$ReturnString .= " ufaq-faq-category-title-toggle";}
 			$ReturnString .= "' data-categoryid='" . $Category->term_id . "'>";
-			$ReturnString .= "<" . $UFAQ_Styling_Category_Heading_Type . ">" . $Category->name . "</" . $UFAQ_Styling_Category_Heading_Type . ">";
+			$ReturnString .= "<" . $UFAQ_Styling_Category_Heading_Type . ">" . $Category->name . ($Group_By_Category_Count == "Yes" ? "(" . $FAQ_Query->post_count . ")" : "") . "</" . $UFAQ_Styling_Category_Heading_Type . ">";
 			$ReturnString .= "</div>";
 			$ReturnString .= "<div class='ufaq-faq-category-inner";
 			if ($Category_Toggle == "Yes") {$ReturnString .= " ufaq-faq-category-body-hidden";}
@@ -282,7 +283,7 @@ function Display_FAQs($atts) {
 				}
 
 				$TitlesArray[] = json_encode($faq->post_title);
-				$HeaderString .= "<div class='ufaq-faq-header-title'><a href='' class='ufaq-faq-header-link'  data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'>" . $faq->post_title . "</a></div>";
+				$HeaderString .= "<div class='ufaq-faq-header-title'><a href='' class='ufaq-faq-header-link'  data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'>" . apply_filters('the_title', $faq->post_title) . "</a></div>";
 		
 				$ReturnString .= "<div class='ufaq-faq-div ufaq-faq-display-style-" . $Display_Style . "' id='ufaq-post-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "' data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter . "' itemscope itemtype='http://schema.org/Question'>";	
 		
@@ -292,7 +293,7 @@ function Display_FAQs($atts) {
 				$ReturnString .= "<a class='ewd-ufaq-post-margin'  href='" . get_permalink($faq->ID) . "'><div class='ewd-ufaq-post-margin-symbol " . $Color_Block_Shape . "' id='ewd-ufaq-post-margin-symbol-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'><span id='ewd-ufaq-post-symbol-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter;
 				if ($Display_All_Answers == "Yes") {$ReturnString .= "'>" . $Toggle_Symbol . "</span></div>";}
 				else {$ReturnString .= "'>" . strtolower($Toggle_Symbol) . "</span></div>";}
-				$ReturnString .= "<div class='ufaq-faq-title-text'><" . $UFAQ_Styling_FAQ_Heading_Type . " itemprop='name'>" .$faq->post_title . "</" . $UFAQ_Styling_FAQ_Heading_Type . "></div><div class='ewd-ufaq-clear'></div></a>";
+				$ReturnString .= "<div class='ufaq-faq-title-text'><" . $UFAQ_Styling_FAQ_Heading_Type . " itemprop='name'>" . apply_filters('the_title', $faq->post_title) . "</" . $UFAQ_Styling_FAQ_Heading_Type . "></div><div class='ewd-ufaq-clear'></div></a>";
 				$ReturnString .= "</div>";
 
 				if (strlen($faq->post_excerpt) > 0) {$ReturnString .= "<div class='ufaq-faq-excerpt' id='ufaq-excerpt-" . $faq->ID . "'>" . apply_filters('the_content', html_entity_decode($faq->post_excerpt)) . "</div>";}
@@ -368,7 +369,7 @@ function Display_FAQs($atts) {
 
 					$ReturnString .= "<div class='ewd-ufaq-ratings'>";
 					$ReturnString .= "<div class='ewd-ufaq-ratings-label'>";
-					$ReturnString .= __("Did you find this FAQ helpful?", 'EWD_UFAQ');
+					$ReturnString .= __("Did you find this FAQ helpful?", 'ultimate-faqs');
 					$ReturnString .= "</div>";
 					$ReturnString .= "<div class='ewd-ufaq-rating-button ewd-ufaq-up-vote' data-ratingfaqid='" . $faq->ID . "' itemprop='upvoteCount'>" . $Up_Votes . "</div>";
 					$ReturnString .= "<div class='ewd-ufaq-rating-button ewd-ufaq-down-vote' data-ratingfaqid='" . $faq->ID . "' itemprop='downvoteCount'>" . $Down_Votes . "</div>";

@@ -124,8 +124,8 @@ function EWD_UFAQ_WC_FAQ_Category() {
 
     $ReturnString .= "<table class='form-table ewd-ufaq-faq-add-table'>";
     $ReturnString .= "<tr>";
-    $ReturnString .= "<th>" . __("Add?", 'EWD_UFAQ') . "</th>";
-    $ReturnString .= "<th>" . __("FAQ", 'EWD_UFAQ') . "</th>";
+    $ReturnString .= "<th>" . __("Add?", 'ultimate-faqs') . "</th>";
+    $ReturnString .= "<th>" . __("FAQ", 'ultimate-faqs') . "</th>";
     $ReturnString .= "</tr>";
     foreach ($All_FAQs as $FAQ) {
         $ReturnString .= "<tr class='ewd-ufaq-faq-row' data-faqid='" . $FAQ->ID . "'>";

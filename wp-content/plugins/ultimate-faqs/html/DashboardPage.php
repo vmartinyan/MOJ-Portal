@@ -25,9 +25,9 @@
 <div id="ewd-ufaq-dashboard-top-upgrade">
 	<div id="ewd-ufaq-dashboard-top-upgrade-left">
 		<div id="ewd-dashboard-pro" class="postbox ewd-ufaq-postbox-collapsible" >
-			<div class="handlediv" title="Click to toggle"></div><h3 class='hndle ewd-ufaq-dashboard-h3'><span><?php _e("UPGRADE TO FULL VERSION", 'EWD_UFAQ') ?></span></h3>
+			<div class="handlediv" title="Click to toggle"></div><h3 class='hndle ewd-ufaq-dashboard-h3'><span><?php _e("UPGRADE TO FULL VERSION", 'ultimate-faqs') ?></span></h3>
 			<div class="inside">
-				<h3><?php _e("What you get by upgrading:", 'EWD_UFAQ') ?></h3>
+				<h3><?php _e("What you get by upgrading:", 'ultimate-faqs') ?></h3>
 				<div class="clear"></div>
 				<ul>
 					<li><span>Ability to add a unique FAQ tab to each WooCommerce product page.</span></li>
@@ -43,10 +43,10 @@
 				<div class="full-version-form-div">
 					<form action="edit.php?post_type=ufaq" method="post">
 						<div class="form-field form-required">
-							<!-- <label for="Catalogue_Name"><?php _e("Product Key", 'EWD_UFAQ') ?></label> -->
-							<input name="Key" type="text" value="" size="40" placeholder="<?php _e('Enter product key or free trial code here', 'EWD_UFAQ'); ?>" />
+							<!-- <label for="Catalogue_Name"><?php _e("Product Key", 'ultimate-faqs') ?></label> -->
+							<input name="Key" type="text" value="" size="40" placeholder="<?php _e('Enter product key or free trial code here', 'ultimate-faqs'); ?>" />
 						</div>
-						<input type="submit" name="EWD_UFAQ_Upgrade_To_Full" value="<?php _e('UPGRADE', 'EWD_UFAQ'); ?>">
+						<input type="submit" name="EWD_UFAQ_Upgrade_To_Full" value="<?php _e('UPGRADE', 'ultimate-faqs'); ?>">
 					</form>
 				</div>
 			</div>
@@ -61,10 +61,10 @@
 					<div class="topPart">
 						<?php
 						if(!get_option("EWD_UFAQ_Trial_Happening")){
-							_e("Want to try out the premium features first?", 'EWD_UFAQ');
+							_e("Want to try out the premium features first?", 'ultimate-faqs');
 						}
 						else{
-							_e("Your free trial is currently active", 'EWD_UFAQ');
+							_e("Your free trial is currently active", 'ultimate-faqs');
 						}
 						?>
 					</div>
@@ -93,26 +93,26 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 	<div id="side-sortables" class="metabox-holder ">
 		<div id="EWD_UFAQ_pro" class="postbox " >
 			<div class="handlediv" title="Click to toggle"></div>
-			<h3 class='hndle'><span><?php _e("Thank You!", 'EWD_UFAQ') ?></span></h3>
+			<h3 class='hndle'><span><?php _e("Thank You!", 'ultimate-faqs') ?></span></h3>
 		 	<div class="inside">
-				<?php  if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate FAQs plugin.", "EWD_UFAQ"); ?><br> <a href='https://www.youtube.com/channel/UCZPuaoetCJB1vZOmpnMxJNw'><?php _e("Subscribe to our YouTube channel ", "EWD_UFAQ"); ?></a> <?php _e("for tutorial videos on this and our other plugins!", "EWD_UFAQ");?> </li></ul>
-				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 1.3.1!", "EWD_UFAQ"); ?><br> <a href='https://wordpress.org/support/view/plugin-reviews/ultimate-faqs?filter=5'><?php _e("Please rate our plugin", "EWD_UFAQ"); ?></a> <?php _e("if you find Ultimate FAQs useful!", "EWD_UFAQ");?> </li></ul><?php } ?>
+				<?php  if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate FAQs plugin.", 'ultimate-faqs'); ?><br> <a href='https://www.youtube.com/channel/UCZPuaoetCJB1vZOmpnMxJNw'><?php _e("Subscribe to our YouTube channel ", 'ultimate-faqs'); ?></a> <?php _e("for tutorial videos on this and our other plugins!", 'ultimate-faqs');?> </li></ul>
+				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 1.3.1!", 'ultimate-faqs'); ?><br> <a href='https://wordpress.org/support/view/plugin-reviews/ultimate-faqs?filter=5'><?php _e("Please rate our plugin", 'ultimate-faqs'); ?></a> <?php _e("if you find Ultimate FAQs useful!", 'ultimate-faqs');?> </li></ul><?php } ?>
 
-				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", "EWD_UFAQ"); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", "EWD_UFAQ"); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", "EWD_UFAQ");?> </li></ul>
-				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 2.2.9!", "EWD_UFAQ"); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", "EWD_UFAQ"); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", "EWD_UFAQ");?> </li></ul><?php } */ ?>
+				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", 'ultimate-faqs'); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", 'ultimate-faqs'); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", 'ultimate-faqs');?> </li></ul>
+				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 2.2.9!", 'ultimate-faqs'); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", 'ultimate-faqs'); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", 'ultimate-faqs');?> </li></ul><?php } */ ?>
 
-				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", "EWD_UFAQ"); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", "EWD_UFAQ"); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", "EWD_UFAQ");?>  </li></ul>
-				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 3.0.16!", "EWD_UFAQ"); ?><br> <a href='http://wordpress.org/support/view/plugin-reviews/ultimate-product-catalogue'><?php _e("Please rate our plugin", "EWD_UFAQ"); ?></a> <?php _e("if you find the Ultimate Product Catalogue Plugin useful!", "EWD_UFAQ");?> </li></ul><?php } */ ?>
+				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", 'ultimate-faqs'); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", 'ultimate-faqs'); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", 'ultimate-faqs');?>  </li></ul>
+				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 3.0.16!", 'ultimate-faqs'); ?><br> <a href='http://wordpress.org/support/view/plugin-reviews/ultimate-product-catalogue'><?php _e("Please rate our plugin", 'ultimate-faqs'); ?></a> <?php _e("if you find the Ultimate Product Catalogue Plugin useful!", 'ultimate-faqs');?> </li></ul><?php } */ ?>
 
-				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", "EWD_UFAQ"); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", "EWD_UFAQ"); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", "EWD_UFAQ");?>  </li></ul>
-				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 3.4.8!", "EWD_UFAQ"); ?><br> <a href='http://wordpress.org/plugins/order-tracking/'><?php _e("Try out order tracking plugin ", "EWD_UFAQ"); ?></a> <?php _e("if you ship orders and find the Ultimate Product Catalogue Plugin useful!", "EWD_UFAQ");?> </li></ul><?php } */ ?>
+				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", 'ultimate-faqs'); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", 'ultimate-faqs'); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", 'ultimate-faqs');?>  </li></ul>
+				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 3.4.8!", 'ultimate-faqs'); ?><br> <a href='http://wordpress.org/plugins/order-tracking/'><?php _e("Try out order tracking plugin ", 'ultimate-faqs'); ?></a> <?php _e("if you ship orders and find the Ultimate Product Catalogue Plugin useful!", 'ultimate-faqs');?> </li></ul><?php } */ ?>
 
-				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", "EWD_UFAQ"); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", "EWD_UFAQ"); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", "EWD_UFAQ");?>  </li></ul>
-				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 2.3.9!", "EWD_UFAQ"); ?><br> <a href='http://wordpress.org/support/topic/error-hunt'><?php _e("Please let us know about any small display/functionality errors. ", "EWD_UFAQ"); ?></a> <?php _e("We've noticed a couple, and would like to eliminate as many as possible.", "EWD_UFAQ");?> </li></ul><?php } */ ?>
+				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", 'ultimate-faqs'); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", 'ultimate-faqs'); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", 'ultimate-faqs');?>  </li></ul>
+				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 2.3.9!", 'ultimate-faqs'); ?><br> <a href='http://wordpress.org/support/topic/error-hunt'><?php _e("Please let us know about any small display/functionality errors. ", 'ultimate-faqs'); ?></a> <?php _e("We've noticed a couple, and would like to eliminate as many as possible.", 'ultimate-faqs');?> </li></ul><?php } */ ?>
 
-				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", "EWD_UFAQ"); ?><br> <a href='https://www.youtube.com/channel/UCZPuaoetCJB1vZOmpnMxJNw'><?php _e("Check out our YouTube channel ", "EWD_UFAQ"); ?></a> <?php _e("for tutorial videos on this and our other plugins!", "EWD_UFAQ");?> </li></ul>
-				<?php } elseif ($Full_Version == "Yes") { ?><ul><li><?php _e("Thanks for upgrading to version 3.5.0!", "EWD_UFAQ"); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", "EWD_UFAQ"); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", "EWD_UFAQ");?> </li></ul>
-				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 3.4!", "EWD_UFAQ"); ?><br> <?php _e("Love the plugin but don't need the premium version? Help us speed up product support and development by donating. Thanks for using the plugin!", "EWD_UFAQ");?>
+				<?php /* if (get_option("EWD_UFAQ_Install_Flag") == "Yes") { ?><ul><li><?php _e("Thanks for installing the Ultimate Product Catalogue Plugin.", 'ultimate-faqs'); ?><br> <a href='https://www.youtube.com/channel/UCZPuaoetCJB1vZOmpnMxJNw'><?php _e("Check out our YouTube channel ", 'ultimate-faqs'); ?></a> <?php _e("for tutorial videos on this and our other plugins!", 'ultimate-faqs');?> </li></ul>
+				<?php } elseif ($Full_Version == "Yes") { ?><ul><li><?php _e("Thanks for upgrading to version 3.5.0!", 'ultimate-faqs'); ?><br> <a href='http://www.facebook.com/EtoileWebDesign'><?php _e("Follow us on Facebook", 'ultimate-faqs'); ?></a> <?php _e("to suggest new features or hear about upcoming ones!", 'ultimate-faqs');?> </li></ul>
+				<?php } else { ?><ul><li><?php _e("Thanks for upgrading to version 3.4!", 'ultimate-faqs'); ?><br> <?php _e("Love the plugin but don't need the premium version? Help us speed up product support and development by donating. Thanks for using the plugin!", 'ultimate-faqs');?>
 						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 						<input type="hidden" name="cmd" value="_s-xclick">
 						<input type="hidden" name="hosted_button_id" value="AQLMJFJ62GEFJ">
@@ -224,7 +224,7 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 				$Dashboard_FAQs_Query = new WP_Query($args);
 				$Dashboard_FAQs = $Dashboard_FAQs_Query->get_posts();
 
-				if (sizeOf($Dashboard_FAQs) == 0) {echo "<tr><td colspan='3'>" . __("No FAQs to display yet. Create an FAQ and then view it for it to be displayed here.", 'EWD_UFAQ') . "</td></tr>";}
+				if (sizeOf($Dashboard_FAQs) == 0) {echo "<tr><td colspan='3'>" . __("No FAQs to display yet. Create an FAQ and then view it for it to be displayed here.", 'ultimate-faqs') . "</td></tr>";}
 				else {
 					foreach ($Dashboard_FAQs as $Dashboard_FAQ) { ?>
 						<tr>
@@ -263,16 +263,16 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 <?php if ($Ask_Review_Date < time() and $Install_Time < time() - 3600*24*4) { ?>
 <div id='ewd-ufaq-review-ask-overlay'></div>
 <div class='ewd-ufaq-review-ask-popup'>
-	<div class='ewd-ufaq-review-ask-title'><?php _e('Thank You!', 'EWD_UFAQ'); ?></div>
+	<div class='ewd-ufaq-review-ask-title'><?php _e('Thank You!', 'ultimate-faqs'); ?></div>
 	<div class='ewd-ufaq-review-ask-content'>
-		<p><?php _e('We wanted to thank the users of our plugins for all of their great reviews recently.', 'EWD_UFAQ'); ?></p>
-		<p><?php _e('Your positive feedback and constructive suggestions on how to improve our plugins make coming in to work every day worth it for us.', 'EWD_UFAQ'); ?></p>
-		<p><strong><?php _e("Haven't had a chance to leave a review yet? You can do so at:", 'EWD_UFAQ'); ?></strong></p>
+		<p><?php _e('We wanted to thank the users of our plugins for all of their great reviews recently.', 'ultimate-faqs'); ?></p>
+		<p><?php _e('Your positive feedback and constructive suggestions on how to improve our plugins make coming in to work every day worth it for us.', 'ultimate-faqs'); ?></p>
+		<p><strong><?php _e("Haven't had a chance to leave a review yet? You can do so at:", 'ultimate-faqs'); ?></strong></p>
 		<a href='https://wordpress.org/support/plugin/ultimate-faqs/reviews/' target="_blank" class='ewd-ufaq-review-ask-content-link'>Leave a Review!</a>
 	</div>
 	<div class='ewd-ufaq-review-ask-footer-links'>
-		<div class='ewd-ufaq-hide-review-ask' id="ewd-ufaq-hide-review-ask-week" data-askreviewdelay='7'><?php _e('Ask me in a week', 'EWD_UFAQ'); ?></div>
-		<div class='ewd-ufaq-hide-review-ask' id="ewd-ufaq-hide-review-ask-never" data-askreviewdelay='2000'><?php _e('Never ask me again', 'EWD_UFAQ'); ?></div>
+		<div class='ewd-ufaq-hide-review-ask' id="ewd-ufaq-hide-review-ask-week" data-askreviewdelay='7'><?php _e('Ask me in a week', 'ultimate-faqs'); ?></div>
+		<div class='ewd-ufaq-hide-review-ask' id="ewd-ufaq-hide-review-ask-never" data-askreviewdelay='2000'><?php _e('Never ask me again', 'ultimate-faqs'); ?></div>
 	</div>
 </div>
 <?php } ?>
@@ -283,7 +283,7 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 <!-- A list of the products in the catalogue -->
 <div class="ewd-dashboard-footer">
 <div id='ewd-dashboard-updates' class='ewd-ufaq-updates postbox ewd-ufaq-postbox-collapsible'>
-<h3 class='hndle ewd-ufaq-dashboard-h3' id='ewd-recent-changes'><?php _e("Recent Changes", 'EWD_UFAQ'); ?> <i class="fa fa-cog" aria-hidden="true"></i></h3>
+<h3 class='hndle ewd-ufaq-dashboard-h3' id='ewd-recent-changes'><?php _e("Recent Changes", 'ultimate-faqs'); ?> <i class="fa fa-cog" aria-hidden="true"></i></h3>
 <div class='ewd-dashboard-content' ><?php echo get_option('EWD_UFAQ_Changelog_Content'); ?></div>
 </div>
 
@@ -293,7 +293,7 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 </div>
 
 <div id="ewd-dashboard-plugins" class='ewd-ufaq-plugins postbox ewd-ufaq-postbox-collapsible' >
-	<h3 class='hndle ewd-ufaq-dashboard-h3'><span><?php _e("Goes great with:", 'EWD_UFAQ') ?></span><i class="fa fa-plug" aria-hidden="true"></i></h3>
+	<h3 class='hndle ewd-ufaq-dashboard-h3'><span><?php _e("Goes great with:", 'ultimate-faqs') ?></span><i class="fa fa-plug" aria-hidden="true"></i></h3>
 	<div class="inside">
 		<div class="ewd-dashboard-plugin-icons">
 			<div style="width:50%">

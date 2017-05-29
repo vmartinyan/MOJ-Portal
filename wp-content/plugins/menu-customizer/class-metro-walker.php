@@ -39,7 +39,7 @@ class Crumina_Metro_Nav_Menu extends Walker_Nav_Menu {
 
         $menu_obj = get_term( $theme_locations[$theme_location], 'nav_menu' );
 
-        if ( function_exists('icl_object_id') ) {
+        if ( function_exists('icl_object_id') && !function_exists('pll_is_translated_post_type') ) {
             global $sitepress;
             $current_lang = $sitepress->get_current_language();
             $menu = icl_object_id( $menu_obj->term_id, 'nav_menu', true, $current_lang );
@@ -82,8 +82,8 @@ class Crumina_Metro_Nav_Menu extends Walker_Nav_Menu {
     }
 
 // add main/sub classes to li's and links
-//	function start_el( &$output, $item, $depth = 0, $args = array()) {
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
+
         if ($this->item_id) {
             $slug_menu = $this->item_id;
         } else {

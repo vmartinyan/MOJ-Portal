@@ -33,7 +33,7 @@ function my_custom_post_product() {
 			'labels'        => $labels,
 			'description'   => 'Holds our products and product specific data',
 			'public'        => true,
-			'supports'      => array( 'title', 'editor', 'author', 'thumbnail', 'tags', 'sticky' ),
+			'supports'      => array( 'title', 'editor','excerpt', 'author', 'thumbnail', 'tags', 'sticky' ),
 			'has_archive'   => true,
 			'menu_icon' => 'dashicons-format-gallery', /* the icon for the custom post type menu */
 			'taxonomies'    => array('post_tag'),

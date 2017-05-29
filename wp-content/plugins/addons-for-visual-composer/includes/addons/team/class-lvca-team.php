@@ -4,7 +4,7 @@
 Widget Name: Livemesh Team Members
 Description: Display a list of your team members optionally in a multi-column grid.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 
@@ -209,7 +209,7 @@ class LVCA_Team {
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_team'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-team-member',
-                    "category" => __('Team', 'livemesh-vc-addons'),
+                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
                     "params" => array(
                         // add params same as with any other content element
                         array(
@@ -320,4 +320,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_team_member extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Team')) {
+    new LVCA_Team();
 }

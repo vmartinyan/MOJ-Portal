@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Addons for Visual Composer
- * Plugin URI: http://portfoliotheme.org/visual-composer-addons
+ * Plugin URI: https://www.livemeshthemes.com/visual-composer-addons
  * Description: A collection of premium quality addons or extensions for use in Visual Composer page builder. Visual composer must be installed and activated.
  * Author: Livemesh
- * Author URI: http://portfoliotheme.org/
+ * Author URI: https://www.livemeshthemes.com/
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Version: 1.4
+ * Version: 1.5
  * Text Domain: livemesh-vc-addons
  * Domain Path: languages
  *
@@ -29,8 +29,6 @@
 // Exit if accessed directly
 if (!defined('ABSPATH'))
     exit;
-
-define('LVCA_BUNDLE_JS_SUFFIX', '.min');
 
 if (!class_exists('Livemesh_VC_Addons')) :
 
@@ -61,7 +59,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
 
                 add_action('plugins_loaded', array(self::$instance, 'includes'));
 
-                add_action('plugins_loaded', array(self::$instance, 'setup'));
+                add_action('plugins_loaded', array(self::$instance, 'include_elements'));
 
                 self::$instance->hooks();
 
@@ -97,7 +95,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
 
             // Plugin version
             if (!defined('LVCA_VERSION')) {
-                define('LVCA_VERSION', '1.4');
+                define('LVCA_VERSION', '1.5');
             }
 
             // Plugin Folder Path
@@ -119,6 +117,36 @@ if (!class_exists('Livemesh_VC_Addons')) :
             if (!defined('LVCA_PLUGIN_FILE')) {
                 define('LVCA_PLUGIN_FILE', __FILE__);
             }
+
+            // Plugin Help Page URL
+            if (!defined('LVCA_PLUGIN_HELP_URL')) {
+                define('LVCA_PLUGIN_HELP_URL', admin_url() . 'admin.php?page=livemesh_vc_addons_documentation');
+            }
+
+            $this->setup_debug_constants();
+        }
+
+        private function setup_debug_constants() {
+
+            $enable_debug = false;
+
+            $settings = get_option('lvca_settings');
+
+            if ($settings && isset($settings['lvca_enable_debug']) && $settings['lvca_enable_debug'] == "true")
+                $enable_debug = true;
+
+            // Enable script debugging
+            if (!defined('LVCA_SCRIPT_DEBUG')) {
+                define('LVCA_SCRIPT_DEBUG', $enable_debug);
+            }
+
+            // Minified JS file name suffix
+            if (!defined('LVCA_JS_SUFFIX')) {
+                if ($enable_debug)
+                    define('LVCA_JS_SUFFIX', '');
+                else
+                    define('LVCA_JS_SUFFIX', '.min');
+            }
         }
 
         /**
@@ -127,54 +155,89 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         public function includes() {
 
+            if (is_admin()) {
+                require_once LVCA_PLUGIN_DIR . 'admin/admin-init.php';
+            }
             require_once LVCA_PLUGIN_DIR . 'includes/helper-functions.php';
             require_once LVCA_PLUGIN_DIR . 'includes/mapper-functions.php';
 
-            require_once LVCA_ADDONS_DIR . 'accordion/class-lvca-accordion.php';
-            require_once LVCA_ADDONS_DIR . 'carousel/class-lvca-carousel.php';
-            require_once LVCA_ADDONS_DIR . 'clients/class-lvca-clients.php';
-            require_once LVCA_ADDONS_DIR . 'heading/class-lvca-heading.php';
-            require_once LVCA_ADDONS_DIR . 'spacer/class-lvca-spacer.php';
-            require_once LVCA_ADDONS_DIR . 'odometers/class-lvca-odometers.php';
-            require_once LVCA_ADDONS_DIR . 'piecharts/class-lvca-piecharts.php';
-            require_once LVCA_ADDONS_DIR . 'portfolio/class-lvca-portfolio.php';
-            require_once LVCA_ADDONS_DIR . 'posts-carousel/class-lvca-posts-carousel.php';
-            require_once LVCA_ADDONS_DIR . 'pricing-table/class-lvca-pricing-table.php';
-            require_once LVCA_ADDONS_DIR . 'services/class-lvca-services.php';
-            require_once LVCA_ADDONS_DIR . 'stats-bar/class-lvca-stats-bar.php';
-            require_once LVCA_ADDONS_DIR . 'tabs/class-lvca-tabs.php';
-            require_once LVCA_ADDONS_DIR . 'team/class-lvca-team.php';
-            require_once LVCA_ADDONS_DIR . 'testimonials/class-lvca-testimonials.php';
-            require_once LVCA_ADDONS_DIR . 'testimonials-slider/class-lvca-testimonials-slider.php';
-
-
+            /* Load VC Field Types */
             require_once LVCA_PLUGIN_DIR . 'includes/params/number/class-lvca-number-param.php';
 
         }
 
-        /* Setup all addons with their shortcodes and VC Mappings */
-        public function setup() {
+        /**
+         * Include required files
+         *
+         */
+        public function include_elements() {
 
-            /* Custom VC Elements */
-            new LVCA_Accordion();
-            new LVCA_Carousel();
-            new LVCA_Clients();
-            new LVCA_Heading();
-            new LVCA_Spacer();
-            new LVCA_Odometers();
-            new LVCA_Piecharts();
-            new LVCA_Portfolio();
-            new LVCA_Posts_Carousel();
-            new LVCA_Pricing_Table();
-            new LVCA_Services();
-            new LVCA_Stats_Bars();
-            new LVCA_Tabs();
-            new LVCA_Team();
-            new LVCA_Testimonials();
-            new LVCA_Testimonials_Slider();
+            /* Load VC Addon Elements */
 
-            /* Custom VC Param Types */
-            new LVCA_Number_Param();
+            $deactivate_element_accordion = lvca_get_option('lvca_deactivate_element_accordion', false);
+            if (!$deactivate_element_accordion)
+                require_once LVCA_ADDONS_DIR . 'accordion/class-lvca-accordion.php';
+
+            $deactivate_element_carousel = lvca_get_option('lvca_deactivate_element_carousel', false);
+            if (!$deactivate_element_carousel)
+                require_once LVCA_ADDONS_DIR . 'carousel/class-lvca-carousel.php';
+
+            $deactivate_element_clients = lvca_get_option('lvca_deactivate_element_clients', false);
+            if (!$deactivate_element_clients)
+                require_once LVCA_ADDONS_DIR . 'clients/class-lvca-clients.php';
+
+            $deactivate_element_heading = lvca_get_option('lvca_deactivate_element_heading', false);
+            if (!$deactivate_element_heading)
+                require_once LVCA_ADDONS_DIR . 'heading/class-lvca-heading.php';
+
+            $deactivate_element_odometers = lvca_get_option('lvca_deactivate_element_odometers', false);
+            if (!$deactivate_element_odometers)
+                require_once LVCA_ADDONS_DIR . 'odometers/class-lvca-odometers.php';
+
+            $deactivate_element_piecharts = lvca_get_option('lvca_deactivate_element_piecharts', false);
+            if (!$deactivate_element_piecharts)
+                require_once LVCA_ADDONS_DIR . 'piecharts/class-lvca-piecharts.php';
+
+            $deactivate_element_portfolio = lvca_get_option('lvca_deactivate_element_portfolio', false);
+            if (!$deactivate_element_portfolio)
+                require_once LVCA_ADDONS_DIR . 'portfolio/class-lvca-portfolio.php';
+
+            $deactivate_element_posts_carousel = lvca_get_option('lvca_deactivate_element_posts_carousel', false);
+            if (!$deactivate_element_posts_carousel)
+                require_once LVCA_ADDONS_DIR . 'posts-carousel/class-lvca-posts-carousel.php';
+
+            $deactivate_element_pricing_table = lvca_get_option('lvca_deactivate_element_pricing_table', false);
+            if (!$deactivate_element_pricing_table)
+                require_once LVCA_ADDONS_DIR . 'pricing-table/class-lvca-pricing-table.php';
+
+            $deactivate_element_spacer = lvca_get_option('lvca_deactivate_element_spacer', false);
+            if (!$deactivate_element_spacer)
+                require_once LVCA_ADDONS_DIR . 'spacer/class-lvca-spacer.php';
+
+            $deactivate_element_services = lvca_get_option('lvca_deactivate_element_services', false);
+            if (!$deactivate_element_services)
+                require_once LVCA_ADDONS_DIR . 'services/class-lvca-services.php';
+
+            $deactivate_element_stats_bar = lvca_get_option('lvca_deactivate_element_stats_bar', false);
+            if (!$deactivate_element_stats_bar)
+                require_once LVCA_ADDONS_DIR . 'stats-bar/class-lvca-stats-bar.php';
+
+            $deactivate_element_tabs = lvca_get_option('lvca_deactivate_element_tabs', false);
+            if (!$deactivate_element_tabs)
+                require_once LVCA_ADDONS_DIR . 'tabs/class-lvca-tabs.php';
+
+            $deactivate_element_team = lvca_get_option('lvca_deactivate_element_team', false);
+            if (!$deactivate_element_team)
+                require_once LVCA_ADDONS_DIR . 'team/class-lvca-team.php';
+
+            $deactivate_element_testimonials = lvca_get_option('lvca_deactivate_element_testimonials', false);
+            if (!$deactivate_element_testimonials)
+                require_once LVCA_ADDONS_DIR . 'testimonials/class-lvca-testimonials.php';
+
+            $deactivate_element_testimonials_slider = lvca_get_option('lvca_deactivate_element_testimonials_slider', false);
+            if (!$deactivate_element_testimonials_slider)
+                require_once LVCA_ADDONS_DIR . 'testimonials-slider/class-lvca-testimonials-slider.php';
+
 
         }
 
@@ -212,9 +275,9 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         private function hooks() {
 
-            add_action('admin_enqueue_scripts', array($this, 'load_admin_scripts'), 100);
+            add_action('wp_enqueue_scripts', array($this, 'load_frontend_scripts'), 12);
 
-            add_action('wp_enqueue_scripts', array($this, 'load_frontend_scripts'), 100);
+            add_action('wp_enqueue_scripts', array($this, 'localize_scripts'), 999999);
 
             add_action('init', array($this, 'modify_existing_mappings'), 100);
 
@@ -231,30 +294,33 @@ if (!class_exists('Livemesh_VC_Addons')) :
         public function load_frontend_scripts() {
 
 
+            // Use minified libraries if LVCA_SCRIPT_DEBUG is turned off
+            $suffix = (defined('LVCA_SCRIPT_DEBUG') && LVCA_SCRIPT_DEBUG) ? '' : '.min';
+
             wp_register_style('lvca-frontend-styles', LVCA_PLUGIN_URL . 'assets/css/lvca-frontend.css', array(), LVCA_VERSION);
             wp_enqueue_style('lvca-frontend-styles');
 
             wp_register_style('lvca-icomoon-styles', LVCA_PLUGIN_URL . 'assets/css/icomoon.css', array(), LVCA_VERSION);
             wp_enqueue_style('lvca-icomoon-styles');
 
-            wp_register_script('lvca-frontend-scripts', LVCA_PLUGIN_URL . 'assets/js/lvca-frontend' . LVCA_BUNDLE_JS_SUFFIX . '.js', array(), LVCA_VERSION, true);
+            wp_enqueue_script('waypoints'); // provided by VC itself
+
+            wp_register_script('lvca-modernizr', LVCA_PLUGIN_URL . 'assets/js/modernizr-custom' . $suffix . '.js', array(), LVCA_VERSION, true);
+            wp_enqueue_script('lvca-modernizr');
+
+            wp_register_script('lvca-frontend-scripts', LVCA_PLUGIN_URL . 'assets/js/lvca-frontend' . LVCA_JS_SUFFIX . '.js', array(), LVCA_VERSION, true);
             wp_enqueue_script('lvca-frontend-scripts');
 
         }
 
-        /**
-         * Load Admin Scripts/Styles
-         *
-         */
-        public function load_admin_scripts() {
+        public function localize_scripts() {
 
-            wp_register_style('lvca-admin-styles', LVCA_PLUGIN_URL . 'assets/css/lvca-admin.css', array(), LVCA_VERSION);
-            wp_enqueue_style('lvca-admin-styles');
+            $panels_mobile_width = 780; // default
 
-            wp_register_script('lvca-admin-scripts', LVCA_PLUGIN_URL . 'assets/js/lvca-admin' . LVCA_BUNDLE_JS_SUFFIX . '.js', array(), LVCA_VERSION, true);
-            wp_enqueue_script('lvca-admin-scripts');
+            $custom_css = lvca_get_option('lvca_custom_css', '');
 
-            wp_enqueue_script('jquery-ui-datepicker');
+            wp_localize_script('lvca-frontend-scripts', 'lvca_settings', array('mobile_width' => $panels_mobile_width, 'custom_css' => $custom_css));
+
         }
 
         /**

@@ -2,7 +2,15 @@
 
 function UFAQ_AJAX_Search($atts) {
     global $wp;
+
+    $Custom_CSS = get_option("EWD_UFAQ_Custom_CSS");
     $Auto_Complete_Titles = get_option("EWD_UFAQ_Auto_Complete_Titles");
+
+    $Enter_Question_Label = get_option("EWD_UFAQ_Enter_Question_Label");
+    if ($Enter_Question_Label == "") {$Enter_Question_Label =  __('Enter your question', 'ultimate-faqs');}
+    $Search_Label = get_option("EWD_UFAQ_Search_Label");
+    if ($Search_Label == "") {$Search_Label = __("Search", 'ultimate-faqs');}
+
     $current_url = $_SERVER['REQUEST_URI'];
     $ReturnString = "";
 
@@ -17,15 +25,13 @@ function UFAQ_AJAX_Search($atts) {
             $atts
         )
     );
-  $Enter_Question_Label = get_option("EWD_UFAQ_Enter_Question_Label");
-    if ($Enter_Question_Label == "") {$Enter_Question_Label =  __('Enter your question', "EWD_UFAQ");}
-    $Search_Label = get_option("EWD_UFAQ_Search_Label");
-    if ($Search_Label == "") {$Search_Label = __("Search", 'EWD_UFAQ');}
 
     $ReturnString .= "<style type='text/css'>";
     $ReturnString .= ".ui-autocomplete {background:#FFF; border: #000 solid 1px; max-width:400px; max-height:200px; overflow:auto;}";
     $ReturnString .= $Custom_CSS;
     $ReturnString .= "</style>";
+
+    $ReturnString .= EWD_UFAQ_Add_Modified_Styles();
 
     if ($Auto_Complete_Titles == "Yes") {
         $ReturnString .= "<script>";

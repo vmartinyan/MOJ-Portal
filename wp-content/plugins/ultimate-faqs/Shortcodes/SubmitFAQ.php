@@ -12,10 +12,10 @@ function Insert_Question_Form($atts) {
 		
 	// Get the attributes passed by the shortcode, and store them in new variables for processing
 	extract( shortcode_atts( array(
-		 		'success_message' => __('Thank you for submitting an FAQ.', 'EWD_UFAQ'),
-		 		'submit_faq_form_title' => __('Submit a Question', 'EWD_UFAQ'),
-				'submit_faq_instructions' => __('Please fill out the form below to submit a question.', 'EWD_UFAQ'),
-				'submit_text' => __('Send Question', 'EWD_UFAQ')),
+		 		'success_message' => __('Thank you for submitting an FAQ.', 'ultimate-faqs'),
+		 		'submit_faq_form_title' => __('Submit a Question', 'ultimate-faqs'),
+				'submit_faq_instructions' => __('Please fill out the form below to submit a question.', 'ultimate-faqs'),
+				'submit_text' => __('Send Question', 'ultimate-faqs')),
 		$atts
 		)
 	);
@@ -24,15 +24,15 @@ function Insert_Question_Form($atts) {
 	if (get_option("EWD_UFAQ_Please_Fill_Form_Below_Label") != "") {$submit_faq_instructions = get_option("EWD_UFAQ_Please_Fill_Form_Below_Label");}
 	if (get_option("EWD_UFAQ_Send_Question_Label") != "") {$submit_text = get_option("EWD_UFAQ_Send_Question_Label");}
 	$Question_Title_Label = get_option("EWD_UFAQ_Question_Title_Label");
-	if ($Question_Title_Label == "") {$Question_Title_Label = __("Question Title", 'EWD_UFAQ');}
+	if ($Question_Title_Label == "") {$Question_Title_Label = __("Question Title", 'ultimate-faqs');}
 	$What_Question_Being_Answered_Label = get_option("EWD_UFAQ_What_Question_Being_Answered_Label");
-	if ($What_Question_Being_Answered_Label == "") {$What_Question_Being_Answered_Label = __("What question is being answered?", 'EWD_UFAQ');}
+	if ($What_Question_Being_Answered_Label == "") {$What_Question_Being_Answered_Label = __("What question is being answered?", 'ultimate-faqs');}
 	$Proposed_Answer_Label = get_option("EWD_UFAQ_Proposed_Answer_Label");
-	if ($Proposed_Answer_Label == "") {$Proposed_Answer_Label = __("Proposed Answer", 'EWD_UFAQ');}
+	if ($Proposed_Answer_Label == "") {$Proposed_Answer_Label = __("Proposed Answer", 'ultimate-faqs');}
 	$Review_Author_Label = get_option("EWD_UFAQ_Review_Author_Label");
-	if ($Review_Author_Label == "") {$Review_Author_Label = __("FAQ Author", 'EWD_UFAQ');}
+	if ($Review_Author_Label == "") {$Review_Author_Label = __("FAQ Author", 'ultimate-faqs');}
 	$What_Name_With_Review_Label = get_option("EWD_UFAQ_What_Name_With_Review_Label");
-	if ($What_Name_With_Review_Label == "") {$What_Name_With_Review_Label = __("What name should be displayed with your FAQ?", 'EWD_UFAQ');}
+	if ($What_Name_With_Review_Label == "") {$What_Name_With_Review_Label = __("What name should be displayed with your FAQ?", 'ultimate-faqs');}
 
 	if (isset($_POST['Submit_Question'])) {$user_update = EWD_UFAQ_Submit_Question($success_message);}
 

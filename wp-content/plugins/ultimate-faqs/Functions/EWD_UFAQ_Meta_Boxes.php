@@ -4,7 +4,7 @@ add_filter("get_sample_permalink_html", "EWD_UFAQ_Add_FAQ_Shortcode", 10, 5);
 function EWD_UFAQ_Add_FAQ_Shortcode($HTML, $post_id, $title, $slug, $post) {
 	if ($post->post_type == "ufaq") {
 		$HTML .= "<div class='ewd-ufaq-shortcode-help'>";
-		$HTML .= __("Use the following shortcode to add this FAQ to a page:", 'EWD_UFAQ') . "<br>";
+		$HTML .= __("Use the following shortcode to add this FAQ to a page:", 'ultimate-faqs') . "<br>";
 		$HTML .= "[select-faq faq_id='" . $post_id . "']";
 		$HTML .= "</div>";
 	}
@@ -14,12 +14,12 @@ function EWD_UFAQ_Add_FAQ_Shortcode($HTML, $post_id, $title, $slug, $post) {
 
 add_action("ufaq-category_edit_form_fields", "EWD_UFAQ_Taxonomy_Page", 10, 2);
 function EWD_UFAQ_Taxonomy_Page($tag, $taxonomy) {
-	echo __("FAQ shortcode for this category", 'EWD_UFAQ') . ":<br />[ultimate-faqs include_category='" . $tag->slug . "']";
+	echo __("FAQ shortcode for this category", 'ultimate-faqs') . ":<br />[ultimate-faqs include_category='" . $tag->slug . "']";
 }
 
 add_action( 'add_meta_boxes', 'EWD_UFAQ_Add_Meta_Boxes' );
 function EWD_UFAQ_Add_Meta_Boxes () {
-	add_meta_box("ufaq-meta", __("FAQ Details", 'EWD_UFAQ'), "EWD_UFAQ_Meta_Box", "ufaq", "normal", "high");
+	add_meta_box("ufaq-meta", __("FAQ Details", 'ultimate-faqs'), "EWD_UFAQ_Meta_Box", "ufaq", "normal", "high");
 }
 
 /**
@@ -204,7 +204,7 @@ function EWD_UFAQ_Save_Meta_Box_Data($post_id) {
 					update_post_meta($post_id, "Custom_Field_" . $FAQ_Field_Item['FieldID'], $Value);
 				}
 			}
-			elseif ($InArray == false) {$CustomFieldError = __(" One or more custom field values were incorrect.", 'EWD_UFAQ');}
+			elseif ($InArray == false) {$CustomFieldError = __(" One or more custom field values were incorrect.", 'ultimate-faqs');}
 			unset($Value);
 			unset($InArray);
 			unset($NoFile);

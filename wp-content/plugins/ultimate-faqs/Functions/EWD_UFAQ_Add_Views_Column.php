@@ -1,9 +1,9 @@
 <?php
 // Add in a new column option for the UFAQ post type
 function EWD_UFAQ_Columns_Head($defaults) {
-	$defaults['number_of_views'] = __('# of Views', 'EWD_UFAQ');
-	$defaults['ufaq_categories'] = __('Categories', 'EWD_UFAQ');
-	$defaults['ufaq_ID'] = __('Post ID', 'EWD_UFAQ');
+	$defaults['number_of_views'] = __('# of Views', 'ultimate-faqs');
+	$defaults['ufaq_categories'] = __('Categories', 'ultimate-faqs');
+	$defaults['ufaq_ID'] = __('Post ID', 'ultimate-faqs');
 
 	return $defaults;
 }

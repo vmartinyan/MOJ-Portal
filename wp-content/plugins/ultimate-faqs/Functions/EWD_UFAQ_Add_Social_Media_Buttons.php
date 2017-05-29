@@ -1,7 +1,7 @@
 <?php 
 
 function EWD_UFAQ_Add_Social_Media_Buttons($Social_Media, $Permalink, $Title) {
-    $Text = __("Check out this helpful FAQ", "EWD_UFAQ");
+    $Text = __("Check out this helpful FAQ", 'ultimate-faqs');
 
     $URL_Encoded_Text = urlencode($Text);
     $URL_Encoded_Permalink = urlencode($Permalink);

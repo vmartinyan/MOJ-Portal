@@ -4,7 +4,7 @@
 Widget Name: Livemesh Tabs
 Description: Display tabbed content in variety of styles.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 
@@ -33,7 +33,7 @@ class LVCA_Tabs {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-tabs', plugin_dir_url(__FILE__) . 'js/tabs' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-tabs', plugin_dir_url(__FILE__) . 'js/tabs' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-tabs', plugin_dir_url(__FILE__) . 'css/style.css', array(), LVCA_VERSION);
     }
@@ -450,4 +450,9 @@ if (class_exists('WPBakeryShortCodesContainer')) {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_tab extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Tabs')) {
+    $LVCA_Tabs = new LVCA_Tabs();
 }

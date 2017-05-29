@@ -7,7 +7,7 @@ class EWD_UFAQ_Display_FAQ_Post_List extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'ewd_ufaq_display_faq_post_list', // Base ID
-			__('UFAQ FAQ ID List', 'EWD_UFAQ'), // Name
+			__('UFAQ FAQ ID List', 'ultimate-faqs'), // Name
 			array( 'description' => __( 'Insert FAQ posts using a comma-separated list of post IDs', 'EWD_UFAQ' ), ) // Args
 		);
 	}
@@ -69,7 +69,7 @@ class EWD_UFAQ_Display_Recent_FAQS extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'ewd_ufaq_display_recent_faqs', // Base ID
-			__('Recent FAQs', 'EWD_UFAQ'), // Name
+			__('Recent FAQs', 'ultimate-faqs'), // Name
 			array( 'description' => __( 'Insert a number of the most recent FAQs', 'EWD_UFAQ' ), ) // Args
 		);
 	}
@@ -131,7 +131,7 @@ class EWD_UFAQ_Display_Popular_FAQS extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'ewd_ufaq_display_popular_faqs', // Base ID
-			__('Popular FAQs', 'EWD_UFAQ'), // Name
+			__('Popular FAQs', 'ultimate-faqs'), // Name
 			array( 'description' => __( 'Insert a number of the most popular FAQs', 'EWD_UFAQ' ), ) // Args
 		);
 	}
@@ -193,7 +193,7 @@ class EWD_UFAQ_Display_Random_FAQ extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'ewd_ufaq_display_random_faq', // Base ID
-			__('Random FAQ', 'EWD_UFAQ'), // Name
+			__('Random FAQ', 'ultimate-faqs'), // Name
 			array( 'description' => __( 'Display a random FAQ', 'EWD_UFAQ' ), ) // Args
 		);
 	}
@@ -251,7 +251,7 @@ class EWD_UFAQ_Display_FAQ_Categories extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'ewd_ufaq_display_faq_categories', // Base ID
-			__('UFAQ FAQ Category List', 'EWD_UFAQ'), // Name
+			__('UFAQ FAQ Category List', 'ultimate-faqs'), // Name
 			array( 'description' => __( 'Insert FAQ posts using a comma-separated list of categories', 'EWD_UFAQ' ), ) // Args
 		);
 	}

@@ -25,12 +25,14 @@
 	$Pretty_Permalinks = get_option("EWD_UFAQ_Pretty_Permalinks");
     $Allow_Proposed_Answer = get_option("EWD_UFAQ_Allow_Proposed_Answer");
     $Admin_Question_Notification = get_option("EWD_UFAQ_Admin_Question_Notification");
+    $Admin_Notification_Email = get_option("EWD_UFAQ_Admin_Notification_Email");
 	$FAQ_Auto_Complete_Titles = get_option("EWD_UFAQ_Auto_Complete_Titles");
 	$Slug_Base = get_option("EWD_UFAQ_Slug_Base");
 	$Socialmedia_String = get_option("EWD_UFAQ_Social_Media");
     $Socialmedia = explode(",", $Socialmedia_String);
 
 	$Group_By_Category = get_option("EWD_UFAQ_Group_By_Category");
+	$Group_By_Category_Count = get_option("EWD_UFAQ_Group_By_Category_Count");
 	$Group_By_Order_By = get_option("EWD_UFAQ_Group_By_Order_By");
 	$Group_By_Order = get_option("EWD_UFAQ_Group_By_Order");
 	$Order_By_Setting = get_option("EWD_UFAQ_Order_By");
@@ -130,7 +132,7 @@
 </div>
 
 <br />
-<h3 id="general-options" class="ufaq-options-page-tab-title"><?php _e('General', 'EWD_UFAQ'); ?></h3>
+<h3 id="general-options" class="ufaq-options-page-tab-title"><?php _e('General', 'ultimate-faqs'); ?></h3>
 <table class="form-table">
 <tr>
 <th scope="row">Custom CSS</th>
@@ -194,7 +196,7 @@
 </table>
 
 <br />
-<h3 id="functionality-options" class="ufaq-options-page-tab-title"><?php _e('Functionality', 'EWD_UFAQ'); ?></h3>
+<h3 id="functionality-options" class="ufaq-options-page-tab-title"><?php _e('Functionality', 'ultimate-faqs'); ?></h3>
 
 <table class="form-table">
 <tr>
@@ -240,7 +242,7 @@
 </table>
 
 <br />
-<h3 id="display-options" class="ufaq-options-page-tab-title"><?php _e('Display', 'EWD_UFAQ'); ?></h3>
+<h3 id="display-options" class="ufaq-options-page-tab-title"><?php _e('Display', 'ultimate-faqs'); ?></h3>
 
 <table class="form-table">
 <tr>
@@ -310,7 +312,7 @@
 <div id='Premium' class='ufaq-option-set ufaq-hidden'>
 <h2 id='label-premium-options' class='ufaq-options-page-tab-title'>Premium Options</h2>
 <br />
-<h3 id="premium-display-options" class="ufaq-options-page-tab-title"><?php _e('Display', 'EWD_UFAQ'); ?></h3>
+<h3 id="premium-display-options" class="ufaq-options-page-tab-title"><?php _e('Display', 'ultimate-faqs'); ?></h3>
 <table class="form-table">
 <tr>
 <th scope="row">FAQ Display Style</th>
@@ -366,7 +368,7 @@
 </table>
 
 <br />
-<h3 id="premium-general-options" class="ufaq-options-page-tab-title"><?php _e('General', 'EWD_UFAQ'); ?></h3>
+<h3 id="premium-general-options" class="ufaq-options-page-tab-title"><?php _e('General', 'ultimate-faqs'); ?></h3>
 
 <table class="form-table">
 <tr>
@@ -425,7 +427,7 @@
 </table>
 
 <br />
-<h3 id="premium-woocommerce-options" class="ufaq-options-page-tab-title"><?php _e('WooCommerce', 'EWD_UFAQ'); ?></h3>
+<h3 id="premium-woocommerce-options" class="ufaq-options-page-tab-title"><?php _e('WooCommerce', 'ultimate-faqs'); ?></h3>
 
 <table class="form-table">
 <tr>
@@ -451,7 +453,7 @@
 </table>
 
 <br />
-<h3 id="premium-submit-faq-options" class="ufaq-options-page-tab-title"><?php _e('Submit FAQ', 'EWD_UFAQ'); ?></h3>
+<h3 id="premium-submit-faq-options" class="ufaq-options-page-tab-title"><?php _e('Submit FAQ', 'ultimate-faqs'); ?></h3>
 
 <table class="form-table">
 <tr>
@@ -474,6 +476,15 @@
 	</fieldset>
 </td>
 </tr>
+<tr>
+<th scope="row">Admin Notification Email</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Admin Notification Email</span></legend>
+	<input type='text' name='admin_notification_email' value='<?php echo $Admin_Notification_Email; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> size='60'/>
+	<p>What email address should notificatiions be sent to if "Admin Question Notifications" are set to "Yes" above? If blank, the default WordPress admin email will be used.</p>
+	</fieldset>
+</td>
+</tr>
 </table>
 </div>
 
@@ -487,6 +498,16 @@
 	<label title='Yes'><input type='radio' name='group_by_category' value='Yes' <?php if($Group_By_Category == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='group_by_category' value='No' <?php if($Group_By_Category == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
 	<p>Should FAQs be grouped by category, or should all categories be mixed together?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Display FAQ Category Count</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Display FAQ Category Count</span></legend>
+	<label title='Yes'><input type='radio' name='group_by_category_count' value='Yes' <?php if($Group_By_Category_Count == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='group_by_category_count' value='No' <?php if($Group_By_Category_Count == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>If FAQs are grouped by category, should the number of FAQs in a category be displayed beside the category name?</p>
 	</fieldset>
 </td>
 </tr>
@@ -546,8 +567,8 @@
 </table>
 
 <div class='ufaq-order-table'>
-<h3><?php echo __("Order Table", 'EWD_UFAQ'); ?></h3>
-<p><?php _e("Drag and drop the posts below to reorder them, if you have 'Selected Order' set for the 'FAQ Ordering' option", 'EWD_UFAQ'); ?></p>
+<h3><?php echo __("Order Table", 'ultimate-faqs'); ?></h3>
+<p><?php _e("Drag and drop the posts below to reorder them, if you have 'Selected Order' set for the 'FAQ Ordering' option", 'ultimate-faqs'); ?></p>
 <?php
 	if ($UFAQ_Full_Version != "Yes") {echo "<p>Upgrade to premium to access this feature.</p>";}
 	else {
@@ -562,10 +583,10 @@
 	<table class="wp-list-table widefat tags sorttable ewd-ufaq-list">
 	    <thead>
 	    	<tr>
-	            <th><?php _e("Question", 'EWD_UFAQ') ?></th>
-	            <th><?php _e("Views", 'EWD_UFAQ') ?></th>
-	            <th><?php _e("Categories", 'EWD_UFAQ') ?></th>
-	            <th><?php _e("Tags", 'EWD_UFAQ') ?></th>
+	            <th><?php _e("Question", 'ultimate-faqs') ?></th>
+	            <th><?php _e("Views", 'ultimate-faqs') ?></th>
+	            <th><?php _e("Categories", 'ultimate-faqs') ?></th>
+	            <th><?php _e("Tags", 'ultimate-faqs') ?></th>
 	    	</tr>
 	    </thead>
 	    <tbody>
@@ -595,10 +616,10 @@
 	    </tbody>
 	    <tfoot>
 	        <tr>
-	            <th><?php _e("Question", 'EWD_UFAQ') ?></th>
-	            <th><?php _e("Views", 'EWD_UFAQ') ?></th>
-	            <th><?php _e("Categories", 'EWD_UFAQ') ?></th>
-	            <th><?php _e("Tags", 'EWD_UFAQ') ?></th>
+	            <th><?php _e("Question", 'ultimate-faqs') ?></th>
+	            <th><?php _e("Views", 'ultimate-faqs') ?></th>
+	            <th><?php _e("Categories", 'ultimate-faqs') ?></th>
+	            <th><?php _e("Tags", 'ultimate-faqs') ?></th>
 	        </tr>
 	    </tfoot>
 	</table>
@@ -677,61 +698,61 @@
 		<div class='ufaq-subsection'>
 			<div class='ufaq-subsection-content' id='ufaq-subsection-inline'>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Posted", 'EWD_UFAQ')?>
+					<?php _e("Posted", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='posted_label' value='<?php echo $Posted_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("By", 'EWD_UFAQ')?>
+					<?php _e("By", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='by_label' value='<?php echo $By_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("On", 'EWD_UFAQ')?>
+					<?php _e("On", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='on_label' value='<?php echo $On_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Categories", 'EWD_UFAQ')?>
+					<?php _e("Categories", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='category_label' value='<?php echo $Category_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> />
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Tags", 'EWD_UFAQ')?>
+					<?php _e("Tags", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='tag_label' value='<?php echo $Tag_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Enter your question", 'EWD_UFAQ')?>
+					<?php _e("Enter your question", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='enter_question_label' value='<?php echo $Enter_Question_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Search", 'EWD_UFAQ')?>
+					<?php _e("Search", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='search_label' value='<?php echo $Search_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Permalink", 'EWD_UFAQ')?>
+					<?php _e("Permalink", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='permalink_label' value='<?php echo $Permalink_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Back To Top", 'EWD_UFAQ')?>
+					<?php _e("Back To Top", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='back_to_top_label' value='<?php echo $Back_To_Top_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("WooCommerce Tab Label", 'EWD_UFAQ')?>
+					<?php _e("WooCommerce Tab Label", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='woocommerce_tab_label' value='<?php echo $WooCommerce_Tab_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
@@ -741,67 +762,67 @@
 				<div class='ufaq-subsection'>
 			<div class='ufaq-subsection-content' id='ufaq-subsection-inline'>
 			<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Thank you for submitting an FAQ", 'EWD_UFAQ')?>
+					<?php _e("Thank you for submitting an FAQ", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='thank_you_submit_label' value='<?php echo $Thank_You_Submit_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Submit a Question", 'EWD_UFAQ')?>
+					<?php _e("Submit a Question", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='submit_question_label' value='<?php echo $Submit_Question_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Please fill out the form below to submit a question.", 'EWD_UFAQ')?>
+					<?php _e("Please fill out the form below to submit a question.", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='please_fill_form_below_label' value='<?php echo $Please_Fill_Form_Below_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Send Question", 'EWD_UFAQ')?>
+					<?php _e("Send Question", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='send_question_label' value='<?php echo $Send_Question_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Question Title", 'EWD_UFAQ')?>
+					<?php _e("Question Title", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='question_title_label' value='<?php echo $Question_Title_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("What question is being answered?", 'EWD_UFAQ')?>
+					<?php _e("What question is being answered?", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='what_question_being_answered_label' value='<?php echo $What_Question_Being_Answered_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Proposed Answer", 'EWD_UFAQ')?>
+					<?php _e("Proposed Answer", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='proposed_answer_label' value='<?php echo $Proposed_Answer_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Question Author", 'EWD_UFAQ')?>
+					<?php _e("Question Author", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='review_author_label' value='<?php echo $Review_Author_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("What name should be displayed with your question?", 'EWD_UFAQ')?>
+					<?php _e("What name should be displayed with your question?", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='what_name_with_review_label' value='<?php echo $What_Name_With_Review_Label; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("Retrieving Results", 'EWD_UFAQ')?>
+					<?php _e("Retrieving Results", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='retrieving_results' value='<?php echo $Retrieving_Results; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>
 				</div>
 				<div class='ufaq-option ufaq-label-option'>
-					<?php _e("No results FAQ's contained the term '%s'", 'EWD_UFAQ')?>
+					<?php _e("No results FAQ's contained the term '%s'", 'ultimate-faqs')?>
 					<fieldset>
 						<input type='text' name='no_results_found_text' value='<?php echo $No_Results_Found_Text; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/>
 					</fieldset>

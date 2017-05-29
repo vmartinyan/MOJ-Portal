@@ -4,7 +4,7 @@
 Widget Name: Livemesh Posts Carousel
 Description: Display blog posts or custom post types as a carousel.
 Author: LiveMesh
-Author URI: http://portfoliotheme.org
+Author URI: https://www.livemeshthemes.com
 */
 
 class LVCA_Posts_Carousel {
@@ -24,9 +24,9 @@ class LVCA_Posts_Carousel {
 
     function load_scripts() {
 
-        wp_enqueue_script('lvca-post-carousel', plugin_dir_url(__FILE__) . 'js/posts-carousel' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-post-carousel', plugin_dir_url(__FILE__) . 'js/posts-carousel' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
-        wp_enqueue_script('lvca-slick-carousel', LVCA_PLUGIN_URL . 'assets/js/slick' . LVCA_BUNDLE_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
+        wp_enqueue_script('lvca-slick-carousel', LVCA_PLUGIN_URL . 'assets/js/slick' . LVCA_JS_SUFFIX . '.js', array('jquery'), LVCA_VERSION);
 
         wp_enqueue_style('lvca-slick', LVCA_PLUGIN_URL . 'assets/css/slick.css', array(), LVCA_VERSION);
 
@@ -84,11 +84,8 @@ class LVCA_Posts_Carousel {
             <?php $uniqueid = uniqid(); ?>
 
         <div id="lvca-posts-carousel-<?php echo $uniqueid; ?>"
-             class="lvca-posts-carousel lvca-container"<?php foreach ($carousel_settings as $key => $val) {
-            if (!empty($val)) {
-                echo ' data-' . $key . '="' . esc_attr($val) . '"';
-            }
-        } ?>>
+             class="lvca-posts-carousel lvca-container"
+             data-settings='<?php echo wp_json_encode($carousel_settings); ?>'>
 
             <?php $taxonomy = $settings['taxonomy_chosen']; ?>
 
@@ -311,4 +308,9 @@ class LVCA_Posts_Carousel {
 if (class_exists('WPBakeryShortCode')) {
     class WPBakeryShortCode_lvca_posts_carousel extends WPBakeryShortCode {
     }
+}
+
+// Initialize Element Class
+if (class_exists('LVCA_Posts_Carousel')) {
+    new LVCA_Posts_Carousel();
 }
