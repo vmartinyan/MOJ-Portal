@@ -347,7 +347,6 @@ RewriteRule \.(gif|jpe?g?|png)$ - [F,NC,L]
 # END All In One WP Security
 
 # BEGIN WordPress
-
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /

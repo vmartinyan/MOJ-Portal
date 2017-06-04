@@ -1,8 +1,8 @@
 
-<time datetime="<?php echo get_the_time('c'); ?>" class="date updated">
+<!--<time datetime="<?php echo get_the_time('c'); ?>" class="date updated">
     <span class="day"><?php echo get_the_date('d'); ?></span>
     <span class="month"><?php echo get_the_date('M Y'); ?></span>
-</time>
+</time>-->
 
 <div class="ovh">
 
@@ -10,11 +10,11 @@
 
     <div class="entry-meta dopinfo">
 
-        <span class="byline author vcard"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></span>
-
+       <!-- <span class="byline author vcard"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></span>
+-->
         <?php
-        $post_tags = wp_get_post_tags($post->ID);
-		$post_categories = wp_get_post_terms($post->ID,'category',array("fields" => "names"));
+        //$post_tags = wp_get_post_tags($post->ID);
+		//$post_categories = wp_get_post_terms($post->ID,'category',array("fields" => "names"));
         if (!empty($post_tags)) { ?>
 
             <span class="delim"> </span>

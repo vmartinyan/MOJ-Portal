@@ -2238,7 +2238,7 @@ msgstr ""
 #. translators: %s: Search string
 #: wp-includes/script-loader.php:635
 msgid "Search results for &#8220;%s&#8221;"
-msgstr ""
+msgstr "&#8220;%s&#8221; Որոնման արդյունքում"
 
 #: wp-includes/script-loader.php:528
 msgid ""
@@ -10611,3 +10611,23 @@ msgstr "Գործունացման կոդ՝"
 #: wp-activate.php:78
 msgid "Activation Key Required"
 msgstr "Պահանջվում է գործունացման կոդը"
+
+
+
+# <header class="entry-header">
+# <h1><?php _e( 'Nothing Found', 'crum' ); ?></h1>
+# </header>
+# wpml-name: 795d59a96adcde416d31c5b1b6fae364
+msgid "Nothing Found"
+msgstr "Ոչինիչ չի գտնվել"
+
+# <div class="entry-content">
+# <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'crum' ); ?></p>
+# <?php get_search_form(); ?>
+# wpml-name: 524b3748e25918884b8feff6611f1dad
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Ներողություն, հարցման արդյունքում ոչինիչ չի գտնվել. Խնդրում ենք "
+"փորձել ևս մեկ անգամ այլ բառերով"

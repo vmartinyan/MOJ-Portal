@@ -9,17 +9,17 @@
 
         <div class="entry-content">
             <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'crum' ); ?></p>
-            <?php get_search_form(); ?>
+          <!--  <?php get_search_form(); ?>-->
         </div><!-- .entry-content -->
 
-
+<!--
     <header class="entry-header">
         <h2><?php _e('Tags also can be used', 'crum'); ?></h2>
     </header><!-- .entry-header -->
-
+<!--
     <div class="tags-widget">
         <?php wp_tag_cloud('smallest=10&largest=10&number=30'); ?>
-    </div>
+    </div>-->
 
     </article><!-- #post-0 -->
 <?php endif; ?>

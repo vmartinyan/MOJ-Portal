@@ -267,6 +267,7 @@ a[rel~="wp-video-lightbox"] {
     color: #4C647E;
     font-size: 16px;
     font-weight: bold;
+
 }
 
 .tablepress tr td {
@@ -277,6 +278,7 @@ a[rel~="wp-video-lightbox"] {
     padding-top:22px;
     width: 25%;
     font-size: 15px;
+    line-height: 150%;
 }
 
 .tablepress tr td:nth-child(3) {
@@ -319,6 +321,26 @@ a[rel~="wp-video-lightbox"] {
     margin-bottom: 30px;
 }
 
+.tablepress tr td:nth-child(4) .times-item ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 20px;
+}
+
+.tablepress tr td:nth-child(4) .times-item ul li{
+    padding-left: 0;
+    text-indent: -.7em;
+}
+
+.tablepress tr td:nth-child(4) .times-item > ul > li::before{
+    font-family: FontAwesome;
+    content: "\f017 ";
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    color: #4C647E;
+}
+
 .tablepress tr td:nth-child(4) .price-item p {
     margin-bottom: 0;
     font-size:16px;
@@ -342,12 +364,27 @@ a[rel~="wp-video-lightbox"] {
     font-size: 16px;
     display: inline-block;
     margin: 0 5px 0 0;
-    color: #ffca4f;
+    color: #EDA66B;
 }
 .tablepress tr td:nth-child(4) .price-item  ol{
     list-style-type:lower-armenian;
 }
 
+.dataTables_length select {
+    padding: 4px;
+}
+
+.dataTables_paginate a {
+    text-decoration: none;
+}
+
+.paginate_button::after,.paginate_button::before  {
+    color:#d6d6d6;
+}
+
+.paginate_button:hover::after, .paginate_button:hover::before {
+    color:#6F7B89;
+}
 
 /*Links*/
 .link-item .vc_column-inner .wpb_wrapper {
@@ -415,5 +452,3 @@ padding: 5px;
 .link-item h3.aio-icon-title {
     font-size: 15px;
 }
-
-
