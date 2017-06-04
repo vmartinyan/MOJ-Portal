@@ -101,7 +101,7 @@ if ( isset( $options['stan_header_show_hide'] ) && ! ( $options['stan_header_sho
 							single_cat_title();
 						}
 					} elseif ( is_search() ) {
-						printf( __( 'Search Results for %s', 'crum' ), get_search_query() );
+						printf( __( '[:hy]%s տեքստի որոնման  արդյունքում[:en]Search Results for %s[:ru]Результаты поиска для %s[:]', 'crum' ), get_search_query() );
 					} elseif ( is_404() ) {
 						_e( 'File Not Found', 'crum' );
 					} elseif ( function_exists( 'tribe_is_upcoming' ) && tribe_is_upcoming() ) {

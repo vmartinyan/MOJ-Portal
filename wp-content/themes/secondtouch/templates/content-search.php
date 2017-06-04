@@ -4,11 +4,11 @@
 
     <article id="post-0" class="post no-results not-found">
         <header class="entry-header">
-            <h1><?php _e( 'Nothing Found', 'crum' ); ?></h1>
+            <h1><?php _e( '[:hy]Ոչինիչ չի գտնվել[:en]Nothing Found[:ru]Ничего не найдено[:]', 'crum' ); ?></h1>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
-            <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'crum' ); ?></p>
+            <p><?php _e( '[:hy]Ներողություն, հարցման արդյունքում ոչինչ չի գտնվել. Խնդրում ենք փորձել ևս մեկ անգամ այլ բառերով[:en]Sorry, but nothing matched your search criteria. Please try again with some different keywords.[:ru]Извините, но ничего не соответствует критериям поиска. Пожалуйста, попробуйте еще раз с другими ключевыми словами.[:]', 'crum' ); ?></p>
           <!--  <?php get_search_form(); ?>-->
         </div><!-- .entry-content -->
 
