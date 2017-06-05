@@ -300,7 +300,7 @@ a[rel~="wp-video-lightbox"] {
     text-indent: -.7em;
 }
 
-.tablepress tr td:nth-child(3) ul li::before{
+.tablepress tr td:nth-child(3) > ul > li::before{
 
     font-family: FontAwesome;
     content: "\f061 ";
@@ -366,7 +366,10 @@ a[rel~="wp-video-lightbox"] {
     margin: 0 5px 0 0;
     color: #EDA66B;
 }
-.tablepress tr td:nth-child(4) .price-item  ol{
+
+
+.tablepress tr td:nth-child(4) .price-item  ol,
+.tablepress tr td:nth-child(3) ol{
     list-style-type:lower-armenian;
 }
 
