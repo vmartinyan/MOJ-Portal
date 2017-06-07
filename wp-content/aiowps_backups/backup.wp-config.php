@@ -63,7 +63,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'm0j_';
+$table_prefix  = 'm0jP0rta1_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -90,20 +90,11 @@ require_once(ABSPATH . 'wp-settings.php');
 
 
 
-define('FTP_PUBKEY','/root/wp_rsa.pub');
-define('FTP_PRIKEY','/root/wp_rsa');
-define('FTP_USER','root');
+define('FTP_PUBKEY','/home/mojftp/wp_rsa.pub');
+define('FTP_PRIKEY','/home/mojftp/wp_rsa');
+define('FTP_USER','mojftp');
 define('FTP_PASS','');
 define('FTP_HOST','127.0.0.1:22');
 
-#define('FS_METHOD', 'ssh2');
-#define('FTP_BASE', '/var/www/moj.digitalconsult.am/public_html/');
-#define('FTP_CONTENT_DIR', '/var/www/moj.digitalconsult.am/public_html/wp-content/');
-#define('FTP_PLUGIN_DIR ', '/var/www/moj.digitalconsult.am/public_html/wp-content/plugins/');
-#define('FTP_PUBKEY', '/home/mojftp/.ssh/id_rsa.pub');
-#define('FTP_PRIKEY', '/home/mojftp/.ssh/id_rsa');
-#define('FTP_USER', 'mojftp');
-#define('FTP_PASS','mojftp');
-#define('FTP_HOST', 'moj.digitalconsult.am:22');
 //Disable File Edits
 define('DISALLOW_FILE_EDIT', true);
