@@ -1,0 +1,3731 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Second Touch\n"
+"POT-Creation-Date: 2013-05-31 11:59+0200\n"
+"PO-Revision-Date: 2014-10-28 12:44+0100\n"
+"Last-Translator: Muñeca Rusa <inf@munecarusa.com>\n"
+"Language-Team: Muñeca Rusa <info@munecarusa.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_x;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: d:\\DEVELOP\\Maestro\n"
+
+#: d:\DEVELOP\Glider/404.php:12
+msgid "<strong>404 Error </strong>- no page here"
+msgstr "<strong>Error 404 </strong> Página no encontrada"
+
+#: d:\DEVELOP\Glider/404.php:16
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+"¡Huy! parece que no podemos encontrar lo que estás buscando. He aquí algunas "
+"sugerencias de enlaces que te pueden ayudar. "
+
+#: d:\DEVELOP\Glider/404.php:20
+msgid "Look it in archives"
+msgstr "Búscalo en archivos"
+
+#: d:\DEVELOP\Glider/404.php:29
+msgid "Search can be used"
+msgstr "La búsqueda puede ser utilizada"
+
+#: d:\DEVELOP\Glider/404.php:35
+msgid "Most Used Categoriesd"
+msgstr "Categorías más ustilizadas"
+
+#: d:\DEVELOP\Glider/404.php:44 d:\DEVELOP\Glider/posts-sidebar-sel.php:131
+#: d:\DEVELOP\Glider/templates/content-search.php:17
+#: d:\DEVELOP\Glider/templates/content.php:18
+msgid "Tags also can be used"
+msgstr "Las etiquetas también pueden ser utilizadas"
+
+#: d:\DEVELOP\Glider/functions.php:118
+msgid "Primary Navigation"
+msgstr "Navegación primaria"
+
+#: d:\DEVELOP\Glider/functions.php:119
+msgid "Footer navigation"
+msgstr "Navegación pie de página"
+
+#: d:\DEVELOP\Glider/page-contacts.php:111
+#: d:\DEVELOP\Glider/page-contacts.php:156
+msgid "Leave reply"
+msgstr "Deja tu comentario"
+
+#: d:\DEVELOP\Glider/page-contacts.php:126
+msgid "You need enter email in options panel"
+msgstr "Es necesario introducir tu correo electrónico en el panel de opciones"
+
+#: d:\DEVELOP\Glider/page-contacts.php:132
+msgid "Thank you for your message!</h2>"
+msgstr "¡Gracias por tu mensaje!</h2>"
+
+#: d:\DEVELOP\Glider/page-contacts.php:134
+msgid "Unknown error, during message sending</h2>"
+msgstr "Error desconocido, durante el envío del mensaje</h2>"
+
+#: d:\DEVELOP\Glider/page-contacts.php:136
+msgid "Wrong check code. Please try again</h2>"
+msgstr "Código de verificación incorrecto. Por favor, inténtalo de nuevo</h2>"
+
+#: d:\DEVELOP\Glider/page-contacts.php:143
+msgid "Enter your name"
+msgstr "Escribe tu nombre"
+
+#: d:\DEVELOP\Glider/page-contacts.php:144
+msgid "Your email"
+msgstr "Tu correo electrónico"
+
+#: d:\DEVELOP\Glider/page-contacts.php:145
+msgid "Mail subject"
+msgstr "Título del correo electrónico"
+
+#: d:\DEVELOP\Glider/page-masonry.php:42 d:\DEVELOP\Glider/taxonomy.php:12
+#: d:\DEVELOP\Glider/tmp-archive-left-img.php:51
+#: d:\DEVELOP\Glider/tmp-archive-right-img.php:47
+#: d:\DEVELOP\Glider/tmp-page-masonry-2-side.php:44
+#: d:\DEVELOP\Glider/tmp-page-masonry-2.php:44
+msgid "Sorry, no results were found."
+msgstr "Lo sentimos, no se encontraron resultados."
+
+#: d:\DEVELOP\Glider/page-masonry.php:61
+#: d:\DEVELOP\Glider/posts-sidebar-sel.php:225
+#: d:\DEVELOP\Glider/taxonomy.php:27
+#: d:\DEVELOP\Glider/tmp-archive-left-img.php:129
+#: d:\DEVELOP\Glider/tmp-archive-right-img.php:127
+#: d:\DEVELOP\Glider/tmp-page-masonry-2-side.php:67
+#: d:\DEVELOP\Glider/tmp-page-masonry-2.php:65
+#: d:\DEVELOP\Glider/templates/comments.php:57
+#: d:\DEVELOP\Glider/templates/content-search.php:47
+#: d:\DEVELOP\Glider/templates/content.php:237
+#: d:\DEVELOP\Glider/templates/top-folio.php:33
+msgid "Older"
+msgstr "Antiguo"
+
+#: d:\DEVELOP\Glider/page-masonry.php:64
+#: d:\DEVELOP\Glider/posts-sidebar-sel.php:228
+#: d:\DEVELOP\Glider/taxonomy.php:30
+#: d:\DEVELOP\Glider/tmp-archive-left-img.php:132
+#: d:\DEVELOP\Glider/tmp-archive-right-img.php:130
+#: d:\DEVELOP\Glider/tmp-page-masonry-2-side.php:70
+#: d:\DEVELOP\Glider/tmp-page-masonry-2.php:68
+#: d:\DEVELOP\Glider/templates/comments.php:58
+#: d:\DEVELOP\Glider/templates/content-search.php:50
+#: d:\DEVELOP\Glider/templates/content.php:240
+#: d:\DEVELOP\Glider/templates/top-folio.php:34
+msgid "Newer"
+msgstr "Entrada más reciente"
+
+#: d:\DEVELOP\Glider/portfolio-template-1.php:52
+#: d:\DEVELOP\Glider/tmp-portfolio-template-1.php:51
+#: d:\DEVELOP\Glider/tmp-portfolio-template-2.php:52
+#: d:\DEVELOP\Glider/tmp-portfolio-template-3.php:51
+#: d:\DEVELOP\Glider/tmp-portfolio-template-4-r.php:53
+#: d:\DEVELOP\Glider/tmp-portfolio-template-4.php:51
+#: d:\DEVELOP\Glider/inc/modules/recent-items/recent-items.php:62
+msgid "All"
+msgstr "Todos"
+
+#: d:\DEVELOP\Glider/posts-sidebar-sel.php:121
+#: d:\DEVELOP\Glider/templates/content-search.php:7
+#: d:\DEVELOP\Glider/templates/content.php:8
+msgid "Nothing Found"
+msgstr "Nada Encontrado"
+
+#: d:\DEVELOP\Glider/posts-sidebar-sel.php:125
+#: d:\DEVELOP\Glider/templates/content-search.php:11
+#: d:\DEVELOP\Glider/templates/content.php:12
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo sentimos, pero nada corresponde a sus criterios de búsqueda. Por favor, "
+"inténtalo de nuevo con algunas palabras clave diferentes."
+
+#: d:\DEVELOP\Glider/inc/actions.php:160
+msgid "Prev"
+msgstr "Anterior"
+
+#: d:\DEVELOP\Glider/inc/actions.php:161
+#: d:\DEVELOP\Glider/templates/functions.php:251
+msgid "Next"
+msgstr "Siguiente"
+
+#: d:\DEVELOP\Glider/inc/actions.php:182
+#: d:\DEVELOP\Glider/templates/top-folio.php:25
+#: d:\DEVELOP\Glider/templates/top-forum.php:60
+msgid "Home"
+msgstr "Inicio"
+
+#: d:\DEVELOP\Glider/inc/actions.php:183
+#, php-format
+msgid "Archive by Category \"%s\""
+msgstr "Archivo por Categoría \"%s\""
+
+#: d:\DEVELOP\Glider/inc/actions.php:184
+#, php-format
+msgid "Search Results for \"%s\" Query"
+msgstr "Resultados de la búsqueda para \"%s\" Consulta"
+
+#: d:\DEVELOP\Glider/inc/actions.php:185
+#, php-format
+msgid "Posts Tagged \"%s\""
+msgstr "Entradas con la etiqueta \"%s\""
+
+#: d:\DEVELOP\Glider/inc/actions.php:186
+#, php-format
+msgid "Articles Posted by %s"
+msgstr "Artículos Publicados por %s"
+
+#: d:\DEVELOP\Glider/inc/actions.php:187
+msgid "Error 404"
+msgstr "Error 404"
+
+#: d:\DEVELOP\Glider/inc/actions.php:317
+msgid "Page"
+msgstr "Página"
+
+#: d:\DEVELOP\Glider/inc/cleanup.php:260
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:57
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:115
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:133
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:125
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:91
+msgid "Read more"
+msgstr "Leer más"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:8
+msgid "Portfolios"
+msgstr "Portafolios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:9
+msgid "Portfolio"
+msgstr "Portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:10
+msgid "Add New"
+msgstr "Crear Nuevo"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:11
+msgid "Add New Portfolio item"
+msgstr "Añadir elemento al nuevo portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:12
+msgid "Edit Portfolio item"
+msgstr "Editar elemento de portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:13
+msgid "New Portfolio item"
+msgstr "Nuevo elemento de portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:14
+msgid "All Portfolio items"
+msgstr "Todos los elementos del portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:15
+msgid "View Portfolio item"
+msgstr "Visualizar elementos del portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:16
+msgid "Search Portfolios item"
+msgstr "Buscar elementos del portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:17
+msgid "No products found"
+msgstr "No hay productos encontrados"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:18
+msgid "No products found in the Trash"
+msgstr "No se han encontrado productos eliminados"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:39
+#, php-format
+msgid "Portfolio updated. <a href=\"%s\">View product</a>"
+msgstr "Portafolio actualizado <a href=\"%s\">Ver producto</a>"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:40
+msgid "Custom field updated."
+msgstr "Campo personalizado actualizado."
+
+#: d:\DEVELOP\Glider/inc/post-type.php:41
+msgid "Custom field deleted."
+msgstr "Campo personalizado eliminado."
+
+#: d:\DEVELOP\Glider/inc/post-type.php:42
+msgid "Portfolio updated."
+msgstr "Portafolio atualizado."
+
+#: d:\DEVELOP\Glider/inc/post-type.php:43
+#, php-format
+msgid "Portfolio restored to revision from %s"
+msgstr "Portafolio restaurado a la revisión de %s"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:44
+#, php-format
+msgid "Portfolio published. <a href=\"%s\">View product</a>"
+msgstr "Portafolio publicado. <a href=\"%s\">Visualizar produto</a>"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:45
+msgid "Portfolio saved."
+msgstr "Portafolio guardado."
+
+#: d:\DEVELOP\Glider/inc/post-type.php:46
+#, php-format
+msgid ""
+"Portfolio submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr ""
+"Portafolio presentado. <a target=\"_blank\" href=\"%s\">Visualizar produto</"
+"a>"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:47
+#, php-format
+msgid ""
+"Portfolio scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview product</a>"
+msgstr ""
+"Portafolio programado para:: <strong>%1$s</strong>. <a target=\"_blank\" "
+"href=\"%2$s\">Visualizar produto</a>"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:47
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:48
+#, php-format
+msgid ""
+"Portfolio draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr ""
+"Portafolio atualizado. <a target=\"_blank\" href=\"%s\">Visualizar produto</"
+"a>"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:73
+#: d:\DEVELOP\Glider/inc/post-type.php:83
+msgid "Portfolio Categories"
+msgstr "Portafolio Categorías"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:74
+msgid "Portfolio Category"
+msgstr "Portafolio Categoría"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:75
+msgid "Search Portfolio Categories"
+msgstr "Buscar Categorías de Portafolios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:76
+msgid "All Portfolio Categories"
+msgstr "Todas las Categorías del Portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:77
+msgid "Parent Portfolio Category"
+msgstr "Categoría de patrimonio de portafolios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:78
+msgid "Parent Portfolio Category:"
+msgstr "Categoría de patrimonio de portafolios:"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:79
+msgid "Edit Portfolio Category"
+msgstr "Editar Categoria de Portfolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:80
+msgid "Update Portfolio Category"
+msgstr "Actualizar la Categoría de Portafolios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:81
+msgid "Add New Portfolio Category"
+msgstr "Crear nuevoa Categoría de Portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:82
+msgid "New Portfolio Category"
+msgstr "Nueva Categoría de Portafolio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:101
+msgid "Testimonials"
+msgstr "Testimonios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:102
+msgid "Testimonial"
+msgstr "Testimonio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:103
+msgid "Add New Testimonial"
+msgstr "Crear Nuevo Testimonio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:104
+msgid "Edit Testimonial"
+msgstr "Editar testimonio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:105
+msgid "New Testimonial"
+msgstr "Nuevo Testimonio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:106
+msgid "All Testimonials"
+msgstr "Todos los Testimonios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:107
+msgid "View Testimonial"
+msgstr "Visualizar Testimonio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:108
+msgid "Search Testimonial"
+msgstr "Buscar Testimonio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:109
+msgid "No testimonial found"
+msgstr "Testimonio no encontrado"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:110
+msgid "No testimonial found in the Trash"
+msgstr "No se ha encontrado testimonio eliminado"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:132
+msgid "Clients / Partners"
+msgstr "Clientes / Socios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:133
+msgid "Client / Partner"
+msgstr "Cliente / Socio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:134
+msgid "Add New Client / Partner"
+msgstr "Crear Nuevo Cliente / Socio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:135
+msgid "Edit Client / Partner"
+msgstr "Editar Cliente / Socio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:136
+msgid "New Client / Partner"
+msgstr "Nuevo Cliente / Socio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:137
+msgid "All Clients / Partners"
+msgstr "Todos los Clientes / Socios"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:138
+msgid "View Client / Partner"
+msgstr "Visualizar Cliente / Socio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:139
+msgid "Search Client / Partner"
+msgstr "Buscar Cliente / Socio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:140
+msgid "No Client / Partner found"
+msgstr "No se encontró ningún Cliente / Socio"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:141
+msgid "No Client / Partner found in the Trash"
+msgstr "No Cliente / Socio encontrado en la papelera"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:163
+msgid "Features"
+msgstr "Características"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:164
+msgid "Feature"
+msgstr "Característica"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:165
+msgid "Add New Feature"
+msgstr "Añadir nueva función"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:166
+msgid "Edit Feature"
+msgstr "Editar Característica"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:167
+msgid "New Feature"
+msgstr "Nueva Característica"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:168
+msgid "All Features"
+msgstr "Todas las Característica"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:169
+msgid "View Feature"
+msgstr "Visualizar Característica"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:170
+msgid "Search Feature"
+msgstr "Buscar Característica"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:171
+msgid "No Feature found"
+msgstr "Característica no encontrada"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:172
+msgid "No Feature found in the Trash"
+msgstr "No se han encontrado características elimanadas"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:195
+msgid "Galleries"
+msgstr "Galerias"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:196
+msgid "Gallery"
+msgstr "Galeria"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:197
+msgid "Add New Gallery"
+msgstr "Añadir Nueva Galería"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:198
+msgid "Edit Gallery"
+msgstr "Editar Galeria"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:199
+msgid "New Gallery"
+msgstr "Nueva Galeria"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:200
+msgid "All Galleries"
+msgstr "Todas las Galerias"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:201
+msgid "View Gallery"
+msgstr "Visualizar Galeria"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:202
+msgid "Search Gallery"
+msgstr "Buscar Galeria"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:203
+msgid "No Gallery found"
+msgstr "Galeria no encontrada"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:204
+msgid "No Gallery found in the Trash"
+msgstr "No se han encontrado Galería eliminada"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:223
+msgid "Mega menu"
+msgstr "Menú Mega"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:224
+msgid "Crumina Mega Menu"
+msgstr "Menu Mega Crumina "
+
+#: d:\DEVELOP\Glider/inc/post-type.php:225
+msgid "Add New Menu Item"
+msgstr "Agregar nuevo elemento de menú"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:226
+msgid "Edit Menu Item"
+msgstr "Editar elemento de menú"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:227
+msgid "Search Menu Items"
+msgstr "Buscar elemento de Menu"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:228
+msgid "Sorry: Menu Item Not Found"
+msgstr "Lo sentimos: Elemento del menú no encontrado"
+
+#: d:\DEVELOP\Glider/inc/post-type.php:229
+msgid "Sorry: Menu Item Not Found In Trash"
+msgstr "Lo sentimos: Elemento del menú no encontrado en la papelera"
+
+#: d:\DEVELOP\Glider/inc/widgets.php:8
+msgid "Left Sidebar"
+msgstr "Sidebar Izquierdo"
+
+#: d:\DEVELOP\Glider/inc/widgets.php:16
+msgid "Right Sidebar"
+msgstr "Sidebar Derecho"
+
+#: d:\DEVELOP\Glider/inc/widgets.php:26
+msgid "Footer column 1"
+msgstr "1 Columna en pie de página"
+
+#: d:\DEVELOP\Glider/inc/widgets.php:34
+msgid "Footer column 2"
+msgstr "2 Columnas en pie de página"
+
+#: d:\DEVELOP\Glider/inc/widgets.php:42
+msgid "Footer column 3"
+msgstr "3 Columnas en pie de página"
+
+#: d:\DEVELOP\Glider/inc/widgets.php:51
+msgid "Sidebar for shop"
+msgstr "Sidebar para la tienda"
+
+#: d:\DEVELOP\Glider/inc/category_extend/crum-cat-tax.php:41
+msgid "Category icon"
+msgstr "Ícono de categoria"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:250
+msgid "Delete this image"
+msgstr "Eliminar esta imagen"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:250
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:883
+msgid "Delete"
+msgstr "Eliminar"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:357
+msgid "Cannot delete file. Something's wrong."
+msgstr "No se puede eliminar el archivo. Algo está mal."
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:582
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:629
+#: d:\DEVELOP\Glider/options/options/fields/multi_text/field_multi_text.php:31
+#: d:\DEVELOP\Glider/options/options/fields/multi_text/field_multi_text.php:35
+#: d:\DEVELOP\Glider/options/options/fields/multi_text/field_multi_text.php:38
+#: d:\DEVELOP\Glider/options/options/fields/social/field_social.php:35
+#: d:\DEVELOP\Glider/options/options/fields/social/field_social.php:43
+#: d:\DEVELOP\Glider/options/options/fields/social/field_social.php:47
+msgid "Remove"
+msgstr "Remover"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:595
+msgid "Add"
+msgstr "Añadir"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:736
+#: d:\DEVELOP\Glider/inc/lib/metabox/init.php:210
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:169
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:185
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:201
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:218
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:165
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:181
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:197
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:213
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:107
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:122
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:315
+#: d:\DEVELOP\Glider/options/options/fields/icon/field_icon.php:28
+msgid "Add Icon"
+msgstr "Añadir Icono"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:879
+msgid "Uploaded files"
+msgstr "Archivos cargados"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:890
+msgid "Upload new files"
+msgstr "Nuevos archivos cargados"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:896
+msgid "Add more files"
+msgstr "Añadir más archivos"
+
+#: d:\DEVELOP\Glider/inc/category_extend/tax-meta-class/tax-meta-class.php:948
+msgid "Select a color"
+msgstr "Seleccionar color"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/custom-sidebar.php:25
+msgid "Select custom sidebar"
+msgstr "Seleccione la barra lateral personalizada"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/features-boxes.php:26
+msgid "Feature box options"
+msgstr "Opciones del cuadro de características"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/features-boxes.php:34
+msgid "Icon for features box"
+msgstr "Icono de cuadro características"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:25
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:67
+msgid "Boxed Page background options"
+msgstr "Color de fondo del sitio principal"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:32
+msgid "Background color"
+msgstr "Color del fondo"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:33
+msgid "Color of body of page (page will be set to boxed)"
+msgstr "Color del cuerpo de la página (página se establecerá en caja)"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:39
+msgid "Fixed backrgound"
+msgstr "Fondo fijo"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:40
+msgid "Check if you want to bg will be fixed on page scroll"
+msgstr ""
+"Compruebe si quieres que la imagen de fondo se fije en la página de "
+"desplazamiento"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:45
+msgid "Background image"
+msgstr "Imagen de fondo"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:46
+msgid "Upload an image or enter an URL."
+msgstr "Suba una imagen o introduzca una URL."
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:51
+#: d:\DEVELOP\Glider/options/options.php:1056
+msgid "Background image repeat"
+msgstr "Repetir imagen de fondo"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:75
+msgid "Member profession"
+msgstr "Profesión miembros"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:76
+msgid "Text that will be displayed under name"
+msgstr "Texto que se mostrará bajo el nombre"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:81
+msgid "Small description"
+msgstr "Pequeña descripción"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:82
+msgid "Small escription for Contacts page"
+msgstr "Pequeña descripción de la página de contacto"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:91
+msgid "Additional Text fields"
+msgstr "Campos de texto adicionales"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:99
+msgid "Text block 1"
+msgstr "Bloque de texto 1"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/page-boxes.php:113
+msgid "Text block 2"
+msgstr "Bloque de texto 2"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/portfolio-boxes.php:26
+msgid "Portfolio Video"
+msgstr "Portafolio de Video"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/portfolio-boxes.php:33
+msgid "YouTube video ID"
+msgstr "Video YouTube ID"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/portfolio-boxes.php:39
+msgid "Vimeo video ID"
+msgstr "Vimeo video ID"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/portfolio-boxes.php:45
+msgid "Self hosted video file in mp4 format"
+msgstr "Organizar archivo de video en formato mp4"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/portfolio-boxes.php:51
+msgid "Self hosted video file in webM format"
+msgstr "Auto de archivo de vídeo alojado en formato WebM"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/testimonial-boxes.php:26
+msgid "Testimonial info"
+msgstr "Información testimonial"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/testimonial-boxes.php:33
+msgid "Author of testimonial"
+msgstr "Autor del testimonio"
+
+#: d:\DEVELOP\Glider/inc/custom_metabox/testimonial-boxes.php:39
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:148
+msgid "Author additional"
+msgstr "Autor adicional"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:164
+#: d:\DEVELOP\Glider/inc/lib/plugins.php:119
+msgid "Install Required Plugins"
+msgstr "Instale Plugins Requeridos"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:165
+#: d:\DEVELOP\Glider/inc/lib/plugins.php:120
+msgid "Install Plugins"
+msgstr "Instalar Plugins"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:166
+#: d:\DEVELOP\Glider/inc/lib/plugins.php:121
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando Plugins %s"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:167
+msgid "Something went wrong."
+msgstr "Algo salió mal."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:178
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:490
+#: d:\DEVELOP\Glider/inc/lib/plugins.php:133
+msgid "Return to Required Plugins Installer"
+msgstr "Volver necesariamente al instalador de Plugins"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:179
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1846
+#: d:\DEVELOP\Glider/inc/lib/plugins.php:134
+msgid "Plugin activated successfully."
+msgstr "Plugin activado correctamente."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:180
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos los plugins instalados y activados con éxito. %1$s"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:517
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:2058
+msgid "Return to the Dashboard"
+msgstr "Vuelva al panel de control"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:545
+#, php-format
+msgid "The following plugin was activated successfully: %s."
+msgstr "El siguiente plugin se activó con éxito: %s."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:704
+msgid "Dismiss this notice"
+msgstr "Descartar esta notificación"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1091
+msgid "External Link"
+msgstr "Enlace externo"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1096
+msgid "Private Repository"
+msgstr "Acceso Privado"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1099
+msgid "Pre-Packaged"
+msgstr "Pre-envasados"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1103
+msgid "WordPress Repository"
+msgstr "Acceso WordPress"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1106
+msgid "Required"
+msgstr "Requerido"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1106
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1109
+msgid "Not Installed"
+msgstr "No Instalado"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1111
+msgid "Installed But Not Activated"
+msgstr "Instalado pero no activado"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1281
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"No hay plugins para instalar o activar. <a href=\"%1$s\" title=\"Vuelva al "
+"panel de control\">Vuelva al panel de control</a>"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1297
+msgid "Plugin"
+msgstr "Plugin"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1298
+msgid "Source"
+msgstr "Origen"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1299
+msgid "Type"
+msgstr "Tipo"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1300
+msgid "Status"
+msgstr "Estado"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1318
+msgid "Install"
+msgstr "Instalar"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1319
+msgid "Activate"
+msgstr "Activar"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1829
+msgid "Install package not available."
+msgstr "El paquete no está disponible para instalarse."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1830
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+"Descarga el paquete para instalar <span class=\"code\">%s</span>&#8230;"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1831
+msgid "Unpacking the package&#8230;"
+msgstr "Desembalaje del paquete&#8230;"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1832
+msgid "Installing the plugin&#8230;"
+msgstr "Instalar el plugin&#8230"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1833
+msgid "Plugin install failed."
+msgstr "Error de instalación del Plugin."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1834
+msgid "Plugin installed successfully."
+msgstr "Plugin instalado correctamente."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1845
+msgid "Plugin activation failed."
+msgstr "La activación del Plugin fracasó"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1955
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"El proceso de instalación y activación se está iniciando. Este proceso puede "
+"tardar un tiempo en algunos servidores, así que por favor sea paciente."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1956
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalado y activado correctamente."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1956
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1965
+msgid "Show Details"
+msgstr "Mostrar detalles"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1956
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1965
+msgid "Hide Details"
+msgstr "Ocultar detalles"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1957
+msgid "All installations and activations have been completed."
+msgstr "Todas las instalaciones y activaciones se han completado."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1958
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalación y activación de Plugin %1$s (%2$d/%3$d)"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1962
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"El proceso de instalación está iniciando. Este proceso puede tardar un "
+"tiempo en algunos servidores, así que por favor sea paciente"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1963
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+"Se produjo un error durante la instalación %1$s: <strong>%2$s</strong>."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1964
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "La instalación de %1$s ha fallado"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1965
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado con éxito"
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1966
+msgid "All installations have been completed."
+msgstr "Todas las instalaciones se han completado."
+
+#: d:\DEVELOP\Glider/inc/lib/plugin-activation.php:1967
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalar Plugin %1$s (%2$d/%3$d)"
+
+#: d:\DEVELOP\Glider/inc/lib/plugins.php:122
+msgid "Something went wrong with the plugin API."
+msgstr "Algo salió mal con la API de los plugins."
+
+#: d:\DEVELOP\Glider/inc/lib/plugins.php:135
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Todos los plugins instalados y activados con éxito. %s"
+
+#: d:\DEVELOP\Glider/inc/lib/metabox/init.php:650
+msgid "Please Try Again"
+msgstr "Por favor, inténtelo otra vez"
+
+#: d:\DEVELOP\Glider/inc/lib/metabox/init.php:667
+msgid "Remove Embed"
+msgstr "Remover insertar"
+
+#: d:\DEVELOP\Glider/inc/lib/metabox/init.php:673
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "No hay resultados encontrados para % s. Ver más información en"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:9
+msgid "Block with author info / pic"
+msgstr "Bloque con información y foto de Autor"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:120
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:157
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:152
+#: d:\DEVELOP\Glider/inc/modules/block-desc/block-desc.php:78
+#: d:\DEVELOP\Glider/inc/modules/call-to-action/call-to-action.php:77
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:205
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:78
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:106
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:122
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:251
+#: d:\DEVELOP\Glider/inc/modules/map/map.php:116
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:217
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:202
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:165
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:171
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:161
+#: d:\DEVELOP\Glider/inc/modules/promo-block/promo-block.php:64
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:136
+#: d:\DEVELOP\Glider/inc/modules/recent-items/recent-items.php:218
+#: d:\DEVELOP\Glider/inc/modules/shortcode/shortcode.php:109
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:130
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:144
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:121
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:180
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:27
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:163
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:94
+#: d:\DEVELOP\Glider/inc/widgets/widget-flickr.php:98
+#: d:\DEVELOP\Glider/inc/widgets/widget-gallery.php:77
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:154
+#: d:\DEVELOP\Glider/inc/widgets/widget-search.php:106
+#: d:\DEVELOP\Glider/inc/widgets/widget-styled-list.php:67
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:100
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:139
+#: d:\DEVELOP\Glider/inc/widgets/widget-tags.php:75
+#: d:\DEVELOP\Glider/inc/widgets/widget-text.php:59
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:27
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:158
+#: d:\DEVELOP\Glider/inc/widgets/widget_categories.php:98
+msgid "Title:"
+msgstr "Título:"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:124
+#: d:\DEVELOP\Glider/inc/modules/block-desc/block-desc.php:82
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:83
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:110
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:131
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:145
+msgid "Text"
+msgstr "Texto"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:129
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:210
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:255
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:229
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:210
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:170
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:179
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:169
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:156
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:192
+msgid "Link to full page"
+msgstr "Enlace para página completa"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:134
+#: d:\DEVELOP\Glider/inc/modules/block-desc/block-desc.php:91
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:234
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:215
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:184
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:174
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:161
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:197
+msgid "Link label"
+msgstr "Enlace etiqueta"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:139
+msgid "Image"
+msgstr "Imagen"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:141
+msgid "Select Image"
+msgstr "Seleccione la imagen"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:144
+msgid "Author name"
+msgstr "Nombre del autor"
+
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:152
+#: d:\DEVELOP\Glider/inc/modules/about-author/about-author.php:156
+msgid "Additional link"
+msgstr "Enlace adicional"
+
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:162
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:178
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:194
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:211
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:158
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:174
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:190
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:206
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:126
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:139
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:152
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:165
+msgid "Section Title:"
+msgstr "Título de la Sección:"
+
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:167
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:183
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:199
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:216
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:163
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:179
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:195
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:211
+#: d:\DEVELOP\Glider/inc/modules/call-to-action/call-to-action.php:100
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:105
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:120
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:313
+msgid "Type Icon name"
+msgstr "Escriba el nombre del icono"
+
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:173
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:189
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:206
+#: d:\DEVELOP\Glider/inc/modules/accordion/accordion.php:223
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:169
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:185
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:201
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:217
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:135
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:148
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:161
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:175
+msgid "Content:"
+msgstr "Contenido:"
+
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:11
+msgid "Box: Vertical tab"
+msgstr "Caja: ficha Vertical"
+
+#: d:\DEVELOP\Glider/inc/modules/accordion-v/accordion-v.php:12
+#: d:\DEVELOP\Glider/options/options.php:1470
+msgid "Vertical tabs block"
+msgstr "Bloque pestañas Vertical"
+
+#: d:\DEVELOP\Glider/inc/modules/block-desc/block-desc.php:20
+msgid "Text block with button"
+msgstr "Bloque de texto con botón"
+
+#: d:\DEVELOP\Glider/inc/modules/block-desc/block-desc.php:87
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:88
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:115
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:126
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:140
+#: d:\DEVELOP\Glider/inc/modules/recent-items/recent-items.php:222
+msgid "Link"
+msgstr "Enlace"
+
+#: d:\DEVELOP\Glider/inc/modules/call-to-action/call-to-action.php:79
+#: d:\DEVELOP\Glider/inc/modules/promo-block/promo-block.php:66
+msgid "Title Tag:"
+msgstr "Título da Etiqueta:"
+
+#: d:\DEVELOP\Glider/inc/modules/call-to-action/call-to-action.php:86
+#: d:\DEVELOP\Glider/inc/modules/promo-block/promo-block.php:68
+msgid "Description:"
+msgstr "Descripción:"
+
+#: d:\DEVELOP\Glider/inc/modules/call-to-action/call-to-action.php:89
+#: d:\DEVELOP\Glider/inc/modules/promo-block/promo-block.php:71
+msgid "Alignment:"
+msgstr "Alineación:"
+
+#: d:\DEVELOP\Glider/inc/modules/call-to-action/call-to-action.php:96
+msgid "Button Label:"
+msgstr "Nombre de Botón"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:20
+msgid "Boxes from \"Features\" section"
+msgstr "Cajas de \"Características\" Sección"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:34
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:33
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:42
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:42
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:31
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:31
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:42
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:32
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:42
+msgid "Latest articles"
+msgstr "Últimos artículos"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:215
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:180
+msgid "Link for details page"
+msgstr "Enlace para más detalles"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:218
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:183
+msgid "Yes"
+msgstr "Si"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:219
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:184
+msgid "No"
+msgstr "No"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:225
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:136
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:279
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:256
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:237
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:193
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:189
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:150
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:185
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:203
+msgid "Order posts"
+msgstr "Ordenar entradas"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:228
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:139
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:282
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:259
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:240
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:196
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:192
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:153
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:188
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:206
+msgid "Descending"
+msgstr "Descendente"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:229
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:140
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:283
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:260
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:241
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:197
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:193
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:154
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:189
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:207
+msgid "Ascending"
+msgstr "Ascendente"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:234
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:145
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:288
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:265
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:246
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:202
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:189
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:159
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:194
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:212
+msgid "Order posts by"
+msgstr "Ordenar entradas por "
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:237
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:148
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:291
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:268
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:249
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:205
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:192
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:162
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:197
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:215
+msgid "No order"
+msgstr "No hay pedido"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:238
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:149
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:292
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:269
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:250
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:206
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:193
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:163
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:198
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:216
+msgid "Order by post id"
+msgstr "Ordenar entradas por ID"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:239
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:150
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:293
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:270
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:251
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:207
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:194
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:164
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:199
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:217
+msgid "Order by title"
+msgstr "Ordenar por Títulos"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:240
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:151
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:294
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:271
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:252
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:208
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:195
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:165
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:200
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:218
+msgid "Order by post name (post slug)"
+msgstr "Ordenar por nomobre de entrada (entrada slug)"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:241
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:152
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:295
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:272
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:253
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:209
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:196
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:166
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:201
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:219
+msgid "Order by date"
+msgstr "Ordenar por fecha"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:242
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:153
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:296
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:273
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:254
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:210
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:197
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:167
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:202
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:220
+msgid "Order by last modified date"
+msgstr "Ordenar por fecha de última modificación"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:243
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:154
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:297
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:275
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:256
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:212
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:199
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:169
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:204
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:222
+msgid "Order by number of comments"
+msgstr "Ordenar por número de comentarios"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:249
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:262
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:198
+msgid "Number of columns"
+msgstr "Número de columnas"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:252
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:265
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:201
+msgid "1 column"
+msgstr "1 columna"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:253
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:266
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:202
+msgid "2 columns"
+msgstr "2 columnas"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:254
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:267
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:203
+msgid "3 columns"
+msgstr "3 columnas"
+
+#: d:\DEVELOP\Glider/inc/modules/features/features.php:255
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:268
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:204
+msgid "4 columns"
+msgstr "4 columnas"
+
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:11
+msgid "Block with icon"
+msgstr "Bloque con icono"
+
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:93
+msgid "Text alignment"
+msgstr "Alineación del texto"
+
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:97
+msgid "Align left"
+msgstr "Alinear a la izquierda"
+
+#: d:\DEVELOP\Glider/inc/modules/features-block/features-block.php:98
+msgid "Align center"
+msgstr "Alinear al centro"
+
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:7
+msgid "Box: Features list"
+msgstr "Cajas: Lista de características"
+
+#: d:\DEVELOP\Glider/inc/modules/features-list/features-list.php:8
+msgid "every line - list element"
+msgstr "cada línea - elemento de la lista"
+
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:12
+msgid "Box: Galleries"
+msgstr "Cajas: Galerias"
+
+#: d:\DEVELOP\Glider/inc/modules/galleries/galleries.php:13
+msgid "Display Galleries thumbnails"
+msgstr "Mostrar miniaturas en Galerías"
+
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:20
+msgid "Box: 4 posts from category"
+msgstr "Cajas: 4 Entradas por categoría"
+
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:21
+msgid "Posts from some category"
+msgstr "Entradas de alguna categoría"
+
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:260
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:239
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:220
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:176
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:166
+msgid "Select category"
+msgstr "Selecione a categoria"
+
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:303
+msgid "Select news alignment"
+msgstr "Seleccione la alineación de noticias"
+
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:306
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: d:\DEVELOP\Glider/inc/modules/last-3-posts/last-3-posts.php:307
+msgid "Vertical"
+msgstr "Vertical"
+
+#: d:\DEVELOP\Glider/inc/modules/map/map.php:9
+msgid "Box: Google Map"
+msgstr "Caja: Google Mapas"
+
+#: d:\DEVELOP\Glider/inc/modules/map/map.php:10
+msgid "Display address on map"
+msgstr "Visualiza la dirección en el mapa"
+
+#: d:\DEVELOP\Glider/inc/modules/map/map.php:42
+msgid "On map"
+msgstr "En el mapa"
+
+#: d:\DEVELOP\Glider/inc/modules/map/map.php:120
+msgid "Address"
+msgstr "Dirección"
+
+#: d:\DEVELOP\Glider/inc/modules/map/map.php:124
+msgid "Height (in px)"
+msgstr "Altura (en pilxes)"
+
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:20
+msgid "Display news/articles from some category"
+msgstr "Mostrar novidades/artiguos de alguna categoria"
+
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:221
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:206
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:175
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:165
+#: d:\DEVELOP\Glider/inc/modules/shortcode/shortcode.php:113
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:148
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:184
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:32
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:167
+#: d:\DEVELOP\Glider/inc/widgets/widget-flickr.php:102
+#: d:\DEVELOP\Glider/inc/widgets/widget-gallery.php:81
+#: d:\DEVELOP\Glider/inc/widgets/widget-search.php:110
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:143
+#: d:\DEVELOP\Glider/inc/widgets/widget-text.php:63
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:32
+msgid "Subtitle:"
+msgstr "Subtítulo:"
+
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:225
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:152
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:188
+msgid "Number of posts"
+msgstr "Número de entradas"
+
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:274
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:255
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:211
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:198
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:168
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:203
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:221
+msgid "Random order"
+msgstr "Orden aleatorio"
+
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:281
+msgid "Horizontal slide"
+msgstr "Diapositiva horizontal"
+
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:284
+msgid "Enable"
+msgstr "Habilitar"
+
+#: d:\DEVELOP\Glider/inc/modules/news-cat/news-cat.php:285
+msgid "Disable"
+msgstr "Desactivar"
+
+#: d:\DEVELOP\Glider/inc/modules/news-row/news-row.php:20
+msgid "Display postsrow from some category"
+msgstr "Mostrar entradas en línea de alguna categoría"
+
+#: d:\DEVELOP\Glider/inc/modules/news-row-desc/news-row-desc.php:9
+msgid "Post row with desc."
+msgstr "Mensaje de fila con desc."
+
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:9
+msgid "Display Gallery thumbnails"
+msgstr "Mostrar miniaturas da Galeria"
+
+#: d:\DEVELOP\Glider/inc/modules/one-gallery/one-gallery.php:211
+msgid "Select gallery"
+msgstr "Selecionar Galeria"
+
+#: d:\DEVELOP\Glider/inc/modules/partners-logo/partners-logo.php:20
+msgid "Display clients / partners logo"
+msgstr "Mostrar Logo de Clientes / Socios"
+
+#: d:\DEVELOP\Glider/inc/modules/promo-block/promo-block.php:78
+msgid "Icon name:"
+msgstr "Nombre del icono"
+
+#: d:\DEVELOP\Glider/inc/modules/promo-block/promo-block.php:81
+msgid "Icon Size:"
+msgstr "Tamaño del icono"
+
+#: d:\DEVELOP\Glider/inc/modules/recent-desc/recent-desc.php:17
+msgid "3 recent portfolio items + description "
+msgstr "3 últimos elementos de Portafolios + Descripción"
+
+#: d:\DEVELOP\Glider/inc/modules/recent-items/recent-items.php:11
+msgid "Box: Recent from portfolio"
+msgstr "Caja: Reciente de portafolio"
+
+#: d:\DEVELOP\Glider/inc/modules/recent-items/recent-items.php:12
+msgid "Must be placed in 1 column row "
+msgstr "Debe ser colocado en la fila de 1 columna"
+
+#: d:\DEVELOP\Glider/inc/modules/recent-items/recent-items.php:28
+#: d:\DEVELOP\Glider/options/options.php:940
+msgid "Recent items"
+msgstr "Elementos recentes"
+
+#: d:\DEVELOP\Glider/inc/modules/shortcode/shortcode.php:20
+msgid "Any shortcode can be added here"
+msgstr "Cualquier código corto se puede añadir aquí"
+
+#: d:\DEVELOP\Glider/inc/modules/shortcode/shortcode.php:42
+msgid "Some shortcode"
+msgstr "Algunos códigos cortos"
+
+#: d:\DEVELOP\Glider/inc/modules/shortcode/shortcode.php:118
+msgid "Shortcode"
+msgstr "Código corto"
+
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:9
+msgid "My slills widget"
+msgstr "Mi widget de habilidades"
+
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:99
+msgid "My skills"
+msgstr "Mis Habilidades"
+
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:134
+#: d:\DEVELOP\Glider/inc/widgets/widget-styled-list.php:71
+msgid "Subitle:"
+msgstr "Subtítulo:"
+
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:139
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:149
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:158
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:167
+msgid "Skill"
+msgstr "Habilidad"
+
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:144
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:153
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:162
+#: d:\DEVELOP\Glider/inc/modules/skills/skills.php:171
+msgid "Skill percent"
+msgstr "Porcentaje de habilidad"
+
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:10
+msgid "Display sticky articles from some category"
+msgstr "Mostrar artículos de alguna categoría"
+
+#: d:\DEVELOP\Glider/inc/modules/sticky-posts/sticky-posts.php:86
+msgid "Continue"
+msgstr "Continuar"
+
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:130
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:143
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:156
+#: d:\DEVELOP\Glider/inc/modules/tabs/tabs.php:169
+msgid "Section icon:"
+msgstr "Sección de iconos"
+
+#: d:\DEVELOP\Glider/inc/modules/testemonials/testemonials.php:20
+msgid "Display clients / partners testimonials"
+msgstr "Mostrar testimonios de Clientes / Socios"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:13
+msgid "Include audio with oEmbed"
+msgstr "Incluya audio con insertar"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:39
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:39
+msgid "Embed URL"
+msgstr "Insertar URL"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:44
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:44
+msgid "Embed width in pixels"
+msgstr "Insertar con tamanño de pixels"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:49
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:49
+msgid "Description"
+msgstr "Descripción"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:171
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:162
+msgid "Embed URL:"
+msgstr "Insertar URL:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:175
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:166
+msgid "Embed width:"
+msgstr "Insertar ancho:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-audio.php:179
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:170
+msgid "Embed Description:"
+msgstr "Insertar Descripción:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:40
+msgid "Subscribe"
+msgstr "Suscribirse"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:40
+msgid "Subscribers"
+msgstr "Suscriptores"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:41
+msgid "To RSS Feed"
+msgstr "Fuentes RSS"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:50
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:70
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:89
+msgid "followers"
+msgstr "seguidores"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:60
+msgid "fans"
+msgstr "Fans"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-count.php:79
+msgid "subscribers"
+msgstr "Suscriptores"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:12
+msgid "Facebook Social widget"
+msgstr "Red Social Facebook widget"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:27
+#: d:\DEVELOP\Glider/options/options.php:1454
+msgid "Facebook widget"
+msgstr "Facebook widget"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:100
+msgid "Facebook Name: ( facebook.com/ * Type into field * )"
+msgstr "Nombre en Facebook: ( facebook.com/ * Escriba en el campo* )"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:107
+#: d:\DEVELOP\Glider/inc/widgets/widget-gallery.php:87
+msgid "Width(px):"
+msgstr "Tamaño (Pilxes):"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:116
+msgid "Color scheme:"
+msgstr "Combinación de colores:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:131
+msgid "Show stream:"
+msgstr "Mostrar corriente:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:145
+msgid "Show faces:"
+msgstr "Mostrar avatares:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-facebook.php:159
+msgid "Show header:"
+msgstr "Mostrar encabezado:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-flickr.php:7
+msgid "Displays your Flickr feed"
+msgstr "Muestra tu feed Flickr"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-flickr.php:107
+msgid "ID:"
+msgstr "ID:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-flickr.php:112
+msgid "Number of photos:"
+msgstr "Número de fotos:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-gallery.php:20
+msgid "Random work from portfolio"
+msgstr "Mostrar Trabajos al azar"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-gallery.php:36
+msgid "Random work"
+msgstr "Trabajos al azar"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-gallery.php:94
+msgid "Height(px):"
+msgstr "Altura (Pilxes):"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-gallery.php:103
+msgid "Images number:"
+msgstr "Número de imagens:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:12
+msgid "Advanced recent posts widget."
+msgstr "Widget Últimas Entradas"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:158
+msgid "Limit:"
+msgstr "Límite:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:166
+msgid "Display date?"
+msgstr "¿Mostrar la fecha?"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:170
+msgid "Display excerpt?"
+msgstr "¿Mostrar el Extracto?"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:174
+msgid "Excerpt length:"
+msgstr "Longitud de extracto:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:179
+msgid "Display thumbnail?"
+msgstr "¿Visualizar miniaturas?"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:184
+msgid "Limit to category: "
+msgstr "¿Limitar a categoría:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:185
+msgid "All categories"
+msgstr "Todas las categorías"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-recent.php:188
+msgid "OR Choose the Post Type: "
+msgstr "Elegir el tipo de la publicación:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-search.php:9
+msgid "Search widget with subtitle"
+msgstr "Widget de búsqueda con subtítulos"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-search.php:64
+#: d:\DEVELOP\Glider/templates/searchform.php:2
+msgid "Search for:"
+msgstr "Buscar por:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-search.php:115
+msgid "Placeholder"
+msgstr "Marcador de posición"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-styled-list.php:9
+msgid "List of "
+msgstr "Lista de"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-styled-list.php:56
+msgid "Styled list"
+msgstr "Lista de estilos"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-styled-list.php:76
+msgid "Items wrapped in: li HTML tags"
+msgstr "Los elementos envueltos en: etiquetas HTML"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:15
+msgid ""
+"Displays a form for users to subscribe to your Feedburner feed via email"
+msgstr ""
+"Muestra un formulario para que los usuarios se suscriban a su feed de RSS "
+"por correo electrónico"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:46
+msgid "Join Us"
+msgstr "Únete a nosotros"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:55
+msgid ""
+"By subscribing to our mailing list you will always be update with the latest "
+"news from us."
+msgstr ""
+"Al suscribirse a nuestra lista de correo siempre estará actualizado con las "
+"últimas noticias de nosotros."
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:91
+msgid "Subscribe Via Email"
+msgstr "Suscríbete por correo electrónico."
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:96
+msgid "Enter your email address"
+msgstr "Introduzca su dirección de correo electrónico"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:104
+msgid "Feedburner Feed Name:"
+msgstr "Nombre del feed RSS:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-subscribe.php:108
+msgid "Textbox Label:"
+msgstr "Cuadro de texto"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:14
+msgid "Tabbed widget containing Popular posts, and Recent Posts"
+msgstr ""
+"Con pestañas que contiene widget de Entradas Populares y Entradas Recientes"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:45
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:52
+msgid "Popular"
+msgstr "Popular"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:46
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:51
+msgid "Recent"
+msgstr "Recientes"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:47
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:53
+#: d:\DEVELOP\Glider/templates/dopinfo.php:9
+#: d:\DEVELOP\Glider/templates/entry-meta.php:11
+msgid "Comments"
+msgstr "Comentarios"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:147
+msgid "Number of posts:"
+msgstr "Número de entradas:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:151
+msgid "Popular limit (days):"
+msgstr "Popular limitado (dias):"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:156
+msgid "Select header format:"
+msgstr "Seleccionar formato de cabecera:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:158
+msgid "Popular-Recent"
+msgstr "Popular-Reciente"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:159
+msgid "Recent-Popular"
+msgstr "Reciente-Popular"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:164
+msgid "Display date or thumb:"
+msgstr "Mostrar la fecha o la miniatura"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:166
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tabs.php:167
+msgid "Date"
+msgstr "Fecha"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tags.php:10
+msgid "Displays tags list"
+msgstr "Muestra la lista de etiquetas"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tags.php:24
+msgid "Text block"
+msgstr "Bloque de Texto"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tags.php:79
+msgid "Number tags:"
+msgstr "Número de etiquetas:"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-text.php:8
+msgid "Cr: Text block"
+msgstr "Cr: Bloque de texto"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-text.php:9
+msgid "Text block with subtitle"
+msgstr "Bloque de texto con subtítulo"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tweets.php:16
+msgid "Displays your latest Tweets"
+msgstr "Muestra tus Tweets más recientes"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-tweets.php:174
+msgid "Follow me"
+msgstr "Síguenos"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-vcard.php:17
+msgid "Use this widget to add a vCard"
+msgstr "Utilice este widget para agregar una tarjeta de visita"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-vcard.php:19
+msgid "Theme: vCard"
+msgstr "Tema: Tarjeta de visita"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-vcard.php:46
+msgid "vCard"
+msgstr "Tarjeta de visita"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-vcard.php:73
+msgid "E-Mail"
+msgstr "Correo electrónico"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-vcard.php:74
+msgid "Web"
+msgstr "Web"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-vcard.php:75
+msgid "Twitter"
+msgstr "Twitter"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget-video.php:13
+msgid "Include video with oEmbed"
+msgstr "Incluya video con Insertar"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget_categories.php:8
+msgid "A list of categories"
+msgstr "Una lista de categorías"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget_categories.php:9
+msgid "Cr: Categories with icons"
+msgstr "Cr: Categorías con iconos"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget_categories.php:15
+msgid "Blog categories"
+msgstr "Blog de categorías"
+
+#: d:\DEVELOP\Glider/inc/widgets/widget_categories.php:111
+msgid "Select Taxonomy"
+msgstr "Seleccione Taxonomía"
+
+#: d:\DEVELOP\Glider/options/options.php:100
+msgid ""
+"<p>This text is displayed above the options panel. It isn't required, but "
+"more info is always better! The intro_text field accepts all HTML.</p>"
+msgstr ""
+"<p>Este texto se muestra encima del panel de opciones. No es necesario, pero "
+"más información es siempre mejor! El campo texto acepta todo el HTML.</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:103
+msgid ""
+"<p>This text is displayed below the options panel. It isn't required, but "
+"more info is always better! The footer_text field accepts all HTML.</p>"
+msgstr ""
+"<p>Este texto se muestra a continuación del panel de opciones. No es "
+"necesario, pero más información es siempre mejor! El campo de texto de pie "
+"de página acepta todo el HTML.</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:111
+msgid "Follow me on Twitter"
+msgstr "Síguenos en Twitter"
+
+#: d:\DEVELOP\Glider/options/options.php:116
+msgid "Find me on LinkedIn"
+msgstr "Encuéntrame en Linkedin"
+
+#: d:\DEVELOP\Glider/options/options.php:143
+#: d:\DEVELOP\Glider/options/options.php:147
+msgid "Options"
+msgstr "Opciones"
+
+#: d:\DEVELOP\Glider/options/options.php:190
+msgid "Theme Information 1"
+msgstr "Información de Tema 1"
+
+#: d:\DEVELOP\Glider/options/options.php:191
+#: d:\DEVELOP\Glider/options/options.php:196
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr "<p>Este es el contenido TAB, se permite HTML.</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:195
+msgid "Theme Information 2"
+msgstr "Información de Tema 2"
+
+#: d:\DEVELOP\Glider/options/options.php:200
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+"<p>Este es el contenido de la barra lateral, se permite código HTML.</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:214
+msgid "Getting Started"
+msgstr "Empezando"
+
+#: d:\DEVELOP\Glider/options/options.php:215
+msgid ""
+"<p class=\"description\">This is the description field for this section. "
+"HTML is allowed</p>"
+msgstr ""
+"<p class=\"descripción\">Este es el campo de descripción para esta sección. "
+"Se permite HTML</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:230
+msgid "Main Options"
+msgstr "Opciones Principales"
+
+#: d:\DEVELOP\Glider/options/options.php:231
+msgid "<p class=\"description\">Main options of site</p>"
+msgstr "<p class=\"descripción\">Opciones principales del sitio</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:240
+msgid "Favicon"
+msgstr "Favicon"
+
+#: d:\DEVELOP\Glider/options/options.php:241
+msgid ""
+"Select a 16px X 16px image from the file location on your computer and "
+"upload it as a favicon of your site"
+msgstr ""
+"Seleccione una imagen de 16 pilxes X 16 pilxes en su ordenador y subalo como "
+"un favicon para su sitio"
+
+#: d:\DEVELOP\Glider/options/options.php:246
+msgid "Header Logotype image"
+msgstr "Imagen del logotipo para la cabecera"
+
+#: d:\DEVELOP\Glider/options/options.php:247
+msgid ""
+"Select an image from the file location on your computer and upload it as a "
+"header logotype"
+msgstr ""
+"Seleccione una imagen en su ordenador y subualo como un logotipo de cabecera"
+
+#: d:\DEVELOP\Glider/options/options.php:253
+msgid "Logotype text"
+msgstr "Texto del logotipo"
+
+#: d:\DEVELOP\Glider/options/options.php:255
+msgid "If you do not use logo image - you can type text here"
+msgstr "Si usted no usa una imagen como logo - puede escribir un texto aquí"
+
+#: d:\DEVELOP\Glider/options/options.php:262
+msgid "Logotype style"
+msgstr "Estilo de logotipo"
+
+#: d:\DEVELOP\Glider/options/options.php:264
+msgid "Select what type of logo you want."
+msgstr "Seleccione el tipo de logotipo que desea."
+
+#: d:\DEVELOP\Glider/options/options.php:271
+msgid "Top block with address"
+msgstr "Bloque superior con la dirección"
+
+#: d:\DEVELOP\Glider/options/options.php:273
+msgid "Enable or disable address block"
+msgstr "Activar o desactivar el bloque de direcciones"
+
+#: d:\DEVELOP\Glider/options/options.php:280
+msgid "Top adress panel"
+msgstr "Panel Superior"
+
+#: d:\DEVELOP\Glider/options/options.php:281
+msgid "Please do not use single qoute here"
+msgstr "Por favor, no use comillas simples aquí"
+
+#: d:\DEVELOP\Glider/options/options.php:282
+msgid "This is top adress info block."
+msgstr "Esta es la parte superior del bloque info dirección."
+
+#: d:\DEVELOP\Glider/options/options.php:289
+msgid "Language selection shortcode"
+msgstr "Selección de idiomas con código corto"
+
+#: d:\DEVELOP\Glider/options/options.php:291
+msgid ""
+"You can type shortcode of language select tht your translating plugin provide"
+msgstr ""
+"Puede escribir código corto del lenguaje seleccionado con su plugin traductor"
+
+#: d:\DEVELOP\Glider/options/options.php:298
+msgid "WPML language switcher"
+msgstr "WPML selector de idiomas"
+
+#: d:\DEVELOP\Glider/options/options.php:300
+msgid ""
+"WPML plugin must be installed. It is not packed with theme. You can find it "
+"here: http://wpml.org/"
+msgstr ""
+"WPML Plugin debe ser instalado. No está incluido con el tema. Lo puedes "
+"encontrar aquí: http://wpml.org/"
+
+#: d:\DEVELOP\Glider/options/options.php:307
+msgid "Custom JS"
+msgstr "Customizar JS"
+
+#: d:\DEVELOP\Glider/options/options.php:309
+msgid ""
+"Generate your tracking code at Google Analytics Service and insert it here."
+msgstr ""
+"Genere el código de seguimiento de Google Analytics e introduzcalo aquí."
+
+#: d:\DEVELOP\Glider/options/options.php:314
+msgid "Custom CSS"
+msgstr "Customizar CSS"
+
+#: d:\DEVELOP\Glider/options/options.php:316
+msgid "You may add any other styles for your theme to this field."
+msgstr ""
+"Usted puede agregar cualquier otro estilo CSS para el tema en este campo."
+
+#: d:\DEVELOP\Glider/options/options.php:322
+msgid "Top panel Options"
+msgstr "Opciones del panel superior"
+
+#: d:\DEVELOP\Glider/options/options.php:332
+msgid "Display top panel"
+msgstr "Mostrar panel superior"
+
+#: d:\DEVELOP\Glider/options/options.php:334
+msgid "Enable or disable top slidin"
+msgstr "Activar o desactivar la diapositiva superior"
+
+#: d:\DEVELOP\Glider/options/options.php:341
+msgid "Display login panel"
+msgstr "Visualizar el panel de inicio de sesión"
+
+#: d:\DEVELOP\Glider/options/options.php:343
+msgid "Enable or disable login form"
+msgstr "Habilitar o deshabilitar el panel de inicio de sesión"
+
+#: d:\DEVELOP\Glider/options/options.php:350
+msgid "Icon for panel text"
+msgstr "Icono para el texto del panel"
+
+#: d:\DEVELOP\Glider/options/options.php:352
+msgid "You can select icon here"
+msgstr "Puede seleccionar el icono aqui"
+
+#: d:\DEVELOP\Glider/options/options.php:358
+msgid "Title top panel"
+msgstr "Título del panel superior"
+
+#: d:\DEVELOP\Glider/options/options.php:360
+msgid "Title of right column"
+msgstr "Título de la columna derecha"
+
+#: d:\DEVELOP\Glider/options/options.php:366
+msgid "Text for top panel"
+msgstr "Texto para el panel superior"
+
+#: d:\DEVELOP\Glider/options/options.php:368
+msgid "Text, that will displayed in top panel"
+msgstr "Texto que se mostrará en el panel superior"
+
+#: d:\DEVELOP\Glider/options/options.php:374
+msgid "Social accounts"
+msgstr "Redes Sociales"
+
+#: d:\DEVELOP\Glider/options/options.php:375
+msgid "<p class=\"description\">Type links for social accounts</p>"
+msgstr "<p class=\"descripción\">Tipo de enlaces para redes sociales</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:384
+msgid "Facebook link"
+msgstr "Enlace de Facebook"
+
+#: d:\DEVELOP\Glider/options/options.php:386
+#: d:\DEVELOP\Glider/options/options.php:409
+#: d:\DEVELOP\Glider/options/options.php:432
+#: d:\DEVELOP\Glider/options/options.php:456
+#: d:\DEVELOP\Glider/options/options.php:480
+#: d:\DEVELOP\Glider/options/options.php:504
+#: d:\DEVELOP\Glider/options/options.php:528
+#: d:\DEVELOP\Glider/options/options.php:552
+#: d:\DEVELOP\Glider/options/options.php:576
+#: d:\DEVELOP\Glider/options/options.php:600
+#: d:\DEVELOP\Glider/options/options.php:624
+#: d:\DEVELOP\Glider/options/options.php:648
+#: d:\DEVELOP\Glider/options/options.php:672
+#: d:\DEVELOP\Glider/options/options.php:696
+msgid "Paste link to your account"
+msgstr "Pegar vínculo de su cuenta"
+
+#: d:\DEVELOP\Glider/options/options.php:392
+msgid "Facebook icon"
+msgstr "Icono de Facebook"
+
+#: d:\DEVELOP\Glider/options/options.php:394
+#: d:\DEVELOP\Glider/options/options.php:416
+#: d:\DEVELOP\Glider/options/options.php:440
+#: d:\DEVELOP\Glider/options/options.php:464
+#: d:\DEVELOP\Glider/options/options.php:488
+#: d:\DEVELOP\Glider/options/options.php:512
+#: d:\DEVELOP\Glider/options/options.php:536
+#: d:\DEVELOP\Glider/options/options.php:560
+#: d:\DEVELOP\Glider/options/options.php:584
+#: d:\DEVELOP\Glider/options/options.php:608
+#: d:\DEVELOP\Glider/options/options.php:632
+#: d:\DEVELOP\Glider/options/options.php:656
+#: d:\DEVELOP\Glider/options/options.php:680
+#: d:\DEVELOP\Glider/options/options.php:704
+#: d:\DEVELOP\Glider/options/options.php:728
+msgid "Type icon name here"
+msgstr "Tipo icono nombre aquí"
+
+#: d:\DEVELOP\Glider/options/options.php:400
+#: d:\DEVELOP\Glider/options/options.php:422
+#: d:\DEVELOP\Glider/options/options.php:446
+#: d:\DEVELOP\Glider/options/options.php:470
+#: d:\DEVELOP\Glider/options/options.php:494
+#: d:\DEVELOP\Glider/options/options.php:518
+#: d:\DEVELOP\Glider/options/options.php:542
+#: d:\DEVELOP\Glider/options/options.php:566
+#: d:\DEVELOP\Glider/options/options.php:590
+#: d:\DEVELOP\Glider/options/options.php:614
+#: d:\DEVELOP\Glider/options/options.php:638
+#: d:\DEVELOP\Glider/options/options.php:662
+#: d:\DEVELOP\Glider/options/options.php:686
+#: d:\DEVELOP\Glider/options/options.php:710
+#: d:\DEVELOP\Glider/options/options.php:734
+msgid "Show in header"
+msgstr "Mostrar en cabecera"
+
+#: d:\DEVELOP\Glider/options/options.php:401
+#: d:\DEVELOP\Glider/options/options.php:423
+#: d:\DEVELOP\Glider/options/options.php:447
+#: d:\DEVELOP\Glider/options/options.php:471
+#: d:\DEVELOP\Glider/options/options.php:495
+#: d:\DEVELOP\Glider/options/options.php:519
+#: d:\DEVELOP\Glider/options/options.php:543
+#: d:\DEVELOP\Glider/options/options.php:567
+#: d:\DEVELOP\Glider/options/options.php:591
+#: d:\DEVELOP\Glider/options/options.php:615
+#: d:\DEVELOP\Glider/options/options.php:639
+#: d:\DEVELOP\Glider/options/options.php:663
+#: d:\DEVELOP\Glider/options/options.php:687
+#: d:\DEVELOP\Glider/options/options.php:711
+#: d:\DEVELOP\Glider/options/options.php:735
+msgid "If checked - will be display in header of theme "
+msgstr "Si se marca - se mostrará en la cabecera del tema"
+
+#: d:\DEVELOP\Glider/options/options.php:408
+msgid "Twitter link"
+msgstr "Enalace de Twitter"
+
+#: d:\DEVELOP\Glider/options/options.php:415
+msgid "Twitter icon"
+msgstr "Icono de Twitter"
+
+#: d:\DEVELOP\Glider/options/options.php:430
+msgid "Instagram link"
+msgstr "Enlace de Instagram"
+
+#: d:\DEVELOP\Glider/options/options.php:438
+msgid "Instagram icon"
+msgstr "Icono Instagram"
+
+#: d:\DEVELOP\Glider/options/options.php:454
+msgid "Vimeo link"
+msgstr "Enlace de Vimeo"
+
+#: d:\DEVELOP\Glider/options/options.php:462
+msgid "Vimeo icon"
+msgstr "Icono de Vimeo"
+
+#: d:\DEVELOP\Glider/options/options.php:478
+msgid "Last FM link"
+msgstr "Enlace de Last FM"
+
+#: d:\DEVELOP\Glider/options/options.php:486
+msgid "LastFM icon"
+msgstr "Icono de Last FM"
+
+#: d:\DEVELOP\Glider/options/options.php:502
+msgid "Vkontakte link"
+msgstr "Enlace de Vkontakte"
+
+#: d:\DEVELOP\Glider/options/options.php:510
+msgid "Vkontakte icon"
+msgstr "Icono Vkontakte"
+
+#: d:\DEVELOP\Glider/options/options.php:526
+msgid "YouTube"
+msgstr "YouTube"
+
+#: d:\DEVELOP\Glider/options/options.php:534
+msgid "Youtube icon"
+msgstr "Icono de Youtube"
+
+#: d:\DEVELOP\Glider/options/options.php:550
+msgid "Deviantart link"
+msgstr "Enlace de Deviantart"
+
+#: d:\DEVELOP\Glider/options/options.php:558
+msgid "Deviantart"
+msgstr "Deviantart"
+
+#: d:\DEVELOP\Glider/options/options.php:574
+#: d:\DEVELOP\Glider/options/options.php:582
+msgid "LinkedIN"
+msgstr "LinkedIn"
+
+#: d:\DEVELOP\Glider/options/options.php:598
+#: d:\DEVELOP\Glider/options/options.php:606
+msgid "Google +"
+msgstr "Google +"
+
+#: d:\DEVELOP\Glider/options/options.php:622
+msgid "Picasa"
+msgstr "Picasa"
+
+#: d:\DEVELOP\Glider/options/options.php:630
+msgid "Picasa icon"
+msgstr "Icono de Picasa"
+
+#: d:\DEVELOP\Glider/options/options.php:646
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: d:\DEVELOP\Glider/options/options.php:654
+msgid "Pinterest icon"
+msgstr "Icono de Pinterest"
+
+#: d:\DEVELOP\Glider/options/options.php:670
+msgid "Wordpress"
+msgstr "Wordpress"
+
+#: d:\DEVELOP\Glider/options/options.php:678
+msgid "WP icon"
+msgstr "Icono de WP"
+
+#: d:\DEVELOP\Glider/options/options.php:694
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: d:\DEVELOP\Glider/options/options.php:702
+msgid "Dropbox icon"
+msgstr "Icono de Dropbox"
+
+#: d:\DEVELOP\Glider/options/options.php:718
+msgid "RSS"
+msgstr "RSS"
+
+#: d:\DEVELOP\Glider/options/options.php:720
+msgid "Paste alternative link to Rss"
+msgstr "Pegar enlace alternativo a Rss"
+
+#: d:\DEVELOP\Glider/options/options.php:726
+msgid "RSS icon"
+msgstr "Icono de RSS"
+
+#: d:\DEVELOP\Glider/options/options.php:743
+msgid "Posts list options"
+msgstr "Opciones de la lista de Entradas"
+
+#: d:\DEVELOP\Glider/options/options.php:744
+msgid ""
+"<p class=\"description\">Parameters for posts and archives (social share "
+"etc)</p>"
+msgstr ""
+"<p class=\"descripción\">Parámetros para las entradas y archivos (cuota "
+"social, etc)</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:754
+msgid "Select format for posts displaying"
+msgstr "Selecciona el formato para mostrar las entradas"
+
+#: d:\DEVELOP\Glider/options/options.php:764
+msgid "Social share buttons"
+msgstr "Botones acción social"
+
+#: d:\DEVELOP\Glider/options/options.php:766
+msgid "With this option you may activate or deactivate social share buttons."
+msgstr ""
+"Con esta opción se puede activar o desactivar botones de redes sociales."
+
+#: d:\DEVELOP\Glider/options/options.php:773
+msgid "Custom share code"
+msgstr "Customizar código corto"
+
+#: d:\DEVELOP\Glider/options/options.php:775
+msgid "You may add any other social share buttons to this field."
+msgstr "Usted puede agregar cualquier otro boton social en este campo."
+
+#: d:\DEVELOP\Glider/options/options.php:781
+msgid "Author Info"
+msgstr "Información de Autor"
+
+#: d:\DEVELOP\Glider/options/options.php:783
+msgid ""
+"This option enables you to insert information about the author of the post."
+msgstr ""
+"Esta opción le permite introducir información sobre el autor de la entrada."
+
+#: d:\DEVELOP\Glider/options/options.php:790
+msgid "Links in author info"
+msgstr "Enlaces a la información del autor"
+
+#: d:\DEVELOP\Glider/options/options.php:792
+msgid "Enable or disable additional links in author box"
+msgstr "Activar o desactivar conexiones adicionales en la caja de autor"
+
+#: d:\DEVELOP\Glider/options/options.php:810
+msgid "Thumbnail on inner page"
+msgstr "Miniaturas en la página interior"
+
+#: d:\DEVELOP\Glider/options/options.php:812
+msgid "Display featured image on single post"
+msgstr "Mostrar la imagen en una sóla entrada"
+
+#: d:\DEVELOP\Glider/options/options.php:813
+#: d:\DEVELOP\Glider/options/options.php:841
+#: d:\DEVELOP\Glider/options/options.php:871
+#: d:\DEVELOP\Glider/options/options.php:880
+#: d:\DEVELOP\Glider/options/options.php:901
+#: d:\DEVELOP\Glider/options/options.php:943
+msgid "On"
+msgstr "On"
+
+#: d:\DEVELOP\Glider/options/options.php:813
+#: d:\DEVELOP\Glider/options/options.php:841
+#: d:\DEVELOP\Glider/options/options.php:871
+#: d:\DEVELOP\Glider/options/options.php:880
+#: d:\DEVELOP\Glider/options/options.php:901
+#: d:\DEVELOP\Glider/options/options.php:943
+msgid "Off"
+msgstr "Off"
+
+#: d:\DEVELOP\Glider/options/options.php:820
+msgid "Post thumbnail width (in px)"
+msgstr "Ancho de miniaturas en entradas (en píxeles)"
+
+#: d:\DEVELOP\Glider/options/options.php:829
+msgid "Post  thumbnail height (in px)"
+msgstr "Largo de miniaturas en entradas (en píxeles)"
+
+#: d:\DEVELOP\Glider/options/options.php:838
+msgid "Post info"
+msgstr "Información de la entrada"
+
+#: d:\DEVELOP\Glider/options/options.php:840
+msgid ""
+"It is information about the post (time and date of creation, author, "
+"comments on the post)."
+msgstr ""
+"Es una información sobre la entrada (hora y fecha de creación, autor, "
+"comentarios sobre la entrada)"
+
+#: d:\DEVELOP\Glider/options/options.php:850
+msgid "Portfolio Options"
+msgstr "Opciones de Portafolio"
+
+#: d:\DEVELOP\Glider/options/options.php:860
+msgid "Portfolio page"
+msgstr "Página de portafolio"
+
+#: d:\DEVELOP\Glider/options/options.php:862
+msgid "Please select main portfolio page (for proper urls)"
+msgstr ""
+"Por favor seleccione la página principal de portafolios (para URL apropiadas)"
+
+#: d:\DEVELOP\Glider/options/options.php:868
+msgid "Items Sorting"
+msgstr "Elementos ordenados"
+
+#: d:\DEVELOP\Glider/options/options.php:869
+msgid ""
+"Disable or enable items sort on portfolio page templates that allow that"
+msgstr ""
+"Deshabilitar o habilitar elementos sobre los portafolios de página que "
+"permiten que"
+
+#: d:\DEVELOP\Glider/options/options.php:877
+msgid "Date in portfolio"
+msgstr "Fecha en el portafolio"
+
+#: d:\DEVELOP\Glider/options/options.php:878
+msgid "Display date in portfolio items?"
+msgstr "¿Mostrar la fecha en los elementos del portafolio?"
+
+#: d:\DEVELOP\Glider/options/options.php:886
+msgid "Portfolio text location"
+msgstr "Ubicación del texto del portafolio"
+
+#: d:\DEVELOP\Glider/options/options.php:887
+msgid "Select text layout on inner page"
+msgstr "Seleccione la disposición del texto en la página interior"
+
+#: d:\DEVELOP\Glider/options/options.php:898
+msgid "Featured image"
+msgstr "Imagen destacada"
+
+#: d:\DEVELOP\Glider/options/options.php:899
+msgid "Display featured image on inner page?"
+msgstr "¿Mostrar imagen en la página interior?"
+
+#: d:\DEVELOP\Glider/options/options.php:907
+msgid "Portfolio image display"
+msgstr "Mostrar imagen en el Portafolio"
+
+#: d:\DEVELOP\Glider/options/options.php:908
+msgid "Display attached images of inner portfolio page as:"
+msgstr "Mostrar imágenes adjuntas de página de portafolios como:"
+
+#: d:\DEVELOP\Glider/options/options.php:919
+msgid "Portfolio Images sort"
+msgstr "Ordenar imágenes del portafolio"
+
+#: d:\DEVELOP\Glider/options/options.php:920
+msgid "Sort images on portfolio single page"
+msgstr "Ordenar las imágenes de portafolios de una sola página"
+
+#: d:\DEVELOP\Glider/options/options.php:928
+msgid "Portfolio Images order"
+msgstr "Orden de Imagenes de portafolios"
+
+#: d:\DEVELOP\Glider/options/options.php:929
+msgid "Order images on portfolio single page"
+msgstr "Ordenar imágens en una única página de portafolios"
+
+#: d:\DEVELOP\Glider/options/options.php:941
+msgid "Block with featured items"
+msgstr "Bloquear con elementos destacados"
+
+#: d:\DEVELOP\Glider/options/options.php:950
+msgid "Styling Options"
+msgstr "Opciones de estilo"
+
+#: d:\DEVELOP\Glider/options/options.php:951
+msgid "<p class=\"description\">Style parameters of body and footer</p>"
+msgstr ""
+"<p class=\"descripción\">Parámetros de estilo de cuerpo y pie de página</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:962
+msgid "<p class=\"description\">Main site colors setup</p>"
+msgstr ""
+"<p class=\"descripción\">Configuración principal de colores del sitio</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:968
+msgid "Main site color"
+msgstr "Color del sitio principal"
+
+#: d:\DEVELOP\Glider/options/options.php:969
+msgid "Color of buttons, tabs, links, borders etc."
+msgstr "Colores de los botones, pestañas, enlaces, bordes, etc"
+
+#: d:\DEVELOP\Glider/options/options.php:975
+msgid "Secondary site color"
+msgstr "Color secundario del sitio"
+
+#: d:\DEVELOP\Glider/options/options.php:977
+#: d:\DEVELOP\Glider/options/options.php:985
+msgid "Color of inactive or hovered elements"
+msgstr "Color de elementos inactivos que se han mantenido"
+
+#: d:\DEVELOP\Glider/options/options.php:983
+msgid "Color of text"
+msgstr "Color del texto"
+
+#: d:\DEVELOP\Glider/options/options.php:992
+msgid "Body layout"
+msgstr "Diseño de cuerpo"
+
+#: d:\DEVELOP\Glider/options/options.php:1002
+msgid "<p class=\"description\">Boxed site options</p>"
+msgstr "<p class=\"descripción\">Opciones de sitios en caja</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:1009
+msgid "Content background color"
+msgstr "Contenido color de fondo"
+
+#: d:\DEVELOP\Glider/options/options.php:1011
+#: d:\DEVELOP\Glider/options/options.php:1043
+msgid "Select background color."
+msgstr "Selecione el color de fondo."
+
+#: d:\DEVELOP\Glider/options/options.php:1017
+msgid "Content background image"
+msgstr "Contenido de la imagen de fondo"
+
+#: d:\DEVELOP\Glider/options/options.php:1019
+#: d:\DEVELOP\Glider/options/options.php:1051
+msgid "Upload your own background image or pattern."
+msgstr "Cargue su propia imagen de fondo o patrón."
+
+#: d:\DEVELOP\Glider/options/options.php:1024
+msgid "Content bg image repeat"
+msgstr "Contenido repetición de imagen"
+
+#: d:\DEVELOP\Glider/options/options.php:1026
+#: d:\DEVELOP\Glider/options/options.php:1058
+#: d:\DEVELOP\Glider/options/options.php:1106
+msgid "Select type background image repeat"
+msgstr "Seleccione el tipo de imagen de fondo de repetición"
+
+#: d:\DEVELOP\Glider/options/options.php:1035
+msgid "<p class=\"description\">Not Boxed site options</p>"
+msgstr "<p class=\"descripción\">Opciones del sitio en cajas</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:1041
+msgid "Body background color"
+msgstr "Color de fondo del cuerpo"
+
+#: d:\DEVELOP\Glider/options/options.php:1049
+msgid "Custom background image"
+msgstr "Imagen de fondo personalizada"
+
+#: d:\DEVELOP\Glider/options/options.php:1065
+msgid "Fixed body background"
+msgstr "Fondo cuerpo fijo"
+
+#: d:\DEVELOP\Glider/options/options.php:1075
+#: d:\DEVELOP\Glider/options/options.php:1183
+msgid "<p class=\"description\">Footer section options</p>"
+msgstr "<p class=\"descripción\">Opciones de sección Pie de página</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:1081
+msgid "Footer background color"
+msgstr "Color de fondo de pie de página"
+
+#: d:\DEVELOP\Glider/options/options.php:1083
+msgid "Select footer background color. "
+msgstr "Seleccionar color de fondo de pie de página."
+
+#: d:\DEVELOP\Glider/options/options.php:1089
+msgid "Footer font color"
+msgstr "Color del texto de pie de página"
+
+#: d:\DEVELOP\Glider/options/options.php:1091
+msgid "Select footer font color."
+msgstr "Seleccione el color del texto del pie de página."
+
+#: d:\DEVELOP\Glider/options/options.php:1097
+msgid "Custom footer background image"
+msgstr "Imagen de fondo del pie de página personalizado"
+
+#: d:\DEVELOP\Glider/options/options.php:1099
+msgid "Upload your own footer background image or pattern."
+msgstr "Cargue su propia imagen de fondo de pie de página o patrón."
+
+#: d:\DEVELOP\Glider/options/options.php:1104
+msgid "Footer background image repeat"
+msgstr "Imagen de fondo de repetición del Pie de página"
+
+#: d:\DEVELOP\Glider/options/options.php:1114
+msgid "Contact page options"
+msgstr "Opciones de la página de contacto"
+
+#: d:\DEVELOP\Glider/options/options.php:1115
+msgid "<p class=\"description\">Contact page options</p>"
+msgstr "<p class=\"descripción\">Opciones de la página de contato</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:1124
+msgid "Custom Form Shortcode"
+msgstr "Formulario personalizado Código corto"
+
+#: d:\DEVELOP\Glider/options/options.php:1126
+msgid "You can paste your shorcode custom form"
+msgstr "Puede pegar el formulario personalizado de código corto"
+
+#: d:\DEVELOP\Glider/options/options.php:1132
+msgid "Display map on contacts page?"
+msgstr "¿Visualizar el mapa en la página de contacto?"
+
+#: d:\DEVELOP\Glider/options/options.php:1139
+msgid "Height of Google Map (in px)"
+msgstr "Altura de Google Map (en Pilxes)"
+
+#: d:\DEVELOP\Glider/options/options.php:1146
+msgid "Address on Google Map "
+msgstr "Dirección en Google Mapa"
+
+#: d:\DEVELOP\Glider/options/options.php:1148
+msgid "Fill in your address to be shown on Google map."
+msgstr "Ingrese su dirección que se muestra en el mapa de Google."
+
+#: d:\DEVELOP\Glider/options/options.php:1154
+msgid "Form address"
+msgstr "Dirección de Formulario"
+
+#: d:\DEVELOP\Glider/options/options.php:1156
+msgid "Email address for contact form"
+msgstr "E-mail para formulário de contato"
+
+#: d:\DEVELOP\Glider/options/options.php:1162
+msgid "Type the antispam question"
+msgstr "Escriba la pregunta antispam:"
+
+#: d:\DEVELOP\Glider/options/options.php:1164
+#: d:\DEVELOP\Glider/options/options.php:1173
+msgid "Antispam question will protect you from spamers"
+msgstr "La pregunta antispam le protegerá de spam"
+
+#: d:\DEVELOP\Glider/options/options.php:1171
+msgid "Type the answer for antispam question"
+msgstr "Escriba la respuesta para la pregunta antispam:"
+
+#: d:\DEVELOP\Glider/options/options.php:1182
+msgid "Footer section options"
+msgstr "Opciones de sección del Pie de página"
+
+#: d:\DEVELOP\Glider/options/options.php:1193
+msgid "Logotype in footer"
+msgstr "Logotipo de pie de página"
+
+#: d:\DEVELOP\Glider/options/options.php:1195
+msgid "Will be displayed before copyright text"
+msgstr "Se mostrará antes del texto del Copyright"
+
+#: d:\DEVELOP\Glider/options/options.php:1202
+msgid "Show copyright"
+msgstr "Mostrar el Copyright"
+
+#: d:\DEVELOP\Glider/options/options.php:1204
+msgid "Fill in the copyright text."
+msgstr "Rellene el texto de copyright."
+
+#: d:\DEVELOP\Glider/options/options.php:1215
+msgid "Layouts Settings"
+msgstr "Distribución de Ajustes"
+
+#: d:\DEVELOP\Glider/options/options.php:1216
+msgid "<p class=\"description\">Configure layouts of different pages</p>"
+msgstr ""
+"<p class=\"descripción\">Configurar la configuración de distintas páginas</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:1221
+msgid "Single pages layout"
+msgstr "Diseño de páginas individuales"
+
+#: d:\DEVELOP\Glider/options/options.php:1222
+msgid "Select one type of layout for single pages"
+msgstr "Selecione um tipo de ajustes para páginas"
+
+#: d:\DEVELOP\Glider/options/options.php:1237
+msgid "Archive Pages Layout"
+msgstr "Archivo páginas de diseño"
+
+#: d:\DEVELOP\Glider/options/options.php:1238
+msgid "Select one type of layout for archive pages"
+msgstr "Seleccione un tipo de diseño de páginas de archivo"
+
+#: d:\DEVELOP\Glider/options/options.php:1253
+msgid "Single posts layout"
+msgstr "Diseño de entradas individuales"
+
+#: d:\DEVELOP\Glider/options/options.php:1254
+msgid "Select one type of layout for single posts"
+msgstr "Seleccione un tipo de diseño para las entradas individuales"
+
+#: d:\DEVELOP\Glider/options/options.php:1269
+msgid "Search results layout"
+msgstr "Diseño de Resultados de la búsqueda"
+
+#: d:\DEVELOP\Glider/options/options.php:1270
+msgid "Select one type of layout for search results"
+msgstr "Seleccione un tipo de diseño para los resultados de búsqueda"
+
+#: d:\DEVELOP\Glider/options/options.php:1285
+msgid "404 Page Layout"
+msgstr "Diseño de la página 404"
+
+#: d:\DEVELOP\Glider/options/options.php:1286
+msgid "Select one of layouts for 404 page"
+msgstr "Seleccione un tipo de diseño para la página 404"
+
+#: d:\DEVELOP\Glider/options/options.php:1302
+msgid "Icons customization"
+msgstr "Personalización de Iconos"
+
+#: d:\DEVELOP\Glider/options/options.php:1312
+msgid "Default widget icon"
+msgstr "Icono del widget por defecto "
+
+#: d:\DEVELOP\Glider/options/options.php:1318
+msgid "Search widget"
+msgstr "Widget de búsqueda"
+
+#: d:\DEVELOP\Glider/options/options.php:1326
+msgid "Recent posts widget"
+msgstr "Widget de entradas recientes"
+
+#: d:\DEVELOP\Glider/options/options.php:1334
+msgid "RSS Feed subscribe widget"
+msgstr "Widget para suscribirse RSS"
+
+#: d:\DEVELOP\Glider/options/options.php:1342
+msgid "Recent from portfolio block"
+msgstr "Bloque de portafolios recientes"
+
+#: d:\DEVELOP\Glider/options/options.php:1350
+msgid "News from category block"
+msgstr "Bloque de categorías nuevas"
+
+#: d:\DEVELOP\Glider/options/options.php:1358
+msgid "Horizontal Tabs block"
+msgstr "Bloque Tabs Horizontal"
+
+#: d:\DEVELOP\Glider/options/options.php:1366
+msgid "Styled list widget"
+msgstr "Lista de estilos do widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1374
+msgid "Testimonial block"
+msgstr "Bloque Testimonial"
+
+#: d:\DEVELOP\Glider/options/options.php:1382
+msgid "Partners logo block"
+msgstr "Logo bloque socios"
+
+#: d:\DEVELOP\Glider/options/options.php:1390
+msgid "Flickr widget"
+msgstr "Flickr widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1398
+msgid "Text widget"
+msgstr "Texto widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1406
+msgid "VCard widget"
+msgstr "Tarjeta de visita widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1414
+msgid "Tags widget"
+msgstr "Etiquetas  widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1422
+msgid "Tabs-posts widget"
+msgstr "Tabs widget de entradas"
+
+#: d:\DEVELOP\Glider/options/options.php:1430
+msgid "From portfolio widget"
+msgstr "Widget de portafolio"
+
+#: d:\DEVELOP\Glider/options/options.php:1438
+msgid "Twitter widget"
+msgstr "Twitter widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1446
+msgid "Category widget"
+msgstr "Categoría widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1462
+msgid "oEmbed widget"
+msgstr "Insertar widget"
+
+#: d:\DEVELOP\Glider/options/options.php:1478
+msgid "Galleries block"
+msgstr "Bloque galerías"
+
+#: d:\DEVELOP\Glider/options/options.php:1486
+msgid "About author block"
+msgstr "Acerca del bloque de autor"
+
+#: d:\DEVELOP\Glider/options/options.php:1494
+msgid "My skills block"
+msgstr "Mi bloque de habilidades"
+
+#: d:\DEVELOP\Glider/options/options.php:1502
+msgid "Shortcode block"
+msgstr "Bloque código corto"
+
+#: d:\DEVELOP\Glider/options/options.php:1510
+msgid "Features list block"
+msgstr "Bloque de la lista de Características"
+
+#: d:\DEVELOP\Glider/options/options.php:1518
+msgid "Login widget"
+msgstr "Widget iniciar sesión"
+
+#: d:\DEVELOP\Glider/options/options.php:1526
+msgid "Shopping cart widget"
+msgstr "Widget carrito de la compra"
+
+#: d:\DEVELOP\Glider/options/options.php:1534
+msgid "Accordion block"
+msgstr "Bloque acordeón"
+
+#: d:\DEVELOP\Glider/options/options.php:1541
+msgid "Map block"
+msgstr "Bloque de mapa"
+
+#: d:\DEVELOP\Glider/options/options.php:1551
+msgid "Twitter panel options"
+msgstr "Panel de opciones de Twitter"
+
+#: d:\DEVELOP\Glider/options/options.php:1552
+msgid "<p class=\"description\">Other settings</p>"
+msgstr "<p class=\"descripción\">Otros ajustes</p>"
+
+#: d:\DEVELOP\Glider/options/options.php:1562
+msgid "Display twitter statuses before footer"
+msgstr "Mostrar el status de twitter en el pie de página"
+
+#: d:\DEVELOP\Glider/options/options.php:1570
+msgid "Cache Tweets in every:"
+msgstr "Tweets de caché en cada:"
+
+#: d:\DEVELOP\Glider/options/options.php:1571
+msgid "In minutes"
+msgstr "en cuestión de minutos"
+
+#: d:\DEVELOP\Glider/options/options.php:1577
+msgid "Number of latest tweets display:"
+msgstr "Número de la última visualización de tweets:"
+
+#: d:\DEVELOP\Glider/options/options.php:1584
+msgid "Username:"
+msgstr "Nombre de usuario"
+
+#: d:\DEVELOP\Glider/options/options.php:1591
+msgid "Consumer key:"
+msgstr "Clave del Consumidor:"
+
+#: d:\DEVELOP\Glider/options/options.php:1598
+msgid "Consumer secret:"
+msgstr "Secreto del Consumidor:"
+
+#: d:\DEVELOP\Glider/options/options.php:1604
+msgid "Access token:"
+msgstr "La señal de acceso:"
+
+#: d:\DEVELOP\Glider/options/options.php:1611
+msgid "Access token secret:"
+msgstr "La señal de acceso secreta:"
+
+#: d:\DEVELOP\Glider/options/options.php:1639
+msgid "<strong>Theme URL:</strong> "
+msgstr "<strong>URL del tema:</strong> "
+
+#: d:\DEVELOP\Glider/options/options.php:1640
+msgid "<strong>Author:</strong> "
+msgstr "<strong>Autor:</strong> "
+
+#: d:\DEVELOP\Glider/options/options.php:1641
+msgid "<strong>Version:</strong> "
+msgstr "<strong>Versión:</strong> "
+
+#: d:\DEVELOP\Glider/options/options.php:1643
+msgid "<strong>Tags:</strong> "
+msgstr "<strong>Etiquetas:</strong> "
+
+#: d:\DEVELOP\Glider/options/options.php:1649
+msgid "Theme Information"
+msgstr "Información del tema"
+
+#: d:\DEVELOP\Glider/options/options.php:1657
+msgid "Documentation"
+msgstr "Documentación"
+
+#: d:\DEVELOP\Glider/options/options/fields/color_gradient/field_color_gradient.php:28
+#: d:\DEVELOP\Glider/options/options/fields/color_gradient/field_color_gradient.php:33
+msgid "From:"
+msgstr "De:"
+
+#: d:\DEVELOP\Glider/options/options/fields/color_gradient/field_color_gradient.php:29
+msgid "To:"
+msgstr "Para:"
+
+#: d:\DEVELOP\Glider/options/options/fields/color_gradient/field_color_gradient.php:35
+msgid " To:"
+msgstr " Para:"
+
+#: d:\DEVELOP\Glider/options/options/fields/google_webfonts/field_google_webfonts.php:25
+msgid ""
+"The fonts provided below are free to use custom fonts from the <a href="
+"\"http://www.google.com/webfonts\" target=\"_blank\">Google Web Fonts "
+"directory</a>"
+msgstr ""
+"Las fuentes que aparecen a continuación son libres de usar fuentes "
+"personalizadas a partir de la <a href=\"http://www.google.com/webfonts\" "
+"target=\"_blank\">Google Web directorio de fuentes</a>"
+
+#: d:\DEVELOP\Glider/options/options/fields/multi_text/field_multi_text.php:40
+#: d:\DEVELOP\Glider/options/options/fields/social/field_social.php:49
+msgid "Add More"
+msgstr "Añadir más"
+
+#: d:\DEVELOP\Glider/options/options/fields/upload/field_upload.php:30
+msgid "Upload"
+msgstr "Subir"
+
+#: d:\DEVELOP\Glider/options/options/fields/upload/field_upload.php:31
+msgid "Remove Upload"
+msgstr "Eliminar subida"
+
+#: d:\DEVELOP\Glider/options/options/validation/color/validation_color.php:13
+msgid "This field must be a valid color value."
+msgstr "Este campo debe tener un valor de color válido."
+
+#: d:\DEVELOP\Glider/options/options/validation/comma_numeric/validation_comma_numeric.php:13
+msgid ""
+"You must provide a comma seperated list of numerical values for this option."
+msgstr ""
+"Usted debe proporcionar una lista separada por comas de los valores "
+"numéricos separados para esta opción."
+
+#: d:\DEVELOP\Glider/options/options/validation/date/validation_date.php:13
+msgid "This field must be a valid date."
+msgstr "Este campo debe ser una fecha válida."
+
+#: d:\DEVELOP\Glider/options/options/validation/email/validation_email.php:13
+msgid "You must provide a valid email for this option."
+msgstr ""
+"Usted debe proporcionar una dirección de correo electrónico válida para esta "
+"opción."
+
+#: d:\DEVELOP\Glider/options/options/validation/no_html/validation_no_html.php:13
+msgid ""
+"You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+"Usted no debe introducir ningún HTML en este campo, se han eliminado todas "
+"las etiquetas HTML."
+
+#: d:\DEVELOP\Glider/options/options/validation/no_special_chars/validation_no_special_chars.php:13
+msgid ""
+"You must not enter any special characters in this field, all special "
+"characters have been removed."
+msgstr ""
+"Usted no debe introducir ningún carácter especial en este campo se han "
+"eliminado caracteres. "
+
+#: d:\DEVELOP\Glider/options/options/validation/numeric/validation_numeric.php:13
+msgid "You must provide a numerical value for this option."
+msgstr "Debe proporcionar un valor numérico válido para esta opción."
+
+#: d:\DEVELOP\Glider/options/options/validation/url/validation_url.php:13
+msgid "You must provide a valid URL for this option."
+msgstr "Usted debe proporcionar una URL válida para esta opción."
+
+#: d:\DEVELOP\Glider/templates/author-box.php:29
+msgid "All posts"
+msgstr "Todas las entradas"
+
+#: d:\DEVELOP\Glider/templates/author-box.php:30
+#: d:\DEVELOP\Glider/templates/comments.php:98
+msgid "Website"
+msgstr "Website"
+
+#: d:\DEVELOP\Glider/templates/author-box.php:31
+msgid "Email"
+msgstr "Correo eletrónico"
+
+#: d:\DEVELOP\Glider/templates/comments.php:11
+msgid "Says"
+msgstr "dice"
+
+#: d:\DEVELOP\Glider/templates/comments.php:11
+#, php-format
+msgid "<cite class=\"fn\">%s "
+msgstr "<cite class=\"fn\">%s "
+
+#: d:\DEVELOP\Glider/templates/comments.php:13
+#, php-format
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: d:\DEVELOP\Glider/templates/comments.php:16
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: d:\DEVELOP\Glider/templates/comments.php:24
+msgid "Your comment is awaiting moderation."
+msgstr "Su comentario está pendiente de moderación."
+
+#: d:\DEVELOP\Glider/templates/comments.php:40
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Esta entrada está protegida. Introduzca la contraseña para ver los "
+"comentarios"
+
+#: d:\DEVELOP\Glider/templates/comments.php:78
+msgid "Leave a Reply"
+msgstr "Deja un comentario"
+
+#: d:\DEVELOP\Glider/templates/comments.php:78
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Deja un comentario a %s"
+
+#: d:\DEVELOP\Glider/templates/comments.php:83
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Usted debe estar <a href=\"%s\">conectado</a> para realizar um comentario."
+
+#: d:\DEVELOP\Glider/templates/comments.php:90
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr "Conectado como <a href=\"%s/wp-admin/profile.php\">%s</a>."
+
+#: d:\DEVELOP\Glider/templates/comments.php:91
+msgid "Log out of this account"
+msgstr "Desconectar"
+
+#: d:\DEVELOP\Glider/templates/comments.php:91
+msgid "Log out &raquo;"
+msgstr "Desconectar &raquo;"
+
+#: d:\DEVELOP\Glider/templates/comments.php:96
+msgid "Name"
+msgstr "Nombre"
+
+#: d:\DEVELOP\Glider/templates/comments.php:96
+#: d:\DEVELOP\Glider/templates/comments.php:97
+msgid " (required)"
+msgstr "(obligatorio)"
+
+#: d:\DEVELOP\Glider/templates/comments.php:97
+msgid "Email (will not be published)"
+msgstr "Correo electrónico (no será publicado)"
+
+#: d:\DEVELOP\Glider/templates/comments.php:105
+msgid "Submit Comment"
+msgstr "Enviar comentario"
+
+#: d:\DEVELOP\Glider/templates/content-single.php:52
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: d:\DEVELOP\Glider/templates/dopinfo.php:7
+#: d:\DEVELOP\Glider/templates/entry-meta-mini.php:4
+#: d:\DEVELOP\Glider/templates/entry-meta.php:5
+msgid "By"
+msgstr "Por"
+
+#: d:\DEVELOP\Glider/templates/dopinfo.php:9
+#: d:\DEVELOP\Glider/templates/entry-meta.php:11
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: d:\DEVELOP\Glider/templates/entry-meta-mini.php:6
+#: d:\DEVELOP\Glider/templates/entry-meta.php:7
+msgid "in"
+msgstr "en"
+
+#: d:\DEVELOP\Glider/templates/entry-meta.php:11
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: d:\DEVELOP\Glider/templates/portfolio-item.php:77
+msgid "Read details"
+msgstr "Leer detalles"
+
+#: d:\DEVELOP\Glider/templates/searchform.php:3
+#: d:\DEVELOP\Glider/templates/searchform.php:4
+msgid "Search"
+msgstr "Buscar"
+
+#: d:\DEVELOP\Glider/templates/section-panel.php:22
+msgid "Welcome"
+msgstr "Bienvenido"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:12
+#: d:\DEVELOP\Glider/templates/top-page.php:12
+msgid "Latest Posts"
+msgstr "Últimas entradas"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:22
+#: d:\DEVELOP\Glider/templates/top-page.php:22
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archivos diarios: %s"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:24
+#: d:\DEVELOP\Glider/templates/top-page.php:24
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archivos por mes: %s"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:26
+#: d:\DEVELOP\Glider/templates/top-page.php:26
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archivos anuales: %s"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:34
+#: d:\DEVELOP\Glider/templates/top-page.php:34
+msgid "Author Archives:"
+msgstr "Archivos de Autor:"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:37
+#: d:\DEVELOP\Glider/templates/top-page.php:37
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archivos de Autor: %s"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:44
+#: d:\DEVELOP\Glider/templates/top-page.php:44
+#, php-format
+msgid "Search Results for %s"
+msgstr "Resultados de la búsqueda para %s"
+
+#: d:\DEVELOP\Glider/templates/top-forum.php:46
+#: d:\DEVELOP\Glider/templates/top-page.php:46
+msgid "File Not Found"
+msgstr "Archivo no encontrado"
+
+#: d:\DEVELOP\Glider/templates/section-panel.php:26
+msgid "Login site"
+msgstr "Acceder al sitio"
+
+#: d:\DEVELOP\Glider/templates/section-panel.php:30
+msgid "Ragístrate"
+msgstr "Ragístrate"
+
+#: d:\DEVELOP\Glider/templates/section-panel.php:105
+msgid "Follow us:"
+msgstr "Síguenos:"
+
+#: d:\DEVELOP\Glider/templates/author-box.php:21
+msgid "Post author"
+msgstr "Autor de la publicación"
+
+#: d:\DEVELOP\Glider/templates/loop-content.php:35
+msgid "No Comments"
+msgstr "No hay comentarios"
+
+#: d:\DEVELOP\Glider/templates/comments.php:13
+msgid "Posted by"
+msgstr "Publicado por"
+
+#: d:\DEVELOP\Glider/templates/comments.php:16
+msgid "on"
+msgstr "el"
+
+#: d:\DEVELOP\Glider/templates/functions.php:250
+msgid "Previous"
+msgstr "Anterior"
+
+#: d:\DEVELOP\Glider/templates/functions.php:64
+msgid "Read More"
+msgstr "Leer Más"
+
+#~ msgid "Type your email!"
+#~ msgstr "Escriba su correo electrónico!"
+
+#~ msgid "Email is incorect"
+#~ msgstr "El correo electrónico es incorreto"
+
+#~ msgid "Type the subject!"
+#~ msgstr "Escriba el asunto!"
+
+#~ msgid "Type the message!"
+#~ msgstr "Escriba el mensaje!"
+
+#~ msgid "Type the answer!"
+#~ msgstr "Escriba la respuesta!"
+
+#~ msgid "Wrong  answer!"
+#~ msgstr "Respuesta equivocada!"
+
+#~ msgid "A Section added by hook"
+#~ msgstr "Sección añadida"
+
+#~ msgid ""
+#~ "<p class=\"description\">This is a section created by adding a filter to "
+#~ "the sections array, great to allow child themes, to add/remove sections "
+#~ "from the options.</p>"
+#~ msgstr ""
+#~ "<p class=\"descripcion\">Esta es una sección creada mediante la adición "
+#~ "de un filtro para la matriz secciones , grande para permitir que temas "
+#~ "infantiles , para agregar / quitar secciones para las secciones</p>"
+
+#~ msgid ""
+#~ "<p>Panel to configure theme options. If you have any questions or "
+#~ "suggestions, please write on our forum <a href=\"http://support.crumina."
+#~ "net\"/>support.crumina.net</a></p>"
+#~ msgstr ""
+#~ "<p>Panel para configurar opciones de tema . Si usted tiene alguna "
+#~ "pregunta o sugerencias , por favor, escriban en nuestro foro <a href="
+#~ "\"http://support.crumina.net\"/>support.crumina.net</a></p>"
+
+#~ msgid "Theme Options"
+#~ msgstr "Opciones del Tema"
+
+#~ msgid "Crumina Theme Options panel"
+#~ msgstr "Panel de opciones del tema crumina"
+
+#~ msgid "Fixed header"
+#~ msgstr "Cabecera fija"
+
+#~ msgid "Enable or disable fixed header"
+#~ msgstr "Habilitar o deshabiltar cabecera fija"
+
+#~ msgid "Header variant"
+#~ msgstr "Cabecera variable"
+
+#~ msgid "Responsive mode"
+#~ msgstr "Modo sensible"
+
+#~ msgid "Enable or disable Responsive CSS"
+#~ msgstr "Activar o desactivar CSS "
+
+#~ msgid "Subtitle top panel"
+#~ msgstr "Subtitulo del panel superior"
+
+#~ msgid "Subtitle of right column"
+#~ msgstr "Subtitulo de columna derecha"
+
+#~ msgid "Flickr link"
+#~ msgstr "Enalace a Flickr"
+
+#~ msgid "Dribble link"
+#~ msgstr "Enalace variable"
+
+#~ msgid "Microsoft ID"
+#~ msgstr "Microsoft ID"
+
+#~ msgid "Sorting items"
+#~ msgstr "Ordenar Artículos"
+
+#~ msgid "Portfolio columns"
+#~ msgstr "Columnas para Portafolios"
+
+#~ msgid "Portfolio style"
+#~ msgstr "Estilo do Portafolio"
+
+#~ msgid "Square"
+#~ msgstr "Quadrado"
+
+#~ msgid "Round"
+#~ msgstr "Redondo"
+
+#~ msgid "Images order"
+#~ msgstr "Imagenes ordenadas"
+
+#~ msgid "Unlimited sidebars"
+#~ msgstr "Barras laterales Ilimaitadas"
+
+#~ msgid "<p class=\"description\">Add or delete your own sidebars</p>"
+#~ msgstr ""
+#~ "<p class=\"descripcion\">Añadir o eliminar sus propias barras laterales</"
+#~ "p>"
+
+#~ msgid "You may create a custom sidebar to be displayed on a single page."
+#~ msgstr ""
+#~ "Usted puede crear una barra lateral personalizada que se mostrará en una "
+#~ "sola página"
+
+#~ msgid "Site color version"
+#~ msgstr "Versión de color del sitio"
+
+#~ msgid "Main menu alignment"
+#~ msgstr "Alineación del menú principal"
+
+#~ msgid "Text on top"
+#~ msgstr "Texto en la parte superior"
+
+#~ msgid "This is the description field, again good for additional info."
+#~ msgstr "Este es el campo de descripción, para información adicional."
+
+#~ msgid "Adress in contact page"
+#~ msgstr "Dirección de página de contato"
+
+#~ msgid "In Hours"
+#~ msgstr "En horas"
+
+#~ msgid "News row box"
+#~ msgstr "Noticias cuadro de fila"
+
+#~ msgid "Typography"
+#~ msgstr "Tipografia"
+
+#~ msgid "Body main font size"
+#~ msgstr "Tamaño de texto principal"
+
+#~ msgid "Select font size."
+#~ msgstr "Selecione tamaño de texto"
+
+#~ msgid "Body main font color"
+#~ msgstr "Color de texto principal"
+
+#~ msgid "Select font color."
+#~ msgstr "Selecione color de texto"
+
+#~ msgid "H1 elements style"
+#~ msgstr "Estilo do elemento H1"
+
+#~ msgid "H1 elements color"
+#~ msgstr "Colorr do elemento H1"
+
+#~ msgid "Click on field to choose color"
+#~ msgstr "Haga clic en el campo para elegir el color"
+
+#~ msgid "H2 elements style"
+#~ msgstr "Estilo do elemento H2"
+
+#~ msgid "H2 elements color"
+#~ msgstr "Color do elemento H2"
+
+#~ msgid "H3 elements style"
+#~ msgstr "Estilo do elemento H3"
+
+#~ msgid "H3 elements color"
+#~ msgstr "Color do elemento H3"
+
+#~ msgid "H4 elements style"
+#~ msgstr "Estilo do elemento H4"
+
+#~ msgid "H4 elements color"
+#~ msgstr "Color do elemento H4"
+
+#~ msgid "H5 elements style"
+#~ msgstr "Estilo do elemento H5"
+
+#~ msgid "H5 elements color"
+#~ msgstr "Color do elemento H5"
+
+#~ msgid "H6 elements style"
+#~ msgstr "Estilo do elemento H6"
+
+#~ msgid "H6 elements color"
+#~ msgstr "Color do elemento H6"
+
+#~ msgid ""
+#~ "<span id=\"footer-thankyou\">Options Panel created using the <a href=\""
+#~ msgstr ""
+#~ "<span id=\"footer-thankyou\">Opciones de Panel creado usando el <a href=\""
+
+#~ msgid "Import / Export"
+#~ msgstr "Importar / Exportar"
+
+#~ msgid "Dev Mode Info"
+#~ msgstr "Dev Mode Info"
+
+#~ msgid "Are you sure? Resetting will loose all custom values."
+#~ msgstr ""
+#~ "Estás seguro ? Restablecimiento perderá todos los valores personalizados "
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Restaurar los valores predeterminados"
+
+#~ msgid "<strong>Settings Imported!</strong>"
+#~ msgstr "<strong>Importar configuración de ajustes!</strong>"
+
+#~ msgid "<strong>Settings Saved!</strong>"
+#~ msgstr "<strong>Guardar configuración!</strong>"
+
+#~ msgid "<strong>Settings have changed!, you should save them!</strong>"
+#~ msgstr "<strong>Ajustes cambiados !, desea guardar los cambios!</strong>"
+
+#~ msgid "<strong><span></span> error(s) were found!</strong>"
+#~ msgstr "<strong><span></span> error(s) fueron encontrados!</strong>"
+
+#~ msgid "<strong><span></span> warning(s) were found!</strong>"
+#~ msgstr "<strong><span></span> aviso(s) fueron encontrados!</strong>"
+
+#~ msgid "Import / Export Options"
+#~ msgstr "Importar / Exportar Opciones"
+
+#~ msgid "Import Options"
+#~ msgstr "Importar Opciones"
+
+#~ msgid ""
+#~ "Input your backup file below and hit Import to restore your sites options "
+#~ "from a backup."
+#~ msgstr ""
+#~ "Ingrese su archivo de copia de seguridad a continuación a partir de una "
+#~ "copia de seguridad importe para restaurar sus opciones de sitio. "
+
+#~ msgid ""
+#~ "Input the URL to another sites options set and hit Import to load the "
+#~ "options from that site."
+#~ msgstr ""
+#~ "Introduzca el URL para otros sitios opciones SET y pulsa Importar para "
+#~ "cargar el Opciones de ese sitio . "
+
+#~ msgid "Import"
+#~ msgstr "Importar"
+
+#~ msgid ""
+#~ "WARNING! This will overwrite any existing options, please proceed with "
+#~ "caution!"
+#~ msgstr ""
+#~ "CUIDADO! Esto sobrescribirá cualquiera de las opciones existentes , por "
+#~ "favor proceda con cautela!"
+
+#~ msgid "Export Options"
+#~ msgstr "Exportar Opciones"
+
+#~ msgid ""
+#~ "Here you can copy/download your themes current option settings. Keep this "
+#~ "safe as you can use it as a backup should anything go wrong. Or you can "
+#~ "use it to restore your settings on this site (or any other site). You "
+#~ "also have the handy option to copy the link to yours sites settings. "
+#~ "Which you can then use to duplicate on another site"
+#~ msgstr ""
+#~ "Aquí puedes copiar / descargar sus temas configuración de las opciones "
+#~ "actuales . Tenga esto seguro, ya que se puede utilizar como una copia de "
+#~ "seguridad si algo va mal . O puede utilizarlo para restaurar la "
+#~ "configuración de este sitio ( o cualquier otro sitio ) . Usted También "
+#~ "tiene la opción útil para copiar el enlace para la configuración de "
+#~ "sitios tuyo . Que luego se puede utilizar para duplicar en otro sitio "
+
+#~ msgid "Browse"
+#~ msgstr "Explorar"
+
+#~ msgid "Continue reading &#187;"
+#~ msgstr "Seguir leyendo &#187;"
+
+#~ msgid "Custom Types"
+#~ msgstr "Tipos personalizados"
+
+#~ msgid "Custom Post"
+#~ msgstr "Entradas personalizadas"
+
+#~ msgid "Add New Custom Type"
+#~ msgstr "Añadir Tipo personalizado nuevo"
+
+#~ msgid "Edit"
+#~ msgstr "Editar"
+
+#~ msgid "Edit Post Types"
+#~ msgstr "Editar tipos de entradas"
+
+#~ msgid "New Post Type"
+#~ msgstr "Nuevo tipo de entrada"
+
+#~ msgid "View Post Type"
+#~ msgstr "Visualizar tipo de entrada"
+
+#~ msgid "Search Post Type"
+#~ msgstr "Buscar tipo de entrada"
+
+#~ msgid "Nothing found in the Database."
+#~ msgstr "Nada encontrado en la base de datos."
+
+#~ msgid "Nothing found in Trash"
+#~ msgstr "Nada encontrado en la libreria."
+
+#~ msgid "This is the example custom post type"
+#~ msgstr "Este es el ejemplo tipo de entrada personalizada"
+
+#~ msgid "Custom Categories"
+#~ msgstr "Categorías Personalizadas"
+
+#~ msgid "Custom Category"
+#~ msgstr "Categoría Persdonalizada"
+
+#~ msgid "Search Custom Categories"
+#~ msgstr "Buscar categorías personalizadas"
+
+#~ msgid "All Custom Categories"
+#~ msgstr "Todas las categorías personalizadas"
+
+#~ msgid "Parent Custom Category"
+#~ msgstr "Categoría personalizada padre"
+
+#~ msgid "Parent Custom Category:"
+#~ msgstr "Categoría personalizada padre:"
+
+#~ msgid "Update Custom Category"
+#~ msgstr "Actualizar Categoría padre"
+
+#~ msgid "Add New Custom Category"
+#~ msgstr "Añadir nueva personalización de categoría"
+
+#~ msgid "New Custom Category Name"
+#~ msgstr "Nombre de nueva categoría"
+
+#~ msgid "Custom Tags"
+#~ msgstr "Personalizar etiquetas"
+
+#~ msgid "Custom Tag"
+#~ msgstr "Personaliza etiqueta"
+
+#~ msgid "Search Custom Tags"
+#~ msgstr "Buscar etiqueta personalizada"
+
+#~ msgid "All Custom Tags"
+#~ msgstr "Todas las etiquetas personalizadas"
+
+#~ msgid "Parent Custom Tag"
+#~ msgstr "Personalizar etiqueta padre"
+
+#~ msgid "Parent Custom Tag:"
+#~ msgstr "Personalizar etiqueta padre:"
+
+#~ msgid "Edit Custom Tag"
+#~ msgstr "Edita etiqueta personalizada"
+
+#~ msgid "Update Custom Tag"
+#~ msgstr "Actualizar etiqueta personalizada"
+
+#~ msgid "Add New Custom Tag"
+#~ msgstr "Añadir nueva etiqueta personalizada"
+
+#~ msgid "New Custom Tag Name"
+#~ msgstr "Nombre nueva etiqueta personalizada"
+
+#~ msgid "Before footer"
+#~ msgstr "Antes del pie de página"
+
+#~ msgid "Box: Clickable promo block"
+#~ msgstr "Caja: bloque promocional con enlace"
+
+#~ msgid "Promo block with link itself"
+#~ msgstr "Bloque promocional con enlace en sí"
+
+#~ msgid "Hover image"
+#~ msgstr "Imagen flotante"
+
+#~ msgid "Text block with title + desc + butt"
+#~ msgstr "Bloque de texto con la descripción del título + trasero"
+
+#~ msgid "Button URL:"
+#~ msgstr "URL del botón:"
+
+#~ msgid "Button Height:"
+#~ msgstr "Altura del botón:"
+
+#~ msgid "Button Width:"
+#~ msgstr "Tamaño del botón:"
+
+#~ msgid "Button Font Size:"
+#~ msgstr "Tamaño del texto del botón:"
+
+#~ msgid "Display Features with icons"
+#~ msgstr "Características de la pantalla con iconos"
+
+#~ msgid "Full width?"
+#~ msgstr "¿Tamaño Completo?"
+
+#~ msgid "Display news/articles row from some category"
+#~ msgstr "Mostrar Noticias / Línea de artículos de alguna categoría"
+
+#~ msgid "Title for Tab:"
+#~ msgstr "Título del TAB:"
+
+#~ msgid "Content for Tab:"
+#~ msgstr "Contenido del TAB:"
+
+#~ msgid "A list of categories, with slightly tweaked output."
+#~ msgstr "Una lista de las categorías, con resultados ligeramente retocado ."
+
+#~ msgid "Theme: Categories list with icons"
+#~ msgstr "Tema: Lista de categorías con icono"
+
+#~ msgid "Show post counts"
+#~ msgstr "Mostrar total de entradas"
+
+#~ msgid "Theme: Recent Posts"
+#~ msgstr "Tema: Entradas recientes"
+
+#~ msgid "Display stiky articles from some category"
+#~ msgstr "Mostrar artículos stiky de alguna categoría"
+
+#~ msgid "Tags block with subtitle"
+#~ msgstr "Bloque de TAGS com subtítulo"
+
+#~ msgid "HTML"
+#~ msgstr "HTML"
+
+#~ msgid "Visual"
+#~ msgstr "Visual"
+
+#~ msgid ""
+#~ "Displays arbritrary text of HTML just like the standard Text widget, but "
+#~ "this one does not include the header bar and wrapper style - just a blank "
+#~ "canvas for content"
+#~ msgstr ""
+#~ "Muestra de texto arbitraria de código HTML al igual que el widget de "
+#~ "texto estándar, pero éste no incluye la barra de encabezado y envoltorio "
+#~ "estilo - sólo un espacio en blanco para el contenido "
+
+#~ msgid "Text/HTML"
+#~ msgstr "Texto/HTML"
+
+#~ msgid "Text block with tiltle + desc + butt"
+#~ msgstr "Blocque de texto com título + descripción + botón"
+
+#~ msgid "<h2>Thank you for your message!</h2>"
+#~ msgstr "<h2>Gracias por tu mensaje!</h2>"
+
+#~ msgid "<h2>Unknown error, during message sending.</h2>"
+#~ msgstr "<h2>Error desconocido, durante el envío del mensaje.</h2>"
+
+#~ msgid "<h2>Wrong answer for the question!</h2>"
+#~ msgstr "<h2>Respuesta incorrecta para la pregunta!</h2>"
+
+#~ msgid "E-mail"
+#~ msgstr "Correo Electrónico"
+
+#~ msgid "Topic:"
+#~ msgstr "Asunto:"
+
+#~ msgid "Comment"
+#~ msgstr "Comentario"
+
+#~ msgid "Send message"
+#~ msgstr "Enviar mensaje"
+
+#~ msgid "E-mail:"
+#~ msgstr "Correo Electrónico:"
+
+#~ msgid "Anti-spam question:"
+#~ msgstr "Pregunta Antispam:"
+
+#~ msgid "Cool Facebook Widget"
+#~ msgstr "Facebook Widget"
+
+#~ msgid "Border color:"
+#~ msgstr "Color de borde:"
+
+#~ msgid "Cr: Tabbed Widget"
+#~ msgstr "Cr: Widget en pestañas"
+
+#~ msgid "Date & Thumb"
+#~ msgstr "Fecha y Miniatura"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Deja un comentario"
+
+#~ msgid "full page"
+#~ msgstr "Página completa"
+
+#~ msgid "%1$s"
+#~ msgstr "%1$s"
+
+#~ msgid "login on site"
+#~ msgstr "Iniciar sesión en el sitio"
+
+#~ msgid "Enter your login"
+#~ msgstr "Introduzca su nombre de usuario"
+
+#~ msgid "Enter your password"
+#~ msgstr "Introduzca su nombre contraseña"
+
+#~ msgid "Registration"
+#~ msgstr "Registro"
+
+#~ msgid "Press ENTER to login"
+#~ msgstr "Pulse ENTER para iniciar sesión"
+
+#~ msgid "%s ago"
+#~ msgstr "%s atrás"
+
+#~ msgid "Y/m/d"
+#~ msgstr "d/m/Y"
+
+#~ msgid "Select month"
+#~ msgstr "Seleccionar Mes"
