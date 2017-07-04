@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: FAQ
+Plugin Name: Ultimate FAQ
 Plugin URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Description: A plugin that lets you create FAQs (frequently asked questions), organize them, publicize them, etc.
 Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.5.35
+Version: 1.5.37
 */
 
 global $ewd_ufaq_message;

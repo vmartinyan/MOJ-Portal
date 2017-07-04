@@ -1,8 +1,8 @@
-=== FAQ ===
+=== Ultimate FAQ ===
 Contributors: Rustaurius, EtoileWebDesign
 Tags: faq, faqs, woocommerce faq, frequently asked questions, faq widget
 Requires at least: 3.9.0
-Tested up to: 4.7.5
+Tested up to: 4.8
 License: GPLv3
 License URI:http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -94,8 +94,7 @@ For further information and purchasing options, please visit our <strong><a href
 For help and support, please see:
 
 * Our FAQ page, here: https://wordpress.org/plugins/ultimate-faqs/faq/
-* Our installation page, here: https://wordpress.org/plugins/ultimate-faqs/installation/
-* Our getting-started guide, here: http://www.etoilewebdesign.com/wp-content/uploads/getting-started-guides/FAQ_Getting_Started_Guide.pdf
+* Our installation guide, here: https://wordpress.org/plugins/ultimate-faqs/installation/
 * Our documentation, here: http://www.etoilewebdesign.com/plugins/ultimate-faq/documentation-ultimate-faq/
 * Our tutorial videos, here: https://www.youtube.com/playlist?list=PLEndQUuhlvSrNdfu5FKa1uGHsaKZxgdWt
 * The Ultimate FAQ support forum, here: https://wordpress.org/support/plugin/ultimate-faqs
@@ -250,6 +249,12 @@ Video 3 - FAQs Ordering
 13. View of FAQ custom fields in the admin
 
 == Changelog ==
+= 1.5.37 =
+- Fixed an error with the "Main FAQ page" permalink setting
+
+= 1.5.36 =
+- Minor admin styling update
+
 = 1.5.35 =
 - Changed the menu icon
 - Added missing filters for the title

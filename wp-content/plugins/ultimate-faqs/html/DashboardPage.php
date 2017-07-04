@@ -306,10 +306,10 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 		</div>
 		<div class="ewd-dashboard-plugin-icons">
 			<div style="width:50%">
-				<a target='_blank' href='https://wordpress.org/plugins/ultimate-slider/'><img style="width:100%" src='<?php echo plugins_url(); ?>/ultimate-faqs/images/US_Related_Sales_Icon.png'/></a>
+				<a target='_blank' href='https://wordpress.org/plugins/ultimate-reviews/'><img style="width:100%" src='<?php echo plugins_url(); ?>/ultimate-faqs/images/URP_Icons-03.png'/></a>
 			</div>
 			<div>
-				<h3>Ultimate Slider</h3><p>An easy-to-use slider plugin that lets you add a clean, modern, responsive slider to any WordPress page.</p>
+				<h3>Ultimate Reviews</h3><p>Let visitors submit reviews and display them right in the tabbed page layout! Require login, email confirmation, and many more options!</p>
 			</div>
 
 		</div>

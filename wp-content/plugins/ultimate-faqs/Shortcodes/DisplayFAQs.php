@@ -173,6 +173,8 @@ function Display_FAQs($atts) {
 		);
 	}
 
+	$Page_Permalink = get_the_permalink();
+
 	$ReturnString .= "<div class='ufaq-faq-list' id='ufaq-faq-list'>";
 	$HeaderString .= "<div class='ufaq-faq-header'>";
 
@@ -273,8 +275,8 @@ function Display_FAQs($atts) {
 					$FAQ_Permalink = get_permalink($faq->ID);
 				}
 				else {
-					if ($Pretty_Permalinks == "Yes") {$FAQ_Permalink = get_the_permalink() . "single-faq/" . $faq->post_name;}
-					else {$FAQ_Permalink = get_the_permalink() . "?Display_FAQ=" . $faq->ID;}
+					if ($Pretty_Permalinks == "Yes") {$FAQ_Permalink = $Page_Permalink . "single-faq/" . $faq->post_name;}
+					else {$FAQ_Permalink = $Page_Permalink . "?Display_FAQ=" . $faq->ID;}
 				}
 
 				if ($Display_FAQ_ID == $faq->ID) {
