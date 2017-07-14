@@ -455,3 +455,69 @@ padding: 5px;
 .link-item h3.aio-icon-title {
     font-size: 15px;
 }
+
+
+
+@media only screen
+and (max-width : 767px){
+    .top-menu-button {
+        display: none;
+    }
+    .tiled-menu {
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+        display: block;
+    }
+}
+
+@media only screen
+and (max-width : 480px) {
+    #top-panel {
+        height: 40px;
+    }
+    #top-panel .search, #top-panel .head-soc-icons {
+        display: block;
+        width: 100%;
+    }
+    #top-panel .lang-sel:before{
+        clear: both;
+    }
+    #top-panel .lang-sel {
+        padding-top: 0px;
+        padding-bottom: 20px;
+        position:static;
+        margin-top: -42px;
+        width: 40%;
+    }
+    #top-panel .lang-sel:after{
+        clear: both;
+    }
+
+    .page-title-inner h2.first-ico {
+        display:none;
+    }
+
+    .page-title-inner h1.page-title {
+        padding: 15px;
+        width:25%;
+    }
+
+    .page-title-inner .page-title {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    body .cf7-style.cf7-style-4585 input[type="submit"] {
+        -webkit-border-radius:0 !important;
+        -moz-border-radius:0 !important;
+        border-radius:0 !important;
+        font-size: 14px !important;
+
+    }
+
+    #menu-primary-navigation span.item-title {
+        display: none;
+    }
+
+}

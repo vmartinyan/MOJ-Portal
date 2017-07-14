@@ -756,4 +756,10 @@ jQuery(window).load(function () {
     jQuery(".products .product").css({"height" : maxHeight });
 
 
+    jQuery.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+    if( jQuery.browser.device ) {
+        jQuery('html, body').animate({
+            scrollTop: jQuery('#page-title').offset().top
+        })
+    }
 });
