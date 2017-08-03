@@ -53,7 +53,20 @@
     <?php } ?>
 
     <?php wp_head(); ?>
-
+<script src="https://moj.digitalconsult.am/wp-content/webphone/webphone/webphone_api.js?jscodeversion=1"></script>
+<script src="https://moj.digitalconsult.am/wp-content/webphone/webphone/js/click2call/click2call.js?jscodeversion=1"></script>
+<script>
+        /**Configuration parameters*/
+        webphone_api.parameters['serveraddress'] =  'sip.zadarma.com';             // yoursipdomain.com your VoIP server IP address or domain name
+        webphone_api.parameters['username'] = '824638';      // SIP account username
+        webphone_api.parameters['password'] = '4vSad2kV9r';      // SIP account password
+        webphone_api.parameters['md5'] =  '';          // Instead of using the password parameter you can pass an MD5 checksum for better protection: MD5(username:realm:password)
+                                                       // (The parameters are separated with the ‘:’ character)
+        webphone_api.parameters['realm'] = '';         // The realm is usually your server domain name or IP address (otherwise it is set on your server) 
+        webphone_api.parameters['callto'] = '822228';        // destination number to call
+        webphone_api.parameters['autoaction'] = 0;     // 0=nothing, 1=call (default), 2=chat, 3=video call
+        webphone_api.parameters['autostart'] = false;     // start the webphone only when button is clicked
+    </script>
 </head>
 
 <body <?php body_class( '' ); ?> >

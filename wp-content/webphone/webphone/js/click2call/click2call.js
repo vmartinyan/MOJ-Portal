@@ -1,13 +1,13 @@
 //document.write('<script type="text/javascript" src="webphone_api.js"></script>');
 
 /** Customizations */
-var call_button_text = 'Call';      // text showed on call button
-var hangup_button_text = 'Hangup';      // text showed on hangup button
+var call_button_text = '<i class="icon moon-phone3"></i>';      // text showed on call button
+var hangup_button_text = '<i class="icon moon-phone-hang-up"></i>';      // text showed on hangup button
 var call_button_color = '#43b61b';      // call button color
 var hangup_button_color = '#e83232';    // hangup button color
 var status_text_color = '#ffffff';      // color of displayed status messages
-var button_width = 135;                 // width of button in pixels
-var button_height = 42;                 // height of button in pixels
+var button_width = 180;                 // width of button in pixels
+var button_height = 70;                 // height of button in pixels
 var button_radius = 5;                  // button corner radius in pixels, higher values will result in a round button
 var chatwindow_title = 'Chat';          // chat window header-title; can be text or html
 var chatwindow_default_state = 0;       // default state of the chat window: 0=open, 1=collapsed
@@ -30,7 +30,7 @@ var float_distance_from_right = -1;     // distance in pixels from the right of 
 
 
 
-var button_minwidth = 85;               // if width is less then this value, then show icon instead of text
+var button_minwidth = 120;               // if width is less then this value, then show icon instead of text
 var started = 0; // 0=not started, 1=register not received(wait longer before making the call), 2=register received, so we can make call
 
 var c2k_btn = null;
@@ -545,7 +545,7 @@ webphone_api.onLoaded(function ()
     
     for (var i = 0; i < ELIMIT; i++)
     {
-        var chtml = '<br /><button id="c2k_btn_' + i + '" class="cl_c2k_btn" onmousedown="Btnc2kMousedown(event, ' + i + ')" oncontextmenu="Btnc2kContextmenu(event, ' + i + ')" onmouseup="Btnc2kOnmouseup(event, ' + i + ')">' +
+        var chtml = '<button id="c2k_btn_' + i + '" class="cl_c2k_btn" onmousedown="Btnc2kMousedown(event, ' + i + ')" oncontextmenu="Btnc2kContextmenu(event, ' + i + ')" onmouseup="Btnc2kOnmouseup(event, ' + i + ')">' +
             '<span id="c2k_status_' + i + '" class="cl_c2k_status"></span><br>' +
             '<span id="c2k_label_' + i + '" class="cl_c2k_label">Call</span></button>';
     
