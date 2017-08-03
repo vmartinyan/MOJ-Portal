@@ -160,7 +160,7 @@ $grid-columns: 12;
     @include omega;
     }
 
-  @include respond-to-min(768) {
+  @include respond-to-min(801) {
 
     .lvca-onecol.lvca-zero-margin {
       width: percentage(1/12);
@@ -211,7 +211,7 @@ $grid-columns: 12;
       }
     }
 
-  @include respond-between(480, 767) {
+  @include respond-between(480, 800) {
     .lvca-onecol.lvca-zero-margin, .lvca-twocol.lvca-zero-margin, .lvca-onefifthcol.lvca-zero-margin, .lvca-threecol.lvca-zero-margin, .lvca-fourcol.lvca-zero-margin, .lvca-fivecol.lvca-zero-margin, .lvca-sixcol.lvca-zero-margin, .lvca-sevencol.lvca-zero-margin, .lvca-eightcol.lvca-zero-margin, .lvca-ninecol.lvca-zero-margin, .lvca-tencol.lvca-zero-margin, .lvca-elevencol.lvca-zero-margin {
       width: percentage(6/12);
       }
@@ -387,7 +387,6 @@ $grid-columns: 12;
   ul.slick-dots {
     width: 100%;
     position: absolute;
-    bottom: -30px;
     text-align: center;
     padding: 0 !important;
     margin: 0 !important;
@@ -407,6 +406,7 @@ $grid-columns: 12;
       box-shadow: none;
       @include vendorize(transition, background 0.3s ease-in-out 0s);
       font-size: 0;
+      outline: none;
       .lvca-dark-bg & {
         background: #888 !important;
         border-color: #888 !important;

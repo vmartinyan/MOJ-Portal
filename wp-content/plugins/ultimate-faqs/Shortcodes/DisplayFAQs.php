@@ -250,7 +250,7 @@ function Display_FAQs($atts) {
 			$ReturnString .= "<div class='ufaq-faq-category-title";
 			if ($Category_Toggle == "Yes") {$ReturnString .= " ufaq-faq-category-title-toggle";}
 			$ReturnString .= "' data-categoryid='" . $Category->term_id . "'>";
-			$ReturnString .= "<" . $UFAQ_Styling_Category_Heading_Type . ">" . $Category->name . ($Group_By_Category_Count == "Yes" ? "(" . $FAQ_Query->post_count . ")" : "") . "</" . $UFAQ_Styling_Category_Heading_Type . ">";
+			$ReturnString .= "<" . $UFAQ_Styling_Category_Heading_Type . ">" . $Category->name . ($Group_By_Category_Count == "Yes" ? " <span>(" . $FAQ_Query->post_count . ")" : "") . "</span></" . $UFAQ_Styling_Category_Heading_Type . ">";
 			$ReturnString .= "</div>";
 			$ReturnString .= "<div class='ufaq-faq-category-inner";
 			if ($Category_Toggle == "Yes") {$ReturnString .= " ufaq-faq-category-body-hidden";}

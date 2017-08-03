@@ -5,7 +5,11 @@ html {
   box-sizing: inherit; }
 
 .lvca-posts-carousel {
-  max-width: 960px !important; }
+  clear: both;
+  max-width: none; }
+  @media only screen and (min-width: 1024px) {
+    .lvca-posts-carousel {
+      max-width: 96%; } }
   .lvca-posts-carousel .lvca-posts-carousel-item .hentry {
     background: #fff;
     border-radius: 6px;

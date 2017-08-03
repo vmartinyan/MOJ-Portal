@@ -1211,6 +1211,15 @@ else {
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
 
+                <h3>1.6</h3>
+                <ul>
+                    <li>Fixed - Missing instagram icon in team profiles addon</li>
+                    <li>Fixed - The portfolio grid addon leaves an empty space on the top when no heading is specified and when no taxonomy filters are specified</li>
+                    <li>Fixed - The posts carousel dots navigation was not clickable</li>
+                    <li>Fixed - The posts carousel would not expand beyond 960px in width</li>
+                    <li>Fixed - In a few installations, the grid elements may not occupy full width between 769px to 800px device resolutions</li>
+                    <li>Tweak – Moved to the_excerpt() from get_the_excerpt() in posts carousel and livemesh grid addons for plugin compatibility</li>
+                </ul>
 
                 <h3>1.5</h3>
                 <ul>

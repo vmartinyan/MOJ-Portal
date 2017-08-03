@@ -1,11 +1,11 @@
 === Addons for Visual Composer ===
-Author URI: https://www.livemeshthemes.com/
+Author URI: https://www.livemeshthemes.com/visual-composer-addons
 Plugin URI: https://www.livemeshthemes.com/visual-composer-addons
 Contributors: livemesh
 Tags: visual composer, visual composer addons, vc addons, visual composer extensions, vc extensions, page builder, portfolio, carousel, post, posts, shortcodes, tabs, admin, plugin, page
 Requires at least: 4.3
-Tested up to: 4.7
-Stable Tag: 1.5
+Tested up to: 4.8
+Stable Tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html-func
 
@@ -73,7 +73,7 @@ http://twitter.com/live_mesh
 == Installation ==
 
 1. Install and activate the Visual Composer page builder.
-2. Unzip the downloaded livemesh-vc-addons.zip file and upload to the `/wp-content/plugins/` directory or install the Visual Composer Addons by Livemesh plugin from WordPress repository. Activate the plugin through the 'Plugins' menu in WordPress.
+2. Unzip the downloaded addons-for-visual-composer.zip file and upload to the `/wp-content/plugins/` directory or install the Visual Composer Addons by Livemesh plugin from WordPress repository. Activate the plugin through the 'Plugins' menu in WordPress.
 4. For Portfolio element, install and activate the <strong>optional plugin</strong> <a href="https://wordpress.org/plugins/portfolio-post-type/" title="Portfolio Post Type">Portfolio Post Type plugin</a>. The Portfolio addon can be built using custom post type registered by this plugin.
 
 Optionally, you can import the sample data that replicates the demo site for you by importing the file sample-data.xml file located in the plugin directory. The import option is available under Tools &gt; Import in WordPress admin. 
@@ -104,6 +104,14 @@ Pls install and activate the <a href="https://wordpress.org/plugins/portfolio-po
 3. Editing a addon/extension element in the Visual Composer Page Builder.
 
 == Changelog ==
+
+= 1.6 =
+* Fixed - Missing instagram icon in team profiles addon
+* Fixed - The portfolio grid addon leaves an empty space on the top when no heading is specified and when no taxonomy filters are specified
+* Fixed - The posts carousel dots navigation was not clickable
+* Fixed - The posts carousel would not expand beyond 960px in width
+* Fixed - In a few installations, the grid elements may not occupy full width between 769px to 800px device resolutions
+* Tweak – Moved to the_excerpt() from get_the_excerpt() in posts carousel and livemesh grid addons for plugin compatibility
 
 = 1.5 =
 * Added - Detailed documentation for all addon elements

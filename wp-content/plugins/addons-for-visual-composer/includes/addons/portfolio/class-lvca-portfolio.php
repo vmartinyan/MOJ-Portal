@@ -139,9 +139,11 @@ class LVCA_Portfolio {
 
                 <div class="lvca-portfolio-header">
 
-                    <?php if (!empty($settings['heading'])) ?>
+                    <?php if (!empty($settings['heading'])): ?>
 
-                    <h3 class="lvca-heading"><?php echo wp_kses_post($settings['heading']); ?></h3>
+                        <h3 class="lvca-heading"><?php echo wp_kses_post($settings['heading']); ?></h3>
+
+                    <?php endif; ?>
 
                     <?php
 
@@ -260,7 +262,7 @@ class LVCA_Portfolio {
 
                                             <div class="entry-summary">
 
-                                                <?php echo get_the_excerpt(); ?>
+                                                <?php the_excerpt(); ?>
 
                                             </div>
 

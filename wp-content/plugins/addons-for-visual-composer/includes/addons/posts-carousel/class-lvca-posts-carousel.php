@@ -170,7 +170,7 @@ class LVCA_Posts_Carousel {
 
                         <div class="entry-summary">
 
-                            <?php echo get_the_excerpt(); ?>
+                            <?php the_excerpt(); ?>
 
                         </div>
 

@@ -763,3 +763,22 @@ jQuery(window).load(function () {
         })
     }
 });
+
+
+
+/*---------------------------------
+ Height of Layout alignment
+ -----------------------------------*/
+
+jQuery(document).ready(function () {
+
+    var winHeight = jQuery(window).height();
+    var topPanelHeight = jQuery("#top-panel").height();
+    var headerHeight = jQuery("#header").height();
+    var stuningHeight = jQuery("#stuning-header").height();
+
+    var layoutHeight = winHeight - topPanelHeight - headerHeight - stuningHeight - 140;
+    jQuery("#layout").css("min-height", layoutHeight);
+
+
+});

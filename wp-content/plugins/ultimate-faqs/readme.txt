@@ -10,19 +10,10 @@ FAQ plugin that lets you easily create, order and publicize FAQs, insert 3 style
 
 == Description ==
 
+
 <a href='http://www.etoilewebdesign.com/ultimate-faq-demo/'>FAQ Demo</a>
 
-FAQ plugin that lets you create FAQ, organize FAQs and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. You can use either the toggle FAQ and/or accordion FAQ style, to display one expanded FAQ answer on click, or choose to display all FAQs on page load, with the optional list FAQ style that offers a more traditional FAQ layout.
-
-<strong>With WooCommerce Integration!</strong> See the "Add FAQ to WooCommerce" section below for full details and features.
-
-** We are also pleased to announce the introduction of a free new premium 7-day trial feature, which users can choose to test out before buying the premium version! **
-
-`
-[ultimate-faqs]
-`
-
-Simply insert the shortcode above into any page to display your FAQs.
+FAQ plugin that lets you create FAQ (frequently asked questions), organize FAQs and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. 
 
 = Key FAQ Features =
 * Unlimited FAQ, unlimited FAQ tag and unlimited FAQ category support
@@ -32,23 +23,33 @@ Simply insert the shortcode above into any page to display your FAQs.
 * Export all FAQs to a PDF to create a user manual
 * Insert custom CSS to style your FAQ posts
 
-FAQ features include FAQ statistics that show how many times FAQs have been viewed, FAQ styling options, FAQ categories and FAQ tags, FAQ display and FAQ ordering options, among many other FAQ options. Includes an FAQ shortcode helper, that lets you create FAQ shortcodes with FAQ attributes without having to manually enter FAQs.
-
-Ultimate FAQ also works great for any content that works similarly to FAQ and that needs to be hidden until it is clicked, like job postings, recipes, etc.!
-
 [youtube https://www.youtube.com/watch?v=xeGVZnVrZ6I]
+
+<strong>With WooCommerce Integration!</strong> See the "WooCommerce FAQ" section below for full details and features.
+
+`
+[ultimate-faqs]
+`
+
+Simply insert the shortcode above into any page to display your FAQs.
+
+You can use either the toggle FAQ and/or accordion responsive FAQ style, to display one expanded FAQ answer on click, or choose to display all FAQs on page load, with the optional responsive list FAQ style that offers a more traditional FAQ layout.
+
+FAQ features include frequently asked question statistics that show how many times FAQs have been viewed, FAQ styling options, FAQ categories and FAQ tags, FAQ display and FAQ ordering options, among many other FAQ options. Includes an FAQ shortcode helper, that lets you create FAQ shortcodes with FAQ attributes without having to manually enter FAQs.
+
+Ultimate FAQ isn't just for frequently asked questions. It also works great for any content that works similarly to FAQ and that needs to be hidden until it is clicked, like job postings, recipes, etc.!
+
+= WooCommerce FAQ =
+
+Using WooCommerce to sell your products? Easily add an FAQ tab to each product page, so your customers can see answers to common FAQ questions about the products they're browsing. It's the most comprehensive WooCommerce FAQs solution!
+
+For more information about WooCommerce FAQs integration, please see the following video:
+
+[youtube https://www.youtube.com/watch?v=cH3p0fW4c5o]
 
 Want to decide exactly what order your FAQs are displayed in? Use our simple FAQ drag-and-drop reordering feature! Create SEO-friendly FAQ links to individual FAQ posts to simply direct customers to exactly the right FAQ answer, right away. Easily add links to your FAQ to popular social media, such as Facebook, Twitter and Pinterest so that your customers can help you spread the word about your FAQ!
 
 With the smart [submit-question] FAQ shortcode (premium), you can let your customers add to your custom FAQ list by submitting an FAQ question and even proposing an FAQ answer for it!
-
-= Add FAQ to WooCommerce! =
-
-Using WooCommerce to sell your products? Easily add an FAQ tab to each product page, so your customers can see answers to common FAQ questions about the products they're browsing. It's the most comprehensive FAQ solution for WooCommerce!
-
-For more information about WooCommerce integration, please see the following video:
-
-[youtube https://www.youtube.com/watch?v=cH3p0fW4c5o]
 
 = Additional Features =
 * Select FAQ animation options for displaying FAQ posts
@@ -58,12 +59,13 @@ For more information about WooCommerce integration, please see the following vid
 * Responsive FAQ design
 * Group FAQs by category for easy FAQ navigation
 
-This FAQ plugin is great for combining with our <a href='https://wordpress.org/plugins/front-end-only-users/'>user management plugin </a> to create a member's only FAQ area.
+This FAQ frequently asked questions plugin is great for combining with our <a href='https://wordpress.org/plugins/front-end-only-users/'>user management plugin </a> to create a member's only FAQ area.
 
 Ultimate FAQ uses the WordPress custom post type functionality to create an FAQ post type, allowing for smart and easy FAQ integration.
 
 = Premium FAQ features include =
-* Choose from 15 toggle icon sets
+
+* Choose from 15 toggle icon sets for your frequently asked questions
 * WooCommerce FAQ tab with specific FAQs for each product on product page (<a href='https://www.youtube.com/watch?v=cH3p0fW4c5o'>YouTube Video</a>)
 * Different FAQ display styles for your frequently asked questions
 * Share FAQs on social media
@@ -78,6 +80,8 @@ Ultimate FAQ uses the WordPress custom post type functionality to create an FAQ 
 * Drag and drop precise re-ordering of FAQs
 * Change the FAQ permalink slug base
 
+** We are also pleased to offer a free premium 7-day trial feature, which users can choose to test out before buying the premium version! **
+
 = FAQ Shortcodes =
 * [ultimate-faqs]: display all FAQs, or only specific FAQ categories using include_category and exclude_category attributes (both take a comma-separated list of category slugs)
 * [popular-faqs]: displays a number of the most viewed FAQs (5 unless specified).
@@ -86,7 +90,7 @@ Ultimate FAQ uses the WordPress custom post type functionality to create an FAQ 
 * [ultimate-faq-search]: display an FAQ search form that allows users to find FAQs with a specific string in the FAQ title or body of the FAQ post (premium).
 * [submit-question]: display a form that allows users to submit FAQs of their own and, if enabled, enter an FAQ answer to their submitted FAQ question as well (premium).
 
-For further information and purchasing options, please visit our <strong><a href="http://www.etoilewebdesign.com/plugins/ultimate-faq/">WordPress FAQ plugin</a></strong> homepage.
+For further information and purchasing options for our frequently asked questions plugin, please visit our <strong><a href="http://www.etoilewebdesign.com/plugins/ultimate-faq/">WordPress FAQ plugin</a></strong> homepage.
 
 = Translations =
 - Italian (Thanks to <a href='http://www.nimdaweb.it/'>Nimdaweb</a>)
@@ -234,7 +238,7 @@ Video 3 - FAQs Ordering
 
 == Screenshots ==
 
-1. Car FAQ demo page - Default display style
+1. FAQ demo page - Default display style
 2. Example of the "Color Block" FAQ display style
 3. Example of the "Block" FAQ display style
 4. The AJAX FAQ search shortcode in use
@@ -242,13 +246,31 @@ Video 3 - FAQs Ordering
 6. All answers displayed in the 'list' FAQ mode
 7. WooCommerce product page with "FAQs" tab
 8. Example of FAQ page with custom FAQ font icons
-9. Ultimate FAQs plugin dashboard
-10. Admin area showing all FAQs with their number of views as well as their categories
-11. Admin simple drag-and-drop FAQ ordering area
-12. Responsive, simple FAQ toggle and FAQ styling options with precise color controls
-13. View of FAQ custom fields in the admin
+9. FAQ with comments enabled
+10. FAQ with ratings enabled
+11. FAQ with post author and date displayed
+12. FAQ social sharing
+13. Mobile view of FAQs
+14. Ultimate FAQs plugin dashboard
+15. Admin area showing all FAQs with their number of views as well as their categories
+16. View of custom fields on the FAQ post edit screen
+17. FAQ tab in WooCommerce product edit
+18. FAQ Categories
+19. FAQ Tags
+20. "Basic" area of the "Settings" tab
+21. "Premium" area of the "Settings" tab
+22. "Ordering" area of the "Settings" tab
+23. "Fields" area of the "Settings" tab
+24. "Labelling" area of the "Settings" tab
+25. "Styling" area of the "Settings" tab
+26. FAQ widgets
+
+
 
 == Changelog ==
+= 1.5.38 =
+- Added spacing and a span for category post counts
+
 = 1.5.37 =
 - Fixed an error with the "Main FAQ page" permalink setting
 

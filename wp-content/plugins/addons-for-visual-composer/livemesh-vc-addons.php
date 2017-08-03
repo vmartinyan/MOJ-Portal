@@ -3,11 +3,11 @@
  * Plugin Name: Addons for Visual Composer
  * Plugin URI: https://www.livemeshthemes.com/visual-composer-addons
  * Description: A collection of premium quality addons or extensions for use in Visual Composer page builder. Visual composer must be installed and activated.
- * Author: Livemesh
- * Author URI: https://www.livemeshthemes.com/
+ * Author: Visual Composer Addons
+ * Author URI: https://www.livemeshthemes.com/visual-composer-addons
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Version: 1.5
+ * Version: 1.6
  * Text Domain: livemesh-vc-addons
  * Domain Path: languages
  *
@@ -95,7 +95,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
 
             // Plugin version
             if (!defined('LVCA_VERSION')) {
-                define('LVCA_VERSION', '1.5');
+                define('LVCA_VERSION', '1.6');
             }
 
             // Plugin Folder Path

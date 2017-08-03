@@ -189,7 +189,7 @@ html {
 
 .lvca-container .lvca-onecol.lvca-zero-margin, .lvca-container .lvca-twocol.lvca-zero-margin, .lvca-container .lvca-onefifthcol.lvca-zero-margin, .lvca-container .lvca-threecol.lvca-zero-margin, .lvca-container .lvca-fourcol.lvca-zero-margin, .lvca-container .lvca-fivecol.lvca-zero-margin, .lvca-container .lvca-sixcol.lvca-zero-margin, .lvca-container .lvca-sevencol.lvca-zero-margin, .lvca-container .lvca-eightcol.lvca-zero-margin, .lvca-container .lvca-ninecol.lvca-zero-margin, .lvca-container .lvca-tencol.lvca-zero-margin, .lvca-container .lvca-elevencol.lvca-zero-margin {
   margin-right: 0; }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 801px) {
   .lvca-container .lvca-onecol.lvca-zero-margin {
     width: 8.33333%; }
   .lvca-container .lvca-twocol.lvca-zero-margin {
@@ -214,7 +214,7 @@ html {
     width: 83.33333%; }
   .lvca-container .lvca-elevencol.lvca-zero-margin {
     width: 91.66667%; } }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 800px) {
   .lvca-container .lvca-onecol.lvca-zero-margin, .lvca-container .lvca-twocol.lvca-zero-margin, .lvca-container .lvca-onefifthcol.lvca-zero-margin, .lvca-container .lvca-threecol.lvca-zero-margin, .lvca-container .lvca-fourcol.lvca-zero-margin, .lvca-container .lvca-fivecol.lvca-zero-margin, .lvca-container .lvca-sixcol.lvca-zero-margin, .lvca-container .lvca-sevencol.lvca-zero-margin, .lvca-container .lvca-eightcol.lvca-zero-margin, .lvca-container .lvca-ninecol.lvca-zero-margin, .lvca-container .lvca-tencol.lvca-zero-margin, .lvca-container .lvca-elevencol.lvca-zero-margin {
     width: 50%; } }
 @media only screen and (max-width: 479px) {
@@ -380,7 +380,6 @@ html {
 .lvca-container ul.slick-dots {
   width: 100%;
   position: absolute;
-  bottom: -30px;
   text-align: center;
   padding: 0 !important;
   margin: 0 !important; }
@@ -401,7 +400,8 @@ html {
     -moz-transition: background 0.3s ease-in-out 0s;
     -ms-transition: background 0.3s ease-in-out 0s;
     transition: background 0.3s ease-in-out 0s;
-    font-size: 0; }
+    font-size: 0;
+    outline: none; }
     .lvca-dark-bg .lvca-container ul.slick-dots li button {
       background: #888 !important;
       border-color: #888 !important; }

@@ -1,7 +1,11 @@
 @import "../../../../assets/css/lvca-lib";
 
 .lvca-posts-carousel {
-  max-width: 960px !important;
+  clear: both;
+  max-width: none;
+  @include respond-to-min(1024) {
+    max-width: 96%;
+    }
   .lvca-posts-carousel-item {
     .hentry {
       background: #fff;

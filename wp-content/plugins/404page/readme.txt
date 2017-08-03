@@ -1,10 +1,10 @@
 === 404page - your smart custom 404 error page ===
 Contributors: petersplugins, smartware.cc
-Donate link:http://petersplugins.com/make-a-donation/
+Donate link: http://petersplugins.com/make-a-donation/
 Tags: page, 404, error, error page, 404 page, page not found, page not found error, 404 error page, missing, broken link, template, 404 link, seo, custom 404, custom 404 page, custom 404 error, custom 404 error page, customize 404, customize 404 page, customize 404 error page
 Requires at least: 3.0
-Tested up to: 4.7
-Stable tag: 2.5
+Tested up to: 4.8
+Stable tag: 3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,20 +12,31 @@ Custom 404 the easy way! Set any page as custom 404 error page. No coding needed
 
 == Description ==
 
+This Plugin allows you to create your custom 404 page just like any other page using the WordPress Page Editor.
+
+= Usage =
+
 Create your custom 404 page just like any other page. Then go to 'Appearance' -> '404 Error Page' and select the created page as your custom 404 error page. That's it!
-
-= Need more information? =
-
-See [Plugin Homepage](http://petersplugins.com/free-wordpress-plugins/404page/) and [Plugin Doc](http://petersplugins.com/docs/404page/).
 
 = Why you should choose this plugin =
 
 * Different from other similar plugins the 404page plugin **does not create redirects**. That’s **quite important** because a correct code 404 is delivered which tells search engines that the page does not exist and has to be removed from the index. A redirect would result in a HTTP code 301 or 302 and the URL would remain in the search index.
 * Different from other similar plugins the 404page plugin **does not create additional server requests**. 
 
-= Watch the video =
+= Watch the video (outdated version, new version will be created as soon as possible) =
 
 https://www.youtube.com/watch?v=VTL07Lf0IsY
+
+= Need more information? =
+
+See [Plugin Homepage](http://petersplugins.com/free-wordpress-plugins/404page/) and [Plugin Doc](http://petersplugins.com/docs/404page/).
+
+== Screenshots ==
+
+1. Create your costom 404 Error Page as a normal WordPress Page
+2. Set the created Page as 404 Error Page
+3. Advanced Settings
+4. Advanced Settings with WPML plugin installed (Compatibility Mode is not available, because the 404page plugin automatically switches to WMPL mode)
 
 = Do you like the 404page Plugin? =
 
@@ -104,13 +115,22 @@ The plugin adds an action hook 404page_after_404 which you can use to add extra 
 = Native Support =
 If you are a theme developer you can add native support for the 404page plugin to your theme for full control. [Read more](http://petersplugins.com/docs/404page/#theme_native_support).
 
-== Screenshots ==
-
-1. Create your 404 Page as a normal WordPress Page
-2. Define the created Page as 404 Error Page
-3. Your custom 404 Error Page is shown in case of a 404 error
-
 == Changelog ==
+
+= 3.1 (2017-07-24) =
+* bugfix for Polylang ([See Topic](https://wordpress.org/support/topic/3-0-breaks-polylang-support/))
+* bugfix for CLI ([See Topic](https://wordpress.org/support/topic/uninstall-php-from-cli-failed/))
+* add debug class to body tag
+* also add body classes for Customizr theme
+* do not add error404 class if already exists
+* further redesign admin interface
+
+= 3.0 (2017-07-05) =
+* new feature to force 404 error after loading page
+* new feature to disable URL autocorrection guessing 
+* finally removed Polylang stuff disabled in 2.4
+* redesigned admin interface
+* code improvement
 
 = 2.5 (2017-05-19) =
 * hide 404 page from search results on front end (if WPML is active, all languages are hidden)
@@ -178,8 +198,14 @@ If you are a theme developer you can add native support for the 404page plugin t
 
 == Upgrade Notice ==
 
+= 3.1 =
+fixed two bugs, plus further enhancements
+
+= 3.0 =
+new features added to force 404 error after loading page and to disable URL autocorrection guessing, plus further enhancements
+
 = 2.5 =
-Hhide 404 page from search results, compatibility with DW Question & Answer plugin
+Hide 404 page from search results, compatibility with DW Question & Answer plugin
 
 = 2.4 = 
 Version 2.4 fixes several issues. See [changelog](https://wordpress.org/plugins/404page/changelog/) for details.
