@@ -30,3 +30,4 @@ function wptricks24_recaptcha_scripts() {
     }
  
     add_action( 'wpcf7_enqueue_scripts', 'wptricks24_recaptcha_scripts', 11 );
+

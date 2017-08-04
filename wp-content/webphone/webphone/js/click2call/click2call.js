@@ -546,7 +546,7 @@ webphone_api.onLoaded(function ()
     for (var i = 0; i < ELIMIT; i++)
     {
         var chtml = '<button id="c2k_btn_' + i + '" class="cl_c2k_btn" onmousedown="Btnc2kMousedown(event, ' + i + ')" oncontextmenu="Btnc2kContextmenu(event, ' + i + ')" onmouseup="Btnc2kOnmouseup(event, ' + i + ')">' +
-            '<span id="c2k_status_' + i + '" class="cl_c2k_status"></span><br>' +
+            '<span id="c2k_status_' + i + '" class="cl_c2k_status"></span><br><br>' +
             '<span id="c2k_label_' + i + '" class="cl_c2k_label">Call</span></button>';
     
         var c2k_container = document.getElementById('c2k_container_' + i);
