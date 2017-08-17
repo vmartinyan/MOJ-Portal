@@ -3,7 +3,7 @@ Contributors: Tips and Tricks HQ, Ruhul Amin, wptipsntricks
 Donate link: https://www.tipsandtricks-hq.com/
 Tags: wordpress lightbox, wordpress video lightbox, video lightbox, wp video lightbox, wordpress video embed, add video to wordpress, gallery, image, images, lightbox, lightview, overlay, photo, photos, picture, video  
 Requires at least: 3.0
-Tested up to: 4.7
+Tested up to: 4.8
 Stable tag: 1.8.4
 License: GPLv2 or later
 

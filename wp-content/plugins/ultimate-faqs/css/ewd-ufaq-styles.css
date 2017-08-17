@@ -30,7 +30,7 @@
 	height: 21px;
 	width: 30px;
 	margin-top: -25px;
-	margin-left: 70px;
+	margin-left: 90px;
 }
 
 .ewd-ufaq-author-date {
@@ -53,6 +53,11 @@
   width: 100%;
   clear: both;
 }
+
+.ufaq-faq-category{
+  margin-bottom: 20px;
+}
+
 .ufaq-faq-body {
   padding:10px 25px;
   padding-left: 55px;
@@ -80,8 +85,10 @@ border-radius: 0 !important;
   display: inline-block;
   float: left;
   text-align: center;
-  width:35px;
-  height: 35px;
+ /* width:35px;
+  height: 35px;*/
+  width: auto;
+  height: auto;
   margin-right: 15px;
   padding: 2px 0px 0px 2px;
   line-height: 1;
@@ -416,3 +423,37 @@ Toggle Font
 .ewd-ufaq-toggle-all-symbol {
   font-family: 'ewd-toggle-icon';
 }
+
+
+/*
+==============================================
+PChanges
+==============================================
+*/
+
+.ewd-ufaq-question-update{
+font-size: 1.2em;
+margin-bottom: 20px;
+}
+
+.rrssb-buttons li a .rrssb-text {
+color: #fff;
+margin-left: 5px;
+}
+
+.ufaq-social-links .rrssb-buttons li {
+margin-bottom: 5px;
+}
+
+.ufaq-permalink{
+clear: both;
+}
+@media only screen and (max-width: 810px) {
+
+.ufaq-faq-title-text {
+width: 80%;
+}
+
+}
+
+

@@ -7,7 +7,7 @@ Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.5.38
+Version: 1.5.39
 */
 
 global $ewd_ufaq_message;
@@ -124,7 +124,7 @@ function Add_EWD_UFAQ_Scripts($hook) {
 	}
 
 	if ($hook == 'edit.php' or $hook == 'post-new.php' or $hook == 'post.php') {
-        if ($post->post_type == 'product') {
+        if (isset($post->post_type) and $post->post_type == 'product') {
 			wp_enqueue_script('ewd-ufaq-wc-admin', plugins_url("js/ewd-ufaq-wc-admin.js", __FILE__, array('jquery')));
 		}
 	}
@@ -132,14 +132,14 @@ function Add_EWD_UFAQ_Scripts($hook) {
 
 function EWD_UFAQ_Admin_Options() {
 	global $EWD_UFAQ_Version;
-	
+
 	wp_enqueue_style( 'ewd-ufaq-admin', plugins_url("ultimate-faqs/css/Admin.css"), array(), $EWD_UFAQ_Version);
 	wp_enqueue_style( 'ewd-ufaq-spectrum', plugins_url("ultimate-faqs/css/spectrum.css"));
 }
 
 add_action( 'wp_enqueue_scripts', 'Add_EWD_UFAQ_FrontEnd_Scripts' );
 function Add_EWD_UFAQ_FrontEnd_Scripts() {
-	wp_enqueue_script('ewd-ufaq-js', plugins_url( '/js/ewd-ufaq-js.js' , __FILE__ ), array( 'jquery' ));
+	wp_register_script('ewd-ufaq-js', plugins_url( '/js/ewd-ufaq-js.js' , __FILE__ ), array( 'jquery' ));
 
 	$Retrieving_Results = get_option("EWD_UFAQ_Retrieving_Results");
 	if ($Retrieving_Results == "") {$Retrieving_Results = __("Retrieving Results", 'ultimate-faqs') . "...";}
@@ -149,26 +149,6 @@ function Add_EWD_UFAQ_FrontEnd_Scripts() {
 	);
 
 	wp_localize_script('ewd-ufaq-js', 'ewd_ufaq_php_data', $ewd_ufaq_php_data );
-
-	wp_enqueue_script("jquery-ui-core");
-	wp_enqueue_script("jquery-effects-core");
-	wp_enqueue_script('jquery-ui-autocomplete');
-
-	$Reveal_Effect = get_option("EWD_UFAQ_Reveal_Effect");
-
-	if ($Reveal_Effect == "blind") {wp_enqueue_script("jquery-effects-blind");}
-	if ($Reveal_Effect == "bounce") {wp_enqueue_script("jquery-effects-bounce");}
-	if ($Reveal_Effect == "clip") {wp_enqueue_script("jquery-effects-clip");}
-	if ($Reveal_Effect == "drop") {wp_enqueue_script("jquery-effects-drop");}
-	if ($Reveal_Effect == "explode") {wp_enqueue_script("jquery-effects-explode");}
-	if ($Reveal_Effect == "fade") {wp_enqueue_script("jquery-effects-fade");}
-	if ($Reveal_Effect == "fold") {wp_enqueue_script("jquery-effects-fold");}
-	if ($Reveal_Effect == "highlight") {wp_enqueue_script("jquery-effects-highlight");}
-	if ($Reveal_Effect == "pulsate") {wp_enqueue_script("jquery-effects-pulsate");}
-	wp_enqueue_script("jquery-effects-scale");
-	if ($Reveal_Effect == "shake") {wp_enqueue_script("jquery-effects-shake");}
-	if ($Reveal_Effect == "slide") {wp_enqueue_script("jquery-effects-slide");}
-	wp_enqueue_script("jquery-effects-transfer");
 }
 
 

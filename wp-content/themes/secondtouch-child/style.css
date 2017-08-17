@@ -569,3 +569,11 @@ and (max-width : 480px) {
     }
 
 }
+
+.alignCenter {
+    text-align: center;
+}
+
+.ufaq-faq-body .vc_row {
+    margin: 15px 0;
+}

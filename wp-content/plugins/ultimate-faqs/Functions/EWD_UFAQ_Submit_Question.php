@@ -3,7 +3,7 @@ function  EWD_UFAQ_Submit_Question($success_message) {
 	$Admin_Question_Notification = get_option("EWD_UFAQ_Admin_Question_Notification");
 
 	$Post_Title = sanitize_text_field($_POST['Post_Title']);
-	$Post_Body = sanitize_text_field($_POST['Post_Body']);
+	$Post_Body = (isset($_POST['Post_Body']) ? sanitize_text_field($_POST['Post_Body']) : '');
 	$Post_Author = sanitize_text_field($_POST['Post_Author']);
 
 	$post = array(

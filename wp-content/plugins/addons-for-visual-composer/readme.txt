@@ -5,7 +5,7 @@ Contributors: livemesh
 Tags: visual composer, visual composer addons, vc addons, visual composer extensions, vc extensions, page builder, portfolio, carousel, post, posts, shortcodes, tabs, admin, plugin, page
 Requires at least: 4.3
 Tested up to: 4.8
-Stable Tag: 1.6
+Stable Tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html-func
 
@@ -104,6 +104,10 @@ Pls install and activate the <a href="https://wordpress.org/plugins/portfolio-po
 3. Editing a addon/extension element in the Visual Composer Page Builder.
 
 == Changelog ==
+
+= 1.6.1 =
+* Fixed - Translations not working with default files provided by plugin
+* Fixed - The client images would show up misaligned and with additional padding in certain sites
 
 = 1.6 =
 * Fixed - Missing instagram icon in team profiles addon

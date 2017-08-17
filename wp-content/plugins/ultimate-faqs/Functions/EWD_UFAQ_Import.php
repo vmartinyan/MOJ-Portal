@@ -11,7 +11,7 @@ function EWD_UFAQ_Import(){
     if (is_array($Results)){
 
         foreach($Results as $Result){
-    
+
             $data_array = array('post_type' => 'ufaq');
             //$data_array = array('post_type' => 'qa_faqs');
             $where = array('ID' => $Result->ID);
@@ -26,13 +26,13 @@ function EWD_UFAQ_Import(){
     //$where = array('taxonomy' => 'ufaq-category');
     $wpdb->update($Terms_Table_Name, $data_array, $where);
 
-    $args = array('post_type' => 'ufaq');      
+    $args = array('post_type' => 'ufaq');
     $FAQs_Query = new WP_Query($args);
     $FAQs = $FAQs_Query->get_posts();
-    
+
     foreach ($FAQs as $FAQ) {
         if (get_post_meta($FAQ->ID, 'ufaq_view_count', true) == "") {update_post_meta($FAQ->ID, 'ufaq_view_count', 0);}
-    } 
+    }
 
     echo $wpdb->last_query;
 }
@@ -41,32 +41,32 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
     global $wpdb;
 
     $Excel_URL = '../wp-content/plugins/ultimate-faqs/faq-sheets/' . $Excel_File_Name;
-        
+
     // Uses the PHPExcel class to simplify the file parsing process
     include_once('../wp-content/plugins/ultimate-faqs/PHPExcel/Classes/PHPExcel.php');
-        
+
     // Build the workbook object out of the uploaded spredsheet
     $inputFileType = PHPExcel_IOFactory::identify($Excel_URL);
     $objReader = PHPExcel_IOFactory::createReader($inputFileType);
     $objWorkBook = $objReader->load($Excel_URL);
-        
+
     // Create a worksheet object out of the product sheet in the workbook
     $sheet = $objWorkBook->getActiveSheet();
-        
+
     $Allowable_Custom_Fields = array();
     //List of fields that can be accepted via upload
     $Allowed_Fields = array("Question", "Answer", "Categories", "Tags");
-        
+
     // Get column names
     $highestColumn = $sheet->getHighestColumn();
-    $highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
+    $highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
     for ($column = 0; $column < $highestColumnIndex; $column++) {
         if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Question") {$Question_Column = $column;}
         if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Answer") {$Answer_Column = $column;}
         if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Categories") {$Categories_Column = $column;}
         if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Tags") {$Tags_Column = $column;}
     }
-        
+
     // Put the spreadsheet data into a multi-dimensional array to facilitate processing
     $highestRow = $sheet->getHighestRow();
     for ($row = 2; $row <= $highestRow; $row++) {
@@ -77,7 +77,7 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
 
     // Create the query to insert the products one at a time into the database and then run it
     foreach ($Data as $FAQ) {
-                
+
         // Create an array of the values that are being inserted for each order,
         // edit if it's a current order, otherwise add it
         foreach ($FAQ as $Col_Index => $Value) {
@@ -102,7 +102,7 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
             }
             if (is_array($Category_IDs)) {wp_set_object_terms($Post_ID, $Tag_IDs, 'ufaq-tag');}
         }
-        
+
         unset($Post);
         unset($Post_Categories);
         unset($Post_Tags);
@@ -114,7 +114,7 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
 }
 
 function EWD_UFAQ_Import_From_Spreadsheet() {
-        
+
         /* Test if there is an error with the uploaded spreadsheet and return that error if there is */
         if (!empty($_FILES['FAQs_Spreadsheet']['error']))
         {
@@ -148,22 +148,23 @@ function EWD_UFAQ_Import_From_Spreadsheet() {
                         $error = __('No error code avaiable', 'ultimate-faqs');
                 }
         }
-        /* Make sure that the file exists */        
+        /* Make sure that the file exists */
         elseif (empty($_FILES['FAQs_Spreadsheet']['tmp_name']) || $_FILES['FAQs_Spreadsheet']['tmp_name'] == 'none') {
                 $error = __('No file was uploaded here..', 'ultimate-faqs');
         }
-        /* Move the file and store the URL to pass it onwards*/   
+        /* Move the file and store the URL to pass it onwards*/
         /* Check that it is a .xls or .xlsx file */
-        if(!preg_match("/\.(xls.?)$/", $_FILES['FAQs_Spreadsheet']['name']) and !preg_match("/\.(csv.?)$/", $_FILES['FAQs_Spreadsheet']['name'])) {
+        if(!isset($_FILES['FAQs_Spreadsheet']['name']) or (!preg_match("/\.(xls.?)$/", $_FILES['FAQs_Spreadsheet']['name']) and !preg_match("/\.(csv.?)$/", $_FILES['FAQs_Spreadsheet']['name']))) {
             $error = __('File must be .csv, .xls or .xlsx', 'ultimate-faqs');
-        }      
-        else {               
-                      $msg .= $_FILES['FAQs_Spreadsheet']['name'];
+        }
+        else {
+                        $msg = " ";
+                        $msg .= $_FILES['FAQs_Spreadsheet']['name'];
                         //for security reason, we force to remove all uploaded file
                         $target_path = ABSPATH . "wp-content/plugins/ultimate-faqs/faq-sheets/";
                         //plugins_url("order-tracking/product-sheets/");
 
-                        $target_path = $target_path . basename( $_FILES['FAQs_Spreadsheet']['name']); 
+                        $target_path = $target_path . basename( $_FILES['FAQs_Spreadsheet']['name']);
 
                         if (!move_uploaded_file($_FILES['FAQs_Spreadsheet']['tmp_name'], $target_path)) {
                         //if (!$upload = wp_upload_bits($_FILES["Item_Image"]["name"], null, file_get_contents($_FILES["Item_Image"]["tmp_name"]))) {
@@ -171,7 +172,7 @@ function EWD_UFAQ_Import_From_Spreadsheet() {
                         }
                         else {
                                 $Excel_File_Name = basename( $_FILES['FAQs_Spreadsheet']['name']);
-                        }   
+                        }
         }
 
         /* Pass the data to the appropriate function in Update_Admin_Databases.php to create the products */

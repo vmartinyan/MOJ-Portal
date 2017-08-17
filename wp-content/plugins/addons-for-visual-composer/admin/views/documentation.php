@@ -1210,6 +1210,11 @@ else {
 
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
+                <h4>1.6.1</h4>
+                <ul>
+                    <li>Fixed - Translations not working with default files provided by plugin</li>
+                    <li>Fixed - The client images would show up misaligned and with additional padding in certain sites</li>
+                </ul>
 
                 <h3>1.6</h3>
                 <ul>

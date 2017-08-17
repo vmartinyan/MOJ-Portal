@@ -393,6 +393,8 @@ EXTRA
   margin-right: 25px;
   padding: 5px 5px 5px 5px;
   box-shadow: 2px 2px 5px #666666;
+  min-width: 160px;/* pchanges */
+  margin-top: 10px;/* pchanges */
 }
 .ewd-ufaq-dashboard-box a {
   text-decoration: none;
@@ -931,3 +933,26 @@ NEW ASK FOR REVIEW POPUP
   background: #c6ab55;
   color: #fff;
 }
+
+
+
+/*
+==============================================
+PChanges
+==============================================
+*/
+@media screen and (max-width: 782px) {
+.ewd-ufaq-overview-table td {
+display: table-cell !important;
+}
+}
+
+.ewd-ufaq-meta-field label{
+display: inline-block;
+width: 200px;
+float: left;
+}
+
+
+
+

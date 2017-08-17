@@ -24,7 +24,7 @@ function EWD_UFAQ_Add_Meta_Boxes () {
 
 /**
  * Prints the box content.
- * 
+ *
  * @param WP_Post $post The object for the current post/page.
  */
 function EWD_UFAQ_Meta_Box( $post ) {
@@ -45,7 +45,7 @@ function EWD_UFAQ_Meta_Box( $post ) {
 		$User = wp_get_current_user();
 		$Author = $User->display_name;
 	}
-	
+
 	echo "<div class='ewd-ufaq-meta-field'>";
 	echo "<label for='Post_Author'>";
 	echo __( "Author Display Name:", 'EWD_UFAQ' );
@@ -82,8 +82,8 @@ function EWD_UFAQ_Meta_Box( $post ) {
 		}
 		elseif ($FAQ_Field_Item['FieldType'] == "textarea") {
 			echo "<textarea name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' id='ewd-ufaq-input-" . $FAQ_Field_Item['FieldID'] . "' class='ewd-ufaq-textarea' cols='60' rows='6'>" . $Value . "</textarea>";
-		} 
-		elseif ($FAQ_Field_Item['FieldType'] == "select") { 
+		}
+		elseif ($FAQ_Field_Item['FieldType'] == "select") {
 			$Options = explode(",", $FAQ_Field_Item['FieldValues']);
 			echo "<select name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' id='ewd-ufaq-input-" . $FAQ_Field_Item['FieldID'] . "' class='ewd-ufaq-select'>";
  			foreach ($Options as $Option) {
@@ -92,7 +92,7 @@ function EWD_UFAQ_Meta_Box( $post ) {
 				echo ">" . $Option . "</option>";
 			}
 			echo "</select>";
-		} 
+		}
 		elseif ($FAQ_Field_Item['FieldType'] == "radio") {
 			$Counter = 0;
 			$Options = explode(",", $FAQ_Field_Item['FieldValues']);
@@ -103,9 +103,9 @@ function EWD_UFAQ_Meta_Box( $post ) {
 				if (trim($Option) == trim($Value)) {echo "checked";}
 				echo ">" . $Option;
 				$Counter++;
-			} 
+			}
 			echo "";
-		} 
+		}
 		elseif ($FAQ_Field_Item['FieldType'] == "checkbox") {
 			$Counter = 0;
 			$Options = explode(",", $FAQ_Field_Item['FieldValues']);
@@ -128,7 +128,7 @@ function EWD_UFAQ_Meta_Box( $post ) {
 		}
 		elseif ($FAQ_Field_Item['FieldType'] == "date") {
 			echo "<input name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' class='ewd-ufaq-date-input' type='date' value='" . $Value . "' />";
-		} 
+		}
 		elseif ($FAQ_Field_Item['FieldType'] == "datetime") {
 			echo "<input name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' class='ewd-ufaq-datetime-input' type='datetime-local' value='" . $Value . "' />";
 		}
@@ -181,6 +181,8 @@ function EWD_UFAQ_Save_Meta_Box_Data($post_id) {
 		$FieldName = "Custom_Field_" . $FAQ_Field_Item['FieldID'];
 		if (isset($_POST[$FieldName]) or isset($_FILES[$FieldName])) {
 			// If it's a file, pass back to Prepare_Data_For_Insertion.php to upload the file and get the name
+			$Value = '';
+			$NoFile = '';
 			if ($FAQ_Field_Item['FieldType'] == "file") {
 				$File_Upload_Return = EWD_UFAQ_Handle_File_Upload($FieldName);
 				if ($File_Upload_Return['Success'] == "No") {return $File_Upload_Return['Data'];}
@@ -238,7 +240,7 @@ function EWD_UFAQ_Add_Edit_Form_Multipart_Encoding() {
 add_action('post_edit_form_tag', 'EWD_UFAQ_Add_Edit_Form_Multipart_Encoding');
 
 function EWD_UFAQ_Handle_File_Upload($Field_Name) {
-	
+
 	if (!is_user_logged_in()) {exit();}
 
 	if (isset($_FILES[$Field_Name]) && ($_FILES[$Field_Name]['size'] > 0)) {

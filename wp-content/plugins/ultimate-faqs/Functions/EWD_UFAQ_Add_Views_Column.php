@@ -85,6 +85,7 @@ function EWD_UFAQ_Restrict_By_Category() {
     if ($typenow=='ufaq') {
         $taxonomy = 'ufaq-category';
         $faq_taxonomy = get_taxonomy($taxonomy);
+        if (!isset($wp_query->query['term'])) {$wp_query->query['term'] = '';}
         wp_dropdown_categories(array(
             'show_option_all' =>  __("Show All {$faq_taxonomy->label}"),
             'taxonomy'        =>  $taxonomy,

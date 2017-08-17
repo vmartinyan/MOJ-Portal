@@ -77,7 +77,7 @@ jQuery(document).ready(function() {
 		jQuery(this).data('nextid', Counter); //updates but doesn't show in DOM
 		jQuery(this).data('maxid', Max_ID);
 
-		SetCategoryDeleteHandlers();
+		SetCustomFieldDeleteHandlers();
 
 		event.preventDefault();
 	});

@@ -1,12 +1,14 @@
 //document.write('<script type="text/javascript" src="webphone_api.js"></script>');
 
 /** Customizations */
-var call_button_text = '<i class="icon moon-phone3"></i>';      // text showed on call button
-var hangup_button_text = '<i class="icon moon-phone-hang-up"></i>';      // text showed on hangup button
+//var call_button_text = '<i class="icon moon-phone3"></i>';      // text showed on call button
+//var hangup_button_text = '<i class="icon moon-phone-hang-up"></i>';      // text showed on hangup button
+var call_button_text = 'Զանգել';      // text showed on call button
+var hangup_button_text = 'Անջատել';
 var call_button_color = '#43b61b';      // call button color
 var hangup_button_color = '#e83232';    // hangup button color
-var status_text_color = '#ffffff';      // color of displayed status messages
-var button_width = 180;                 // width of button in pixels
+var status_text_color = '#4f5559';      // color of displayed status messages
+var button_width = "100%";                 // width of button in pixels
 var button_height = 70;                 // height of button in pixels
 var button_radius = 5;                  // button corner radius in pixels, higher values will result in a round button
 var chatwindow_title = 'Chat';          // chat window header-title; can be text or html
@@ -545,9 +547,10 @@ webphone_api.onLoaded(function ()
     
     for (var i = 0; i < ELIMIT; i++)
     {
-        var chtml = '<button id="c2k_btn_' + i + '" class="cl_c2k_btn" onmousedown="Btnc2kMousedown(event, ' + i + ')" oncontextmenu="Btnc2kContextmenu(event, ' + i + ')" onmouseup="Btnc2kOnmouseup(event, ' + i + ')">' +
-            '<span id="c2k_status_' + i + '" class="cl_c2k_status"></span><br><br>' +
-            '<span id="c2k_label_' + i + '" class="cl_c2k_label">Call</span></button>';
+        var chtml = '<button id="c2k_btn_' + i + '" style="width:100%" class="cl_c2k_btn" onmousedown="Btnc2kMousedown(event, ' + i + ')" oncontextmenu="Btnc2kContextmenu(event, ' + i + ')" onmouseup="Btnc2kOnmouseup(event, ' + i + ')">' +
+            //'<span id="c2k_status_' + i + '" class="cl_c2k_status"></span><br><br>' +
+            '<span id="c2k_label_' + i + '" class="cl_c2k_label">Call</span></button>' +
+            '<span style="color: #4f5559" id="c2k_status_' + i + '" class="cl_c2k_status"></span><br><br>';
     
         var c2k_container = document.getElementById('c2k_container_' + i);
         

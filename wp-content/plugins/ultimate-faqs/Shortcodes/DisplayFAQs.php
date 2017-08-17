@@ -36,7 +36,7 @@ function Display_FAQs($atts) {
 	$FAQ_Fields_Array = get_option("EWD_UFAQ_FAQ_Fields");
 	if (!is_array($FAQ_Fields_Array)) {$FAQ_Fields_Array = array();}
 	$Hide_Blank_Fields = get_option("EWD_UFAQ_Hide_Blank_Fields");
-	
+
 	$Posted_Label = get_option("EWD_UFAQ_Posted_Label");
 		if ($Posted_Label == "") {$Posted_Label = __("Posted ", 'ultimate-faqs');}
 	$By_Label = get_option("EWD_UFAQ_By_Label");
@@ -60,13 +60,14 @@ function Display_FAQs($atts) {
 
 	if ($Display_Style != "Color_Block") {$Color_Block_Shape = "";}
 	else {$Color_Block_Shape = "ewd-ufaq-" . $Color_Block_Shape;}
-	
+
 	$Unique_ID = EWD_UFAQ_Rand_Chars(3);
+	EWD_UFAQ_Enqueue_Scripts_In_Shortcode();
 
 	$ReturnString = "";
 	$HeaderString = "";
 	$TitlesArray = array();
-	
+
 	// Get the attributes passed by the shortcode, and store them in new variables for processing
 	extract( shortcode_atts( array(
 			'search_string' => "",
@@ -95,7 +96,7 @@ function Display_FAQs($atts) {
     if (strpos($current_url,'?include_category') !== false) {$current_url = substr($current_url,0,strpos($current_url,'?include_category'));}
 
 	if (strpos($No_Results_Found_Text, "%s")) {$No_Results_Found_Text = str_replace("%s", $search_string, $No_Results_Found_Text);}
-	
+
 	$search_string = strtolower($search_string);
 
 	if ($display_all_answers != "") {$Display_All_Answers = $display_all_answers;}
@@ -106,7 +107,7 @@ function Display_FAQs($atts) {
 	}
 	elseif ($post__in_string != "") {$post_id_array = explode(",", $post__in_string);}
 	else {$post_id_array = "";}
-	
+
 	if ($orderby == "") {$orderby = $Order_By_Setting;}
 	if ($orderby == "popular" or $orderby == "set_order" or $orderby == "top_rated") {
 		$orig_order_setting = $orderby;
@@ -125,7 +126,7 @@ function Display_FAQs($atts) {
 	else {
 			$Category_Array = array("EWD_UFAQ_ALL_CATEGORIES");
 	}
-	
+
 	if (isset($_GET['include_category'])) {$include_category = $_GET['include_category'];}
 	if (get_query_var('ufaq_category_slug') != "") {$include_category = get_query_var('ufaq_category_slug');}
 	if ($include_category_ids != "" ) {$include_category_ids_array = explode(",", $include_category_ids);}
@@ -161,7 +162,7 @@ function Display_FAQs($atts) {
 								'operator' => 'NOT IN'
 		);
 	}
-	
+
 	if (isset($_GET['include_tag'])) {$include_tag = $_GET['include_tag'];}
 	if (get_query_var('ufaq_tag_slug') != "") {$include_tag = get_query_var('ufaq_tag_slug');}
 	if (isset($include_tag) and $include_tag != "" ) {$include_tag_array = explode(",", $include_tag);}
@@ -191,7 +192,7 @@ function Display_FAQs($atts) {
 
 	if ($Custom_CSS != "") {$ReturnString .= "<style>" . $Custom_CSS . "</style>";}
 	$ReturnString .= EWD_UFAQ_Add_Modified_Styles();
-	
+
 	$ReturnString .= "<script language='JavaScript' type='text/javascript'>";
 	if ($FAQ_Accordion == "Yes") {$ReturnString .= "var faq_accordion = true;";}
 	else {$ReturnString .= "var faq_accordion = false;";}
@@ -216,7 +217,7 @@ function Display_FAQs($atts) {
 
 		if ($Category != "EWD_UFAQ_ALL_CATEGORIES") {
 			if (!EWD_UFAQ_Category_Matches($Category, $include_category_array, $exclude_category_array)) {continue;}
-			
+
 			$category_array = array( 'taxonomy' => 'ufaq-category',
 						 				'field' => 'slug',
 										'terms' => $Category->slug
@@ -228,7 +229,7 @@ function Display_FAQs($atts) {
 		if (isset($exclude_category_filter_array)) {$tax_query_array[] = $exclude_category_filter_array;}
 		if (isset($include_tag_filter_array)) {$tax_query_array[] = $include_tag_filter_array;}
 		if (isset($category_array)) {$tax_query_array[] = $category_array;}
-		
+
 		$params = array('posts_per_page' => $post_count,
 						'post_status' => 'publish',
 						'post_type' => 'ufaq',
@@ -244,7 +245,7 @@ function Display_FAQs($atts) {
 		if ($orig_order_setting == "top_rated") {$params['meta_key'] = 'FAQ_Total_Score';}
 		if ($orig_order_setting == "set_order") {$params['meta_key'] = 'ufaq_order';}
 		$FAQ_Query = new WP_Query($params);
-	
+
 		if ($Category != "EWD_UFAQ_ALL_CATEGORIES" and $FAQ_Query->post_count > 0) {
 			$ReturnString .= "<div class='ufaq-faq-category'>";
 			$ReturnString .= "<div class='ufaq-faq-category-title";
@@ -286,9 +287,9 @@ function Display_FAQs($atts) {
 
 				$TitlesArray[] = json_encode($faq->post_title);
 				$HeaderString .= "<div class='ufaq-faq-header-title'><a href='' class='ufaq-faq-header-link'  data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'>" . apply_filters('the_title', $faq->post_title) . "</a></div>";
-		
-				$ReturnString .= "<div class='ufaq-faq-div ufaq-faq-display-style-" . $Display_Style . "' id='ufaq-post-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "' data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter . "' itemscope itemtype='http://schema.org/Question'>";	
-		
+
+				$ReturnString .= "<div class='ufaq-faq-div ufaq-faq-display-style-" . $Display_Style . "' id='ufaq-post-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "' data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter . "' itemscope itemtype='http://schema.org/Question'>";
+
 				$ReturnString .= "<div class='ufaq-faq-title";
 				if ($FAQ_Toggle != "No") {$ReturnString .= " ufaq-faq-toggle";}
 				$ReturnString .= "' id='ufaq-title-" . $faq->ID . "' data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'>";
@@ -314,7 +315,7 @@ function Display_FAQs($atts) {
 				}
 
 				$ReturnString .= "<div class='ewd-ufaq-post-margin ufaq-faq-post' id='ufaq-post-" . $faq->ID . "' itemprop='text'>" . apply_filters('the_content', html_entity_decode($faq->post_content)) . "</div>";
-				
+
 				if (sizeOf($FAQ_Fields_Array) > 0) {
 					$ReturnString .= "<div class='ufaq-faq-custom-fields' id='ufaq-custom-fields-" . $faq->ID . "'>";
 					foreach ($FAQ_Fields_Array  as $FAQ_Field_Item) {
@@ -355,7 +356,7 @@ function Display_FAQs($atts) {
 						else {$ReturnString .= "Tag: ";}}
 					else {$ReturnString .= $Tag_Label . ": ";}
 					foreach ($Tag_Terms as $Tag_Term) {
-						if ($Pretty_Permalinks == "Yes") {$Tag_URL = $current_url . "faq-tag/" . $Tag_Term->slug . "/";} 
+						if ($Pretty_Permalinks == "Yes") {$Tag_URL = $current_url . "faq-tag/" . $Tag_Term->slug . "/";}
 						else {$Tag_URL = $current_url . "?include_tag=" . $Tag_Term->slug;}
 						$ReturnString .= "<a  href='" . $Tag_URL . "'>" .$Tag_Term->name . "</a>, ";
 					}
@@ -378,7 +379,7 @@ function Display_FAQs($atts) {
 					$ReturnString .= "</div>";
 					$ReturnString .= "<div class='ewd-ufaq-clear'></div>";
 				}
-		
+
 				if ($Socialmedia[0] != "Blank" and $Socialmedia[0] != "") {
 					$ReturnString .= "<div class='ufaq-social-links'>Share: ";
 					$ReturnString .= "<ul class='rrssb-buttons'>";
@@ -392,7 +393,7 @@ function Display_FAQs($atts) {
 			    if ($Socialmedia[0] != "Blank" and $Socialmedia[0] != "") {
 			    	$ReturnString .= "</ul>";
 			    	$ReturnString .= "</div>";
-			    }	
+			    }
 
 			    if ($Include_Permalink == "Yes" and $ajax == "No") {
 			    	$ReturnString .= "<div class='ufaq-permalink'>" . $Permalink_Label;
@@ -408,7 +409,7 @@ function Display_FAQs($atts) {
 			    	wp_list_comments(array(), $Comments);
 			    	comment_form(array(), $faq->ID);
 			    	$ReturnString .= ob_get_contents();
-			    	ob_end_clean(); 
+			    	ob_end_clean();
 			    }
 
 			    if ($Display_Back_To_Top == "Yes") {
@@ -418,13 +419,13 @@ function Display_FAQs($atts) {
 			    	$ReturnString .= "</a>";
 			    	$ReturnString .= "</div>";
 			    }
-				
+
 				$ReturnString .= "</div>";
 				$ReturnString .= "</div>";
 
 			$Counter++;
 		endwhile;
-	
+
 		if ($Category != "EWD_UFAQ_ALL_CATEGORIES" and $FAQ_Query->post_count > 0) {
 			$ReturnString .= "</div>";
 			$ReturnString .= "</div>";
@@ -460,7 +461,7 @@ add_shortcode("ultimate-faqs", "Display_FAQs");
 function EWD_UFAQ_Category_Matches($Category, $include_category_array, $exclude_category_array) {
 	$Excluded = EWD_UFAQ_Excluded_Category_Check($Category, $exclude_category_array);
 	$Included = EWD_UFAQ_Included_Category_Check($Category, $include_category_array);
-	
+
 	if ($Included and !$Excluded) {
 		return true;
 	}
@@ -491,11 +492,35 @@ function EWD_UFAQ_Included_Category_Check($Category, $include_category_array) {
 	}
 }
 
+function EWD_UFAQ_Enqueue_Scripts_In_Shortcode() {
+	wp_enqueue_script('ewd-ufaq-js');
+
+	wp_enqueue_script("jquery-ui-core");
+	wp_enqueue_script("jquery-effects-core");
+	wp_enqueue_script('jquery-ui-autocomplete');
+
+	$Reveal_Effect = get_option("EWD_UFAQ_Reveal_Effect");
+
+	if ($Reveal_Effect == "blind") {wp_enqueue_script("jquery-effects-blind");}
+	if ($Reveal_Effect == "bounce") {wp_enqueue_script("jquery-effects-bounce");}
+	if ($Reveal_Effect == "clip") {wp_enqueue_script("jquery-effects-clip");}
+	if ($Reveal_Effect == "drop") {wp_enqueue_script("jquery-effects-drop");}
+	if ($Reveal_Effect == "explode") {wp_enqueue_script("jquery-effects-explode");}
+	if ($Reveal_Effect == "fade") {wp_enqueue_script("jquery-effects-fade");}
+	if ($Reveal_Effect == "fold") {wp_enqueue_script("jquery-effects-fold");}
+	if ($Reveal_Effect == "highlight") {wp_enqueue_script("jquery-effects-highlight");}
+	if ($Reveal_Effect == "pulsate") {wp_enqueue_script("jquery-effects-pulsate");}
+	wp_enqueue_script("jquery-effects-scale");
+	if ($Reveal_Effect == "shake") {wp_enqueue_script("jquery-effects-shake");}
+	if ($Reveal_Effect == "slide") {wp_enqueue_script("jquery-effects-slide");}
+	wp_enqueue_script("jquery-effects-transfer");
+}
+
 function EWD_UFAQ_Rand_Chars($CharLength = 10) {
 	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randstring = '';
     for ($i = 0; $i < $CharLength; $i++) {
-        $randstring .= $characters[rand(0, strlen($characters))];
+        $randstring .= $characters[rand(0, strlen($characters)-1)];
     }
     return $randstring;
 }

@@ -268,6 +268,9 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.5.39 =
+- Maintenance update (notices removed, pageload speed enhancements, small CSS fixes, etc.)
+
 = 1.5.38 =
 - Added spacing and a span for category post counts
 

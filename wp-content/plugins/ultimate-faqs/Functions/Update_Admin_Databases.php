@@ -13,8 +13,8 @@ add_action('save_post_ufaq', 'EWD_UFAQ_Add_Post_Order_Meta');
 function EWD_UFAQ_UpdateOptions() {
     global $UFAQ_Full_Version;
 
-    $Custom_CSS = $_POST['custom_css'];
-    $Social_Media_Array = $_POST['Socialmedia'];
+    $Custom_CSS = (isset($_POST['custom_css']) ? $_POST['custom_css'] : null);
+    $Social_Media_Array = (isset($_POST['Socialmedia']) ? $_POST['Socialmedia'] : null);
     if (is_array($Social_Media_Array)) {$Social_Media = implode(",", $Social_Media_Array);}
 
     $Custom_CSS = stripslashes_deep($Custom_CSS);
@@ -59,6 +59,7 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['order_setting'])) {update_option('EWD_UFAQ_Order', $_POST['order_setting']);}
 
     $Counter = 0;
+    $Custom_Fields = array();
     while ($Counter < 30) {
         if (isset($_POST['Custom_Field_' . $Counter . '_Name'])) {
             $Prefix = 'Custom_Field_' . $Counter;
@@ -73,6 +74,7 @@ function EWD_UFAQ_UpdateOptions() {
         }
         $Counter++;
     }
+
     if (isset($_POST['Options_Submit'])) {update_option('EWD_UFAQ_FAQ_Fields', $Custom_Fields);}
     if (isset($_POST['hide_blank_fields'])) {update_option('EWD_UFAQ_Hide_Blank_Fields', $_POST['hide_blank_fields']);}
 
@@ -142,7 +144,7 @@ function EWD_UFAQ_UpdateOptions() {
 
     if (isset($_POST['custom_css'])) {update_option('EWD_UFAQ_Custom_CSS', $Custom_CSS);}
 
-    if ($_POST['Pretty_Permalinks'] == "Yes") {
+    if (isset($_POST['Pretty_Permalinks']) and $_POST['Pretty_Permalinks'] == "Yes") {
          update_option("EWD_UFAQ_Rewrite_Rules", "Yes");
     }
 }

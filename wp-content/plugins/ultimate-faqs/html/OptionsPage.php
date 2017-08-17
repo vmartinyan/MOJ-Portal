@@ -272,7 +272,7 @@
 	<fieldset><legend class="screen-reader-text"><span>Display All Answers</span></legend>
 	<label title='Yes'><input type='radio' name='display_all_answers' value='Yes' <?php if($Display_All_Answers == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='display_all_answers' value='No' <?php if($Display_All_Answers == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should all answers be displayed when the page loads? (Careful if FAQ Accordian is on)</p>
+	<p>Should all answers be displayed when the page loads? (Careful if FAQ Accordion is on)</p>
 	</fieldset>
 </td>
 </tr>
@@ -387,7 +387,7 @@
 	<fieldset><legend class="screen-reader-text"><span>Pretty Permalinks</span></legend>
 	<label title='Yes'><input type='radio' name='pretty_permalinks' value='Yes' <?php if($Pretty_Permalinks == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='pretty_permalinks' value='No' <?php if($Pretty_Permalinks == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
-	<p>Should an SEO friendly permalink structure be used for the link to this FAQ?</p>
+	<p>Should an SEO friendly permalink structure be used for the link to the FAQ?</p>
 	</fieldset>
 </td>
 </tr>
@@ -481,7 +481,7 @@
 <td>
 	<fieldset><legend class="screen-reader-text"><span>Admin Notification Email</span></legend>
 	<input type='text' name='admin_notification_email' value='<?php echo $Admin_Notification_Email; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> size='60'/>
-	<p>What email address should notificatiions be sent to if "Admin Question Notifications" are set to "Yes" above? If blank, the default WordPress admin email will be used.</p>
+	<p>What email address should the notifications be sent to if "Admin Question Notifications" are set to "Yes" above? If blank, the default WordPress admin email will be used.</p>
 	</fieldset>
 </td>
 </tr>
@@ -665,7 +665,7 @@
 						echo "<td><input type='text' name='Custom_Field_" . $Counter . "_Values' value='" . $FAQ_Field_Item['FieldValues'] . "'/></td>";
 						echo "</tr>";
 						$Counter++;
-						$Max_ID = max($Max_ID, $Email_Message_Item['ID']);
+						$Max_ID = max($Max_ID, $FAQ_Field_Item['FieldID']);
 					}
 					$Max_ID++;
 					echo "<tr><td colspan='4'><a class='ewd-ufaq-add-custom-field' data-nextid='" . $Counter . "' data-maxid='" . $Max_ID . "'>Add</a></td></tr>";
@@ -682,7 +682,7 @@
 			<fieldset><legend class="screen-reader-text"><span>Hide Blank Fields</span></legend>
 			<label title='Yes'><input type='radio' name='hide_blank_fields' value='Yes' <?php if($Hide_Blank_Fields == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 			<label title='No'><input type='radio' name='hide_blank_fields' value='No' <?php if($Hide_Blank_Fields == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-			<p>Should field labels been hidden if a field hasn't been filled out for a particular FAQ?</p>
+			<p>Should field labels be hidden if a field hasn't been filled out for a particular FAQ?</p>
 			</fieldset>
 		</td>
 	</tr>
