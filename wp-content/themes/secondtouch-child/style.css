@@ -373,6 +373,11 @@ a[rel~="wp-video-lightbox"] {
     list-style-type:lower-armenian;
 }
 
+.tbpressEN tr td:nth-child(4) .price-item  ol,
+.tbpressEN tr td:nth-child(3) ol{
+    list-style-type:lower-alpha;
+}
+
 .dataTables_length select {
     padding: 4px;
 }

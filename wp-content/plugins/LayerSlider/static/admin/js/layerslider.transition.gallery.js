@@ -47,7 +47,7 @@
 		var $el = $( el ),
 
 		// Create popup
-		popup = $('<div class="ls-popup"> \
+		popup = $('<div class="km-ui-popup"> \
 			<div class="inner ls-transition-preview"></div> \
 		</div>').prependTo('body'),
 
@@ -82,7 +82,7 @@
 		}
 
 		// Get transition class
-		var trclass = $el.closest('tbody').data('tr-type'),
+		var trclass = $el.closest('section').data('tr-type'),
 			trtype, trObj;
 
 		// Built-in 3D
@@ -120,7 +120,7 @@
 	window.lsHideTransition = function( $parent ) {
 
 		if( ! $parent || ! $parent.length ) {
-			$parent = $('.ls-popup');
+			$parent = $('.km-ui-popup');
 		}
 
 		// Stop transition
