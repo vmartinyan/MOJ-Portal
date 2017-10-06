@@ -136,7 +136,7 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 							),
 							array(
 								"type" => "ult_param_heading",
-								"text" => "<span style='display: block;'><a href='http://bsf.io/agey7' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+								"text" => "<span style='display: block;'><a href='http://bsf.io/agey7' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 								"param_name" => "notification",
 								'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 							),
@@ -470,7 +470,7 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "icon_type","value" => array("selector")),
 							),
 							array(
@@ -871,7 +871,7 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "icon_type","value" => array("selector")),
 							),
 							array(
@@ -1146,7 +1146,7 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 			else{
 				$output .= '<div class="smile-icon-timeline-wrap '.esc_attr($timeline_style).' '.esc_attr($el_class).' '.esc_attr($timeline_layout).' '.esc_attr($tl_animation).'" '.$cw.' '.$time_sep_bg_color.' '.$time_block_bg_color.' '.$time_sep_color.' style="'.esc_attr($timeline_design_css).'">';
 			}
-			$output .= '<div class="timeline-line " style="'.esc_attr($line_style).'"><z></z></div>';
+			$output .= '<div class="timeline-line " style="'.esc_attr($line_style).'"><span></span></div>';
 			$output .='<div class="timeline-wrapper">';
 			$output .= do_shortcode($content);
 			$output .= '</div>';
@@ -1338,12 +1338,13 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 			$vv_link ='';
 			if($time_link !=''){
 				$href 			= vc_build_link($time_link);
-				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
 
-				$link_prefix = '<a class="tl-desc-a" href="' . esc_url($url) .'" '. $target .' '. $link_title .' '. $rel .'>';
+				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+				$link_prefix = '<a class="tl-desc-a" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>';
 				$link_sufix = '</a>';
 			}
 			$header = '';
@@ -1360,7 +1361,7 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 			$header .= '</div> <!-- header --></div>';
 			$contt='';
 			if($time_link_apply!='' && $time_link_apply == 'box'){
-				$contt.='<a class="link-box ult-link-box" href = "' . esc_url($url) .'" '. $target .' '. $link_title .' '. $rel .'></a>';
+				$contt.='<a class="link-box ult-link-box" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
 			}
 			$icon_wrap_preffix='<div class="timeline-icon-block">';
 			$icon_wrap_suffix='</div>';
@@ -1495,18 +1496,18 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 			if($time_link !=''){
 				$href 			= vc_build_link($time_link);
 				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 
-				$link_prefix = '<a class="tl-desc-a" href="' . esc_attr($url) .'" '. $target .' '. $link_title .' '. $rel .'>';
+				$link_prefix = '<a class="tl-desc-a" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>';
 				$link_sufix = '</a>';
 			}
 			$header = $header_link_prefix = $header_link_suffix = '';
 			$header .= '<div class="timeline-header-block" '.$header_block_style.'>
 							<div id="'.esc_attr($timeline_item_id).'" class="timeline-header" style="">';
 			if ($time_link_apply!='' && $time_link_apply == 'title') {
-				$header_link_prefix ='<a href="'.esc_url($url).'" '. $link_title .' '. $rel .' '. $target .' class="link-title">';
+				$header_link_prefix ='<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' class="link-title">';
 				$header_link_suffix = '</a>';
 			}
 			$header .= '<h3 class="ult-timeline-title ult-responsive" '.$Item_data_list.' style="'.esc_attr($title_style).'">'.$header_link_prefix.$time_title.$header_link_suffix.'</h3>';
@@ -1516,7 +1517,7 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 			}
 			$header .= '</div> <!-- header --></div>';
 			if($time_link_apply!='' && $time_link_apply == 'box'){
-				$header.='<a href="'.esc_url($url).'" '. $link_title .' '. $rel .' '. $target .' class="link-box ult-link-box"></a>';
+				$header.='<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' class="link-box ult-link-box"></a>';
 			}
 			$icon_wrap_preffix='<div class="timeline-icon-block">';
 			$icon_wrap_suffix='</div>';

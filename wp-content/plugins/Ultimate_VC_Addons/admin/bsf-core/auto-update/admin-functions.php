@@ -82,11 +82,10 @@ if(!function_exists('bsf_register_product_callback')) {
 		if($is_edd)
 			$data['edd'] = $is_edd;
 		$data = apply_filters('bsf_product_registration_args', $data);
-		$request = @wp_remote_post(
+		$request = wp_remote_post(
 			$path, array(
 				'body' => $data,
-				'timeout' => '30',
-				'sslverify' => false
+				'timeout' => '30'
 			)
 		);
 
@@ -216,11 +215,10 @@ if(!function_exists('bsf_deregister_product_callback')) {
 		if($is_edd)
 			$data['edd'] = $is_edd;
 		$data = apply_filters('bsf_product_deregistration_args', $data);
-		$request = @wp_remote_post(
+		$request = wp_remote_post(
 			$path, array(
 				'body' => $data,
-				'timeout' => '30',
-				'sslverify' => false
+				'timeout' => '30'
 			)
 		);
 
@@ -298,11 +296,10 @@ if(!function_exists('bsf_register_user_callback')) {
 				'token' => $token,
 			);
 
-		$request = @wp_remote_post(
+		$request = wp_remote_post(
 			$path, array(
 				'body' => $data,
-				'timeout' => '60',
-				'sslverify' => false
+				'timeout' => '60'
 			)
 		);
 
@@ -662,7 +659,7 @@ if(!function_exists('bsf_allow_developer_access')) {
 		$path = get_api_url()  . '?referer=allow-developer-access';
 		$new_url = $url;
 		$user = $username;
-		$request = @wp_remote_post(
+		$request = wp_remote_post(
 						$path, 	array(
 							'body' => array(
 								'action' => 'give_developer_access',
@@ -671,8 +668,7 @@ if(!function_exists('bsf_allow_developer_access')) {
 								'site_url' => get_site_url(),
 								'process' => $process,
 							),
-							'timeout' => '30',
-							'sslverify' => false
+							'timeout' => '30'
 						)
 					);
 		if (!is_wp_error($request) || wp_remote_retrieve_response_code($request) === 200) {

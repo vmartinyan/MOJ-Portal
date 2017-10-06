@@ -105,9 +105,9 @@
 			if($link!='') {
 				$href 			= 	vc_build_link($link);
 				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr( trim( $href['target'] ) ) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 			}
 
 		  	/* 	padding  	*/
@@ -142,7 +142,7 @@
 
 			$output  = '<div class="ult-content-box-container '.esc_attr($el_class).'" >';
 			if($link!='') {
-				$output .= '	<a class="ult-content-box-anchor" href="'.esc_url($url).'" '. $link_title .' '. $target .' '. $rel .'>';
+				$output .= '	<a class="ult-content-box-anchor" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>';
 			}
 			$output .= '		<div class="ult-content-box" style="'.esc_attr($style).'" '.$hover.' '.$responsive_margins.' '.$normal_margins.' '.$data_attr.'>';
 			$output .=				do_shortcode( $content );

@@ -505,7 +505,7 @@ else{
 
 				$acord.='<dt class="'.esc_attr($ul_sub_class).'">
         	<a class="ult-tabto-actitle withBorder ult_a" id="'.esc_attr($tab_id).'" style="color:'.esc_attr($tab_title_color).';'.esc_attr($style5bgcolor).';background-color:'.esc_attr($tab_background_color).';'.esc_attr($ult_ac_border).'" href="#'.esc_attr($tab_id).'">
-        		<i class="accordion-icon">+</i>
+        		<i class="accordion-icon"></i>
         			<span class="ult_tab_main ult_ac_main'.esc_attr($resp_style).'">
 					   <span '.$advanced_tabs_data_list.' class="ult-span-text ult_acordian-text ult-responsive" style="'.esc_attr($tabs_nav_style).';color:inherit " >'.$value['title'].'</span>
 					</span>
@@ -539,7 +539,7 @@ else{
 
 				$acord.='<dt class="'.esc_attr($ul_sub_class).'">
         	<a class="ult-tabto-actitle withBorder ult_a"  id="'.esc_attr($tab_id).'" style="color:'.esc_attr($tab_title_color).';'.esc_attr($style5bgcolor).';background-color:'.esc_attr($tab_background_color).';'.esc_attr($ult_ac_border).'" href="#'.esc_attr($tab_id).'">
-        		<i class="accordion-icon">+</i>
+        		<i class="accordion-icon"></i>
         			<span class="ult_tab_main ult_ac_main'.esc_attr($resp_style).'">
 					   <div class="aio-icon none " style="'.esc_attr($tab_icon_style).'" data-iconcolor="'.esc_attr($icon_color).'" data-iconhover="'.esc_attr($icon_hover_color).'">
 					   <i class="  '.esc_attr($tabicon).' ult_tab_icon"  ></i>
@@ -571,7 +571,7 @@ else{
 
 				$acord.='<dt class="'.esc_attr($ul_sub_class).'">
 	        	<a class="ult-tabto-actitle withBorder ult_a" id="'.esc_attr($tab_id).'"  style="color:'.esc_attr($tab_title_color).';'.esc_attr($style5bgcolor).';background-color:'.esc_attr($tab_background_color).';'.esc_attr($ult_ac_border).'" href="#'.esc_attr($tab_id).'">
-	        		<i class="accordion-icon">+</i>
+	        		<i class="accordion-icon"></i>
 	        			<span class="ult_tab_main ult_ac_main ult_top ' .esc_attr($resp_style).'">
 						   <span class="aio-icon none icon-top" style="'.esc_attr($tab_icon_style).'" data-iconcolor="'.esc_attr($icon_color).'" data-iconhover="'.esc_attr($icon_hover_color).'">
 						   <i class="  '.esc_attr($tabicon).' ult_tab_icon"  ></i>
@@ -601,7 +601,7 @@ else{
 
 				$acord.='<dt class="'.esc_attr($ul_sub_class).'">
 	        	<a class="ult-tabto-actitle withBorder ult_a " id="'.esc_attr($tab_id).'" style="color:'.esc_attr($tab_title_color).';'.esc_attr($style5bgcolor).';background-color:'.esc_attr($tab_background_color).';'.esc_attr($ult_ac_border).'" href="#'.esc_attr($tab_id).'">
-	        		<i class="accordion-icon">+</i>
+	        		<i class="accordion-icon"></i>
 	        			<span class="ult_tab_main ult_ac_main ult_noacordicn' .esc_attr($resp_style).'">
 
 						<span '.$advanced_tabs_data_list.' class="ult-span-text no_icon ult_acordian-text ult-responsive" style="'.esc_attr($tabs_nav_style).';color:inherit " >'.$value['title'].'</span>
@@ -1307,10 +1307,11 @@ vc_map( array(
 		),
 
 		array(
-			'type' => 'tab_id',
+			'type' => 'textfield',
 			"edit_field_class" => " vc_col-sm-12 vc_column wpb_el_type_textfield vc_shortcode-param",
 			'heading' => __( 'Tab ID', 'ultimate_vc' ),
-			'param_name' => "tab_id"
+			'param_name' => "tab_id",
+			"description" => __('Enter Tab ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', "ultimate_vc"),
 		),
 
 

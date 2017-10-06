@@ -137,7 +137,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "smile"),
 								"param_name" => "banner_title_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								//"dependency" => Array("element" => "banner_title", "not_empty" => true),
 								"group" => "Typography"
 							),
@@ -201,7 +201,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "smile"),
 								"param_name" => "banner_desc_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								//"dependency" => Array("element" => "banner_desc", "not_empty" => true),
 								"group" => "Typography"
 							),
@@ -342,7 +342,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 							),
 							array(
 								"type" => "ult_param_heading",
-								"text" => "<span style='display: block;'><a href='http://bsf.io/n8o33' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+								"text" => "<span style='display: block;'><a href='http://bsf.io/n8o33' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 								"param_name" => "notification",
 								'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 							),
@@ -402,7 +402,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 			$css_ib2_styles = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class( $css_ib2, ' ' ), "interactive_banner_2", $atts );
 			$css_ib2_styles = esc_attr( $css_ib2_styles );
 
-			$output = $style = $target = $link = $banner_style_inline = $title_bg = $img_style = $responsive = $target ='';
+			$output = $style = $target = $link = $url = $banner_style_inline = $title_bg = $img_style = $responsive = $target ='';
 			//$banner_style = 'style01';
 
 			if($enable_responsive == "yes"){
@@ -420,10 +420,10 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 			if($banner_link !== ''){
 				$href = vc_build_link($banner_link);
 
-				$link 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 			} else {
 				$link = "#";
 			}
@@ -529,7 +529,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 			}
 			$output .= '</div>';
 			if($href != ''){
-			$output .= '<a class="ult-new-ib-link" '.$href.' '.$target.' '. $link_title .' '. $rel .'></a>';
+			$output .= '<a class="ult-new-ib-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
 			}
 			$output .= '</div>';
 			$is_preset = false; //Display settings for Preset

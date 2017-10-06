@@ -204,15 +204,24 @@
 			event.preventDefault();
 
 			var class_id = $(this).data('class-id');
-			$('.'+class_id).find('.ult_modal-content').removeClass('ult-hide');
-			$('.'+class_id).find('.ult-vimeo iframe').html($('.ult-vimeo iframe').html());
-			$('.'+class_id).addClass($(this).data('overlay-class'));
-			setTimeout(function() {
-				$('body, html').addClass('ult_modal-body-open');
-				toggleOverlay(class_id);
-				content_check(class_id);
-			}, 500);
-			//$('.'+class_id).find('.ult-vimeo iframe').attr('id','video_'+class_id);
+			if($(this).parent().hasClass('modal-hide-mobile') != true && $(this).parent().hasClass('modal-hide-tablet') != true ) {
+				$('.'+class_id).find('.ult_modal-content').removeClass('ult-hide');
+				$('.'+class_id).find('.ult-vimeo iframe').html($('.ult-vimeo iframe').html());
+				$('.'+class_id).addClass($(this).data('overlay-class'));
+				setTimeout(function() {
+					$('body, html').addClass('ult_modal-body-open');
+					toggleOverlay(class_id);
+					content_check(class_id);
+				}, 500);
+
+				if ($(this).parent().attr('data-keypress-control') == 'keypress-control-enable'){
+					window.onkeydown = function( e ) {
+					    if (e.keyCode == 27) {
+					        $(document).find('.ult-overlay.ult-open.'+class_id).removeClass('ult-open');
+					    } 
+					}
+				}
+			}
 		});
 
 		$(document).on('click', '.overlay-show-cornershape', function(event){
@@ -337,8 +346,16 @@
 			event.stopPropagation();
 			event.preventDefault();
 
-			$(this).find('.ult-overlay-close').trigger('click');
-			$('html').css({'overflow':'auto'});
+			$this = $(this);
+			var id = $this.data('class');
+			var a = $(document).find('.ult-modal-input-wrapper').children();
+			a.each(function () {
+			    var class_id = $(this).data('class-id'); // "this" is the current element in the loop
+			    if( class_id == id && $(this).parent('.ult-modal-input-wrapper').data('overlay-control') == 'overlay-control-enable' ) {
+					$this.find('.ult-overlay-close').trigger('click');
+					$('html').css({'overflow':'auto'});
+			    }
+			});
 		});
 	})
 	function content_check(id){

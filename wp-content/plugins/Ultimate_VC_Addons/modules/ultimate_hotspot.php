@@ -257,17 +257,18 @@ if(!class_exists('ULT_HotSpot')) {
 			// Hotspot has simple link
 			if( $link_style == 'link' && $icon_link !='' ){
 				$href 		= vc_build_link($icon_link);
-				$url 		= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 	= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title = ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 		= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+
+				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 			}
 
 			$output  = "<div class='ult-hotspot-item ".esc_attr($pulse)."' style='top:-webkit-calc(".esc_attr($hotspot_x_position)."% - ".esc_attr($temp_icon_size)."px);top:-moz-calc(".esc_attr($hotspot_x_position)."% - ".esc_attr($temp_icon_size)."px);top:calc(".esc_attr($hotspot_x_position)."% - ".esc_attr($temp_icon_size)."px);left: -webkit-calc(".esc_attr($hotspot_y_position)."% - ".esc_attr($temp_icon_size)."px);left: -moz-calc(".esc_attr($hotspot_y_position)."% - ".esc_attr($temp_icon_size)."px);left: calc(".esc_attr($hotspot_y_position)."% - ".esc_attr($temp_icon_size)."px);' >";
   			$output .= "  <div style='z-index: 39;position: relative;'>";
 
 			if($link_style == 'link'){
-	 			$output .= "   <a data-link_style='simple' class='ult-tooltipstered ult-hotspot-tooltip' href='".esc_attr($url)."' ".$link_title." ".$target." ". $rel ." data-status='hide'>";
+	 			$output .= "   <a data-link_style='simple' class='ult-tooltipstered ult-hotspot-tooltip' ". Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel )." data-status='hide'>";
 				$output .= $icon_inline;
 				$output .= "  </a>";
 			} else {
@@ -392,7 +393,7 @@ if(!class_exists('ULT_HotSpot')) {
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "icon_type","value" => array("selector")),
 								"group" => "Icon",
 							),

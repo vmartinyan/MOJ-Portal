@@ -216,9 +216,10 @@ if(!class_exists('Ultimate_Info_Circle'))
 			$output .= '</div>';
 			if($responsive=='on'){
 				$output .='<div class="smile_icon_list_wrap " data-content_bg="'.esc_attr($content_bg).'" data-content_color="'.esc_attr($content_color).'">
-							<ul id="'.esc_attr($info_circle_id).'" class="smile_icon_list left circle with_bg">
-								<li class="icon_list_item" style="font-size:'.( esc_attr( $img_icon_size ) * 3 ).'px;">
-									<div class="icon_list_icon" style="font-size:'. esc_attr($img_icon_size).'px;">
+							<ul id="'.esc_attr($info_circle_id).'" class="smile_icon_list left circle with_bg"><li class="icon_list_item" style="font-size:'.( esc_attr( $img_icon_size ) * 3 ).'px;">';
+							if( $img_icon_size <= 120 ) {
+								$output .='
+									<div class="icon_list_icon" style="font-size:'. esc_attr($img_icon_size).'px;width:'. esc_attr($img_icon_size).'px;height:'. esc_attr($img_icon_size).'px;line-height:1;">
 										<i class="smt-pencil"></i>
 									</div>
 									<div  class="icon_description" style="font-size:'.esc_attr($img_icon_size).'px;">
@@ -227,10 +228,21 @@ if(!class_exists('Ultimate_Info_Circle'))
 											<p></p>
 										</div>
 									</div>
-									<div class="icon_list_connector" style="border-style:'.esc_attr($eg_br_style).';border-color:'.esc_attr($eg_border_color).'">
+									<div class="icon_list_connector" style="border-style:'.esc_attr($eg_br_style).';border-color:'.esc_attr($eg_border_color).';left:'.esc_attr($img_icon_size/2).'px;top:'.esc_attr($img_icon_size/2).'px;">
+									</div>';
+							}else {
+								$output .='
+									<div class="icon_list_icon" style="font-size:'. esc_attr($img_icon_size).'px;width:'. esc_attr($img_icon_size).'px;height:'. esc_attr($img_icon_size).'px;float: none;margin: 30px 0;line-height:1;left: 50%;transform: translateX(-50%);">
+										<i class="smt-pencil"></i>
 									</div>
-								</li>
-							</ul>
+									<div  class="icon_description" style="font-size:'.esc_attr($img_icon_size).'px; text-align:center;">
+										<div class="responsive-font-class ult-responsive" '.$info_circle_desc_data_list.' style="'.esc_attr($desc_style_inline).'">
+											<h3 '.$info_circle_data_list.' class="ult-responsive new-cust-responsive-class" style="'.esc_attr($title_style_inline).'"></h3>
+											<p></p>
+										</div>
+									</div>';
+							}
+							$output .='</li></ul>
 						</div>';
 			}
 			$output .='</div></div>';
@@ -257,7 +269,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 			), $atts));
 			$icon_html = $output = $icon_type_class = '';
 			if($icon_type == "selector"){
-				$icon_html .= '<i class="'.esc_attr($info_icon).'" ></i>';
+				$icon_html .= '<i class="'.esc_attr($info_icon).' info-circle-icon" ></i>';
 				$icon_type_class = 'ult-info-circle-icon';
 			} else {
 				$img = apply_filters('ult_get_img_single', $info_img, 'url');
@@ -283,12 +295,13 @@ if(!class_exists('Ultimate_Info_Circle'))
 			}
 			$href = vc_build_link($ilink);
 			if( !empty($href['url']) ){
+
 				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 				$output .= '<div class="info-circle-icons '.esc_attr($el_class).'" style="'.esc_attr($style).'"><div class="info-circle-link">
-								<a class="info-circle-href" href="'. esc_url($url) .'" '. $target .' '. $rel . ' '. $link_title .'></a>';
+								<a class="info-circle-href" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
 				$output .= $icon_html;
 				$output .="</div></div>";
 			}
@@ -300,12 +313,13 @@ if(!class_exists('Ultimate_Info_Circle'))
 			$output .='<div class="info-details" data-icon-class="'.esc_attr($icon_type_class).'">';
 			//$output .=$icon_html;
 			if( !empty($href['url']) ){
+
 				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 				$output .='<div class="info-circle-def"><div  class="info-circle-sub-def">
-							<a class="info-circle-href" href="'. esc_url($url) .'" '. $link_title .' '. $rel .' '. $target .'" style="color:inherit;">'.$icon_html.'</a>
+							<a class="info-circle-href" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' style="color:inherit;">'.$icon_html.'</a>
 								<div class="responsive-font-class ult-responsive" '.$info_circle_desc_data_list.'><h3 '.$info_circle_data_list.' class="info-circle-heading ult-responsive new-cust-responsive-class" style="'.esc_attr($title_style_inline).'">'.$info_title.'</h3>
 								<div '.$info_circle_desc_data_list.' class="info-circle-text " style="'.esc_attr($desc_style_inline).'">'.do_shortcode($content).'</div>
 							</div></div></div></div>';
@@ -814,7 +828,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 			                ),
 						array(
 							"type" => "ult_param_heading",
-							"text" => "<span style='display: block;'><a href='http://bsf.io/z-dpz' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+							"text" => "<span style='display: block;'><a href='http://bsf.io/z-dpz' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 							"param_name" => "notification",
 							'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 						),
@@ -860,7 +874,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 							"heading" => __("Select Icon For Information Circle & Thumbnail ","ultimate_vc"),
 							"param_name" => "info_icon",
 							"value" => "",
-							"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+							"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 							"dependency" => Array("element" => "icon_type","value" => array("selector")),
 							"group" => __("Design")
 						),

@@ -11,11 +11,10 @@ if(!function_exists('bsf_get_remote_version')) {
 				'ids' => $products,
 				'linceses_check' => $check_license
 			);
-		$request = @wp_remote_post(
+		$request = wp_remote_post(
 			$path, array(
 				'body' => $data,
-				'timeout' => '15',
-				'sslverify' => false
+				'timeout' => '30'
 			)
 		);
 

@@ -123,6 +123,32 @@ if(!class_exists('Ultimate_Image_Separator'))
 								'description' => __('50% is default. Increase to push the image outside or decrease to pull the image inside.','ultimate_vc')
 							),
 							array(
+								'type' => 'dropdown',
+								'heading' => __('Image Alignment','ultimate_vc'),
+								'param_name' => 'img_separator_alignment',
+								'value' => array(
+									__('Center','ultimate_vc') => 'ult-center-img',
+									__('Left','ultimate_vc') => 'ult-left-img',
+									__('Right','ultimate_vc') => 'ult-right-img',
+								)
+							),
+							array(
+								'type' => 'number',
+								'heading' => __('Image Position from Left','ultimate_vc'),
+								'param_name' => 'img_position_left',
+								'suffix' => '%',
+								// 'description' => __('50% is default. Increase to push the image outside or decrease to pull the image inside.','ultimate_vc')
+								"dependency"=>Array("element"=>"img_separator_alignment","value"=>array("ult-left-img")),
+							),
+							array(
+								'type' => 'number',
+								'heading' => __('Image Position from right','ultimate_vc'),
+								'param_name' => 'img_position_right',
+								'suffix' => '%',
+								// 'description' => __('50% is default. Increase to push the image outside or decrease to pull the image inside.','ultimate_vc')
+								"dependency"=>Array("element"=>"img_separator_alignment","value"=>array("ult-right-img")),
+							),
+							array(
 								"type" => "vc_link",
 								"heading" => __("Link ","ultimate_vc"),
 								"param_name" => "sep_link",
@@ -144,7 +170,10 @@ if(!class_exists('Ultimate_Image_Separator'))
 				'animation' => '',
 				'img_separator_width' => '',
 				'img_separator_position' => 'ult-top-easy-separator',
+				'img_separator_alignment' => 'ult-center-img',
 				'img_separator_gutter' => '',
+				'img_position_left' => '',
+				'img_position_right' => '',
 				'opacity' => 'set',
 				'opacity_start_effect' => '',
 				'animation_duration' => '',
@@ -164,11 +193,11 @@ if(!class_exists('Ultimate_Image_Separator'))
 
 			if( $sep_link !='' ){
 				$href 		= 	vc_build_link($sep_link);
-
+			
 				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 			}
 
 			$args = array(
@@ -183,11 +212,14 @@ if(!class_exists('Ultimate_Image_Separator'))
 			if ( is_rtl() ) {
 				$trans = '50%';
 			}
+			if( $img_separator_alignment == 'ult-left-img' || $img_separator_alignment == 'ult-right-img' ){
+				$trans = '0';
+			}
 
 			if($img_separator_gutter != '')
 			{
 				$wrapper_class = 'ult-easy-separator-no-default';
-				if($img_separator_position == 'ult-top-easy-separator')
+				if($img_separator_position == 'ult-top-easy-separator' )
 				{
 					$img_separator_gutter = '-'.$img_separator_gutter;
 					//$custom_position = 'top:'.$img_separator_gutter.'%;';
@@ -196,13 +228,51 @@ if(!class_exists('Ultimate_Image_Separator'))
 					$custom_position .= '-webkit-transform: translate('. $trans .','.$img_separator_gutter.'%)!important;';
 
 				}
-				else if($img_separator_position == 'ult-bottom-easy-separator')
+				else if($img_separator_position == 'ult-bottom-easy-separator' )
 				{
 					//$custom_position = 'bottom:'.$img_separator_gutter.'%;';
 					$custom_position .= 'transform: translate('. $trans .','.$img_separator_gutter.'%)!important;';
 					$custom_position .= '-ms-transform: translate('. $trans .','.$img_separator_gutter.'%)!important;';
 					$custom_position .= '-webkit-transform: translate('. $trans .','.$img_separator_gutter.'%)!important;';
 				}
+			}
+
+			$img_alignment = '';
+			if($img_separator_alignment == 'ult-left-img' && ! wp_is_mobile() )
+			{
+				$img_alignment = 'ult-left-img';
+			}
+			else if($img_separator_alignment == 'ult-right-img' && ! wp_is_mobile() )
+			{
+				$img_alignment = 'ult-right-img';
+			}
+			else {
+				$img_alignment = '';
+			}
+
+			$img_alignment_position = $img_separator_gutter_value = '';
+			if($img_separator_gutter != ''){
+				$img_separator_gutter_value = esc_attr($img_separator_gutter);
+			}
+			else {
+				$img_separator_gutter_value = '50';	
+			}
+
+			if($img_separator_alignment == 'ult-left-img' && $img_position_left != '' && ! wp_is_mobile() )
+			{
+				$img_alignment_position = 'left:'.$img_position_left.'%;';
+				$img_alignment_position .= 'transform: translate(-'.$img_position_left.'%,'.$img_separator_gutter_value.'%);';
+				$img_alignment_position .= '-ms-transform: translate(-'.$img_position_left.'%,'.$img_separator_gutter_value.'%);';
+				$img_alignment_position .= '-webkit-transform: translate(-'.$img_position_left.'%,'.$img_separator_gutter_value.'%);';
+			}
+			else if($img_separator_alignment == 'ult-right-img' && $img_position_right != '' && ! wp_is_mobile() ){
+				$img_alignment_position = 'right:'.$img_position_right.'%;';
+				$img_alignment_position .= 'transform: translate('.$img_position_right.'%,'.$img_separator_gutter_value.'%);';
+				$img_alignment_position .= '-ms-transform: translate('.$img_position_right.'%,'.$img_separator_gutter_value.'%);';
+				$img_alignment_position .= '-webkit-transform: translate('.$img_position_right.'%,'.$img_separator_gutter_value.'%);';
+			}
+			else{
+				$img_alignment_position = '';
 			}
 
 			$animation_style .= 'opacity:0;';
@@ -225,12 +295,12 @@ if(!class_exists('Ultimate_Image_Separator'))
 			else
 				$animation_el_class .= 'ult-no-animation';
 
-			$output = '<div id="'.esc_attr($id).'" class="ult-easy-separator-wrapper ult-responsive '.esc_attr($img_separator_position).' '.esc_attr($wrapper_class).'" style="'.esc_attr($custom_position).'" data-vc-row="'.esc_attr($ultimate_custom_vc_row).'" '.$data_list.'>';
+			$output = '<div id="'.esc_attr($id).'" class="ult-easy-separator-wrapper ult-responsive '.esc_attr($img_separator_position).' '.esc_attr($wrapper_class).' '.esc_attr($img_alignment).'" style="'.esc_attr($custom_position).''.esc_attr($img_alignment_position).'" data-vc-row="'.esc_attr($ultimate_custom_vc_row).'" '.$data_list.'>';
 				$output .= '<div class="ult-easy-separator-inner-wrapper">';
 					$output .= '<div class="'.esc_attr($animation_el_class).'" style="'.esc_attr($animation_style).'"  '.$animation_data.' '.$opacity_start_effect_data.'>';
 						$output .= '<img class="ult-easy-separator-img" alt="'.esc_attr($alt).'" src="'.esc_url(apply_filters('ultimate_images', $img)).'" />';
 						if($url != '') {
-							$output .= '<a href="'.esc_attr($url).'" '.$target.' '. $link_title .' '. $rel .'></a>';
+							$output .= '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
 						}
 					$output .= '</div>';
 				$output .= '</div>';

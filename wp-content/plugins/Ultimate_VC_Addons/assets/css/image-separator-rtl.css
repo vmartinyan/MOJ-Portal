@@ -21,6 +21,20 @@
     -ms-transform: translate(50%, 50%);
     transform: translate(50%, 50%)
 }
+.ult-easy-separator-wrapper.ult-left-img {
+    right: 0%;
+    left: auto;
+    -webkit-transform: translate(0%, 50%);
+    -ms-transform: translate(0%, 50%);
+    transform: translate(0%, 50%);
+}
+.ult-easy-separator-wrapper.ult-right-img {
+    left: 0%;
+    right: auto;
+    -webkit-transform: translate(0%, 50%);
+    -ms-transform: translate(0%, 50%);
+    transform: translate(0%, 50%);
+}
 .ult-easy-separator-wrapper .ult-easy-separator-img {
     -webkit-box-shadow: none;
     box-shadow: none;

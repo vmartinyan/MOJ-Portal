@@ -22,7 +22,7 @@
     border-right: 1px solid #d0d0d0;
     z-index: -1
 }
-.timeline-line o {
+.timeline-line span:first-child {
     content: "";
     width: 10px;
     height: 10px;
@@ -32,7 +32,7 @@
     position: absolute;
     left: -4px
 }
-.timeline-line z {
+.timeline-line span:last-child {
     content: "";
     width: 10px;
     height: 10px;
@@ -90,6 +90,13 @@
 .jstime .timeline-block.timeline-post-right {
     margin-left: 40px !important
 }
+.timeline-wrapper .timeline-block.timeline-post-right:not(:first-child) {
+    margin-top: 20px;
+}
+.timeline-wrapper .timeline-block.timeline-post-right:last-child {
+    margin-top: 20px;
+}
+
 .wpb_column .wpb_wrapper .smile-icon-timeline-wrap .timeline-wrapper .timeline-block {
     margin-bottom: 20px
 }

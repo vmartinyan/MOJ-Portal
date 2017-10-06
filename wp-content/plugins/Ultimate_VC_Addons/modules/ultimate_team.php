@@ -139,10 +139,11 @@ if(!class_exists("Ultimate_Team")){
 			$title_box_style .= trim( $title_box_padding ) != '' ? $title_box_padding : '' ;
 
 			$href                      = vc_build_link( $staff_link );
+
 			$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr(trim( $href['target'] )) : '';
-			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 
 			$font_args                     = array();
 			$team_member_name_font_styling = '';
@@ -285,8 +286,15 @@ if(!class_exists("Ultimate_Team")){
 				$team_member_desc_responsive = get_ultimate_vc_responsive_media_css($team_desc_args);
 
 				echo '<div class="ult-team-member-wrap ult-style-3 '. esc_attr($custom_team_class) .' '. esc_attr($team_css) .'">';
-				if ( $link_switch == 'on' ) {
-			        echo '<a href="'. esc_url($url) .'" target="'. esc_attr($target)  .'" '. $link_title .' '. $rel .' >';
+				if ( $link_switch == 'on' && $staff_link != '' ) {
+					$href = vc_build_link($staff_link);
+
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$title 			= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+			        echo '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $title, $rel ).'>';
 			    }
 					echo '<div class="ult-team-member-image ' . esc_attr($id) . '" style="'. esc_attr( $team_image_style ).'; background-color:' . esc_attr($team_img_bg_color). '" data-hover_opacity="' . esc_attr($team_img_hover_opacity_style3) . '" > <img class="'. esc_attr($team_img_grayscale_cls). '" src="' .esc_url(apply_filters('ultimate_images', $img ))  . '" alt="'.esc_attr($alt).'" >';
 					echo '<span class="ult-team-member-image-overlay ' . esc_attr( $img_hver_class ) . '" ' . $img_hver_data . ' ></span>';
@@ -296,18 +304,25 @@ if(!class_exists("Ultimate_Team")){
 
 			    echo '</div>';//ult-team-member-image
 
-				if ( $link_switch == 'on' ) {
+				if ( $link_switch == 'on' && $staff_link != '' ) {
 			        echo '</a>';
 			    }
 
 			    echo '<div class="ult-team-member-bio-wrap ' . esc_attr($team_member_style) . ' ' . esc_attr($id) . '" style="text-align:' . esc_attr($team_member_align_style) . ';' . esc_attr($title_box_style) . '; ">';
 
 			    echo '<div class="ult-team-member-name-wrap">';
-			    if ( $link_switch == 'on' ) {
-			        echo '<a href="'. esc_url($url) .'" target="'. esc_attr($target)  .'" style="text-decoration: none;" '. $link_title .' '. $rel .' >';
+			    if ( $link_switch == 'on' && $staff_link != '' ) {
+			    	$href = vc_build_link($staff_link);
+
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$title 		 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+			        echo '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $title, $rel ).' style="text-decoration: none;" >';
 			    }
 			    echo '<'. $team_member_name_tag .' class="ult-team-member-name ult-responsive" ' . $team_member_name_responsive .' style="' . esc_attr($team_member_name_font_styling) . '">' . $name . '</'. $team_member_name_tag .'>';
-			    if ( $link_switch == 'on' ) {
+			    if ( $link_switch == 'on' && $staff_link != '' ) {
 			        echo '</a>';
 			    }
 			    if ( $pos_in_org ) {
@@ -343,7 +358,7 @@ if(!class_exists("Ultimate_Team")){
 			                    $social_icon_color = ( isset( $social_link->social_icon_color ) && $social_link->social_icon_color !== '' ) ? $social_link->social_icon_color : 'inherit';
 			                    $default_icon_color = ( $social_icon_color != 'inherit' ) ? 'color:'.$social_icon_color.';' : '';
 			                    $social_icon_hover_color = ( isset( $social_link->social_icon_hover_color ) && $social_link->social_icon_hover_color !== '' ) ? $social_link->social_icon_hover_color : 'inherit';
-			                    echo "<a href='" . esc_url($social_icon_url) . "' target='_blank' title='" . esc_attr($social_link_title) . "' class='ult-team ult-social-icon' style='" . esc_attr($icon_styling) . ";". esc_attr($default_icon_color) ."'  data-iconcolor='" . esc_attr($social_icon_color) . "' data-iconhover='" . esc_attr($social_icon_hover_color) . "' ><i class='". esc_attr($social_link->selected_team_icon)  ."'></i></a>";
+			                    echo "<a href='" . esc_url($social_icon_url) . "' target='_blank' rel='noopener' title='" . esc_attr($social_link_title) . "' class='ult-team ult-social-icon' style='" . esc_attr($icon_styling) . ";". esc_attr($default_icon_color) ."'  data-iconcolor='" . esc_attr($social_icon_color) . "' data-iconhover='" . esc_attr($social_icon_hover_color) . "' ><i class='". esc_attr($social_link->selected_team_icon)  ."'></i></a>";
 			                }
 			            }
 
@@ -356,8 +371,15 @@ if(!class_exists("Ultimate_Team")){
 			}
 			elseif ( $team_member_style == 'style-2' ) {
 				echo '<div class="ult-team-member-wrap ult-style-2 '. $custom_team_class .' '. $team_css .'" data-responsive_width="'. $team_responsive_width .'" style="background-color:' . $team_img_bg_color. '">';
-				if ( $link_switch == 'on' ) {
-			        echo '<a href="'. esc_url($url) .'" target="'. esc_attr($target)  .'" style="text-decoration: none;" '. $link_title .' '. $rel .' >';
+				if ( $link_switch == 'on' && $staff_link != '' ) {
+					$href = vc_build_link($staff_link);
+
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$title 		 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+			        echo '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $title, $rel ).' style="text-decoration: none;" >';
 			    }
 				echo '<div class="ult-team-member-image" style="'. esc_attr( $team_image_style ).'" data-opacity="' . esc_attr($team_img_opacity) . '" data-hover_opacity="' . esc_attr($team_img_hover_opacity) . '" > <img src="' . esc_url(apply_filters('ultimate_images', $img )) . '" alt="'.esc_attr($alt).'"  style="opacity:'. esc_attr($team_img_opacity) .'">';
 				echo '</div>';//ult-team-member-image
@@ -405,7 +427,7 @@ if(!class_exists("Ultimate_Team")){
 			                    $social_icon_color = ( isset( $social_link->social_icon_color ) && $social_link->social_icon_color !== '' ) ? $social_link->social_icon_color : 'inherit';
 			                    $default_icon_color = ( $social_icon_color != 'inherit' ) ? 'color:'.$social_icon_color.';' : '';
 			                    $social_icon_hover_color = ( isset( $social_link->social_icon_hover_color ) && $social_link->social_icon_hover_color !== '' ) ? $social_link->social_icon_hover_color : 'inherit';
-			                    echo "<a href='" . esc_url($social_icon_url) . "' target='_blank' title='" . esc_attr($social_link_title) . "' class='ult-team ult-social-icon' style='" . esc_attr($icon_styling) . "; ". esc_attr($default_icon_color) ."'  data-iconcolor='" . esc_attr($social_icon_color) . "' data-iconhover='" . esc_attr($social_icon_hover_color) . "' ><i class='". esc_attr($social_link->selected_team_icon) ."'></i></a>";
+			                    echo "<a href='" . esc_url($social_icon_url) . "' target='_blank' rel='noopener' title='" . esc_attr($social_link_title) . "' class='ult-team ult-social-icon' style='" . esc_attr($icon_styling) . "; ". esc_attr($default_icon_color) ."'  data-iconcolor='" . esc_attr($social_icon_color) . "' data-iconhover='" . esc_attr($social_icon_hover_color) . "' ><i class='". esc_attr($social_link->selected_team_icon) ."'></i></a>";
 			                }
 			            }
 
@@ -415,7 +437,7 @@ if(!class_exists("Ultimate_Team")){
 			    echo '</div>'; //Description Slide
 
 				echo '</div>'; //ult-team-member-bio-wrap
-				if ( $link_switch == 'on' ) {
+				if ( $link_switch == 'on' && $staff_link != '' ) {
 			        echo '</a>';
 			    }
 				echo '</div>'; //ult-team-member-wrap
@@ -424,24 +446,39 @@ if(!class_exists("Ultimate_Team")){
 
 
 				echo '<div class="ult-team-member-wrap ult-style-1 '. esc_attr($custom_team_class) .' '. esc_attr($team_css) .'">';
-				if ( $link_switch == 'on' ) {
-			        echo '<a href="'. esc_url($url) .'" target="'. esc_attr($target)  .'" '. $link_title .' '. $rel .' >';
+				if ( $link_switch == 'on' && $staff_link != '' ) {
+					$href = vc_build_link($staff_link);
+
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$title 		 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+			        echo '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $title, $rel ).'>';
 			    }
 					echo '<div class="ult-team-member-image" style="'. esc_attr( $team_image_style ).'"> <img class="'. esc_attr($team_img_grayscale_cls). '" src="' . esc_url(apply_filters('ultimate_images', $img )) . '" alt="'.esc_attr($alt).'"  style="">';
 					echo '<span class="ult-team-member-image-overlay ' . esc_attr( $img_hver_class ) . '" ' . $img_hver_data . ' ></span>';
 					echo '</div>';//ult-team-member-image
-				if ( $link_switch == 'on' ) {
+				if ( $link_switch == 'on' && $staff_link != '' ) {
 			        echo '</a>';
 			    }
 
 			    echo '<div class="ult-team-member-bio-wrap ' . esc_attr($team_member_style) . ' ' . esc_attr($id) . '" style="text-align:' . esc_attr($team_member_align_style) . ';' . esc_attr($title_box_style) . '; ">';
 
 			    echo '<div class="ult-team-member-name-wrap">';
-			    if ( $link_switch == 'on' ) {
-			        echo '<a href="'. esc_url($url) .'" target="'. esc_attr($target)  .'" style="text-decoration: none;" '. $link_title .' '. $rel .' >';
+			    if ( $link_switch == 'on' && $staff_link != '' ) {
+			    	$href = vc_build_link($staff_link);
+
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$title 		 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+			        echo '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $title, $rel ).' style="text-decoration: none;">';
+			 
 			    }
 			    	echo '<'. $team_member_name_tag .' class="ult-team-member-name ult-responsive" ' . $team_member_name_responsive .' style="' . esc_attr($team_member_name_font_styling) . '">' . $name . '</'. $team_member_name_tag .'>';
-			    if ( $link_switch == 'on' ) {
+			    if ( $link_switch == 'on' && $staff_link != '' ) {
 			        echo '</a>';
 			    }
 			    if ( $pos_in_org ) {
@@ -481,7 +518,7 @@ if(!class_exists("Ultimate_Team")){
 			                    $social_icon_color = ( isset( $social_link->social_icon_color ) && $social_link->social_icon_color !== '' ) ? $social_link->social_icon_color : 'inherit';
 			                    $default_icon_color = ( $social_icon_color != 'inherit' ) ? 'color:'.$social_icon_color.';' : '';
 			                    $social_icon_hover_color = ( isset( $social_link->social_icon_hover_color ) && $social_link->social_icon_hover_color !== '' ) ? $social_link->social_icon_hover_color : 'inherit';
-			                    echo "<a href='" . esc_url($social_icon_url) . "' target='_blank' title='" . esc_attr($social_link_title) . "' class='ult-team ult-social-icon' style='" . esc_attr($icon_styling) . ";". esc_attr($default_icon_color) ."'  data-iconcolor='" . esc_attr($social_icon_color) . "' data-iconhover='" . esc_attr($social_icon_hover_color) . "' ><i class='". esc_attr($social_link->selected_team_icon)  ."'></i></a>";
+			                    echo "<a href='" . esc_url($social_icon_url) . "' target='_blank' rel='noopener' title='" . esc_attr($social_link_title) . "' class='ult-team ult-social-icon' style='" . esc_attr($icon_styling) . ";". esc_attr($default_icon_color) ."'  data-iconcolor='" . esc_attr($social_icon_color) . "' data-iconhover='" . esc_attr($social_icon_hover_color) . "' ><i class='". esc_attr($social_link->selected_team_icon)  ."'></i></a>";
 			                }
 			            }
 

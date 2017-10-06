@@ -216,6 +216,7 @@
 					<?php
 					lsOptionRow('checkbox', $sDefs['playByScroll'], $sProps );
 					lsOptionRow('checkbox', $sDefs['playByScrollStart'], $sProps );
+					lsOptionRow('checkbox', $sDefs['playByScrollSkipSlideBreaks'], $sProps );
 					lsOptionRow('input', $sDefs['playByScrollSpeed'], $sProps );
 					?>
 					<tr><th colspan="3"><?php _e('Cycles', 'LayerSlider') ?></th></tr>

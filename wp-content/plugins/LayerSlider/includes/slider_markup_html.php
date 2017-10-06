@@ -206,10 +206,17 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 						case 'img':
 							$layer['props']['type'] = 'img';
 							break;
+
+						case 'button':
+						case 'icon':
+							$layer['props']['type'] = 'span';
+							break;
+
 						case 'html':
 						case 'media':
 							$layer['props']['type'] = 'div';
 							break;
+
 						case 'post':
 							$layer['props']['type'] = 'div';
 							break;

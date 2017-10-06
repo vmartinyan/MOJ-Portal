@@ -71,7 +71,7 @@ if(!class_exists("Ultimate_Google_Maps")){
 							"param_name" => "lat",
 							"admin_label" => true,
 							"value" => "18.591212",
-							"description" => '<a href="http://universimmedia.pagesperso-orange.fr/geo/loc.htm" target="_blank">'.__('Here is a tool','ultimate_vc').'</a> '.__('where you can find Latitude & Longitude of your location', 'ultimate_vc'),
+							"description" => '<a href="http://universimmedia.pagesperso-orange.fr/geo/loc.htm" target="_blank" rel="noopener">'.__('Here is a tool','ultimate_vc').'</a> '.__('where you can find Latitude & Longitude of your location', 'ultimate_vc'),
 							"group" => "General Settings"
 						),
 						array(
@@ -81,7 +81,7 @@ if(!class_exists("Ultimate_Google_Maps")){
 							"param_name" => "lng",
 							"admin_label" => true,
 							"value" => "73.741261",
-							"description" => '<a href="http://universimmedia.pagesperso-orange.fr/geo/loc.htm" target="_blank">'.__('Here is a tool','ultimate_vc').'</a> '.__('where you can find Latitude & Longitude of your location', "ultimate_vc"),
+							"description" => '<a href="http://universimmedia.pagesperso-orange.fr/geo/loc.htm" target="_blank" rel="noopener">'.__('Here is a tool','ultimate_vc').'</a> '.__('where you can find Latitude & Longitude of your location', "ultimate_vc"),
 							"group" => "General Settings"
 						),
 						array(
@@ -241,7 +241,7 @@ if(!class_exists("Ultimate_Google_Maps")){
 							"heading" => __("Google Styled Map JSON","ultimate_vc"),
 							"param_name" => "map_style",
 							"value" => "",
-							"description" => "<a target='_blank' href='http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html'>".__("Click here","ultimate_vc")."</a> ".__("to get the style JSON code for styling your map.","ultimate_vc"),
+							"description" => "<a target='_blank' rel='noopener' href='http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html'>".__("Click here","ultimate_vc")."</a> ".__("to get the style JSON code for styling your map.","ultimate_vc"),
 							"group" => "Styling",
 						),
 						array(
@@ -253,7 +253,7 @@ if(!class_exists("Ultimate_Google_Maps")){
 						),
 						array(
 							"type" => "ult_param_heading",
-							"text" => "<span style='display: block;'><a href='http://bsf.io/f57sh' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+							"text" => "<span style='display: block;'><a href='http://bsf.io/f57sh' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 							"param_name" => "notification",
 							'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 							"group" => "General Settings"

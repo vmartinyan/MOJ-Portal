@@ -75,7 +75,7 @@ class youtube_admin_menu{
 			"youtube_embed_show_progress_bar_color" => "red",
 			"youtube_embed_autohide_parameters"  	=> "1",
 			"youtube_embed_set_initial_volume" => "",
-				"youtube_embed_initial_volume" 		=> "90",
+				"youtube_embed_initial_volume" 		=> "100",
 			"youtube_embed_disable_keyboard"  	=>"0"
 		);
 	foreach($initial_values as $key => $value){

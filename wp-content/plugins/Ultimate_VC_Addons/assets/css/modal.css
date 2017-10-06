@@ -20,7 +20,9 @@ div.ult-overlay-close {
     font-size: 14px;
     line-height: 1.5;
     -webkit-border-radius: 3px;
-    border-radius: 3px
+    border-radius: 3px;
+    -webkit-transition: all 0.5s;
+    transition:all 0.5s;
 }
 .btn-modal-lg {
     padding: 10px 16px;
@@ -122,15 +124,39 @@ span.ult-align-right {
     width: 80px;
     height: 80px;
     position: fixed;
-    right: 35px;
-    top: 35px;
     overflow: hidden;
     border: 0;
-    background: url('../img/cross.png') no-repeat center center;
     text-indent: 200%;
     color: transparent;
     outline: 0;
     z-index: 9999
+}
+.ult-overlay-close-inside {
+    width: 100%;
+    height: 100%;
+    background: url('../img/cross.png') no-repeat center center;
+}
+.ult-overlay-close.top-right {
+    right: 35px;
+    top: 35px;
+}
+.ult-overlay-close.top-left {
+    left: 35px;
+    top: 35px;
+}
+.ult-overlay-close.popup-top-right {
+    left: 100%;
+    bottom: 100%;
+}
+.ult-overlay-close.popup-top-left {
+    bottom: 100%;
+    right: 100%;
+}
+.ult-overlay-close.popup-edge-top-right {
+    left: auto;
+}
+.ult-overlay-close.popup-edge-top-left {
+    right: auto;
 }
 .ult-overlay .ult-overlay-close:active {
     -webkit-box-shadow: none !important;

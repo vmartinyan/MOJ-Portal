@@ -108,3 +108,18 @@ button{
 	font-weight: bold;
 	padding-left: 21px;
 }
+
+/*For Support link*/
+
+.wp_support {
+	display: inline-block;
+	float: right;
+	background: #fff url(../images/support.png) no-repeat 7px center;
+	padding: 8px 20px 9px 45px;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 2px;
+	border: 1px solid #d4d4d4;
+	position: relative;
+	bottom: 5px;
+}  

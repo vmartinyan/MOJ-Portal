@@ -262,11 +262,11 @@
 
 			  if($block_link !=''){
 				$href 		= 	vc_build_link($block_link);
-				  			  
-			  	$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '#';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+
+				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 			  }
 
 			$item_id = 'ult-ih-list-item-'. rand(1000,9999);
@@ -296,7 +296,7 @@
 
 			$itemOutput			.=	'<li id="'.esc_attr($item_id).'" class="ult-ih-list-item" style="' .esc_attr($HeightWidth). ' ' .esc_attr($GutterMargin). '">';
 			if($block_click!='') {
-				$itemOutput 	.= 	'<a class="ult-ih-link" href="' .esc_attr($url). '" ' .$target. ' ' .$link_title. ' '. $rel .' ><div style="' .esc_attr($HeightWidth). '" class="ult-ih-item ult-ih-' .esc_attr($effect). ' ' .esc_attr($LeftRight).' ' .esc_attr($Direction). ' ' .esc_attr($Scale). ' ' .esc_attr($TopBottom). '">';
+				$itemOutput 	.= 	'<a class="ult-ih-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' ><div style="' .esc_attr($HeightWidth). '" class="ult-ih-item ult-ih-' .esc_attr($effect). ' ' .esc_attr($LeftRight).' ' .esc_attr($Direction). ' ' .esc_attr($Scale). ' ' .esc_attr($TopBottom). '">';
 			} else {
 				$itemOutput 	.= 	'<div style="' .esc_attr($HeightWidth). '" class="ult-ih-item ult-ih-' .esc_attr($effect). ' ' .esc_attr($LeftRight).' ' .esc_attr($Direction). ' ' .esc_attr($Scale). ' ' .esc_attr($TopBottom).' ">';
 			  }

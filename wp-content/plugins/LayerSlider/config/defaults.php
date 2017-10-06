@@ -34,14 +34,14 @@ $lsDefaults = array(
 			'desc' => __('<ul>
 	<li>Scheduled sliders will only be visible to your visitors between the time period you set here.</li>
 	<li>We’re using international date and time format to avoid ambiguity.</li>
-	<li>You can also use relative formats described <a href=\"http://php.net/manual/en/datetime.formats.relative.php\" target=\"_blank\">here</a>. For example: <br> <i>tomorrow noon</i>, <i>monday 9am</i> or <i>+1 month</i></li>
+	<li>You can also use relative formats described <a href="http://php.net/manual/en/datetime.formats.relative.php" target="_blank">here</a>. For example: <br> <i>tomorrow noon</i>, <i>monday 9am</i> or <i>+1 month</i></li>
 	<li>Clear the text field above and left it empty if you want to cancel the schedule.</li>
 </ul>
 
 <span>IMPORTANT:</span>
 <ul>
 	<li>You will still need to set the slider status as published,</li>
-	<li>and insert the slider to the target page with one of the methods described in the <a href=\"https://support.kreaturamedia.com/docs/layersliderwp/documentation.html#publish-shortcode\" target=\"_blank\">documentation</a>.</li>
+	<li>and insert the slider to the target page with one of the methods described in the <a href="https://support.kreaturamedia.com/docs/layersliderwp/documentation.html#publish-shortcode" target="_blank">documentation</a>.</li>
 </ul>', 'LayerSlider'),
 			'attrs' => array(
 				'placeholder' => __('No schedule', 'LayerSlider')
@@ -477,6 +477,14 @@ $lsDefaults = array(
 			'premium' => true
 		),
 
+		'playByScrollSkipSlideBreaks' => array(
+			'value' => false,
+			'name' => __('Skip Slide Breaks', 'LayerSlider'),
+			'keys' => 'playByScrollSkipSlideBreaks',
+			'desc' => __('Enable this option to eliminate the stop between slide changes. Visitors would no longer need to scroll at the end of slides, instead the slider will only stop at the keyframes you specify.', 'LayerSlider'),
+			'premium' => true
+		),
+
 		// Number of loops taking by the slideshow.
 		// Depends on: shuffle. Defaults to: 0 => infinite
 		'loops' => array(
@@ -539,7 +547,10 @@ $lsDefaults = array(
 			'value' => 'v6',
 			'name' => __('Skin', 'LayerSlider'),
 			'keys' => 'skin',
-			'desc' => __('The skin used for this slider. The “noskin” skin is a border- and buttonless skin. Your custom skins will appear in the list when you create their folders.', 'LayerSlider')
+			'desc' => __('The skin used for this slider. The “noskin” skin is a border- and buttonless skin. Your custom skins will appear in the list when you create their folders.', 'LayerSlider'),
+			'props' => array(
+				'output' => true
+			)
 		),
 
 
@@ -639,7 +650,7 @@ $lsDefaults = array(
 
 		// Global background image size
 		'globalBGSize' => array(
-			'value' => 'cover',
+			'value' => 'auto',
 			'name' => __('Background size', 'LayerSlider'),
 			'keys' => 'globalBGSize',
 			'desc' => __('Global background size of the slider. You can set the size in pixels, percentages, or constants: auto | cover | contain ', 'LayerSlider'),

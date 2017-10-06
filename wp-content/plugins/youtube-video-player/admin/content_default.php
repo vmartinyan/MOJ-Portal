@@ -38,7 +38,7 @@ class youtube_embed_content_default{
 			"youtube_embed_show_progress_bar_color" => "red",
 			"youtube_embed_autohide_parameters"  	=> "1",
 			"youtube_embed_set_initial_volume" => "",
-				"youtube_embed_initial_volume" 		=> "90",
+				"youtube_embed_initial_volume" 		=> "100",
 			"youtube_embed_disable_keyboard"  	=>"0"
 		);
 	$kk=1;	
@@ -87,7 +87,7 @@ class youtube_embed_content_default{
 		"youtube_embed_show_progress_bar_color" => "red",
 		"youtube_embed_autohide_parameters"  	=> "1",
 		"youtube_embed_set_initial_volume" => "",
-			"youtube_embed_initial_volume" 		=> "90",
+			"youtube_embed_initial_volume" 		=> "100",
 		"youtube_embed_disable_keyboard"  	=>"0"
 		);
 	foreach($initial_values as $key => $value){
@@ -103,7 +103,7 @@ class youtube_embed_content_default{
 			<?php echo $youtube_embed_show_popup?'':'display:none;'; ?>
 		}
         </style>
-        <h2>YouTube Embed Pages/posts default settings</h2>	
+        <h2 style="width:640px">YouTube Embed Pages/posts default settings <a target="blank" href="<?php echo wpdevart_youtube_support_url; ?>" class="wp_support">Support</a></h2>	
         <div class="main_yutube_plus_params">	
         <table class="wp-list-table widefat fixed posts youtube_settings_table" style="width: 640px; min-width:320px !important;table-layout: fixed;">
             <thead>

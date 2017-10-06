@@ -484,7 +484,7 @@ a.ulimate-info-list-link {
     cursor: inherit
 }
 .ult-animation * {
-	-webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 .ult-animation.ult-animate-viewport {
     -webkit-transition: opacity 900ms linear;

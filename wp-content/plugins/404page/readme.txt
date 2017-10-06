@@ -1,10 +1,10 @@
 === 404page - your smart custom 404 error page ===
-Contributors: petersplugins, smartware.cc
+Contributors: petersplugins
 Donate link: http://petersplugins.com/make-a-donation/
 Tags: page, 404, error, error page, 404 page, page not found, page not found error, 404 error page, missing, broken link, template, 404 link, seo, custom 404, custom 404 page, custom 404 error, custom 404 error page, customize 404, customize 404 page, customize 404 error page
 Requires at least: 3.0
 Tested up to: 4.8
-Stable tag: 3.1
+Stable tag: 3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,56 +12,26 @@ Custom 404 the easy way! Set any page as custom 404 error page. No coding needed
 
 == Description ==
 
-This Plugin allows you to create your custom 404 page just like any other page using the WordPress Page Editor.
+<strong>The 404page plugin is the most used plugin to create a customized 404 error page in WordPress.</strong>
+
+It allows you to easily create your own 404 error page without any effort and it works with almost every theme.
+
+<blockquote>
+If you like this plugin please do me favor and leave a review here on wordpress.org so that other people know it is helpful for you. Thanks!
+</blockquote>
+
+[youtube https://youtu.be/HygoFMwdIuY]
 
 = Usage =
 
-Create your custom 404 page just like any other page. Then go to 'Appearance' -> '404 Error Page' and select the created page as your custom 404 error page. That's it!
-
-= Why you should choose this plugin =
+Create your custom 404 error page just like any other page using the WordPress Page Editor. Then go to 'Appearance' -> '404 Error Page' and select the created page as your custom 404 error page. That's it!
 
 * Different from other similar plugins the 404page plugin **does not create redirects**. That’s **quite important** because a correct code 404 is delivered which tells search engines that the page does not exist and has to be removed from the index. A redirect would result in a HTTP code 301 or 302 and the URL would remain in the search index.
 * Different from other similar plugins the 404page plugin **does not create additional server requests**. 
 
-= Watch the video (outdated version, new version will be created as soon as possible) =
+= Docs & Support =
 
-https://www.youtube.com/watch?v=VTL07Lf0IsY
-
-= Need more information? =
-
-See [Plugin Homepage](http://petersplugins.com/free-wordpress-plugins/404page/) and [Plugin Doc](http://petersplugins.com/docs/404page/).
-
-== Screenshots ==
-
-1. Create your costom 404 Error Page as a normal WordPress Page
-2. Set the created Page as 404 Error Page
-3. Advanced Settings
-4. Advanced Settings with WPML plugin installed (Compatibility Mode is not available, because the 404page plugin automatically switches to WMPL mode)
-
-= Do you like the 404page Plugin? =
-
-Thanks, I appreciate that. You don’t need to make a donation. No money, no beer, no coffee. Please, just [tell the world that you like what I’m doing](http://petersplugins.com/make-a-donation/)! And that’s all.
-
-= More plugins from Peter =
-
-* **[hashtagger](https://wordpress.org/plugins/hashtagger/)** - Use hashtags in WordPress
-* **[smart Archive Page Remove](https://wordpress.org/plugins/smart-archive-page-remove/)** - Completely remove unwated Archive Pages from your Blog 
-* **[smart User Slug Hider](https://wordpress.org/plugins/smart-user-slug-hider/)** - Hide usernames in author pages URLs to enhance security 
-* [See all](https://profiles.wordpress.org/petersplugins/#content-plugins)
-
-== Frequently Asked Questions ==
-
-= Are there any requirements? =
-
-To enable the WordPress 404 error handling you have to set the Permalink Structure ('Settings' -> 'Permalinks') to anything else but 'Default'. Otherwise 404 errors are handled by the webserver and not by WordPress.
-
-= Are 404 errors redirected? =
-
-No, there is no redirection! The chosen page is delivered as a 'real' 404 error page. This results in a HTTP 404 code and not in 301 or 302, which is important for Search Engines to tell them, that the page does not exist and should be deleted from the index.
-
-= Is it possible to add custom CSS to the 404 page? =
-
-The 404page plugin adds a CSS class `error404` to the `<body>` tag which can be used for extra styling.
+More detailed information about the 404page plugin can be found in the [Plugin Manual](http://petersplugins.com/docs/404page/). For support check the [Support Forum](https://wordpress.org/support/plugin/404page).
 
 == Compatibility ==
 
@@ -115,7 +85,38 @@ The plugin adds an action hook 404page_after_404 which you can use to add extra 
 = Native Support =
 If you are a theme developer you can add native support for the 404page plugin to your theme for full control. [Read more](http://petersplugins.com/docs/404page/#theme_native_support).
 
+= More plugins from Peter =
+
+* **[hashtagger](https://wordpress.org/plugins/hashtagger/)** - Use hashtags in WordPress
+* **[smart Archive Page Remove](https://wordpress.org/plugins/smart-archive-page-remove/)** - Completely remove unwated Archive Pages from your Blog 
+* **[smart User Slug Hider](https://wordpress.org/plugins/smart-user-slug-hider/)** - Hide usernames in author pages URLs to enhance security 
+* [See all](https://profiles.wordpress.org/petersplugins/#content-plugins)
+
+== Screenshots ==
+
+1. Create your costom 404 Error Page as a normal WordPress Page
+2. Set the created Page as 404 Error Page
+3. Advanced Settings
+4. Advanced Settings with WPML plugin installed (Compatibility Mode is not available, because the 404page plugin automatically switches to WMPL mode)
+
+== Frequently Asked Questions ==
+
+= Are there any requirements? =
+
+To enable the WordPress 404 error handling you have to set the Permalink Structure ('Settings' -> 'Permalinks') to anything else but 'Default'. Otherwise 404 errors are handled by the webserver and not by WordPress.
+
+= Are 404 errors redirected? =
+
+No, there is no redirection! The chosen page is delivered as a 'real' 404 error page. This results in a HTTP 404 code and not in 301 or 302, which is important for Search Engines to tell them, that the page does not exist and should be deleted from the index.
+
+= Is it possible to add custom CSS to the 404 page? =
+
+The 404page plugin adds a CSS class `error404` to the `<body>` tag which can be used for extra styling.
+
 == Changelog ==
+
+= 3.2 (2017-10-05) =
+* new feature to send an HTTP 410 error for deleted objects
 
 = 3.1 (2017-07-24) =
 * bugfix for Polylang ([See Topic](https://wordpress.org/support/topic/3-0-breaks-polylang-support/))
@@ -197,6 +198,9 @@ If you are a theme developer you can add native support for the 404page plugin t
 * Initial Release
 
 == Upgrade Notice ==
+
+= 3.2 =
+new feature to send an HTTP 410 error for deleted objects
 
 = 3.1 =
 fixed two bugs, plus further enhancements

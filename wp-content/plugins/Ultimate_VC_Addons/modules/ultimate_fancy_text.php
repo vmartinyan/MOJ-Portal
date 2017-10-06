@@ -224,7 +224,7 @@ if(!class_exists('Ultimate_FancyText')){
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "strings_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"group" => "Typography"
 							),
 							array(
@@ -312,7 +312,7 @@ if(!class_exists('Ultimate_FancyText')){
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "prefsuf_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"group" => "Typography"
 							),
 							array(
@@ -397,7 +397,7 @@ if(!class_exists('Ultimate_FancyText')){
 							),
 							array(
 								"type" => "ult_param_heading",
-								"text" => "<span style='display: block;'><a href='http://bsf.io/t5ir4' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+								"text" => "<span style='display: block;'><a href='http://bsf.io/t5ir4' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 								"param_name" => "notification",
 								'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 							),
@@ -616,41 +616,49 @@ if(!class_exists('Ultimate_FancyText')){
 					$output .= '<script type="text/javascript">
 						jQuery(function($){
 							$(document).ready(function(){
-								$("#vticker-'.esc_attr( $id ).'").find("li").css("opacity","1");
-								
-								$("#vticker-'.esc_attr( $id ).'").easyTicker({
-									direction: "up",
-									easing: "swing",
-									speed: '. esc_attr($strings_tickerspeed) .',
-									interval: '. esc_attr($ticker_wait_time) .',
-									height: "auto",
-									visible: '. esc_attr($ticker_show_items) .',
-									mousePause: '. esc_attr($ticker_hover_pause) .',
-									controls: {
-										up: "",
-										down: "",
-										toggle: "",
-										playText: "Play",
-										stopText: "Stop"
-									}
-								});
+								if( typeof jQuery("#vticker-'.esc_attr( $id ).'").easyTicker == "function"){
+									$("#vticker-'.esc_attr( $id ).'").find("li").css("opacity","1");
+									
+									$("#vticker-'.esc_attr( $id ).'").easyTicker({
+										direction: "up",
+										easing: "swing",
+										speed: '. esc_attr($strings_tickerspeed) .',
+										interval: '. esc_attr($ticker_wait_time) .',
+										height: "auto",
+										visible: '. esc_attr($ticker_show_items) .',
+										mousePause: '. esc_attr($ticker_hover_pause) .',
+										controls: {
+											up: "",
+											down: "",
+											toggle: "",
+											playText: "Play",
+											stopText: "Stop"
+										}
+									});
+								}
 							});
 						});
 					</script>';
 				}
 				else
 				{
-					$output .= '<script type="text/javascript"> jQuery(function($){ $("#typed-'.esc_attr($id).'").typed({
-								strings: '.$strings.',
-								typeSpeed: '.esc_attr($strings_textspeed).',
-								backSpeed: '.esc_attr($strings_backspeed).',
-								startDelay: '.esc_attr($strings_startdelay).',
-								backDelay: '.esc_attr($strings_backdelay).',
-								loop: '.esc_attr($typewriter_loop).',
-								loopCount: false,
-								showCursor: '.esc_attr($typewriter_cursor).',
-								cursorChar: "'.esc_attr($typewriter_cursor_text).'",
-								attr: null
+					$output .= '<script type="text/javascript"> 
+						jQuery(function($){ 
+							$(document).ready(function(){
+								if( typeof jQuery("#typed-'.esc_attr($id).'").typed == "function"){
+									$("#typed-'.esc_attr($id).'").typed({
+										strings: '.$strings.',
+										typeSpeed: '.esc_attr($strings_textspeed).',
+										backSpeed: '.esc_attr($strings_backspeed).',
+										startDelay: '.esc_attr($strings_startdelay).',
+										backDelay: '.esc_attr($strings_backdelay).',
+										loop: '.esc_attr($typewriter_loop).',
+										loopCount: false,
+										showCursor: '.esc_attr($typewriter_cursor).',
+										cursorChar: "'.esc_attr($typewriter_cursor_text).'",
+										attr: null
+									});
+								}
 							});
 						});
 					</script>';

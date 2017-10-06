@@ -21,8 +21,8 @@
     border-radius: 5px;
     padding: 10px 15px 10px 10px
 }
-.info-c-full-br img,
-.info-c-semi-br img {
+.info-c-full-br .info-circle-img-icon,
+.info-c-semi-br .info-circle-img-icon {
     -webkit-box-shadow: none;
     box-shadow: none;
     max-width: 100%;
@@ -54,7 +54,11 @@
     position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.clipped-info-circle .info-c-full-br .info-c-full{
+    overflow: visible;
 }
 .info-circle-def {
     display: table;
@@ -293,65 +297,57 @@
 .info-circle-push {
     -webkit-animation-name: circle_push;
     animation-name: circle_push;
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 @-webkit-keyframes circle_push {
-    50% {
-        -webkit-transform: scale(0.8);
-        transform: scale(0.8)
+    0% {
+    opacity: 1;
     }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
+    50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
     }
 }
 @keyframes circle_push {
-    50% {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8)
+    0% {
+    opacity: 1;
     }
-    100% {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
+    50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
     }
 }
 .info-circle-pop {
     -webkit-animation-name: circle_pop;
     animation-name: circle_pop;
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 @-webkit-keyframes circle_pop {
-    50% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2)
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
     }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
+    50% {
+        opacity: 1;
     }
 }
 @keyframes circle_pop {
-    50% {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2)
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
     }
-    100% {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
+    50% {
+        opacity: 1;
     }
 }
 .smile_icon_list.ic-resp-img li.icon_list_item {

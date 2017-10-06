@@ -135,14 +135,15 @@ if(!class_exists('AIO_Info_list'))
 			if($info_list_link != '')
 			{
 				$href 			= vc_build_link($info_list_link);
+
 				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 
 				if($url != '')
 				{
-					$info_list_link_html = '<a href="'.esc_url($url).'" class="ulimate-info-list-link" '.$target.' '. $link_title .' '. $rel .'></a>';
+					$info_list_link_html = '<a class="ulimate-info-list-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
 				}
 				$is_link = true;
 			}
@@ -260,7 +261,7 @@ if(!class_exists('AIO_Info_list'))
 			{
 				$output .= '<h3 class="ult-responsive" '.$info_list_data_list.' style="'.esc_attr($title_style).'">';
 				if($is_link && $info_list_link_apply == 'title')
-					$output .= '<a href="'.esc_url($url).'" target="'.esc_attr($target).'">'.$list_title.'</a>';
+					$output .= '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>'.$list_title.'</a>';
 				else
 					$output .= $list_title;
 				$output .= '</h3>';
@@ -524,7 +525,7 @@ if(!class_exists('AIO_Info_list'))
 						),
 						array(
 							"type" => "ult_param_heading",
-							"text" => "<span style='display: block;'><a href='http://bsf.io/v9k0x' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+							"text" => "<span style='display: block;'><a href='http://bsf.io/v9k0x' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 							"param_name" => "notification",
 							'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 						),
@@ -576,7 +577,7 @@ if(!class_exists('AIO_Info_list'))
 							"heading" => __("Select List Icon ","ultimate_vc"),
 							"param_name" => "list_icon",
 							"value" => "",
-							"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+							"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 							"dependency" => Array("element" => "icon_type","value" => array("selector")),
 						),
 						array(

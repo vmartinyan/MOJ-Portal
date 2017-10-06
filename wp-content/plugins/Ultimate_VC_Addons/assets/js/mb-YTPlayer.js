@@ -1424,10 +1424,18 @@ var getYTPVideoID = function( url ) {
 
 							YTPlayer.player.seekTo( startAt, true );
 							if( !YTPlayer.isBackground ) {
-								YTPlayer.opt.containment.css( {
-									background: "rgba(0,0,0,0.5) url(" + YTPlayer.opt.backgroundUrl + ") center center",
-									backgroundSize: "cover"
-								} );
+								if( jQuery(document).find('.upb_video-bg.utube').data('poster').length > 0 ) {
+									var isBackgroundImage = jQuery(document).find('.upb_video-bg.utube').data('poster');
+									YTPlayer.opt.containment.css( {
+										background: "rgba(0,0,0,0.5) url(" + isBackgroundImage + ") center center",
+										backgroundSize: "cover"
+									} );
+								}else{
+									YTPlayer.opt.containment.css( {
+										background: "rgba(0,0,0,0.5) url(" + YTPlayer.opt.backgroundUrl + ") center center",
+										backgroundSize: "cover"
+									} );
+								}
 							}
 						} );
 

@@ -1,3 +1,29 @@
+3.16.18 - 20-September-2017
+Security Fix: A cross-site scripting (XSS) vulnerability was discovered in html links, WordPress core has patched it's vulnerability in 4.8.2 release and we've also fix it for Ultimate Addons for Visual Composer.
+
+3.16.17 - 13-September-2017
+- Improvement: Added modal Close icon design feature.
+- Improvement: Added modal popup close on ESC key.
+- Improvement: Added hover color option for button in Modal.
+- Improvement: Added modal hide feature on page load for mobile/tablet devices.
+- Improvement: Advance Tab navigation icon for accordion updated.
+- Fix: Need to change CSS for pan style in Info banner element.
+- Fix: Info circle responsive issue.
+
+3.16.16 - 29-August-2017
+- Improvement: Advanced Tab ID is now editable.
+- Improvement: Link markup condition for team element need improvement. 
+- Improvement: Added image alignment option for image in image separator.
+- Fix: Row separator tilt left right issue.
+- Fix: Info-Circle does not include image in description area.
+- Fix: Info-Circle animation not working properly.
+- Fix: Hosted video background height issue.
+- Fix: Video background placeholder images do not show up after video completes.
+- Fix: Timeline right side item spacing issue.
+- Fix: Timeline has html markup issue and point issue.
+- Fix: Scripts Loading issue in Carousel.
+- Fix: Scripts Loading issue in Fancy text.
+
 3.16.15 - 16-August-2017
 - Improvement: Added tag options for titles in Flipbox.
 - Improvement: iHover style addition.

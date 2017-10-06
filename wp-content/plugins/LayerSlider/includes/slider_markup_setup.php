@@ -84,8 +84,12 @@ if(isset($slides['layers']) && is_array($slides['layers'])) {
 
 				if( ! empty( $layer['styles'] ) ) {
 					$layerStyles = json_decode($layer['styles'], true);
-					if( $layerStyles === null) { $layerStyles = json_decode(stripslashes($layer['styles']), true);  }
-					$layer['styles'] = $layerStyles;
+
+					if( empty( $layerStyles ) ) {
+						$layerStyles = json_decode(stripslashes($layer['styles']), true);
+					}
+
+					$layer['styles'] = ! empty( $layerStyles ) ? $layerStyles : array();
 				}
 
 				if( ! empty( $layer['top'] ) ) {
@@ -94,6 +98,14 @@ if(isset($slides['layers']) && is_array($slides['layers'])) {
 
 				if( ! empty( $layer['left'] ) ) {
 					$layer['styles']['left']  = $layer['left'];
+				}
+
+
+				// Marker for Font Awesome
+				if( empty( $GLOBALS['lsLoadFontAwesome'] ) ) {
+					if( strpos( $layer['html'], 'fa fa-') !== false ) {
+						$GLOBALS['lsLoadFontAwesome'] = true;
+					}
 				}
 
 				// v6.5.6: Compatibility mode for media layers that used the

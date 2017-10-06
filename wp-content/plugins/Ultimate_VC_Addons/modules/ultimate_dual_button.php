@@ -176,10 +176,10 @@ $divider_style = $divider_text = $divider_text_color = $divider_bg_color = $divi
 			if( $icon_link !== '' ){
 				$href2 = vc_build_link($icon_link);
 
-				$url1 		= ( isset( $href2['url'] ) && $href2['url'] !== '' ) ? $href2['url']  : '';
-				$target1 	= ( isset( $href2['target'] ) && $href2['target'] !== '' ) ? "target='" . esc_attr( trim( $href2['target'] ) ) . "'" : '';
-				$link_title1 	= ( isset( $href2['title'] ) && $href2['title'] !== '' ) ? "title='".esc_attr($href2['title'])."'" : '';
-				$rel1 		= ( isset( $href2['rel'] ) && $href2['rel'] !== '' ) ? "rel='".esc_attr($href2['rel'])."'" : '';
+				$url1 			= ( isset( $href2['url'] ) && $href2['url'] !== '' ) ? $href2['url']  : '';
+				$target1 		= ( isset( $href2['target'] ) && $href2['target'] !== '' ) ? esc_attr( trim( $href2['target'] ) ) : '';
+				$link_title1	= ( isset( $href2['title'] ) && $href2['title'] !== '' ) ? esc_attr($href2['title']) : '';
+				$rel1 			= ( isset( $href2['rel'] ) && $href2['rel'] !== '' ) ? esc_attr($href2['rel']) : '';
 
 				if( $url1 == '' ){
 					$url1="javascript:void(0);";
@@ -276,10 +276,10 @@ $style2=$href1 =$target2=$img2=$alt1 =$iconoutput2=$url2='';
 if($btn_icon_link !== ''){
 	$href1 = vc_build_link($btn_icon_link);
 
-	$url2 		= ( isset( $href1['url'] ) && $href1['url'] !== '' ) ? $href1['url']  : '';
-	$target2 	= ( isset( $href1['target'] ) && $href1['target'] !== '' ) ? "target='" . esc_attr(trim( $href1['target']) ) . "'" : '';
-	$link_title2 	= ( isset( $href1['title'] ) && $href1['title'] !== '' ) ? "title='".esc_attr($href1['title'])."'" : '';
-	$rel2 		= ( isset( $href1['rel'] ) && $href1['rel'] !== '' ) ? "rel='".esc_attr($href1['rel'])."'" : '';
+	$url2 			= ( isset( $href1['url'] ) && $href1['url'] !== '' ) ? $href1['url']  : '';
+	$target2 		= ( isset( $href1['target'] ) && $href1['target'] !== '' ) ? esc_attr( trim( $href1['target'] ) ) : '';
+	$link_title2 	= ( isset( $href1['title'] ) && $href1['title'] !== '' ) ? esc_attr($href1['title']) : '';
+	$rel2 			= ( isset( $href1['rel'] ) && $href1['rel'] !== '' ) ? esc_attr($href1['rel']) : '';
 
 	if($url2==''){
 		$url2="javascript:void(0);";
@@ -619,7 +619,7 @@ if($iconoutput2==''){
 			$is_no_icon_first = (trim($iconoutput) === '') ? 'ult-dual-btn-no-icon' : '';
 			if($icon_align=='right')
 			{
-			$subop .='<a href = "'.esc_attr($url1).'" '.$target1.' '. $link_title1 .' '. $rel1 .' class="ult_ivan_button round-square with-icon icon-after with-text place-template ult_dual1" style="'.esc_attr($icon1_lineht2).';margin-right:px;'.esc_attr($size).';'.esc_attr($btncolor_style).esc_attr($button1_bstyle).'; '.esc_attr($btnmain_style).';">
+			$subop .='<a '. Ultimate_VC_Addons::uavc_link_init($url1, $target1, $link_title1, $rel1 ).' class="ult_ivan_button round-square with-icon icon-after with-text place-template ult_dual1" style="'.esc_attr($icon1_lineht2).';margin-right:px;'.esc_attr($size).';'.esc_attr($btncolor_style).esc_attr($button1_bstyle).'; '.esc_attr($btnmain_style).';">
 			<span class="ult-dual-btn-1 ' .esc_attr($btn_hover_style). '" style=""  '.$btn_hover.'>
 
 			<span class="text-btn ult-dual-button-title title_left ult-responsive " '.$data_list1.'  style="'.esc_attr($title1_style).'">'.esc_html($button1_text).'</span>
@@ -629,7 +629,7 @@ if($iconoutput2==''){
 			}
 			else{
 
-			$subop .='<a href = "'.esc_attr($url1).'" '.$target1.' '. $link_title1 .' '. $rel1 .' class="ult_ivan_button round-square with-icon icon-before with-text place-template ult_dual1" style="'.esc_attr($icon1_lineht2).';margin-right:px;'.esc_attr($size).';'.esc_attr($btncolor_style).esc_attr($button1_bstyle).'; '.esc_attr($btnmain_style).';">
+			$subop .='<a '. Ultimate_VC_Addons::uavc_link_init($url1, $target1, $link_title1, $rel1 ).' class="ult_ivan_button round-square with-icon icon-before with-text place-template ult_dual1" style="'.esc_attr($icon1_lineht2).';margin-right:px;'.esc_attr($size).';'.esc_attr($btncolor_style).esc_attr($button1_bstyle).'; '.esc_attr($btnmain_style).';">
 			<span class="ult-dual-btn-1 ' .esc_attr($btn_hover_style). '" style=""  '.$btn_hover.'>
 			<span class="icon-simple icon-left1 ult_btn1span '.esc_attr($is_no_icon_first).'"  style="'.esc_attr($icnsize1).';'.esc_attr($emptyicon).' ">'.$iconoutput.'</span>
 			<span class="text-btn ult-dual-button-title ult-responsive" '.$data_list1.' style="'.esc_attr($title1_style).'">'.esc_html($button1_text).'</span>
@@ -649,7 +649,7 @@ if($iconoutput2==''){
 			$is_no_icon = (trim($iconoutput2) === '') ? 'ult-dual-btn-no-icon' : '';
 			if($btn2_icon_align=='right')
 			{
-			$subop .='<a href = "'.esc_attr($url2).'" '.$target2.' '. $link_title2 .' '. $rel2 .' class="ult_ivan_button round-square with-icon icon-after with-text place-template ult_dual2"  style="'.esc_attr($icon2_lineht2).';'.esc_attr($btncolor1_style).esc_attr($button2_bstyle).';margin-left:px;'.esc_attr($size).';'.esc_attr($btnmain_style).'">
+			$subop .='<a '. Ultimate_VC_Addons::uavc_link_init($url2, $target2, $link_title2, $rel2 ).' class="ult_ivan_button round-square with-icon icon-after with-text place-template ult_dual2"  style="'.esc_attr($icon2_lineht2).';'.esc_attr($btncolor1_style).esc_attr($button2_bstyle).';margin-left:px;'.esc_attr($size).';'.esc_attr($btnmain_style).'">
 			<span class="ult-dual-btn-2 ' .esc_attr($btn_hover_style). '"  '.$btn2_hover.'>
 			<span class="text-btn ult-dual-button-title" style="'.esc_attr($title2_style).'">'.esc_html($button2_text).'</span>
 
@@ -659,7 +659,7 @@ if($iconoutput2==''){
 		  }
 		  else{
 
-		  	$subop .='<a href = "'.esc_attr($url2).'" '.$target2.' '. $link_title2 .' '. $rel2 .' class="ult_ivan_button   round-square  with-icon icon-before with-text place-template ult_dual2"  style="'.esc_attr($icon2_lineht2).';'.esc_attr($btncolor1_style).esc_attr($button2_bstyle).';margin-left:-0px;'.esc_attr($size).'; '.esc_attr($btnmain_style).'">
+		  	$subop .='<a '. Ultimate_VC_Addons::uavc_link_init($url2, $target2, $link_title2, $rel2 ).' class="ult_ivan_button   round-square  with-icon icon-before with-text place-template ult_dual2"  style="'.esc_attr($icon2_lineht2).';'.esc_attr($btncolor1_style).esc_attr($button2_bstyle).';margin-left:-0px;'.esc_attr($size).'; '.esc_attr($btnmain_style).'">
 			<span class="ult-dual-btn-2 ' .esc_attr($btn_hover_style). '"  '.$btn2_hover.'>
 
 			<span class="icon-simple icon-left2 ult_btn1span '.esc_attr($is_no_icon).'"  style="'.esc_attr($icnsize2).';'.esc_attr($emptyicon1).' ">'.$iconoutput2.'</span>
@@ -966,7 +966,7 @@ if($iconoutput2==''){
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "icon_type","value" => array("selector")),
 								"group" => "Button1",
 							),
@@ -1255,7 +1255,7 @@ if($iconoutput2==''){
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "btn_icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "btn_icon_type","value" => array("selector")),
 								"group" => "Button2",
 							),
@@ -1509,7 +1509,7 @@ if($iconoutput2==''){
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "divider_icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "divider_style","value" => array("icon")),
 								"group" => "Divider",
 							),
@@ -1602,7 +1602,7 @@ if($iconoutput2==''){
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Title Font Family", "ultimate_vc"),
 								"param_name" => "btn1_font_family",
-								"description" => __("Select the font of your choice. ","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice. ","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank' rel='noopener'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"group" => "Typography",
 								),
 
@@ -1650,7 +1650,7 @@ if($iconoutput2==''){
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Title Font Family", "ultimate_vc"),
 								"param_name" => "btn2_font_family",
-								"description" => __("Select the font of your choice. ","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice. ","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank' rel='noopener'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"group" => "Typography",
 								),
 

@@ -4,7 +4,7 @@ Plugin Name: Ultimate Addons for Visual Composer
 Plugin URI: https://brainstormforce.com/demos/ultimate/
 Author: Brainstorm Force
 Author URI: https://www.brainstormforce.com
-Version: 3.16.15
+Version: 3.16.18
 Description: Includes Visual Composer premium addon elements like Icon, Info Box, Interactive Banner, Flip Box, Info List & Counter. Best of all - provides A Font Icon Manager allowing users to upload / delete custom icon fonts.
 Text Domain: ultimate_vc
 */
@@ -14,7 +14,7 @@ if ( ! defined( '__ULTIMATE_ROOT__' ) ) {
 }
 
 if ( ! defined( 'ULTIMATE_VERSION' ) ) {
-	define( 'ULTIMATE_VERSION', '3.16.15' );
+	define( 'ULTIMATE_VERSION', '3.16.18' );
 }
 
 if ( ! defined( 'ULTIMATE_URL' ) ) {
@@ -1120,6 +1120,32 @@ if ( ! class_exists( 'Ultimate_VC_Addons' ) ) {
 				endif;
 			}
 
+		}
+
+		// Link validation.
+		static function uavc_link_init( $url, $target, $link_title, $rel ) {
+			$uavc_link_attr = '';
+			if($url !== '')
+				$uavc_link_attr = 'href="'.$url.'"';
+			if($link_title !== '')
+				$uavc_link_attr .= 'title="'.$link_title.'"';
+			if($target !== '')
+				$uavc_link_attr .= 'target="'.$target.'"';
+			if($rel !== ''){
+				if($target !== '' && $target === '_blank'){
+					$uavc_link_attr .= 'rel="'.$rel.' noopener"';
+				}
+				else {
+					$uavc_link_attr .= 'rel="'.$rel.'"';
+				}
+			}
+			else {
+				if($target !== '' && $target === '_blank'){
+					$uavc_link_attr .= 'rel="noopener"';
+				}
+			}
+
+			return $uavc_link_attr;
 		}
 	}//end class
     add_action( 'plugins_loaded', 'uavc_plugin_init' );

@@ -49,6 +49,7 @@ $l10n_ls = array(
 	'SBLayerTitle' 				=> __('Layer #%d', 'LayerSlider'),
 	'SBLayerCopyTitle' 			=> __('Layer #%d copy', 'LayerSlider'),
 	'SBUndoLayer' 				=> __('Layer settings', 'LayerSlider'),
+	'SBUndoLayerStyles' 		=> __('Layer styles', 'LayerSlider'),
 	'SBUndoSlide' 				=> __('Slide settings', 'LayerSlider'),
 	'SBUndoNewLayer' 			=> __('New layer', 'LayerSlider'),
 	'SBUndoNewLayers' 			=> __('New layers', 'LayerSlider'),
@@ -69,6 +70,13 @@ $l10n_ls = array(
 	'SBUndoRemoveSlideImage' 	=> __('Remove slide image', 'LayerSlider'),
 	'SBUndoRemoveLayerImage' 	=> __('Remove layer image', 'LayerSlider'),
 	'SBDragMe' 					=> __('Drag me :)', 'LayerSlider'),
+	'SBPreviewImagePlaceholder'	=> __('Double click to<br> set image', 'LayerSlider'),
+	'SBPreviewMediaPlaceholder'	=> __('Add media or paste embed code', 'LayerSlider'),
+	'SBPreviewIconPlaceholder'	=> __('Double click to<br> add icon', 'LayerSlider'),
+	'SBPreviewTextPlaceholder' 	=> __('Text Layer', 'LayerSlider'),
+	'SBPreviewHTMLPlaceholder' 	=> __('HTML Layer', 'LayerSlider'),
+	'SBPreviewButtonPlaceholder' => __('Button Label', 'LayerSlider'),
+	'SBPreviewPostPlaceholder' => __('Howdy, [author]', 'LayerSlider'),
 	'SBPreviewSlide' 			=> __('Preview Slide', 'LayerSlider'),
 	'SBLayerPreviewMultiSelect' => __('Layer Preview is not available in Multiple Selection Mode. Select only one layer to use this feature. ', 'LayerSlider'),
 	'SBStaticUntil' 			=> __('Until the end of Slide #%d', 'LayerSlider'),
@@ -89,6 +97,19 @@ $l10n_ls = array(
 	'SBLinkTextPost' 			=> __('Linked to WP Post: %s', 'LayerSlider'),
 	'SBLinkTextAttachment' 		=> __('Linked to WP Attachment: %s', 'LayerSlider'),
 	'SBLinkPostDynURL' 			=> __('Linked to: Post URL from Dynamic content', 'LayerSlider'),
+	'SBImportLayerNoSlider' 	=> __('No sliders found.', 'LayerSlider'),
+	'SBImportLayerNoSlide' 		=> __('No slides found.', 'LayerSlider'),
+	'SBImportLayerNoLayer' 		=> __('No layers found.', 'LayerSlider'),
+
+	'SBImportLayerSelectSlide' 	=> __('Select a slide first.', 'LayerSlider'),
+
+	'SBLayerTypeImg' 			=> __('Image', 'LayerSlider'),
+	'SBLayerTypeIcon' 			=> __('Icon', 'LayerSlider'),
+	'SBLayerTypeText' 			=> __('Text', 'LayerSlider'),
+	'SBLayerTypeButton' 		=> __('Button', 'LayerSlider'),
+	'SBLayerTypeMedia' 			=> __('Audio / Video', 'LayerSlider'),
+	'SBLayerTypeHTML' 			=> __('HTML', 'LayerSlider'),
+	'SBLayerTypePost' 			=> __('Dynamic', 'LayerSlider'),
 
 
 	// Transition Builder

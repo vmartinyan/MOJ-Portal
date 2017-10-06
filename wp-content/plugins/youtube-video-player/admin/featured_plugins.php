@@ -88,7 +88,7 @@ class youtube_embed_featured_plugins{
 						'image_url'		=>	$this->plugin_url.'admin/images/featured_plugins/Scroll.png',
 						'site_url'		=>	'https://wordpress.org/plugins/wp-scroll-2',
 						'title'			=>	'Scroll To Top plugin',
-						'description'	=>	'Scroll to top - Back to top plugin is an simple and nice plugin with the standard scroll settings. You can use it on your website different sides.'
+						'description'	=>	'Scroll plugin is an simple and nice plugin with the standard scroll settings. You can use it on your website different sides.'
 						),						
 											
 			

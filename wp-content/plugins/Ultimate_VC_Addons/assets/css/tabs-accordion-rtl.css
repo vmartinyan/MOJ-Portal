@@ -63,17 +63,20 @@ i.accordion-icon {
     line-height: 1.5em;
     height: 1.5em;
     display: inline-block;
-    margin-top: -6px;
+    margin-top: -4px;
     float: right;
     -webkit-transition: -webkit-transform .75s ease-in-out;
     transition: -webkit-transform .75s ease-in-out;
     transition: transform .75s ease-in-out;
     transition: transform .75s ease-in-out, -webkit-transform .75s ease-in-out
 }
-.ult-tabto-actitleActive i.accordion-icon {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg)
+.ult-tabto-actitle.ult-tabto-actitleActive i.accordion-icon:before {
+    content: '-';
+    padding-right: 0.20em;
+    padding-left: 0.10em;
+}
+.ult-tabto-actitle i.accordion-icon:before {
+    content: '+';
 }
 .ult-tabto-actitleActive {
     color: #fff;
@@ -97,12 +100,10 @@ span.ult_tab_main.ult_ac_main.ult_top.Icon {
 span.ult_tab_main.ult_ac_main.ult_noacordicnIcon {
     display: inline-table
 }
-@media screen and (min-width: 48em) {
-    .ult-tabto-accordion .ult-tabto-accordionItem {
-        max-height: 80em;
-        -webkit-transition: max-height .5s;
-        transition: max-height .5s
-    }
+.ult-tabto-accordion .ult-tabto-accordionItem {
+    max-height: 80em;
+    -webkit-transition: max-height .5s;
+    transition: max-height .5s
 }
 .ult-tabto-accordion .ult-tabto-accolapsed {
     max-height: 0

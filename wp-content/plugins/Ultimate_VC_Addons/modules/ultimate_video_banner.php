@@ -40,7 +40,7 @@ if(!class_exists('Ultimate_Video_Banner')) {
 								'type' => 'textfield',
 								'heading' => __('Link to the video in WebM / Ogg Format','ultimate_vc'),
 								'param_name' => 'video_banner_webm_ogg_link',
-								'description' => __('IE, Chrome & Safari','ultimate_vc').' <a href="http://www.w3schools.com/html/html5_video.asp" target="_blank">'.__('support','ultimate_vc').'</a> '.__('MP4 format, while Firefox & Opera prefer WebM / Ogg formats.','ultimate_vc').' '.__('You can upload the video through','ultimate_vc').' <a href="'.home_url().'/wp-admin/media-new.php" target="_blank">'.__('WordPress Media Library','ultimate_vc').'</a>.',
+								'description' => __('IE, Chrome & Safari','ultimate_vc').' <a href="http://www.w3schools.com/html/html5_video.asp" target="_blank" rel="noopener">'.__('support','ultimate_vc').'</a> '.__('MP4 format, while Firefox & Opera prefer WebM / Ogg formats.','ultimate_vc').' '.__('You can upload the video through','ultimate_vc').' <a href="'.home_url().'/wp-admin/media-new.php" target="_blank" rel="noopener">'.__('WordPress Media Library','ultimate_vc').'</a>.',
 							),
 							array(
 								'type' => 'ult_img_single',
@@ -88,7 +88,7 @@ if(!class_exists('Ultimate_Video_Banner')) {
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "title_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"group" => "Typography"
 							),
 							array(
@@ -135,7 +135,7 @@ if(!class_exists('Ultimate_Video_Banner')) {
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "desc_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"group" => "Typography"
 							),
 							array(

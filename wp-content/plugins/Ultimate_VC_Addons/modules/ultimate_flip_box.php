@@ -129,7 +129,7 @@ if(!class_exists('AIO_Flip_Box'))
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose, you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__('add new here','ultimate_vc')."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose, you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__('add new here','ultimate_vc')."</a>.",
 								"dependency" => Array("element" => "icon_type","value" => array("selector")),
 								"group" => "Icon"
 							),
@@ -532,7 +532,7 @@ if(!class_exists('AIO_Flip_Box'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family","ultimate_vc"),
 								"param_name" => "title_font",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"value" => "",
 								"group" => "Typography"
 							),
@@ -605,7 +605,7 @@ if(!class_exists('AIO_Flip_Box'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family","ultimate_vc"),
 								"param_name" => "desc_font",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"value" => "",
 								"group" => "Typography"
 							),
@@ -666,7 +666,7 @@ if(!class_exists('AIO_Flip_Box'))
                             ),
 							array(
 								"type" => "ult_param_heading",
-								"text" => "<span style='display: block;'><a href='http://bsf.io/1qnl6' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+								"text" => "<span style='display: block;'><a href='http://bsf.io/1qnl6' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 								"param_name" => "notification",
 								'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 							),
@@ -768,7 +768,7 @@ if(!class_exists('AIO_Flip_Box'))
 
 			),$atts));
 			$output = $f_style = $b_style = $ico_color = $box_border = $icon_border = $link_style = $height = $link_sufix = $link_prefix = $link_style = '';
-			$title_style = $desc_style = $flip_design_style = $target = $link_title  = $rel  = '';
+			$title_style = $desc_style = $flip_design_style = $url = $target = $link_title  = $rel  = '';
 			$border_front = $border_back = '';
 			//$font_args = array();
 			$flip_design_style = $flipbx_margin;
@@ -930,11 +930,13 @@ if(!class_exists('AIO_Flip_Box'))
 									$link_style = 'style="background:'.esc_attr($button_bg).'; color:'.esc_attr($button_txt).';"';
 								if($button_link!== ''){
 									$href = vc_build_link($button_link);
-									$target = ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr( trim( $href['target'] ) ) . "'" : '';
-									$title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='" . esc_attr($href['title']) . "'" : '';
-									$rel 	= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='" . esc_attr($href['rel']) . "'" : '';
 
-									$link_prefix .= '<a href = "'.esc_url($href['url']).'" '.$target.' '. $title .' '. $rel .' '.$link_style.'>';
+									$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+									$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+									$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+									$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+									$link_prefix .= '<a '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' '.$link_style.'>';
 									$link_sufix .= '</a>';
 
 								}

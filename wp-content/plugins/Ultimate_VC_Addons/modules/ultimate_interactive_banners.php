@@ -95,7 +95,7 @@ if(!class_exists('AIO_Interactive_Banners'))
 								"param_name" => "banner_icon",
 								"admin_label" => true,
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "icon_disp","value" => array("with_heading","with_description","both")),
 							),
 							array(
@@ -279,7 +279,7 @@ if(!class_exists('AIO_Interactive_Banners'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "banner_title_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								//"dependency" => Array("element" => "banner_title", "not_empty" => true),
 								"group" => "Typography"
 							),
@@ -344,7 +344,7 @@ if(!class_exists('AIO_Interactive_Banners'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "banner_desc_font_family",
-								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								//"dependency" => Array("element" => "banner_desc", "not_empty" => true),
 								"group" => "Typography"
 							),
@@ -543,10 +543,11 @@ if(!class_exists('AIO_Interactive_Banners'))
 			$img = apply_filters('ult_get_img_single', $banner_image, 'url');
 			$alt = apply_filters('ult_get_img_single', $banner_image, 'alt');
 			$href = vc_build_link($banner_link);
+
 			$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 			$banner_top_style='';
 			if($banner_height!='' && $banner_height_val!=''){
 				$banner_top_style = 'height:'.$banner_height_val.'px;';
@@ -578,11 +579,11 @@ if(!class_exists('AIO_Interactive_Banners'))
 			if($link_opts == "more"){
 				$button_style = 'background:'.$banner_link_bg_color.';';
 				$button_style .= 'color:'.$banner_link_text_color.';';
-				$output .= "\n\t\t".'<a class="bb-link" href="'.esc_url($url).'" '.$target.' '. $link_title .' '. $rel .' style="'.esc_attr($button_style).'">'.$banner_link_text.'</a>';
+				$output .= "\n\t\t".'<a class="bb-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' style="'.esc_attr($button_style).'">'.$banner_link_text.'</a>';
 			}
 			$output .= "\n\t".'</div>';
 			if($link_opts == "box")
-				$output .= '<a class="bb-link" href="'.esc_url($url).'" '.$target.' '. $link_title .' '. $rel .'></a>';
+				$output .= '<a class="bb-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
 			$output .= "\n".'</div>';
 
 			$is_preset = false; //Display settings for Preset

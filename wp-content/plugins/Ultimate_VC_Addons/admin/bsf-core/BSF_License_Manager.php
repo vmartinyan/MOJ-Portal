@@ -72,8 +72,7 @@ if ( ! class_exists( 'BSF_License_Manager' ) ) {
 			$response = wp_remote_post(
 				$path, array(
 					'body'      => $data,
-					'timeout'   => '30',
-					'sslverify' => false
+					'timeout'   => '30'
 				)
 			);
 
@@ -149,8 +148,7 @@ if ( ! class_exists( 'BSF_License_Manager' ) ) {
 			$response = wp_remote_post(
 				$path, array(
 					'body'      => $data,
-					'timeout'   => '30',
-					'sslverify' => false
+					'timeout'   => '30'
 				)
 			);
 
@@ -219,16 +217,17 @@ if ( ! class_exists( 'BSF_License_Manager' ) ) {
 
 			$is_bundled = BSF_Update_Manager::bsf_is_product_bundled( $product_id );
 
-			if ( empty( $is_bundled ) ) {
-				// The product is not bundled
-				if ( isset( $all_products[ $product_id ] ) ) {
+			// The product is not bundled
+			if ( isset( $all_products[ $product_id ] ) ) {
 
-					if ( isset( $all_products[ $product_id ]['status'] ) && $all_products[ $product_id ]['status'] == 'registered' ) {
-						return true;
-					}
-
+				if ( isset( $all_products[ $product_id ]['status'] ) && $all_products[ $product_id ]['status'] == 'registered' ) {
+					return true;
 				}
-			} else {
+
+			}
+			
+			if ( ! empty( $is_bundled ) ) {
+				
 				// The product is bundled
 				foreach ( $is_bundled as $key => $value ) {
 
@@ -293,6 +292,7 @@ if ( ! class_exists( 'BSF_License_Manager' ) ) {
 			$placeholder_name       = ( isset( $args['placeholder_name'] ) && ! is_null( $args['placeholder_name'] ) ) ? $args['placeholder_name'] : 'Your Name..';
 			$placeholder_email      = ( isset( $args['placeholder_email'] ) && ! is_null( $args['placeholder_email'] ) ) ? $args['placeholder_email'] : 'Your Email..';
 			$bsf_license_allow_email = ( isset( $args['bsf_license_allow_email'] ) && ! is_null( $args['bsf_license_allow_email'] ) ) ? $args['bsf_license_allow_email'] : true;
+			$license_form_title 	= ( isset( $args['license_form_title'] ) && ! is_null( $args['license_form_title'] ) ) ? $args['license_form_title'] : 'Updates & Support Registration - ';
 
 			// Forcefully disable the subscribe options for uabb.
 			// This should be disabled from uabb and removed from graupi.
@@ -343,7 +343,7 @@ if ( ! class_exists( 'BSF_License_Manager' ) ) {
 
 			$html .= '<form method="post" class="' . $form_class . '" action="' . $form_action . '">';
 
-			$form_heading = '<h3 class="' . $license_status_class . ' ' . $license_form_heading_class . '">Updates & Support Registration - <span>' . $license_status . '</span></h3>';
+			$form_heading = '<h3 class="' . $license_status_class . ' ' . $license_form_heading_class . '">' . $license_form_title . '<span>' . $license_status . '</span></h3>';
 
 			$html .= apply_filters( "bsf_license_form_heading_{$product_id}", $form_heading, $license_status_class, $license_status );
 
@@ -400,7 +400,10 @@ if ( ! class_exists( 'BSF_License_Manager' ) ) {
 				do_action( "bsf_before_license_activation_submit_button_{$product_id}" );
 
 				$html .= '<input type="submit" class="button ' . $submit_button_class . '" name="bsf_activate_license" value="' . esc_attr__( $button_text_activate, 'bsf' ) . '"/>';
-				$html .= "<p>If you don't have a license, you can <a target='_blank' href='$purchase_url'>get it here »</a></p>";
+				
+				$get_license_message = apply_filters( "bsf_get_license_message_{$product_id}", "<p>If you don't have a license, you can <a target='_blank' href='$purchase_url'>get it here »</a></p>", $purchase_url );
+
+				$html .= $get_license_message;
 			}
 
 			$html .= '</form>';
@@ -414,7 +417,7 @@ if ( ! class_exists( 'BSF_License_Manager' ) ) {
 			}
 
 			// Output the license activation/deactivation form
-			return apply_filters( "bsf_license_activation_form_{$product_id}", $html, $args );
+			return apply_filters( "bsf_core_license_activation_form_{$product_id}", $html, $args );
 		}
 
 

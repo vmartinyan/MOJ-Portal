@@ -2,35 +2,15 @@
  * Plugin JavaScript and jQuery code for the admin pages of website
  *
  * @package     Head and Footer Scripts Inserter
- * @uthor       Arthur Gareginyan
- * @link        https://www.arthurgareginyan.com
- * @copyright   Copyright (c) 2016-2017 Arthur Gareginyan. All Rights Reserved.
- * @since       4.6
+ * @author      Arthur Gareginyan
+ * @link        https://www.spacexchimp.com
+ * @copyright   Copyright (c) 2016-2017 Space X-Chimp Studio. All Rights Reserved.
  */
 
 
 jQuery(document).ready(function($) {
 
     "use strict";
-
-    // Find all textareas on page
-    $('textarea').each(function(index, elements) {
-
-        // Change textarea to CodeMirror editor
-        var editor = CodeMirror.fromTextArea( elements , {
-                                    lineNumbers: true,
-                                    firstLineNumber: 1,
-                                    matchBrackets: true,
-                                    indentUnit: 4,
-                                    mode: 'text/html',
-                                    styleActiveLine: true
-        });
-
-        // Refresh CodeMirror editor after 1 second
-        setTimeout(function() {
-            editor.refresh();
-        },1);
-    });
 
     // Remove the 'successful' message after 3 seconds
     if ('.updated') {
@@ -40,7 +20,6 @@ jQuery(document).ready(function($) {
     }
 
     // Add dynamic content to page tabs. Needed for having an up to date content.
-    $('.include-tab-author').load('https://www.spacexchimp.com/assets/dynamic-content/plugins.html #include-tab-author');
     $('.include-tab-store').load('https://www.spacexchimp.com/assets/dynamic-content/plugins.html #include-tab-store');
 
     // Add questions and answers into spoilers and color them in different colors
@@ -53,6 +32,25 @@ jQuery(document).ready(function($) {
          } else {
              $(this).addClass('panel-info');
          }
+    });
+
+    // Find all textareas on page
+    $('textarea').each(function(index, elements) {
+
+        // Change textarea to CodeMirror editor
+        var editor = CodeMirror.fromTextArea( elements , {
+            lineNumbers: true,
+            firstLineNumber: 1,
+            matchBrackets: true,
+            indentUnit: 4,
+            mode: 'text/html',
+            styleActiveLine: true
+        });
+
+        // Refresh CodeMirror editor after 1 second
+        setTimeout(function() {
+            editor.refresh();
+        },1);
     });
 
 });

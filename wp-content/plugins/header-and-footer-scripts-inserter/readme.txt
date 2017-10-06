@@ -4,7 +4,7 @@ Tags: inject, insert, insert scripts, insert javascript, insert js, insert html,
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8A88KC7TFF6CS
 Requires at least: 3.9
 Tested up to: 4.8
-Stable tag: 4.6
+Stable tag: 4.12
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,6 +44,7 @@ This plugin is ready for translation and has already been translated into severa
 * English (default)
 * Russian (translation by [Milena Kiseleva](https://www.instagram.com/milava_kiseleva/))
 * Polish
+* Spanish (translation by Patricio Toledo)
 
 If you want to help translate this plugin then please visit the [translation page](https://translate.wordpress.org/projects/wp-plugins/header-and-footer-scripts-inserter).
 
@@ -81,7 +82,7 @@ Manually via FTP access:
 4. Log into Admin Panel of your WordPress website.
 5. Activate this plugin through the "`Plugins`" tab.
 
-After installation and activation, the "`Head and Footer Scripts Inserter`" menu item will appear in the "`Settings`" section. Click on this in order to view plugin administration page.
+After installation and activation, the "`Scripts Inserter`" menu item will appear in the "`Settings`" section of Admin Panel. Click on it in order to view the plugin settings page.
 
 [More help installing plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins "WordPress Codex: Installing Plugins")
 
@@ -96,7 +97,7 @@ A. Yes. This plugin is ready for translation and has already been translated int
 
 = Q. How does it work? =
 A. Simply go to the plugin settings page, place your scripts in the field and click the "Save changes" button. Enjoy the result of applying your scripts. It's that simple!
-You can find the plugin settings page at "`WP Admin Panel`" -> "`Settings`" -> "`Head and Footer Scripts Inserter`".
+You can find the plugin settings page at "`WP Admin Panel`" -> "`Settings`" -> "`Scripts Inserter`".
 
 = Q. How much of scripts I can enter in the field? =
 A. I don't limit the number of characters.
@@ -173,6 +174,38 @@ Commercial licensing (e.g. for projects that can’t use an open-source license)
 
 
 == Changelog ==
+
+= 4.12 =
+* At the request of some users, plugin settings page moved to the submenu item in the top-level menu item "Settings", like before.
+
+= 4.11 =
+* Fixed the issue due tof which the 'Space X-Chimp' sub menu item in the brand menu item was displayed.
+* Added branded footer text on the plugin's settings page.
+* Text of copyright in the output code is updated.
+
+= 4.10 =
+* Error in the PHP constant name fixed.
+
+= 4.9 =
+* Added the top level menu item of the brand.
+* The submenu item of the plugin has moved to the menu item of the brand.
+* The menu item of the plugin is renamed.
+* The "Author" tab on the settings page is removed.
+* Content of the "Support" tab on the settings page is updated.
+* Copyright of plugin files is changed to the "Space X-Chimp Studio".
+* The "Support" tab renamed to the "Support Me".
+* The "Usage" tab renamed to the "Usage Instructions".
+
+= 4.8 =
+* Plugin data that saved in the database upgraded to version 0001.
+
+= 4.7 =
+* Added Spanish translation. (Thanks Patricio Toledo)
+* The group name of the '_service_info' option renamed to '_settings_group_si'.
+* The 'admin.css' file improved.
+* The "Font Awesome" library is integrated for use on the plugin settings page.
+* Prefixes of the PHP functions changed to ''spacexchimp_p006_.
+* Prefixes of the PHP constants changed to ''SPACEXCHIMP_P006_.
 
 = 4.6 =
 * Russian translation updated. (Thanks to Milena Kiseleva)
@@ -349,7 +382,7 @@ Commercial licensing (e.g. for projects that can’t use an open-source license)
 * Beta version.
 
 = 0.1 =
-* Alfa version.
+* Alpha version.
 
 
 == Upgrade Notice ==

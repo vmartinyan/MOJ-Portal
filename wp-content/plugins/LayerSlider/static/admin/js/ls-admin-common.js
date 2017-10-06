@@ -594,6 +594,11 @@ jQuery(function($) {
 		LS_CodeMirror.init();
 	}
 
+	// About page
+	if( document.location.href.indexOf('page=ls-about') ) {
+		lsLogo.append( '.layerslider-logo', true );
+	}
+
 
 	// Skin/CSS Editor
 	if(document.location.href.indexOf('ls-skin-editor') != -1 ||

@@ -299,7 +299,7 @@ if(!class_exists('Ultimate_Info_Banner'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "title_font_family",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"group" => "Typography"
 							),
 							array(
@@ -376,7 +376,7 @@ if(!class_exists('Ultimate_Info_Banner'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "desc_font_family",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"group" => "Typography"
 							),
 							array(
@@ -453,7 +453,7 @@ if(!class_exists('Ultimate_Info_Banner'))
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Font Family", "ultimate_vc"),
 								"param_name" => "button_font_family",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"group" => "Typography"
 							),
 							array(
@@ -539,7 +539,7 @@ if(!class_exists('Ultimate_Info_Banner'))
 				'info_alignment' => 'ib3-info-center',
 				'banner_image' => '',
 				'banner_size' => '50',
-				'ib3_alignment' => 'ultb3-img-left',
+				'ib3_alignment' => 'ultb3-img-top-left',
 				'button_text' => '',
 				'button_link' => '',
 				'info_effect' => '',
@@ -701,9 +701,9 @@ if(!class_exists('Ultimate_Info_Banner'))
 			{
 				$button_link_temp = vc_build_link($button_link);				
 				$button_link_main = $button_link_temp['url'];
-				$title 	= ( isset( $button_link_temp['title'] ) && $button_link_temp['title'] !== '' ) ? "title='" . esc_attr($button_link_temp['title']) . "'" : '';
+				$title 	= ( isset( $button_link_temp['title'] ) && $button_link_temp['title'] !== '' ) ? esc_attr($button_link_temp['title']) : '';
 				$target = $button_link_temp['target'];
-				$rel 	= ( isset( $button_link_temp['rel'] ) && $button_link_temp['rel'] !== '' ) ? "rel='".esc_attr($button_link_temp['rel'])."'" : '';
+				$rel 	= ( isset( $button_link_temp['rel'] ) && $button_link_temp['rel'] !== '' ) ? esc_attr($button_link_temp['rel']) : '';
 			}
 			if($button_link_main == '') {
 				$button_link_main = 'javascript:void(0);';
@@ -726,7 +726,7 @@ if(!class_exists('Ultimate_Info_Banner'))
 				{
 					if($target != '')
 						$target = 'target="'.esc_attr($target).'"';
-					$output .= '<a href="'.esc_attr($button_link_main).'" '.$target.' '. $rel .' '. $title .' class="ultb3-btn ult-responsive" '.$info_banner_btn_data_list.' style="'.esc_attr($button_style_inline).'">'.$button_text.'<i class="Defaults-angle-right"></i></a>';
+					$output .= '<a '. Ultimate_VC_Addons::uavc_link_init($button_link_main, $target, $title, $rel ).' class="ultb3-btn ult-responsive" '.$info_banner_btn_data_list.' style="'.esc_attr($button_style_inline).'">'.$button_text.'<i class="Defaults-angle-right"></i></a>';
 				}
 				$output .= '</div>';
 			$output .= '</div>';

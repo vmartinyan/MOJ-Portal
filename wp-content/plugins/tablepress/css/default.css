@@ -127,7 +127,6 @@
 	outline: none;
 	position: relative;
 	text-decoration: underline;
-	text-decoration: none\0/IE; /* Hack for IE8, IE9, and IE10pp4, as those have trouble with text-decoration in :after pseudo-elements */
 	margin: 0 5px;
 }
 .dataTables_paginate a:first-child {
@@ -184,7 +183,7 @@
 }
 .paginate_button:hover:before,
 .paginate_button:hover:after {
-	color: #2D6296;
+	color: #049cdb;
 }
 .paginate_button.disabled:before,
 .paginate_button.disabled:after {
@@ -249,7 +248,7 @@
 .tablepress .sorting:hover,
 .tablepress .sorting_asc,
 .tablepress .sorting_desc {
-	background-color: #2D6296;
+	background-color: #049cdb;
 }
 /* Hide the sorting arrows in the extra table that is added for scrolling */
 .dataTables_scrollBody .tablepress thead th:after {

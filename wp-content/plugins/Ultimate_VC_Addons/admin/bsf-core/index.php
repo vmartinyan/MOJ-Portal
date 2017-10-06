@@ -45,7 +45,11 @@ function get_api_site() {
 	if ( defined( 'BSF_API_URL' ) ) {
 		$bsf_api_site = BSF_API_URL;
 	} else {
-		$bsf_api_site = 'https://support.brainstormforce.com/';
+		$bsf_api_site = 'http://support.brainstormforce.com/';
+
+		if ( wp_http_supports( array( 'ssl' ) ) ) {
+		    $bsf_api_site = set_url_scheme( $bsf_api_site, 'https' );
+		}
 	}
 
 	return $bsf_api_site;
@@ -645,7 +649,7 @@ if ( ! function_exists( 'brainstrom_product_id_by_name' ) ) {
 		
 		foreach ( $brainstrom_products as $key => $value ) {
 			foreach ( $value as $key => $product ) {
-				if ( strcasecmp( $product['product_name'], $product_name ) == 0 ) {
+				if ( isset( $product['product_name'] ) && strcasecmp( $product['product_name'], $product_name ) == 0 ) {
 					$product_id = isset( $product['id'] ) ? $product['id'] : '';
 				}
 			}
@@ -1085,8 +1089,14 @@ if ( ! function_exists( 'bsf_set_options' ) ) {
 		}
 
 		// Skip Brainstorm Menu
+		$default_skip_brainstorm_menu = array(
+			'uabb',
+			'convertpro',
+			'astra-addon',
+			'astra-pro-sites'
+		);
 
-		$skip_brainstorm_menu_products = apply_filters( 'bsf_skip_braisntorm_menu', $products = array() );
+		$skip_brainstorm_menu_products = apply_filters( 'bsf_skip_braisntorm_menu', $default_skip_brainstorm_menu );
 		$ids                           = array();
 		$skip_brainstorm_menu          = get_site_option( 'bsf_skip_braisntorm_menu', false );
 		$brainstorm_products           = bsf_get_brainstorm_products( true );

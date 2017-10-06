@@ -187,7 +187,7 @@ if(!class_exists("Ultimate_Pricing_Table")){
 							"type" => "ultimate_google_fonts",
 							"heading" => __("Font Family", "ultimate_vc"),
 							"param_name" => "package_name_font_family",
-							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 							"group" => "Typography"
 						),
 						array(
@@ -265,7 +265,7 @@ if(!class_exists("Ultimate_Pricing_Table")){
 							"type" => "ultimate_google_fonts",
 							"heading" => __("Font Family", "ultimate_vc"),
 							"param_name" => "subheading_font_family",
-							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 							"group" => "Typography"
 						),
 						array(
@@ -343,7 +343,7 @@ if(!class_exists("Ultimate_Pricing_Table")){
 							"type" => "ultimate_google_fonts",
 							"heading" => __("Font Family", "ultimate_vc"),
 							"param_name" => "price_font_family",
-							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 							"group" => "Typography"
 						),
 						array(
@@ -421,7 +421,7 @@ if(!class_exists("Ultimate_Pricing_Table")){
 							"type" => "ultimate_google_fonts",
 							"heading" => __("Font Family", "smile"),
 							"param_name" => "price_unit_font_family",
-							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 							"group" => "Typography"
 						),
 						array(
@@ -499,7 +499,7 @@ if(!class_exists("Ultimate_Pricing_Table")){
 							"type" => "ultimate_google_fonts",
 							"heading" => __("Font Family", "ultimate_vc"),
 							"param_name" => "features_font_family",
-							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 							"group" => "Typography"
 						),
 						array(
@@ -577,7 +577,7 @@ if(!class_exists("Ultimate_Pricing_Table")){
 							"type" => "ultimate_google_fonts",
 							"heading" => __("Font Family", "ultimate_vc"),
 							"param_name" => "button_font_family",
-							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
+							"description" => __("Select the font of your choice.","ultimate_vc")." ".__("You can","ultimate_vc")." <a target='_blank' rel='noopener' href='".admin_url('admin.php?page=bsf-google-font-manager')."'>".__("add new in the collection here","ultimate_vc")."</a>.",
 							"group" => "Typography"
 						),
 						array(

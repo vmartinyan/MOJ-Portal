@@ -298,9 +298,15 @@
 						jQuery(this).find('.feat-item l').css('border-top-color',block_bg);
 					else
 				    	jQuery(this).find('.feat-item l').css('border-bottom-color',block_bg);
+				
+					jQuery('.jstime.timeline_preloader').remove();
+					if(jQuery(this).find('div').hasClass('timeline-wrapper')){
+					jQuery(this).css('opacity','1');
+					}
+					else {
+						jQuery(this).remove();
+					}
 				});
-				jQuery('.jstime.timeline_preloader').remove();
-				jQuery('.smile-icon-timeline-wrap.jstime').css('opacity','1');
 			}, 1000);
 			jQuery(this).find('.timeline-wrapper').each(function(){
 				if(jQuery(this).text().trim()===''){
@@ -308,14 +314,14 @@
 				}
 			});
 			if( ! jQuery(this).find('.timeline-line ').next().hasClass('timeline-separator-text')){
-				jQuery(this).find('.timeline-line').prepend('<o></o>');
+				jQuery(this).find('.timeline-line').prepend('<span></span>');
 			}
 			var sep_col = jQuery(this).data('time_sep_color');
 			var sep_bg =jQuery(this).data('time_sep_bg_color');
 			var line_color = jQuery('.smile-icon-timeline-wrap .timeline-line').css('border-right-color');
 			jQuery(this).find('.timeline-dot').css('background-color',sep_bg);
-			jQuery(this).find('.timeline-line z').css('background-color',sep_bg);
-			jQuery(this).find('.timeline-line o').css('background-color',sep_bg);
+			jQuery(this).find('.timeline-line span').css('background-color',sep_bg);
+			jQuery(this).find('.timeline-line span').css('background-color',sep_bg);
 			jQuery(this).find('.timeline-separator-text').css('color',sep_col);
 			jQuery(this).find('.timeline-separator-text .sep-text').css('background-color',sep_bg);
 			jQuery(this).find('.ult-timeline-arrow s').css('border-color','rgba(255, 255, 255, 0) '+line_color);
@@ -703,12 +709,12 @@
 				if($(this).hasClass('timeline-post-left'))
 				{
 					$icon.css({'left':diff_pos,'right':'auto'});
-					$hbblock.css({'padding-left':((icon_width/2)+padding_fixer)+'px'});
+					//$hbblock.css({'padding-left':((icon_width/2)+padding_fixer)+'px'});
 				}
 				else if($(this).hasClass('timeline-post-right'))
 				{
 					$icon.css({'left':'auto','right':diff_pos});
-					$hbblock.css({'padding-right':((icon_width/2)+padding_fixer)+'px'});
+					//$hbblock.css({'padding-right':((icon_width/2)+padding_fixer)+'px'});
 				}
 				var blheight = $hbblock.height();
 				var blmidheight = blheight/2;

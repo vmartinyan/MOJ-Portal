@@ -74,11 +74,10 @@ if ( ! function_exists( 'get_bundled_plugins' ) ) {
 			'id'     => $prd_ids
 		);
 
-		$request = @wp_remote_post(
+		$request = wp_remote_post(
 			$path, array(
 				'body'      => $data,
-				'timeout'   => '30',
-				'sslverify' => false
+				'timeout'   => '30'
 			)
 		);
 
@@ -105,7 +104,7 @@ if ( ! function_exists( 'get_bundled_plugins' ) ) {
 			foreach ( $brainstrom_products as $type => $products ) {
 				
 				foreach ( $products as $key => $product ) {
-					$old_id = $product['id'];
+					$old_id = isset( $product['id'] ) ? $product['id'] : '';
 					$old_template = $product['template'];
 
 					$simple[ $type ][ $old_id ][ 'template' ] = isset( $brainstrom_products[ $type ][ $old_id ][ 'template' ] ) ? $brainstrom_products[ $type ][ $old_id ][ 'template' ] : '';
@@ -296,4 +295,3 @@ if(!function_exists('bsf_install_callback')) {
 }
 
 add_action( 'wp_ajax_bsf_install', 'bsf_install_callback' );
-add_action( 'wp_ajax_nopriv_bsf_install', 'bsf_install_callback' );

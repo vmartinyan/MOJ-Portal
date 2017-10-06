@@ -520,7 +520,7 @@ if ( ! class_exists( "Ultimate_Carousel" ) ) {
 							),
 							array(
 								"type"             => "ult_param_heading",
-								"text"             => "<span style='display: block;'><a href='http://bsf.io/bzyci' target='_blank'>" . __( "Watch Video Tutorial", "ultimate_vc" ) . " &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+								"text"             => "<span style='display: block;'><a href='http://bsf.io/bzyci' target='_blank' rel='noopener'>" . __( "Watch Video Tutorial", "ultimate_vc" ) . " &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 								"param_name"       => "notification",
 								'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 								"group"            => "General"
@@ -756,7 +756,9 @@ if ( ! class_exists( "Ultimate_Carousel" ) ) {
 			?>
 			<script type="text/javascript">
 				jQuery(document).ready(function ($) {
-					$('.ult-carousel-<?php echo $uid; ?>').slick({<?php echo $settings; ?>});
+					if( typeof jQuery('.ult-carousel-<?php echo $uid; ?>').slick == "function"){
+						$('.ult-carousel-<?php echo $uid; ?>').slick({<?php echo $settings; ?>});
+					}
 				});
 			</script>
 			<?php

@@ -646,7 +646,7 @@ if( !class_exists( "Ultimate_Range_Slider" ) ){
 								"heading"    => __( "Font Family", "ultimate_vc" ),
 								"param_name" => "title_font",
 								"value"      => "",
-								"description" => __("Click and select font of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select font of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"group"      => "Typography"
 							),
 
@@ -726,7 +726,7 @@ if( !class_exists( "Ultimate_Range_Slider" ) ){
 								"heading"    => __( "Font Family", "ultimate_vc" ),
 								"param_name" => "desc_font",
 								"value"      => "",
-								"description" => __("Click and select font of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select font of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"group"      => "Typography"
 							),
 

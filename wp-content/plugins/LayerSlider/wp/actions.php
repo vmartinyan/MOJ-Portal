@@ -209,6 +209,7 @@ function ls_register_form_actions() {
 		add_action('wp_ajax_ls_parse_date', 'ls_parse_date');
 		add_action('wp_ajax_ls_save_screen_options', 'ls_save_screen_options');
 		add_action('wp_ajax_ls_get_mce_sliders', 'ls_get_mce_sliders');
+		add_action('wp_ajax_ls_get_mce_slides', 'ls_get_mce_slides');
 		add_action('wp_ajax_ls_get_post_details', 'ls_get_post_details');
 		add_action('wp_ajax_ls_get_search_posts', 'ls_get_search_posts');
 		add_action('wp_ajax_ls_get_taxonomies', 'ls_get_taxonomies');
@@ -390,14 +391,110 @@ function ls_save_screen_options() {
 
 function ls_get_mce_sliders() {
 
-	$sliders = LS_Sliders::find(array('limit' => 50));
+	$sliders = LS_Sliders::find( array( 'limit' => 100 ) );
 	foreach($sliders as $key => $item) {
 		$sliders[$key]['preview'] = apply_filters('ls_preview_for_slider', $item );
 		$sliders[$key]['name'] = ! empty($item['name']) ? htmlspecialchars(stripslashes($item['name'])) : 'Unnamed';
 	}
 
-	die(json_encode($sliders));
+	die( json_encode( $sliders ) );
 }
+
+
+function ls_get_mce_slides() {
+
+	$sliderID = (int) $_GET['sliderID'];
+
+	$slider = LS_Sliders::find( $sliderID );
+	$slider = $slider['data'];
+	$slides = array();
+
+	// Slides
+	foreach($slider['layers'] as $slideKey => $slide ) {
+
+		// Add untouched slide data
+		$slides[ $slideKey ] = $slide;
+
+
+		if( ! empty( $slide['properties']['backgroundId'] ) ) {
+			$slides[ $slideKey ]['properties'][ 'background' ] = apply_filters('ls_get_image', $slide['properties']['backgroundId'], $slide['properties']['background']);
+			$slides[ $slideKey ]['properties'][ 'backgroundThumb' ] = apply_filters('ls_get_image', $slide['properties']['backgroundId'], $slide['properties']['background']);
+		}
+
+		if( ! empty( $slide['properties']['thumbnailId'] ) ) {
+			$slides[ $slideKey ]['properties'][ 'thumbnail' ] = apply_filters('ls_get_image', $slide['properties']['thumbnailId'], $slide['properties']['thumbnail']);
+		}
+
+		$slides[ $slideKey ]['properties']['title'] = ! empty( $slide['properties']['title'] ) ? stripslashes( $slide['properties']['title'] ) : 'Slide #'.($slideKey+1);
+
+		// Layers
+		foreach( $slide['sublayers'] as $layerKey => $layer ) {
+
+			// Ensure that magic quotes will not mess with JSON data
+			if( function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc() ) {
+				$layer['styles'] 		= stripslashes( $layer['styles'] );
+				$layer['transition'] 	= stripslashes( $layer['transition'] );
+			}
+
+			// Parse embedded JSON data
+			$layer['styles'] 		= !empty( $layer['styles'] ) ? (object) json_decode(stripslashes($layer['styles']), true) : new stdClass;
+			$layer['transition'] 	= !empty( $layer['transition'] ) ? (object) json_decode(stripslashes($layer['transition']), true) : new stdClass;
+			$layer['html'] 			= !empty( $layer['html'] ) ? stripslashes($layer['html']) : '';
+
+			// Add 'top', 'left' and 'wordwrap' to the styles object
+			if(isset($layer['top'])) { $layer['styles']->top = $layer['top']; unset($layer['top']); }
+			if(isset($layer['left'])) { $layer['styles']->left = $layer['left']; unset($layer['left']); }
+			if(isset($layer['wordwrap'])) { $layer['styles']->wordwrap = $layer['wordwrap']; unset($layer['wordwrap']); }
+
+			if( ! empty( $layer['transition']->showuntil ) ) {
+
+				$layer['transition']->startatout = 'transitioninend + '.$layer['transition']->showuntil;
+				$layer['transition']->startatouttiming = 'transitioninend';
+				$layer['transition']->startatoutvalue = $layer['transition']->showuntil;
+				unset($layer['transition']->showuntil);
+			}
+
+			if( ! empty( $layer['transition']->parallaxlevel ) ) {
+				$layer['transition']->parallax = true;
+			}
+
+			// Custom attributes
+			$layer['innerAttributes'] = !empty($layer['innerAttributes']) ?  (object) $layer['innerAttributes'] : new stdClass;
+			$layer['outerAttributes'] = !empty($layer['outerAttributes']) ?  (object) $layer['outerAttributes'] : new stdClass;
+
+
+			// v6.5.6: Convert old checkbox media settings to the new
+			// select based options.
+			if( isset( $layer['transition']->controls ) ) {
+				if( true === $layer['transition']->controls ) {
+					$layer['transition']->controls = 'auto';
+				} elseif( false === $layer['transition']->controls ) {
+					$layer['transition']->controls = 'disabled';
+				}
+			}
+
+			$slides[ $slideKey ]['sublayers'][ $layerKey ] = $layer;
+
+			if( ! empty( $layer['imageId'] ) ) {
+				$slides[ $slideKey ]['sublayers'][ $layerKey ][ 'image' ] = apply_filters('ls_get_image', $layer['imageId'], $layer['image']);
+				$slides[ $slideKey ]['sublayers'][ $layerKey ][ 'imageThumb' ] = apply_filters('ls_get_image', $layer['imageId'], $layer['image']);
+			}
+
+			if( ! empty( $layer['posterId'] ) ) {
+				$slides[ $slideKey ]['sublayers'][ $layerKey ][ 'poster' ] = apply_filters('ls_get_image', $layer['posterId'], $layer['poster']);
+				$slides[ $slideKey ]['sublayers'][ $layerKey ][ 'posterThumb' ] = apply_filters('ls_get_image', $layer['posterId'], $layer['poster']);
+			}
+
+			$slides[ $slideKey ]['sublayers'][ $layerKey ]['subtitle'] = ! empty( $layer['subtitle'] ) ? substr( stripslashes( $layer['subtitle'] ), 0, 32) : 'Layer #'.($layerKey+1);
+		}
+
+		$slides[ $slideKey ][ 'sublayers' ] = array_reverse( $slides[ $slideKey ][ 'sublayers' ] );
+	}
+
+	die( json_encode( $slides ) );
+}
+
+
 
 function ls_save_slider() {
 
@@ -538,7 +635,11 @@ function ls_revert_slider( ) {
 	// Security check
 	check_admin_referer('ls-revert-slider-'.$sliderId);
 
+	// Revert back to revision
 	LS_Revisions::revert( $sliderId, $revisionId );
+
+	// Delete transient cache
+	delete_transient( 'ls-slider-data-'.$sliderId );
 
 	wp_redirect( admin_url('admin.php?page=layerslider&action=edit&id='.$sliderId) );
 	die();

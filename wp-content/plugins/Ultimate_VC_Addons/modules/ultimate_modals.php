@@ -39,19 +39,35 @@ if(!class_exists('Ultimate_Modals'))
 			
 			Ultimate_VC_Addons::ultimate_register_style( 'ultimate-modal', 'modal' );
 		}
+
+		function uavc_is_medium_device() {
+
+			$is_medium = false;
+			if ( empty($_SERVER['HTTP_USER_AGENT']) ) {
+				$is_medium = false;
+			} else if ( strpos( $_SERVER['HTTP_USER_AGENT'], 'iPad' ) !== false ) {
+				$is_medium = true;
+			} else {
+				$is_medium = false;
+			}
+			return $is_medium;
+		}
 		// Add shortcode for icon-box
 		function modal_shortcode($atts, $content = null)
 		{
 			$row_setting = '';
 			// enqueue js
-			$icon = $modal_on = $modal_contain = $btn_size = $btn_bg_color = $btn_txt_color = $btn_text = $read_text = $txt_color = $modal_title = $modal_size = $el_class = $modal_style = $icon_type = $icon_img = $btn_img = $overlay_bg_color = $overlay_bg_opacity = $modal_on_align = $content_bg_color = $content_text_color = $header_bg_color = $header_text_color = $modal_border_style = $modal_border_width = $modal_border_color = $modal_border_radius = '';
-			$header_font = $header_font_style = $header_font_size = $header_line_height = $content_font = $content_font_style = $content_font_size = $content_line_height = $trigger_typography = $trigger_text_font = $trigger_text_font_style = $trigger_text_font_size = $trigger_text_line_height = $button_text_font = $button_text_font_style = $button_text_font_size = $button_text_line_height = '';
+
+			$ult_hide_modal = $ult_hide_modal_tablet = $ult_hide_modal_mobile = '';
+			$icon = $modal_on  = $close_icon_position = $modal_contain = $btn_size = $btn_bg_color = $btn_bg_hover_color = $btn_txt_color = $btn_text = $read_text = $txt_color = $modal_title = $modal_size = $el_class = $modal_style = $icon_type = $icon_img = $btn_img = $overlay_bg_color = $img_close_background_color = $img_size = $overlay_bg_opacity = $modal_on_align = $content_bg_color = $content_text_color = $header_bg_color = $header_text_color = $modal_border_style = $modal_border_width = $modal_border_color = $modal_border_radius = '';
+			$header_font = $header_font_style = $header_font_size = $header_line_height = $content_font = $content_font_style = $content_font_size = $content_line_height = $trigger_typography = $trigger_text_font = $trigger_text_font_style = $trigger_text_font_size = $trigger_text_line_height = $button_text_font = $button_text_font_style = $button_text_font_size = $button_text_line_height = $keypress_enable_controls = $overlay_click_enable_controls = '';
 			extract(shortcode_atts(array(
 				'icon_type' => 'none',
 				'icon' => '',
 				'icon_img' => '',
 				'modal_on' => 'ult-button',
 				'modal_on_selector' => '',
+				'close_icon_position' => 'top-right',
 				'modal_contain' => 'ult-html',
 				'onload_delay'=>'2',
 				'init_extra_class' => '',
@@ -59,7 +75,11 @@ if(!class_exists('Ultimate_Modals'))
 				'overlay_bg_color' => '#333333',
 				'overlay_bg_opacity' => '80',
 				'btn_bg_color' => '#333333',
+				'btn_bg_hover_color' => '',
 				'btn_txt_color' => '#FFFFFF',
+				'img_close_background_color' => '',
+				'keypress_enable_controls' => 'keypress_controls',
+				'overlay_click_enable_controls' => 'overlay_click_controls',
 				'btn_text' => '',
 				'read_text' => '',
 				'txt_color' => '#f60f60',
@@ -77,6 +97,7 @@ if(!class_exists('Ultimate_Modals'))
 				'modal_border_color' => '#333333',
 				'modal_border_radius' => '0',
 				'el_class' => '',
+				'img_size' => '',
 				'header_typography'=> '',
 				'header_font'=>'',
 				'header_font_style'=>'',
@@ -94,6 +115,9 @@ if(!class_exists('Ultimate_Modals'))
 				'button_text_font_style'=>'',
 				'button_text_font_size'=>'',
 				'button_text_line_height'=>'',
+				"ult_hide_modal"				=> "",
+				"ult_hide_modal_tablet"		=> "",
+				"ult_hide_modal_mobile"		=> "",
 				'css_modal_box' => '',
 				),$atts,'ultimate_modal'));
 			$css_modal_box = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class( $css_modal_box, ' ' ), "ultimate_modal", $atts );
@@ -234,6 +258,17 @@ if(!class_exists('Ultimate_Modals'))
 				}
 			}
 
+			if( $modal_on == 'onload' && $ult_hide_modal_mobile != '' && $ult_hide_modal != '' ) {
+				if( ( ! Ultimate_Modals::uavc_is_medium_device() ) && wp_is_mobile()){
+					$ult_hide_modal = 'modal-hide-'.$ult_hide_modal_mobile;
+				}
+			}
+			if( $modal_on == 'onload' && $ult_hide_modal_tablet != '' && $ult_hide_modal != '' ) {
+				if( Ultimate_Modals::uavc_is_medium_device()){
+					$ult_hide_modal = ' modal-hide-'.$ult_hide_modal_tablet;
+				}
+			}
+			
 			$uniq = uniqid('', true);
 			$uniq = str_replace('.', '-', $uniq);
 			if($icon_type == 'custom'){
@@ -253,7 +288,14 @@ if(!class_exists('Ultimate_Modals'))
 				$modal_data_class = '';
 			}
 
-				$html .= '<div id="'.esc_attr($modal_trgs_id).'" class="ult-modal-input-wrapper '.esc_attr($is_vc_49_plus).' '.esc_attr($init_extra_class).' '.esc_attr($css_modal_box).'">';
+			$keypress_controls = $overlay_controls = '';
+			if($keypress_enable_controls == 'keypress_controls') {
+				$keypress_controls = 'data-keypress-control="keypress-control-enable"';
+			}
+			if($overlay_click_enable_controls == 'overlay_click_controls') {
+				$overlay_controls = 'data-overlay-control="overlay-control-enable"';
+			}
+				$html .= '<div id="'.esc_attr($modal_trgs_id).'" class="ult-modal-input-wrapper '.esc_attr($is_vc_49_plus).' '.esc_attr($init_extra_class).' '.esc_attr($css_modal_box).' '.esc_attr($ult_hide_modal).' " '.$keypress_controls.' '.$overlay_controls.'>';
 
 			if($modal_on == "button"){
 				if($btn_bg_color !== ''){
@@ -266,8 +308,16 @@ if(!class_exists('Ultimate_Modals'))
 				if($el_class != '')
 					$modal_class .= ' '.$el_class.'-button ';
 
+				if($btn_bg_hover_color != '')
+				{
+					$html .= '<style>
+					.btn-modal.btn-id-'.esc_attr($uniq).':hover {
+						background-color: '.$btn_bg_hover_color.' !important;
+					}
+					</style>';
+				}
 
-				$html .= '<button '.$button_trg_data_list.' style="'.esc_attr($style).' '.esc_attr($button_text_style).'" data-class-id="content-'.esc_attr($uniq).'" class="btn-modal ult-responsive btn-primary btn-modal-'.esc_attr($btn_size).' '.esc_attr($modal_class).' ult-align-'.esc_attr($modal_on_align).'" '.$modal_data_class.'>'.$btn_text.'</button>';
+				$html .= '<button '.$button_trg_data_list.' style="'.esc_attr($style).' '.esc_attr($button_text_style).'" data-class-id="content-'.esc_attr($uniq).'" class="btn-modal ult-responsive btn-primary btn-modal-'.esc_attr($btn_size).' '.esc_attr($modal_class).' ult-align-'.esc_attr($modal_on_align).' btn-id-'.esc_attr($uniq).'" '.$modal_data_class.'>'.$btn_text.'</button>';
 
 			} elseif($modal_on == "image"){
 				if($btn_img !==''){
@@ -350,6 +400,34 @@ if(!class_exists('Ultimate_Modals'))
 				$html .= "\n".'<div class="ult-overlay content-'.esc_attr($uniq).' '.esc_attr($el_class).'" data-class="content-'.esc_attr($uniq).'" id="button-click-overlay" style="'.esc_attr($overlay_bg).' display:none;">';
 			}
 			$html .= "\n\t".'<div class="ult_modal ult-fade ult-'.esc_attr($modal_size).'">';
+
+			//Close img size
+			$img_size_values = $img_background_color = $img_edge_position = $custom_padding_img = '';
+			if($img_size != '')
+					$img_size_values = 'width:'.$img_size.'px;height:'.$img_size.'px;';
+			if($img_close_background_color != ''){
+				if($img_size != '' && $img_size > 39 && $img_size < 61) {
+					$custom_padding_img = '15';
+				}
+				else {
+					$custom_padding_img = '10';
+				}
+			}
+
+			if($img_close_background_color != '')
+				$img_background_color = 'background-color: '.$img_close_background_color.';border-radius: 50%;padding:'.$custom_padding_img.'px;box-sizing: content-box;';
+
+			if($img_size != '' && $close_icon_position == 'popup-edge-top-right')
+				$img_edge_position = 'top:-'.($img_size/2 + $custom_padding_img).'px;right:-'.($img_size/2 + $custom_padding_img).'px;';
+
+			if($img_size != '' && $close_icon_position == 'popup-edge-top-left')
+				$img_edge_position = 'top:-'.($img_size/2 + $custom_padding_img).'px;left:-'.($img_size/2 + $custom_padding_img).'px;';
+
+			
+			if($close_icon_position == 'popup-top-right' || $close_icon_position == 'popup-top-left'
+			   || $close_icon_position == 'popup-edge-top-right' || $close_icon_position == 'popup-edge-top-left' ){
+			 $html .= "\n\t".'<div class="ult-overlay-close '.esc_attr($close_icon_position).'" style="'.esc_attr($img_size_values).' '.esc_attr($img_background_color).' '.esc_attr($img_edge_position).'"><div class="ult-overlay-close-inside">Close</div></div>';
+			}
 			$html .= "\n\t\t".'<div id="'.esc_attr($modal_uid).'" class="ult_modal-content ult-hide" style="'.esc_attr($border_style).'">';
 			if($modal_title !== ''){
 				$html .= "\n\t\t\t".'<div class="ult_modal-header" style="'.esc_attr($header_style).'">';
@@ -361,7 +439,9 @@ if(!class_exists('Ultimate_Modals'))
 			$html .= "\n\t\t\t".'</div>';
 			$html .= "\n\t".'</div>';
 			$html .= "\n\t".'</div>';
-			$html .= "\n\t".'<div class="ult-overlay-close">Close</div>';
+			if($close_icon_position == 'top-right' || $close_icon_position == 'top-left' ){
+			 $html .= "\n\t".'<div class="ult-overlay-close '.esc_attr($close_icon_position).'" style="'.esc_attr($img_size_values).' '.esc_attr($img_background_color).'"><div class="ult-overlay-close-inside">Close</div></div>';
+			}
 			$html .= "\n".'</div>';
 
 			$is_preset = false; //Display settings for Preset
@@ -419,7 +499,7 @@ if(!class_exists('Ultimate_Modals'))
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "icon_type","value" => array("selector")),
 								"group" => "General",
 							),
@@ -463,8 +543,8 @@ if(!class_exists('Ultimate_Modals'))
 									__("Vimeo Video","ultimate_vc") => "ult-vimeo",
 									__("Hosted Video","ultimate_vc") => "ult-video-shortcode",
 								),
-								"description" => __("Please put the embed code in the content for videos, eg: <a href='http://bsf.io/kuv3-' target='_blank'>http://bsf.io/kuv3-</a><br>
-									For hosted video - Add any video with WordPress media uploader or with <a href='https://codex.wordpress.org/Video_Shortcode' target='_blank'>[video]</a> shortcode.", "ultimate_vc"),
+								"description" => __("Please put the embed code in the content for videos, eg: <a href='http://bsf.io/kuv3-' target='_blank' rel='noopener'>http://bsf.io/kuv3-</a><br>
+									For hosted video - Add any video with WordPress media uploader or with <a href='https://codex.wordpress.org/Video_Shortcode' target='_blank' rel='noopener'>[video]</a> shortcode.", "ultimate_vc"),
 								"group" => "General",
 							),
 							array(
@@ -501,6 +581,51 @@ if(!class_exists('Ultimate_Modals'))
 								"group" => "General",
 								),
 							array(
+								'type' => 'ult_switch',
+								'heading' => __('Hide Modal','ultimate_vc'),
+								'param_name' => 'ult_hide_modal',
+								'value' => '',
+								'options' => array(
+									'ult_hide_modal_value' => array(
+										'on' => __('Yes','ultimate_vc'),
+										'off' => __('No','ultimate_vc')
+									)
+								),
+								'edit_field_class' => 'uvc-divider last-uvc-divider vc_column vc_col-sm-12',
+								"dependency"=>Array("element"=>"modal_on","value"=>array("onload")),
+								"group" => "General",
+							),
+							array(
+								'type' => 'ult_switch',
+								'heading' => '<i class="dashicons dashicons-tablet" style="transform: rotate(90deg);"></i> '.__('Tablet','ultimate_vc'),
+								'param_name' => 'ult_hide_modal_tablet',
+								'value' => '',
+								'options' => array(
+									'tablet' => array(
+										'on' => __('Yes','ultimate_vc'),
+										'off' => __('No','ultimate_vc')
+									)
+								),
+								"group" => "General",
+								"dependency" => Array("element" => "ult_hide_modal","value" => array("ult_hide_modal_value")),
+								'edit_field_class' => 'vc_column vc_col-sm-3',
+							),
+							array(
+								'type' => 'ult_switch',
+								'heading' => '<i class="dashicons dashicons-smartphone"></i> '.__('Mobile','ultimate_vc'),
+								'param_name' => 'ult_hide_modal_mobile',
+								'value' => '',
+								'options' => array(
+									'mobile' => array(
+										'on' => __('Yes','ultimate_vc'),
+										'off' => __('No','ultimate_vc')
+									)
+								),
+								"group" => "General",
+								"dependency" => Array("element" => "ult_hide_modal","value" => array("ult_hide_modal_value")),
+								'edit_field_class' => 'vc_column vc_col-sm-3',
+							),
+							array(
 								"type" => "ult_img_single",
 								"heading" => __("Upload Image", "ultimate_vc"),
 								"param_name" => "btn_img",
@@ -531,6 +656,16 @@ if(!class_exists('Ultimate_Modals'))
 								"value" => "#333333",
 								"group" => "General",
 								"description" => __("Give it a nice paint!", "ultimate_vc"),
+								"dependency" => Array("element" => "modal_on","value" => array("ult-button")),
+								"group" => "General",
+							),
+							array(
+								"type" => "colorpicker",
+								"heading" => __("Button Background Hover Color", "ultimate_vc"),
+								"param_name" => "btn_bg_hover_color",
+								"value" => "",
+								"group" => "General",
+								//"description" => __("Give it a nice paint!", "ultimate_vc"),
 								"dependency" => Array("element" => "modal_on","value" => array("ult-button")),
 								"group" => "General",
 							),
@@ -717,10 +852,104 @@ if(!class_exists('Ultimate_Modals'))
 							array(
 								"type" => "ult_param_heading",
 								//"text" => "<span style='display: block;'><a href='https://goo.gl/1kCZkG' target='_blank'>".__("Need More Features?","ultimate_vc")." &nbsp;&nbsp;&nbsp;</a><a href='http://bsf.io/ei2r5' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
-								"text" => "<span style='display: block;'><a href='https://goo.gl/1kCZkG' target='_blank'>".__("Need More Features?","ultimate_vc")." &nbsp;&nbsp;&nbsp;</a></span>",
+								"text" => "<span style='display: block;'><a href='https://goo.gl/1kCZkG' target='_blank' rel='noopener'>".__("Need More Features?","ultimate_vc")." &nbsp;&nbsp;&nbsp;</a></span>",
 								"param_name" => "notification",
 								'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 								"group" => "General",
+							),
+
+							//Close Button
+							array(
+								"type" => "ult_param_heading",
+								"text" => __("Close Button Settings","ultimate_vc"),
+								"param_name" => "close_settings",
+								//"dependency" => Array("element" => "main_heading", "not_empty" => true),
+								"group" => "Close Button",
+								"class" => "ult-param-heading",
+								'edit_field_class' => 'ult-param-heading-wrapper no-top-margin vc_column vc_col-sm-12',
+							),
+							array(
+								"type"=>"number",
+								"heading"=>__("Size","ultimate_vc"),
+								"param_name"=>"img_size",
+								"value" => 80,
+								"min" => 1,
+								"max" => 200,
+								"suffix"=>"px",
+								"description"=>__("Default is 80px","ultimate_vc"),
+								// "dependency"=>Array("element"=>"modal_on","value"=>array("onload")),
+								"group" => "Close Button",
+								),
+							array(
+								"type" => "colorpicker",
+								"heading" => __("Background Color", "ultimate_vc"),
+								"param_name" => "img_close_background_color",
+								"value" => "",
+								"description" => __("Give it a nice paint!", "ultimate_vc"),
+								"group" => "Close Button",
+							),
+							array(
+								"type" => "dropdown",
+								"heading" => __("Close Icon Position", "ultimate_vc"),
+								"param_name" => "close_icon_position",
+								"value" => array(
+									__("Window - Top Right","ultimate_vc") => "top-right",
+									__("Window - Top Left","ultimate_vc") => "top-left",
+									__("Popup - Top Right","ultimate_vc") => "popup-top-right",
+									__("Popup - Top Left","ultimate_vc") => "popup-top-left",
+									__("Popup Edge - Top Right","ultimate_vc") => "popup-edge-top-right",
+									__("Popup Edge - Top Left","ultimate_vc") => "popup-edge-top-left",
+								),
+								"description" => __("Where should the popup close icon appear?", "ultimate_vc"),
+								//"dependency"=>Array("element"=>"modal_size","value"=>array("medium", "block")),
+								"group" => "Close Button",
+							),
+							array(
+								"type" => "ult_param_heading",
+								"text" => __("Close Modal On","ultimate_vc"),
+								"param_name" => "close_modal_on",
+								//"dependency" => Array("element" => "main_heading", "not_empty" => true),
+								"group" => "Close Button",
+								"class" => "ult-param-heading",
+								'edit_field_class' => 'ult-param-heading-wrapper no-top-margin vc_column vc_col-sm-12',
+							),
+							array(
+								"type" => "ult_switch",
+								"class" => "",
+								"heading" => __("ESC Keypress", "ultimate_vc"),
+								"param_name" => "keypress_enable_controls",
+								//"admin_label" => true,
+								"value" => "keypress_controls",
+								"options" => array(
+										"keypress_controls" => array(
+											"label" => "",
+											"on" => __("Yes","ultimate_vc"),
+											"off" => __("No","ultimate_vc"),
+										)
+									),
+								// "description" => __("Display play / pause controls for the video on bottom right position.", "ultimate_vc"),
+								// "dependency" => Array("element" => "bg_type","value" => array("video")),
+								'edit_field_class' => 'vc_column vc_col-sm-4',
+								"group" => 'Close Button',
+							),
+							array(
+								"type" => "ult_switch",
+								"class" => "",
+								"heading" => __("Overlay Click", "ultimate_vc"),
+								"param_name" => "overlay_click_enable_controls",
+								//"admin_label" => true,
+								"value" => "overlay_click_controls",
+								"options" => array(
+										"overlay_click_controls" => array(
+											"label" => "",
+											"on" => __("Yes","ultimate_vc"),
+											"off" => __("No","ultimate_vc"),
+										)
+									),
+								// "description" => __("Display play / pause controls for the video on bottom right position.", "ultimate_vc"),
+								// "dependency" => Array("element" => "bg_type","value" => array("video")),
+								'edit_field_class' => 'vc_column vc_col-sm-4',
+								"group" => 'Close Button',
 							),
 
 							//typography
@@ -988,6 +1217,7 @@ if(!class_exists('Ultimate_Modals'))
 		}// end function icon_box_init
 	}//Class Ultimate_Modals end
 }
+
 if(class_exists('Ultimate_Modals'))
 {
 	$Ultimate_Modals = new Ultimate_Modals;

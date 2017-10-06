@@ -62,9 +62,9 @@ if(!class_exists('AIO_creative_link'))
 				$href = vc_build_link($btn_link);
 
 				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-				$alt_text 		= ( isset( $href['title'] ) && $href['title'] !== '' ) ? $href['title'] : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+				$alt_text 		= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 				
 				if($url==''){
 					$url="javascript:void(0);";
@@ -341,7 +341,7 @@ if($link_hover_style=='Style_2'){
 
 			$output .='<span id="'.esc_attr($creative_link_id).'" class="ult_main_cl '.esc_attr($is_vc_49_plus).' '.esc_attr($el_class).' '.esc_attr($style11_css_class).'" >
 	 			<span class="'.esc_attr($class).'  ult_crlink" >
-					<a '.$creative_link_data_list.' href = "'.esc_url($url).'" '.$target.' class="ult_colorlink ult-responsive '.esc_attr($css_class) .'" style="'.esc_attr($colorstyle).' "  '.$data_link.' title="'.esc_attr($alt_text).'" '. $rel .'>
+					<a '.$creative_link_data_list.' '. Ultimate_VC_Addons::uavc_link_init($url, $target, $alt_text, $rel ).' class="ult_colorlink ult-responsive '.esc_attr($css_class) .'" style="'.esc_attr($colorstyle).' "  '.$data_link.'>
 						'.$before.'
 						<span data-hover="'.esc_attr($text).'" style="'.esc_attr($title_style).';'.esc_attr($span_style).';'.esc_attr($ult_style11css).'" class="ult_btn10_span  '.esc_attr($ult_style2css).' ">'.$text.'</span>
 						'.$after.'
@@ -354,7 +354,7 @@ if($link_hover_style=='Style_2'){
 
 			$output .='<span id="'.esc_attr($creative_link_id).'" class=" ult_main_cl  '.esc_attr($el_class).'" >
 	 			<span  class="'.esc_attr($class).'  ult_crlink" id="'.esc_attr($id).'">
-					<a '.$creative_link_data_list.' href = "'.esc_url($url).'" '.$target.' class="ult_colorlink  ult-responsive "  style="'.esc_attr($colorstyle).' "  '.$data_link.' title="'.esc_attr($alt_text).'" '. $rel .'>
+					<a '.$creative_link_data_list.' '. Ultimate_VC_Addons::uavc_link_init($url, $target, $alt_text, $rel ).' class="ult_colorlink  ult-responsive "  style="'.esc_attr($colorstyle).' "  '.$data_link.'>
 						<span   class="ult_btn10_span  '.esc_attr($css_class) .'" style="'.esc_attr($span_style).'" data-color="'.esc_attr($border_color).'"  data-bhover="'.esc_attr($bghovercolor).'" data-bstyle="'.esc_attr($border_style).'">
 							<span class="ult_link_btm  ult_btn10_link_top" style="'.esc_attr($span_style1).'">
 								<span style="'.esc_attr($title_style).';color:'.esc_attr($text_hovercolor).'" class="style10-span">'.$text.'</span>
@@ -442,7 +442,7 @@ if($link_hover_style=='Style_2'){
 								"type" => "ultimate_google_fonts",
 								"heading" => __("Title Font Family", "ultimate_vc"),
 								"param_name" => "font_family",
-								"description" => __("Select the font of your choice. ","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank'>".__("add new in the collection here","ultimate_vc")."</a>.",
+								"description" => __("Select the font of your choice. ","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-google-font-manager' target='_blank' rel='noopener'>".__("add new in the collection here","ultimate_vc")."</a>.",
 								"group" => "Typography ",
 								),
 

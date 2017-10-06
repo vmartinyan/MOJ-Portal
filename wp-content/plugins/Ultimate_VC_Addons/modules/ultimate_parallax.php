@@ -484,7 +484,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 							//__("Animated Background","upb_parallax") => "animated",
 							//__("No","upb_parallax") => "no_bg",
 							),
-						"description" => __("Select the kind of background would you like to set for this row.","ultimate_vc")." ".__("Not sure?","ultimate_vc")." ".__("See Narrated","ultimate_vc")." <a href='https://www.youtube.com/watch?v=Qxs8R-uaMWk&list=PL1kzJGWGPrW981u5caHy6Kc9I1bG1POOx' target='_blank'>".__("Video Tutorials","ultimate_vc")."</a>",
+						"description" => __("Select the kind of background would you like to set for this row.","ultimate_vc")." ".__("Not sure?","ultimate_vc")." ".__("See Narrated","ultimate_vc")." <a href='https://www.youtube.com/watch?v=Qxs8R-uaMWk&list=PL1kzJGWGPrW981u5caHy6Kc9I1bG1POOx' target='_blank' rel='noopener'>".__("Video Tutorials","ultimate_vc")."</a>",
 						"group" => $group_name,
 					)
 				);
@@ -493,7 +493,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 						"class" => "",
 						"heading" => __("Gradient Type", "ultimate_vc"),
 						"param_name" => "bg_grad",
-						"description" => __('At least two color points should be selected.','ultimate_vc').' <a href="https://www.youtube.com/watch?v=yE1M4AKwS44" target="_blank">'.__('Video Tutorial','ultimate_vc').'</a>',
+						"description" => __('At least two color points should be selected.','ultimate_vc').' <a href="https://www.youtube.com/watch?v=yE1M4AKwS44" target="_blank" rel="noopener">'.__('Video Tutorial','ultimate_vc').'</a>',
 						"dependency" => array("element" => "bg_type","value" => array("grad")),
 						"group" => $group_name,
 					)
@@ -559,7 +559,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 								__("Repeat Y", "ultimate_vc") => "repeat-y",
 								__("No Repeat", "ultimate_vc") => "no-repeat",
 							),
-						"description" => __("Options to control repeatation of the background image.","ultimate_vc")." ".__("Learn on","ultimate_vc")." <a href='http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-repeat' target='_blank'>".__("W3School","ultimate_vc")."</a>",
+						"description" => __("Options to control repeatation of the background image.","ultimate_vc")." ".__("Learn on","ultimate_vc")." <a href='http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-repeat' target='_blank' rel='noopener'>".__("W3School","ultimate_vc")."</a>",
 						"dependency" => Array("element" => "parallax_style","value" => array("vcpb-default","vcpb-fix","vcpb-vz-jquery","vcpb-hz-jquery")),
 						"group" => $group_name,
 					)
@@ -575,7 +575,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 								__("Initial", "ultimate_vc") => "initial",
 								/*__("Automatic", "upb_parallax") => "automatic", */
 							),
-						"description" => __("Options to control repeatation of the background image.","ultimate_vc")." ".__("Learn on","ultimate_vc")." <a href='http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=50%25' target='_blank'>".__("W3School","ultimate_vc")."</a>",
+						"description" => __("Options to control repeatation of the background image.","ultimate_vc")." ".__("Learn on","ultimate_vc")." <a href='http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=50%25' target='_blank' rel='noopener'>".__("W3School","ultimate_vc")."</a>",
 						"dependency" => Array("element" => "parallax_style","value" => array("vcpb-default","vcpb-animated","vcpb-fix","vcpb-vz-jquery","vcpb-hz-jquery")),
 						"group" => $group_name,
 					)
@@ -675,7 +675,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 						"heading" => __("Link to the video in WebM / Ogg Format", "ultimate_vc"),
 						"param_name" => "video_url_2",
 						"value" => "",
-						"description" => __("IE, Chrome & Safari","ultimate_vc")." <a href='http://www.w3schools.com/html/html5_video.asp' target='_blank'>".__("support","ultimate_vc")."</a> ".__("MP4 format, while Firefox & Opera prefer WebM / Ogg formats.","ultimate_vc")." ".__("You can upload the video through","ultimate_vc")." <a href='".home_url()."/wp-admin/media-new.php' target='_blank'>".__("WordPress Media Library","ultimate_vc")."</a>.",
+						"description" => __("IE, Chrome & Safari","ultimate_vc")." <a href='http://www.w3schools.com/html/html5_video.asp' target='_blank' rel='noopener'>".__("support","ultimate_vc")."</a> ".__("MP4 format, while Firefox & Opera prefer WebM / Ogg formats.","ultimate_vc")." ".__("You can upload the video through","ultimate_vc")." <a href='".home_url()."/wp-admin/media-new.php' target='_blank' rel='noopener'>".__("WordPress Media Library","ultimate_vc")."</a>.",
 						"dependency" => Array("element" => "bg_type","value" => array("video")),
 						"group" => $group_name,
 					)
@@ -1042,7 +1042,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 					'vc_row',
 					array(
 						'type' => 'ult_switch',
-						'heading' => __('Seperator ','ultimate_vc'),
+						'heading' => __('Separator ','ultimate_vc'),
 						'param_name' => 'seperator_enable',
 						'value' => '',
 						'options' => array(
@@ -1210,7 +1210,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 						"param_name" => "icon",
 						"value" => "",
 						'group' => $group_effects,
-						"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+						"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 						"dependency" => Array("element" => "icon_type","value" => array("selector")),
 					)
 				);
@@ -1517,7 +1517,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 					'vc_row',
 					array(
 						'type' => 'ult_param_heading',
-						'text' => __('In order for Effects below to work, you must select something except "default" in background tab.','ultimate_vc').' '.__('May be single color.').' <br> '.__('Screenshot','ultimate_vc').' - <a href="https://cloudup.com/cc1J8ZlcdZW" target="_blank">https://cloudup.com/cc1J8ZlcdZW</a>',
+						'text' => __('In order for Effects below to work, you must select something except "default" in background tab.','ultimate_vc').' '.__('May be single color.').' <br> '.__('Screenshot','ultimate_vc').' - <a href="https://cloudup.com/cc1J8ZlcdZW" target="_blank" rel="noopener">https://cloudup.com/cc1J8ZlcdZW</a>',
 						'param_name' => 'notification',
 						'edit_field_class' => 'ult-param-important-wrapper ult-dashicon vc_column vc_col-sm-12',
 						'group' => $group_effects,

@@ -74,10 +74,11 @@ if(!function_exists('ult_price_generate_design04')) {
 		}
 		if($package_link !== ""){
 			$href 			= vc_build_link($package_link);
+
 			$link 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 		} else {
 			$link = "#";
 		}
@@ -359,7 +360,7 @@ if(!function_exists('ult_price_generate_design04')) {
 						</div><!--ult_price_features-->';
 			if($package_btn_text !== ""){
 				$output .= '<div id="'.esc_attr($price_table_button_id).'" class="ult_price_link">
-							<a '.$price_table_button_data_list.' href="'.esc_url($link).'" '.$target.' '. $link_title .' '. $rel .' class="ult_price_action_button ult-responsive" style="'.esc_attr($featured_style).' '.$button_inline.'">'.$package_btn_text.'</a>
+							<a '.$price_table_button_data_list.' '. Ultimate_VC_Addons::uavc_link_init($link, $target, $link_title, $rel ).' class="ult_price_action_button ult-responsive" style="'.esc_attr($featured_style).' '.$button_inline.'">'.$package_btn_text.'</a>
 						</div><!--ult_price_link-->';
 			}
 			$output .= '<div class="ult_clr"></div>

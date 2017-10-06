@@ -168,11 +168,12 @@ if(!class_exists('AIO_Icons_Box'))
 							if($read_more == 'title')
 							{
 								$href 			= vc_build_link($link);
+
 								$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-								$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-								$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
-								$link_prefix = '<a class="aio-icon-box-link" href="'. esc_url($url) .'" '. $target .' '. $rel .' '. $link_title .'>';
+								$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+								$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+								$link_prefix = '<a class="aio-icon-box-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>';
 								$link_sufix = '</a>';
 							}
 						}
@@ -190,12 +191,13 @@ if(!class_exists('AIO_Icons_Box'))
 							if($read_more == 'more')
 							{
 								$href 			= vc_build_link($link);
-								$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-								$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-								$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
 
-								$more_link = '<a class="aio-icon-read x" href="'. esc_url($url) .'" '. $target .' '. $rel .' '. $link_title .'>';
+								$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+								$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+								$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+								$more_link = '<a class="aio-icon-read x" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>';
 								$more_link .= $read_text;
 								$more_link .= '&nbsp;&raquo;';
 								$more_link .= '</a>';
@@ -223,12 +225,13 @@ if(!class_exists('AIO_Icons_Box'))
 							if($read_more == 'title')
 							{
 								$href = vc_build_link($link);
-								$url 	= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-								$target = ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-								$rel 	= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
 
-								$link_prefix = '<a class="aio-icon-box-link" href="'. esc_url($url) .'" '. $target .' '. $rel .' '. $link_title .'>';
+								$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+								$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+								$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+								$link_prefix = '<a class="aio-icon-box-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>';
 								$link_sufix = '</a>';
 							}
 						}
@@ -242,12 +245,13 @@ if(!class_exists('AIO_Icons_Box'))
 							if($read_more == 'more')
 							{
 								$href = vc_build_link($link);
-								$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-								$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-								$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
 
-								$more_link = '<a class="aio-icon-read xx" href="'. esc_url($url) .'" '. $target .' '. $rel .' '. $link_title .'>';
+								$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+								$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+								$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+								$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+								$more_link = '<a class="aio-icon-read xx" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>';
 								$more_link .= $read_text;
 								$more_link .= '&nbsp;&raquo;';
 								$more_link .= '</a>';
@@ -267,12 +271,13 @@ if(!class_exists('AIO_Icons_Box'))
 				if($read_more == 'box')
 				{
 					$href = vc_build_link($link);
-					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-					$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
 
-					$output = $prefix.'<a class="aio-icon-box-link" href="'. esc_attr($url) .'" '. $target .' '. $rel .' '. $link_title .'>'.$html.'</a>'.$suffix;
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+
+					$output = $prefix.'<a class="aio-icon-box-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'>'.$html.'</a>'.$suffix;
 				} else {
 					$output = $prefix.$html.$suffix;
 				}
@@ -331,7 +336,7 @@ if(!class_exists('AIO_Icons_Box'))
 								"heading" => __("Select Icon ","ultimate_vc"),
 								"param_name" => "icon",
 								"value" => "",
-								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank'>".__("add new here","ultimate_vc")."</a>.",
+								"description" => __("Click and select icon of your choice. If you can't find the one that suits for your purpose","ultimate_vc").", ".__("you can","ultimate_vc")." <a href='admin.php?page=bsf-font-icon-manager' target='_blank' rel='noopener'>".__("add new here","ultimate_vc")."</a>.",
 								"dependency" => Array("element" => "icon_type","value" => array("selector")),
 							),
 							array(
@@ -775,7 +780,7 @@ if(!class_exists('AIO_Icons_Box'))
 							),
 							array(
 								"type" => "ult_param_heading",
-								"text" => "<span style='display: block;'><a href='http://bsf.io/kqzzi' target='_blank'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
+								"text" => "<span style='display: block;'><a href='http://bsf.io/kqzzi' target='_blank' rel='noopener'>".__("Watch Video Tutorial","ultimate_vc")." &nbsp; <span class='dashicons dashicons-video-alt3' style='font-size:30px;vertical-align: middle;color: #e52d27;'></span></a></span>",
 								"param_name" => "notification",
 								'edit_field_class' => 'ult-param-important-wrapper ult-dashicon ult-align-right ult-bold-font ult-blue-font vc_column vc_col-sm-12',
 							),

@@ -162,10 +162,10 @@
 .uvc-tilt-left-seperator {
     position: absolute;
     top: auto;
-    bottom: -1px
+    bottom: 1px
 }
 .top_seperator .uvc-tilt-left-seperator {
-    top: -1px;
+    top: 1px;
     bottom: auto;
     -webkit-transform: scale(-1);
     -ms-transform: scale(-1);
@@ -174,7 +174,7 @@
 .uvc-tilt-right-seperator {
     position: absolute;
     top: auto;
-    bottom: -1px
+    bottom: 1px
 }
 .bottom_seperator .uvc-tilt-right-seperator {
     -webkit-transform: scaleX(-1);
@@ -182,7 +182,7 @@
     transform: scaleX(-1)
 }
 .top_seperator .uvc-tilt-right-seperator {
-    top: -1px;
+    top: 1px;
     bottom: auto;
     -webkit-transform: scale(1, -1);
     -ms-transform: scale(1, -1);
@@ -355,13 +355,13 @@
 }
 .upb_video-src {
     max-width: none;
-    height: auto;
-    width: 100%;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    position: relative
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
 }
 .upb_video-src.ult-make-full-height {
     height: 100%;
@@ -369,7 +369,8 @@
     -webkit-transform: translateX(50%);
     -ms-transform: translateX(50%);
     transform: translateX(50%);
-    right: 50%
+    right: 50%;
+    top: 0;
 }
 .upb_utube_iframe,
 .upb_vimeo_iframe {

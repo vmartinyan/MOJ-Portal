@@ -77,10 +77,11 @@ if(!function_exists('ult_info_table_generate_design05')) {
 		}
 		if($package_link !== ""){
 			$href 			= vc_build_link($package_link);
+
 			$link 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? "target='" . esc_attr(trim( $href['target'] )) . "'" : '';
-			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? "title='".esc_attr($href['title'])."'" : '';
-			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? "rel='".esc_attr($href['rel'])."'" : '';
+			$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+			$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+			$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
 		} else {
 			$link = "#";
 		}
@@ -88,7 +89,7 @@ if(!function_exists('ult_info_table_generate_design05')) {
 			$featured = "ult_featured";
 		}
 		if($use_cta_btn == "box"){
-			$output .= '<a href="'.esc_url($link).'" '.$target.' '. $link_title .' '. $rel .' class="ult_price_action_button" style="'.esc_attr($featured_style).'">'.$package_btn_text;
+			$output .= '<a '. Ultimate_VC_Addons::uavc_link_init($link, $target, $link_title, $rel ).' class="ult_price_action_button" style="'.esc_attr($featured_style).'">'.$package_btn_text;
 		}
 
 		/* typography */
@@ -273,7 +274,7 @@ if(!function_exists('ult_info_table_generate_design05')) {
 						</div><!--ult_price_features-->';
 			if($use_cta_btn == "true"){
 				$output .= '<div id="'.esc_attr($info_table_btn_id).'"  class="ult_price_link" style="'.esc_attr($normal_style).'">
-							<a href="'.esc_url($link).'" '.$target.' '. $link_title .' '. $rel .'  '.$info_table_btn_data_list.' class="ult-responsive ult_price_action_button" style="'.esc_attr($featured_style).' '.esc_attr($button_inline).'">'.$package_btn_text.'</a>
+							<a '. Ultimate_VC_Addons::uavc_link_init($link, $target, $link_title, $rel ).'  '.$info_table_btn_data_list.' class="ult-responsive ult_price_action_button" style="'.esc_attr($featured_style).' '.esc_attr($button_inline).'">'.$package_btn_text.'</a>
 						</div><!--ult_price_link-->';
 			}
 			$output .= '<div class="ult_clr"></div>
