@@ -24,6 +24,7 @@
 	$Reveal_Effect = get_option("EWD_UFAQ_Reveal_Effect");
 	$Pretty_Permalinks = get_option("EWD_UFAQ_Pretty_Permalinks");
     $Allow_Proposed_Answer = get_option("EWD_UFAQ_Allow_Proposed_Answer");
+    $Submit_Question_Captcha = get_option("EWD_UFAQ_Submit_Question_Captcha");
     $Admin_Question_Notification = get_option("EWD_UFAQ_Admin_Question_Notification");
     $Admin_Notification_Email = get_option("EWD_UFAQ_Admin_Notification_Email");
 	$FAQ_Auto_Complete_Titles = get_option("EWD_UFAQ_Auto_Complete_Titles");
@@ -122,6 +123,7 @@
 <div class="ufaq-options-page-tabbed-content">
 
 <form method="post" action="admin.php?page=EWD-UFAQ-Options&DisplayPage=Options&Action=EWD_UFAQ_UpdateOptions">
+<?php wp_nonce_field( 'EWD_UFAQ_Save_Options', 'EWD_UFAQ_Save_Options_Nonce' );  ?>
 <div id='Basic' class='ufaq-option-set'>
 <h2 id='label-basic-options' class='ufaq-options-page-tab-title'>Basic Options</h2>
 <br />
@@ -322,6 +324,7 @@
 <label title='Color Block Style'><input type='radio' name='display_style' value='Color_Block' <?php if($Display_Style == "Color_Block") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/> <span>Color Block</span></label><br />
 <label title='Block Style'><input type='radio' name='display_style' value='Block' <?php if($Display_Style == "Block") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/> <span>Block</span></label><br />
 <label title='Border Block Style'><input type='radio' name='display_style' value='Border_Block' <?php if($Display_Style == "Border_Block") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/> <span>Border Block</span></label><br />
+<label title='Contemporary Style'><input type='radio' name='display_style' value='Contemporary' <?php if($Display_Style == "Contemporary") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/> <span>Contemporary</span></label><br />
 <label title='List Style'><input type='radio' name='display_style' value='List' <?php if($Display_Style == "List") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/> <span>List</span></label><br />
 <label title='Minimalist Style'><input type='radio' name='display_style' value='Minimalist' <?php if($Display_Style == "Minimalist") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?>/> <span>Minimalist</span></label><br />
 <p>Which theme should be used to display the FAQ's?</p>
@@ -463,6 +466,16 @@
 	<label title='Yes'><input type='radio' name='allow_proposed_answer' value='Yes' <?php if($Allow_Proposed_Answer == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='allow_proposed_answer' value='No' <?php if($Allow_Proposed_Answer == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
 	<p>When using the user-submitted question shortcode, should users be able to propose an answer to the question they're submitting?</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Submit Question Captcha</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Submit Question Captcha</span></legend>
+	<label title='Yes'><input type='radio' name='submit_question_captcha' value='Yes' <?php if($Submit_Question_Captcha == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='submit_question_captcha' value='No' <?php if($Submit_Question_Captcha == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
+	<p>When using the user-submitted question shortcode, should a captcha field be added to the form to reduce the volume of spam FAQs?</p>
 	</fieldset>
 </td>
 </tr>

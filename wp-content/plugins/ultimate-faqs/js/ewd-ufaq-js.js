@@ -168,7 +168,6 @@ function Ufaq_Ajax_Reload() {
 
     var data = 'Q=' + Question + '&include_category=' + include_cat + '&exclude_category=' + exclude_cat + '&orderby=' + orderby + '&order=' + order + '&post_count=' + post_count + '&request_count=' + RequestCount + '&current_url=' + current_url + '&action=ufaq_search';
     jQuery.post(ajaxurl, data, function(response) {
-        response = response.substring(0, response.length - 1);
 		var parsed_response = jQuery.parseJSON(response);
 		if (parsed_response.request_count == RequestCount) {
 			jQuery('#ufaq-ajax-results').html(parsed_response.message);

@@ -7,6 +7,7 @@ function Insert_Question_Form($atts) {
 		
 	$Custom_CSS = get_option('EWD_UFAQ_Custom_CSS');
 	$Allow_Proposed_Answer = get_option("EWD_UFAQ_Allow_Proposed_Answer");
+	$Submit_Question_Captcha = get_option("EWD_UFAQ_Submit_Question_Captcha");
 	
 	$ReturnString = "";
 		
@@ -86,6 +87,18 @@ function Insert_Question_Form($atts) {
 	$ReturnString .= "</div>";
 	$ReturnString .= "</div>";
 
+	if ($Submit_Question_Captcha == "Yes") {
+		$Code = rand(1000,9999);
+		$ModifiedCode = EWD_UFAQ_Encrypt_Captcha_Code($Code);
+		
+		$ReturnString .= "<div class='ewd-faq-review-input'><label for='captcha_image'></label>";
+		$ReturnString .= "<img src=" . EWD_UFAQ_CD_PLUGIN_URL . "Functions/EWD_UFAQ_Create_Captcha_Image.php?Code=" . $ModifiedCode . " />";
+		$ReturnString .= "<input type='hidden' name='ewd_ufaq_modified_captcha' value='" . $ModifiedCode . "' />";
+		$ReturnString .= "</div>";
+		$ReturnString .= "<div class='ewd-faq-review-input'><label for='captcha_text'>" . __("Image Number: ", 'ultimate-faqs') . "</label>";
+		$ReturnString .= "<input type='text' name='ewd_ufaq_captcha' value='' />";
+		$ReturnString .= "</div>";
+	}
 
 	$ReturnString .= "<p class='submit'><input type='submit' name='Submit_Question' id='submit' class='button-primary' value='" . $submit_text . "'  /></p></form>";
 	$ReturnString .= "</div>";

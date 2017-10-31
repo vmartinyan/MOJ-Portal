@@ -4,24 +4,20 @@
 
 // Returns the FAQs that are found for a specific search
 function UFAQ_Search() {
-    $Path = ABSPATH . 'wp-load.php';
-    include_once($Path);
+    $response = do_shortcode("[ultimate-faqs search_string='" . strtolower(sanitize_text_field($_POST['Q'])) . "' include_category='" . sanitize_text_field($_POST['include_category']) . "' exclude_category='" . sanitize_text_field($_POST['exclude_category']) . "' orderby='" . sanitize_text_field($_POST['orderby']) . "' order='" . sanitize_text_field($_POST['order']) . "' post_count='" . sanitize_text_field($_POST['post_count']) . "' current_url='" . sanitize_text_field($_POST['current_url']) . "' ajax='Yes']");
 
-    $response = do_shortcode("[ultimate-faqs search_string='" . strtolower($_POST['Q']) . "' include_category='" . $_POST['include_category'] . "' exclude_category='" . $_POST['exclude_category'] . "' orderby='" . $_POST['orderby'] . "' order='" . $_POST['order'] . "' post_count='" . $_POST['post_count'] . "' current_url='" . $_POST['current_url'] . "' ajax='Yes']");
-
-    $ReturnArray['request_count'] = $_POST['request_count'];
+    $ReturnArray['request_count'] =  sanitize_text_field($_POST['request_count']);
     $ReturnArray['message'] = $response;
     echo json_encode($ReturnArray);
+
+    die();
 }
 add_action('wp_ajax_ufaq_search', 'UFAQ_Search');
 add_action( 'wp_ajax_nopriv_ufaq_search', 'UFAQ_Search');
 
 // Change the up and down votes for a particular FAQ
 function EWD_UFAQ_Update_Rating() {
-    /*$Path = ABSPATH . 'wp-load.php';
-    include_once($Path);*/
-
-    $FAQ_ID = $_POST['FAQ_ID'];
+    $FAQ_ID = is_numeric($_POST['FAQ_ID']) ? sanitize_text_field($_POST['FAQ_ID']) : 0;
     $Vote_Type = $_POST['Vote_Type'];
 
     if ($Vote_Type == "Up") {
@@ -44,30 +40,36 @@ add_action( 'wp_ajax_nopriv_ufaq_update_rating', 'EWD_UFAQ_Update_Rating');
 
 // Records the number of time an FAQ post is opened
 function UFAQ_Record_View() {
-    $Path = ABSPATH . 'wp-load.php';
-    include_once($Path);
-
     global $wpdb;
     $wpdb->show_errors();
-    $post_id = substr($_POST['post_id'], 4, strrpos($_POST['post_id'], "-") - 4);
+    $post_id = substr($_POST['post_id'], 4, strrpos(sanitize_text_field($_POST['post_id']), "-") - 4);
+
+    if (!is_numeric($post_id)) {return;}
+
     $Meta_ID = $wpdb->get_var($wpdb->prepare("SELECT meta_id FROM $wpdb->postmeta WHERE post_id=%d AND meta_key='ufaq_view_count'", $post_id));
     if ($Meta_ID != "" and $Meta_ID != 0) {$wpdb->query($wpdb->prepare("UPDATE $wpdb->postmeta SET meta_value=meta_value+1 WHERE post_id=%d AND meta_key='ufaq_view_count'", $post_id));}
     else {$wpdb->query($wpdb->prepare("INSERT INTO $wpdb->postmeta (post_id,meta_key,meta_value) VALUES (%d,'ufaq_view_count','1')", $post_id));}
 
+    die();
 }
 add_action('wp_ajax_ufaq_record_view', 'UFAQ_Record_View');
 add_action( 'wp_ajax_nopriv_ufaq_record_view', 'UFAQ_Record_View');
 
 function EWD_UFAQ_Save_Order(){   
+    if (!is_array($_POST['ewd-ufaq-item'])) {return;}
+
     foreach ($_POST['ewd-ufaq-item'] as $Key=>$ID) {
         update_post_meta($ID, 'ufaq_order', $Key);
     }
     
+    die();
 }
 add_action('wp_ajax_UFAQ_update_order','EWD_UFAQ_Save_Order');
 
 function EWD_UFAQ_Add_WC_FAQs(){   
-    $Post_ID = $_POST['Post_ID'];
+    $Post_ID = sanitize_text_field($_POST['Post_ID']);
+
+    if (!is_numeric($Post_ID)) {return;}
 
     $Current_FAQs = get_post_meta($Post_ID, 'EWD_UFAQ_WC_Selected_FAQs', true );
     if (!is_array($Current_FAQs)) {$Current_FAQs = array();}
@@ -111,7 +113,7 @@ function EWD_UFAQ_Delete_WC_FAQs(){
 add_action('wp_ajax_ewd_ufaq_delete_wc_faqs','EWD_UFAQ_Delete_WC_FAQs');
 
 function EWD_UFAQ_WC_FAQ_Category() {   
-    $Cat_ID = $_POST['Cat_ID'];
+    $Cat_ID = sanitize_text_field($_POST['Cat_ID']);
     
     $args = array("numberposts" => -1, "post_type" => 'ufaq');
     if ($Cat_ID != "") {
@@ -142,7 +144,7 @@ function EWD_UFAQ_WC_FAQ_Category() {
 add_action('wp_ajax_ewd_ufaq_wc_faq_category','EWD_UFAQ_WC_FAQ_Category');
 
 function EWD_UFAQ_Hide_Review_Ask(){   
-    $Ask_Review_Date = $_POST['Ask_Review_Date'];
+    $Ask_Review_Date = sanitize_text_field($_POST['Ask_Review_Date']);
 
     update_option('EWD_UFAQ_Ask_Review_Date', time()+3600*24*$Ask_Review_Date);
 

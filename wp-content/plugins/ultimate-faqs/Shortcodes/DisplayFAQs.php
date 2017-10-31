@@ -286,7 +286,7 @@ function Display_FAQs($atts) {
 				}
 
 				$TitlesArray[] = json_encode($faq->post_title);
-				$HeaderString .= "<div class='ufaq-faq-header-title'><a href='' class='ufaq-faq-header-link'  data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'>" . apply_filters('the_title', $faq->post_title) . "</a></div>";
+				$HeaderString .= "<div class='ufaq-faq-header-title'><a href='' class='ufaq-faq-header-link'  data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'>" . apply_filters('the_title', $faq->post_title, $faq->ID) . "</a></div>";
 
 				$ReturnString .= "<div class='ufaq-faq-div ufaq-faq-display-style-" . $Display_Style . "' id='ufaq-post-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "' data-postid='" . $Unique_ID . "-" . $faq->ID . "-" . $Counter . "' itemscope itemtype='http://schema.org/Question'>";
 
@@ -296,7 +296,7 @@ function Display_FAQs($atts) {
 				$ReturnString .= "<a class='ewd-ufaq-post-margin'  href='" . get_permalink($faq->ID) . "'><div class='ewd-ufaq-post-margin-symbol " . $Color_Block_Shape . "' id='ewd-ufaq-post-margin-symbol-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter  . "'><span id='ewd-ufaq-post-symbol-" . $Unique_ID . "-" . $faq->ID . "-" . $Counter;
 				if ($Display_All_Answers == "Yes") {$ReturnString .= "'>" . $Toggle_Symbol . "</span></div>";}
 				else {$ReturnString .= "'>" . strtolower($Toggle_Symbol) . "</span></div>";}
-				$ReturnString .= "<div class='ufaq-faq-title-text'><" . $UFAQ_Styling_FAQ_Heading_Type . " itemprop='name'>" . apply_filters('the_title', $faq->post_title) . "</" . $UFAQ_Styling_FAQ_Heading_Type . "></div><div class='ewd-ufaq-clear'></div></a>";
+				$ReturnString .= "<div class='ufaq-faq-title-text'><" . $UFAQ_Styling_FAQ_Heading_Type . " itemprop='name'>" . apply_filters('the_title', $faq->post_title, $faq->ID) . "</" . $UFAQ_Styling_FAQ_Heading_Type . "></div><div class='ewd-ufaq-clear'></div></a>";
 				$ReturnString .= "</div>";
 
 				if (strlen($faq->post_excerpt) > 0) {$ReturnString .= "<div class='ufaq-faq-excerpt' id='ufaq-excerpt-" . $faq->ID . "'>" . apply_filters('the_content', html_entity_decode($faq->post_excerpt)) . "</div>";}
@@ -337,8 +337,8 @@ function Display_FAQs($atts) {
 				if ($Hide_Categories == "No" and sizeOf($Category_Terms) > 0) {
 					$ReturnString .= "<div class='ufaq-faq-categories' id='ufaq-categories-" . $faq->ID . "'>";
 					if ($Category_Label == ""){
-						if (sizeOf($Category_Terms) > 1) {$ReturnString .= "Categories: ";}
-						else {$ReturnString .= "Category: ";}}
+						if (sizeOf($Category_Terms) > 1) {$ReturnString .= __("Categories: ", 'ultimate-faqs');}
+						else {$ReturnString .= __("Category: ", 'ultimate-faqs');}}
 					else {$ReturnString .= $Category_Label . ": ";}
 					foreach ($Category_Terms as $Category_Term) {
 						if ($Pretty_Permalinks == "Yes") {$Category_URL = $current_url . "faq-category/" . $Category_Term->slug . "/";}

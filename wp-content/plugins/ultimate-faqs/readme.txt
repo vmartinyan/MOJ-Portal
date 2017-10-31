@@ -266,8 +266,35 @@ Video 3 - FAQs Ordering
 26. FAQ widgets
 
 
-
 == Changelog ==
+= 1.6.6 =
+- Added in a captcha option for the submit question shortcode
+- Fixed an HTML validation error
+
+= 1.6.5 =
+- Updated color select sanitizing function
+
+= 1.6.4 =
+- Removed unnecessary code from AJAX processing file
+- Improved admin data processing
+
+= 1.6.3 =
+- Added a nonce field to the settings form
+ 
+= 1.6.2 =
+- Minor admin styling update
+
+= 1.6.1 =
+- Minor performance enhancement
+
+= 1.6.0 =
+- Added in a new FAQ style, contemporary
+- Fixed an apply_filters issue with the_title
+- Internationalized a few strings
+
+= 1.5.40 =
+- Fixed a number of minor styling issues
+
 = 1.5.39 =
 - Maintenance update (notices removed, pageload speed enhancements, small CSS fixes, etc.)
 

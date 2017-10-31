@@ -4,7 +4,7 @@ Donate link: http://wpdevart.com/wordpress-youtube-embed-plugin
 Tags:  youtube, youtube playlist, youtube gallery, Youtube channel, youtube plugin, youtube player, youtube widget, youtube videos, youtube embed, embed youtube, youtube shortcode, YouTube API, youtube slider, youtube video, simple youtube, youtube Video Player, YouTube Live, youtube html5, video gallery, youtube audio, wordpress youtube, youtube subscribe, youtube post, lightbox youtube, youtube button, youtube wordpress, youtube share, random youtube video, embed youtube videos, Youtube Album, YouTube channels, youtube for WordPress, youtube galleries, YouTube Live Stream, youtube views, youtube icon, YouTube Sidebar, video youtube, video plugin, embed videos, import youtube videos, embed video, video player, YouTube videos 
 Requires at least: 3.2.0
 Tested up to: 4.8.2
-Stable tag: 2.0.2
+Stable tag: 2.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -65,7 +65,7 @@ Our WordPress YouTube Embed plugin have a good functionality. You can set a lot 
 
 **You can check the best offer page here - [Best Price](http://wpdevart.com/the-best-offer-from-wpdevart)**
 
-We also recommend you to take a look for this useful plugins - [WordPress Gallery plugin](https://wordpress.org/plugins/gallery-album), [WordPress Contact Form](https://wordpress.org/plugins/contact-forms-builder/), [WordPress Coming Soon plugin](https://wordpress.org/plugins/coming-soon-page/), [WordPress booking](https://wordpress.org/plugins/booking-calendar), [WordPress Facebook like box](https://wordpress.org/plugins/like-box/), [WordPress Poll](http://wordpress.org/plugins/polls-widget), [WordPress Countdown](https://wordpress.org/plugins/widget-countdown), [Facebook comments WordPress](https://wordpress.org/plugins/comments-from-facebook), [WordPress lightbox plugin](https://wordpress.org/plugins/lightbox-popup) .
+We also recommend you to take a look for this useful plugins - [WordPress Countdown plugin – Extended version](https://wordpress.org/plugins/countdown-wpdevart-extended/), [WordPress Gallery plugin](https://wordpress.org/plugins/gallery-album), [WordPress Contact Form](https://wordpress.org/plugins/contact-forms-builder/), [WordPress Coming Soon plugin](https://wordpress.org/plugins/coming-soon-page/), [WordPress booking](https://wordpress.org/plugins/booking-calendar), [WordPress Facebook like box](https://wordpress.org/plugins/like-box/), [WordPress Poll](http://wordpress.org/plugins/polls-widget), [WordPress Countdown](https://wordpress.org/plugins/widget-countdown), [Facebook comments WordPress](https://wordpress.org/plugins/comments-from-facebook), [WordPress lightbox plugin](https://wordpress.org/plugins/lightbox-popup) .
 
 == Installation ==
 
@@ -84,7 +84,7 @@ That's all, now you can insert YouTube videos in your posts, pages, widgets. If 
 
 **You can check the best offer page here - [Best Price](http://wpdevart.com/the-best-offer-from-wpdevart)**
 
-Also take a look for this useful plugins - [WordPress Gallery plugin](https://wordpress.org/plugins/gallery-album), [WordPress Contact Form](https://wordpress.org/plugins/contact-forms-builder/), [WordPress Coming Soon plugin](https://wordpress.org/plugins/coming-soon-page/), [WordPress booking](https://wordpress.org/plugins/booking-calendar), [WordPress Facebook like box](https://wordpress.org/plugins/like-box/), [WordPress Poll](http://wordpress.org/plugins/polls-widget), [WordPress Countdown](https://wordpress.org/plugins/widget-countdown), [Facebook comments WordPress](https://wordpress.org/plugins/comments-from-facebook), [WordPress lightbox plugin](https://wordpress.org/plugins/lightbox-popup) .
+Also take a look for this useful plugins - [WordPress Countdown plugin – Extended version](https://wordpress.org/plugins/countdown-wpdevart-extended/), [WordPress Gallery plugin](https://wordpress.org/plugins/gallery-album), [WordPress Contact Form](https://wordpress.org/plugins/contact-forms-builder/), [WordPress Coming Soon plugin](https://wordpress.org/plugins/coming-soon-page/), [WordPress booking](https://wordpress.org/plugins/booking-calendar), [WordPress Facebook like box](https://wordpress.org/plugins/like-box/), [WordPress Poll](http://wordpress.org/plugins/polls-widget), [WordPress Countdown](https://wordpress.org/plugins/widget-countdown), [Facebook comments WordPress](https://wordpress.org/plugins/comments-from-facebook), [WordPress lightbox plugin](https://wordpress.org/plugins/lightbox-popup) .
 
 == Frequently Asked Questions ==
 
@@ -167,7 +167,7 @@ No dear users, you need to pay only once for YouTube Embed pro version.
 
 **You can check the best offer page here - [Best Price](http://wpdevart.com/the-best-offer-from-wpdevart)**
 
-Also take a look for this useful plugins - [WordPress Gallery plugin](https://wordpress.org/plugins/gallery-album), [WordPress Contact Form](https://wordpress.org/plugins/contact-forms-builder/), [WordPress Coming Soon plugin](https://wordpress.org/plugins/coming-soon-page/), [WordPress booking](https://wordpress.org/plugins/booking-calendar), [WordPress Facebook like box](https://wordpress.org/plugins/like-box/), [WordPress Poll](http://wordpress.org/plugins/polls-widget), [WordPress Countdown](https://wordpress.org/plugins/widget-countdown), [Facebook comments WordPress](https://wordpress.org/plugins/comments-from-facebook), [WordPress lightbox plugin](https://wordpress.org/plugins/lightbox-popup) .
+Also take a look for this useful plugins - [WordPress Countdown plugin – Extended version](https://wordpress.org/plugins/countdown-wpdevart-extended/), [WordPress Gallery plugin](https://wordpress.org/plugins/gallery-album), [WordPress Contact Form](https://wordpress.org/plugins/contact-forms-builder/), [WordPress Coming Soon plugin](https://wordpress.org/plugins/coming-soon-page/), [WordPress booking](https://wordpress.org/plugins/booking-calendar), [WordPress Facebook like box](https://wordpress.org/plugins/like-box/), [WordPress Poll](http://wordpress.org/plugins/polls-widget), [WordPress Countdown](https://wordpress.org/plugins/widget-countdown), [Facebook comments WordPress](https://wordpress.org/plugins/comments-from-facebook), [WordPress lightbox plugin](https://wordpress.org/plugins/lightbox-popup) .
 
 == Screenshots ==
 

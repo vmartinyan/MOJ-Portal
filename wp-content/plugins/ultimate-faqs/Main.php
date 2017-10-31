@@ -7,14 +7,14 @@ Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.5.39
+Version: 1.6.6
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.5.34';
+$EWD_UFAQ_Version = '1.6.4';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -139,7 +139,9 @@ function EWD_UFAQ_Admin_Options() {
 
 add_action( 'wp_enqueue_scripts', 'Add_EWD_UFAQ_FrontEnd_Scripts' );
 function Add_EWD_UFAQ_FrontEnd_Scripts() {
-	wp_register_script('ewd-ufaq-js', plugins_url( '/js/ewd-ufaq-js.js' , __FILE__ ), array( 'jquery' ));
+	global $EWD_UFAQ_Version;
+
+	wp_register_script('ewd-ufaq-js', plugins_url( '/js/ewd-ufaq-js.js' , __FILE__ ), array( 'jquery' ), $EWD_UFAQ_Version);
 
 	$Retrieving_Results = get_option("EWD_UFAQ_Retrieving_Results");
 	if ($Retrieving_Results == "") {$Retrieving_Results = __("Retrieving Results", 'ultimate-faqs') . "...";}
@@ -192,6 +194,7 @@ function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Reveal_Effect") == "") {update_option("EWD_UFAQ_Reveal_Effect", "none");}
 	if (get_option("EWD_UFAQ_Pretty_Permalinks") == "") {update_option("EWD_UFAQ_Pretty_Permalinks", "No");}
 	if (get_option("EWD_UFAQ_Allow_Proposed_Answer") == "") {update_option("EWD_UFAQ_Allow_Proposed_Answer", "No");}
+	if (get_option("EWD_UFAQ_Submit_Question_Captcha") == "") {update_option("EWD_UFAQ_Submit_Question_Captcha", "No");}
 	if (get_option("EWD_UFAQ_Admin_Question_Notification") == "") {update_option("EWD_UFAQ_Admin_Question_Notification", "No");}
 	if (get_option("EWD_UFAQ_Auto_Complete_Titles") == "") {update_option("EWD_UFAQ_Auto_Complete_Titles", "Yes");}
 	if (get_option("EWD_UFAQ_Slug_Base") == "") {update_option("EWD_UFAQ_Slug_Base", "ufaqs");}
@@ -222,7 +225,7 @@ if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and isset($_POST[
 
 $rules = get_option('rewrite_rules');
 $PrettyLinks = get_option("EWD_UFAQ_Pretty_Permalinks");
-if ($PrettyLinks == "Yes") {
+if (!isset($rules['"(.?.+?)/single-faq/([^&]*)/?$"']) and $PrettyLinks == "Yes") {
 	add_filter( 'query_vars', 'EWD_UFAQ_add_query_vars_filter' );
 	add_filter('init', 'EWD_UFAQ_Rewrite_Rules');
 	update_option("EWD_UFAQ_Update_RR_Rules", "No");
@@ -294,6 +297,7 @@ function UFAQ_Set_Pointers($page) {
 include "Functions/Error_Notices.php";
 include "Functions/EWD_UFAQ_Add_Social_Media_Buttons.php";
 include "Functions/EWD_UFAQ_Add_Views_Column.php";
+include "Functions/EWD_UFAQ_Captcha.php";
 include "Functions/EWD_UFAQ_Export.php";
 include "Functions/EWD_UFAQ_Help_Pointers.php";
 include "Functions/EWD_UFAQ_Import.php";

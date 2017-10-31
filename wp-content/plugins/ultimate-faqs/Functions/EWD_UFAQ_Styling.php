@@ -4,8 +4,7 @@ function EWD_UFAQ_Add_Modified_Styles() {
 	$StylesString .=".ewd-ufaq-post-margin-symbol { ";
 		if (get_option("EWD_UFAQ_Styling_Default_Bg_Color") != "") {$StylesString .= "background-color:" .  get_option("EWD_UFAQ_Styling_Default_Bg_Color") . " !important;";}
 		if (get_option("EWD_UFAQ_Styling_Default_Font_Color") != "") {$StylesString .="color:" . get_option("EWD_UFAQ_Styling_Default_Font_Color") . " !important;";}
-		$StylesString .= "border-style: solid;";
-		if (get_option("EWD_UFAQ_Styling_Default_Border_Size") != "") {$StylesString .= "border-width:" . get_option("EWD_UFAQ_Styling_Default_Border_Size") . " !important;";}
+		if (get_option("EWD_UFAQ_Styling_Default_Border_Size") != "") {$StylesString .= "border-width:" . get_option("EWD_UFAQ_Styling_Default_Border_Size") . " !important; border-style: solid;";}
 		if (get_option("EWD_UFAQ_Styling_Default_Border_Color") != "") {$StylesString .= "border-color:" . get_option("EWD_UFAQ_Styling_Default_Border_Color") . " !important;";}
 		if (get_option("EWD_UFAQ_Styling_Default_Border_Radius") != "") {$StylesString .= "border-radius:" . get_option("EWD_UFAQ_Styling_Default_Border_Radius") . " !important;";}
 		if (get_option("EWD_UFAQ_Styling_Toggle_Symbol_Size") != "") {$StylesString .= "font-size:" . get_option("EWD_UFAQ_Styling_Toggle_Symbol_Size") . " !important;";}

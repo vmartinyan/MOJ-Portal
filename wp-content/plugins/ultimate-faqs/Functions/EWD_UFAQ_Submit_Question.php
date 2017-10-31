@@ -1,10 +1,16 @@
 <?php
 function  EWD_UFAQ_Submit_Question($success_message) {
+	$Submit_Question_Captcha = get_option("EWD_UFAQ_Submit_Question_Captcha");
 	$Admin_Question_Notification = get_option("EWD_UFAQ_Admin_Question_Notification");
 
 	$Post_Title = sanitize_text_field($_POST['Post_Title']);
 	$Post_Body = (isset($_POST['Post_Body']) ? sanitize_text_field($_POST['Post_Body']) : '');
 	$Post_Author = sanitize_text_field($_POST['Post_Author']);
+
+	if ($Submit_Question_Captcha == "Yes" and EWD_UFAQ_Validate_Captcha() != "Yes") {
+		$user_message = __("Captcha number didn't match image.", 'ultimate-faqs'); 
+		return $user_message;
+	}
 
 	$post = array(
 		'post_content' => $Post_Body,

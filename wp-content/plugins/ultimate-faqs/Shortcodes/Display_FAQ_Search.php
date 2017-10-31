@@ -46,12 +46,12 @@ function UFAQ_AJAX_Search($atts) {
     $ReturnString .= "<input type='hidden' name='ufaq-input' value='Search'>";
     $ReturnString .= "<div id='ewd-ufaq-jquery-ajax-search' class='pure-control-group ui-front' style='position:relative;'>";
     $ReturnString .= "<label  id='ufaq-ajax-search-lbl' class='ewd-otp-field-label ewd-otp-bold'>" . $Enter_Question_Label . ":</label>";
-    $ReturnString .= "<input type='hidden' name'include_category' value='" . $include_category . "' id='ufaq-include-category' />";
-    $ReturnString .= "<input type='hidden' name'exclude_category' value='" . $exclude_category . "' id='ufaq-exclude-category' />";
-    $ReturnString .= "<input type='hidden' name'orderby' value='" . $orderby . "' id='ufaq-orderby' />";
-    $ReturnString .= "<input type='hidden' name'order' value='" . $order . "' id='ufaq-order' />";
-    $ReturnString .= "<input type='hidden' name'post_count' value='" . $post_count . "' id='ufaq-post-count' />";
-    $ReturnString .= "<input type='hidden' name'current_url' value='" . $_SERVER['REQUEST_URI'] . "' id='ufaq-current-url' />";
+    $ReturnString .= "<input type='hidden' name='include_category' value='" . $include_category . "' id='ufaq-include-category' />";
+    $ReturnString .= "<input type='hidden' name='exclude_category' value='" . $exclude_category . "' id='ufaq-exclude-category' />";
+    $ReturnString .= "<input type='hidden' name='orderby' value='" . $orderby . "' id='ufaq-orderby' />";
+    $ReturnString .= "<input type='hidden' name='order' value='" . $order . "' id='ufaq-order' />";
+    $ReturnString .= "<input type='hidden' name='post_count' value='" . $post_count . "' id='ufaq-post-count' />";
+    $ReturnString .= "<input type='hidden' name='current_url' value='" . $_SERVER['REQUEST_URI'] . "' id='ufaq-current-url' />";
     $ReturnString .= "<input type='text' id='ufaq-ajax-text-input' class='ufaq-text-input' name='Question ' placeholder='" . $Enter_Question_Label . "...'>";
     $ReturnString .= "</div>";
     if ($Auto_Complete_Titles != "Yes" and $show_on_load == "No") {$ReturnString .= "<label for='Submit'></label><input type='button' id='ufaq-ajax-search-btn' class='ewd-otp-submit pure-button pure-button-primary' name='Search' value='" . $Search_Label . "'>";}

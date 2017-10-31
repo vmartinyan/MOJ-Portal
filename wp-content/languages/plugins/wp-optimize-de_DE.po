@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP-Optimize - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-04-18 10:41:04+0000\n"
+"PO-Revision-Date: 2017-10-28 13:42:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,7 +57,11 @@ msgstr "Folge diesem Link, um UpdraftPlus zu installieren, um eine Sicherung der
 
 #: templates/optimize-table.php:49
 msgid "Take a backup with UpdraftPlus before optimizing"
-msgstr "Mache ein Backup mit UpdraftPlus vor der Optimierung"
+msgstr "Erstelle ein Backup vor der Optimierung mit UpdraftPlus"
+
+#: templates/optimize-table.php:12
+msgid "Backup before running optimizations"
+msgstr "Sicherung vor dem Ausführen von Optimierungen"
 
 #: templates/may-also-like.php:43
 msgid "a lot more"

@@ -58,6 +58,10 @@
   margin-bottom: 20px;
 }
 
+.ufaq-faq-category-inner {
+  margin-bottom: 48px;
+}
+
 .ufaq-faq-body {
   padding:10px 25px;
   padding-left: 55px;
@@ -365,6 +369,47 @@ margin-left: 100px;
 .ufaq-faq-display-style-Border_Block:hover .comment-reply-title {
   color: #000 !important;
 }
+
+
+
+/***********************
+Contemporary Style
+***********************/
+.ufaq-faq-display-style-Contemporary {
+border-bottom: 1px solid #ccc;
+padding: 0;
+margin: 0;
+}
+.ufaq-faq-display-style-Contemporary:first-of-type {
+border-top: 1px solid #ccc;
+}
+.ufaq-faq-display-style-Contemporary .ufaq-faq-title {
+background: #f7f7f7;
+padding: 8px 0 8px 4px;
+}
+.ufaq-faq-display-style-Contemporary .ewd-ufaq-post-margin-symbol {
+float: right;
+height: auto;
+}
+.ufaq-faq-display-style-Contemporary .ufaq-faq-body {
+padding: 20px 25px 10px;
+padding-left: 40px;
+}
+.ufaq-faq-display-style-Contemporary .ufaq-faq-tags, .ufaq-faq-display-style-Contemporary .ufaq-social-links {
+margin-top: 4px;
+}
+.ufaq-faq-display-style-Contemporary .ufaq-social-links ul {
+float: left;
+margin-bottom: 14px;
+}
+.ufaq-faq-display-style-Contemporary .ufaq-permalink {
+margin-left: 0;
+margin-bottom: 10px;
+}
+.ufaq-faq-display-style-Contemporary .ufaq-back-to-top {
+  margin-bottom: 14px;
+}
+
 
 
 

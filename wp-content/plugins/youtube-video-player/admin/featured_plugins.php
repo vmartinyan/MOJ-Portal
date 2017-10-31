@@ -36,6 +36,12 @@ class youtube_embed_featured_plugins{
 						'title'			=>	'WordPress Gallery plugin',
 						'description'	=>	'Gallery plugin is an useful tool that will help you to create Galleries and Albums. Try our nice Gallery views and awesome animations.'
 						),
+			'countdown_extended'=>array(
+						'image_url'		=>	$this->plugin_url.'admin/images/featured_plugins/icon-128x128.png',
+						'site_url'		=>	'http://wpdevart.com/wordpress-countdown-extended-version',
+						'title'			=>	'Countdown - Extended version ',
+						'description'	=>	'Countdown extended is an fresh and extended version of countdown timer. You can easily create and add countdown timers to your website.'
+						),						
 			'coming_soon'=>array(
 						'image_url'		=>	$this->plugin_url.'admin/images/featured_plugins/coming_soon.jpg',
 						'site_url'		=>	'http://wpdevart.com/wordpress-coming-soon-plugin/',
@@ -87,7 +93,7 @@ class youtube_embed_featured_plugins{
 			'scroll'=>array(
 						'image_url'		=>	$this->plugin_url.'admin/images/featured_plugins/Scroll.png',
 						'site_url'		=>	'https://wordpress.org/plugins/wp-scroll-2',
-						'title'			=>	'Scroll To Top plugin',
+						'title'			=>	'Scroll To Top',
 						'description'	=>	'Scroll plugin is an simple and nice plugin with the standard scroll settings. You can use it on your website different sides.'
 						),						
 											

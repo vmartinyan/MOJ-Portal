@@ -4,9 +4,9 @@
 <?php
 	global $wpdb;
 	$Slug_Base = get_option("EWD_UFAQ_Slug_Base");
-
+	
 	//start review box
-	if (isset($_POST['hide_ufaq_review_box_hidden'])) {update_option('EWD_UFAQ_Hide_Dash_Review_Ask', $_POST['hide_ufaq_review_box_hidden']);}
+	if (isset($_POST['hide_ufaq_review_box_hidden'])) {update_option('EWD_UFAQ_Hide_Dash_Review_Ask', sanitize_text_field($_POST['hide_ufaq_review_box_hidden']));}
 	$hideReview = get_option('EWD_UFAQ_Hide_Dash_Review_Ask');
 	$Ask_Review_Date = get_option('EWD_UFAQ_Ask_Review_Date');
 	if ($Ask_Review_Date == "") {$Ask_Review_Date = time() - 3600*24;}

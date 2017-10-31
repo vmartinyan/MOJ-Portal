@@ -40,10 +40,10 @@ function EWD_UFAQ_Import(){
 function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
     global $wpdb;
 
-    $Excel_URL = '../wp-content/plugins/ultimate-faqs/faq-sheets/' . $Excel_File_Name;
+    $Excel_URL = EWD_UFAQ_CD_PLUGIN_PATH . 'faq-sheets/' . $Excel_File_Name;
 
     // Uses the PHPExcel class to simplify the file parsing process
-    include_once('../wp-content/plugins/ultimate-faqs/PHPExcel/Classes/PHPExcel.php');
+    include_once(EWD_UFAQ_CD_PLUGIN_PATH . 'PHPExcel/Classes/PHPExcel.php');
 
     // Build the workbook object out of the uploaded spredsheet
     $inputFileType = PHPExcel_IOFactory::identify($Excel_URL);
