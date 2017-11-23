@@ -131,13 +131,13 @@ if(!class_exists('VC_Ultimate_Parallax')){
 
 			$bsf_dev_mode = bsf_get_option('dev_mode');
 			if($bsf_dev_mode === 'enable') {
-				$js_path = '../assets/js/';
-				$css_path = '../assets/css/';
+				$js_path = UAVC_URL.'assets/js/';
+				$css_path = UAVC_URL.'assets/css/';
 				$ext = '';
 			}
 			else {
-				$js_path = '../assets/min-js/';
-				$css_path = '../assets/min-css/';
+				$js_path = UAVC_URL.'assets/min-js/';
+				$css_path = UAVC_URL.'assets/min-css/';
 				$ext = '.min';
 			}
 
@@ -155,13 +155,13 @@ if(!class_exists('VC_Ultimate_Parallax')){
 					else if($bg_type != 'no_bg' && ($parallax_content != '' || $fadeout_row != ''))
 					{
 						wp_enqueue_script('ultimate-appear');
-						wp_enqueue_script('ultimate-row-bg',plugins_url($js_path,__FILE__).'ultimate_bg'.$ext.'.js');
+						wp_enqueue_script('ultimate-row-bg', $js_path.'ultimate_bg'.$ext.'.js');
 						wp_enqueue_script('ultimate-custom');
 					}
 					else if($bg_type != 'no_bg' && ($parallax_content == '' || $fadeout_row == ''))
 					{
 						wp_enqueue_script('ultimate-appear');
-						wp_enqueue_script('ultimate-row-bg',plugins_url($js_path,__FILE__).'ultimate_bg'.$ext.'.js');
+						wp_enqueue_script('ultimate-row-bg', $js_path.'ultimate_bg'.$ext.'.js');
 						wp_enqueue_script('ultimate-custom');
 					}
 				endif;
@@ -200,7 +200,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 				if($enable_overlay == 'enable_overlay_value')
 				{
 					if($overlay_pattern != 'transperant' && $overlay_pattern != '')
-						$pattern_url = plugins_url('../assets/images/patterns/',__FILE__).$overlay_pattern;
+						$pattern_url = UAVC_URL.'assets/images/patterns/'.$overlay_pattern;
 					else
 						$pattern_url = '';
 					if(preg_match('/^#[a-f0-9]{6}$/i', $overlay_color)) //hex color is valid
@@ -330,10 +330,10 @@ if(!class_exists('VC_Ultimate_Parallax')){
 					}
 					if($parallax_style == 'vcpb-fs-jquery' || $parallax_style=="vcpb-mlvp-jquery"){
 						if($parallax_style == 'vcpb-fs-jquery')
-							wp_enqueue_script('jquery.shake',plugins_url($js_path.'jparallax'.$ext.'.js',__FILE__));
+							wp_enqueue_script('jquery.shake', $js_path.'jparallax'.$ext.'.js');
 
 						if($parallax_style=="vcpb-mlvp-jquery")
-							wp_enqueue_script('jquery.vhparallax',plugins_url($js_path.'vhparallax'.$ext.'.js',__FILE__));
+							wp_enqueue_script('jquery.vhparallax', $js_path.'vhparallax'.$ext.'.js');
 						$imgs = explode(',',$layer_image);
 						$layer_image = array();
 						foreach ($imgs as $value) {
@@ -346,7 +346,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 					}
 					else{
 						if($parallax_style == 'vcpb-vz-jquery' || $parallax_style=="vcpb-hz-jquery")
-							wp_enqueue_script('jquery.vhparallax',plugins_url($js_path.'vhparallax'.$ext.'.js',__FILE__));
+							wp_enqueue_script('jquery.vhparallax',$js_path.'vhparallax'.$ext.'.js');
 
 						if($bg_img_id){
 							if($animation_direction == '' && $animation_type != 'false')
@@ -398,11 +398,11 @@ if(!class_exists('VC_Ultimate_Parallax')){
 					$html .= '<div class="upb_content_video" data-controls-color="'.esc_attr($controls_color).'" data-controls="'.esc_attr($enable_controls).'" data-viewport-video="'.esc_attr($enable_viewport_vdo).'" data-ultimate-video="'.esc_attr($video_url).'" data-ultimate-video2="'.esc_attr($video_url_2).'" data-ultimate-video-muted="'.esc_attr($muted).'" data-ultimate-video-loop="'.esc_attr($loop).'" data-ultimate-video-poster="'.esc_attr($v_img).'" data-ultimate-video-autoplay="autoplay" data-bg-override="'.esc_attr($bg_override).'" data-upb-overlay-color="'.esc_attr($overlay_color).'" data-upb-bg-animation="'.esc_attr($bg_fade).'" data-fadeout="'.esc_attr($fadeout_row).'" data-fadeout-percentage="'.esc_attr($fadeout_start_effect).'" data-parallax-content="'.esc_attr($parallax_content).'" data-parallax-content-sense="'.esc_attr($parallax_content_sense).'" data-row-effect-mobile-disable="'.esc_attr($disable_on_mobile).'" data-rtl="'.esc_attr($rtl).'" data-img-parallax-mobile-disable="'.esc_attr($disable_on_mobile_img_parallax).'" '.$commom_data_attributes.' '.$overlay.' '.$seperator_html.' '.$ult_hide_row_data.' data-video_fixer="'.esc_attr($video_fixer).'"></div>';
 
 					if($enable_controls == 'display_control')
-						wp_enqueue_style('ultimate-vidcons',plugins_url('../assets/fonts/vidcons.css',__FILE__));
+						wp_enqueue_style('ultimate-vidcons', UAVC_URL.'assets/fonts/vidcons.css');
 				}
 				elseif ($bg_type=='u_iframe') {
 					//wp_enqueue_script('jquery.tublar',plugins_url('../assets/js/tubular.js',__FILE__));
-					wp_enqueue_script('jquery.ytplayer',plugins_url($js_path.'mb-YTPlayer'.$ext.'.js',__FILE__));
+					wp_enqueue_script('jquery.ytplayer', $js_path.'mb-YTPlayer'.$ext.'.js');
 					$v_opts = explode(",",$video_opts);
 					$v_img = apply_filters('ult_get_img_single', $video_poster, 'url');
 					if(is_array($v_opts)){
@@ -458,7 +458,7 @@ if(!class_exists('VC_Ultimate_Parallax')){
 			$patterns = array();
 
 			foreach($patterns_list as $pattern)
-				$patterns[basename($pattern)] = plugins_url().'/'.$pluginname.'/assets/images/patterns/'.basename($pattern);
+				$patterns[basename($pattern)] = UAVC_URL.'/assets/images/patterns/'.basename($pattern);
 
 			/*
 			$separator_path = realpath(dirname(plugin_dir_path(__FILE__)).'/assets/images/separator');
@@ -1528,12 +1528,12 @@ if(!class_exists('VC_Ultimate_Parallax')){
 
 		function admin_scripts($hook){
 			if($hook == "post.php" || $hook == "post-new.php"){
-				wp_register_script("ult-colorpicker",plugins_url("../admin/js/jquery-colorpicker.js ",__FILE__),array('jquery'),ULTIMATE_VERSION);
-				wp_register_script("ult-classygradient",plugins_url("../admin/js/jquery-classygradient-min.js",__FILE__),array('jquery'),ULTIMATE_VERSION);
+				wp_register_script("ult-colorpicker",UAVC_URL."admin/js/jquery-colorpicker.js ",array('jquery'),ULTIMATE_VERSION);
+				wp_register_script("ult-classygradient",UAVC_URL."admin/js/jquery-classygradient-min.js",array('jquery'),ULTIMATE_VERSION);
 
-				Ultimate_VC_Addons::ultimate_register_style( 'ult-classycolorpicker-style', plugins_url( "../admin/css/jquery-colorpicker.css", __FILE__ ), true );
+				Ultimate_VC_Addons::ultimate_register_style( 'ult-classycolorpicker-style', UAVC_URL."admin/css/jquery-colorpicker.css", true );
 
-				Ultimate_VC_Addons::ultimate_register_style( 'ult-classygradient-style', plugins_url( "../admin/css/jquery-classygradient-min.css", __FILE__ ), true );
+				Ultimate_VC_Addons::ultimate_register_style( 'ult-classygradient-style', UAVC_URL."admin/css/jquery-classygradient-min.css", true );
 
 				$bsf_dev_mode = bsf_get_option('dev_mode');
 				if($bsf_dev_mode === 'enable') {

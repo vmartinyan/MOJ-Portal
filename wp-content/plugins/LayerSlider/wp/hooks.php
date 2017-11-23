@@ -81,8 +81,9 @@ function ls_get_image($id = null, $url = null) {
 function ls_parse_defaults($defaults = array(), $raw = array()) {
 
 
-	$activated = get_option('layerslider-authorized-site', false);
-	$permission = current_user_can('publish_posts');
+	$activated 	= get_option('layerslider-authorized-site', false);
+	$capability = get_option('layerslider_custom_capability', 'manage_options');
+	$permission = current_user_can( $capability );
 	$ret = array();
 
 
@@ -95,6 +96,7 @@ function ls_parse_defaults($defaults = array(), $raw = array()) {
 		// Check premium features
 		$isPremium = false;
 		if( ! empty( $default['premium'] ) && ! $activated ) {
+
 			if( ! $permission ) {
 
 				if( ! empty( $raw['styles'][$phpKey] ) ) {
@@ -146,7 +148,15 @@ function ls_parse_defaults($defaults = array(), $raw = array()) {
 		$premiumStyle = false;
 		if( $isPremium && ! empty( $raw['styles'][$phpKey] ) ) {
 			if( (string)$default['value'] !== (string)$raw['styles'][$jsKey] ) {
-				$premiumStyle = true;
+
+				// v6.6.4: Fix blend-mode due to change in default value
+				if( $phpKey === 'mix-blend-mode' && $raw['styles'][$phpKey] === 'normal' ) {
+					// Do nothing, the 'normal' blend-mode value should not be
+					// counted as
+
+				} else {
+					$premiumStyle = true;
+				}
 			}
 		}
 
@@ -173,6 +183,11 @@ function ls_array_to_attr($arr, $mode = '') {
 				$ret[] = "$key:$val;";
 			}
 		}
+
+		if( has_filter('layerslider_attr_list') ) {
+			return apply_filters( 'layerslider_attr_list', $ret );
+		}
+
 		return implode('', $ret);
 	}
 }

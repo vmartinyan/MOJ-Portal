@@ -41,6 +41,23 @@ if(!class_exists('Ultimate_Info_Banner'))
 								"description" => __("Give a title to this banner","ultimate_vc")
 							),
 							array(
+								"type" => "dropdown",
+								"heading" => __("Tag","ultimate_vc"),
+								"param_name" => "heading_tag",
+								"value" => array(
+									__("Default","ultimate_vc") => "Div",
+									__("H1","ultimate_vc") => "h1",
+									__("H2","ultimate_vc") => "h2",
+									__("H3","ultimate_vc") => "h3",
+									__("H4","ultimate_vc") => "h4",
+									__("H5","ultimate_vc") => "h5",
+									__("H6","ultimate_vc") => "h6",
+									__("p","ultimate_vc") => "p",
+									__("span","ultimate_vc") => "span",
+								),
+								"description" => __("Default is Div", "ultimate_vc"),
+							),
+							array(
 								"type" => "textarea",
 								"class" => "",
 								"heading" => __("Description","ultimate_vc"),
@@ -531,10 +548,11 @@ if(!class_exists('Ultimate_Info_Banner'))
 		// Shortcode handler function for stats banner
 		function banner_shortcode($atts)
 		{
-			$output = $el_class = $style = $img_style = $infobnr_design = $target = $link_title  = $rel ='';
+			$output = $el_class = $style = $img_style = $infobnr_design = $target = $link_title  = $rel = $heading_tag ='';
 
 			extract(shortcode_atts( array(
 				'banner_title' => '',
+				'heading_tag' => 'div',
 				'banner_desc' => '',
 				'info_alignment' => 'ib3-info-center',
 				'banner_image' => '',
@@ -719,7 +737,7 @@ if(!class_exists('Ultimate_Info_Banner'))
 				$output .= '<div id="'.esc_attr($info_banner_id).'" class="ultb3-info '.esc_attr($info_alignment).'" data-animation="'.esc_attr($info_effect).'" data-animation-delay="03">';
 
 				if($banner_title != '')
-					$output .= '<div class="ultb3-title ult-responsive" '.$info_banner_data_list.' style="'.esc_attr($title_style_inline).'">'.$banner_title.'</div>';
+					$output .= '<'. $heading_tag .' class="ultb3-title ult-responsive" '.$info_banner_data_list.' style="'.esc_attr($title_style_inline).'">'.$banner_title.'</'. $heading_tag .'>';
 				if($banner_desc != '')
 					$output .= '<div class="ultb3-desc ult-responsive" '.$info_banner_desc_data_list.' style="'.esc_attr($desc_style_inline).'">'.$banner_desc.'</div>';
 				if($button_text != '')

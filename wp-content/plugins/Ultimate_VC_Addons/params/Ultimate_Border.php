@@ -11,13 +11,13 @@ if(!class_exists('Ultimate_Border'))
       if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
         if(function_exists('vc_add_shortcode_param'))
         {
-          vc_add_shortcode_param('ultimate_border', array($this, 'ultimate_border_callback'), plugins_url('../admin/vc_extend/js/ultimate-border.js',__FILE__));
+          vc_add_shortcode_param('ultimate_border', array($this, 'ultimate_border_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-border.js');
         }
       }
       else {
         if(function_exists('add_shortcode_param'))
         {
-          add_shortcode_param('ultimate_border', array($this, 'ultimate_border_callback'), plugins_url('../admin/vc_extend/js/ultimate-border.js',__FILE__));
+          add_shortcode_param('ultimate_border', array($this, 'ultimate_border_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-border.js');
         }
       }
     }
@@ -226,7 +226,7 @@ if(!class_exists('Ultimate_Border'))
     }
 
     function ultimate_border_param_scripts($hook) {
-        wp_register_style("ultimate-border-style",plugins_url('../admin/vc_extend/css/ultimate_border.css', __FILE__ ));
+        wp_register_style("ultimate-border-style", UAVC_URL.'admin/vc_extend/css/ultimate_border.css');
 
         if($hook == "post.php" || $hook == "post-new.php"){
           $bsf_dev_mode = bsf_get_option('dev_mode');

@@ -3,7 +3,11 @@
  * Contact Form 7 Style Options
  */
 
-require 'plugin-options.php';
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
+require_once 'plugin-options.php';
 
 /**
  * Get saved values

@@ -75,6 +75,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 			$is_vc_49_plus = (version_compare(4.9, $vc_version, '<=')) ? 'ult-adjust-bottom-margin' : '';
 
 			$uniq = uniqid();
+			$browser_info = getBrowser();
 
 			global $title_style_inline, $desc_style_inline, $info_circle_id, $info_circle_data_list;
 
@@ -156,11 +157,25 @@ if(!class_exists('Ultimate_Info_Circle'))
 
 			$style = $style1 = $style3 = $ex_class ='';
 
-			if($eg_br_style!='none' && $eg_br_width!='' && $eg_border_color!=''){
-				$style.='border:'.$eg_br_width.'px '.$eg_br_style.' '.$eg_border_color.';';
+			if (stripos($browser_info['name'], 'safari') == true && stripos($browser_info['version'], '11.') == true) {
+				if($eg_br_style!='none' && $eg_br_width!='' && $eg_border_color!=''){
+					$style.='box-shadow: 0 0 0 '.$eg_br_width.'px '.$eg_border_color.';';
+				}
 			}
-			if($cn_br_style!='none' && $cn_br_width!='' && $cn_border_color!=''){
-				$style1.='border:'.$cn_br_width.'px '.$cn_br_style.' '.$cn_border_color.';';
+			else {
+				if($eg_br_style!='none' && $eg_br_width!='' && $eg_border_color!=''){
+					$style.='border:'.$eg_br_width.'px '.$eg_br_style.' '.$eg_border_color.';';
+				}
+			}
+			if (stripos($browser_info['name'], 'safari') == true && stripos($browser_info['version'], '11.') == true) {
+				if($cn_br_style!='none' && $cn_br_width!='' && $cn_border_color!=''){
+					$style1.='box-shadow: 0 0 0 '.$cn_br_width.'px '.$cn_border_color.';';
+				}
+			}
+			else {
+				if($cn_br_style!='none' && $cn_br_width!='' && $cn_border_color!=''){
+					$style1.='border:'.$cn_br_width.'px '.$cn_br_style.' '.$cn_border_color.';';
+				}
 			}
 			//$style .='border-style:'.$eg_br_style.';';
 			$style1 .='background-color:'.$content_bg.';color:'.$content_color.';';
@@ -197,6 +212,14 @@ if(!class_exists('Ultimate_Info_Circle'))
 					$circle_type_extended = 'full-circle';
 			}
 
+			$connector_position = '';
+			if ( is_rtl() ) {
+				$connector_position = 'right:'.esc_attr($img_icon_size/2).'px;';
+			}
+			else {
+				$connector_position = 'left:'.esc_attr($img_icon_size/2).'px;';
+			}
+
 			if($visible_circle != '' && $visible_circle != 100 && $circle_type_extended != 'full-circle')
 				$clipped_circle = 'clipped-info-circle';
 
@@ -228,7 +251,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 											<p></p>
 										</div>
 									</div>
-									<div class="icon_list_connector" style="border-style:'.esc_attr($eg_br_style).';border-color:'.esc_attr($eg_border_color).';left:'.esc_attr($img_icon_size/2).'px;top:'.esc_attr($img_icon_size/2).'px;">
+									<div class="icon_list_connector" style=" border-style:'.esc_attr($eg_br_style).';border-color:'.esc_attr($eg_border_color).'; '.esc_attr($connector_position).' top:'.esc_attr($img_icon_size).'px;">
 									</div>';
 							}else {
 								$output .='
@@ -252,7 +275,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 		{
 			global $title_style_inline, $desc_style_inline, $info_circle_id, $info_circle_data_list, $info_circle_desc_data_list;
 			// Do nothing
-			$info_title = $info_icon = $icon_color = $icon_bg_color = $info_img = $icon_type  = $contents = $radius = $icon_size = $icon_html = $style = $output = $style = $ilink = $target = $link_title  = $rel = '';
+			$info_title = $info_icon = $icon_color = $icon_bg_color = $info_img = $icon_type  = $contents = $radius = $icon_size = $icon_html = $style = $output = $style = $ilink = $target = $link_title  = $rel = $padding_style = '';
 			extract(shortcode_atts(array(
 				'info_title' => '',
 				'info_icon' => '',
@@ -262,6 +285,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 				'icon_type' => 'selector',
 				'icon_br_style'=>'none',
 				'icon_br_width'=>'1',
+				'icon_br_padding' => '',
 				'icon_border_color'=>'',
 				'contents' => '',
 				'el_class' =>'',
@@ -288,6 +312,11 @@ if(!class_exists('Ultimate_Info_Circle'))
 			if($icon_color!=''){
 				$style .='color:'.$icon_color.';';
 			}
+			if($icon_br_padding!= '') {
+				$padding_style = 'data-padding-style='.$icon_br_padding;
+				$style.='padding:'.$icon_br_padding.'px;';
+
+			}
 			if($icon_br_style!='none' && $icon_br_width!='' && $icon_border_color!=''){
 				$style.='border-style:'.$icon_br_style.';';
 				$style.='border-width:'.$icon_br_width.'px;';
@@ -300,13 +329,13 @@ if(!class_exists('Ultimate_Info_Circle'))
 				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
 				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
 				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
-				$output .= '<div class="info-circle-icons '.esc_attr($el_class).'" style="'.esc_attr($style).'"><div class="info-circle-link">
+				$output .= '<div class="info-circle-icons '.esc_attr($el_class).'" style="'.esc_attr($style).'" '.$padding_style.'><div class="info-circle-link">
 								<a class="info-circle-href" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
 				$output .= $icon_html;
 				$output .="</div></div>";
 			}
 			else{
-				$output .= '<div class="info-circle-icons '.$el_class.'" style="'.esc_attr($style).'">';
+				$output .= '<div class="info-circle-icons '.$el_class.'" style="'.esc_attr($style).'" '.$padding_style.'>';
 				$output .= $icon_html;
 				$output .="</div>";
 			}
@@ -940,6 +969,19 @@ if(!class_exists('Ultimate_Info_Circle'))
 							"value" => 1,
 							"min" => 0,
 							"max" => 10,
+							"suffix" => "px",
+							//"description" => __("Thickness of the border.", "smile"),
+							"dependency" => Array("element" => "icon_br_style","value" => array("solid","dashed","dotted","double","inset","outset")),
+							"group" => __("Design")
+						),
+						array(
+							"type" => "number",
+							"class" => "",
+							"heading" => __("Padding", "ultimate_vc"),
+							"param_name" => "icon_br_padding",
+							"value" => '',
+							"min" => 0,
+							"max" => '',
 							"suffix" => "px",
 							//"description" => __("Thickness of the border.", "smile"),
 							"dependency" => Array("element" => "icon_br_style","value" => array("solid","dashed","dotted","double","inset","outset")),

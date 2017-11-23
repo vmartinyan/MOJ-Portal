@@ -2,6 +2,12 @@
 /**
  * on deactivation, if tracking is on, it will send info to plugin authors that the plugin is no longer active
  */
+
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
+
 define( 'CF7_STYLE_PLUGIN_PATH', WP_PLUGIN_DIR . '/contact-form-7-style/' );
 if ( !function_exists( 'cf7_style_announce_authors_about_deactivation' ) ) {
     function cf7_style_announce_authors_about_deactivation () {

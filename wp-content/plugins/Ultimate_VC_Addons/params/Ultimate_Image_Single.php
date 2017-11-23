@@ -42,13 +42,13 @@ if(!class_exists('Ult_Image_Single'))
       if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
         if(function_exists('vc_add_shortcode_param'))
         {
-          vc_add_shortcode_param('ult_img_single', array($this, 'ult_img_single_callback'), plugins_url('../admin/vc_extend/js/ultimate-image_single.js',__FILE__));
+          vc_add_shortcode_param('ult_img_single', array($this, 'ult_img_single_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-image_single.js');
         }
       }
       else {
         if(function_exists('add_shortcode_param'))
         {
-          add_shortcode_param('ult_img_single', array($this, 'ult_img_single_callback'), plugins_url('../admin/vc_extend/js/ultimate-image_single.js',__FILE__));
+          add_shortcode_param('ult_img_single', array($this, 'ult_img_single_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-image_single.js');
         }
       }
 
@@ -94,7 +94,7 @@ if(!class_exists('Ult_Image_Single'))
 
     function image_single_scripts() {
       wp_enqueue_media();
-      wp_enqueue_style( 'ultimate_image_single_css', plugins_url('../admin/vc_extend/css/ultimate_image_single.css', __FILE__ ));
+      wp_enqueue_style( 'ultimate_image_single_css', UAVC_URL.'admin/vc_extend/css/ultimate_image_single.css');
     }
   }
 }

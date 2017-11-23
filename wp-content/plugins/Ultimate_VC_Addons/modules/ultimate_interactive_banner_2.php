@@ -26,7 +26,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 					   "class" => "vc_interactive_icon",
 					   "icon" => "vc_icon_interactive",
 					   "category" => "Ultimate VC Addons",
-					   "description" => __("Displays the banner image with Information","ultimate_vc"),
+					   "description" => __("Displays the banner image with Information.","ultimate_vc"),
 					   "params" => array(
 							array(
 								"type" => "textfield",
@@ -35,7 +35,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 								"param_name" => "banner_title",
 								"admin_label" => true,
 								"value" => "",
-								"description" => __("Give a title to this banner","ultimate_vc")
+								"description" => __("Give a title to this banner.","ultimate_vc")
 							),
 							array(
 								"type" => "textarea",
@@ -60,7 +60,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 									__("p","ultimate_vc") => "p",
 									__("span","ultimate_vc") => "span",
 								),
-								"description" => __("Default is H2", "ultimate_vc"),
+								"description" => __("Default is H2.", "ultimate_vc"),
 								),
 							array(
 								"type" => "ult_img_single",
@@ -68,7 +68,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 								"heading" => __("Banner Image","ultimate_vc"),
 								"param_name" => "banner_image",
 								"value" => "",
-								"description" => __("Upload the image for this banner","ultimate_vc")
+								"description" => __("Upload the image for this banner.","ultimate_vc")
 							),
 							array(
 								"type" => "vc_link",
@@ -76,7 +76,17 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 								"heading" => __("Link ","ultimate_vc"),
 								"param_name" => "banner_link",
 								"value" => "",
-								"description" => __("Add link / select existing page to link to this banner","ultimate_vc"),
+								"description" => __("Add link / select existing page to link to this banner.","ultimate_vc"),
+							),
+							array(
+								"type" => "number",
+								"class" => "",
+								"heading" => __("Link Delay", "ultimate_vc"),
+								"param_name" => "delay_seconds",
+								"value" => "200",
+								"suffix" => "ms",
+								"description" => __("Add time delay for redirecting the links on touch devices.","ultimate_vc"),
+								//"dependency" => Array("element" => "banner_link", "value" => array('banner_link')),
 							),
 							array(
 								"type" => "ult_select2",
@@ -361,7 +371,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 		// Shortcode handler function for stats banner
 		function banner_shortcode($atts)
 		{
-			$banner_title = $banner_desc = $banner_image = $banner_link = $banner_style = $el_class = $heading_tag = '';
+			$banner_title = $banner_desc = $banner_image = $banner_link = $delay_seconds = $banner_style = $el_class = $heading_tag = '';
 			$banner_title_font_family=$banner_title_style = $banner_title_font_size = $banner_title_line_height = $banner_desc_font_family = $banner_desc_style = $banner_desc_font_size = $banner_desc_line_height = '';
 			$banner_title_style_inline = $banner_desc_style_inline = $banner_color_bg = $banner_color_title = $banner_color_desc = $banner_title_bg = '';
 			$image_opacity = $image_opacity_on_hover = $enable_responsive = $responsive_min = $banner_min = $banner_min_height_op = $responsive_max = $target = $link_title  = $rel = '';
@@ -375,6 +385,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 				'banner_height'=>'',
 				'banner_height_val'=>'',
 				'banner_link' => '',
+				'delay_seconds' => '200',
 				/*'banner_link_text' => '',*/
 				'banner_style' => '',
 				'banner_title_font_family' => '',
@@ -500,6 +511,10 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 				}
 			}
 
+			$delay_on_touch_devices = '';
+			if($delay_seconds !== '' && $delay_seconds !== '200')
+				$delay_on_touch_devices = 'data-touch-delay="'.$delay_seconds.'"';
+
 			if($banner_color_title != '')
 				$banner_title_style_inline .= 'color:'.$banner_color_title.';';
 
@@ -529,7 +544,7 @@ if(!class_exists('Ultimate_Interactive_Banner'))
 			}
 			$output .= '</div>';
 			if($href != ''){
-			$output .= '<a class="ult-new-ib-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).'></a>';
+			$output .= '<a class="ult-new-ib-link" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' '.$delay_on_touch_devices.'></a>';
 			}
 			$output .= '</div>';
 			$is_preset = false; //Display settings for Preset

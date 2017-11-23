@@ -60,6 +60,7 @@
 				<attribute>block_desc_front</attribute>
 				<attribute>block_title_back</attribute>
 				<attribute>block_desc_back</attribute>
+				<attribute>button_text</attribute>
 			</attributes>
 		</shortcode>
 		<shortcode>

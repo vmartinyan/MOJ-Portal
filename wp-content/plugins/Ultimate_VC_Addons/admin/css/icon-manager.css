@@ -279,7 +279,7 @@ input.search-icon {
 */
 
 /*On Off Checkbox Switch*/
-.onoffswitch {
+.ult-onoffswitch {
 	position: relative;
 	width: 95px;
 	display: inline-block;
@@ -289,23 +289,23 @@ input.search-icon {
 	-moz-user-select:none;
 	-ms-user-select: none;
 }
-.onoffswitch-checkbox {
+.ult-onoffswitch-checkbox {
 	position: absolute;
 	outline: none;
 	top: 2px;
 	left:0;
 }
-.onoffswitch-checkbox:foucs {
+.ult-onoffswitch-checkbox:foucs {
 	outline: none;
 }
-.onoffswitch-label {
+.ult-onoffswitch-label {
 	display: block;
 	overflow: hidden;
 	cursor: pointer;
 	border: 0px solid #999999;
 	border-radius: 0px;
 }
-.onoffswitch-inner {
+.ult-onoffswitch-inner {
 	width: 200%;
 	margin-left: -100%;
 	-moz-transition: margin 0.3s ease-in 0s;
@@ -313,7 +313,7 @@ input.search-icon {
 	-o-transition: margin 0.3s ease-in 0s;
 	transition: margin 0.3s ease-in 0s;
 }
-.onoffswitch-inner > div {
+.ult-onoffswitch-inner > div {
 	float: left;
 	position: relative;
 	width: 50%;
@@ -327,18 +327,18 @@ input.search-icon {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.onoffswitch-inner .onoffswitch-active {
+.ult-onoffswitch-inner .ult-onoffswitch-active {
 	padding-left: 15px;
 	background-color: #CCCCCC;
 	color: #FFFFFF;
 }
-.onoffswitch-inner .onoffswitch-inactive {
+.ult-onoffswitch-inner .ult-onoffswitch-inactive {
 	padding-right: 15px;
 	background-color: #CCCCCC;
 	color: #FFFFFF;
 	text-align: right;
 }
-.onoffswitch-switch {
+.ult-onoffswitch-switch {
 	/*width: 50px;*/
 	width:35px;
 	margin: 0px;
@@ -349,15 +349,15 @@ input.search-icon {
 	top: 0;
 	bottom: 0;
 }
-.onoffswitch-active .onoffswitch-switch {
+.ult-onoffswitch-active .ult-onoffswitch-switch {
 	background: #3F9CC7;
 	left: 0;
 }
-.onoffswitch-inactive .onoffswitch-switch {
+.ult-onoffswitch-inactive .ult-onoffswitch-switch {
 	background: #7D7D7D;
 	right: 0;
 }
-.onoffswitch-active .onoffswitch-switch:before {
+.ult-onoffswitch-active .ult-onoffswitch-switch:before {
 	content: " ";
 	position: absolute;
 	top: 0;
@@ -368,7 +368,7 @@ input.search-icon {
 	/*border-width: 12px 8px;*/
 	border-width: 15px;
 }
-.onoffswitch-inactive .onoffswitch-switch:before {
+.ult-onoffswitch-inactive .ult-onoffswitch-switch:before {
 	content: " ";
 	position: absolute;
 	top: 0;
@@ -379,7 +379,7 @@ input.search-icon {
 	/*border-width: 12px 8px;*/
 	border-width: 50px;
 }
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+.ult-onoffswitch-checkbox:checked + .ult-onoffswitch-label .ult-onoffswitch-inner {
 	margin-left: 0;
 }
 .icon_type.none, .icon_type option.none {

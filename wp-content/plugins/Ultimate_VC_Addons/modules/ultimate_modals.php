@@ -21,21 +21,21 @@ if(!class_exists('Ultimate_Modals'))
 		{
 			$bsf_dev_mode = bsf_get_option('dev_mode');
 			if($bsf_dev_mode === 'enable') {
-				$js_path = '../assets/js/';
-				$css_path = '../assets/css/';
+				$js_path = UAVC_URL.'assets/js/';
+				$css_path = UAVC_URL.'assets/css/';
 				$ext = '';
-				wp_register_script("ultimate-modal-customizer",plugins_url($js_path."modernizr-custom.js",__FILE__),array('jquery'),ULTIMATE_VERSION);
-				wp_register_script("ultimate-modal-classie",plugins_url($js_path."classie.js",__FILE__),array('jquery'),ULTIMATE_VERSION);
-				wp_register_script("ultimate-modal-froogaloop2",plugins_url($js_path."froogaloop2-min.js",__FILE__),array('jquery'),ULTIMATE_VERSION);
-				wp_register_script("ultimate-modal-snap-svg",plugins_url($js_path."snap-svg.js",__FILE__),array('jquery'),ULTIMATE_VERSION);
-				wp_register_script("ultimate-modal",plugins_url($js_path."modal.js",__FILE__),array('jquery', 'ultimate-modal-customizer', 'ultimate-modal-classie', 'ultimate-modal-froogaloop2', 'ultimate-modal-snap-svg' ),ULTIMATE_VERSION);
+				wp_register_script("ultimate-modal-customizer", $js_path."modernizr-custom.js",array('jquery'),ULTIMATE_VERSION);
+				wp_register_script("ultimate-modal-classie", $js_path."classie.js",array('jquery'),ULTIMATE_VERSION);
+				wp_register_script("ultimate-modal-froogaloop2", $js_path."froogaloop2-min.js",array('jquery'),ULTIMATE_VERSION);
+				wp_register_script("ultimate-modal-snap-svg", $js_path."snap-svg.js",array('jquery'),ULTIMATE_VERSION);
+				wp_register_script("ultimate-modal", $js_path."modal.js",array('jquery', 'ultimate-modal-customizer', 'ultimate-modal-classie', 'ultimate-modal-froogaloop2', 'ultimate-modal-snap-svg' ),ULTIMATE_VERSION);
 			}
 			else {
 				$js_path = '../assets/min-js/';
 				$css_path = '../assets/min-css/';
 				$ext = '.min';
 			}
-			wp_register_script("ultimate-modal-all",plugins_url("../assets/min-js/modal-all.min.js",__FILE__),array('jquery'),ULTIMATE_VERSION);
+			wp_register_script("ultimate-modal-all", UAVC_URL.'assets/min-js/modal-all.min.js',array('jquery'),ULTIMATE_VERSION);
 			
 			Ultimate_VC_Addons::ultimate_register_style( 'ultimate-modal', 'modal' );
 		}
@@ -288,12 +288,15 @@ if(!class_exists('Ultimate_Modals'))
 				$modal_data_class = '';
 			}
 
-			$keypress_controls = $overlay_controls = '';
+			$keypress_controls = $overlay_controls = $keypress_controls_selector = $overlay_controls_selector = '';
 			if($keypress_enable_controls == 'keypress_controls') {
 				$keypress_controls = 'data-keypress-control="keypress-control-enable"';
+				$keypress_controls_selector = 'keypress-control-enable';
+
 			}
 			if($overlay_click_enable_controls == 'overlay_click_controls') {
 				$overlay_controls = 'data-overlay-control="overlay-control-enable"';
+				$overlay_controls_selector = 'overlay-control-enable';
 			}
 				$html .= '<div id="'.esc_attr($modal_trgs_id).'" class="ult-modal-input-wrapper '.esc_attr($is_vc_49_plus).' '.esc_attr($init_extra_class).' '.esc_attr($css_modal_box).' '.esc_attr($ult_hide_modal).' " '.$keypress_controls.' '.$overlay_controls.'>';
 
@@ -333,13 +336,16 @@ if(!class_exists('Ultimate_Modals'))
 				$html .= '<div data-class-id="content-'.esc_attr($uniq).'" class="ult-onload '.esc_attr($modal_class).' " '.$modal_data_class.' data-onload-delay="'.esc_attr($onload_delay).'"></div>';
 			}
 			elseif($modal_on == "custom-selector") {
-				$html .= '<script type="text/javascript">
+				$html .= '<span data-class-id="content-'.esc_attr($uniq).'"></span>
+				<script type="text/javascript">
 				(function($){
 					$(document).ready(function(){
 						var selector = "'.esc_attr($modal_on_selector).'";
 						$(selector).addClass("custom-ult-modal '.esc_attr($modal_class).'");
 						$(selector).attr("data-class-id", "content-'.esc_attr($uniq).'");
 						$(selector).attr("data-overlay-class", "'.esc_attr($modal_style).'");
+						$(selector).attr("data-keypress-control", "'.esc_attr($keypress_controls_selector).'");
+						$(selector).attr("data-overlay-control", "'.esc_attr($overlay_controls_selector).'");
 					});
 				})(jQuery);
 				</script>';

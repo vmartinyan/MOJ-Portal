@@ -8,13 +8,13 @@ if(!class_exists('Ultimate_DateTime_Picker_Param'))
 			if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
 				if(function_exists('vc_add_shortcode_param'))
 				{
-					vc_add_shortcode_param('datetimepicker' , array($this, 'datetimepicker'), plugins_url('../admin/js/bootstrap-datetimepicker.min.js',__FILE__));
+					vc_add_shortcode_param('datetimepicker' , array($this, 'datetimepicker'), UAVC_URL.'admin/js/bootstrap-datetimepicker.min.js');
 				}
 			}
 			else {
 				if(function_exists('add_shortcode_param'))
 				{
-					add_shortcode_param('datetimepicker' , array($this, 'datetimepicker'), plugins_url('../admin/js/bootstrap-datetimepicker.min.js',__FILE__));
+					add_shortcode_param('datetimepicker' , array($this, 'datetimepicker'), UAVC_URL.'admin/js/bootstrap-datetimepicker.min.js');
 				}
 			}
 		}

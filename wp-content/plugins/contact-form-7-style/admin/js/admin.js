@@ -12,6 +12,27 @@ jQuery(document).ready(function($) {
         return pattern.test(emailAddress);
     }
 
+    function hideShowBtns(previewForm) {
+        if (previewForm.find('label').length < 1) {
+            $('.button[data-property="label"]').hide();
+        }
+        if (previewForm.find('p').length < 1) {
+            $('.button[data-property="p"]').hide();
+        }
+        if (previewForm.find('fieldset').length < 1) {
+            $('.button[data-property="fieldset"]').hide();
+        }
+        if (previewForm.find('select').length < 1) {
+            $('.button[data-property="select"]').hide();
+        }
+        if (previewForm.find('input[type="checkbox"]').length < 1) {
+            $('.button[data-property="checkbox"]').hide();
+        }
+        if (previewForm.find('input[type="radio"]').length < 1) {
+            $('.button[data-property="radio"]').hide();
+        }
+    }
+
     /* Validation border color */
 
     function validateInput(elem, result) {
@@ -87,7 +108,6 @@ jQuery(document).ready(function($) {
 
     $('.cf7style-status-info').on('click', function(e) {
         e.preventDefault();
-
         $('.cf7style-status-table').toggle();
 
     });
@@ -157,11 +177,33 @@ jQuery(document).ready(function($) {
         if (hiddenInputData.length > 0) {
             var loadedData = $('input[name="cf7styleallvalues"]').val(),
                 loadedArray = $.parseJSON(loadedData.replace(/'/g, '"'));
+            $('.place-style').remove();
             $.each(loadedArray, function(index, value) {
                 if (index.indexOf('unit') < 0 && ((previewType == "hover" && index.indexOf('hover') > 0) || (previewType != "hover" && index.indexOf('hover') < 0))) {
                     var splitArray = index.split("_"),
                         newElem = splitArray[0],
-                        unit = loadedArray[index + "_unit"];
+                        unit = (previewType == "hover" && index.indexOf('hover') > 0) ? loadedArray[index.replace('hover', '') + "unit_hover"] : loadedArray[index + "_unit"];
+                    if (splitArray[0] == "placeholder" && value != '') {
+                        unit = (typeof unit == 'undefined' || value == "") ? "" : unit;
+                        var newValue = value + unit;
+                        var $style = $('<style>').attr('class', 'place-style');
+                        $style.text(
+                            '.preview-form-container ::-webkit-input-placeholder { ' +
+                            splitArray[1] + ': ' + newValue + ';' +
+                            '}' +
+                            '.preview-form-container ::-moz-placeholder { ' +
+                            splitArray[1] + ': ' + newValue + ';' +
+                            '}' +
+                            '.preview-form-container :-ms-input-placeholder { ' +
+                            splitArray[1] + ': ' + newValue + ';' +
+                            '}' +
+                            '.preview-form-container :-moz-placeholder { ' +
+                            splitArray[1] + ': ' + newValue + ';' +
+                            '}');
+                        $style.appendTo('head');
+                        return;
+                    }
+
                     if (splitArray[0] == "submit") {
                         newElem = "input[type='submit']";
                     }
@@ -514,13 +556,19 @@ jQuery(document).ready(function($) {
                     $('.multiple-form-generated-preview').eq($('.multiple-form-generated-preview').length - 1).show();
                     initialPreview();
                     addDummyElements();
+                    hideShowBtns($('.preview-form-container form:visible'));
                 }
             }
         });
     });
 
     function injectCheckbox() {
-        $('<label><input type="checkbox" class="transparent-box" name="transparent-box">Transparent</label>').insertAfter('.wp-picker-container');
+
+        $('.wp-picker-container').each(function() {
+            if ($(this).parent().find('label[for*="_color"]').length < 1) {
+                $('<label><input type="checkbox" class="transparent-box" name="transparent-box">Transparent</label>').insertAfter($(this));
+            }
+        });
         $('.transparent-box').each(function() {
             var curParent = $(this).parent().parent();
             if (curParent.find('.cf7-style-color-field').val() == "transparent") {
@@ -546,23 +594,23 @@ jQuery(document).ready(function($) {
     }
 
     function changeInputStep() {
-        $('.panel input[type="number"]').each(function() {
+        $('.panel input[type="number"]:not([id*="opacity"])').each(function() {
             var _t = $(this);
             _t.attr('step', returnStep(_t.next()));
         });
         $('.panel select[name*="unit"]').off("change").on("change", function() {
             var _t = $(this);
             _t.prev().attr('step', returnStep(_t));
-            if( _t.val() == "px"){
-               var curVal = Math.floor(_t.prev().val());
-               _t.prev().val(curVal);
-               _t.prev().attr('value',curVal);
+            if (_t.val() == "px") {
+                var curVal = Math.floor(_t.prev().val());
+                _t.prev().val(curVal);
+                _t.prev().attr('value', curVal);
             }
         });
     }
 
     var previewEl = $(".generate-preview"),
-        cf7StylePostType = $(".post-type-cf7_style "),
+        cf7StylePostType = $(".post-type-cf7_style"),
         selectAll = $('#select_all'),
         fontSelectVar = $('select[name="cf7_style_font_selector"]'),
         sliderWrapper = $('.cf7-style-slider-wrap'),
@@ -597,23 +645,9 @@ jQuery(document).ready(function($) {
         autoCompleteOtherValues();
         addDummyElements();
         var previewForm = $('.preview-form-container').not('.hidden');
-        if (previewForm.find('label').length < 1) {
-            $('.button[data-property="label"]').hide();
-        }
-        if (previewForm.find('p').length < 1) {
-            $('.button[data-property="p"]').hide();
-        }
-        if (previewForm.find('fieldset').length < 1) {
-            $('.button[data-property="fieldset"]').hide();
-        }
-        if (previewForm.find('select').length < 1) {
-            $('.button[data-property="select"]').hide();
-        }
-        if (previewForm.find('input[type="checkbox"]').length < 1) {
-            $('.button[data-property="checkbox"]').hide();
-        }
-        if (previewForm.find('input[type="radio"]').length < 1) {
-            $('.button[data-property="radio"]').hide();
+        /*Hide settings which are not present in the current selected form*/
+        if( $('.post-new-php').length < 1 ){
+            hideShowBtns(previewForm);
         }
         /*Checkbox for select all the forms*/
         selectAllForms(selectAll);

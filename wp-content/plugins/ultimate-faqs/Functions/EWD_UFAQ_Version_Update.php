@@ -26,6 +26,22 @@ function EWD_UFAQ_Version_Update() {
 		}
 	}
 
+	if (get_option("EWD_UFAQ_FAQ_Elements") == "") {
+		$FAQ_Elements = array();
+		$FAQ_Elements[0] = "Author_Date";
+		$FAQ_Elements[1] = "Body";
+		$FAQ_Elements[2] = "Custom_Fields";
+		$FAQ_Elements[3] = "Categories";
+		$FAQ_Elements[4] = "Tags";
+		$FAQ_Elements[5] = "Ratings";
+		$FAQ_Elements[6] = "Social_Media";
+		$FAQ_Elements[7] = "Permalink";
+		$FAQ_Elements[8] = "Comments";
+		$FAQ_Elements[9] = "Back_To_Top";
+
+		update_option("EWD_UFAQ_FAQ_Elements", $FAQ_Elements);
+	}
+
 	if (get_option("EWD_UFAQ_Toggle") == "") {update_option("EWD_UFAQ_Toggle", "Yes");}
 	if (get_option("EWD_UFAQ_Display_Back_To_Top") == "") {update_option("EWD_UFAQ_Display_Back_To_Top", "No");}
 	if (get_option("EWD_UFAQ_Comments_On") == "") {update_option("EWD_UFAQ_Comments_On", "No");}

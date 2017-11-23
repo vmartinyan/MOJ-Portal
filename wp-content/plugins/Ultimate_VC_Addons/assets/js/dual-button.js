@@ -260,6 +260,38 @@
                 }
             });
         });
+        jQuery( document ).on( "ultAdvancedTabClickedDualBtn", function( e, selector ) {
+            jQuery(selector).find(".ult_dual_button" ).each(function ( index ) {
+
+                jQuery(this).find('.ult_dual1').css('height', 'auto');
+                jQuery(this).find('.ult_dual2').css('height', 'auto');
+                
+                var ht1=jQuery(this).find('.ult_dual1').outerHeight();
+                ht1=parseInt(ht1);
+
+                var ht2=jQuery(this).find('.ult_dual2').outerHeight();
+                ht2=parseInt(ht2);
+
+                if(ht1>ht2)
+                {
+                    jQuery(this).find('.ult_dual2').css({'height':ht1});
+                    jQuery(this).find('.ult_dual1').css({'height':ht1});
+
+                }
+                else if(ht1<ht2)
+                {
+                    jQuery(this).find('.ult_dual1').css({'height':ht2});
+                    jQuery(this).find('.ult_dual2').css({'height':ht2});
+
+                }
+                else if(ht1==ht2)
+                {
+                    jQuery(this).find('.ult_dual1').css({'height':ht2});
+                    jQuery(this).find('.ult_dual2').css({'height':ht2});
+
+                }
+            });
+        });
     });
 
 

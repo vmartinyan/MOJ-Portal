@@ -32,12 +32,12 @@ if(!class_exists('Ultimate_BoxShadow'))
       if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
         if(function_exists('vc_add_shortcode_param'))
         {
-          vc_add_shortcode_param('ultimate_boxshadow', array($this, 'ultimate_boxshadow_callback'), plugins_url('../admin/vc_extend/js/vc-box-shadow-param.js',__FILE__));
+          vc_add_shortcode_param('ultimate_boxshadow', array($this, 'ultimate_boxshadow_callback'), UAVC_URL.'admin/vc_extend/js/vc-box-shadow-param.js');
         }
       }
       else {
         if(function_exists('add_shortcode_param')) {
-          add_shortcode_param('ultimate_boxshadow', array($this, 'ultimate_boxshadow_callback'), plugins_url('../admin/vc_extend/js/vc-box-shadow-param.js',__FILE__));
+          add_shortcode_param('ultimate_boxshadow', array($this, 'ultimate_boxshadow_callback'), UAVC_URL.'admin/vc_extend/js/vc-box-shadow-param.js');
         }
       }
 
@@ -142,7 +142,7 @@ if(!class_exists('Ultimate_BoxShadow'))
         if($bsf_dev_mode === 'enable') {
           wp_enqueue_style( 'wp-color-picker' );
 
-          wp_register_style( 'ultimate_boxshadow_param_css', plugins_url('../admin/vc_extend/css/vc_param_boxshadow.css', __FILE__ ));
+          wp_register_style( 'ultimate_boxshadow_param_css', UAVC_URL.'admin/vc_extend/css/vc_param_boxshadow.css');
           wp_enqueue_style( 'ultimate_boxshadow_param_css');
           //wp_register_script('ultimate_boxshadow_param_js',plugins_url( '../admin/vc_extend/js/vc-box-shadow-param.js', __FILE__ ));
           //wp_enqueue_style( 'ultimate_boxshadow_param_choosen_css', plugins_url('../admin/vc_extend/css/chosen.css', __FILE__ ));

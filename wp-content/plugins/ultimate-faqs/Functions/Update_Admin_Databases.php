@@ -44,6 +44,7 @@ function EWD_UFAQ_UpdateOptions() {
 
     if (isset($_POST['display_style']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Display_Style',  sanitize_text_field($_POST['display_style']));}
     if (isset($_POST['color_block_shape']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Color_Block_Shape',  sanitize_text_field($_POST['color_block_shape']));}
+    if (isset($_POST['Options_Submit']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_FAQs_Per_Page',  sanitize_text_field($_POST['faqs_per_page']));}
     if (isset($_POST['faq_ratings']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_FAQ_Ratings',  sanitize_text_field($_POST['faq_ratings']));}
     if (isset($_POST['woocommerce_faqs']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_WooCommerce_FAQs',  sanitize_text_field($_POST['woocommerce_faqs']));}
     if (isset($_POST['use_product']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Use_Product',  sanitize_text_field($_POST['use_product']));}
@@ -56,6 +57,12 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['faq_auto_complete_titles']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Auto_Complete_Titles', sanitize_text_field($_POST['faq_auto_complete_titles']));}
     if (isset($_POST['slug_base']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Slug_Base', $_POST['slug_base']);}
     if (isset($_POST['Socialmedia']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Social_Media',  $Social_Media);}
+
+    $FAQ_Elements = array();
+    for ($i=0; $i<=9; $i++) {
+        $FAQ_Elements[] = $_POST['Element_' . $i];
+    }
+    if (isset($_POST['Options_Submit'])) {update_option('EWD_UFAQ_FAQ_Elements', $FAQ_Elements);}
 
     if (isset($_POST['group_by_category'])) {update_option('EWD_UFAQ_Group_By_Category', sanitize_text_field($_POST['group_by_category']));}
     if (isset($_POST['group_by_category_count'])) {update_option('EWD_UFAQ_Group_By_Category_Count', sanitize_text_field($_POST['group_by_category_count']));}

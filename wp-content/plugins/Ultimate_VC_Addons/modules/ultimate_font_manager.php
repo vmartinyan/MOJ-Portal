@@ -76,7 +76,7 @@ if(!class_exists('Ultimate_Google_Font_Manager'))
 		}
 		function admin_google_font_scripts()
 		{
-			wp_register_script('ultimate-google-fonts-script',plugins_url("../admin/js/google-fonts-admin.js",__FILE__),array('jquery'));
+			wp_register_script('ultimate-google-fonts-script', UAVC_URL.'admin/js/google-fonts-admin.js',array('jquery'));
 			wp_enqueue_script('ultimate-google-fonts-script');
 			wp_localize_script( 'jquery', 'uavc', array(
 				'google_font_nonce'   => wp_create_nonce( 'uavc-google-font-nonce' ),
@@ -86,7 +86,7 @@ if(!class_exists('Ultimate_Google_Font_Manager'))
 				'update_google_fonts' => wp_create_nonce( 'uavc-update-google-fonts-nonce' ),
 			) );
 
-			Ultimate_VC_Addons::ultimate_register_style( 'ultimate-google-fonts-style', plugins_url( "../admin/css/google-fonts-admin.css", __FILE__ ), true );
+			Ultimate_VC_Addons::ultimate_register_style( 'ultimate-google-fonts-style', UAVC_URL.'admin/css/google-fonts-admin.css', true );
 
 			wp_enqueue_style('ultimate-google-fonts-style');
 		}

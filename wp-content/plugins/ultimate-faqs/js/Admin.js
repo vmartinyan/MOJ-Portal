@@ -21,8 +21,24 @@ jQuery(document).ready(function() {
 		cursor: 'move',
 		axis: 'y',
 		update: function() {
-			var order = jQuery(this).sortable('serialize') + '&action=UFAQ_update_order';
-			jQuery.post(ajaxurl, order, function(response) {});
+				var order = jQuery(this).sortable('serialize') + '&action=UFAQ_update_order';
+				jQuery.post(ajaxurl, order, function(response) {});
+		}
+	});
+});
+
+/* This code is required to make changing the FAQ order a drag-and-drop affair */
+jQuery(document).ready(function() {
+	jQuery('.ewd-ufaq-elements-table').sortable({
+		items: '.ewd-ufaq-element',
+		opacity: 0.6,
+		cursor: 'move',
+		axis: 'y',
+		update: function() {
+			jQuery('.ewd-ufaq-element td').each(function(index, el) {
+				var Element_Name = jQuery(this).find('.ewd-ufaq-element-name').html();
+				jQuery(this).find('input').val(Element_Name).attr('name', 'Element_' + index);
+			});
 		}
 	});
 });

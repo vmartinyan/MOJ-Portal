@@ -21,7 +21,7 @@ if(!class_exists('AIO_Dual_Button'))
 			if($hook == "post.php" || $hook == "post-new.php"){
 				$bsf_dev_mode = bsf_get_option('dev_mode');
 				if($bsf_dev_mode === 'enable') {
-					wp_register_script("jquery_dualbtn_new",plugins_url("../admin/js/dualbtnbackend.js",__FILE__),array('jquery'),ULTIMATE_VERSION);
+					wp_register_script("jquery_dualbtn_new",UAVC_URL.'admin/js/dualbtnbackend.js',array('jquery'),ULTIMATE_VERSION);
 					wp_enqueue_script('jquery_dualbtn_new');
 				}
 			}

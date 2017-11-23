@@ -1,4 +1,9 @@
 <?php
+
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
 function get_new_styler_data($a){
 	$t = array();
 	$u = "px";

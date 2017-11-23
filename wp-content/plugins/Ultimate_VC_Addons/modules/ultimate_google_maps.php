@@ -389,7 +389,7 @@ if(!class_exists("Ultimate_Google_Maps")){
 			$marker_lat = $lat;
 			$marker_lng = $lng;
 			if($marker_icon == "default_self"){
-				$icon_url = plugins_url("../assets/img/icon-marker-pink.png",__FILE__);
+				$icon_url = UAVC_URL.'assets/img/icon-marker-pink.png';
 			} elseif($marker_icon == "default"){
 				$icon_url = "";
 			} else {

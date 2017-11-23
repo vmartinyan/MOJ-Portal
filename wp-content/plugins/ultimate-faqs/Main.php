@@ -2,19 +2,19 @@
 /*
 Plugin Name: Ultimate FAQ
 Plugin URI: http://www.EtoileWebDesign.com/wordpress-plugins/
-Description: A plugin that lets you create FAQs (frequently asked questions), organize them, publicize them, etc.
+Description: FAQ plugin that lets you easily create, order and publicize FAQs using shortcodes, with many unique styles, WooCommerce FAQs and AJAX FAQ search
 Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.6.6
+Version: 1.6.9
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.6.4';
+$EWD_UFAQ_Version = '1.6.9a';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );

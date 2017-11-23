@@ -26,7 +26,7 @@ if(!class_exists("Ultimate_Team")){
 		  	if($hook == "post.php" || $hook == "post-new.php" || $hook == 'visual-composer_page_vc-roles'){
 		   		$bsf_dev_mode = bsf_get_option('dev_mode');
 				if($bsf_dev_mode === 'enable') {
-					wp_enqueue_script('ult-team-admin',plugins_url('../admin/js/team-admin.js',__FILE__),array('jquery'),ULTIMATE_VERSION,true);
+					wp_enqueue_script('ult-team-admin',UAVC_URL.'admin/js/team-admin.js',array('jquery'),ULTIMATE_VERSION,true);
 				}
 			}
 		}
@@ -563,7 +563,7 @@ if(!class_exists("Ultimate_Team")){
 						"controls" => "full",
 						"category" => "Ultimate VC Addons",
 						"description" => __("Show your awesome team.","ultimate_vc"),
-						"admin_enqueue_js"  => preg_replace( '/\s/', '%20', plugins_url('../admin/js/team-admin.js',__FILE__) ),
+						"admin_enqueue_js"  => preg_replace( '/\s/', '%20', UAVC_URL.'admin/js/team-admin.js' ),
 						"params" => array(
 							// Custom Coding for new team styles
 							array(

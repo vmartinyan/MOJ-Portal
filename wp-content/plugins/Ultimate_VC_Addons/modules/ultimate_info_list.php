@@ -8,7 +8,7 @@ if(!class_exists('AIO_Info_list'))
 	class AIO_Info_list
 	{
 		var $connector_animate;
-		var $connect_color;
+		var $connect_color_style;
 		var $icon_font;
 		var $border_col;
 		var $icon_style;
@@ -19,7 +19,7 @@ if(!class_exists('AIO_Info_list'))
 		function __construct()
 		{
 			$this->connector_animate = '';
-			$this->connect_color = '';
+			$this->connect_color_style = '';
 			$this->icon_style = '';
 			$this->icon_style = '';
 			if ( Ultimate_VC_Addons::$uavc_editor_enable ) {
@@ -38,13 +38,15 @@ if(!class_exists('AIO_Info_list'))
 		function info_list($atts, $content = null)
 		{
 			$this->icon_style = $this->connector_animate = $this->icon_font = $this->border_col = '';
-			$position = $style = $icon_color = $icon_bg_color = $connector_animation = $font_size_icon = $icon_border_style = $icon_border_size = $connector_color = $border_color = $el_class = $info_list_link_html = '';
+			$position = $style = $icon_color = $icon_bg_color = $connector_animation = $font_size_icon = $icon_border_style = $icon_border_size = $eg_br_style = $eg_br_width = $connector_color = $border_color = $el_class = $info_list_link_html = '';
 			extract(shortcode_atts(array(
 				'position' => 'left',
 				'style' => 'square with_bg',
 				'connector_animation' => '',
 				'icon_color' =>'#333333',
 				'icon_bg_color' =>'#ffffff',
+				'eg_br_style'=>'dashed',
+				'eg_br_width'=>'1',
 				'connector_color' => '#333333',
 				'border_color' => '#333333',
 				'font_size_icon' => '24',
@@ -53,14 +55,57 @@ if(!class_exists('AIO_Info_list'))
 				'el_class' => '',
 				'css_info_list' =>'',
 			), $atts));
-
+			$this->connect_color_style = '';
 			$css_info_list = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class( $css_info_list, ' ' ), "info_list", $atts );
 			$css_info_list = esc_attr( $css_info_list );
 
 			$vc_version = (defined('WPB_VC_VERSION')) ? WPB_VC_VERSION : 0;
 			$is_vc_49_plus = (version_compare(4.9, $vc_version, '<=')) ? 'ult-adjust-bottom-margin' : '';
+			$eg_br_width_plus = '';
+			if($position == 'left' && $eg_br_style!='none' && $eg_br_width!='' && $connector_color!='' ){
+				if ( is_rtl() ) {
+					$this->connect_color_style = 'border-left-width: '.$eg_br_width.'px;';
+					$this->connect_color_style .= 'border-left-style: '.$eg_br_style.';';
+				}
+				else {
+					$this->connect_color_style = 'border-right-width: '.$eg_br_width.'px;';
+					$this->connect_color_style .= 'border-right-style: '.$eg_br_style.';';	
+				}
+				$this->connect_color_style .= 'border-color: '.$connector_color.';';
+				if( ( $style == 'square with_bg' || $style == 'circle with_bg' || $style == 'hexagon' ) && (int)$eg_br_width > 1 ) {
+					$eg_br_width_plus = (($font_size_icon*3)+((int)$icon_border_size*2) - ((int)$eg_br_width))/2;
+					$this->connect_color_style .= 'left: '.$eg_br_width_plus.'px;';
+				}
 
-			$this->connect_color = $connector_color;
+			}
+			if($position == 'right' && $eg_br_style!='none' && $eg_br_width!='' && $connector_color!='' ){
+				if ( is_rtl() ) {
+					$this->connect_color_style = 'border-right-width: '.$eg_br_width.'px;';
+					$this->connect_color_style .= 'border-right-style: '.$eg_br_style.';';
+				}
+				else {
+					$this->connect_color_style = 'border-left-width: '.$eg_br_width.'px;';
+					$this->connect_color_style .= 'border-left-style: '.$eg_br_style.';';
+				}
+				$this->connect_color_style .= 'border-color: '.$connector_color.';';
+				if( ( $style == 'square with_bg' || $style == 'circle with_bg' || $style == 'hexagon' ) && (int)$eg_br_width > 1 ) {
+					$eg_br_width_plus = (($font_size_icon*3)+((int)$icon_border_size*2) - ((int)$eg_br_width))/2;
+					$this->connect_color_style .= 'right: '.$eg_br_width_plus.'px;';
+				}
+			}
+			if($position == 'top' && $eg_br_style!='none' && $eg_br_width!='' && $connector_color!='' ){
+				$this->connect_color_style = 'border-top-width: '.$eg_br_width.'px;';
+				$this->connect_color_style .= 'border-top-style: '.$eg_br_style.';';
+				$this->connect_color_style .= 'border-color: '.$connector_color.';';
+				if( ( $style == 'square with_bg' || $style == 'circle with_bg' ) && (int)$eg_br_width > 1 ) {
+					$eg_br_width_plus = (($font_size_icon*3)+((int)$icon_border_size*2) - ((int)$eg_br_width))/2;
+					$this->connect_color_style .= 'top: '.$eg_br_width_plus.'px;';
+				}
+			}
+			if( $eg_br_style =='none' && ( $position == 'left' || $position == 'right' || $position == 'top' ) ) {
+				$this->connect_color_style = 'border: none !important;';
+			}
+
 			$this->border_col = $border_color;
 			if($style == 'square with_bg' || $style == 'circle with_bg' || $style == 'hexagon'){
 				$this->icon_font = 'font-size:'.($font_size_icon*3).'px;';
@@ -268,7 +313,7 @@ if(!class_exists('AIO_Info_list'))
 			}
 			$output .= '<div class="icon_description_text ult-responsive" '.$info_list_desc_data_list.' style="'.esc_attr($desc_style).'">'.wpb_js_remove_wpautop($content, true).'</div>';
 			$output .= '</div>';
-			$output .= '<div class="icon_list_connector" '.$connector_trans.' style="border-color:'.esc_attr($this->connect_color).';"></div>';
+			$output .= '<div class="icon_list_connector" '.$connector_trans.' style="'.esc_attr($this->connect_color_style).'"></div>';
 			if($is_link && $info_list_link_apply == 'container')
 				$output .= $info_list_link_html;
 			$output .= '</li>';
@@ -278,13 +323,15 @@ if(!class_exists('AIO_Info_list'))
 		function front_info_list($atts, $content = null)
 		{
 			// Do nothing
-			$position = $style = $icon_color = $icon_bg_color = $connector_animation = $font_size_icon = $icon_border_style = $icon_border_size = $connector_color = $border_color = $el_class = '';
+			$position = $style = $icon_color = $icon_bg_color = $connector_animation = $font_size_icon = $icon_border_style = $icon_border_size = $eg_br_style = $eg_br_width = $connector_color = $border_color = $el_class = '';
 			extract(shortcode_atts(array(
 				'position' => 'left',
 				'style' => 'square with_bg',
 				'connector_animation' => '',
 				'icon_color' =>'#333333',
 				'icon_bg_color' =>'#ffffff',
+				'eg_br_style'=>'dashed',
+				'eg_br_width'=>'1',
 				'connector_color' => '#333333',
 				'border_color' => '#333333',
 				'font_size_icon' => '24',
@@ -292,7 +339,40 @@ if(!class_exists('AIO_Info_list'))
 				'icon_border_size' => '1',
 				'el_class' => '',
 			), $atts));
-			$this->connect_color = $connector_color;
+			$eg_br_width_plus = '';
+			if($position == 'left' && $eg_br_style!='none' && $eg_br_width!='' && $connector_color!='' ){
+				$this->connect_color_style = 'border-right-width: '.$eg_br_width.'px;';
+				$this->connect_color_style .= 'border-right-style: '.$eg_br_style.';';
+				$this->connect_color_style .= 'border-color: '.$connector_color.';';
+				if( ( $style == 'square with_bg' || $style == 'circle with_bg' || $style == 'hexagon' ) && (int)$eg_br_width > 1 ) {
+					$eg_br_width_plus = (($font_size_icon*3)+((int)$icon_border_size*2) - ((int)$eg_br_width))/2;
+					$this->connect_color_style .= 'left: '.$eg_br_width_plus.'px;';
+				}
+
+			}
+			if($position == 'right' && $eg_br_style!='none' && $eg_br_width!='' && $connector_color!='' ){
+				$this->connect_color_style = 'border-left-width: '.$eg_br_width.'px;';
+				$this->connect_color_style .= 'border-left-style: '.$eg_br_style.';';
+				$this->connect_color_style .= 'border-color: '.$connector_color.';';
+				if( ( $style == 'square with_bg' || $style == 'circle with_bg' || $style == 'hexagon' ) && (int)$eg_br_width > 1 ) {
+					$eg_br_width_plus = (($font_size_icon*3)+((int)$icon_border_size*2) - ((int)$eg_br_width))/2;
+					$this->connect_color_style .= 'right: '.$eg_br_width_plus.'px;';
+				}
+			}
+			if($position == 'top' && $eg_br_style!='none' && $eg_br_width!='' && $connector_color!='' ){
+				$this->connect_color_style = 'border-top-width: '.$eg_br_width.'px;';
+				$this->connect_color_style .= 'border-top-style: '.$eg_br_style.';';
+				$this->connect_color_style .= 'border-color: '.$connector_color.';';
+				if( ( $style == 'square with_bg' || $style == 'circle with_bg' ) && (int)$eg_br_width > 1 ) {
+					$eg_br_width_plus = (($font_size_icon*3)+((int)$icon_border_size*2) - ((int)$eg_br_width))/2;
+					$this->connect_color_style .= 'top: '.$eg_br_width_plus.'px;';
+				}
+			}
+
+			if( $eg_br_style =='none' && ( $position == 'left' || $position == 'right' || $position == 'top' ) ) {
+				$this->connect_color_style = 'border: none !important;';
+			}
+
 			$this->border_col = $border_color;
 			if($style == 'square with_bg' || $style == 'circle with_bg' || $style == 'hexagon'){
 				$this->icon_font = 'font-size:'.($font_size_icon*3).'px;';
@@ -382,7 +462,7 @@ if(!class_exists('AIO_Info_list'))
 			$output .= '<h3>'.$list_title.'</h3>';
 			$output .= wpb_js_remove_wpautop($content, true);
 			$output .= '</div>';
-			$output .= '<div class="icon_list_connector" '.$connector_trans.' style="border-color:'.esc_attr($this->connect_color).';"></div>';
+			$output .= '<div class="icon_list_connector" '.$connector_trans.' style="'.esc_attr($this->connect_color_style).';"></div>';
 			$output .= '</li>';
 			return $output;
 		}
@@ -494,22 +574,51 @@ if(!class_exists('AIO_Info_list'))
 							"dependency" => Array("element" => "icon_border_style", "value" => array("solid","dashed","dotted","double","inset","outset")),
 						),
 						array(
+							"type" => "dropdown",
+							"class" => "",
+							"heading" => __("Line Style", "ultimate_vc"),
+							"param_name" => "eg_br_style",
+							"value" => array(
+								__("Dashed","ultimate_vc") => "dashed",
+								__("Solid","ultimate_vc")	=> "solid",
+								__("Dotted","ultimate_vc") => "dotted",
+								__("None","ultimate_vc") => "none",
+							),
+							"group" => "Connector"
+							//"description" => __("Select the style for Thumbnail Connector.","smile"),
+						),
+						array(
+							"type" => "number",
+							"class" => "",
+							"heading" => __("Line Width", "ultimate_vc"),
+							"param_name" => "eg_br_width",
+							"value" => 1,
+							"min" => 0,
+							"max" => 10,
+							"suffix" => "px",
+							//"description" => __("Thickness of the Thumbnail Connector line.", "smile"),
+							"dependency" => Array("element" => "eg_br_style","value" => array("solid","dashed","dotted")),
+							"group" => "Connector"
+						),
+						array(
 							"type" => "colorpicker",
 							"class" => "",
-							"heading" => __("Connector Line Color:", "ultimate_vc"),
+							"heading" => __("Line Color:", "ultimate_vc"),
 							"param_name" => "connector_color",
 							"value" => "#333333",
+							"dependency" => Array("element" => "eg_br_style","value" => array("solid","dashed","dotted")),
 							"description" => __("Select the color for connector line.", "ultimate_vc"),
 							"group" => "Connector"
 						),
 						array(
 							"type" => "checkbox",
 							"class" => "",
-							"heading" => __("Connector Line Animation: ","ultimate_vc"),
+							"heading" => __("Line Animation: ","ultimate_vc"),
 							"param_name" => "connector_animation",
 							"value" => array (
 								__('Enabled','ultimate_vc') => 'fadeInUp',
 							),
+							"dependency" => Array("element" => "eg_br_style","value" => array("solid","dashed","dotted")),
 							"description" => __("Select wheather to animate connector or not","ultimate_vc"),
 							"group" => "Connector"
 						),

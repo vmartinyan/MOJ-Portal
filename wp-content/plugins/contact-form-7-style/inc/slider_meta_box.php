@@ -2,6 +2,11 @@
 /*
  * function for displaying the meta box
  */
+
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
 function cf7_style_display_slider( $post ) { 
     $stylearray = array(
         'post_type'         => 'cf7_style',

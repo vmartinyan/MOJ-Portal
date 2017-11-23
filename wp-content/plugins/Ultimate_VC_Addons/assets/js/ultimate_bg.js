@@ -1266,6 +1266,10 @@
 				if(ride == 'browser_size')
 					selector.parent().find('.upb-background-text-wrapper').addClass('full-browser-size');
 
+				if(selector.length === 0){
+					return;
+				}
+				
 				var resize = function(){
 					var w,h,ancenstor,al,bl;
 					ancenstor = selector.parent();

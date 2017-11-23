@@ -137,22 +137,28 @@ class LVCA_Portfolio {
 
                 <?php $column_style = lvca_get_column_class(intval($settings['per_line'])); ?>
 
-                <div class="lvca-portfolio-header">
+                <?php if (!empty($settings['heading']) || $settings['filterable']): ?>
 
-                    <?php if (!empty($settings['heading'])): ?>
+                    <?php $header_class = (trim($settings['heading']) === '') ? ' lvca-no-heading' : ''; ?>
 
-                        <h3 class="lvca-heading"><?php echo wp_kses_post($settings['heading']); ?></h3>
+                    <div class="lvca-portfolio-header <?php echo $header_class; ?>">
 
-                    <?php endif; ?>
+                        <?php if (!empty($settings['heading'])): ?>
 
-                    <?php
+                            <h3 class="lvca-heading"><?php echo wp_kses_post($settings['heading']); ?></h3>
 
-                    if ($settings['filterable'])
-                        echo lvca_get_taxonomy_terms_filter($this->_taxonomy_filter, $chosen_terms);
+                        <?php endif; ?>
 
-                    ?>
+                        <?php
 
-                </div>
+                        if ($settings['filterable'])
+                            echo lvca_get_taxonomy_terms_filter($this->_taxonomy_filter, $chosen_terms);
+
+                        ?>
+
+                    </div>
+                
+                <?php endif; ?>
 
                 <?php $uniqueid = uniqid(); ?>
 
@@ -213,8 +219,6 @@ class LVCA_Portfolio {
                                             </div>
 
                                         </div>
-
-                                        <div class="lvca-image-overlay"></div>
 
                                     </div>
 

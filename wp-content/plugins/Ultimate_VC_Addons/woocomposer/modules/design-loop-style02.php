@@ -266,7 +266,7 @@ function WooComposer_Loop_style02($atts,$element){
 						$output .= '<div class="wcmp-single-image-carousel carousel-in-loop">';
 						$product_img = wp_get_attachment_image_src( get_post_thumbnail_id($product_id),$image_size);
 						if($lazy_images == "enable"){
-							$src = plugins_url('../assets/img/loader.gif',__FILE__);
+							$src = UAVC_URL.'assets/img/loader.gif';
 						} else {
 							$src = $product_img[0];
 						}
@@ -279,7 +279,7 @@ function WooComposer_Loop_style02($atts,$element){
 					} else {
 						$product_img = wp_get_attachment_image_src( get_post_thumbnail_id($product_id),$image_size);
 						if($lazy_images == "enable"){
-							$src = plugins_url('../assets/img/loader.gif',__FILE__);
+							$src = UAVC_URL.'assets/img/loader.gif';
 						} else {
 							$src = $product_img[0];
 						}
@@ -343,7 +343,7 @@ function WooComposer_Loop_style02($atts,$element){
 						foreach($attachment_ids as $attachment_id){
 							$product_img = wp_get_attachment_image_src( $attachment_id,$image_size);
 							if($lazy_images == "enable"){
-								$src = plugins_url('../assets/img/loader.gif',__FILE__);
+								$src = UAVC_URL.'assets/img/loader.gif';
 							} else {
 								$src = $product_img[0];
 							}
@@ -353,7 +353,7 @@ function WooComposer_Loop_style02($atts,$element){
 					} else {
 						$product_img = wp_get_attachment_image_src( get_post_thumbnail_id($product_id),$image_size);
 						if($lazy_images == "enable"){
-							$src = plugins_url('../assets/img/loader.gif',__FILE__);
+							$src = UAVC_URL.'assets/img/loader.gif';
 						} else {
 							$src = $product_img[0];
 						}

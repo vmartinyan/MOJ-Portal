@@ -19,10 +19,10 @@ if(!class_exists("Ultimate_Buttons")){
 			if($hook == "post.php" || $hook == "post-new.php"){
 				$bsf_dev_mode = bsf_get_option('dev_mode');
 				if($bsf_dev_mode === 'enable') {
-					$js_path = '../assets/js/';
-					$css_path = '../assets/css/';
+					$js_path = UAVC_URL.'/assets/js/';
+					$css_path = UAVC_URL.'/assets/css/';
 					$ext = '';
-					wp_enqueue_style( 'ult-button', plugins_url($css_path.'advanced-buttons'.$ext.'.css', __FILE__) );
+					wp_enqueue_style( 'ult-button', $css_path.'advanced-buttons'.$ext.'.css' );
 				}
 			}
 		}

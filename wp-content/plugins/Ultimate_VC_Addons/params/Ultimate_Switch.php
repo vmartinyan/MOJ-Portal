@@ -36,15 +36,15 @@ if(!class_exists('Ultimate_Switch_Param'))
 						$checked = "";
 					}
 					$uid = uniqid('ultswitchparam-'.rand());
-					$output .= '<div class="onoffswitch">
-							<input type="checkbox" name="'.esc_attr( $param_name ).'" value="'.esc_attr( $value ).'" '.$dependency.' class="wpb_vc_param_value ' . esc_attr( $param_name ) . ' ' . esc_attr( $type ) . ' ' . esc_attr( $class ) . ' '.esc_attr( $dependency ).' onoffswitch-checkbox chk-switch-'.esc_attr( $un ).'" id="switch'.esc_attr( $uid ).'" '.$checked.'>
-							<label class="onoffswitch-label" for="switch'.esc_attr( $uid ).'">
-								<div class="onoffswitch-inner">
-									<div class="onoffswitch-active">
-										<div class="onoffswitch-switch">'.esc_html( $opts['on'] ).'</div>
+					$output .= '<div class="ult-onoffswitch">
+							<input type="checkbox" name="'.esc_attr( $param_name ).'" value="'.esc_attr( $value ).'" '.$dependency.' class="wpb_vc_param_value ' . esc_attr( $param_name ) . ' ' . esc_attr( $type ) . ' ' . esc_attr( $class ) . ' '.esc_attr( $dependency ).' ult-onoffswitch-checkbox chk-switch-'.esc_attr( $un ).'" id="switch'.esc_attr( $uid ).'" '.$checked.'>
+							<label class="ult-onoffswitch-label" for="switch'.esc_attr( $uid ).'">
+								<div class="ult-onoffswitch-inner">
+									<div class="ult-onoffswitch-active">
+										<div class="ult-onoffswitch-switch">'.esc_html( $opts['on'] ).'</div>
 									</div>
-									<div class="onoffswitch-inactive">
-										<div class="onoffswitch-switch">'.esc_html( $opts['off'] ).'</div>
+									<div class="ult-onoffswitch-inactive">
+										<div class="ult-onoffswitch-switch">'.esc_html( $opts['off'] ).'</div>
 									</div>
 								</div>
 							</label>

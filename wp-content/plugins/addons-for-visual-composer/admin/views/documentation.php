@@ -1210,6 +1210,14 @@ else {
 
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
+                <h3>1.7</h3>
+                <ul>
+                    <li>Fixed – The post image in a grid or posts carousel was not clickable to the link specified</li>
+                    <li>Fixed – The grid filters would not center when a heading was not specified.</li>
+                    <li>Fixed – The grid filters will not display multi-line on devices of lower resolutions like mobile devices.</li>
+                    <li>Fixed – The plugin caused some minor styling changes to occur in Visual Composer backend.</li>
+                    <li>Updated - Compatibility with WordPress 4.9 version.</li>
+                </ul>
                 <h4>1.6.1</h4>
                 <ul>
                     <li>Fixed - Translations not working with default files provided by plugin</li>

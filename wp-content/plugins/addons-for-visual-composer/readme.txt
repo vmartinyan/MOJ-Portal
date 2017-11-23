@@ -3,9 +3,9 @@ Author URI: https://www.livemeshthemes.com/visual-composer-addons
 Plugin URI: https://www.livemeshthemes.com/visual-composer-addons
 Contributors: livemesh
 Tags: visual composer, visual composer addons, vc addons, visual composer extensions, vc extensions, page builder, portfolio, carousel, post, posts, shortcodes, tabs, admin, plugin, page
-Requires at least: 4.3
-Tested up to: 4.8
-Stable Tag: 1.6.1
+Requires at least: 4.5
+Tested up to: 4.9
+Stable Tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html-func
 
@@ -47,6 +47,7 @@ The plugin comes with the following VC addons or extensions. <strong>Almost all 
 The <strong><a href="https://www.livemeshthemes.com/visual-composer-addons/" title="Addons for Visual Composer Pro" target="_blank">PRO version</a></strong> of the plugin comes with additional addons and advanced features added to elements above -
 
 <ul>
+<li><a href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/" title="Posts Block Addon">Posts Block</a> to help present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.</li>
 <li><a href="https://www.livemeshthemes.com/visual-composer-addons/sliders/" title="Image Slider Extension">Image Slider</a> to create a responsive slider of images with support for captions, multiple slider types like Nivo, Flex, Slick and lightweight sliders, thumbnail navigation etc.</li>
 <li><a href="https://www.livemeshthemes.com/visual-composer-addons/image-gallery/" title="Image Gallery Addon">Image Gallery</a> addon that lets you create a grid of images with options for masonry or fit rows, pagination, lazy load, lightbox support etc.</li>
 <li><a href="https://www.livemeshthemes.com/visual-composer-addons/video-gallery/" title="Video Gallery Addon">Video Gallery</a> to build a beautiful grid of videos to help showcase a collection of YouTube/Vimeo videos on your site.</li>
@@ -104,6 +105,13 @@ Pls install and activate the <a href="https://wordpress.org/plugins/portfolio-po
 3. Editing a addon/extension element in the Visual Composer Page Builder.
 
 == Changelog ==
+
+= 1.7 =
+* Fixed – The post image in a grid or posts carousel was not clickable to the link specified
+* Fixed – The grid filters would not center when a heading was not specified.
+* Fixed – The grid filters will not display multi-line on devices of lower resolutions like mobile devices.
+* Fixed – The plugin caused some minor styling changes to occur in Visual Composer backend.
+* Updated - Compatibility with WordPress 4.9 version
 
 = 1.6.1 =
 * Fixed - Translations not working with default files provided by plugin

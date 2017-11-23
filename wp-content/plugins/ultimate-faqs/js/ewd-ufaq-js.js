@@ -143,6 +143,10 @@ jQuery(document).ready(function() {
 		Ufaq_Ajax_Reload();
 	});
 
+	if (jQuery('#ufaq-ajax-text-input').length) {
+		if (jQuery('#ufaq-ajax-text-input').val() != "") {Ufaq_Ajax_Reload();}
+	}
+
 	if (typeof(Display_FAQ_ID) != "undefined" && Display_FAQ_ID !== null) {
 		Display_FAQ_ID_Pos = Display_FAQ_ID.indexOf('-');
 		Display_FAQ_ID = Display_FAQ_ID.substring(0, Display_FAQ_ID_Pos);

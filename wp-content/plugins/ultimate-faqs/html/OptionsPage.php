@@ -18,6 +18,7 @@
 
 	$Display_Style = get_option("EWD_UFAQ_Display_Style");
 	$Color_Block_Shape = get_option("EWD_UFAQ_Color_Block_Shape");
+	$FAQs_Per_Page = get_option("EWD_UFAQ_FAQs_Per_Page");
 	$FAQ_Ratings = get_option("EWD_UFAQ_FAQ_Ratings");
 	$WooCommerce_FAQs = get_option("EWD_UFAQ_WooCommerce_FAQs");
 	$Use_Product = get_option("EWD_UFAQ_Use_Product");
@@ -31,6 +32,7 @@
 	$Slug_Base = get_option("EWD_UFAQ_Slug_Base");
 	$Socialmedia_String = get_option("EWD_UFAQ_Social_Media");
     $Socialmedia = explode(",", $Socialmedia_String);
+    $FAQ_Elements = get_option("EWD_UFAQ_FAQ_Elements");
 
 	$Group_By_Category = get_option("EWD_UFAQ_Group_By_Category");
 	$Group_By_Category_Count = get_option("EWD_UFAQ_Group_By_Category_Count");
@@ -349,7 +351,7 @@
 
 	<select name="reveal_effect" <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> >
   		<option value="none" <?php if($Reveal_Effect == "none") {echo "selected=selected";} ?> >None</option>
-			<option value="blind" <?php if($Reveal_Effect == "blind") {echo "selected=selected";} ?> >Blind</option>
+		<option value="blind" <?php if($Reveal_Effect == "blind") {echo "selected=selected";} ?> >Blind</option>
   		<option value="bounce" <?php if($Reveal_Effect == "bounce") {echo "selected=selected";} ?> >Bounce</option>
   		<option value="clip" <?php if($Reveal_Effect == "clip") {echo "selected=selected";} ?> >Clip</option>
   		<option value="drop" <?php if($Reveal_Effect == "drop") {echo "selected=selected";} ?> >Drop</option>
@@ -368,6 +370,15 @@
 	</fieldset>
 </td>
 </tr>
+<!--<tr>
+<th scope="row">FAQs Per Page</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Per Page</span></legend>
+	<input type='text' name='faqs_per_page' value='<?php echo $FAQs_Per_Page; ?>' <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> size='60'/>
+	<p>How many FAQs should be displayed on each page? (Leave blank to display all FAQs)</p>
+	</fieldset>
+</td>
+</tr>-->
 </table>
 
 <br />
@@ -498,6 +509,23 @@
 	</fieldset>
 </td>
 </tr>
+</table>
+
+<h3 id="premium-faq-element-ordering-options" class="ufaq-options-page-tab-title"><?php _e('FAQ Elements Order', 'ultimate-faqs'); ?></h3>
+
+<table class='ewd-ufaq-elements-table'>
+	<thead>
+		<tr>
+			<th><?php _e("Element (if toggled on)", 'ultimate-faqs'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php foreach ($FAQ_Elements as $Order => $FAQ_Element) { ?>
+			<tr class='ewd-ufaq-element'>
+				<td><input type='hidden' name='Element_<?php echo $Order; ?>' value='<?php echo $FAQ_Element; ?>' /><span class='ewd-ufaq-element-name'><?php echo $FAQ_Element; ?></span></td>
+			</tr>
+		<?php } ?>
+	</tbody>
 </table>
 </div>
 

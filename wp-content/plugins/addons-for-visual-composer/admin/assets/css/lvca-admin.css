@@ -1,15 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /* =============== Visual Composer Elements ==================== */
 [class*=vc_element-icon][class*=icon-lvca-] {
   background-position: 0 0 !important;

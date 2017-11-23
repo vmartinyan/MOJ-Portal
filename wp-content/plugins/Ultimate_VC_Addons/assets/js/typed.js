@@ -177,7 +177,7 @@
                 if (self.contentType === 'html') {
                     // skip over html tags while typing
                     var curChar = curString.substr(curStrPos).charAt(0)
-                    if (curChar === '<' || curChar === '&') {
+                    if (curChar === '<') {
                         var tag = '';
                         var endTag = '';
                         if (curChar === '<') {

@@ -57,13 +57,13 @@ if(!class_exists('Ultimate_Responsive'))
 			if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
 				if(function_exists('vc_add_shortcode_param'))
 				{
-					vc_add_shortcode_param('ultimate_responsive', array($this, 'ultimate_responsive_callback'), plugins_url('../admin/vc_extend/js/ultimate-responsive.js',__FILE__));
+					vc_add_shortcode_param('ultimate_responsive', array($this, 'ultimate_responsive_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-responsive.js');
 				}
 			}
 			else {
 				if(function_exists('add_shortcode_param'))
 				{
-					add_shortcode_param('ultimate_responsive', array($this, 'ultimate_responsive_callback'), plugins_url('../admin/vc_extend/js/ultimate-responsive.js',__FILE__));
+					add_shortcode_param('ultimate_responsive', array($this, 'ultimate_responsive_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-responsive.js');
 				}
 			}
 		}
@@ -163,7 +163,7 @@ if(!class_exists('Ultimate_Responsive'))
 					if ( is_rtl() ) {
 						$css_ext = '-rtl.css';
 					}
-					Ultimate_VC_Addons::ultimate_register_style( 'ultimate_responsive_param_css', plugins_url( '../admin/vc_extend/css/ultimate_responsive' . $css_ext, __FILE__ ), true );
+					Ultimate_VC_Addons::ultimate_register_style( 'ultimate_responsive_param_css', UAVC_URL.'admin/vc_extend/css/ultimate_responsive' . $css_ext, true );
 					// wp_register_style('ultimate_responsive_param_css', plugins_url('../admin/vc_extend/css/ultimate_responsive.min.css', __FILE__ ));
 					wp_enqueue_style( 'ultimate_responsive_param_css');
 				}

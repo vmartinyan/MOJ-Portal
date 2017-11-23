@@ -1,346 +1,19 @@
 <?php
-$options_string = '{
-    "width": {
-        "name": "Width",
-        "slug": "width",
-        "type": {
-            "numeric": {
-                "title": "Width",
-                "style": "width",
-                "property": "0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            }
-        },
-        "desc": "Change the default width of the current element."
-    },
-    "height": {
-        "name": "Height",
-        "slug": "height",
-        "type": {
-            "numeric": {
-                "title": "Height",
-                "style": "height",
-                "property": "0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            }
-        },
-        "desc": "Change the default height of the current element."
-    },
-    "background": {
-        "name": "Background",
-        "slug": "background",
-        "type": {
-            "color-picker": {
-                "title": "Background Color",
-                "style": "background-color",
-                "property": "#fff"
-            },
-            "input": {
-                "title": "Background Image",
-                "style": "background-image",
-                "property": "none"
-            },
-            "select1": {
-                "title": "Background Position",
-                "style": "background-position",
-                "property": [
-                    "left top",
-                    "left center",
-                    "left bottom",
-                    "center top",
-                    "center center",
-                    "center bottom",
-                    "right top",
-                    "right center",
-                    "right bottom"
-                ]
-            },
-            "select2": {
-                "title": "Background Size",
-                "style": "background-size",
-                "property": [
-                    "inherit",
-                    "cover",
-                    "contain"
-                ]
-            },
-            "select3": {
-                "title": "Background Repeat",
-                "style": "background-repeat",
-                "property": [
-                    "no-repeat",
-                    "repeat-x",
-                    "repeat-y",
-                    "repeat",
-                    "space",
-                    "round"
-                ]
-            },
-            "select4": {
-                "title": "Background Attachment",
-                "style": "background-attachment",
-                "property": [
-                    "inherit",
-                    "fixed",
-                    "scroll",
-                    "local"
-                ]
-            }
-        },
-        "desc": "Change the default background properties of the current element."
-    },
-    "border": {
-        "name": "Border",
-        "slug": "border",
-        "type": {
-            "numeric1": {
-                "title": "Border Width",
-                "style": "border-width",
-                "property": "0 0 0 0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            },
-            "select": {
-                "title": "Border Style",
-                "style": "border-style",
-                "property": [
-                    "none",
-                    "solid",
-                    "dotted",
-                    "double",
-                    "groove",
-                    "ridge",
-                    "inset",
-                    "outset"
-                ]
-            },
-            "color-picker": {
-                "title": "Border color",
-                "style": "border-color",
-                "property": "#fff"
-            },
-            "numeric2": {
-                "title": "Border radius",
-                "style": "border-radius",
-                "property": "0 0 0 0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            }
-        },
-        "desc": "Add custom border."
-    },
-    "font": {
-        "name": "Font",
-        "slug": "font",
-        "type": {
-            "numeric1": {
-                "title": "Font size",
-                "style": "font-size",
-                "property": "0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            },
-            "select2": {
-                "title": "Font weight",
-                "style": "font-weight",
-                "property": [
-                    "inherit",
-                    "normal",
-                    "bold",
-                    "lighter",
-                    "bolder",
-                    "300",
-                    "400",
-                    "600",
-                    "700"
-                ]
-            },
-            "select1": {
-                "title": "Font style",
-                "style": "font-style",
-                "property": [
-                    "normal",
-                    "italic",
-                    "oblique"
-                ]
-            },
-            "select4": {
-                "title": "Text Align",
-                "style": "text-align",
-                "property": [
-                    "left",
-                    "right",
-                    "center",
-                    "justify",
-                    "start",
-                    "end"
-                ]
-            },
-            "select3": {
-                "title": "Text transform",
-                "style": "text-transform",
-                "property": [
-                    "inherit",
-                    "capitalize",
-                    "uppercase",
-                    "lowercase",
-                    "none"
-                ]
-            },
-            "select5": {
-                "title": "Text decoration",
-                "style": "text-decoration",
-                "property": [
-                    "none",
-                    "underline",
-                    "inherit",
-                    "initial",
-                    "unset"
-                ]
-            },
-            "numeric2": {
-                "title": "Line Height",
-                "style": "line-height",
-                "property": "0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            },
 
-            "numeric3": {
-                "title": "Text indent",
-                "style": "text-indent",
-                "property": "0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            },
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
 
-            "color-picker": {
-                "title": "Color",
-                "style": "color",
-                "property": "#fff"
-            }
-        },
-        "desc": "Add custom font."
-    },
-    "margin": {
-        "name": "Margin",
-        "slug": "margin",
-        "type": {
-            "numeric": {
-                "title": "Margin",
-                "style": "margin",
-                "property": "0 0 0 0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            }
-        },
-        "desc": "Add custom margin."
-    },
-    "padding": {
-        "name": "Padding",
-        "slug": "padding",
-        "type": {
-            "numeric": {
-                "title": "Padding",
-                "style": "padding",
-                "property": "0 0 0 0",
-                "unit": [
-                    "px",
-                    "%",
-                    "em"
-                ]
-            }
-        },
-        "desc": "Add custom padding."
-    },
-    "float": {
-        "name": "Position",
-        "slug": "float",
-        "type": {
-            "select": {
-                "title": "Position",
-                "style": "float",
-                "property": [
-                    "inherit",
-                    "none",
-                    "left",
-                    "right"
-                ]
-            }
-        },
-        "desc": "Add custom float."
-    },
-    "display": {
-        "name": "Display",
-        "slug": "display",
-        "type": {
-            "select": {
-                "title": "Display",
-                "style": "display",
-                "property": [
-                    "inherit",
-                    "none",
-                    "inline",
-                    "inline-block",
-                    "block"
-                ]
-            }
-        },
-        "desc": "Add custom display."
-    },
-    "box-sizing": {
-        "name": "Box sizing",
-        "slug": "box-sizing",
-        "type": {
-            "select": {
-                "title": "Box sizing",
-                "style": "box-sizing",
-                "property": [
-                    "inherit",
-                    "initial",
-                    "unset",
-                    "content-box",
-                    "border-box"
-                ]
-            }
-        },
-        "desc": "Add custom box sizing."
-    },
-    "comming-soon": {
-        "name": "Comming Soon",
-        "slug": "box-sizing",
-        "type": {
-            "comming-soon": {}
-        }
-    }
-}';
-$options = json_decode($options_string, true);
+$request_json = wp_remote_get( WPCF7S_LOCATION.'admin/settings-setup.json' );
+
+if ( is_wp_error( $request_json ) || ( array_key_exists('response', $request_json ) && $request_json['response']['code'] != '200' )  ) {
+    require WPCF7S_PLUGIN_DIR.'/admin/settings_setup.php';
+    $options = json_decode( $setting_str, true );
+} else {
+    $options = json_decode( wp_remote_retrieve_body( $request_json ) , true);
+}
+
+
 
 /**
  * Generate property fields
@@ -357,7 +30,7 @@ function generate_property_fields( $key, $std, $name, $type, $saved_values, $sel
         case 'input':
             $field_class = ($current_key == "input") ? "cf7-style-upload-field" : "cf7-style-color-field";
             $saved_one = (array_key_exists( $name . "_". $std["style"].$selector_type, $saved_values)) ? $saved_values[ $name . "_". $std["style"].$selector_type] : "";
-            return "<li ".$hidden_element."><label for='". $name . "_". $std["style"] .$selector_type."'><strong>".$std["title"].$title_addon.":</strong></label>".(($current_key == "color-picker") ? "<span class='icon smaller'><i class='fa fa-eyedropper' aria-hidden='true'></i></span>" : "")."<input type='text' id='". $name . "_". $std["style"] .$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"] .$selector_type."]' value='". $saved_one ."' class='".$field_class."' /></li>";
+            return "<li ".$hidden_element."><label for='". $name . "_". $std["style"] .$selector_type."'><strong>".$std["title"].$title_addon.":</strong></label>".(($current_key == "color-picker") ? "<span class='icon smaller'><i class='icon-eyedropper' aria-hidden='true'></i></span>" : "")."<input type='text' id='". $name . "_". $std["style"] .$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"] .$selector_type."]' value='". $saved_one ."' class='".$field_class."' /></li>";
             break;
         case 'comming-soon': 
             return "<li></li>";
@@ -385,7 +58,7 @@ function generate_property_fields( $key, $std, $name, $type, $saved_values, $sel
             $incrementor = 0;
             $indexer = 0;
             $arrows = array('up', 'right', 'down' , 'left');
-            $fonts = array( 'font-size' => 'text-height', 'line-height' => 'font', 'text-indent' => 'indent');
+            $fonts = array( 'font-size' => 'text-height', 'line-height' => 'font', 'text-indent' => 'indent-right');
             foreach( $val as $elem_key => $elem_value ) {
                 if( $std["property"] == "0 0 0 0"){
                     /*Add new style properties if 4 value property inserted*/
@@ -400,29 +73,35 @@ function generate_property_fields( $key, $std, $name, $type, $saved_values, $sel
                 $test = ( $std["style"] == "border-top" || $std["style"] == "border-right" || $std["style"] == "border-bottom" || $std["style"] == "border-left") ? '-width' : '' ;
                 $saved_one = ( array_key_exists( $name . "_". $std["style"].$test.$selector_type, $saved_values)) ? $saved_values [ $name . "_". $std["style"].$test.$selector_type ] : "";
                 switch ($type){
-                    case "width" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-arrows-h" aria-hidden="true"></i></span>'; break;
-                    case "height" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-arrows-v" aria-hidden="true"></i></span>'; break;
+                    case "width" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="icon-resize-horizontal" aria-hidden="true"></i></span>'; break;
+                    case "height" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="icon-resize-vertical" aria-hidden="true"></i></span>'; break;
+                    case "opacity" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="icon-adjust" aria-hidden="true"></i></span>'; break;
                     case "border" :
                     case "margin" :
-                    case "padding": $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-long-arrow-'.$arrows[$indexer++].'" aria-hidden="true"></i></span>'; break;
-                    case "font" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="fa fa-'.$fonts[$std["style"]].'" aria-hidden="true"></i></span>';break;
+                    case "padding": $temp .= '<span class="element-wrapper"><span class="icon"><i class="icon-'.$arrows[$indexer++].'" aria-hidden="true"></i></span>'; break;
+                    case "font" : $temp .= '<span class="element-wrapper"><span class="icon"><i class="icon-'.$fonts[$std["style"]].'" aria-hidden="true"></i></span>';break;
                 }
                 $min_val = ("margin" == $type) ? '-1000' : '0';
-                $temp .= "<input type='number' min='".$min_val."' max='1000' id='". $name . "_". $std["style"].$test.$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"].$test.$selector_type."]' value='". $saved_one ."' />";
+                $max_val = ("opacity" == $type) ? '1' : '1000';
+                $step_value = ("opacity" == $type) ? '0.01' : '1';
+                $temp .= "<input type='number' step='".$step_value."' min='".$min_val."' max='".$max_val."' id='". $name . "_". $std["style"].$test.$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"].$test.$selector_type."]' value='". $saved_one ."' />";
+                if( array_key_exists('unit', $std) ) {
+                    $temp .= "<select id='". $name . "_". $std["style"] .$test . "_unit".$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"] .$test ."_unit".$selector_type."]'>";
                 
-                $temp .= "<select id='". $name . "_". $std["style"] .$test . "_unit".$selector_type."' name='cf7stylecustom[". $name . "_". $std["style"] .$test ."_unit".$selector_type."]'>";
+                    foreach( $std["unit"] as $unit_val ) {
+                        $saved_one_unit =  ( array_key_exists( $name . "_". $std["style"]. "_unit".$selector_type, $saved_values) ) ? $saved_values[ $name . "_". $std["style"]. "_unit".$selector_type ] : "";
+                        $temp .= "<option ". selected( $saved_one_unit , $unit_val, false ) . ">". $unit_val ."</option>";
+                    }
 
-                foreach( $std["unit"] as $unit_val ) {
-                    $saved_one_unit =  ( array_key_exists( $name . "_". $std["style"]. "_unit".$selector_type, $saved_values) ) ? $saved_values[ $name . "_". $std["style"]. "_unit".$selector_type ] : "";
-                    $temp .= "<option ". selected( $saved_one_unit , $unit_val, false ) . ">". $unit_val ."</option>";
+                    $temp .= "</select>";
                 }
-                $temp .= "</select>";
                 switch ($type){
                     case "width" : 
                     case "height" :
                     case "border" :
                     case "margin" :
-                    case "padding": 
+                    case "padding":
+                    case "opacity": 
                     case "font" : $temp .= '</span>';break;
                 }
             }
@@ -434,7 +113,7 @@ function generate_property_fields( $key, $std, $name, $type, $saved_values, $sel
             $fonts = array( 'font-style' => 'italic', 'font-weight' => 'bold', 'text-align' => 'align-center', 'text-decoration' => 'underline', 'text-transform' => 'header'  );
             $temp .= "<li ".$hidden_element."><label for='".$name . "_" . $std["style"].$selector_type."'><strong>".$std["title"].$title_addon.":</strong>";
             switch ($type){
-                case "font" : $temp .= '<span class="icon"><i class="fa fa-'.$fonts[$std["style"]].'" aria-hidden="true"></i></span>';break;
+                case "font" : $temp .= '<span class="icon"><i class="icon-'.$fonts[$std["style"]].'" aria-hidden="true"></i></span>';break;
             }
             $temp .= "<select id='". $name . "_" . $std["style"].$selector_type. "' name='cf7stylecustom[". $name . "_" . $std["style"] .$selector_type."]'>";
             $temp .= '<option value="">'.__( "Choose value", 'contact-form-7-style' ).'</option>';
@@ -460,6 +139,7 @@ function generate_property_fields( $key, $std, $name, $type, $saved_values, $sel
 
 $sameElements = array( "width", "height", "background", "margin", "padding", "font", "border",  "float", "display", "box-sizing" );
 $containerElements = array( "width", "height",  "margin", "padding", "font", "border",   "float", "box-sizing" );
+$placeholderElements = array( "placefont", "opacity" );
 $elements = array(
     'form'  => array(
         'name' => 'form',
@@ -480,6 +160,11 @@ $elements = array(
         'name' => 'text',
         'description' => '', 
         'settings' => $containerElements
+    ),
+    "placeholder" => array(
+        'name' => 'placeholder',
+        'description' => 'This section allows styling the placholder element of the input fields if present', 
+        'settings' => $placeholderElements
     ),
     'label' => array(
         'name' => 'input label',

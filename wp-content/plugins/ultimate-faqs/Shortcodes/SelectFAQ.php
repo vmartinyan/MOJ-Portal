@@ -17,7 +17,7 @@ function Display_Select_FAQs($atts) {
 	else {$name_array = array();}
 	if ($faq_slug != "") {$slug_array = explode(",", $faq_slug);}
 	else {$slug_array = array();}
-	if ($no_comments != "") {$id_array = explode(",", $faq_id);}
+	if ($faq_id != "") {$id_array = explode(",", $faq_id);}
 	else {$id_array = array();}
 
 	$post_id_array = array();
@@ -33,7 +33,7 @@ function Display_Select_FAQs($atts) {
 	}
 
 	foreach ($id_array as $post_id) {
-		$post_id_array[] = $post_id;
+		$post_id_array[] = (int) $post_id;
 	}
 	
 	$json_ids = str_replace(array("[", "]"), array("&lsqb;", "&rsqb;"), json_encode($post_id_array));

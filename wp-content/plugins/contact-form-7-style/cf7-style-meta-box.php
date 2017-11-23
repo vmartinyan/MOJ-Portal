@@ -1,4 +1,34 @@
 <?php
+
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
+function active_styles() {
+
+	$args = array( 
+		'post_type'=>'wpcf7_contact_form',
+		'post_status'=>'publish',
+		'posts_per_page'=> -1
+	);
+	$active_styles = array();
+	$forms = new WP_Query( $args );
+
+	if( $forms->have_posts() ) :
+		while( $forms->have_posts() ) : $forms->the_post();
+			$form_title = get_the_title();
+			$id = get_the_ID();
+			$style_id = get_post_meta( $id, 'cf7_style_id', true );
+			if ( ! empty( $style_id ) || $style_id != 0 ) {
+				$active_styles[] = $style_id;
+			}
+		endwhile;
+		wp_reset_postdata();
+	endif; 
+	return $active_styles;
+}
+
+
 /**
  * Calls the class the meta box. Used for selecting forms for each style.
  */
@@ -9,6 +39,10 @@ function cf7_style_meta_form_init() {
 if ( is_admin() ) {
     add_action( 'load-post.php', 'cf7_style_meta_form_init' );
     add_action( 'load-post-new.php', 'cf7_style_meta_form_init' );
+}
+
+function filter_w_zeros($var){
+  return ($var !== NULL && $var !== FALSE && $var !== '');
 }
 
 /** 
@@ -104,12 +138,24 @@ class cf7_style_meta_boxes {
 		$posted_data = $_POST['cf7styleallvalues'];
 		$posted_data = str_replace("\'", '"', $posted_data);
 		$posted_data = json_decode($posted_data, true);
+
+		foreach ( $posted_data as $p_key => $p_value) {
+			if( strpos($p_key, '_unit' ) !== false){
+				$no_unit = str_replace("_unit","", $p_key );
+				if( !array_key_exists($no_unit, $posted_data) || empty( $posted_data[$no_unit]) ){
+					unset($posted_data[$p_key]);
+				}
+			}
+		}
+		
+		ksort($posted_data);
+
 		$active_pane = sanitize_text_field($_POST['cf7styleactivepane']);
 		if( isset( $active_pane )){
 			update_post_meta( $post_id, 'cf7_style_active_panel', $active_pane, "");
 		}
 		if ( is_array( $posted_data ) && isset( $posted_data ) ) {
-			update_post_meta( $post_id, 'cf7_style_custom_styler', $posted_data , "");
+			update_post_meta( $post_id, 'cf7_style_custom_styler', array_filter($posted_data,'filter_w_zeros') , "");
 		}
 
 	}
@@ -190,12 +236,14 @@ class cf7_style_meta_boxes {
 					echo '<th class="manage-column">' . __('Contact form 7 forms', 'contact-form-7-style' ) . '</th>';
 					echo '<th class="manage-column different-style"><input type="checkbox" id="select_all"/><label for="select_all">' . __('Select all','contact-form-7-style' ) . '</label></th>';
 					echo '<th class="generate-preview-option">' . __( "Generate preview", 'contact-form-7-style'  ) . '</th>';
+					echo '<th class="gotoform-option">' . __( "Navigate to CF7 form", 'contact-form-7-style'  ) . '</th>';
 				echo '</tr>';
 			echo '</thead>';
 			echo '<tbody class="cf7style_body_select_all">';
 			if ( $query->have_posts() ) {
 				while ( $query->have_posts() ) : $query->the_post(); 
-					$cf7stylehas = get_post_meta( get_the_ID(), 'cf7_style_id', true ); 
+					$cf7ID = get_the_ID();
+					$cf7stylehas = get_post_meta( $cf7ID, 'cf7_style_id', true ); 
 				?>
 					<tr>
 						<td>
@@ -206,6 +254,9 @@ class cf7_style_meta_boxes {
 						</td>
 						<td class="generate-preview-option">
 							<button class="button-primary generate-preview-button" data-attr-title="<?php the_title(); ?>" data-attr-id="<?php the_ID(); ?>"><?php _e( "Generate preview", 'contact-form-7-style'  ); ?></button>
+						</td>
+						<td class="gotoform-option">
+							<a class="button-primary" href="<?php echo esc_url(admin_url('?page=wpcf7&post='.$cf7ID.'&action=edit' )) ?>" target="_blank" title="<?php the_title(); ?>"><?php _e( "Go To CF7", 'contact-form-7-style'  ); ?></a>
 						</td>
 					</tr>
 					<tr>
@@ -282,7 +333,7 @@ class cf7_style_meta_boxes {
 	public function render_font_selector( $post ) {
 		wp_nonce_field( 'cf_7_style_font_inner_custom_box', 'cf_7_style_font_custom_box_nonce' );
 		//getting all google fonts
-		$google_list = wp_remote_get( 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBAympIKDNKmfxhI3udY-U_9vDWSdfHrEo' );
+		$google_list = wp_safe_remote_get( 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBAympIKDNKmfxhI3udY-U_9vDWSdfHrEo' );
 		$response    = wp_remote_retrieve_body( $google_list );
 
 		$font_obj = json_decode( $response );

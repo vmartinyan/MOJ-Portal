@@ -305,19 +305,11 @@ jQuery(document).ready(function(a) {
 
     //for icon color changes on click event
     a(this).find("ul.ult_tabmenu li a.ult_a").click(function(b) {
-        a(document).trigger('ultAdvancedTabClicked', a(this));
-         jQuery("html,body").stop();
 
         a(this).closest("li.ult_tab_li").siblings().each(function(index,value){
             var iconcolor=a(this).data('iconcolor');
             a(this).find(".ult_tab_icon").css({color: iconcolor});
         });
-    });
-
-    a(document).on('ultAdvancedTabClicked', function(event, ele){
-        if (typeof wpb_prepare_tab_content == 'function') {
-          wpb_prepare_tab_content( event, { newPanel: jQuery('.ult_tabcontent') } );
-        }
     });
  });
 
@@ -370,6 +362,7 @@ function setmytime( string ,float_val ){
             maintab.find(".ult_tab_icon").css({'color':aciveicon});
            
             var index=maintab.parent().index()+1;
+            bgcontain.find(".ult_tabcontent" ).css({'display':'block'});
             bgcontain.find(".ult_tabitemname" ).css({'display':'none'});
             bgcontain.find(".ult_tabitemname:nth-child("+index+")" ).css({'display':'block'});
 
@@ -408,10 +401,10 @@ jQuery(".ult_tabs").each(function() {
         var showboth=jQuery(this).data('responsivemode');
         var animt=jQuery(this).closest('.ult_tabs').data("animation");
 
-        if(animt=='Fade'|| animt =='Scale' || animt=='Slide-Zoom'){
-            var cnwidth=jQuery(this).find("div.ult_tabcontent").outerHeight();
-            jQuery(this).find('.ult_tabcontent').css({'height':cnwidth});
-        }
+        // if(animt=='Fade'|| animt =='Scale' || animt=='Slide-Zoom'){
+        //     var cnwidth=jQuery(this).find("div.ult_tabcontent").outerHeight();
+        //     jQuery(this).find('.ult_tabcontent').css({'height':cnwidth});
+        // }
 
         if(animt=='Slide-Horizontal'){
             var width=jQuery(this).find('div.ult_tabcontent').outerWidth();
@@ -546,7 +539,7 @@ function setht(){
 
 jQuery(document).ready(function(){
 
-    setmytime();// call setmytime function to active any link from other pages  click of a tag or menu
+    //setmytime();// call setmytime function to active any link from other pages  click of a tag or menu
 
     // call setmytime function to active any tab on click of menu
     jQuery(this).find("a").click(function(b) {
@@ -570,9 +563,14 @@ jQuery(document).ready(function(){
          //for fullheight
         var indexOf=jQuery(this).data('activeindex');       
         var p = jQuery(this).find("ul.ult_tabmenu li.ult_tab_li:nth-child("+indexOf+")" ).find(".ult_a").attr("id");
-        if(p.length >= 1 && indexOf > 1){
-          setmytime(p ,true);
-        }
+        if(typeof p !== "undefined") {
+          if(p.length >= 1 && indexOf >= 1){
+            setmytime(p ,true);
+          }
+       }
+       else {
+        jQuery(this).find(".ult_tabcontent" ).css({'display':'none'});
+       }
     });
 
     /*--- for smooth fadein effect ------*/
@@ -595,6 +593,7 @@ jQuery(document).ready(function(){
        }
        var tab_content_class=jQuery(this).closest(".ult_tabs").find("div.ult_tabitemname:eq(" + j + ")");
        jQuery(document).trigger('ultAdvancedTabClickedCarousel', tab_content_class );
+       jQuery(document).trigger('ultAdvancedTabClickedDualBtn', tab_content_class );
     });
 
 });

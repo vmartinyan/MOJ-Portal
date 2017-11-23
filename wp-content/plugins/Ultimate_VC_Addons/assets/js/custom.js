@@ -150,6 +150,12 @@
 
   	jQuery(window).load(function(){
 
+  		function is_touch_device() {
+		 return (('ontouchstart' in window)
+		      || (navigator.MaxTouchPoints > 0)
+		      || (navigator.msMaxTouchPoints > 0));
+		}
+
 		jQuery('.ult-banner-block-custom-height').each(function(index, element) {
             var $blockimg = jQuery(this).find('img');
 			var block_width = jQuery(this).width();
@@ -157,6 +163,21 @@
 			var img_width = $blockimg.width();
 			if(block_width > block_height)
 				$blockimg.css({'width':'100%','height':'auto'});
+        });
+
+        jQuery('.ult-new-ib').each(function(index, element) {
+				if (is_touch_device()) {
+        	jQuery(this).find('.ult-new-ib-link').click(function( e ) {
+        		e.preventDefault();   
+				  var href_url = jQuery(this).attr('href');
+				  var delay_sec = jQuery(this).data('touch-delay');
+				  if(delay_sec == null)
+				  	delay_sec = 200;
+				  	setTimeout(function(){
+				       window.location = href_url;
+				    }, delay_sec);
+			});
+				}
         });
 
   		var flip_resize_count=0, flip_time_resize=0;
@@ -308,11 +329,7 @@
 					}
 				});
 			}, 1000);
-			jQuery(this).find('.timeline-wrapper').each(function(){
-				if(jQuery(this).text().trim()===''){
-					jQuery(this).remove();
-				}
-			});
+
 			if( ! jQuery(this).find('.timeline-line ').next().hasClass('timeline-separator-text')){
 				jQuery(this).find('.timeline-line').prepend('<span></span>');
 			}

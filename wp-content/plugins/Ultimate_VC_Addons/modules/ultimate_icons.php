@@ -340,21 +340,22 @@ if(!class_exists('Ultimate_Icons'))
 			}
 			$output = $style = $link_sufix = $link_prefix = $target = $href = $icon_align_style = '';
 			$uniqid = uniqid();
+			$href 			= vc_build_link($icon_link);
 			if($icon_link !== ''){
-				$href 			= vc_build_link($icon_link);
-
-				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
-				$link_prefix .= '<a class="aio-tooltip '.esc_attr($uniqid).'" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'" title="'.esc_attr($tooltip_text).'">';
-				$link_sufix .= '</a>';
-			} else {
-				if($tooltip_disp !== ""){
-					$link_prefix .= '<span class="aio-tooltip '.esc_attr($uniqid).'" href = "'.esc_url($href).'" '.$target.' data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'" title="'.esc_attr($tooltip_text).'">';
-					$link_sufix .= '</span>';
+				if( $href['url'] != NULL ){
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+					$link_prefix .= '<a class="aio-tooltip '.esc_attr($uniqid).'" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'" title="'.esc_attr($tooltip_text).'">';
+					$link_sufix .= '</a>';
 				}
 			}
+			if($tooltip_disp !== '' && $href['url'] == NULL ){
+				$link_prefix .= '<span class="aio-tooltip '.esc_attr($uniqid).'" data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'" title="'.esc_attr($tooltip_text).'">';
+				$link_sufix .= '</span>';
+			}
+			
 
 			if($icon_color !== '')
 				$style .= 'color:'.$icon_color.';';

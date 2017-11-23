@@ -214,7 +214,7 @@
 					content_check(class_id);
 				}, 500);
 
-				if ($(this).parent().attr('data-keypress-control') == 'keypress-control-enable'){
+				if ($(this).parent().attr('data-keypress-control') == 'keypress-control-enable' || $(this).attr('data-keypress-control') == 'keypress-control-enable'){
 					window.onkeydown = function( e ) {
 					    if (e.keyCode == 27) {
 					        $(document).find('.ult-overlay.ult-open.'+class_id).removeClass('ult-open');
@@ -345,7 +345,6 @@
 		$(document).on('click', '.ult-overlay', function(event){
 			event.stopPropagation();
 			event.preventDefault();
-
 			$this = $(this);
 			var id = $this.data('class');
 			var a = $(document).find('.ult-modal-input-wrapper').children();

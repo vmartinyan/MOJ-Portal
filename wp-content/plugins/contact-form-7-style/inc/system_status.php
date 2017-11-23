@@ -3,6 +3,10 @@
  * CF7 Style System status
  */
 
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
 function cf7style_system_status() {
 
 	/**

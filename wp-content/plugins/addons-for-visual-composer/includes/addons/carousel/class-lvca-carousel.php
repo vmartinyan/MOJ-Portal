@@ -139,6 +139,7 @@ class LVCA_Carousel {
                         array(
                             'type' => 'textfield',
                             'param_name' => 'name',
+                            'admin_label' => true,
                             'heading' => __('Name', 'livemesh-vc-addons'),
                             'description' => __('The title to identify the HTML element. Will not be output to the frontend.', 'livemesh-vc-addons'),
                         ),

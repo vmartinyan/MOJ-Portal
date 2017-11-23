@@ -3,7 +3,7 @@ var time_f_arr =[];
 jQuery(document).ready(function(){
 	make_info_circle('.info-c-full-br',0);
 	responsive_check('.info-c-full-br');
-	calculate_clipped_circle();
+	//calculate_clipped_circle();
 	//make_info_circle('.info-c-semi-br',0);
 	//responsive_check('.info-c-semi-br');
 	//part_circle_icon('.info-c-full-br');
@@ -151,9 +151,9 @@ function calculate_clipped_circle()
 
 					var info_wrap_height = hidden_height - info_margin - parseInt(margin_top.replace(/[^-\d\.]/g, '')) - info_padding-(info_padding/2);
 
-					jQuery(this).find('.info-c-full-wrap').height(info_wrap_height);
-					var calculate_info_margin = info_width_inner-info_wrap_height;
-					jQuery(this).find('.info-c-full-wrap').css({'margin-top':calculate_info_margin+'px'});
+					// jQuery(this).find('.info-c-full-wrap').height(info_wrap_height);
+					// var calculate_info_margin = info_width_inner-info_wrap_height;
+					// jQuery(this).find('.info-c-full-wrap').css({'margin-top':calculate_info_margin+'px'});
 				}
 			}
 			else if(circle_type == 'left-circle' || circle_type == 'right-circle')
@@ -307,18 +307,25 @@ function make_info_circle(selector,resized){
 	jQuery(selector).each(function(k,circle_item){
 		var f_size = jQuery(circle_item).data('icon-size');
 		jQuery(jQuery(circle_item).find(".icon-circle-list .info-circle-icons")).each(function(i,icon){
-			var icon_height, icon_width, icon_margin, icon_line_height;
+			var padding_value, icon_height, icon_width, icon_margin, icon_line_height;
+			padding_value = jQuery(this).data('padding-style');
 			var is_icon_wo_back = (jQuery(icon).hasClass('info-circle-icon-without-background')) ? true : false;
 			if(!is_icon_wo_back) {
-				icon_height = icon_width = icon_line_height = (f_size*2);
-				icon_margin = f_size;
+				if(padding_value != null) {
+					icon_height = icon_width = icon_line_height = (f_size);
+					icon_margin = f_size/2 + padding_value;
+				}
+				else {
+					icon_height = icon_width = icon_line_height = (f_size*2);
+					icon_margin = f_size;
+				}
 			}
 			else {
 				icon_height = icon_width = icon_line_height = f_size;
 				icon_margin = (f_size/2);
 			}
 			jQuery(circle_item).parent().css({'margin-top':(icon_margin+10)+'px','margin-bottom':(icon_margin+10)+'px'});
-			jQuery(circle_item).find(".icon-circle-list .info-circle-icons").css({"font-size":f_size+'px','height':icon_height+'px','width':icon_width+'px','margin':'-'+(icon_margin+'px'),'line-height':icon_line_height+'px'});
+			jQuery(this).css({"font-size":f_size+'px','height':icon_height+'px','width':icon_width+'px','margin':'-'+(icon_margin+'px'),'line-height':icon_line_height+'px'});
 		});
 	});
 	if(selector=='.info-c-full-br'){

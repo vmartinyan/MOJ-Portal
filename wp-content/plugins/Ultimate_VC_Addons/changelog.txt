@@ -1,3 +1,34 @@
+3.16.20 - 21-November-2017
+- Improvement: Added div, paragraph and span tag options with heading tags for title in Info-banner.
+- Improvement: Update WPML xml file for Compatibility.
+- Fix: Advanced Tab Active Tab option issue.
+- Fix: WPBakery Page Builder map element has issue with advanced tabs.
+- Fix: Fancy text issue with special character(&) in string.
+- Fix: Info circle connector alignment issue in RTL condition.
+- Fix: Info circle item animation issue in Safari Browser.
+- Fix: Modal Box - Close Modal On Overlay Click and ESC not working when selector option is used.
+- Fix: Info-circle border not applied properly in safari browser.
+- Fix: Interactive banner2 link redirect issue in touch devices.
+- Fix: Toggle button issue while using Visual Composer starter theme.
+
+3.16.19.1 - 13-November-2017
+- Fix: Row background pattern images are not showing in effect tab.
+
+3.16.19 - 6-November-2017
+- Improvement: Added info list border type option.
+- Improvement: Optimize plugin code and improved performance.
+- Improvement: Added padding option for info-circle item.
+- Improvement: Added time delay option for redirecting the links on touch devices in interactive banner2.
+- Fix: Info circle clipped at bottom / top is not working properly.
+- Fix: Info circle image alignment issue.
+- Fix: Advanced Tab content height issue on First loading with animation style.
+- Fix: Anchor tag link and tooltip issue in Just Icon. 
+- Fix: Anchor tag link issue in Icon.
+- Fix: Timeline issue without timeline item disappear.
+- Fix: Js error in row background.
+- Fix: Smooth Scroll issue in Chrome Browser.
+- Fix: Dual button getting collapse in Advanced Tabs.
+
 3.16.18 - 20-September-2017
 Security Fix: A cross-site scripting (XSS) vulnerability was discovered in html links, WordPress core has patched it's vulnerability in 4.8.2 release and we've also fix it for Ultimate Addons for Visual Composer.
 

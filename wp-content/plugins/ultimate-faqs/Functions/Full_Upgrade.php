@@ -18,6 +18,9 @@ function EWD_UFAQ_Upgrade_To_Full() {
 		$context = stream_context_create($opts);
 		$Response = unserialize(file_get_contents("http://www.etoilewebdesign.com/UPCP-Key-Check/Register_Trial.php?Plugin=UFAQ&Admin_Email=" . $Admin_Email . "&Site=" . get_bloginfo('wpurl'), false, $context));
 	}
+	elseif (strlen($Key) < 18 or strlen($Key) > 22) {
+		$ewd_ufaq_message = array("Message_Type" => "Error", "Message" => 'Invalid Product Key');
+	}
 	elseif ($Key != "EWD Trial") {
 		$opts = array('http'=>array('method'=>"GET"));
 		$context = stream_context_create($opts);

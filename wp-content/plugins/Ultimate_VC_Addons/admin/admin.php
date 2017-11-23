@@ -197,13 +197,13 @@ if(!class_exists('Ultimate_Admin_Area')){
 
 				$bsf_dev_mode = bsf_get_option('dev_mode');
 
-				wp_register_style("ultimate-admin-style",plugins_url("../admin/css/style.css",__FILE__));
+				wp_register_style("ultimate-admin-style", UAVC_URL."admin/css/style.css");
 
-				wp_register_style("ultimate-chosen-style",plugins_url('../admin/vc_extend/css/chosen.css', __FILE__ ));
-				wp_register_script("ultimate-chosen-script",plugins_url("../admin/vc_extend/js/chosen.js",__FILE__));
+				wp_register_style("ultimate-chosen-style", UAVC_URL.'admin/vc_extend/css/chosen.css');
+				wp_register_script("ultimate-chosen-script", UAVC_URL."admin/vc_extend/js/chosen.js");
 
-				wp_register_script("ultimate-vc-backend-script",plugins_url("../admin/js/ultimate-vc-backend.min.js",__FILE__),array('jquery'),ULTIMATE_VERSION,true);
-				wp_register_style("ultimate-vc-backend-style",plugins_url('../admin/css/ultimate-vc-backend' . $css_ext , __FILE__ ));
+				wp_register_script("ultimate-vc-backend-script", UAVC_URL."admin/js/ultimate-vc-backend.min.js",array('jquery'),ULTIMATE_VERSION,true);
+				wp_register_style("ultimate-vc-backend-style", UAVC_URL.'admin/css/ultimate-vc-backend' . $css_ext);
 
 				if($bsf_dev_mode === 'enable') {
 					wp_enqueue_style('ultimate-admin-style');
@@ -690,7 +690,7 @@ if(!class_exists('Ultimate_Admin_Area')){
                         .ult_activate .ult_description strong{color:#0096A3;font-weight:normal}
                             </style>
                                 <div class="ult_activate">
-                                    <div class="ult_a"><img style="width:1em;" src="<?php echo plugins_url("img/logo-icon.png",__FILE__); ?>" alt=""></div>
+                                    <div class="ult_a"><img style="width:1em;" src="<?php echo UAVC_URL."img/logo-icon.png"; ?>" alt=""></div>
                                     <?php
 
                                     ?>

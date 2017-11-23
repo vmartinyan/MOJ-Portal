@@ -303,7 +303,7 @@ if(!class_exists('AIO_Just_Icon'))
 			$css_just_icon = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class( $css_just_icon, ' ' ), "just_icon", $atts );
 			$css_just_icon = esc_attr( $css_just_icon );
 			$ultimate_js = get_option('ultimate_js');
-			if($tooltip_text != '' && $ultimate_js == 'disable')
+			if($tooltip_text !== '' && $ultimate_js !== 'enable')
 				wp_enqueue_script('ultimate-tooltip');
 
 			$output = $style = $link_sufix = $link_prefix = $target = $href = $icon_align_style = $css_trans = $target = $link_title  = $rel = '';
@@ -317,21 +317,24 @@ if(!class_exists('AIO_Just_Icon'))
 			}
 
 			$uniqid = uniqid();
+			$href = vc_build_link($icon_link);
+			
 			if($icon_link !== ''){
-				$href = vc_build_link($icon_link);
-
-				$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
-				$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
-				$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
-				$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
-				$link_prefix .= '<a class="aio-tooltip '.esc_attr($uniqid).'" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'">';
-				$link_sufix .= '</a>';
-			} else {
-				if($tooltip_disp !== ""){
-					$link_prefix .= '<div class="aio-tooltip '.esc_attr($uniqid).'" href = "'.esc_url($href).'" '.$target.' data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'" title="'.esc_attr($tooltip_text).'">';
-					$link_sufix .= '</div>';
+				if( $href['url'] != NULL ){
+					$url 			= ( isset( $href['url'] ) && $href['url'] !== '' ) ? $href['url']  : '';
+					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
+					$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
+					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+					$link_prefix .= '<a class="aio-tooltip '.esc_attr($uniqid).'" '. Ultimate_VC_Addons::uavc_link_init($url, $target, $link_title, $rel ).' data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'">';
+					$link_sufix .= '</a>';
 				}
 			}
+			
+			if($tooltip_disp !== '' && $href['url'] == NULL ){
+				$link_prefix .= '<div class="aio-tooltip '.esc_attr($uniqid).'" data-toggle="tooltip" data-placement="'.esc_attr($tooltip_disp).'" title="'.esc_attr($tooltip_text).'">';
+				$link_sufix .= '</div>';
+			}
+			
 
 			$elx_class = '';
 

@@ -11,13 +11,13 @@ if(!class_exists('Ult_Spacing'))
       if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
         if(function_exists('vc_add_shortcode_param'))
         {
-          vc_add_shortcode_param('ultimate_spacing', array($this, 'ultimate_spacing_callback'), plugins_url('../admin/vc_extend/js/ultimate-spacing.js',__FILE__));
+          vc_add_shortcode_param('ultimate_spacing', array($this, 'ultimate_spacing_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-spacing.js');
         }
       }
       else {
         if(function_exists('add_shortcode_param'))
         {
-          add_shortcode_param('ultimate_spacing', array($this, 'ultimate_spacing_callback'), plugins_url('../admin/vc_extend/js/ultimate-spacing.js',__FILE__));
+          add_shortcode_param('ultimate_spacing', array($this, 'ultimate_spacing_callback'), UAVC_URL.'admin/vc_extend/js/ultimate-spacing.js');
         }
       }
     }
@@ -111,7 +111,7 @@ if(!class_exists('Ult_Spacing'))
         if($hook == "post.php" || $hook == "post-new.php"){
           $bsf_dev_mode = bsf_get_option('dev_mode');
           if($bsf_dev_mode === 'enable') {
-            wp_register_style( 'ultimate_spacing_css', plugins_url('../admin/vc_extend/css/ultimate_spacing.css', __FILE__ ));
+            wp_register_style( 'ultimate_spacing_css', UAVC_URL.'admin/vc_extend/css/ultimate_spacing.css');
             wp_enqueue_style( 'ultimate_spacing_css');
           }
         }

@@ -22,13 +22,13 @@ if(!class_exists('Ultimate_Margin_Param'))
 			if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
 				if(function_exists('vc_add_shortcode_param'))
 				{
-					vc_add_shortcode_param('ultimate_margins', array($this, 'ultimate_margins_param'), plugins_url('../admin/vc_extend/js/vc-headings-param.js',__FILE__));
+					vc_add_shortcode_param('ultimate_margins', array($this, 'ultimate_margins_param'), UAVC_URL.'admin/vc_extend/js/vc-headings-param.js');
 				}
 			}
 			else {
 				if(function_exists('add_shortcode_param'))
 				{
-					add_shortcode_param('ultimate_margins', array($this, 'ultimate_margins_param'), plugins_url('../admin/vc_extend/js/vc-headings-param.js',__FILE__));
+					add_shortcode_param('ultimate_margins', array($this, 'ultimate_margins_param'), UAVC_URL.'admin/vc_extend/js/vc-headings-param.js');
 				}
 			}
 		}

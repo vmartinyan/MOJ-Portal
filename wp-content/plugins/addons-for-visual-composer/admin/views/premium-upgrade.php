@@ -70,7 +70,14 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Posts/Portfolio Grid</div>
                             <div class="tooltip hide">
-                                <div><p>The PRO version comes with advanced grid functions like pagination, lazy load via AJAX, lightbox support etc.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/">Live Demo</a></p></div>
+                                <div><p>The PRO version comes with advanced grid functions like multiple styles, AJAX filtering, pagination, lazy load via AJAX, lightbox support etc.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/">Live Demo</a></p></div>
+                            </div>
+                        </li>
+                        <li><span class="help dashicons dashicons-editor-help"></span>
+                            <div class="text">Post Blocks!</div>
+                            <div class="tooltip hide">
+                                <div><p>Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/">Live Demo</a></p>
+                                </div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
@@ -89,13 +96,6 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                             <div class="text">Advanced Grid with Lazy Load</div>
                             <div class="tooltip hide">
                                 <div><p>The grid elements are loaded on demand with each press of a Load More button that displays a count of remaining posts.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/">Live Demo</a></p></div>
-                            </div>
-                        </li>
-                        <li><span class="help dashicons dashicons-editor-help"></span>
-                            <div class="text">Lightbox Support</div>
-                            <div class="tooltip hide">
-                                <div><p>Magnific Popup plugin integrated for fast and smooth lightbox support for posts/portfolio or image/video grid elements.</p>
-                                </div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
@@ -201,6 +201,13 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                 </li>
                                 <li>
                                     <div class="dashicons dashicons-no-alt"></div>
+                                    <span class="m-feature m">Post Blocks!</span>
+                                    <div class="tooltip hide">
+                                        <p>Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/">Live Demo</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dashicons dashicons-no-alt"></div>
                                     <span class="m-feature m">Demo Site Replication</span>
                                     <div class="tooltip hide">
                                         <p>Premium version comes with sample data XML bundled to get a head start on the plugin by import of demo data on our site.</p>
@@ -218,13 +225,6 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     <span class="m-feature m">Advanced Grid with Lazy Load</span>
                                     <div class="tooltip hide">
                                         <p>The grid elements are loaded on demand with each press of a Load More button that displays a count of remaining posts.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="dashicons dashicons-no-alt"></div>
-                                    <span class="m-feature m">Lightbox Support</span>
-                                    <div class="tooltip hide">
-                                        <p>Magnific Popup plugin integrated for fast and smooth lightbox support for posts/portfolio or image/video grid elements.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -294,7 +294,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     <div class="dashicons dashicons-no-alt"></div>
                                     <span class="m-feature m">Priority Support</span>
                                     <div class="tooltip hide">
-                                        <p>The experience and expertize gained by providing support for over 11,000 customers for our paid themes is available to you. Private tickets let you work directly with our support staff by providing your site details.</p>
+                                        <p>The experience and expertize gained by providing support for over 12,300+ customers for our paid themes is available to you. Private tickets let you work directly with our support staff by providing your site details.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -328,10 +328,17 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                 <li>
                                     <div class="dashicons dashicons-yes m"></div>
                                     <span class="m-feature m">Posts/Portfolio Grid</span>
-                                    <div class="m-tooltip hide"><p>The PRO version comes with advanced grid functions like pagination, lazy load via AJAX, lightbox support etc.</p></div>
+                                    <div class="m-tooltip hide"><p>The PRO version comes with advanced grid functions like multiple styles, AJAX filtering, pagination, lazy load via AJAX, lightbox support etc.</p></div>
                                     <span class="message">Advanced</span> <span class="help dashicons dashicons-editor-help"></span>
                                     <div class="tooltip hide">
-                                        <p>The PRO version comes with advanced grid functions like pagination, lazy load via AJAX, lightbox support etc.</p>
+                                        <p>The PRO version comes with advanced grid functions like multiple styles, AJAX filtering, pagination, lazy load via AJAX, lightbox support etc.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dashicons dashicons-yes"></div>
+                                    <span class="m-feature m">Post Blocks</span>
+                                    <div class="tooltip hide">
+                                        <p>Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -353,13 +360,6 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     <span class="m-feature m">Advanced Grid with Lazy Load</span>
                                     <div class="tooltip hide">
                                         <p>The grid elements are loaded on demand with each press of a Load More button that displays a count of remaining posts.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="dashicons dashicons-yes"></div>
-                                    <span class="m-feature m">Lightbox Support</span>
-                                    <div class="tooltip hide">
-                                        <p>Magnific Popup plugin integrated for fast and smooth lightbox support for posts/portfolio or image/video grid elements.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -429,7 +429,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     <div class="dashicons dashicons-yes"></div>
                                     <span class="m-feature m">Priority Support</span>
                                     <div class="tooltip hide">
-                                        <p>The experience and expertize gained by providing support for over 11,000 customers for our paid themes is available to you. Private tickets let you work directly with our support staff by providing your site details.</p>
+                                        <p>The experience and expertize gained by providing support for over 12,300+ customers for our paid themes is available to you. Private tickets let you work directly with our support staff by providing your site details.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -486,6 +486,9 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                     version does even more.</p>
 
                 <ul>
+                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/" title="Livemesh Post Blocks" target="_blank">Post Blocks</a> - Present your blog posts, events, news items or portfolio
+                        in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.
+                    </li>
                     <li><a href="https://www.livemeshthemes.com/visual-composer-addons/sliders/" title="Image Slider Addon" target="_blank">Image
                             Slider</a> - Create a responsive slider of images with support
                         for captions,

@@ -4,7 +4,7 @@ Plugin Name: Ultimate Addons for Visual Composer
 Plugin URI: https://brainstormforce.com/demos/ultimate/
 Author: Brainstorm Force
 Author URI: https://www.brainstormforce.com
-Version: 3.16.18
+Version: 3.16.20
 Description: Includes Visual Composer premium addon elements like Icon, Info Box, Interactive Banner, Flip Box, Info List & Counter. Best of all - provides A Font Icon Manager allowing users to upload / delete custom icon fonts.
 Text Domain: ultimate_vc
 */
@@ -14,7 +14,7 @@ if ( ! defined( '__ULTIMATE_ROOT__' ) ) {
 }
 
 if ( ! defined( 'ULTIMATE_VERSION' ) ) {
-	define( 'ULTIMATE_VERSION', '3.16.18' );
+	define( 'ULTIMATE_VERSION', '3.16.20' );
 }
 
 if ( ! defined( 'ULTIMATE_URL' ) ) {
@@ -536,32 +536,32 @@ if ( ! class_exists( 'Ultimate_VC_Addons' ) ) {
 
 			$bsf_dev_mode = bsf_get_option('dev_mode');
 			if($bsf_dev_mode === 'enable') {
-				$js_path = 'assets/js/';
-				$css_path = 'assets/css/';
+				$js_path = UAVC_URL.'assets/js/';
+				$css_path = UAVC_URL.'assets/css/';
 				$ext = '';
 			}
 			else {
-				$js_path = 'assets/min-js/';
-				$css_path = 'assets/min-css/';
+				$js_path = UAVC_URL.'assets/min-js/';
+				$css_path = UAVC_URL.'assets/min-css/';
 				$ext = '.min';
 			}
 
 			$ultimate_smooth_scroll_compatible = get_option('ultimate_smooth_scroll_compatible');
 
 			// register js
-			wp_register_script('ultimate-script',plugins_url('assets/min-js/ultimate.min.js',__FILE__),array('jquery', 'jquery-ui-core' ), ULTIMATE_VERSION, false);
-			wp_register_script('ultimate-appear',plugins_url($js_path.'jquery-appear'.$ext.'.js',__FILE__),array('jquery'), ULTIMATE_VERSION);
-			wp_register_script('ultimate-custom',plugins_url($js_path.'custom'.$ext.'.js',__FILE__),array('jquery'), ULTIMATE_VERSION);
-			wp_register_script('ultimate-vc-params',plugins_url($js_path.'ultimate-params'.$ext.'.js',__FILE__),array('jquery'), ULTIMATE_VERSION);
+			wp_register_script('ultimate-script',UAVC_URL.'assets/min-js/ultimate.min.js', array('jquery', 'jquery-ui-core' ), ULTIMATE_VERSION, false);
+			wp_register_script('ultimate-appear', $js_path.'jquery-appear'.$ext.'.js',array('jquery'), ULTIMATE_VERSION);
+			wp_register_script('ultimate-custom', $js_path.'custom'.$ext.'.js',array('jquery'), ULTIMATE_VERSION);
+			wp_register_script('ultimate-vc-params', $js_path.'ultimate-params'.$ext.'.js',array('jquery'), ULTIMATE_VERSION);
 			if($ultimate_smooth_scroll_compatible === 'enable') {
 				$smoothScroll = 'SmoothScroll-compatible.min.js';
 			}
 			else {
 				$smoothScroll = 'SmoothScroll.min.js';
 			}
-			wp_register_script('ultimate-smooth-scroll',plugins_url('assets/min-js/'.$smoothScroll,__FILE__),array('jquery'),ULTIMATE_VERSION,true);
-			wp_register_script("ultimate-modernizr",plugins_url($js_path.'modernizr-custom'.$ext.'.js',__FILE__),array('jquery'),ULTIMATE_VERSION);
-			wp_register_script("ultimate-tooltip",plugins_url($js_path.'tooltip'.$ext.'.js',__FILE__),array('jquery'),ULTIMATE_VERSION);
+			wp_register_script('ultimate-smooth-scroll',UAVC_URL.'assets/min-js/'.$smoothScroll,array('jquery'),ULTIMATE_VERSION,true);
+			wp_register_script("ultimate-modernizr", $js_path.'modernizr-custom'.$ext.'.js',array('jquery'),ULTIMATE_VERSION);
+			wp_register_script("ultimate-tooltip", $js_path.'tooltip'.$ext.'.js',array('jquery'),ULTIMATE_VERSION);
 
 			// register css
 
@@ -572,19 +572,27 @@ if ( ! class_exists( 'Ultimate_VC_Addons' ) ) {
 			}
 
 			self::ultimate_register_style( 'ultimate-animate', 'animate' );
-			self::ultimate_register_style( 'ult_hotspot_rtl_css', plugins_url( 'assets/min-css/rtl-common' . $ext . '.css' , __FILE__ ), true );
+			self::ultimate_register_style( 'ult_hotspot_rtl_css', UAVC_URL.'assets/min-css/rtl-common' . $ext . '.css', true );
 			self::ultimate_register_style( 'ultimate-style', 'style' );
-			self::ultimate_register_style( 'ultimate-style-min', plugins_url( 'assets/min-css/ultimate.min' . $cssext . '.css' , __FILE__ ), true );
+			self::ultimate_register_style( 'ultimate-style-min', UAVC_URL.'assets/min-css/ultimate.min' . $cssext . '.css', true );
 			self::ultimate_register_style( 'ultimate-tooltip', 'tooltip' );
 
 			$ultimate_smooth_scroll = get_option('ultimate_smooth_scroll');
 			if($ultimate_smooth_scroll == "enable" || $ultimate_smooth_scroll_compatible === 'enable') {
+				$ultimate_smooth_scroll_options = get_option('ultimate_smooth_scroll_options');
+				$options = array(
+				'step' => (isset($ultimate_smooth_scroll_options['step']) && $ultimate_smooth_scroll_options['step'] != '') ? ( int ) $ultimate_smooth_scroll_options['step'] : 80,
+				'speed' => (isset($ultimate_smooth_scroll_options['speed']) && $ultimate_smooth_scroll_options['speed'] != '') ? ( int ) $ultimate_smooth_scroll_options['speed'] : 480,
+				);
 				wp_enqueue_script('ultimate-smooth-scroll');
+				if($ultimate_smooth_scroll == "enable") {	
+					wp_localize_script( 'ultimate-smooth-scroll', 'php_vars', $options );
+				}
 			}
 
 			if(function_exists('vc_is_editor')){
 				if(vc_is_editor()){
-					wp_enqueue_style('vc-fronteditor',plugins_url('assets/min-css/vc-fronteditor.min.css',__FILE__));
+					wp_enqueue_style('vc-fronteditor',UAVC_URL.'assets/min-css/vc-fronteditor.min.css');
 				}
 			}
 			$fonts = get_option('smile_fonts');
@@ -620,13 +628,13 @@ if ( ! class_exists( 'Ultimate_VC_Addons' ) ) {
 				/* Range Slider Dependecy */
 				wp_enqueue_script('ultimate-script');
 				wp_enqueue_script('ultimate-modal-all');
-				wp_enqueue_script('jquery.shake',plugins_url($js_path.'jparallax'.$ext.'.js',__FILE__));
-				wp_enqueue_script('jquery.vhparallax',plugins_url($js_path.'vhparallax'.$ext.'.js',__FILE__));
+				wp_enqueue_script('jquery.shake', $js_path.'jparallax'.$ext.'.js');
+				wp_enqueue_script('jquery.vhparallax', $js_path.'vhparallax'.$ext.'.js');
 
 				wp_enqueue_style('ultimate-style-min');
 				wp_enqueue_style("ult-icons");
-				wp_enqueue_style('ultimate-vidcons',plugins_url('assets/fonts/vidcons.css',__FILE__));
-				wp_enqueue_script('jquery.ytplayer',plugins_url($js_path.'mb-YTPlayer'.$ext.'.js',__FILE__));
+				wp_enqueue_style('ultimate-vidcons', UAVC_URL.'assets/fonts/vidcons.css');
+				wp_enqueue_script('jquery.ytplayer', $js_path.'mb-YTPlayer'.$ext.'.js');
 
 				$Ultimate_Google_Font_Manager = new Ultimate_Google_Font_Manager;
 				$Ultimate_Google_Font_Manager->enqueue_selected_ultimate_google_fonts();

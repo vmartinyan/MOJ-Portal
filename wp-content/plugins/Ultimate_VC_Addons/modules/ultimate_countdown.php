@@ -28,7 +28,7 @@ if(!class_exists('Ultimate_CountDown'))
 		   		$bsf_dev_mode = bsf_get_option('dev_mode');
 				if($bsf_dev_mode === 'enable') {
 					
-					Ultimate_VC_Addons::ultimate_register_style( 'ult-colorpicker-style', plugins_url('../admin/css/bootstrap-datetimepicker-admin.css',__FILE__), true );
+					Ultimate_VC_Addons::ultimate_register_style( 'ult-colorpicker-style', UAVC_URL.'admin/css/bootstrap-datetimepicker-admin.css', true );
 
 					wp_enqueue_style('ult-colorpicker-style');
 				}

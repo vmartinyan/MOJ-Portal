@@ -2,6 +2,11 @@
 /*
  * Welcome panel html
  */
+
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
 if ( !function_exists( 'cf7_style_show_welcome_panel' ) ) {
     function cf7_style_show_welcome_panel() {
         $welm = get_option( 'cf7_style_welcome' );

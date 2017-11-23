@@ -135,7 +135,7 @@ function WooComposer_Single_style01($atts){
 				foreach($attachment_ids as $attachment_id){
 					$product_img = wp_get_attachment_image_src( $attachment_id,$image_size);
 					if($lazy_images == "enable"){
-						$src = plugins_url('../assets/img/loader.gif',__FILE__);
+						$src = UAVC_URL.'assets/img/loader.gif';
 					} else {
 						$src = $product_img[0];
 					}

@@ -687,7 +687,7 @@ function ult_tab_init() {
 		'is_container' => true,
 		'weight'                  => - 5,
 		'html_template'           => dirname( __FILE__ ) . '../vc_templates/ult_tab_element.php',
-		'admin_enqueue_css'       => preg_replace( '/\s/', '%20', plugins_url( '../admin/vc_extend/css/sub-tab.css', __FILE__ ) ),
+		'admin_enqueue_css'       => preg_replace( '/\s/', '%20', UAVC_URL.'admin/vc_extend/css/sub-tab.css' ),
 		'js_view'                 => 'UltimateTabView',
 		// JS View name for backend. Can be used to override or add some logic for shortcodes in backend (cloning/rendering/deleting/editing).
 		'icon' => 'icon-wpb-ui-tab-content ult_tab_eleicon',
@@ -901,7 +901,7 @@ function ult_tab_init() {
 			"min" => 1,
 			"max" => 100,
 			"suffix" => "",
-			"description" => __("This no will open active tab", "ultimate_vc"),
+			"description" => __('Enter active tab number (Note: to have all tabs closed on initial load enter non-existing number).', "ultimate_vc"),
 			"group" => "Tab",
 			"edit_field_class" => "vc_col-sm-12 vc_column ult_space_border",
 		),
@@ -1367,8 +1367,8 @@ function ultimate_tabs_admin() {
 	$screen_id = $screen->base;
 	if($screen_id !== 'post')
 		return false;
-	wp_register_script('tab-js-1', plugins_url( '../admin/vc_extend/js/ult_tab_admin_enqueue_js.js', __FILE__ ),array( 'jquery'),ULTIMATE_VERSION,true);
-	wp_register_script('tab-js-2', plugins_url( '../admin/vc_extend/js/single_element_js.js', __FILE__ ),array( 'jquery'),ULTIMATE_VERSION,true);
+	wp_register_script('tab-js-1', UAVC_URL.'admin/vc_extend/js/ult_tab_admin_enqueue_js.js',array( 'jquery'),ULTIMATE_VERSION,true);
+	wp_register_script('tab-js-2', UAVC_URL.'admin/vc_extend/js/single_element_js.js',array( 'jquery'),ULTIMATE_VERSION,true);
 
 	wp_enqueue_script('tab-js-1');
 	wp_enqueue_script('tab-js-2');

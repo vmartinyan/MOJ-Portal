@@ -8,14 +8,14 @@ if(!class_exists('Ultimate_Font_Manager_Param'))
 			if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
 				if(function_exists('vc_add_shortcode_param'))
 				{
-					vc_add_shortcode_param('ultimate_google_fonts', array($this, 'ultimate_google_fonts_settings'), plugins_url('../admin/vc_extend/js/vc-google-fonts-param.js',__FILE__));
+					vc_add_shortcode_param('ultimate_google_fonts', array($this, 'ultimate_google_fonts_settings'), UAVC_URL.'admin/vc_extend/js/vc-google-fonts-param.js');
 					vc_add_shortcode_param('ultimate_google_fonts_style', array($this, 'ultimate_google_fonts_style_settings'));
 				}
 			}
 			else {
 				if(function_exists('add_shortcode_param'))
 				{
-					add_shortcode_param('ultimate_google_fonts', array($this, 'ultimate_google_fonts_settings'), plugins_url('../admin/vc_extend/js/vc-google-fonts-param.js',__FILE__));
+					add_shortcode_param('ultimate_google_fonts', array($this, 'ultimate_google_fonts_settings'), UAVC_URL.'admin/vc_extend/js/vc-google-fonts-param.js');
 					add_shortcode_param('ultimate_google_fonts_style', array($this, 'ultimate_google_fonts_style_settings'));
 				}
 			}

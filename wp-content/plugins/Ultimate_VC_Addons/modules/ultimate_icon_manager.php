@@ -23,10 +23,10 @@ if ( ! class_exists( 'AIO_Icon_Manager' ) ) {
 		var $admin_css;
 
 		function __construct() {
-			$this->assets_js        = plugins_url( '../assets/js/', __FILE__ );
-			$this->assets_css       = plugins_url( '../assets/css/', __FILE__ );
-			$this->admin_js         = plugins_url( '../admin/js/', __FILE__ );
-			$this->admin_css        = plugins_url( '../admin/css/', __FILE__ );
+			$this->assets_js        = UAVC_URL.'assets/js/';
+			$this->assets_css       = UAVC_URL.'assets/css/';
+			$this->admin_js         = UAVC_URL.'admin/js/';
+			$this->admin_css        = UAVC_URL.'admin/css/';
 			$this->paths            = wp_upload_dir();
 			$this->paths['fonts']   = 'smile_fonts';
 			$this->paths['temp']    = trailingslashit( $this->paths['fonts'] ) . 'smile_temp';

@@ -33,7 +33,7 @@ if(!class_exists('Ultimate_Icon_Timeline'))
 					   "content_element" => true,
 					   "show_settings_on_create" => true,
 					   //"is_container"    => true,
-					   "front_enqueue_css" =>  preg_replace( '/\s/', '%20', plugins_url( '../assets/css/advacne_carosal_front.css', __FILE__ ) ),
+					   "front_enqueue_css" =>  preg_replace( '/\s/', '%20', UAVC_URL.'assets/css/advacne_carosal_front.css' ),
 					   "params" => array(
 						   	array(
 								 "type" => "dropdown",

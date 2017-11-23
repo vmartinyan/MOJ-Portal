@@ -122,8 +122,6 @@ class LVCA_Posts_Carousel {
 
                     </div>
 
-                    <div class="lvca-image-overlay"></div>
-
                 </div>
 
             <?php endif; ?>

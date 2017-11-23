@@ -465,6 +465,11 @@ $deactivate_element_testimonials_slider = lvca_get_option('lvca_deactivate_eleme
                                 premium quality elements with its numerous styles, the premium version does even more.</p>
 
                             <ul>
+                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/" title="Post Blocks Addon" target="_blank">Post
+                                        Blocks!</a> - Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering,
+                                    pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and
+                                    their categories without reloading the page.
+                                </li>
                                 <li><a href="https://www.livemeshthemes.com/visual-composer-addons/sliders/" title="Image Slider Widget" target="_blank">Image
                                         Slider</a> - Create a responsive slider of images with support
                                     for captions,

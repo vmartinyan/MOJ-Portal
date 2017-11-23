@@ -2,20 +2,19 @@
 Contributors: Rustaurius, EtoileWebDesign
 Tags: faq, faqs, woocommerce faq, frequently asked questions, faq widget
 Requires at least: 3.9.0
-Tested up to: 4.8
+Tested up to: 4.9
 License: GPLv3
 License URI:http://www.gnu.org/licenses/gpl-3.0.html
 
-FAQ plugin that lets you easily create, order and publicize FAQs, insert 3 styles of FAQs on a page or WooCommerce product, and use AJAX FAQ search using FAQ shortcodes
+FAQ plugin that lets you easily create, order and publicize FAQs using shortcodes, with many unique styles, WooCommerce FAQs and AJAX FAQ search
 
 == Description ==
 
+FAQ plugin that lets you create FAQs (frequently asked questions), organize FAQs and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. 
 
-<a href='http://www.etoilewebdesign.com/ultimate-faq-demo/'>FAQ Demo</a>
+[FAQ Demo](https://www.etoilewebdesign.com/ultimate-faq-demo/)
 
-FAQ plugin that lets you create FAQ (frequently asked questions), organize FAQs and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. 
-
-= Key FAQ Features =
+= FAQ Key Features =
 * Unlimited FAQ, unlimited FAQ tag and unlimited FAQ category support
 * Create FAQ categories
 * Create FAQ posts and assign categories to them
@@ -25,7 +24,7 @@ FAQ plugin that lets you create FAQ (frequently asked questions), organize FAQs 
 
 [youtube https://www.youtube.com/watch?v=xeGVZnVrZ6I]
 
-<strong>With WooCommerce Integration!</strong> See the "WooCommerce FAQ" section below for full details and features.
+<strong>With WooCommerce Integration!</strong> See the "FAQ for WooCommerce" section below for full details and features.
 
 `
 [ultimate-faqs]
@@ -39,7 +38,7 @@ FAQ features include frequently asked question statistics that show how many tim
 
 Ultimate FAQ isn't just for frequently asked questions. It also works great for any content that works similarly to FAQ and that needs to be hidden until it is clicked, like job postings, recipes, etc.!
 
-= WooCommerce FAQ =
+= FAQ for WooCommerce =
 
 Using WooCommerce to sell your products? Easily add an FAQ tab to each product page, so your customers can see answers to common FAQ questions about the products they're browsing. It's the most comprehensive WooCommerce FAQs solution!
 
@@ -51,7 +50,7 @@ Want to decide exactly what order your FAQs are displayed in? Use our simple FAQ
 
 With the smart [submit-question] FAQ shortcode (premium), you can let your customers add to your custom FAQ list by submitting an FAQ question and even proposing an FAQ answer for it!
 
-= Additional Features =
+= Additional FAQ Features =
 * Select FAQ animation options for displaying FAQ posts
 * Toggle FAQ accordion (close open FAQ when a new one is opened) behaviour on/off
 * Allow people to comment on individual FAQ
@@ -267,6 +266,17 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.6.9 =
+- Added in the option to re-order the elements of an FAQ (body, date/author, categories, etc.)
+
+= 1.6.8 =
+- Fixed a conflict with other plugins that use CSSTidy for CSS sanitization
+- Added the ability to link to the search shortcode with a term preloaded
+
+= 1.6.7 =
+- Fixed the settings page for those using PHP7
+- Fixed the faq_id attribute of the select-faq shortcode
+
 = 1.6.6 =
 - Added in a captcha option for the submit question shortcode
 - Fixed an HTML validation error
@@ -607,6 +617,3 @@ Video 3 - FAQs Ordering
 
 = 1.0.0 =
 - Premium version release, check out our website for all of the details <http://www.etoilewebdesign.com/ultimate-faq/>
-
-
-

@@ -1,10 +1,11 @@
 === Contact Form 7 Style ===
 Contributors: ionut.iclanzan, dorumarginean, mlehelsz, mircear
 Donate link: http://cf7style.com/back-this-project/
-Tags: contact form 7, contact form 7 style, contact form 7 css, contact form 7 styling, CF7, CF7 style, styling contact form, styling contact form 7, multiple form styling, custom form styling, CF7 addon, customize, templates, valentine's day templates, Christmas templates, manual styling, live preview, hover state styling, CF7 form messages styling
+Tags: contact form 7, contact form 7 style, contact form 7 templates, contact form 7 styling, CF7, CF7 style, styling contact form, styling contact form 7, multiple form styling, custom form styling, CF7 addon, customize, templates, valentine's day templates, Christmas templates, manual styling, live preview, hover state styling, CF7 form messages styling
 Requires at least: 3.0.1
-Tested up to: 4.7.2
-Stable tag: 3.1.2
+Tested up to: 4.9
+Stable tag: 3.1.6
+Requires PHP: 5.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,13 +26,14 @@ Supports custom styling, which can be easily managed via admin dashboard. Also h
 **Custom style options: <BR>**
 - color styling, <BR>
 - custom fonts ( google fonts included ), <BR>
-- styling for input fields, text, textarea, labels, submit button, messages <BR>
+- styling for input fields, text, textarea, labels, submit button, messages, placeholders, <BR>
 - border-color, <BR>
 - form background-color, <BR>
 - form transparent background-color, <BR>
 - form background-image, <BR>
 - form container styling, <BR>
 - form container background-image styling, <BR>
+- form placeholder opacity styling, <BR>
 - customized style can be imported / exported <BR>
 - quick edit option <BR>
 - support multiple forms with different design<BR>
@@ -68,7 +70,47 @@ You will find 'Contact Style' menu in your WordPress admin panel.
 9. Enable / disable forcing the CSS on the actual setup (it adds !important to every style property changed on the form)
 10. Transparent background
 
+== Frequently Asked Questions ==
+
+Please check our FAQ page where you'll find answers to some of your questions on [cf7style.com/faq/](http://cf7style.com/faq/).
+
 == Changelog ==
+
+= 3.1.6 = 
+
+Release Date: November 7th, 2017
+
+* [Major Fix](https://wordpress.org/support/topic/u-have-a-problem-with-ure-update/) Fixed slash error and added extra condition to check for response
+
+= 3.1.5 = 
+
+Release Date: November 6th, 2017
+
+* [Major Fix](https://wordpress.org/support/topic/error-on-updating-cf7-style/) Fallback for setups where json file can not be accesed by wp_remote_get
+
+= 3.1.4 = 
+
+Release Date: November 4th, 2017
+
+* [Major Fix](https://wordpress.org/support/topic/dont-show-background-image/) Background image rendering fixed ( added "url()" )
+
+
+= 3.1.3 = 
+
+Release Date: November 3rd, 2017
+
+* [New Feature] Placeholder elements styling and hover too + preview generate
+* [New Feature] Opacity settings for placeholders
+* [Improvement] Updated fonticons 
+* [Improvement] Contact Form 7 "Go To CF7" button to edit form structure
+* [Improvement] Notifications handling modified
+* [Improvement] Removed transparent checkbox from font color
+* [Improvement] Updated plugin file structure for better code management
+* [Improvement] JSON files for plugin settings
+* [Major Fix]   Works with PHP 7
+* [Major Fix]   Compatible with WordPress Multisite
+* [Major Fix] 	Refactored style generator
+* General bugfixing
 
 = 3.1.2 =
 * [Small Fix](https://wordpress.org/support/topic/block-disappeared/) de-activated the possibility to drag boxes around
@@ -102,8 +144,6 @@ You will find 'Contact Style' menu in your WordPress admin panel.
 * [Major Fix] Parse error: syntax error, unexpected T_STATIC
 * general bugfixing
 
-
-
 = 3.0.4 =
 * [Major Fix](https://wordpress.org/support/topic/problem-with-css-editor?replies=2) Fixed CSS editor "\" multiplier removed
 * [Major Fix] Collection data functionality to prevent fatal error for various server setups
@@ -113,10 +153,8 @@ You will find 'Contact Style' menu in your WordPress admin panel.
 * New feature - Settings page - Install predefined templates or Allow collection data
 * General bugfixing
 
-
 = 3.0.3 =
 * [Major Fix](https://wordpress.org/support/topic/existing-styling-deleted?replies=3) JQuery conflict with Siteorigin Page Builder and Visual Composer
-
 
 = 3.0.2 =
 * [Major Fix](https://wordpress.org/support/topic/does-not-work-639?replies=7) 
@@ -165,7 +203,6 @@ You will find 'Contact Style' menu in your WordPress admin panel.
 * [Fixed](https://wordpress.org/support/topic/good-morning-1) Contact form 7 shortcode detection for Flatco - Multipurpose & Responsive WordPress Theme
 * Improve plugin installer process
  
-
 = 2.2.4 =
 * New feature - ability to add your own custom css rules
 * [Fixed](https://wordpress.org/support/topic/textarea-height-and-submit-width) textarea and submit button on focus issue
@@ -228,15 +265,6 @@ You will find 'Contact Style' menu in your WordPress admin panel.
 * First plugin version.
 
 == Upgrade Notice ==
-= Contact Form 7 Style Version 3.1.2 =
+= Contact Form 7 Style Version 3.1.6 =
 
-* [Small Fix](https://wordpress.org/support/topic/block-disappeared/) de-activated the possibility to drag boxes around
-* [Small Fix](https://wordpress.org/support/topic/transparentclear-input-background/) added possibility to add transparent background
-* [Small Fix](https://wordpress.org/support/topic/custom-submit-button-settings-not-working/) added new Force CSS settings possibility to plugin
-* [Small Fix](https://wordpress.org/support/topic/successfully-sent-message-styles-not-working-properly/) customized styling to remove this issue
-* [Small Fix](https://wordpress.org/support/topic/changing-default-padding-and-margins/) added possibility to add 0 padding / 0 margin
-* [Small Improvement] Possible to add negative margins on custom templates
-* [Small Improvement] Possible to add decimal values for "%" and "em" units
-* [Small Improvement] Added tooltip settings for better explanations
-* general bugfixing
-* user interface improvements
+* [Major Fix](https://wordpress.org/support/topic/u-have-a-problem-with-ure-update/) Fixed slash error and added extra condition to check for response

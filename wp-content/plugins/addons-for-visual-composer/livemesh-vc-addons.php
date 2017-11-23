@@ -7,7 +7,7 @@
  * Author URI: https://www.livemeshthemes.com/visual-composer-addons
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Version: 1.6.1
+ * Version: 1.7
  * Text Domain: livemesh-vc-addons
  * Domain Path: languages
  *
@@ -95,7 +95,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
 
             // Plugin version
             if (!defined('LVCA_VERSION')) {
-                define('LVCA_VERSION', '1.6.1');
+                define('LVCA_VERSION', '1.7');
             }
 
             // Plugin Folder Path

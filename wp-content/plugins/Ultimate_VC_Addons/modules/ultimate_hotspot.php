@@ -20,13 +20,13 @@ if(!class_exists('ULT_HotSpot')) {
 			if(defined('WPB_VC_VERSION') && version_compare(WPB_VC_VERSION, 4.8) >= 0) {
 				if(function_exists('vc_add_shortcode_param'))
 				{
-					vc_add_shortcode_param('ultimate_hotspot_param', array($this, 'ultimate_hotspot_param_callback'), plugins_url('../admin/vc_extend/js/vc-hotspot-param.js',__FILE__));
+					vc_add_shortcode_param('ultimate_hotspot_param', array($this, 'ultimate_hotspot_param_callback'), UAVC_URL.'admin/vc_extend/js/vc-hotspot-param.js');
 				}
 			}
 			else {
 				if(function_exists('add_shortcode_param'))
 				{
-					add_shortcode_param('ultimate_hotspot_param', array($this, 'ultimate_hotspot_param_callback'), plugins_url('../admin/vc_extend/js/vc-hotspot-param.js',__FILE__));
+					add_shortcode_param('ultimate_hotspot_param', array($this, 'ultimate_hotspot_param_callback'), UAVC_URL.'admin/vc_extend/js/vc-hotspot-param.js');
 				}
 			}
 		}
@@ -48,7 +48,7 @@ if(!class_exists('ULT_HotSpot')) {
 			if($hook == "post.php" || $hook == "post-new.php" || $hook == "edit.php"){
 				$bsf_dev_mode = bsf_get_option('dev_mode');
 				if($bsf_dev_mode === 'enable') {
-					wp_register_script('hotspt-admin-js', plugins_url( '../admin/vc_extend/js/admin_enqueue_js.js', __FILE__ ),array( 'jquery', 'jquery-ui-core', 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ),ULTIMATE_VERSION,true);
+					wp_register_script('hotspt-admin-js', UAVC_URL.'admin/vc_extend/js/admin_enqueue_js.js',array( 'jquery', 'jquery-ui-core', 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ),ULTIMATE_VERSION,true);
 					wp_enqueue_script('hotspt-admin-js');
 				}
 			}

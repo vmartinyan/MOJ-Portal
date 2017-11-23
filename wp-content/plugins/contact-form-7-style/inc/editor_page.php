@@ -2,6 +2,11 @@
 /*
  * page to save global css
  */
+
+if ( !defined( 'ABSPATH' ) ) {
+ exit;
+}
+
 if ( !function_exists( 'cf7style_editor_page_init' ) ) {
     add_action('admin_menu', 'cf7style_editor_page_init');
     function cf7style_editor_page_init() {
@@ -40,8 +45,9 @@ if ( !function_exists( 'cf7style_editor_page_view' ) ) {
     }
 }
 $initiatenewoptions = new init_sections_register_fields();
+
 class init_sections_register_fields {
-    function init_sections_register_fields( ) {
+    public function __construct( ) {
         add_filter( 'admin_init' , array( $this , 'register_new_fields' ) );
     }
     function cf7style_render_checkbox( $option, $args, $description, $tulip ){
@@ -51,7 +57,6 @@ class init_sections_register_fields {
     function cf7style_collection_structure( $args ) {
             $html = "";
             $html .= '</tr>';
-            /*$html .= '<tr><td colspan="2"><p>'.__( "Want to help make Contact Form 7 Style even more better? Allow Us to collect non-sensitive diagnostic data.", "contact-form-7-style" ).'</p><p>'.__( "We will only collect your website URL, WordPress version, Contact Form 7 Style plugin version and active status.", "contact-form-7-style" ).'</p></td></tr>';*/
             $html .= '<tr><td colspan="2">';
             $option = get_option( $args[0] );
             $html .= $this->cf7style_render_checkbox( $option, $args, 'Allow collecting data', '<p>'.__( "Want to help make Contact Form 7 Style even more better? Allow Us to collect non-sensitive diagnostic data.", "contact-form-7-style" ).'</p><p>'.__( "We will only collect your website URL, WordPress version, Contact Form 7 Style plugin version and active status.", "contact-form-7-style" ).'</p>' );
@@ -62,8 +67,6 @@ class init_sections_register_fields {
     function cf7style_templates_structure ( $args) {
            $html = "";
             $html .= '</tr>';
-            /*$html .= '<tr><td colspan="2"><p>'.__( "From here you will be able to import the Contact Form 7 Style predefined templates.", "contact-form-7-style" ).'</p></td></tr>';
-             $html .= '<tr><td colspan="2"><p><small>'.__( "This works only if  the  predefined templates are Deleted Permanently (they don't appear in", "contact-form-7-style" ).' <a href="'.admin_url('edit.php?post_status=trash&post_type=cf7_style').'">'.__( "Trash", "contact-form-7-style" ).'</a> ).</small></p></td></tr>';*/
             $html .= '<tr><td colspan="2">';
             $option = get_option( $args[0] );
             if( $option == '1'){
@@ -183,13 +186,7 @@ class init_sections_register_fields {
             update_option( $args[0], $_POST[$args[0]] );
         }
         $option = stripslashes(get_option( $args[0] ));
-        if ( version_compare( phpversion() , '5.3', '>' ) ) {
-            require_once 'cssparser.php';
-            $css = new CSSParser();
-            echo "<div class='parser-message'>";
-            $cssIndex = $css->ParseCSS($option);
-            echo "</div>";
-        }
+
         echo '<form method="POST" action="">';
                 echo '<textarea id="'.$args[0].'" name="'.$args[0].'" />' . $option. '</textarea>';
         submit_button( 'Save CSS', 'primary' );

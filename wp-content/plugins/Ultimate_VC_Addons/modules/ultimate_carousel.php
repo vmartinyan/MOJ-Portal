@@ -37,12 +37,12 @@ if ( ! class_exists( "Ultimate_Carousel" ) ) {
 			Ultimate_VC_Addons::ultimate_register_script( 'ult-slick-custom', 'slick-custom', false, array( 'jquery', 'ult-slick' ), ULTIMATE_VERSION, false );
 
 			Ultimate_VC_Addons::ultimate_register_style( 'ult-slick', 'slick' );
-			Ultimate_VC_Addons::ultimate_register_style( 'ult-icons', plugins_url( "../assets/css/icons.css", __FILE__ ), true );
+			Ultimate_VC_Addons::ultimate_register_style( 'ult-icons', UAVC_URL.'assets/css/icons.css', true );
 		}
 
 		function ultimate_admin_scripts( $hook ) {
 			if ( $hook == "post.php" || $hook == "post-new.php" ) {
-				wp_enqueue_style( "ult-icons", plugins_url( "../assets/css/icons.css", __FILE__ ) );
+				wp_enqueue_style( "ult-icons", UAVC_URL.'assets/css/icons.css' );
 			}
 		}
 
