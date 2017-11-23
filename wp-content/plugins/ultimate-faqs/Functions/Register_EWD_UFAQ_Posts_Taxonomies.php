@@ -2,6 +2,7 @@
 add_action( 'init', 'EWD_UFAQ_Create_Posttype' );
 function EWD_UFAQ_Create_Posttype() {
 		$Slug_Base = get_option("EWD_UFAQ_Slug_Base");
+		if ($Slug_Base == '') {$Slug_Base = 'ufaqs';}
 		
 		$labels = array(
 				'name' => __('FAQs', 'ultimate-faqs'),

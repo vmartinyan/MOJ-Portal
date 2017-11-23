@@ -266,6 +266,12 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.6.11 =
+- Re-running the set options operation for those who had updated to version 1.6.10
+
+= 1.6.10 =
+- Fixed an issue where new users were getting blank FAQs
+
 = 1.6.9 =
 - Added in the option to re-order the elements of an FAQ (body, date/author, categories, etc.)
 

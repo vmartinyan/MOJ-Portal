@@ -2,19 +2,19 @@
 /*
 Plugin Name: Ultimate FAQ
 Plugin URI: http://www.EtoileWebDesign.com/wordpress-plugins/
-Description: FAQ plugin that lets you easily create, order and publicize FAQs using shortcodes, with many unique styles, WooCommerce FAQs and AJAX FAQ search
+Description: A plugin that lets you create FAQs (frequently asked questions), organize them, publicize them, etc.
 Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.6.9
+Version: 1.6.11
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.6.9a';
+$EWD_UFAQ_Version = '1.6.11';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -199,6 +199,22 @@ function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Auto_Complete_Titles") == "") {update_option("EWD_UFAQ_Auto_Complete_Titles", "Yes");}
 	if (get_option("EWD_UFAQ_Slug_Base") == "") {update_option("EWD_UFAQ_Slug_Base", "ufaqs");}
 
+	if (get_option("EWD_UFAQ_FAQ_Elements") == "") {
+		$FAQ_Elements = array();
+		$FAQ_Elements[0] = "Author_Date";
+		$FAQ_Elements[1] = "Body";
+		$FAQ_Elements[2] = "Custom_Fields";
+		$FAQ_Elements[3] = "Categories";
+		$FAQ_Elements[4] = "Tags";
+		$FAQ_Elements[5] = "Ratings";
+		$FAQ_Elements[6] = "Social_Media";
+		$FAQ_Elements[7] = "Permalink";
+		$FAQ_Elements[8] = "Comments";
+		$FAQ_Elements[9] = "Back_To_Top";
+
+		update_option("EWD_UFAQ_FAQ_Elements", $FAQ_Elements);
+	}
+
 	if (get_option("EWD_UFAQ_Group_By_Category") == "") {update_option("EWD_UFAQ_Group_By_Category", "No");}
 	if (get_option("EWD_UFAQ_Group_By_Category_Count") == "") {update_option("EWD_UFAQ_Group_By_Category_Count", "No");}
 	if (get_option("EWD_UFAQ_Group_By_Order_By") == "") {update_option("EWD_UFAQ_Group_By_Order_By", "name");}
@@ -329,6 +345,7 @@ include "Shortcodes/SelectFAQ.php";
 include "Shortcodes/SubmitFAQ.php";
 
 if ($EWD_UFAQ_Version != get_option('EWD_UFAQ_Version')) {
+	Set_EWD_UFAQ_Options();
 	EWD_UFAQ_Version_Update();
 }
 
