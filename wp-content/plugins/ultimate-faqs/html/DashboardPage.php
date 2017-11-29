@@ -134,6 +134,12 @@ if (get_option("EWD_UFAQ_Update_Flag") == "Yes" or get_option("EWD_UFAQ_Install_
 ?>
 
 
+	<?php if ( time() < 1511845201 and $UFAQ_Full_Version != "Yes" ) { ?>
+		<a href="https://www.etoilewebdesign.com/license-payment/"><img src="http://www.etoilewebdesign.com/Screenshots/blackFridaypromotionbanner1200.png" style="position: relative; float: left; width: 100%; height: auto; border: none;" /></a>
+		<div style="clear: both;"></div>
+	<?php } ?>
+
+
 	<div id="ewd-dashboard-box-orders" class="ewd-ufaq-dashboard-box" >
 	  	<div class="ewd-dashboard-box-icon"><img src="<?php echo plugins_url(); ?>/ultimate-faqs/images/ewd-dashboard-icon-ufaq-01.png"/>
 	  	</div>

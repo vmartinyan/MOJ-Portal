@@ -5,7 +5,7 @@ Contributors: livemesh
 Tags: visual composer, visual composer addons, vc addons, visual composer extensions, vc extensions, page builder, portfolio, carousel, post, posts, shortcodes, tabs, admin, plugin, page
 Requires at least: 4.5
 Tested up to: 4.9
-Stable Tag: 1.7
+Stable Tag: 1.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html-func
 
@@ -105,6 +105,9 @@ Pls install and activate the <a href="https://wordpress.org/plugins/portfolio-po
 3. Editing a addon/extension element in the Visual Composer Page Builder.
 
 == Changelog ==
+
+= 1.7.1 =
+* Added - Ability to rate plugin from admin screen
 
 = 1.7 =
 * Fixed – The post image in a grid or posts carousel was not clickable to the link specified

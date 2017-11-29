@@ -3,11 +3,11 @@
  * Plugin Name: Addons for Visual Composer
  * Plugin URI: https://www.livemeshthemes.com/visual-composer-addons
  * Description: A collection of premium quality addons or extensions for use in Visual Composer page builder. Visual composer must be installed and activated.
- * Author: Visual Composer Addons
+ * Author: Livemesh
  * Author URI: https://www.livemeshthemes.com/visual-composer-addons
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Version: 1.7
+ * Version: 1.7.1
  * Text Domain: livemesh-vc-addons
  * Domain Path: languages
  *
@@ -75,7 +75,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         public function __clone() {
             // Cloning instances of the class is forbidden
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.6');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.7.1');
         }
 
         /**
@@ -84,7 +84,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         public function __wakeup() {
             // Unserializing instances of the class is forbidden
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.6');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.7.1');
         }
 
         /**
@@ -95,7 +95,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
 
             // Plugin version
             if (!defined('LVCA_VERSION')) {
-                define('LVCA_VERSION', '1.7');
+                define('LVCA_VERSION', '1.7.1');
             }
 
             // Plugin Folder Path

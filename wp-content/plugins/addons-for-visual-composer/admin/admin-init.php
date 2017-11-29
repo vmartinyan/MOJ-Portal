@@ -20,7 +20,13 @@ class LVCA_Admin {
     public function includes() {
 
         // load class admin ajax function
-        require_once(LVCA_PLUGIN_DIR . '/admin/admin-ajax.php');
+        require_once(LVCA_PLUGIN_DIR . 'admin/admin-ajax.php');
+
+        /**
+         * Classes responsible for displaying admin notices.
+         */
+        require_once LVCA_PLUGIN_DIR . 'admin/notices/admin-notice.php';
+        require_once LVCA_PLUGIN_DIR . 'admin/notices/admin-notice-rate.php';
 
     }
 
@@ -33,6 +39,16 @@ class LVCA_Admin {
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
 
         add_action('current_screen', array($this, 'remove_admin_notices'));
+
+
+        /**
+         * Notice: Rate plugin
+         */
+        $rate = new LVCA_Notice_Rate('rate', LVCA_PLUGIN_DIR . 'admin/notices/templates/rate.php');
+
+        add_action('load-plugins.php', array($rate, 'defer_first_time'));
+        add_action('admin_notices', array($rate, 'display_notice'));
+        add_action('admin_post_lvca_dismiss_notice', array($rate, 'dismiss_notice'));
 
     }
 

@@ -266,6 +266,9 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.6.12 =
+- Minor styling updates
+
 = 1.6.11 =
 - Re-running the set options operation for those who had updated to version 1.6.10
 

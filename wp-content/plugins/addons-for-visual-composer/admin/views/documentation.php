@@ -1210,6 +1210,10 @@ else {
 
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
+                <h3>1.7.1</h3>
+                <ul>
+                    <li>Added - Ability to rate plugin from admin screen</li>
+                </ul>
                 <h3>1.7</h3>
                 <ul>
                     <li>Fixed – The post image in a grid or posts carousel was not clickable to the link specified</li>
