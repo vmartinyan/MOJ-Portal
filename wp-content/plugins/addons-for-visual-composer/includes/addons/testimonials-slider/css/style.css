@@ -1,9 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 .lvca-testimonials-slider {
   position: relative; }
   .lvca-testimonials-slider.lvca-container {

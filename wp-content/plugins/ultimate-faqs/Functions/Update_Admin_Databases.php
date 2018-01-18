@@ -51,9 +51,11 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['reveal_effect']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Reveal_Effect', sanitize_text_field($_POST['reveal_effect']));}
     if (isset($_POST['pretty_permalinks']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Pretty_Permalinks', sanitize_text_field($_POST['pretty_permalinks']));}
     if (isset($_POST['allow_proposed_answer']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Allow_Proposed_Answer',  sanitize_text_field($_POST['allow_proposed_answer']));}
+    if (isset($_POST['submit_custom_fields']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Submit_Custom_Fields',  sanitize_text_field($_POST['submit_custom_fields']));}
     if (isset($_POST['submit_question_captcha']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Submit_Question_Captcha',  sanitize_text_field($_POST['submit_question_captcha']));}
     if (isset($_POST['admin_question_notification']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Admin_Question_Notification', sanitize_text_field($_POST['admin_question_notification']));}
     if (isset($_POST['Options_Submit']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Admin_Notification_Email', sanitize_text_field($_POST['admin_notification_email']));}
+    if (isset($_POST['submit_faq_email']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Submit_FAQ_Email', sanitize_text_field($_POST['submit_faq_email']));}
     if (isset($_POST['faq_auto_complete_titles']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Auto_Complete_Titles', sanitize_text_field($_POST['faq_auto_complete_titles']));}
     if (isset($_POST['slug_base']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Slug_Base', $_POST['slug_base']);}
     if (isset($_POST['Socialmedia']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Social_Media',  $Social_Media);}

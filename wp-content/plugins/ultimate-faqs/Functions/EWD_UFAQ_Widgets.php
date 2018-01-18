@@ -59,7 +59,10 @@ class EWD_UFAQ_Display_FAQ_Post_List extends WP_Widget {
 		return $instance;
 	}
 }
-add_action('widgets_init', create_function('', 'return register_widget("EWD_UFAQ_Display_FAQ_Post_List");'));
+function EWD_UFAQ_Register_Display_FAQ_Post_List() {
+	register_widget("EWD_UFAQ_Display_FAQ_Post_List");
+}
+add_action('widgets_init', 'EWD_UFAQ_Register_Display_FAQ_Post_List');
 
 class EWD_UFAQ_Display_Recent_FAQS extends WP_Widget {
 
@@ -121,7 +124,10 @@ class EWD_UFAQ_Display_Recent_FAQS extends WP_Widget {
 		return $instance;
 	}
 }
-add_action('widgets_init', create_function('', 'return register_widget("EWD_UFAQ_Display_Recent_FAQS");'));
+function EWD_UFAQ_Register_Display_Recent_FAQS() {
+	register_widget("EWD_UFAQ_Display_Recent_FAQS");
+}
+add_action('widgets_init', 'EWD_UFAQ_Register_Display_Recent_FAQS');
 
 class EWD_UFAQ_Display_Popular_FAQS extends WP_Widget {
 
@@ -183,7 +189,10 @@ class EWD_UFAQ_Display_Popular_FAQS extends WP_Widget {
 		return $instance;
 	}
 }
-add_action('widgets_init', create_function('', 'return register_widget("EWD_UFAQ_Display_Popular_FAQS");'));
+function EWD_UFAQ_Register_Display_Popular_FAQS() {
+	register_widget("EWD_UFAQ_Display_Popular_FAQS");
+}
+add_action('widgets_init', 'EWD_UFAQ_Register_Display_Popular_FAQS');
 
 class EWD_UFAQ_Display_Random_FAQ extends WP_Widget {
 
@@ -241,7 +250,10 @@ class EWD_UFAQ_Display_Random_FAQ extends WP_Widget {
 		return $instance;
 	}
 }
-add_action('widgets_init', create_function('', 'return register_widget("EWD_UFAQ_Display_Random_FAQ");'));
+function EWD_UFAQ_Register_Display_Random_FAQ() {
+	register_widget("EWD_UFAQ_Display_Random_FAQ");
+}
+add_action('widgets_init', 'EWD_UFAQ_Register_Display_Random_FAQ');
 
 class EWD_UFAQ_Display_FAQ_Categories extends WP_Widget {
 
@@ -303,6 +315,9 @@ class EWD_UFAQ_Display_FAQ_Categories extends WP_Widget {
 		return $instance;
 	}
 }
-add_action('widgets_init', create_function('', 'return register_widget("EWD_UFAQ_Display_FAQ_Categories");'));
+function EWD_UFAQ_Register_Display_FAQ_Categories() {
+	register_widget("EWD_UFAQ_Display_FAQ_Categories");
+}
+add_action('widgets_init', 'EWD_UFAQ_Register_Display_FAQ_Categories');
 
 ?>

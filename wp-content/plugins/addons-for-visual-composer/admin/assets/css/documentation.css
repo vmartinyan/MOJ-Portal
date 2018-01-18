@@ -10,7 +10,6 @@
 
 .livemesh-doc * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .livemesh-doc {
@@ -49,11 +48,6 @@
     opacity: 0; }
   to {
     opacity: 1; } }
-@-moz-keyframes smoothFade {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
 @-webkit-keyframes smoothFade {
   from {
     opacity: 0; }
@@ -81,7 +75,8 @@
 .livemesh-doc .panel a:focus,
 .livemesh-doc .panel a:active {
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none; }
 
 .livemesh-doc .panel hr {
@@ -260,7 +255,8 @@
   background: #fff;
   outline: none;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px; }
 
@@ -405,13 +401,13 @@ h4 .button {
   .livemesh-doc .button-wrap img.button-image {
     max-width: 100%;
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
     transform: scale(1);
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out; }
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; }
     .livemesh-doc .button-wrap img.button-image:hover {
       -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
       transform: scale(1.1); }
 
 /*# sourceMappingURL=documentation.css.map */

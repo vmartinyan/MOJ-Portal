@@ -7,7 +7,12 @@ function Insert_Question_Form($atts) {
 		
 	$Custom_CSS = get_option('EWD_UFAQ_Custom_CSS');
 	$Allow_Proposed_Answer = get_option("EWD_UFAQ_Allow_Proposed_Answer");
+	$Submit_Custom_Fields = get_option("EWD_UFAQ_Submit_Custom_Fields");
 	$Submit_Question_Captcha = get_option("EWD_UFAQ_Submit_Question_Captcha");
+	$Submit_FAQ_Email = get_option("EWD_UFAQ_Submit_FAQ_Email");
+
+	$FAQ_Fields_Array = get_option("EWD_UFAQ_FAQ_Fields");
+	if (!is_array($FAQ_Fields_Array)) {$FAQ_Fields_Array = array();}
 	
 	$ReturnString = "";
 		
@@ -75,6 +80,33 @@ function Insert_Question_Form($atts) {
 		$ReturnString .= "</div>";
 	}
 
+	if ($Submit_Custom_Fields == "Yes") {
+		foreach ($FAQ_Fields_Array as $FAQ_Field_Item) {
+			$ReturnString .= "<div class='form-field'>";
+			$ReturnString .= "<div class='ufaq-submit-custom-field-label'>" . $FAQ_Field_Item['FieldName'] . ": </div>";
+			if ($FAQ_Field_Item['FieldType'] == 'text') {$ReturnString .= "<input type='text' name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' />";}
+			if ($FAQ_Field_Item['FieldType'] == 'textarea') {$ReturnString .= "<textarea name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' ></textarea>";}
+			if ($FAQ_Field_Item['FieldType'] == 'link') {$ReturnString .= "<input type='url' name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' />";}
+			if ($FAQ_Field_Item['FieldType'] == 'date') {$ReturnString .= "<input type='date' name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' />";}
+			if ($FAQ_Field_Item['FieldType'] == 'datetime') {$ReturnString .= "<input type='datetime-local' name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' />";}
+			if ($FAQ_Field_Item['FieldType'] == 'select') {
+				$Options = explode(",", $FAQ_Field_Item['FieldValues']);
+				$ReturnString .= "<select name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' />";
+				foreach ($Options as $Option) {$ReturnString .= "<option value='" . $Option . "' >" . $Option . "</option>";}
+				$ReturnString .= '</select>';
+			}
+			if ($FAQ_Field_Item['FieldType'] == 'radio') {
+				$Options = explode(",", $FAQ_Field_Item['FieldValues']);
+				foreach ($Options as $Option) {$ReturnString .= "<input type='radio' name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' value='" . $Option . "' > " . $Option . "<br />";}
+			}
+			if ($FAQ_Field_Item['FieldType'] == 'checkbox') {
+				$Options = explode(",", $FAQ_Field_Item['FieldValues']);
+				foreach ($Options as $Option) {$ReturnString .= "<input type='checkbox' name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "[]' value='" . $Option . "' > " . $Option . "<br />";}
+			}
+			$ReturnString .= "</div>";
+		}
+	}
+
 	$ReturnString .= "<div class='form-field'>";
 	$ReturnString .= "<div id='ewd-faq-review-author' class='ewd-faq-review-label'>";
 	$ReturnString .= $Review_Author_Label . ": ";
@@ -86,6 +118,20 @@ function Insert_Question_Form($atts) {
 	$ReturnString .= "<p>" . $What_Name_With_Review_Label . "</p>";
 	$ReturnString .= "</div>";
 	$ReturnString .= "</div>";
+
+	if ($Submit_FAQ_Email != 0) {
+		$ReturnString .= "<div class='form-field'>";
+		$ReturnString .= "<div id='ewd-faq-review-author' class='ewd-faq-review-label'>";
+		$ReturnString .= __("Author Email", 'ultimate-faqs') . ": ";
+		$ReturnString .= "</div>";
+		$ReturnString .= "<div id='ewd-faq-author-email-input' class='ewd-faq-review-input'>";
+		$ReturnString .= "<input type='text' name='Author_Email' id='Author_Email' />";
+		$ReturnString .= "</div>";
+		$ReturnString .= "<div id='ewd-faq-author-email-explanation' class='ewd-faq-review-explanation'>";
+		$ReturnString .= "<p>" . __("This is only used to verify the authenticity of the FAQ. It is not displayed anywhere.", 'ultimate-faqs') . "</p>";
+		$ReturnString .= "</div>";
+		$ReturnString .= "</div>";
+	}
 
 	if ($Submit_Question_Captcha == "Yes") {
 		$Code = rand(1000,9999);

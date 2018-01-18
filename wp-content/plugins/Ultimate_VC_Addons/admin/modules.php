@@ -35,7 +35,7 @@
 		'Ultimate_Modals'               => __( 'Modal Popups', 'ultimate_vc'),
 		'Ultimate_Pricing_Tables'       => __( 'Price Box', 'ultimate_vc'),
 		'Ultimate_Spacer'               => __( 'Spacer / Gap', 'ultimate_vc'),
-		'Ultimate_Stats_Counter'        => __( 'Stats Counter', 'ultimate_vc'),
+		'Ultimate_Stats_Counter'        => __( 'Counter', 'ultimate_vc'),
 		'Ultimate_Swatch_Book'          => __( 'Swatch Book', 'ultimate_vc'),
 		'Ultimate_Icons'                => __( 'Icons', 'ultimate_vc'),
 		'Ultimate_List_Icon'            => __( 'List Icons', 'ultimate_vc'),

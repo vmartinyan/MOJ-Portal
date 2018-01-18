@@ -87,7 +87,7 @@ class LVCA_Pricing_Table {
 
         ?>
 
-        <div class="lvca-pricing-table lvca-container">
+        <div class="lvca-pricing-table lvca-grid-container">
 
             <?php
 

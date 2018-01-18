@@ -18,10 +18,10 @@
     &.lvca-twocol:nth-child(-n + 6) {
       border-top: 1px solid #ddd;
       }
-    &.lvca-onefifthcol:nth-child(5n + 1) {
+    &.lvca-onefifth:nth-child(5n + 1) {
       border-left: 1px solid #ddd;
       }
-    &.lvca-onefifthcol:nth-child(-n + 5) {
+    &.lvca-onefifth:nth-child(-n + 5) {
       border-top: 1px solid #ddd;
       }
     &.lvca-threecol:nth-child(4n + 1) {
@@ -43,16 +43,16 @@
       border-top: 1px solid #ddd;
       }
     @include respond-to-max(800) {
-      &.lvca-twocol:nth-child(n), &.lvca-threecol:nth-child(n), &.lvca-fourcol:nth-child(n), &.lvca-onefifthcol:nth-child(n), &.lvca-sixcol:nth-child(n) {
+      &.lvca-twocol:nth-child(n), &.lvca-threecol:nth-child(n), &.lvca-fourcol:nth-child(n), &.lvca-onefifth:nth-child(n), &.lvca-sixcol:nth-child(n) {
         border-left: none;
         border-top: none;        
         width: 50%;
         float: left;
       }
-      &.lvca-twocol:nth-child(2n + 1), &.lvca-threecol:nth-child(2n + 1), &.lvca-fourcol:nth-child(2n + 1), &.lvca-onefifthcol:nth-child(2n + 1), &.lvca-sixcol:nth-child(2n + 1) {
+      &.lvca-twocol:nth-child(2n + 1), &.lvca-threecol:nth-child(2n + 1), &.lvca-fourcol:nth-child(2n + 1), &.lvca-onefifth:nth-child(2n + 1), &.lvca-sixcol:nth-child(2n + 1) {
         border-left: 1px solid #ddd;
       }
-      &.lvca-twocol:nth-child(-n + 2), &.lvca-threecol:nth-child(-n + 2), &.lvca-fourcol:nth-child(-n + 2), &.lvca-onefifthcol:nth-child(-n + 2), &.lvca-sixcol:nth-child(-n + 2) {
+      &.lvca-twocol:nth-child(-n + 2), &.lvca-threecol:nth-child(-n + 2), &.lvca-fourcol:nth-child(-n + 2), &.lvca-onefifth:nth-child(-n + 2), &.lvca-sixcol:nth-child(-n + 2) {
         border-top: 1px solid #ddd;
       }
     }
@@ -76,7 +76,7 @@
       color: #fff;
       font-size: 18px;
       line-height: 26px;
-      @include lvca-transition(opacity);
+      transition: opacity .4s ease-in-out 0s;
       opacity: 0;
       a {
         color: #fff;
@@ -94,7 +94,7 @@
       filter: alpha(opacity = 0);
       -moz-opacity: 0;
       opacity: 0;
-      @include lvca-transition(opacity);
+      transition: opacity .4s ease-in-out 0s;
       }
       &:hover {
         .lvca-image-overlay {

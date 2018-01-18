@@ -9,14 +9,14 @@
       font-size: 96px;
       line-height: 1;
       margin-bottom: 20px;
-      @include lvca-transition(color);
+      transition: color .4s ease-in-out 0s;
       }
     .lvca-image-wrapper img {
       display: block;
       max-width: 100%;
       text-align: center;
       margin: 0 auto 25px;
-      @include lvca-transition();
+      transition: all .4s ease-in-out 0s;
       }
     .lvca-service-text {
       text-align: center;
@@ -29,7 +29,7 @@
       }
     &:hover {
       .lvca-image-wrapper img {
-        @include vendorize(transform, scale(0.9, 0.9));
+        transform: scale(0.9, 0.9);
         }
       }
     }
@@ -130,7 +130,7 @@
   .lvca-service {
     margin-bottom: 50px;
     .lvca-icon-wrapper span {
-      @include lvca-transition(color);
+      transition: color .4s ease-in-out 0s;
       }
     .lvca-service-text {
       font-size: 15px;

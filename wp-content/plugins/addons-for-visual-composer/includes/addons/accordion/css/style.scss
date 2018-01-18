@@ -15,7 +15,7 @@
 .lvca-accordion.lvca-style1, .lvca-accordion.lvca-style3 {
   .lvca-panel {
     .lvca-panel-title {
-      @include vendorize(transition, all .3s ease-in-out 0s);
+      transition: all .3s ease-in-out 0s;
       &:after {
         @include lvca-icon-font();
         position: absolute;
@@ -26,12 +26,12 @@
         line-height: 1;
         color: #666;
         font-weight: 700;
-        @include vendorize(transition, all .3s ease-in-out 0s);
+        transition: all .3s ease-in-out 0s;
         }
       }
     &.lvca-active {
       .lvca-panel-title:after {
-        @include vendorize(transform, rotate(45deg));
+        transform: rotate(45deg);
         }
       }
     }
@@ -40,7 +40,7 @@
 .lvca-accordion.lvca-style2 {
   .lvca-panel {
     .lvca-panel-title {
-      @include vendorize(transition, all .3s ease-in-out 0s);
+      transition: all .3s ease-in-out 0s;
       &:after {
         @include lvca-icon-font();
         position: absolute;
@@ -58,7 +58,7 @@
       }
     &.lvca-active {
       .lvca-panel-title:after {
-        @include vendorize(transform, rotate(90deg));
+        transform: rotate(90deg);
         }
       }
     }
@@ -124,7 +124,7 @@
       font-weight: bold;
       color: #666;
       margin: 0;
-      @include vendorize(transition, all .3s ease-in-out);
+      transition: all .3s ease-in-out 0s;
       z-index: 1;
       &:before {
         position: absolute;

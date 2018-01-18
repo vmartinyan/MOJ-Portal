@@ -1,3 +1,15 @@
+3.16.21 - 3-January-2018
+- Improvement: Added div, paragraph and span tag options with heading tags for package title and for subheading in Price Box.
+- Fix: Conflict with venus theme function name.
+- Fix: Counter in Module's list have different name on page element list.
+- Fix: Dual button height issue on First loading with Advanced Tab.
+- Fix: Advanced Tabs ID does not work in URL.
+- Fix: HTML validation error in counter element.
+- Fix: RTL issue in effect 18 of ihover element.
+- Fix: Rel Attribute option is not working in advance button.
+- Fix: Space issue in anchor tag attribute.
+- Fix: Change the labels from optimized to combined in script & style tab and separator instead of seperator in heading element.
+
 3.16.20 - 21-November-2017
 - Improvement: Added div, paragraph and span tag options with heading tags for title in Info-banner.
 - Improvement: Update WPML xml file for Compatibility.

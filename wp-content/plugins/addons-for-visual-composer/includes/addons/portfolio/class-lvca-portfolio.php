@@ -133,7 +133,7 @@ class LVCA_Portfolio {
 
             ?>
 
-            <div class="lvca-portfolio-wrap lvca-container">
+            <div class="lvca-portfolio-wrap lvca-gapless-grid">
 
                 <?php $column_style = lvca_get_column_class(intval($settings['per_line'])); ?>
 
@@ -163,7 +163,7 @@ class LVCA_Portfolio {
                 <?php $uniqueid = uniqid(); ?>
 
                 <div id="lvca-portfolio-<?php echo $uniqueid; ?>"
-                     class="lvca-portfolio js-isotope lvca-<?php echo $settings['layout_mode']; ?>"
+                     class="lvca-portfolio js-isotope lvca-<?php echo $settings['layout_mode']; ?> lvca-grid-container"
                      data-gutter="<?php echo $settings['gutter']; ?>"
                      data-tablet_gutter="<?php echo $settings['tablet_gutter']; ?>"
                      data-tablet_width="<?php echo $settings['tablet_width']; ?>"
@@ -189,7 +189,7 @@ class LVCA_Portfolio {
                         ?>
 
                         <div data-id="id-<?php the_ID(); ?>"
-                             class="lvca-portfolio-item <?php echo $style; ?> <?php echo $column_style; ?> lvca-zero-margin">
+                             class="lvca-portfolio-item <?php echo $style; ?> <?php echo $column_style; ?>">
 
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

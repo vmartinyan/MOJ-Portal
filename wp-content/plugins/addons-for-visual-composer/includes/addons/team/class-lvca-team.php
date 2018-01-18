@@ -53,7 +53,15 @@ class LVCA_Team {
 
         ?>
 
-        <div class="lvca-team-members lvca-<?php echo $style; ?> lvca-container">
+        <?php $container_style = 'lvca-container'; ?>
+
+        <?php if ($style == 'style1'): ?>
+
+            <?php $container_style = 'lvca-grid-container'; ?>
+
+        <?php endif; ?>
+
+        <div class="lvca-team-members lvca-<?php echo $style; ?> <?php echo $container_style; ?>">
 
             <?php
 

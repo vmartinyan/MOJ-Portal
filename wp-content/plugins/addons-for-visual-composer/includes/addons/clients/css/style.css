@@ -1,9 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 .lvca-clients {
   overflow: hidden;
   margin: 0 auto; }
@@ -18,9 +12,9 @@ html {
       border-left: 1px solid #ddd; }
     .lvca-clients .lvca-client.lvca-twocol:nth-child(-n + 6) {
       border-top: 1px solid #ddd; }
-    .lvca-clients .lvca-client.lvca-onefifthcol:nth-child(5n + 1) {
+    .lvca-clients .lvca-client.lvca-onefifth:nth-child(5n + 1) {
       border-left: 1px solid #ddd; }
-    .lvca-clients .lvca-client.lvca-onefifthcol:nth-child(-n + 5) {
+    .lvca-clients .lvca-client.lvca-onefifth:nth-child(-n + 5) {
       border-top: 1px solid #ddd; }
     .lvca-clients .lvca-client.lvca-threecol:nth-child(4n + 1) {
       border-left: 1px solid #ddd; }
@@ -35,18 +29,17 @@ html {
     .lvca-clients .lvca-client.lvca-sixcol:nth-child(-n + 2) {
       border-top: 1px solid #ddd; }
     @media only screen and (max-width: 800px) {
-      .lvca-clients .lvca-client.lvca-twocol:nth-child(n), .lvca-clients .lvca-client.lvca-threecol:nth-child(n), .lvca-clients .lvca-client.lvca-fourcol:nth-child(n), .lvca-clients .lvca-client.lvca-onefifthcol:nth-child(n), .lvca-clients .lvca-client.lvca-sixcol:nth-child(n) {
+      .lvca-clients .lvca-client.lvca-twocol:nth-child(n), .lvca-clients .lvca-client.lvca-threecol:nth-child(n), .lvca-clients .lvca-client.lvca-fourcol:nth-child(n), .lvca-clients .lvca-client.lvca-onefifth:nth-child(n), .lvca-clients .lvca-client.lvca-sixcol:nth-child(n) {
         border-left: none;
         border-top: none;
         width: 50%;
         float: left; }
-      .lvca-clients .lvca-client.lvca-twocol:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-threecol:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-fourcol:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-onefifthcol:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-sixcol:nth-child(2n + 1) {
+      .lvca-clients .lvca-client.lvca-twocol:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-threecol:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-fourcol:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-onefifth:nth-child(2n + 1), .lvca-clients .lvca-client.lvca-sixcol:nth-child(2n + 1) {
         border-left: 1px solid #ddd; }
-      .lvca-clients .lvca-client.lvca-twocol:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-threecol:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-fourcol:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-onefifthcol:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-sixcol:nth-child(-n + 2) {
+      .lvca-clients .lvca-client.lvca-twocol:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-threecol:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-fourcol:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-onefifth:nth-child(-n + 2), .lvca-clients .lvca-client.lvca-sixcol:nth-child(-n + 2) {
         border-top: 1px solid #ddd; } }
     .lvca-clients .lvca-client img {
       -webkit-transition: all 0.3s ease-in-out 0s;
-      -moz-transition: all 0.3s ease-in-out 0s;
       transition: all 0.3s ease-in-out 0s;
       width: 100%;
       margin: 0;
@@ -63,10 +56,8 @@ html {
       color: #fff;
       font-size: 18px;
       line-height: 26px;
-      -webkit-transition: opacity 0.4s ease-in-out 0s;
-      -moz-transition: opacity 0.4s ease-in-out 0s;
-      -ms-transition: opacity 0.4s ease-in-out 0s;
-      transition: opacity 0.4s ease-in-out 0s;
+      -webkit-transition: opacity .4s ease-in-out 0s;
+      transition: opacity .4s ease-in-out 0s;
       opacity: 0; }
       .lvca-clients .lvca-client .lvca-client-name a {
         color: #fff;
@@ -82,10 +73,8 @@ html {
       filter: alpha(opacity=0);
       -moz-opacity: 0;
       opacity: 0;
-      -webkit-transition: opacity 0.4s ease-in-out 0s;
-      -moz-transition: opacity 0.4s ease-in-out 0s;
-      -ms-transition: opacity 0.4s ease-in-out 0s;
-      transition: opacity 0.4s ease-in-out 0s; }
+      -webkit-transition: opacity .4s ease-in-out 0s;
+      transition: opacity .4s ease-in-out 0s; }
     .lvca-clients .lvca-client:hover .lvca-image-overlay {
       opacity: 0.7; }
       .lvca-dark-bg .lvca-clients .lvca-client:hover .lvca-image-overlay {

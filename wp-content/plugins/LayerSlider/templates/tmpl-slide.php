@@ -141,15 +141,19 @@
 							<?php lsGetInput($lsDefaults['slides']['deeplink'], null, array('class' => 'slideprop')) ?>
 						</div>
 
+						<?php if( ! LS_Config::get('theme_bundle') || $lsActivated ) : ?>
 						<div class="row-helper ls-global-hover">
 							<div class="ls-premium">
-								<a class="dashicons dashicons-star-filled" target="_blank" href="https://support.kreaturamedia.com/docs/layersliderwp/documentation.html#activation" data-help="<?php _e('Premium feature. Click to learn more.', 'LayerSlider') ?>"></a>
+								<?php if( ! $lsActivated ) : ?>
+								<a class="dashicons dashicons-lock" target="_blank" href="<?php echo admin_url('admin.php?page=layerslider-addons' ) ?>" data-help="<?php _e('This feature requires product activation. Click on the padlock icon to learn more.', 'LayerSlider') ?>"></a>
+								<?php endif ?>
 							</div>
 							<a href="https://layerslider.kreaturamedia.com/sliders/global-hover-example/" target="_blank">
 								<?php echo $lsDefaults['slides']['globalHover']['name'] ?>
 							</a>
 							<?php lsGetCheckbox($lsDefaults['slides']['globalHover'], null, array('class' => 'slideprop')) ?>
 						</div>
+						<?php endif ?>
 					</div>
 				</td>
 				<td class="slide-actions">

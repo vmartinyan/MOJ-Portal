@@ -2,22 +2,23 @@
 
 .lvca-portfolio-wrap {
   clear: both;
+  overflow: hidden;
   .lvca-portfolio-header {
     position: relative;
     max-width: 1140px;
     margin: 0 auto 30px;
     overflow: hidden;
     clear: both;
-    @include flexbox();
-    @include flex-flow(row nowrap);
-    @include justify-content(space-between);
+     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 
     &.lvca-no-heading {
-      @include justify-content(center);
+      justify-content: center;
       }
     @include respond-to-max(800) {
-      @include flex-flow(column wrap);
-      @include justify-content(flex-start);
+      flex-flow: column wrap;
+      justify-content: flex-start;
       }
     }
   .lvca-heading {
@@ -58,7 +59,7 @@
       a {
         font-size: 15px;
         line-height: 24px;
-        @include lvca-transition();
+        transition: all .4s ease-in-out 0s;
         display: block;
         color: #777;
         padding: 0 15px 15px;
@@ -98,13 +99,6 @@
     }
   .lvca-portfolio {
     .lvca-portfolio-item {
-      margin-bottom: 30px;
-      @include respond-to-max(1024) {
-        margin-bottom: 20px;
-        }
-      &.lvca-zero-margin {
-        margin: 0;
-        }
       .hentry {
         margin: 0;
         padding: 0;
@@ -118,11 +112,11 @@
         img {
           display: block;
           width: 100%;
-          @include lvca-transition();
+          transition: all .4s ease-in-out 0s;
           }
         &:hover {
           img {
-            @include vendorize(filter, brightness(50%));
+            filter: brightness(50%);
             }
           }
 
@@ -138,7 +132,7 @@
             right: 0;
             margin: auto;
             max-width: 100%;
-            @include vendorize(transform, translateY(-50%));
+            transform: translateY(-50%);
             }
           .lvca-post-title {
             padding: 10px;
@@ -148,7 +142,7 @@
             font-weight: 400;
             color: #fff;
             opacity: 0;
-            @include lvca-transition(opacity);
+            transition: opacity .4s ease-in-out 0s;
             @include respond-to-max(1024) {
               font-size: 18px;
               line-height: 26px;
@@ -156,7 +150,7 @@
             a {
               display: inline;
               color: #fff;
-              @include lvca-transition(all, 0.3s);
+              transition: all .3s ease-in-out 0s;
               border-bottom: 1px solid transparent;
               &:hover {
                 border-bottom: 1px solid #ccc;
@@ -175,7 +169,7 @@
               line-height: 26px;
               font-style: italic;
               opacity: 0;
-              @include lvca-transition();
+              transition: all .4s ease-in-out 0s;
               &:hover {
                 color: #fff;
                 }
@@ -205,7 +199,7 @@
           display: none;
           }
         a {
-          @include lvca-transition();
+          transition: all .4s ease-in-out 0s;
           color: #333;
           &:hover {
             color: #888;

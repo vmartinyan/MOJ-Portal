@@ -263,14 +263,14 @@ jQuery(document).ready(function(a) {
                             i > 0 && m()
             }), c.find(".ult_tabcontent").find("div.ult_tabitemname:eq(" + j + ")").show(100,function(){
                 jQuery(this).animate({left:"0px"},800)
-              }), k = j,b.preventDefault();
+              }), k = j, b.preventDefault();
 
         }else{
 
             c.find(".ult_tabcontent").find("div.ult_tabitemname:eq(" + j + ")").animate({opacity: 1}, 1, function() {
                                         i > 0 && m()
             }), c.find(".ult_tabcontent").find("div.ult_tabitemname:eq(" + j + ")").animate({opacity: 1}, 1,function(){
-              }), k = j,b.preventDefault();
+              }), k = j, b.preventDefault();
            }
 
           }
@@ -365,6 +365,7 @@ function setmytime( string ,float_val ){
             bgcontain.find(".ult_tabcontent" ).css({'display':'block'});
             bgcontain.find(".ult_tabitemname" ).css({'display':'none'});
             bgcontain.find(".ult_tabitemname:nth-child("+index+")" ).css({'display':'block'});
+            jQuery(document).trigger('ultAdvancedTabClickedDualBtn', bgcontain.find(".ult_tabitemname:nth-child("+index+")" ) );
 
             var off = bgcontain.offset().top;
             var left = bgcontain.offset().left;
@@ -560,9 +561,15 @@ jQuery(document).ready(function(){
 
     //set tab active initially
     jQuery(".ult_tabs").each(function() {
+      var Cur_URL = window.location.href;
+      var URL_ID = Cur_URL.substr(Cur_URL.indexOf("#") + 1);
          //for fullheight
         var indexOf=jQuery(this).data('activeindex');       
         var p = jQuery(this).find("ul.ult_tabmenu li.ult_tab_li:nth-child("+indexOf+")" ).find(".ult_a").attr("id");
+
+        if(URL_ID && Cur_URL.includes("#")) {
+          p = URL_ID;
+        }
         if(typeof p !== "undefined") {
           if(p.length >= 1 && indexOf >= 1){
             setmytime(p ,true);

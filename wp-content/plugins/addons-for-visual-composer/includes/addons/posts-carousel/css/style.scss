@@ -13,11 +13,11 @@
       border: none;
       padding: 0;
       margin: 0;
-      @include vendorize(transition, box-shadow 0.25s ease);
-      @include vendorize(box-shadow, 0 1px 3px rgba(0, 0, 0, 0.1));
+      transition: box-shadow .25s ease 0s;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       &:hover {
-        @include vendorize(box-shadow, 0 1px 3px rgba(0, 0, 0, 0.2));
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
       }
     .lvca-project-image {
@@ -26,12 +26,12 @@
       img {
         width: 100%;
         display: block;
-        @include lvca-transition();
+        transition: all .4s ease-in-out 0s;
         max-width: 100%;
         }
       &:hover {
         img {
-          @include vendorize(filter, brightness(50%));
+          filter: brightness(50%);
           }
         }
       .lvca-image-info {
@@ -46,7 +46,7 @@
           right: 0;
           margin: auto;
           max-width: 100%;
-          @include vendorize(transform, translateY(-50%));
+          transform: translateY(-50%);
           }
         .lvca-post-title {
           padding: 10px;
@@ -56,7 +56,7 @@
           font-weight: 400;
           color: #fff;
           opacity: 0;
-          @include lvca-transition(opacity);
+          transition: opacity .4s ease-in-out 0s;
           @include respond-to-max(1024) {
             font-size: 18px;
             line-height: 26px;
@@ -64,7 +64,7 @@
           a {
             display: inline;
             color: #fff;
-            @include lvca-transition(all, 0.3s);
+            transition: all .3s ease-in-out 0s;
             border-bottom: 1px solid transparent;
             &:hover {
               border-bottom: 2px solid #ccc;
@@ -83,7 +83,7 @@
             line-height: 26px;
             font-style: italic;
             opacity: 0;
-            @include lvca-transition();
+            transition: all .4s ease-in-out 0s;
             &:hover {
               color: #fff;
               }
@@ -113,7 +113,7 @@
           }
         a {
           color: #333333;
-          @include lvca-transition();
+          transition: all .4s ease-in-out 0s;
           &:hover {
             color: #888;
             }
@@ -160,7 +160,7 @@
       .lvca-category-list {
 
         @include bottom-line(35, 1, #aaa);
-        @include lvca-transition();
+        transition: all .4s ease-in-out 0s;
         &:after {
           text-align: center;
           margin: 10px auto 10px;
@@ -168,7 +168,7 @@
         }
       .lvca-category-list a {
         font-style: italic;
-        @include lvca-transition();
+        transition: all .4s ease-in-out 0s;
         }
       }
     .type-post .lvca-entry-text-wrap .entry-summary:before {

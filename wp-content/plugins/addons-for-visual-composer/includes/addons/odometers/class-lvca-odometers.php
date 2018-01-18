@@ -55,7 +55,7 @@ class LVCA_Odometers {
 
         ?>
 
-        <div class="lvca-odometers lvca-container">
+        <div class="lvca-odometers lvca-grid-container">
 
             <?php
 

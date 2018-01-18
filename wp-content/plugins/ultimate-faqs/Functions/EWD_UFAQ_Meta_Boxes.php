@@ -197,7 +197,8 @@ function EWD_UFAQ_Save_Meta_Box_Data($post_id) {
 				$Value = stripslashes_deep(trim(sanitize_text_field($_POST[$FieldName])));
 				$Options = explode(",", $FAQ_Field_Item['FieldValues']);
 				if (sizeOf($Options) > 0 and $Options[0] != "") {
-					array_walk($Options, create_function('&$val', '$val = trim($val);'));
+					$Trimmed_Options = array_map('trim', $Options);
+					$Options = $Trimmed_Options;
 					$InArray = in_array($Value, $Options);
 				}
 			}

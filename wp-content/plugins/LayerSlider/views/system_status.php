@@ -25,7 +25,7 @@ $notifications = array(
 ?><div class="wrap">
 	<h2>
 		<?php _e('System Status', 'LayerSlider') ?>
-		<a href="<?php echo admin_url('?page=layerslider') ?>" class="add-new-h2"><?php _e('Back', 'LayerSlider') ?></a>
+		<a href="<?php echo admin_url('admin.php?page=layerslider-options') ?>" class="add-new-h2"><?php _e('&larr; Options', 'LayerSlider') ?></a>
 	</h2>
 
 	<div class="notice notice-info">
@@ -70,7 +70,7 @@ $notifications = array(
 						<td><?php echo ! empty($authorized) ? __('Activated', 'LayerSlider') : __('Not set', 'LayerSlider') ?></td>
 						<td>
 							<?php if( ! $authorized ) : ?>
-							<span><?php echo sprintf(__('Activate your copy of LayerSlider to receive updates, so you can always use the latest release with all the new features and bug fixes. %sClick here to learn more%s.', 'LayerSlider'), '<a href="https://support.kreaturamedia.com/docs/layersliderwp/documentation.html#updating" target="_blank">', '</a>') ?></span>
+							<span><?php echo sprintf(__('Activate your copy of LayerSlider for auto-updates, or ask new versions from the theme author, so you can always use the latest release with all the new features and bug fixes. %sClick here to learn more%s.', 'LayerSlider'), '<a href="https://support.kreaturamedia.com/docs/layersliderwp/documentation.html#updating" target="_blank">', '</a>') ?></span>
 							<?php endif ?>
 						</td>
 					</tr>
@@ -95,7 +95,7 @@ $notifications = array(
 								<?php if( ! $test ) : ?>
 								<span><?php echo __('Your database needs an update in order for LayerSlider to work properly. Please press the ’Update Database’ button on the right. If this does not help, you need to contact your web server hosting company to fix any issue preventing plugins creating and updating database tables.', 'LayerSlider') ?></span>
 								<?php endif ?>
-								<a href="<?php echo wp_nonce_url('?page=ls-system-status&action=database_update', 'database_update') ?>" class="button button-small"><?php _e('Update Database', 'LayerSlider') ?></a>
+								<a href="<?php echo wp_nonce_url('admin.php?page=layerslider-options&section=system-status&action=database_update', 'database_update') ?>" class="button button-small"><?php _e('Update Database', 'LayerSlider') ?></a>
 							</div>
 						</td>
 					</tr>

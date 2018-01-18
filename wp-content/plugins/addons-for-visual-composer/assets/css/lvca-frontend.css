@@ -1,28 +1,17 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /* --------------- Reset styles --------- */
-.lvca-container ol, .lvca-container ul, .lvca-container ol li, .lvca-container ul li, .lvca-container ol:hover, .lvca-container ul:hover, .lvca-container ul li:hover, .lvca-container ol li:hover, .lvca-container ol li a, .lvca-container ul li a, .lvca-container ol li a:hover, .lvca-container ul li a:hover, .lvca-container img {
+.lvca-container ol, .lvca-container ul, .lvca-container ol > li, .lvca-container ul > li, .lvca-container ol:hover, .lvca-container ul:hover, .lvca-container ul > li:hover, .lvca-container ol > li:hover, .lvca-container ol > li > a, .lvca-container ul > li > a, .lvca-container ol > li > a:hover, .lvca-container ul > li > a:hover, .lvca-container img, .lvca-grid-container ol, .lvca-grid-container ul, .lvca-grid-container ol > li, .lvca-grid-container ul > li, .lvca-grid-container ol:hover, .lvca-grid-container ul:hover, .lvca-grid-container ul > li:hover, .lvca-grid-container ol > li:hover, .lvca-grid-container ol > li > a, .lvca-grid-container ul > li > a, .lvca-grid-container ol > li > a:hover, .lvca-grid-container ul > li > a:hover, .lvca-grid-container img {
   padding: 0;
   margin: 0;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   list-style: none;
   background: none; }
-  .lvca-container ol:before, .lvca-container ol:after, .lvca-container ul:before, .lvca-container ul:after, .lvca-container ol li:before, .lvca-container ol li:after, .lvca-container ul li:before, .lvca-container ul li:after, .lvca-container ol:hover:before, .lvca-container ol:hover:after, .lvca-container ul:hover:before, .lvca-container ul:hover:after, .lvca-container ul li:hover:before, .lvca-container ul li:hover:after, .lvca-container ol li:hover:before, .lvca-container ol li:hover:after, .lvca-container ol li a:before, .lvca-container ol li a:after, .lvca-container ul li a:before, .lvca-container ul li a:after, .lvca-container ol li a:hover:before, .lvca-container ol li a:hover:after, .lvca-container ul li a:hover:before, .lvca-container ul li a:hover:after, .lvca-container img:before, .lvca-container img:after {
+  .lvca-container ol:before, .lvca-container ol:after, .lvca-container ul:before, .lvca-container ul:after, .lvca-container ol > li:before, .lvca-container ol > li:after, .lvca-container ul > li:before, .lvca-container ul > li:after, .lvca-container ol:hover:before, .lvca-container ol:hover:after, .lvca-container ul:hover:before, .lvca-container ul:hover:after, .lvca-container ul > li:hover:before, .lvca-container ul > li:hover:after, .lvca-container ol > li:hover:before, .lvca-container ol > li:hover:after, .lvca-container ol > li > a:before, .lvca-container ol > li > a:after, .lvca-container ul > li > a:before, .lvca-container ul > li > a:after, .lvca-container ol > li > a:hover:before, .lvca-container ol > li > a:hover:after, .lvca-container ul > li > a:hover:before, .lvca-container ul > li > a:hover:after, .lvca-container img:before, .lvca-container img:after, .lvca-grid-container ol:before, .lvca-grid-container ol:after, .lvca-grid-container ul:before, .lvca-grid-container ul:after, .lvca-grid-container ol > li:before, .lvca-grid-container ol > li:after, .lvca-grid-container ul > li:before, .lvca-grid-container ul > li:after, .lvca-grid-container ol:hover:before, .lvca-grid-container ol:hover:after, .lvca-grid-container ul:hover:before, .lvca-grid-container ul:hover:after, .lvca-grid-container ul > li:hover:before, .lvca-grid-container ul > li:hover:after, .lvca-grid-container ol > li:hover:before, .lvca-grid-container ol > li:hover:after, .lvca-grid-container ol > li > a:before, .lvca-grid-container ol > li > a:after, .lvca-grid-container ul > li > a:before, .lvca-grid-container ul > li > a:after, .lvca-grid-container ol > li > a:hover:before, .lvca-grid-container ol > li > a:hover:after, .lvca-grid-container ul > li > a:hover:before, .lvca-grid-container ul > li > a:hover:after, .lvca-grid-container img:before, .lvca-grid-container img:after {
     display: none; }
-.lvca-container a {
+.lvca-container a, .lvca-grid-container a {
   text-decoration: initial; }
-.lvca-container img {
+.lvca-container img, .lvca-grid-container img {
   max-width: 100%;
   width: auto;
   height: auto; }
@@ -31,6 +20,10 @@ html {
 .lvca-container {
   margin-left: auto;
   margin-right: auto; }
+  .lvca-container::after {
+    clear: both;
+    content: "";
+    display: block; }
 
 .panel-grid .widget {
   border: 0; }
@@ -38,188 +31,217 @@ html {
 .lvca-center {
   text-align: center; }
 
-.lvca-lastcol {
-  margin-right: 0; }
-
-.lvca-container .lvca-onecol, .lvca-container .lvca-twocol, .lvca-container .lvca-onefifthcol, .lvca-container .lvca-threecol, .lvca-container .lvca-fourcol, .lvca-container .lvca-fivecol, .lvca-container .lvca-sixcol, .lvca-container .lvca-sevencol, .lvca-container .lvca-eightcol, .lvca-container .lvca-ninecol, .lvca-container .lvca-tencol, .lvca-container .lvca-elevencol {
-  min-height: 1px;
-  /* Prevents columns from collapsing when housing absolute elements or when lazy loading content */ }
-@media only screen and (min-width: 801px) {
-  .lvca-container .lvca-onecol {
+.lvca-grid-container {
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px); }
+  .lvca-grid-container::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .lvca-grid-container .lvca-onecol, .lvca-grid-container .lvca-twocol, .lvca-grid-container .lvca-threecol, .lvca-grid-container .lvca-fourcol, .lvca-grid-container .lvca-fivecol, .lvca-grid-container .lvca-sixcol, .lvca-grid-container .lvca-sevencol, .lvca-grid-container .lvca-eightcol, .lvca-grid-container .lvca-ninecol, .lvca-grid-container .lvca-tencol, .lvca-grid-container .lvca-elevencol, .lvca-grid-container .lvca-twelvecol {
+    min-height: 1px;
+    /* Prevents columns from collapsing when housing absolute elements or when lazy loading content */ }
+  .lvca-grid-container .lvca-onecol, .lvca-grid-container .lvca-twocol {
+    width: calc(50% - 30px);
     float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 5.17241%; }
-    .lvca-container .lvca-onecol:last-child {
-      margin-right: 0; }
-    .lvca-container .lvca-onecol:nth-child(12n) {
-      margin-right: 0; }
-    .lvca-container .lvca-onecol:nth-child(12n+1) {
+    margin-left: 20px; }
+  .lvca-grid-container .lvca-threecol, .lvca-grid-container .lvca-fourcol, .lvca-grid-container .lvca-fivecol, .lvca-grid-container .lvca-sixcol, .lvca-grid-container .lvca-sevencol, .lvca-grid-container .lvca-eightcol, .lvca-grid-container .lvca-ninecol, .lvca-grid-container .lvca-tencol, .lvca-grid-container .lvca-elevencol, .lvca-grid-container .lvca-twelvecol {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }
+  @media (max-width: 479px) {
+    .lvca-grid-container .lvca-onecol:nth-child(2n+1), .lvca-grid-container .lvca-twocol:nth-child(2n+1) {
+      clear: left; } }
+  @media only screen and (min-width: 480px) {
+    .lvca-grid-container .lvca-onecol, .lvca-grid-container .lvca-twocol {
+      width: calc(33.3333333333% - 26.6666666667px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-threecol, .lvca-grid-container .lvca-fourcol, .lvca-grid-container .lvca-fivecol, .lvca-grid-container .lvca-sixcol, .lvca-grid-container .lvca-sevencol, .lvca-grid-container .lvca-eightcol, .lvca-grid-container .lvca-ninecol {
+      width: calc(50% - 30px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-tencol, .lvca-grid-container .lvca-elevencol {
+      width: calc(66.6666666667% - 33.3333333333px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-twelvecol {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+  @media (min-width: 480px) and (max-width: 800px) {
+    .lvca-grid-container .lvca-onecol:nth-child(3n+1), .lvca-grid-container .lvca-twocol:nth-child(3n+1) {
       clear: left; }
-  .lvca-container .lvca-twocol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 13.7931%; }
-    .lvca-container .lvca-twocol:last-child {
-      margin-right: 0; }
-    .lvca-container .lvca-twocol:nth-child(6n) {
-      margin-right: 0; }
-    .lvca-container .lvca-twocol:nth-child(6n+1) {
-      clear: left; }
-  .lvca-container .lvca-threecol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 22.41379%; }
-    .lvca-container .lvca-threecol:last-child {
-      margin-right: 0; }
-    .lvca-container .lvca-threecol:nth-child(4n) {
-      margin-right: 0; }
-    .lvca-container .lvca-threecol:nth-child(4n+1) {
-      clear: left; }
-  .lvca-container .lvca-fourcol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 31.03448%; }
-    .lvca-container .lvca-fourcol:last-child {
-      margin-right: 0; }
-    .lvca-container .lvca-fourcol:nth-child(3n) {
-      margin-right: 0; }
-    .lvca-container .lvca-fourcol:nth-child(3n+1) {
-      clear: left; }
-  .lvca-container .lvca-fivecol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 39.65517%; }
-    .lvca-container .lvca-fivecol:last-child {
-      margin-right: 0; }
-  .lvca-container .lvca-sixcol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 48.27586%; }
-    .lvca-container .lvca-sixcol:last-child {
-      margin-right: 0; }
-    .lvca-container .lvca-sixcol:nth-child(2n) {
-      margin-right: 0; }
-    .lvca-container .lvca-sixcol:nth-child(2n+1) {
-      clear: left; }
-  .lvca-container .lvca-sevencol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 56.89655%; }
-    .lvca-container .lvca-sevencol:last-child {
-      margin-right: 0; }
-  .lvca-container .lvca-eightcol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 65.51724%; }
-    .lvca-container .lvca-eightcol:last-child {
-      margin-right: 0; }
-  .lvca-container .lvca-ninecol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 74.13793%; }
-    .lvca-container .lvca-ninecol:last-child {
-      margin-right: 0; }
-  .lvca-container .lvca-tencol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 82.75862%; }
-    .lvca-container .lvca-tencol:last-child {
-      margin-right: 0; }
-  .lvca-container .lvca-elevencol {
-    float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 91.37931%; }
-    .lvca-container .lvca-elevencol:last-child {
-      margin-right: 0; } }
-.lvca-container .lvca-twelvecol, .lvca-container .lvca-fullwidth {
-  float: left;
-  display: block;
-  width: 100%; }
+    .lvca-grid-container .lvca-threecol:nth-child(2n+1), .lvca-grid-container .lvca-fourcol:nth-child(2n+1), .lvca-grid-container .lvca-fivecol:nth-child(2n+1), .lvca-grid-container .lvca-sixcol:nth-child(2n+1), .lvca-grid-container .lvca-sevencol:nth-child(2n+1), .lvca-grid-container .lvca-eightcol:nth-child(2n+1), .lvca-grid-container .lvca-ninecol:nth-child(2n+1) {
+      clear: left; } }
+  @media only screen and (min-width: 801px) {
+    .lvca-grid-container .lvca-onecol {
+      width: calc(8.3333333333% - 21.6666666667px);
+      float: left;
+      margin-left: 20px; }
+      .lvca-grid-container .lvca-onecol:nth-child(12n+1) {
+        clear: left; }
+    .lvca-grid-container .lvca-twocol {
+      width: calc(16.6666666667% - 23.3333333333px);
+      float: left;
+      margin-left: 20px; }
+      .lvca-grid-container .lvca-twocol:nth-child(6n+1) {
+        clear: left; }
+    .lvca-grid-container .lvca-threecol {
+      width: calc(25% - 25px);
+      float: left;
+      margin-left: 20px; }
+      .lvca-grid-container .lvca-threecol:nth-child(4n+1) {
+        clear: left; }
+    .lvca-grid-container .lvca-fourcol {
+      width: calc(33.3333333333% - 26.6666666667px);
+      float: left;
+      margin-left: 20px; }
+      .lvca-grid-container .lvca-fourcol:nth-child(3n+1) {
+        clear: left; }
+    .lvca-grid-container .lvca-fivecol {
+      width: calc(41.6666666667% - 28.3333333333px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-sixcol {
+      width: calc(50% - 30px);
+      float: left;
+      margin-left: 20px; }
+      .lvca-grid-container .lvca-sixcol:nth-child(2n+1) {
+        clear: left; }
+    .lvca-grid-container .lvca-sevencol {
+      width: calc(58.3333333333% - 31.6666666667px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-eightcol {
+      width: calc(66.6666666667% - 33.3333333333px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-ninecol {
+      width: calc(75% - 35px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-tencol {
+      width: calc(83.3333333333% - 36.6666666667px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-elevencol {
+      width: calc(91.6666666667% - 38.3333333333px);
+      float: left;
+      margin-left: 20px; }
+    .lvca-grid-container .lvca-twelvecol {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
 
 /*--------- Support for 5 column grid ----*/
-@media only screen and (min-width: 801px) {
-  .lvca-container .lvca-onefifthcol {
+.lvca-grid-container .lvca-onefifth {
+  min-height: 1px; }
+.lvca-grid-container .lvca-onefifth {
+  width: calc(100% - 40px);
+  float: left;
+  margin-left: 20px; }
+@media only screen and (min-width: 480px) {
+  .lvca-grid-container .lvca-onefifth {
+    width: calc(50% - 30px);
     float: left;
-    display: block;
-    margin-right: 2.73973%;
-    width: 17.80822%; }
-    .lvca-container .lvca-onefifthcol:last-child {
-      margin-right: 0; }
-    .lvca-container .lvca-onefifthcol:nth-child(5n) {
-      margin-right: 0; }
-    .lvca-container .lvca-onefifthcol:nth-child(5n+1) {
+    margin-left: 20px; } }
+@media (min-width: 480px) and (max-width: 800px) {
+  .lvca-grid-container .lvca-onefifth:nth-child(2n+1) {
+    clear: left; } }
+@media only screen and (min-width: 801px) {
+  .lvca-grid-container .lvca-onefifth {
+    width: calc(20% - 24px);
+    float: left;
+    margin-left: 20px; }
+    .lvca-grid-container .lvca-onefifth:nth-child(5n+1) {
       clear: left; } }
 
-/* Tablet and Mobile responsiveness */
-@media only screen and (min-width: 480px) and (max-width: 800px) {
-  .lvca-container .lvca-onecol, .lvca-container .lvca-twocol, .lvca-container .lvca-onefifthcol, .lvca-container .lvca-threecol, .lvca-container .lvca-fourcol, .lvca-container .lvca-fivecol, .lvca-container .lvca-sixcol, .lvca-container .lvca-sevencol, .lvca-container .lvca-eightcol, .lvca-container .lvca-ninecol, .lvca-container .lvca-tencol, .lvca-container .lvca-elevencol {
+/*--------- Gapless grid columns ----*/
+.lvca-gapless-grid.lvca-grid-container, .lvca-gapless-grid .lvca-grid-container {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: auto; }
+.lvca-gapless-grid .lvca-onecol, .lvca-gapless-grid .lvca-twocol {
+  width: calc(50%);
+  float: left;
+  margin-left: 0px; }
+.lvca-gapless-grid .lvca-threecol, .lvca-gapless-grid .lvca-fourcol, .lvca-gapless-grid .lvca-fivecol, .lvca-gapless-grid .lvca-sixcol, .lvca-gapless-grid .lvca-sevencol, .lvca-gapless-grid .lvca-eightcol, .lvca-gapless-grid .lvca-ninecol, .lvca-gapless-grid .lvca-tencol, .lvca-gapless-grid .lvca-elevencol, .lvca-gapless-grid .lvca-twelvecol, .lvca-gapless-grid .lvca-onefifth {
+  width: calc(100%);
+  float: left;
+  margin-left: 0px; }
+@media only screen and (min-width: 480px) {
+  .lvca-gapless-grid .lvca-onecol, .lvca-gapless-grid .lvca-twocol {
+    width: calc(33.3333333333%);
     float: left;
-    display: block;
-    margin-right: 3.44828%;
-    width: 48.27586%; }
-    .lvca-container .lvca-onecol:last-child, .lvca-container .lvca-twocol:last-child, .lvca-container .lvca-onefifthcol:last-child, .lvca-container .lvca-threecol:last-child, .lvca-container .lvca-fourcol:last-child, .lvca-container .lvca-fivecol:last-child, .lvca-container .lvca-sixcol:last-child, .lvca-container .lvca-sevencol:last-child, .lvca-container .lvca-eightcol:last-child, .lvca-container .lvca-ninecol:last-child, .lvca-container .lvca-tencol:last-child, .lvca-container .lvca-elevencol:last-child {
-      margin-right: 0; }
-    .lvca-container .lvca-onecol:nth-child(2n), .lvca-container .lvca-twocol:nth-child(2n), .lvca-container .lvca-onefifthcol:nth-child(2n), .lvca-container .lvca-threecol:nth-child(2n), .lvca-container .lvca-fourcol:nth-child(2n), .lvca-container .lvca-fivecol:nth-child(2n), .lvca-container .lvca-sixcol:nth-child(2n), .lvca-container .lvca-sevencol:nth-child(2n), .lvca-container .lvca-eightcol:nth-child(2n), .lvca-container .lvca-ninecol:nth-child(2n), .lvca-container .lvca-tencol:nth-child(2n), .lvca-container .lvca-elevencol:nth-child(2n) {
-      margin-right: 0; }
-    .lvca-container .lvca-onecol:nth-child(2n+1), .lvca-container .lvca-twocol:nth-child(2n+1), .lvca-container .lvca-onefifthcol:nth-child(2n+1), .lvca-container .lvca-threecol:nth-child(2n+1), .lvca-container .lvca-fourcol:nth-child(2n+1), .lvca-container .lvca-fivecol:nth-child(2n+1), .lvca-container .lvca-sixcol:nth-child(2n+1), .lvca-container .lvca-sevencol:nth-child(2n+1), .lvca-container .lvca-eightcol:nth-child(2n+1), .lvca-container .lvca-ninecol:nth-child(2n+1), .lvca-container .lvca-tencol:nth-child(2n+1), .lvca-container .lvca-elevencol:nth-child(2n+1) {
-      clear: left; } }
-@media only screen and (max-width: 479px) {
-  .lvca-container .lvca-onecol, .lvca-container .lvca-twocol, .lvca-container .lvca-onefifthcol, .lvca-container .lvca-threecol, .lvca-container .lvca-fourcol, .lvca-container .lvca-fivecol, .lvca-container .lvca-sixcol, .lvca-container .lvca-sevencol, .lvca-container .lvca-eightcol, .lvca-container .lvca-ninecol, .lvca-container .lvca-tencol, .lvca-container .lvca-elevencol {
-    width: 100%;
-    margin-right: 0; } }
-
-/*-------- Remove margins on last column -----*/
-.lvca-container .lvca-lastcol {
-  margin-right: 0; }
-
-/*--------- No margin columns ----*/
-.lvca-container .lvca-zero-margin, #content .lvca-zero-margin {
-  margin-right: 0; }
-
-.lvca-container .lvca-onecol.lvca-zero-margin, .lvca-container .lvca-twocol.lvca-zero-margin, .lvca-container .lvca-onefifthcol.lvca-zero-margin, .lvca-container .lvca-threecol.lvca-zero-margin, .lvca-container .lvca-fourcol.lvca-zero-margin, .lvca-container .lvca-fivecol.lvca-zero-margin, .lvca-container .lvca-sixcol.lvca-zero-margin, .lvca-container .lvca-sevencol.lvca-zero-margin, .lvca-container .lvca-eightcol.lvca-zero-margin, .lvca-container .lvca-ninecol.lvca-zero-margin, .lvca-container .lvca-tencol.lvca-zero-margin, .lvca-container .lvca-elevencol.lvca-zero-margin {
-  margin-right: 0; }
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-threecol, .lvca-gapless-grid .lvca-fourcol, .lvca-gapless-grid .lvca-fivecol, .lvca-gapless-grid .lvca-sixcol, .lvca-gapless-grid .lvca-sevencol, .lvca-gapless-grid .lvca-eightcol, .lvca-gapless-grid .lvca-ninecol, .lvca-gapless-grid .lvca-onefifth {
+    width: calc(50%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-tencol, .lvca-gapless-grid .lvca-elevencol {
+    width: calc(66.6666666667%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-twelvecol {
+    width: calc(100%);
+    float: left;
+    margin-left: 0px; } }
 @media only screen and (min-width: 801px) {
-  .lvca-container .lvca-onecol.lvca-zero-margin {
-    width: 8.33333%; }
-  .lvca-container .lvca-twocol.lvca-zero-margin {
-    width: 16.66667%; }
-  .lvca-container .lvca-onefifthcol.lvca-zero-margin {
-    width: 20%; }
-  .lvca-container .lvca-threecol.lvca-zero-margin {
-    width: 25%; }
-  .lvca-container .lvca-fourcol.lvca-zero-margin {
-    width: 33.33333%; }
-  .lvca-container .lvca-fivecol.lvca-zero-margin {
-    width: 41.66667%; }
-  .lvca-container .lvca-sixcol.lvca-zero-margin {
-    width: 50%; }
-  .lvca-container .lvca-sevencol.lvca-zero-margin {
-    width: 58.33333%; }
-  .lvca-container .lvca-eightcol.lvca-zero-margin {
-    width: 66.66667%; }
-  .lvca-container .lvca-ninecol.lvca-zero-margin {
-    width: 75%; }
-  .lvca-container .lvca-tencol.lvca-zero-margin {
-    width: 83.33333%; }
-  .lvca-container .lvca-elevencol.lvca-zero-margin {
-    width: 91.66667%; } }
-@media only screen and (min-width: 480px) and (max-width: 800px) {
-  .lvca-container .lvca-onecol.lvca-zero-margin, .lvca-container .lvca-twocol.lvca-zero-margin, .lvca-container .lvca-onefifthcol.lvca-zero-margin, .lvca-container .lvca-threecol.lvca-zero-margin, .lvca-container .lvca-fourcol.lvca-zero-margin, .lvca-container .lvca-fivecol.lvca-zero-margin, .lvca-container .lvca-sixcol.lvca-zero-margin, .lvca-container .lvca-sevencol.lvca-zero-margin, .lvca-container .lvca-eightcol.lvca-zero-margin, .lvca-container .lvca-ninecol.lvca-zero-margin, .lvca-container .lvca-tencol.lvca-zero-margin, .lvca-container .lvca-elevencol.lvca-zero-margin {
-    width: 50%; } }
-@media only screen and (max-width: 479px) {
-  .lvca-container .lvca-onecol.lvca-zero-margin, .lvca-container .lvca-twocol.lvca-zero-margin, .lvca-container .lvca-onefifthcol.lvca-zero-margin, .lvca-container .lvca-threecol.lvca-zero-margin, .lvca-container .lvca-fourcol.lvca-zero-margin, .lvca-container .lvca-fivecol.lvca-zero-margin, .lvca-container .lvca-sixcol.lvca-zero-margin, .lvca-container .lvca-sevencol.lvca-zero-margin, .lvca-container .lvca-eightcol.lvca-zero-margin, .lvca-container .lvca-ninecol.lvca-zero-margin, .lvca-container .lvca-tencol.lvca-zero-margin, .lvca-container .lvca-elevencol.lvca-zero-margin {
-    width: 100%; } }
+  .lvca-gapless-grid .lvca-onecol {
+    width: calc(8.3333333333%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-twocol {
+    width: calc(16.6666666667%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-threecol {
+    width: calc(25%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-fourcol {
+    width: calc(33.3333333333%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-fivecol {
+    width: calc(41.6666666667%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-sixcol {
+    width: calc(50%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-sevencol {
+    width: calc(58.3333333333%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-eightcol {
+    width: calc(66.6666666667%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-ninecol {
+    width: calc(75%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-tencol {
+    width: calc(83.3333333333%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-elevencol {
+    width: calc(91.6666666667%);
+    float: left;
+    margin-left: 0px; }
+  .lvca-gapless-grid .lvca-twelvecol {
+    width: calc(100%);
+    float: left;
+    margin-left: 0px; } }
+@media only screen and (min-width: 801px) {
+  .lvca-gapless-grid .lvca-onefifth {
+    width: calc(20%);
+    float: left;
+    margin-left: 0px; } }
 
 /* --------------- Flexslider Styles -------------- */
 .lvca-container .lvca-flex-direction-nav {
@@ -253,8 +275,6 @@ html {
   text-align: center;
   color: #aaa;
   -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -ms-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   outline: none; }
   .lvca-container .lvca-flex-direction-nav a:before, .lvca-container .lvca-flex-direction-nav a:hover:before, .lvca-container .lvca-flex-direction-nav a:hover:before, .lvca-container .lvca-flex-direction-nav a:hover:hover:before {
@@ -292,17 +312,17 @@ html {
     margin: 0 8px 0 0;
     padding: 0;
     border: none;
-    box-shadow: none; }
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .lvca-container .lvca-flex-control-nav li a, .lvca-container .lvca-flex-control-nav li a:hover {
     background: #aaa;
     border: 1px solid #aaa;
     border-radius: 50%;
     width: 12px;
     height: 12px;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     -webkit-transition: all 0.2s ease-in 0s;
-    -moz-transition: all 0.2s ease-in 0s;
-    -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
     display: inline-block;
     vertical-align: middle;
@@ -349,11 +369,10 @@ html {
   text-align: center;
   color: #aaa !important;
   -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -ms-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   overflow: hidden;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: none; }
   .lvca-container button.slick-prev:before, .lvca-container button.slick-next:before {
     margin: 2px;
@@ -380,6 +399,7 @@ html {
 .lvca-container ul.slick-dots {
   width: 100%;
   position: absolute;
+  bottom: -30px;
   text-align: center;
   padding: 0 !important;
   margin: 0 !important; }
@@ -395,10 +415,9 @@ html {
     border-radius: 50%;
     width: 12px;
     height: 12px;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     -webkit-transition: background 0.3s ease-in-out 0s;
-    -moz-transition: background 0.3s ease-in-out 0s;
-    -ms-transition: background 0.3s ease-in-out 0s;
     transition: background 0.3s ease-in-out 0s;
     font-size: 0;
     outline: none; }

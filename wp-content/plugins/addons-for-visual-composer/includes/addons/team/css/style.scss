@@ -44,7 +44,7 @@
         max-width: 100%;
         margin: 0 auto 30px;
         border-radius: 50%;
-        @include vendorize(transition, all 0.3s ease-in-out 0s);
+        transition: all .3s ease-in-out 0s;
         }
       .lvca-social-list {
         position: absolute;
@@ -60,7 +60,7 @@
           font-size: 26px;
           color: #fff;
           opacity: 0;
-          @include vendorize(transition, all 0.3s ease-in-out 0s);
+          transition: all .3s ease-in-out 0s;
           &:hover {
             color: #ccc;
             }
@@ -77,9 +77,9 @@
     &:hover {
       .lvca-image-wrapper {
         img {
-          @include vendorize(filter, brightness(50%));
+          filter: brightness(50%);
           @include respond-to-max(767) {
-            @include vendorize(filter, brightness(80%));
+            filter: brightness(80%);
             }
           }
         .lvca-social-list i {
@@ -120,7 +120,7 @@
       img {
         max-width: 320px;
         border-radius: 50%;
-        @include vendorize(transition, all 0.3s ease-in-out 0s);
+        transition: all .3s ease-in-out 0s;
         }
       }
     .lvca-team-member-text {
@@ -141,7 +141,7 @@
       }
     &:hover {
       .lvca-image-wrapper img {
-        @include vendorize(filter, brightness(80%));
+        filter: brightness(80%);
         }
       }
     }

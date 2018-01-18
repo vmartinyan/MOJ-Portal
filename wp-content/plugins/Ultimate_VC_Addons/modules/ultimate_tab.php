@@ -1311,7 +1311,7 @@ vc_map( array(
 			"edit_field_class" => " vc_col-sm-12 vc_column wpb_el_type_textfield vc_shortcode-param",
 			'heading' => __( 'Tab ID', 'ultimate_vc' ),
 			'param_name' => "tab_id",
-			"description" => __('Enter Tab ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', "ultimate_vc"),
+			"description" => __('Enter Tab ID (Note: make sure it is unique, no space and valid according to <a href="%s" target="_blank">w3c specification</a>).', "ultimate_vc"),
 		),
 
 

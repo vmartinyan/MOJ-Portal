@@ -230,8 +230,9 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 
 				// Get layer type
 				$layer['props']['media'] = !empty($layer['props']['media']) ? $layer['props']['media'] : '';
-				if(!empty($layer['props']['media'])) {
-					switch($layer['props']['media']) {
+
+				if( ! empty( $layer['props']['media'] ) ) {
+					switch( $layer['props']['media'] ) {
 						case 'img':
 							$layer['props']['type'] = 'img';
 							break;
@@ -250,6 +251,12 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 							$layer['props']['type'] = 'div';
 							break;
 					}
+				}
+
+				// v6.6.7: Ensure default value for the 'type' key if it's
+				// somehow missing.
+				if( empty( $layer['props']['type'] ) ) {
+					$layer['props']['type'] = 'div';
 				}
 
 				// Post layer

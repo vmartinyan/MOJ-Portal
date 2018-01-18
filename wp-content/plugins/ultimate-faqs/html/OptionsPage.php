@@ -25,9 +25,11 @@
 	$Reveal_Effect = get_option("EWD_UFAQ_Reveal_Effect");
 	$Pretty_Permalinks = get_option("EWD_UFAQ_Pretty_Permalinks");
     $Allow_Proposed_Answer = get_option("EWD_UFAQ_Allow_Proposed_Answer");
+    $Submit_Custom_Fields = get_option("EWD_UFAQ_Submit_Custom_Fields");
     $Submit_Question_Captcha = get_option("EWD_UFAQ_Submit_Question_Captcha");
     $Admin_Question_Notification = get_option("EWD_UFAQ_Admin_Question_Notification");
     $Admin_Notification_Email = get_option("EWD_UFAQ_Admin_Notification_Email");
+	$Submit_FAQ_Email = get_option("EWD_UFAQ_Submit_FAQ_Email");
 	$FAQ_Auto_Complete_Titles = get_option("EWD_UFAQ_Auto_Complete_Titles");
 	$Slug_Base = get_option("EWD_UFAQ_Slug_Base");
 	$Socialmedia_String = get_option("EWD_UFAQ_Social_Media");
@@ -107,7 +109,8 @@
 	$UFAQ_Styling_FAQ_Heading_Type = get_option("EWD_UFAQ_Styling_FAQ_Heading_Type");
 	$Toggle_Symbol = get_option("EWD_UFAQ_Toggle_Symbol");
 
-	if (!isset($Display_Tab)) {$Display_Tab = "";}
+	if (isset($_POST['Display_Tab'])) {$Display_Tab = $_POST['Display_Tab'];}
+	else {$Display_Tab = "";}
 ?>
 <div class="wrap ufaq-options-page-tabbed">
 	<div class="ufaq-options-submenu-div">
@@ -126,7 +129,10 @@
 
 <form method="post" action="admin.php?page=EWD-UFAQ-Options&DisplayPage=Options&Action=EWD_UFAQ_UpdateOptions">
 <?php wp_nonce_field( 'EWD_UFAQ_Save_Options', 'EWD_UFAQ_Save_Options_Nonce' );  ?>
-<div id='Basic' class='ufaq-option-set'>
+
+<input type='hidden' name='Display_Tab' value='<?php echo $Display_Tab; ?>' />
+
+<div id='Basic' class='ufaq-option-set<?php echo ( ($Display_Tab == '' or $Display_Tab == 'Basic') ? '' : ' ufaq-hidden' ); ?>'>
 <h2 id='label-basic-options' class='ufaq-options-page-tab-title'>Basic Options</h2>
 <br />
 
@@ -313,7 +319,7 @@
 </table>
 </div>
 
-<div id='Premium' class='ufaq-option-set ufaq-hidden'>
+<div id='Premium' class='ufaq-option-set<?php echo ( $Display_Tab == 'Premium' ? '' : ' ufaq-hidden' ); ?>'>
 <h2 id='label-premium-options' class='ufaq-options-page-tab-title'>Premium Options</h2>
 <br />
 <h3 id="premium-display-options" class="ufaq-options-page-tab-title"><?php _e('Display', 'ultimate-faqs'); ?></h3>
@@ -481,6 +487,16 @@
 </td>
 </tr>
 <tr>
+<th scope="row">Submit Custom Fields</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>Submit Custom Fields</span></legend>
+	<label title='Yes'><input type='radio' name='submit_custom_fields' value='Yes' <?php if($Submit_Custom_Fields == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='submit_custom_fields' value='No' <?php if($Submit_Custom_Fields == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
+	<p>When using the user-submitted question shortcode, should users be able to fill in custom fields for the question they're submitting? File type custom fields cannot be submitted.</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
 <th scope="row">Submit Question Captcha</th>
 <td>
 	<fieldset><legend class="screen-reader-text"><span>Submit Question Captcha</span></legend>
@@ -509,6 +525,30 @@
 	</fieldset>
 </td>
 </tr>
+<tr>
+	<th scope="row">FAQ Submitted Thank You E-mail</th>
+	<td>
+		<fieldset><legend class="screen-reader-text"><span>FAQ Submitted Thank You E-mail</span></legend>
+			<?php 
+				$plugin = "ultimate-wp-mail/Main.php";
+				$UWPM_Installed = is_plugin_active($plugin);
+				if ($UWPM_Installed) {
+					$UWPM_Emails = get_posts(array('post_type' => 'uwpm_mail_template', 'posts_per_page' => -1));
+					echo "<select name='submit_faq_email'>";
+					echo "<option value='0'>" . __("None", 'ultimate-faqs') . "</option>";
+					foreach ($UWPM_Emails as $Email) {
+						echo "<option value='" . $Email->ID . "' " . ($Submit_FAQ_Email == $Email->ID ? 'selected' : '') . ">" . $Email->post_title . "</option>";
+					}
+					echo "</select>";
+					echo "<p>What email should be sent out when an FAQ is submitted?</p>";
+				}
+				else {
+					echo "<p>You can use the <a href='https://wordpress.org/plugins/ultimate-wp-mail/' target='_blank'>Ultimate WP Mail plugin</a> to create a custom email that is sent whenever an FAQ is submitted.</p>";
+				}
+			?>
+		</fieldset>
+	</td>
+</tr>
 </table>
 
 <h3 id="premium-faq-element-ordering-options" class="ufaq-options-page-tab-title"><?php _e('FAQ Elements Order', 'ultimate-faqs'); ?></h3>
@@ -529,7 +569,7 @@
 </table>
 </div>
 
-<div id='Order' class='ufaq-option-set ufaq-hidden'>
+<div id='Order' class='ufaq-option-set<?php echo ( $Display_Tab == 'Order' ? '' : ' ufaq-hidden' ); ?>'>
 <h2 id='label-order-options' class='ufaq-options-page-tab-title'>Ordering Options</h2>
 <table class="form-table">
 <tr>
@@ -670,7 +710,7 @@
 </div>
 </div>
 
-<div id='Fields' class='ufaq-option-set ufaq-hidden'>
+<div id='Fields' class='ufaq-option-set<?php echo ( $Display_Tab == 'Fields' ? '' : ' ufaq-hidden' ); ?>'>
 <h2 id='label-order-options' class='ufaq-options-page-tab-title'>Fields Options (Premium)</h2>
 <table class="form-table">
 	<tr>
@@ -731,7 +771,7 @@
 </div>
 
 
-<div id='Labelling' class='ufaq-option-set ufaq-hidden'>
+<div id='Labelling' class='ufaq-option-set<?php echo ( $Display_Tab == 'Labelling' ? '' : ' ufaq-hidden' ); ?>'>
 	<h2 id='label-order-options' class='ufaq-options-page-tab-title'>Labelling Options</h2>
 	<div class="ufaq-label-description"> Replace the default text on the FAQ page </div>
 
@@ -872,7 +912,7 @@
 		</div>
 	</div>
 </div>
-<div id='Styling' class='ufaq-option-set ufaq-hidden'>
+<div id='Styling' class='ufaq-option-set<?php echo ( $Display_Tab == 'Styling' ? '' : ' ufaq-hidden' ); ?>'>
 <h2 id='label-order-options' class='ufaq-options-page-tab-title'>Styling Options (Premium)</h2>
 
 <div id='ufaq-styling-options' class="ufaq-options-div ufaq-options-flex">

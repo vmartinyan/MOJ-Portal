@@ -32,7 +32,7 @@ if(!class_exists("Ultimate_Buttons")){
 			$btn_shadow_color = $btn_bg_color_hover = $btn_border_style = $btn_color_border = $btn_border_size = $btn_shadow_size = $el_class = '';
 			$btn_font_family = $btn_font_style = $btn_title_color = $btn_font_size = $icon = $icon_size = $icon_color = $btn_icon_pos = $btn_anim_effect = '';
 			$btn_padding_left = $btn_padding_top = $button_bg_img = $btn_title_color_hover = $btn_align = $btn_color_border_hover = $btn_shadow_color_hover = '';
-			$btn_shadow_click = $enable_tooltip = $tooltip_text = $tooltip_pos = $rel = $btn_line_height = $target = $link_title = '';
+			$btn_shadow_click = $enable_tooltip = $tooltip_text = $tooltip_pos = $rel_attr = $btn_line_height = $target = $link_title = '';
 			extract(shortcode_atts(array(
 				'btn_title' => '',
 				'btn_link' => '',
@@ -70,7 +70,7 @@ if(!class_exists("Ultimate_Buttons")){
 				'enable_tooltip' => '',
 				'tooltip_text' => '',
 				'tooltip_pos' => 'left',
-				'rel' => '',
+				'rel_attr' => '',
 				'el_class' => '',
 				'css_adv_btn' => '',
 			),$atts));
@@ -114,6 +114,7 @@ if(!class_exists("Ultimate_Buttons")){
 					$target 		= ( isset( $href['target'] ) && $href['target'] !== '' ) ? esc_attr( trim( $href['target'] ) ) : '';
 					$link_title 	= ( isset( $href['title'] ) && $href['title'] !== '' ) ? esc_attr($href['title']) : '';
 					$rel 			= ( isset( $href['rel'] ) && $href['rel'] !== '' ) ? esc_attr($href['rel']) : '';
+					$rel 			.= ' ' . esc_attr($rel_attr);
 
 					if($btn_size == "ubtn-block"){
 						$tooltip_class .= ' ubtn-block';
@@ -435,7 +436,7 @@ if(!class_exists("Ultimate_Buttons")){
 							array(
 								"type" => "textfield",
 								"heading" => __("Rel Attribute", "ultimate_vc"),
-								"param_name" => "rel",
+								"param_name" => "rel_attr",
 								"description" => __("This is useful when you want to trigger third party features. Example- prettyPhoto, thickbox etc", "ultimate_vc"),
 								"group" => "General",
 							),

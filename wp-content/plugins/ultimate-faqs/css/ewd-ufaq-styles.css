@@ -480,6 +480,9 @@ PChanges
 font-size: 1.2em;
 margin-bottom: 20px;
 }
+.ewd-ufaq-question-form .form-field {
+  margin-bottom: 20px;
+}
 
 .rrssb-buttons li a .rrssb-text {
 color: #fff;

@@ -50,7 +50,7 @@ class LVCA_Services {
 
         ?>
 
-        <div class="lvca-services lvca-<?php echo $style; ?> lvca-container">
+        <div class="lvca-services lvca-<?php echo $style; ?> lvca-grid-container">
 
             <?php
 

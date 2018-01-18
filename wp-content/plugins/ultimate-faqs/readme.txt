@@ -10,7 +10,7 @@ FAQ plugin that lets you easily create, order and publicize FAQs using shortcode
 
 == Description ==
 
-FAQ plugin that lets you create FAQs (frequently asked questions), organize FAQs and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ styles and FAQ layouts. 
+FAQ plugin that lets you create FAQs (frequently asked questions), organize FAQs and publicize your FAQ in no time through your Wordpress admin panel. Select from multiple FAQ layouts and FAQ styles. 
 
 [FAQ Demo](https://www.etoilewebdesign.com/ultimate-faq-demo/)
 
@@ -30,7 +30,7 @@ FAQ plugin that lets you create FAQs (frequently asked questions), organize FAQs
 [ultimate-faqs]
 `
 
-Simply insert the shortcode above into any page to display your FAQs.
+Simply insert the above shortcode into any page to display your FAQs.
 
 You can use either the toggle FAQ and/or accordion responsive FAQ style, to display one expanded FAQ answer on click, or choose to display all FAQs on page load, with the optional responsive list FAQ style that offers a more traditional FAQ layout.
 
@@ -266,6 +266,15 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.6.15 =
+- Added in a option to let users submit custom fields along with their questions when using the submit question shortcode
+
+= 1.6.14 =
+- Fixed a deprecated function issue for PHP 7.2 users
+
+= 1.6.13 =
+- Added in Ultimate WP Mail integration for the submit shortcode
+
 = 1.6.12 =
 - Minor styling updates
 

@@ -2,19 +2,19 @@
 /*
 Plugin Name: Ultimate FAQ
 Plugin URI: http://www.EtoileWebDesign.com/wordpress-plugins/
-Description: A plugin that lets you create FAQs (frequently asked questions), organize them, publicize them, etc.
+Description: FAQ plugin that lets you easily create, order and publicize FAQs using shortcodes, with many unique styles, WooCommerce FAQs and AJAX FAQ search
 Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.6.12
+Version: 1.6.15
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.6.11';
+$EWD_UFAQ_Version = '1.6.14';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -194,8 +194,10 @@ function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Reveal_Effect") == "") {update_option("EWD_UFAQ_Reveal_Effect", "none");}
 	if (get_option("EWD_UFAQ_Pretty_Permalinks") == "") {update_option("EWD_UFAQ_Pretty_Permalinks", "No");}
 	if (get_option("EWD_UFAQ_Allow_Proposed_Answer") == "") {update_option("EWD_UFAQ_Allow_Proposed_Answer", "No");}
+	if (get_option("EWD_UFAQ_Submit_Custom_Fields") == "") {update_option("EWD_UFAQ_Submit_Custom_Fields", "No");}
 	if (get_option("EWD_UFAQ_Submit_Question_Captcha") == "") {update_option("EWD_UFAQ_Submit_Question_Captcha", "No");}
 	if (get_option("EWD_UFAQ_Admin_Question_Notification") == "") {update_option("EWD_UFAQ_Admin_Question_Notification", "No");}
+	if (get_option("EWD_UFAQ_Submit_FAQ_Email") == "") {update_option("EWD_UFAQ_Submit_FAQ_Email", 0);}
 	if (get_option("EWD_UFAQ_Auto_Complete_Titles") == "") {update_option("EWD_UFAQ_Auto_Complete_Titles", "Yes");}
 	if (get_option("EWD_UFAQ_Slug_Base") == "") {update_option("EWD_UFAQ_Slug_Base", "ufaqs");}
 
@@ -348,5 +350,7 @@ if ($EWD_UFAQ_Version != get_option('EWD_UFAQ_Version')) {
 	Set_EWD_UFAQ_Options();
 	EWD_UFAQ_Version_Update();
 }
+
+
 
 ?>

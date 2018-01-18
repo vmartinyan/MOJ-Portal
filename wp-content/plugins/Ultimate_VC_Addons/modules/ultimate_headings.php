@@ -246,10 +246,10 @@ if(!class_exists("Ultimate_Headings")){
 							array(
 								"type" => "dropdown",
 								"class" => "",
-								"heading" => __("Seperator", "ultimate_vc"),
+								"heading" => __("Separator", "ultimate_vc"),
 								"param_name" => "spacer",
 								"value" => array(
-									__("No Seperator","ultimate_vc")	=>	"no_spacer",
+									__("No Separator","ultimate_vc")	=>	"no_spacer",
 									__("Line","ultimate_vc")			=>	"line_only",
 									__("Icon","ultimate_vc")			=>	"icon_only",
 									__("Image","ultimate_vc") 			=> "image_only",
@@ -260,14 +260,14 @@ if(!class_exists("Ultimate_Headings")){
 							array(
 								"type" => "dropdown",
 								"class" => "",
-								"heading" => __("Seperator Position", "ultimate_vc"),
+								"heading" => __("Separator Position", "ultimate_vc"),
 								"param_name" => "spacer_position",
 								"value" => array(
 									__("Top","ultimate_vc")		=>	"top",
 									__("Between Heading & Sub-Heading","ultimate_vc")	=>	"middle",
 									__("Bottom","ultimate_vc")	=>	"bottom"
 								),
-								//"description" => __("Alignment of seperator", "smile"),
+								//"description" => __("Alignment of separator", "smile"),
 								"dependency" => Array("element" => "spacer", "value" => array("line_with_icon","line_only","icon_only","image_only")),
 							),
 							array(
@@ -486,7 +486,7 @@ if(!class_exists("Ultimate_Headings")){
 							),
 							array(
 								"type" => "ultimate_margins",
-								"heading" => "Seperator Margins",
+								"heading" => "Separator Margins",
 								"param_name" => "spacer_margin",
 								"positions" => array(
 									__("Top","ultimate_vc") => "top",

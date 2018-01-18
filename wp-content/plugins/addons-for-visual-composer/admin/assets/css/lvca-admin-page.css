@@ -1,15 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /* ================= Wrapper DIVs ============================== */
 .wrap > *,
 #wpbody-content > * {
@@ -42,7 +30,8 @@ html {
   margin: 18px 1px 1px 1px;
   min-height: 80px;
   line-height: 80px;
-  box-sizing: content-box; }
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
 
 #lvca-banner {
   position: absolute;
@@ -55,7 +44,8 @@ html {
   min-height: 80px;
   line-height: 80px;
   white-space: nowrap;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
 
 #lvca-banner h2 {
   min-height: 80px;
@@ -105,9 +95,6 @@ html {
   opacity: 0.9;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-out !important;
-  -moz-transition: all 0.3s ease-out !important;
-  -ms-transition: all 0.3s ease-out !important;
-  -o-transition: all 0.3s ease-out !important;
   transition: all 0.3s ease-out !important; }
 
 #lvca-banner-wrap .lvca-button {
@@ -142,7 +129,6 @@ html {
 
 .lvca-button:hover .dashicons {
   -webkit-animation: toTopFromBottom 0.3s forwards;
-  -moz-animation: toTopFromBottom 0.3s forwards;
   animation: toTopFromBottom 0.3s forwards; }
 
 @-webkit-keyframes toTopFromBottom {
@@ -153,20 +139,14 @@ html {
     -webkit-transform: translate3d(0, 100%, 0); }
   51% {
     opacity: 1; } }
-@-moz-keyframes toTopFromBottom {
-  49% {
-    -moz-transform: translate3d(0, -100%, 0); }
-  50% {
-    opacity: 0;
-    -moz-transform: translate3d(0, 100%, 0); }
-  51% {
-    opacity: 1; } }
 @keyframes toTopFromBottom {
   49% {
-    transform: translate3d(0, -100%, 0); }
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
   50% {
     opacity: 0;
-    transform: translate3d(0, 100%, 0); }
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
   51% {
     opacity: 1; } }
 /* ============== INFO BOX ============================= */
@@ -180,9 +160,6 @@ html {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
 #lvca-infobox.lvca-infobox-loading {
@@ -208,9 +185,6 @@ html {
   line-height: 0;
   text-align: center;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .lvca-infobox-msg {
@@ -225,27 +199,16 @@ html {
   font-weight: 400;
   color: #ffffff;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
   -webkit-transform: translateY(-60px);
-  -moz-transform: translateY(-60px);
-  -ms-transform: translateY(-60px);
-  -o-transform: translateY(-60px);
   transform: translateY(-60px);
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
 .lvca-infobox-loading .lvca-infobox-msg {
   -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   transform: translateY(0); }
 
 .lvca-infobox-msg strong {
@@ -303,17 +266,6 @@ html {
   width: 22px;
   top: -3px;
   left: -1px; }
-
-@-ms-keyframes spin {
-  from {
-    -ms-transform: rotate(0deg); }
-  to {
-    -ms-transform: rotate(360deg); } }
-@-moz-keyframes spin {
-  from {
-    -moz-transform: rotate(0deg); }
-  to {
-    -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg); }
@@ -321,9 +273,11 @@ html {
     -webkit-transform: rotate(360deg); } }
 @keyframes spin {
   from {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 /* ===================== BOX WRAPPER ====================== */
 .settings-options .lvca-inner {
   margin: 1px 0 0 0; }
@@ -391,7 +345,8 @@ html {
   position: relative;
   display: inline-block;
   top: 5px;
-  box-sizing: content-box; }
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
 
 .lvca-settings .lvca-type-checkbox .lvca-number-label {
   top: 5px; }

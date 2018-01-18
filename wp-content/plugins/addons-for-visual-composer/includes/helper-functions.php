@@ -194,18 +194,16 @@ if (!function_exists('lvca_get_taxonomy_terms_filter')) {
 
 if (!function_exists('lvca_get_column_class')) {
 
-    function lvca_get_column_class($column_size = 3, $no_margin = false) {
+    function lvca_get_column_class($column_size = 3) {
 
         $style_class = 'lvca-threecol';
-
-        $no_margin = lvca_to_boolean($no_margin); // make sure it is not string
 
         $column_styles = array(
             1 => 'lvca-twelvecol',
             2 => 'lvca-sixcol',
             3 => 'lvca-fourcol',
             4 => 'lvca-threecol',
-            5 => 'lvca-onefifthcol',
+            5 => 'lvca-onefifth',
             6 => 'lvca-twocol',
             12 => 'lvca-onecol'
         );
@@ -213,8 +211,6 @@ if (!function_exists('lvca_get_column_class')) {
         if (array_key_exists($column_size, $column_styles) && !empty($column_styles[$column_size])) {
             $style_class = $column_styles[$column_size];
         }
-
-        $style_class = $no_margin ? ($style_class . ' lvca-zero-margin') : $style_class;
 
         return $style_class;
     }

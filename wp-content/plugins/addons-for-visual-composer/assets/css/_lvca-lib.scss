@@ -1,37 +1,53 @@
 @import "bourbon";
 @import "neat";
-@import "flexbox";
+@import "grid-settings";
+
+/// Function reference - http://sass-lang.com/documentation/Sass/Script/Functions.html#nth-instance_method
+
+@mixin omega($query) {
+
+  @if length($query) == 1 {
+
+    @include nth-child($query);
+
+    } @else if length($query) == 2 {
+
+    @include nth-child(nth($query, 1));
+
+    } @else {
+
+    @include -neat-warn("Too many arguments passed to the omega() mixin.");
+
+    }
+
+  }
+
+@mixin nth-child($query) {
+
+  @if type-of($query) == number and unit($query) == "n" {
+    &:nth-child(#{$query}+1) {
+      clear: left;
+      }
+    }
+
+  }
+
+@mixin lvca-container() {
+
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+    }
+  }
 
 // Custom Mixins for LiveMesh framework - utilizes other libs like Bourbon
 $tablet_size: 767;
 $mobile_size: 479;
 
-@mixin border-radius($radius) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
-  }
-
-@mixin background-clip($padding-box) {
-  -moz-background-clip: $padding-box;
-  -webkit-background-clip: $padding-box;
-  border-background-clip: $padding-box;
-  }
 @mixin center {
   margin: 0 auto;
   text-align: center;
-  }
-
-@mixin background-opacity($color, $opacity: 0.3) {
-  background: $color; /* The Fallback */
-  background: rgba($color, $opacity);
-  }
-
-@mixin vendorize($property, $value) {
-  -webkit-#{$property}: $value;
-  -moz-#{$property}: $value;
-  -ms-#{$property}: $value;
-  #{$property}: $value;
   }
 
 @mixin clear() {
@@ -97,11 +113,6 @@ $mobile_size: 479;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  }
-
-@mixin lvca-transition($property: all, $time: 0.4s) {
-  @include vendorize(transition, $property $time ease-in-out 0s);
-
   }
 
 @mixin lvca-heading-style() {

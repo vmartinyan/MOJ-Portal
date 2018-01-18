@@ -910,8 +910,15 @@ var LayerSlider = {
 
 
 	selectSettingsTab: function(li) {
-		var index = jQuery(li).index();
-		jQuery(li).addClass('active').siblings().removeClass('active');
+
+		var $li 	= jQuery( li ),
+			index 	= $li.index();
+
+		if( $li.hasClass('locked') ) {
+			return false;
+		}
+
+		$li.addClass('active').siblings().removeClass('active');
 		jQuery('div.ls-settings-contents > table > tbody.active').removeClass('active');
 		jQuery('div.ls-settings-contents > table > tbody').eq(index).addClass('active');
 
@@ -2059,7 +2066,7 @@ var LayerSlider = {
 		var $select = jQuery(select);
 
 			// Remove previously added options
-			$select.children(':gt(1)').remove();
+			$select.children('[value="forever"]').nextAll().remove();
 
 			// Gather slide data
 			var sliderData 	= window.lsSliderData,
@@ -4346,7 +4353,7 @@ var LayerSlider = {
 
 			// Stop LayerSlider and empty the preview contents
 			var layersliders = jQuery('#ls-layers .ls-real-time-preview');
-			layersliders.find('.ls-container').off().layerSlider( 'destroy', true );
+			layersliders.find('.ls-container').layerSlider( 'destroy', true );
 			layersliders.hide();
 
 			// Rewrote the Preview button text
@@ -7088,6 +7095,10 @@ var initSliderBuilder = function() {
 		var $this 	= jQuery(this),
 			type 	= $this.data('type');
 
+		if( $this.hasClass('locked') ) {
+			return;
+		}
+
 		$this.siblings('input[type="hidden"]').val( type );
 		$this.addClass('active').siblings().removeClass('active');
 
@@ -7308,6 +7319,10 @@ var initSliderBuilder = function() {
 
 		var $item = jQuery(this),
 			checked;
+
+		if( $item.hasClass('locked') ) {
+			return true;
+		}
 
 		// Turn off
 		if( $item.hasClass('on') ) {

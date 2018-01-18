@@ -1,16 +1,8 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 .lvca-testimonials .lvca-testimonial {
   margin-bottom: 50px; }
 .lvca-testimonials .lvca-testimonial-text {
   background: #ffffff;
   border: 1px solid #dbdbdb;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
   border-radius: 30px;
   text-align: center;
   position: relative;
@@ -33,10 +25,7 @@ html {
     border-bottom: 1px solid #dbdbdb;
     background: #ffffff;
     transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: skew(0deg, -44deg);
     width: 24px;
     height: 24px;

@@ -59,6 +59,7 @@ function ShowOptionTab(TabName) {
 		jQuery(this).removeClass("options-subnav-tab-active");
 	});
 	jQuery("#"+TabName+"_Menu").addClass("options-subnav-tab-active");
+	jQuery('input[name="Display_Tab"]').val(TabName);
 }
 
 jQuery(document).ready(function() {

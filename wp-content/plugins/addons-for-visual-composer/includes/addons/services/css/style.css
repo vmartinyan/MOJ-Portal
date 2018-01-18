@@ -1,9 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /* Style 1 */
 .lvca-services.lvca-style1 .lvca-service .lvca-icon-wrapper span {
   display: block;
@@ -11,19 +5,15 @@ html {
   font-size: 96px;
   line-height: 1;
   margin-bottom: 20px;
-  -webkit-transition: color 0.4s ease-in-out 0s;
-  -moz-transition: color 0.4s ease-in-out 0s;
-  -ms-transition: color 0.4s ease-in-out 0s;
-  transition: color 0.4s ease-in-out 0s; }
+  -webkit-transition: color .4s ease-in-out 0s;
+  transition: color .4s ease-in-out 0s; }
 .lvca-services.lvca-style1 .lvca-service .lvca-image-wrapper img {
   display: block;
   max-width: 100%;
   text-align: center;
   margin: 0 auto 25px;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  -ms-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s; }
+  -webkit-transition: all .4s ease-in-out 0s;
+  transition: all .4s ease-in-out 0s; }
 .lvca-services.lvca-style1 .lvca-service .lvca-service-text {
   text-align: center;
   max-width: 300px;
@@ -41,9 +31,7 @@ html {
     margin-bottom: 20px; }
 .lvca-services.lvca-style1 .lvca-service:hover .lvca-image-wrapper img {
   -webkit-transform: scale(0.9, 0.9);
-  -moz-transform: scale(0.9, 0.9);
-  -ms-transform: scale(0.9, 0.9);
-  transform: scale(0.9, 0.9); }
+          transform: scale(0.9, 0.9); }
 
 /* Style 2 */
 .lvca-services.lvca-style2 .lvca-service .lvca-image-wrapper img, .lvca-services.lvca-style2 .lvca-service .lvca-icon-wrapper span {
@@ -141,10 +129,8 @@ html {
 .lvca-services .lvca-service {
   margin-bottom: 50px; }
   .lvca-services .lvca-service .lvca-icon-wrapper span {
-    -webkit-transition: color 0.4s ease-in-out 0s;
-    -moz-transition: color 0.4s ease-in-out 0s;
-    -ms-transition: color 0.4s ease-in-out 0s;
-    transition: color 0.4s ease-in-out 0s; }
+    -webkit-transition: color .4s ease-in-out 0s;
+    transition: color .4s ease-in-out 0s; }
   .lvca-services .lvca-service .lvca-service-text {
     font-size: 15px;
     line-height: 24px; }

@@ -66,7 +66,7 @@
 		            <table class="form-table">
 		                <tbody>
 		                    <tr valign="top">
-		                        <th scope="row"><?php echo __("Optimized CSS","ultimate_vc"); ?></th>
+		                        <th scope="row"><?php echo __("Combined CSS","ultimate_vc"); ?></th>
 		                        <td> <div class="onoffswitch">
 		                        <input type="checkbox" <?php echo $ultimate_css; ?> id="ultimate_css" value="enable" class="onoffswitch-checkbox" name="ultimate_css" />
 		                             <label class="onoffswitch-label" for="ultimate_css">
@@ -83,7 +83,7 @@
 		                        </td>
 		                    </tr>
 		                    <tr valign="top">
-		                        <th scope="row"><?php echo __("Optimized JS","ultimate_vc"); ?></th>
+		                        <th scope="row"><?php echo __("Combined JS","ultimate_vc"); ?></th>
 		                        <td> <div class="onoffswitch">
 		                        <input type="checkbox" <?php echo $ultimate_js; ?> id="ultimate_js" value="enable" class="onoffswitch-checkbox" name="ultimate_js" />
 		                             <label class="onoffswitch-label" for="ultimate_js">

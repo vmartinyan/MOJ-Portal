@@ -780,7 +780,7 @@ if(!class_exists('AIO_Stats_Counter'))
 					if($counter_suffix !== ''){
 						$output .= '<div class="counter_suffix mycust ult-responsive" '.$stats_counter_sufpref_data_list.' style="'.esc_attr($counter_font).' '.esc_attr($suf_pref_style).'">'.$counter_suffix.'</div>';
 					}
-					$output .= '<div '.$counter_resp_id.' '.$stats_counter_data_list.' class="stats-text ult-responsive" style="'.esc_attr($title_font).' '.esc_attr($counter_color).' '.esc_attr($title_style).'">'.$counter_title.'</div>';
+					$output .= '<div id="'.$counter_resp_id.'" '.$stats_counter_data_list.' class="stats-text ult-responsive" style="'.esc_attr($title_font).' '.esc_attr($counter_color).' '.esc_attr($title_style).'">'.$counter_title.'</div>';
 				$output .= '</div>';
 				if($icon_position == "right")
 					$output .= '<div class="'.esc_attr($ic_class).'">'.$stats_icon.'</div>';

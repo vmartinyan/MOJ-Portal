@@ -61,7 +61,7 @@ class LVCA_Piecharts {
 
         ?>
 
-        <div class="lvca-piecharts lvca-container">
+        <div class="lvca-piecharts lvca-grid-container">
 
             <?php
 

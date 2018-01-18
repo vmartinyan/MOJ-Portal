@@ -7,7 +7,7 @@
  * Author URI: https://www.livemeshthemes.com/visual-composer-addons
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Version: 1.7.1
+ * Version: 1.8
  * Text Domain: livemesh-vc-addons
  * Domain Path: languages
  *
@@ -75,7 +75,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         public function __clone() {
             // Cloning instances of the class is forbidden
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.7.1');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.8');
         }
 
         /**
@@ -84,7 +84,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         public function __wakeup() {
             // Unserializing instances of the class is forbidden
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.7.1');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.8');
         }
 
         /**
@@ -95,7 +95,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
 
             // Plugin version
             if (!defined('LVCA_VERSION')) {
-                define('LVCA_VERSION', '1.7.1');
+                define('LVCA_VERSION', '1.8');
             }
 
             // Plugin Folder Path
@@ -275,7 +275,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         private function hooks() {
 
-            add_action('wp_enqueue_scripts', array($this, 'load_frontend_scripts'), 12);
+            add_action('wp_enqueue_scripts', array($this, 'load_frontend_scripts'), 10);
 
             add_action('wp_enqueue_scripts', array($this, 'localize_scripts'), 999999);
 

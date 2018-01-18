@@ -75,7 +75,7 @@ if(!class_exists('Ultimate_Info_Circle'))
 			$is_vc_49_plus = (version_compare(4.9, $vc_version, '<=')) ? 'ult-adjust-bottom-margin' : '';
 
 			$uniq = uniqid();
-			$browser_info = getBrowser();
+			$browser_info = ult_getBrowser();
 
 			global $title_style_inline, $desc_style_inline, $info_circle_id, $info_circle_data_list;
 

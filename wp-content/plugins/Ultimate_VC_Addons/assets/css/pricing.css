@@ -35,7 +35,7 @@
 .ult_pricing_table .ult_pricing_heading {
     padding: 20px 0
 }
-.ult_pricing_table .ult_pricing_heading h3 {
+.ult_pricing_table .ult_pricing_heading .price-heading {
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -43,7 +43,7 @@
     line-height: 1.4em;
     color: inherit
 }
-.ult_pricing_table .ult_pricing_heading h5 {
+.ult_pricing_table .ult_pricing_heading .price-subheading {
     padding: 0;
     margin: 4px 20px 15px;
     font-size: 12px;
@@ -230,7 +230,7 @@
     background: linear-gradient(#0f9000, #076800);
     color: #fff
 }
-.ult_design_2 .ult_pricing_table .ult_pricing_heading h5 {
+.ult_design_2 .ult_pricing_table .ult_pricing_heading .price-subheading {
     padding: 0;
     margin: 0 20px;
     font-size: 12px

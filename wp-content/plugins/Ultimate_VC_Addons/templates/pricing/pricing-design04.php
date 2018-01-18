@@ -5,11 +5,13 @@
 */
 if(!function_exists('ult_price_generate_design04')) {
 	function ult_price_generate_design04($atts,$content = null){
-		$package_heading = $package_sub_heading = $package_price = $package_unit = $package_btn_text = $package_link = $package_featured = $color_bg_main = $color_txt_main = $color_bg_highlight = $color_txt_highlight = $color_scheme = $el_class = $target = $link_title  = $rel = '';
+		$package_heading = $heading_tag = $package_sub_heading = $sub_heading_tag = $package_price = $package_unit = $package_btn_text = $package_link = $package_featured = $color_bg_main = $color_txt_main = $color_bg_highlight = $color_txt_highlight = $color_scheme = $el_class = $target = $link_title  = $rel = '';
 		extract(shortcode_atts(array(
 			"color_scheme" => "black",
 			"package_heading" => "",
+			"heading_tag"=> "h3",
 			"package_sub_heading" => "",
+			"sub_heading_tag"=> "h5",
 			"package_price" => "",
 			"package_unit" => "",
 			"package_btn_text" => "",
@@ -108,6 +110,9 @@ if(!function_exists('ult_price_generate_design04')) {
 
 		if($package_name_font_color != '')
 			$package_name_inline .= 'color:'.$package_name_font_color.';';
+
+		if($sub_heading_tag == 'span')
+			$sub_heading_inline .= 'display:block;';
 
 		if(is_numeric($package_name_font_size)){
 			$package_name_font_size = 'desktop:'.$package_name_font_size.'px;';
@@ -342,9 +347,9 @@ if(!function_exists('ult_price_generate_design04')) {
 		$output .= '<div class="ult_pricing_table_wrap ult_design_4 '.esc_attr($featured).' ult-cs-'.esc_attr($color_scheme).' '.esc_attr($el_class).' '.esc_attr($css_price_box).'">
 					<div class="ult_pricing_table '.esc_attr($ult_price_table_ht).'" style="'.esc_attr($normal_style).'">';
 			$output .= '<div id="'.esc_attr($price_table_id).'" class="ult_pricing_heading">
-							<h3 class="ult-responsive cust-headformat" '.$price_table_data_list.' style="'.esc_attr($package_name_inline).'">'.$package_heading.'</h3>';
+							<'.$heading_tag.' class="price-heading ult-responsive cust-headformat" '.$price_table_data_list.' style="'.esc_attr($package_name_inline).'">'.$package_heading.'</'.$heading_tag.'>';
 						if($package_sub_heading !== ''){
-							$output .= '<h5 class="ult-responsive cust-subhead" '.$price_table_subhead_data_list.' style="'.esc_attr($sub_heading_inline).'">'.$package_sub_heading.'</h5>';
+							$output .= '<'.$sub_heading_tag.' class="price-subheading ult-responsive cust-subhead" '.$price_table_subhead_data_list.' style="'.esc_attr($sub_heading_inline).'">'.$package_sub_heading.'</'.$sub_heading_tag.'>';
 						}
 			$output .= '</div><!--ult_pricing_heading-->';
 			$output .= '<div class="ult_price_body_block">

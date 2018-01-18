@@ -1210,6 +1210,11 @@ else {
 
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
+                <h3>1.8</h3>
+                <ul>
+                    <li>Upgrade – Simpler grid system based on NEAT 2.1 version</li>
+                    <li>Updated - The CSS is now optimized for vendor prefixes with reduced properties and file size.</li>
+                </ul>
                 <h3>1.7.1</h3>
                 <ul>
                     <li>Added - Ability to rate plugin from admin screen</li>

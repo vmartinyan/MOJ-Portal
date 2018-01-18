@@ -174,7 +174,7 @@ if(!function_exists('ultimate_get_animation_json')){
 	}
 }
 
-function getBrowser() 
+function ult_getBrowser() 
 { 
     $u_agent = $_SERVER['HTTP_USER_AGENT']; 
     $bname = 'Unknown';

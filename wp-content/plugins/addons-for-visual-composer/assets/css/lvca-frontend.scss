@@ -1,13 +1,12 @@
 @import "bourbon";
 @import "neat";
-@import "flexbox";
 @import "grid-settings";
 @import "lvca-lib";
 
 /* --------------- Reset styles --------- */
 
-.lvca-container {
-  ol, ul, ol li, ul li, ol:hover, ul:hover, ul li:hover, ol li:hover, ol li a, ul li a, ol li a:hover, ul li a:hover, img {
+.lvca-container, .lvca-grid-container {
+  ol, ul, ol > li, ul > li, ol:hover, ul:hover, ul > li:hover, ol > li:hover, ol > li > a, ul > li > a, ol > li > a:hover, ul > li > a:hover, img {
     padding: 0;
     margin: 0;
     border: none;
@@ -30,6 +29,7 @@
 /* ------- General styles ------------ */
 
 .lvca-container {
+  @include lvca-container;
   margin-left: auto;
   margin-right: auto;
   }
@@ -39,191 +39,248 @@
 .lvca-center {
   text-align: center;
   }
-.lvca-lastcol {
-  @include omega;
-  }
-.lvca-container {
-  .lvca-onecol, .lvca-twocol, .lvca-onefifthcol, .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol, .lvca-tencol, .lvca-elevencol {
+.lvca-grid-container {
+  @include grid-container;
+  @include grid-collapse();
+
+  .lvca-onecol, .lvca-twocol, .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol, .lvca-tencol, .lvca-elevencol, .lvca-twelvecol {
     min-height: 1px; /* Prevents columns from collapsing when housing absolute elements or when lazy loading content */
     }
 
-  @include respond-to-min(801) {
+  .lvca-onecol, .lvca-twocol {
+    @include grid-column(1, $lvca-mobile-grid);
+    }
+
+  .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol, .lvca-tencol, .lvca-elevencol, .lvca-twelvecol {
+    @include grid-column(2, $lvca-mobile-grid);
+    }
+
+  @include grid-media($lvca-mobile-only-grid) {
+
+    .lvca-onecol, .lvca-twocol {
+      @include omega(2n);
+      }
+    }
+
+  @include grid-media($lvca-tablet-grid) {
+
+    .lvca-onecol, .lvca-twocol {
+      @include grid-column(2);
+      }
+
+    .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol {
+      @include grid-column(3);
+      }
+
+    .lvca-tencol, .lvca-elevencol {
+      @include grid-column(4);
+      }
+
+    .lvca-twelvecol {
+      @include grid-column(6);
+      }
+    }
+
+  @include grid-media($lvca-tablet-only-grid) {
+
+    .lvca-onecol, .lvca-twocol {
+      @include omega(3n);
+      }
+
+    .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol {
+      @include omega(2n);
+      }
+    }
+
+  @include grid-media($lvca-desktop-grid) {
 
     .lvca-onecol {
-      @include span-columns(1);
+      @include grid-column(1);
       @include omega(12n);
       }
 
     .lvca-twocol {
-      @include span-columns(2);
+      @include grid-column(2);
       @include omega(6n);
       }
 
     .lvca-threecol {
-      @include span-columns(3);
+      @include grid-column(3);
       @include omega(4n);
       }
 
     .lvca-fourcol {
-      @include span-columns(4);
+      @include grid-column(4);
       @include omega(3n);
       }
 
     .lvca-fivecol {
-      @include span-columns(5);
+      @include grid-column(5);
       }
 
     .lvca-sixcol {
-      @include span-columns(6);
+      @include grid-column(6);
       @include omega(2n);
       }
 
     .lvca-sevencol {
-      @include span-columns(7);
+      @include grid-column(7);
       }
 
     .lvca-eightcol {
-      @include span-columns(8);
+      @include grid-column(8);
       }
 
     .lvca-ninecol {
-      @include span-columns(9);
+      @include grid-column(9);
       }
 
     .lvca-tencol {
-      @include span-columns(10);
+      @include grid-column(10);
       }
 
     .lvca-elevencol {
-      @include span-columns(11);
+      @include grid-column(11);
       }
-    }
 
-  .lvca-twelvecol, .lvca-fullwidth {
-    float: left;
-    display: block;
-    width: 100%;
+    .lvca-twelvecol {
+      @include grid-column(12);
+      }
     }
 
   }
 /*--------- Support for 5 column grid ----*/
 
-$grid-columns: 15;
+.lvca-grid-container {
 
-.lvca-container {
-  @include respond-to-min(801) {
+  .lvca-onefifth {
+    min-height: 1px;
+    }
 
-    .lvca-onefifthcol {
-      @include span-columns(3);
-      @include omega(5n);
+  .lvca-onefifth {
+    @include grid-column(2, $lvca-mobile-grid);
+    }
+
+  @include grid-media($lvca-tablet-grid) {
+
+    .lvca-onefifth {
+      @include grid-column(3);
       }
 
     }
-  }
-/* Tablet and Mobile responsiveness */
+  @include grid-media($lvca-tablet-only-grid) {
 
-$grid-columns: 12;
-
-.lvca-container {
-
-  @include respond-between(480, 800) {
-
-    .lvca-onecol, .lvca-twocol, .lvca-onefifthcol, .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol, .lvca-tencol, .lvca-elevencol {
-      @include span-columns(6);
+    .lvca-onefifth {
       @include omega(2n);
       }
 
     }
 
-  @include respond-to-max(479) {
+  @include grid-media($lvca-five-col-grid) {
 
-    .lvca-onecol, .lvca-twocol, .lvca-onefifthcol, .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol, .lvca-tencol, .lvca-elevencol {
-      width: 100%;
-      @include omega;
+    .lvca-onefifth {
+      @include grid-column(1);
+      @include omega(5n);
       }
-
     }
   }
-/*-------- Remove margins on last column -----*/
 
-.lvca-container .lvca-lastcol {
-  @include omega;
+/*--------- Gapless grid columns ----*/
+
+.lvca-gapless-grid {
+
+  &.lvca-grid-container, & .lvca-grid-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: auto;
+    }
+
+  .lvca-onecol, .lvca-twocol {
+    @include grid-column(1, $lvca-gapless-mobile-grid);
+    }
+
+  .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol, .lvca-tencol, .lvca-elevencol, .lvca-twelvecol, .lvca-onefifth {
+    @include grid-column(2, $lvca-gapless-mobile-grid);
+    }
+
+  @include grid-media($lvca-gapless-tablet-grid) {
+
+    .lvca-onecol, .lvca-twocol {
+      @include grid-column(2);
+      }
+
+    .lvca-threecol, .lvca-fourcol, .lvca-fivecol, .lvca-sixcol, .lvca-sevencol, .lvca-eightcol, .lvca-ninecol, .lvca-onefifth {
+      @include grid-column(3);
+      }
+
+    .lvca-tencol, .lvca-elevencol {
+      @include grid-column(4);
+      }
+
+    .lvca-twelvecol {
+      @include grid-column(6);
+      }
+    }
+
+  @include grid-media($lvca-gapless-desktop-grid) {
+
+    .lvca-onecol {
+      @include grid-column(1);
+      }
+
+    .lvca-twocol {
+      @include grid-column(2);
+      }
+
+    .lvca-threecol {
+      @include grid-column(3);
+      }
+
+    .lvca-fourcol {
+      @include grid-column(4);
+      }
+
+    .lvca-fivecol {
+      @include grid-column(5);
+      }
+
+    .lvca-sixcol {
+      @include grid-column(6);
+      }
+
+    .lvca-sevencol {
+      @include grid-column(7);
+      }
+
+    .lvca-eightcol {
+      @include grid-column(8);
+      }
+
+    .lvca-ninecol {
+      @include grid-column(9);
+      }
+
+    .lvca-tencol {
+      @include grid-column(10);
+      }
+
+    .lvca-elevencol {
+      @include grid-column(11);
+      }
+
+    .lvca-twelvecol {
+      @include grid-column(12);
+      }
+    }
+  
+  @include grid-media($lvca-gapless-five-col-grid) {
+
+    .lvca-onefifth {
+      @include grid-column(1);
+      }
+    }
   }
-/*--------- No margin columns ----*/
 
-.lvca-container .lvca-zero-margin, #content .lvca-zero-margin {
-  @include omega;
-  }
-.lvca-container {
-
-  .lvca-onecol.lvca-zero-margin, .lvca-twocol.lvca-zero-margin, .lvca-onefifthcol.lvca-zero-margin, .lvca-threecol.lvca-zero-margin, .lvca-fourcol.lvca-zero-margin, .lvca-fivecol.lvca-zero-margin, .lvca-sixcol.lvca-zero-margin, .lvca-sevencol.lvca-zero-margin, .lvca-eightcol.lvca-zero-margin, .lvca-ninecol.lvca-zero-margin, .lvca-tencol.lvca-zero-margin, .lvca-elevencol.lvca-zero-margin {
-    @include omega;
-    }
-
-  @include respond-to-min(801) {
-
-    .lvca-onecol.lvca-zero-margin {
-      width: percentage(1/12);
-      }
-
-    .lvca-twocol.lvca-zero-margin {
-      width: percentage(2/12);
-      }
-
-    .lvca-onefifthcol.lvca-zero-margin {
-      width: percentage(3/15);
-      }
-
-    .lvca-threecol.lvca-zero-margin {
-      width: percentage(3/12);
-      }
-
-    .lvca-fourcol.lvca-zero-margin {
-      width: percentage(4/12);
-      }
-
-    .lvca-fivecol.lvca-zero-margin {
-      width: percentage(5/12);
-      }
-
-    .lvca-sixcol.lvca-zero-margin {
-      width: percentage(6/12);
-      }
-
-    .lvca-sevencol.lvca-zero-margin {
-      width: percentage(7/12);
-      }
-
-    .lvca-eightcol.lvca-zero-margin {
-      width: percentage(8/12);
-      }
-
-    .lvca-ninecol.lvca-zero-margin {
-      width: percentage(9/12);
-      }
-
-    .lvca-tencol.lvca-zero-margin {
-      width: percentage(10/12);
-      }
-
-    .lvca-elevencol.lvca-zero-margin {
-      width: percentage(11/12);
-      }
-    }
-
-  @include respond-between(480, 800) {
-    .lvca-onecol.lvca-zero-margin, .lvca-twocol.lvca-zero-margin, .lvca-onefifthcol.lvca-zero-margin, .lvca-threecol.lvca-zero-margin, .lvca-fourcol.lvca-zero-margin, .lvca-fivecol.lvca-zero-margin, .lvca-sixcol.lvca-zero-margin, .lvca-sevencol.lvca-zero-margin, .lvca-eightcol.lvca-zero-margin, .lvca-ninecol.lvca-zero-margin, .lvca-tencol.lvca-zero-margin, .lvca-elevencol.lvca-zero-margin {
-      width: percentage(6/12);
-      }
-    }
-
-  @include respond-to-max(479) {
-    .lvca-onecol.lvca-zero-margin, .lvca-twocol.lvca-zero-margin, .lvca-onefifthcol.lvca-zero-margin, .lvca-threecol.lvca-zero-margin, .lvca-fourcol.lvca-zero-margin, .lvca-fivecol.lvca-zero-margin, .lvca-sixcol.lvca-zero-margin, .lvca-sevencol.lvca-zero-margin, .lvca-eightcol.lvca-zero-margin, .lvca-ninecol.lvca-zero-margin, .lvca-tencol.lvca-zero-margin, .lvca-elevencol.lvca-zero-margin {
-      width: 100%;
-      }
-    }
-
-  }
 /* --------------- Flexslider Styles -------------- */
 
 .lvca-container {
@@ -251,7 +308,7 @@ $grid-columns: 12;
     text-indent: 0;
     text-align: center;
     color: #aaa;
-    @include vendorize(transition, all 0.3s ease-in-out 0s);
+    transition: all 0.3s ease-in-out 0s;
     outline: none;
     &:before, &:hover:before {
       margin: 2px;
@@ -305,7 +362,7 @@ $grid-columns: 12;
       width: 12px;
       height: 12px;
       box-shadow: none;
-      @include vendorize(transition, all 0.2s ease-in 0s);
+      transition: all 0.2s ease-in 0s;
       display: inline-block;
       vertical-align: middle;
       outline: none;
@@ -350,7 +407,7 @@ $grid-columns: 12;
     text-indent: 0;
     text-align: center;
     color: #aaa !important;
-    @include vendorize(transition, all 0.3s ease-in-out 0s);
+    transition: all 0.3s ease-in-out 0s;
     overflow: hidden;
     box-shadow: none;
     outline: none;
@@ -387,6 +444,7 @@ $grid-columns: 12;
   ul.slick-dots {
     width: 100%;
     position: absolute;
+    bottom: -30px;
     text-align: center;
     padding: 0 !important;
     margin: 0 !important;
@@ -404,7 +462,7 @@ $grid-columns: 12;
       width: 12px;
       height: 12px;
       box-shadow: none;
-      @include vendorize(transition, background 0.3s ease-in-out 0s);
+      transition: background 0.3s ease-in-out 0s;
       font-size: 0;
       outline: none;
       .lvca-dark-bg & {
@@ -419,10 +477,9 @@ $grid-columns: 12;
     li.slick-active button {
       width: 14px;
       height: 14px;
+      }
     }
   }
-  }
-
 /* -------- Widget separator headline ------------ */
 
 .lvca-widget-heading {

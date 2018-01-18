@@ -1,9 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 .lvca-accordion .lvca-panel-title {
   display: block;
   cursor: pointer; }
@@ -12,10 +6,8 @@ html {
   overflow: hidden; }
 
 .lvca-accordion.lvca-style1 .lvca-panel .lvca-panel-title, .lvca-accordion.lvca-style3 .lvca-panel .lvca-panel-title {
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -ms-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s; }
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s; }
   .lvca-accordion.lvca-style1 .lvca-panel .lvca-panel-title:after, .lvca-accordion.lvca-style3 .lvca-panel .lvca-panel-title:after {
     font-family: 'lvca-icomoon' !important;
     speak: none;
@@ -34,21 +26,15 @@ html {
     line-height: 1;
     color: #666;
     font-weight: 700;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    -ms-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s; }
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s; }
 .lvca-accordion.lvca-style1 .lvca-panel.lvca-active .lvca-panel-title:after, .lvca-accordion.lvca-style3 .lvca-panel.lvca-active .lvca-panel-title:after {
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
+          transform: rotate(45deg); }
 
 .lvca-accordion.lvca-style2 .lvca-panel .lvca-panel-title {
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -ms-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s; }
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s; }
   .lvca-accordion.lvca-style2 .lvca-panel .lvca-panel-title:after {
     font-family: 'lvca-icomoon' !important;
     speak: none;
@@ -67,14 +53,15 @@ html {
     font-size: 18px;
     line-height: 1;
     -webkit-transition: color .3s ease-in 0s, transform .3s ease-in-out 0s;
+    -webkit-transition: color .3s ease-in 0s, -webkit-transform .3s ease-in-out 0s;
+    transition: color .3s ease-in 0s, -webkit-transform .3s ease-in-out 0s;
     transition: color .3s ease-in 0s, transform .3s ease-in-out 0s;
+    transition: color .3s ease-in 0s, transform .3s ease-in-out 0s, -webkit-transform .3s ease-in-out 0s;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 .lvca-accordion.lvca-style2 .lvca-panel.lvca-active .lvca-panel-title:after {
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
+          transform: rotate(90deg); }
 
 /* ----- Style 1 ------ */
 .lvca-accordion.lvca-style1 .lvca-panel {
@@ -123,10 +110,8 @@ html {
     font-weight: bold;
     color: #666;
     margin: 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
     z-index: 1; }
     .lvca-accordion.lvca-style2 .lvca-panel .lvca-panel-title:before {
       position: absolute;

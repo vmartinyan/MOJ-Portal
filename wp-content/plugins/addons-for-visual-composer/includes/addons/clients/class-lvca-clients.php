@@ -49,7 +49,7 @@ class LVCA_Clients {
 
         ?>
 
-        <div class="lvca-clients lvca-container">
+        <div class="lvca-clients lvca-grid-container lvca-gapless-grid">
 
             <?php
 
@@ -80,7 +80,7 @@ class LVCA_Clients {
 
         ?>
 
-        <div class="lvca-client <?php echo $column_style; ?> lvca-zero-margin">
+        <div class="lvca-client <?php echo $column_style; ?>">
 
             <?php echo wp_get_attachment_image($client_image, 'full', false, array('class' => 'lvca-image full', 'alt' => $client_name)); ?>
 

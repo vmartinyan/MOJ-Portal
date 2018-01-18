@@ -50,7 +50,7 @@ class LVCA_Testimonials {
 
         ?>
 
-        <div class="lvca-testimonials lvca-container">
+        <div class="lvca-testimonials lvca-grid-container">
 
             <?php
 
