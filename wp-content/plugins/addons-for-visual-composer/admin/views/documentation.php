@@ -1210,6 +1210,11 @@ else {
 
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
+                <h3>1.8.1</h3>
+                <ul>
+                    <li>Fixed – Some themes have trouble rendering grid columns</li>
+                    <li>Fixed - Comma shows up in category list for the image hover in grid</li>
+                </ul>
                 <h3>1.8</h3>
                 <ul>
                     <li>Upgrade – Simpler grid system based on NEAT 2.1 version</li>

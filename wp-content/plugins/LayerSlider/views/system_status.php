@@ -332,17 +332,6 @@ $notifications = array(
 							<?php endif ?>
 						</td>
 					</tr>
-					<tr>
-						<?php $test = ! empty( $_SERVER['SERVER_NAME'] ); ?>
-						<td><?php _e('$_SERVER variables', 'LayerSlider') ?></td>
-						<td><span class="dashicons <?php echo ! empty($test) ? 'dashicons-yes' : 'dashicons-warning' ?>"></span></td>
-						<td><?php echo $test ? __('OK', 'LayerSlider') : __('Unavailable', 'LayerSlider') ?></td>
-						<td>
-							<?php if( ! $test ) : ?>
-							<span><?php _e('Product activation and some of the related features depend on the <mark>$_SERVER[\'SERVER_NAME\']</mark> PHP variable. It seems that this variable is not available on your installation due to the web server configuration. Please contact your hosting provider and show them this message, they will know what to change.', 'LayerSlider') ?></span>
-							<?php endif ?>
-						</td>
-					</tr>
 				</tbody>
 			</table>
 		</div>

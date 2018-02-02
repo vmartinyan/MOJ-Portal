@@ -160,15 +160,18 @@
           .lvca-terms {
             display: block;
             color: #f9f9f9;
+            font-size: 14px;
+            line-height: 22px;
+            opacity: 0;
+            transition: opacity .4s ease-in-out 0s;
             a {
               color: #ddd;
               position: relative;
               display: inline;
               zoom: 1;
               font-size: 14px;
-              line-height: 26px;
+              line-height: 22px;
               font-style: italic;
-              opacity: 0;
               transition: all .4s ease-in-out 0s;
               &:hover {
                 color: #fff;
@@ -178,7 +181,7 @@
           }
         &:hover {
           .lvca-image-info {
-            .lvca-post-title, .lvca-terms a {
+            .lvca-post-title, .lvca-terms {
               opacity: 1;
               }
             }

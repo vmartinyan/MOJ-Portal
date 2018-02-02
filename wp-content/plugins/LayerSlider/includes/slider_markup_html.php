@@ -67,6 +67,11 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 		// Get slide attributes
 		$slideId = !empty($slide['props']['id']) ? ' id="'.$slide['props']['id'].'"' : '';
 		$slideAttrs = !empty($slide['attrs']) ? ls_array_to_attr($slide['attrs']) : '';
+
+		if( ! empty( $slide['props']['customProperties'] ) && is_array( $slide['props']['customProperties'] ) ) {
+			$slideAttrs .= ls_array_to_attr( $slide['props']['customProperties'] );
+		}
+
 		$postContent = false;
 
 

@@ -318,6 +318,12 @@ include LS_ROOT_PATH . '/templates/tmpl-import-layer.php';
 		}
 	}
 
+	// v6.8.8: Set slider type to responsive in case of Popup
+	// on a non-activated site.
+	if( ! $lsActivated && $slider['properties']['type'] === 'popup' ) {
+		$slider['properties']['type'] = 'responsive';
+	}
+
 	// Slider version
 	$slider['properties']['sliderVersion'] = LS_PLUGIN_VERSION;
 ?>

@@ -4,7 +4,7 @@
 	<table>
 		<thead class="ls-layer-options-thead">
 			<tr>
-				<td colspan="4">
+				<td colspan="5">
 					<i class="dashicons dashicons-welcome-write-blog"></i>
 					<h4><?php _e('Slide Options', 'LayerSlider') ?>
 						<button type="button" class="button ls-layer-duplicate"><span class="dashicons dashicons-admin-page"></span><?php _e('Duplicate slide', 'LayerSlider') ?></button>
@@ -19,7 +19,7 @@
 			<input type="hidden" name="custom_3d_transitions">
 			<input type="hidden" name="custom_2d_transitions">
 			<tr>
-				<td class="slide-image">
+				<td class="slide-image" colspan="2">
 					<h3 class="subheader"><?php _e('Slide Background Image', 'LayerSlider') ?></h3>
 					<div class="inner">
 						<div class="float">
@@ -91,7 +91,7 @@
 				</td>
 			</tr>
 			<tr class="ls-advanced ls-hidden">
-				<td class="ls-slide-link">
+				<td class="ls-slide-link" colspan="2">
 					<h3 class="subheader"><?php _e('Slide Linking', 'LayerSlider') ?></h3>
 					<div class="inner">
 						<div class="row-helper">
@@ -175,6 +175,21 @@
 				</td>
 			</tr>
 			<tr class="ls-advanced ls-hidden">
+				<td>
+					<h3 class="subheader"><?php _e('Custom Slide Properties', 'LayerSlider') ?></h3>
+					<div class="ls-custom-slide-properties">
+						<table>
+							<tr>
+								<td>
+									<input type="text" placeholder="<?php _e('Key', 'LayerSlider') ?>">
+								</td>
+								<td>
+									<input type="text" placeholder="<?php _e('Value', 'LayerSlider') ?>">
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td>
 				<td class="slide-ken-burns">
 					<h3 class="subheader"><?php _e('Ken Burns Effect', 'LayerSlider') ?></h3>
 					<div class="inner">

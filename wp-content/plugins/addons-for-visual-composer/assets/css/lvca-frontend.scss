@@ -6,6 +6,10 @@
 /* --------------- Reset styles --------- */
 
 .lvca-container, .lvca-grid-container {
+  box-sizing: border-box;
+  *, *::after, *::before {
+    box-sizing: inherit;
+    }
   ol, ul, ol > li, ul > li, ol:hover, ul:hover, ul > li:hover, ol > li:hover, ol > li > a, ul > li > a, ol > li > a:hover, ul > li > a:hover, img {
     padding: 0;
     margin: 0;

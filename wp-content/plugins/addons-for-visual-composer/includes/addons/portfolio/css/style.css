@@ -152,21 +152,25 @@
             border-bottom: 1px solid #ccc; }
       .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-project-image .lvca-image-info .lvca-terms {
         display: block;
-        color: #f9f9f9; }
+        color: #f9f9f9;
+        font-size: 14px;
+        line-height: 22px;
+        opacity: 0;
+        -webkit-transition: opacity .4s ease-in-out 0s;
+        transition: opacity .4s ease-in-out 0s; }
         .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-project-image .lvca-image-info .lvca-terms a {
           color: #ddd;
           position: relative;
           display: inline;
           zoom: 1;
           font-size: 14px;
-          line-height: 26px;
+          line-height: 22px;
           font-style: italic;
-          opacity: 0;
           -webkit-transition: all .4s ease-in-out 0s;
           transition: all .4s ease-in-out 0s; }
           .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-project-image .lvca-image-info .lvca-terms a:hover {
             color: #fff; }
-    .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-project-image:hover .lvca-image-info .lvca-post-title, .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-project-image:hover .lvca-image-info .lvca-terms a {
+    .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-project-image:hover .lvca-image-info .lvca-post-title, .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-project-image:hover .lvca-image-info .lvca-terms {
       opacity: 1; }
   .lvca-portfolio-wrap .lvca-portfolio .lvca-portfolio-item .lvca-entry-text-wrap {
     text-align: center;

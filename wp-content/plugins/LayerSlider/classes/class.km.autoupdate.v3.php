@@ -72,8 +72,9 @@ class KM_UpdatesV3 {
 			'channel' => get_option($config['channelKey'], 'stable'),
 			'license' => get_option($config['codeKey'], ''),
 			'domain' => $_SERVER['SERVER_NAME'],
+			'siteurl' => esc_url( site_url() ),
 			'option' => strtolower(basename(dirname($config['root']))) . '_update_info',
-			'locale' => WPLANG
+			'locale' => get_locale()
 		));
 	}
 
@@ -305,6 +306,7 @@ class KM_UpdatesV3 {
 				'license' => $this->config['license'],
 				'item_id' => $this->config['itemID'],
 				'domain' => $this->config['domain'],
+				'siteurl' => $this->config['siteurl'],
 				'locale' => $this->config['locale'],
 				'api_version' => self::API_VERSION
 			)

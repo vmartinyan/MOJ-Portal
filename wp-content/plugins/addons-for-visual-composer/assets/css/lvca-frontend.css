@@ -1,20 +1,26 @@
 /* --------------- Reset styles --------- */
-.lvca-container ol, .lvca-container ul, .lvca-container ol > li, .lvca-container ul > li, .lvca-container ol:hover, .lvca-container ul:hover, .lvca-container ul > li:hover, .lvca-container ol > li:hover, .lvca-container ol > li > a, .lvca-container ul > li > a, .lvca-container ol > li > a:hover, .lvca-container ul > li > a:hover, .lvca-container img, .lvca-grid-container ol, .lvca-grid-container ul, .lvca-grid-container ol > li, .lvca-grid-container ul > li, .lvca-grid-container ol:hover, .lvca-grid-container ul:hover, .lvca-grid-container ul > li:hover, .lvca-grid-container ol > li:hover, .lvca-grid-container ol > li > a, .lvca-grid-container ul > li > a, .lvca-grid-container ol > li > a:hover, .lvca-grid-container ul > li > a:hover, .lvca-grid-container img {
-  padding: 0;
-  margin: 0;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  list-style: none;
-  background: none; }
-  .lvca-container ol:before, .lvca-container ol:after, .lvca-container ul:before, .lvca-container ul:after, .lvca-container ol > li:before, .lvca-container ol > li:after, .lvca-container ul > li:before, .lvca-container ul > li:after, .lvca-container ol:hover:before, .lvca-container ol:hover:after, .lvca-container ul:hover:before, .lvca-container ul:hover:after, .lvca-container ul > li:hover:before, .lvca-container ul > li:hover:after, .lvca-container ol > li:hover:before, .lvca-container ol > li:hover:after, .lvca-container ol > li > a:before, .lvca-container ol > li > a:after, .lvca-container ul > li > a:before, .lvca-container ul > li > a:after, .lvca-container ol > li > a:hover:before, .lvca-container ol > li > a:hover:after, .lvca-container ul > li > a:hover:before, .lvca-container ul > li > a:hover:after, .lvca-container img:before, .lvca-container img:after, .lvca-grid-container ol:before, .lvca-grid-container ol:after, .lvca-grid-container ul:before, .lvca-grid-container ul:after, .lvca-grid-container ol > li:before, .lvca-grid-container ol > li:after, .lvca-grid-container ul > li:before, .lvca-grid-container ul > li:after, .lvca-grid-container ol:hover:before, .lvca-grid-container ol:hover:after, .lvca-grid-container ul:hover:before, .lvca-grid-container ul:hover:after, .lvca-grid-container ul > li:hover:before, .lvca-grid-container ul > li:hover:after, .lvca-grid-container ol > li:hover:before, .lvca-grid-container ol > li:hover:after, .lvca-grid-container ol > li > a:before, .lvca-grid-container ol > li > a:after, .lvca-grid-container ul > li > a:before, .lvca-grid-container ul > li > a:after, .lvca-grid-container ol > li > a:hover:before, .lvca-grid-container ol > li > a:hover:after, .lvca-grid-container ul > li > a:hover:before, .lvca-grid-container ul > li > a:hover:after, .lvca-grid-container img:before, .lvca-grid-container img:after {
-    display: none; }
-.lvca-container a, .lvca-grid-container a {
-  text-decoration: initial; }
-.lvca-container img, .lvca-grid-container img {
-  max-width: 100%;
-  width: auto;
-  height: auto; }
+.lvca-container, .lvca-grid-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .lvca-container *, .lvca-container *::after, .lvca-container *::before, .lvca-grid-container *, .lvca-grid-container *::after, .lvca-grid-container *::before {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit; }
+  .lvca-container ol, .lvca-container ul, .lvca-container ol > li, .lvca-container ul > li, .lvca-container ol:hover, .lvca-container ul:hover, .lvca-container ul > li:hover, .lvca-container ol > li:hover, .lvca-container ol > li > a, .lvca-container ul > li > a, .lvca-container ol > li > a:hover, .lvca-container ul > li > a:hover, .lvca-container img, .lvca-grid-container ol, .lvca-grid-container ul, .lvca-grid-container ol > li, .lvca-grid-container ul > li, .lvca-grid-container ol:hover, .lvca-grid-container ul:hover, .lvca-grid-container ul > li:hover, .lvca-grid-container ol > li:hover, .lvca-grid-container ol > li > a, .lvca-grid-container ul > li > a, .lvca-grid-container ol > li > a:hover, .lvca-grid-container ul > li > a:hover, .lvca-grid-container img {
+    padding: 0;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    list-style: none;
+    background: none; }
+    .lvca-container ol:before, .lvca-container ol:after, .lvca-container ul:before, .lvca-container ul:after, .lvca-container ol > li:before, .lvca-container ol > li:after, .lvca-container ul > li:before, .lvca-container ul > li:after, .lvca-container ol:hover:before, .lvca-container ol:hover:after, .lvca-container ul:hover:before, .lvca-container ul:hover:after, .lvca-container ul > li:hover:before, .lvca-container ul > li:hover:after, .lvca-container ol > li:hover:before, .lvca-container ol > li:hover:after, .lvca-container ol > li > a:before, .lvca-container ol > li > a:after, .lvca-container ul > li > a:before, .lvca-container ul > li > a:after, .lvca-container ol > li > a:hover:before, .lvca-container ol > li > a:hover:after, .lvca-container ul > li > a:hover:before, .lvca-container ul > li > a:hover:after, .lvca-container img:before, .lvca-container img:after, .lvca-grid-container ol:before, .lvca-grid-container ol:after, .lvca-grid-container ul:before, .lvca-grid-container ul:after, .lvca-grid-container ol > li:before, .lvca-grid-container ol > li:after, .lvca-grid-container ul > li:before, .lvca-grid-container ul > li:after, .lvca-grid-container ol:hover:before, .lvca-grid-container ol:hover:after, .lvca-grid-container ul:hover:before, .lvca-grid-container ul:hover:after, .lvca-grid-container ul > li:hover:before, .lvca-grid-container ul > li:hover:after, .lvca-grid-container ol > li:hover:before, .lvca-grid-container ol > li:hover:after, .lvca-grid-container ol > li > a:before, .lvca-grid-container ol > li > a:after, .lvca-grid-container ul > li > a:before, .lvca-grid-container ul > li > a:after, .lvca-grid-container ol > li > a:hover:before, .lvca-grid-container ol > li > a:hover:after, .lvca-grid-container ul > li > a:hover:before, .lvca-grid-container ul > li > a:hover:after, .lvca-grid-container img:before, .lvca-grid-container img:after {
+      display: none; }
+  .lvca-container a, .lvca-grid-container a {
+    text-decoration: initial; }
+  .lvca-container img, .lvca-grid-container img {
+    max-width: 100%;
+    width: auto;
+    height: auto; }
 
 /* ------- General styles ------------ */
 .lvca-container {

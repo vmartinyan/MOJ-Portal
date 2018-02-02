@@ -182,6 +182,11 @@ select:-ms-input-placeholder {
     color: #999;
     text-align: center;
     font-size: 14px; }
+  .ls-checkbox.locked {
+    opacity: 0.6; }
+    .ls-checkbox.locked:hover {
+      cursor: default;
+      background: inherit; }
   .ls-checkbox.small {
     width: 28px;
     height: 14px; }
@@ -2875,6 +2880,20 @@ div.ls-bulk-actions {
   margin-bottom: 6px !important; }
   .ls-slide-options .row-helper select, .ls-slide-options .row-helper input {
     margin-left: 5px; }
+
+#ls-layers .ls-custom-slide-properties {
+  margin: 7px 10px; }
+  #ls-layers .ls-custom-slide-properties td {
+    border: 0 !important; }
+  #ls-layers .ls-custom-slide-properties td:first-child {
+    width: 70px;
+    padding-right: 10px !important; }
+    #ls-layers .ls-custom-slide-properties td:first-child input {
+      width: 70px; }
+  #ls-layers .ls-custom-slide-properties td:last-child input {
+    width: 100%; }
+  #ls-layers .ls-custom-slide-properties input.error {
+    border: 1px solid #e11325; }
 
 .ls-slide-link a.change {
   display: none; }
