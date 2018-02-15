@@ -7,14 +7,14 @@ Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.6.15
+Version: 1.6.16
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.6.14';
+$EWD_UFAQ_Version = '1.6.16';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -172,6 +172,7 @@ function save_ufaq_error(){
 function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Toggle") == "") {update_option("EWD_UFAQ_Toggle", "Yes");}
 	if (get_option("EWD_UFAQ_Category_Toggle") == "") {update_option("EWD_UFAQ_Category_Toggle", "No");}
+	if (get_option("EWD_UFAQ_Category_Accordion") == "") {update_option("EWD_UFAQ_Category_Accordion", "No");}
 	if (get_option("EWD_UFAQ_Expand_Collapse_All") == "") {update_option("EWD_UFAQ_Expand_Collapse_All", "No");}
 	if (get_option("EWD_UFAQ_FAQ_Accordion") == "") {update_option("EWD_UFAQ_FAQ_Accordion", "No");}
 	if (get_option("EWD_UFAQ_Hide_Categories") == "") {update_option("EWD_UFAQ_Hide_Categories", "No");}
@@ -350,7 +351,5 @@ if ($EWD_UFAQ_Version != get_option('EWD_UFAQ_Version')) {
 	Set_EWD_UFAQ_Options();
 	EWD_UFAQ_Version_Update();
 }
-
-
 
 ?>

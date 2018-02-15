@@ -42,8 +42,13 @@ function ufaqSetClickHandlers() {
 
 	jQuery('.ufaq-faq-category-title-toggle').off('click').on('click', function(event) {
 		var category_id = jQuery(this).attr("data-categoryid");
+		var closed = jQuery('#ufaq-faq-category-body-'+category_id).hasClass("ufaq-faq-category-body-hidden");
+
+		if (jQuery(this).hasClass('ufaq-faq-category-title-accordion')) {
+			jQuery('.ufaq-faq-category-inner').addClass("ufaq-faq-category-body-hidden");
+		}
 		
-		if (jQuery('#ufaq-faq-category-body-'+category_id).hasClass("ufaq-faq-category-body-hidden")) {
+		if (closed) {
 			jQuery('#ufaq-faq-category-body-'+category_id).removeClass("ufaq-faq-category-body-hidden");
 		}
 		else {

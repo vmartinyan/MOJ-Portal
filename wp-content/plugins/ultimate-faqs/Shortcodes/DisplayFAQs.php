@@ -5,6 +5,7 @@ function Display_FAQs($atts) {
 	$Custom_CSS = get_option("EWD_UFAQ_Custom_CSS");
 	$FAQ_Toggle = get_option("EWD_UFAQ_Toggle");
 	$Category_Toggle = get_option("EWD_UFAQ_Category_Toggle");
+	$Category_Accordion = get_option("EWD_UFAQ_Category_Accordion");
 	$Expand_Collapse_All = get_option("EWD_UFAQ_Expand_Collapse_All");
 	$FAQ_Accordion = get_option("EWD_UFAQ_FAQ_Accordion");
 	$Hide_Categories = get_option("EWD_UFAQ_Hide_Categories");
@@ -263,9 +264,7 @@ function Display_FAQs($atts) {
 
 		if ($Category != "EWD_UFAQ_ALL_CATEGORIES" and $Category != 'uncategorized' and $FAQ_Query->post_count > 0) {
 			$ReturnString .= "<div class='ufaq-faq-category'>";
-			$ReturnString .= "<div class='ufaq-faq-category-title";
-			if ($Category_Toggle == "Yes") {$ReturnString .= " ufaq-faq-category-title-toggle";}
-			$ReturnString .= "' data-categoryid='" . $Category->term_id . "'>";
+			$ReturnString .= "<div class='ufaq-faq-category-title" . ($Category_Toggle == "Yes" ? " ufaq-faq-category-title-toggle" : "") . ($Category_Accordion == "Yes" ? " ufaq-faq-category-title-accordion" : "") . "' data-categoryid='" . $Category->term_id . "'>";
 			$ReturnString .= "<" . $UFAQ_Styling_Category_Heading_Type . ">" . $Category->name . ($Group_By_Category_Count == "Yes" ? " <span>(" . $FAQ_Query->post_count . ")" : "") . "</span></" . $UFAQ_Styling_Category_Heading_Type . ">";
 			$ReturnString .= "</div>";
 			$ReturnString .= "<div class='ufaq-faq-category-inner";

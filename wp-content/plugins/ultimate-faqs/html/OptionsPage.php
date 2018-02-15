@@ -2,6 +2,7 @@
 	$Custom_CSS = get_option("EWD_UFAQ_Custom_CSS");
 	$FAQ_Toggle = get_option("EWD_UFAQ_Toggle");
 	$FAQ_Category_Toggle = get_option("EWD_UFAQ_Category_Toggle");
+	$FAQ_Category_Accordion = get_option("EWD_UFAQ_Category_Accordion");
 	$Expand_Collapse_All = get_option("EWD_UFAQ_Expand_Collapse_All");
 	$FAQ_Accordion = get_option("EWD_UFAQ_FAQ_Accordion");
 	$Hide_Categories = get_option("EWD_UFAQ_Hide_Categories");
@@ -226,6 +227,16 @@
 	<label title='Yes'><input type='radio' name='faq_category_toggle' value='Yes' <?php if($FAQ_Category_Toggle == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='faq_category_toggle' value='No' <?php if($FAQ_Category_Toggle == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
 	<p>Should the FAQ categories hide/open when they are clicked, if FAQs are being grouped by category ("Group FAQs by Category" in the "Ordering" area)? </p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">FAQ Category Accordion</th>
+<td>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Category Accordion</span></legend>
+	<label title='Yes'><input type='radio' name='faq_category_accordion' value='Yes' <?php if($FAQ_Category_Accordion == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
+	<label title='No'><input type='radio' name='faq_category_accordion' value='No' <?php if($FAQ_Category_Accordion == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
+	<p>Should it only be possible to open one FAQ category at a time, if FAQ categories are being toggled ("FAQ Category Toggle" must be set to "Yes" above)? </p>
 	</fieldset>
 </td>
 </tr>

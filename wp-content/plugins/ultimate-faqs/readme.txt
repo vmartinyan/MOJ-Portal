@@ -266,8 +266,11 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.6.16 =
+- Added in an option to have the category toggles accordion
+
 = 1.6.15 =
-- Added in a option to let users submit custom fields along with their questions when using the submit question shortcode
+- Added in an option to let users submit custom fields along with their questions when using the submit question shortcode
 
 = 1.6.14 =
 - Fixed a deprecated function issue for PHP 7.2 users

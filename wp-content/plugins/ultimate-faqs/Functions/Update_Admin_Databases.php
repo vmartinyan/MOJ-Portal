@@ -27,6 +27,7 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['Options_Submit'])) {update_option('EWD_UFAQ_Custom_CSS', $Custom_CSS);}
     if (isset($_POST['faq_toggle'])) {update_option('EWD_UFAQ_Toggle', sanitize_text_field($_POST['faq_toggle']));}
     if (isset($_POST['faq_category_toggle'])) {update_option('EWD_UFAQ_Category_Toggle', sanitize_text_field($_POST['faq_category_toggle']));}
+    if (isset($_POST['faq_category_accordion'])) {update_option('EWD_UFAQ_Category_Accordion', sanitize_text_field($_POST['faq_category_accordion']));}
     if (isset($_POST['expand_collapse_all'])) {update_option('EWD_UFAQ_Expand_Collapse_All', sanitize_text_field($_POST['expand_collapse_all']));}
     if (isset($_POST['faq_accordion'])) {update_option('EWD_UFAQ_FAQ_Accordion', sanitize_text_field($_POST['faq_accordion']));}
     if (isset($_POST['faq_auto_complete_titles'])) {update_option('EWD_UFAQ_Auto_Complete_Titles', sanitize_text_field($_POST['faq_auto_complete_titles']));}
