@@ -1,19 +1,24 @@
 <?php
 /*
 Plugin Name: SSH SFTP Updater Support
-Plugin URI: http://phpseclib.sourceforge.net/wordpress.htm
-Description: Update your Wordpress blog / plugins via SFTP without libssh2
-Version: 0.7.2
+Plugin URI: https://wordpress.org/plugins/ssh-sftp-updater-support/
+Description: Update your WordPress blog / plugins via SFTP without libssh2
+Version: 0.7.3
 Author: TerraFrost
 Author URI: http://phpseclib.sourceforge.net/
 */
 
+if (!defined('ABSPATH')) die('No direct access allowed');
+
+define('SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH', plugin_dir_path(__FILE__));
+define('SSH_SFTP_UPDATER_SUPPORT_VERSION', '0.7.3');
+define('SSH_SFTP_UPDATER_SUPPORT_URL', plugin_dir_url(__FILE__));
 // see http://adambrown.info/p/wp_hooks/hook/<filter name>
 add_filter('filesystem_method', 'phpseclib_filesystem_method', 10, 2); // since 2.6 - WordPress will ignore the ssh option if the php ssh extension is not loaded
 add_filter('request_filesystem_credentials', 'phpseclib_request_filesystem_credentials', 10, 1024); // since 2.5 - Alter some strings and don't ask for the public key
 add_filter('fs_ftp_connection_types', 'phpseclib_fs_ftp_connection_types'); // since 2.9 - Add the SSH2 option to the connection options
 add_filter('filesystem_method_file', 'phpseclib_filesystem_method_file', 10, 2); // since 2.6 - Direct WordPress to use our ssh2 class
-if (version_compare(get_bloginfo('version'), '4.2.0') >= 0) // disable the modal dialog on Wordpress >= 4.2
+if (version_compare(get_bloginfo('version'), '4.2.0') >= 0) // disable the modal dialog on WordPress >= 4.2
 	add_action('admin_head-plugins.php', 'phpseclib_disable_update_link_onclick');
 
 function phpseclib_disable_update_link_onclick() {
@@ -253,3 +258,273 @@ submit_button( __( 'Proceed' ), 'button', 'upgrade' );
 <?php
 	return false;
 }
+
+// Check to make sure if SSH_SFTP_Updater_Support is already call and returns.
+if (!class_exists('SSH_SFTP_Updater_Support')) :
+
+class SSH_SFTP_Updater_Support {
+
+	private $template_directories;
+
+	protected static $_instance = null;
+	
+	protected static $_options_instance = null;
+
+	protected static $_notices_instance = null;
+
+	public function __construct() {
+		add_action('plugins_loaded', array($this, 'plugins_loaded'), 1);
+		add_action('admin_init', array($this, 'admin_init'));
+		add_action('wp_ajax_ssh_sftp_updater_support_ajax', array($this, 'ssh_sftp_updater_support_ajax_handler'));
+	}
+
+	public static function instance() {
+		if (empty(self::$_instance)) {
+			self::$_instance = new self();
+		}
+		return self::$_instance;
+	}
+	
+	public static function get_notices() {
+		if (empty(self::$_notices_instance)) {
+			if (!class_exists('SSH_SFTP_Updater_Support_Notices')) include_once(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH.'/includes/ssh-sftp-updater-support-notices.php');
+			self::$_notices_instance = new SSH_SFTP_Updater_Support_Notices();
+		}
+		return self::$_notices_instance;
+	}
+	
+	/**
+	 * Checks if this is the premium version and loads it. It also ensures that if the free version is installed then it is disabled with an appropriate error message.
+	 */
+	public function plugins_loaded() {
+		// Loads the language file.
+		load_plugin_textdomain('ssh-sftp-updater-support', false, dirname(plugin_basename(__FILE__)) . '/languages');
+	}
+	
+	/**
+	 * Gets an array of plugins active on either the current site, or site-wide
+	 *
+	 * @return Array - a list of plugin paths (relative to the plugin directory)
+	 */
+	private function get_active_plugins() {
+	
+		// Gets all active plugins on the current site
+		$active_plugins = get_option('active_plugins');
+
+		if (is_multisite()) {
+			$network_active_plugins = get_site_option('active_sitewide_plugins');
+			if (!empty($network_active_plugins)) {
+				$network_active_plugins = array_keys($network_active_plugins);
+				$active_plugins = array_merge($active_plugins, $network_active_plugins);
+			}
+		}
+		
+		return $active_plugins;
+	}
+	
+	/**
+	 * This function checks whether a specific plugin is installed, and returns information about it
+	 *
+	 * @param  string $name Specify "Plugin Name" to return details about it.
+	 * @return array        Returns an array of details such as if installed, the name of the plugin and if it is active.
+	 */
+	public function is_installed($name) {
+
+		// Needed to have the 'get_plugins()' function
+		include_once(ABSPATH.'wp-admin/includes/plugin.php');
+
+		// Gets all plugins available
+		$get_plugins = get_plugins();
+	
+		$active_plugins = $this->get_active_plugins();
+	
+		$plugin_info['installed'] = false;
+		$plugin_info['active'] = false;
+
+		// Loops around each plugin available.
+		foreach ($get_plugins as $key => $value) {
+			// If the plugin name matches that of the specified name, it will gather details.
+			if ($value['Name'] != $name) continue;
+			$plugin_info['installed'] = true;
+			$plugin_info['name'] = $key;
+			$plugin_info['version'] = $value['Version'];
+			if (in_array($key, $active_plugins)) {
+				$plugin_info['active'] = true;
+			}
+			break;
+		}
+		return $plugin_info;
+	}
+
+	public function admin_init() {
+		$pagenow = $GLOBALS['pagenow'];
+
+		$this->register_template_directories();
+
+		if (('index.php' == $pagenow && current_user_can('update_plugins')) || ('index.php' == $pagenow && defined('SSH_SFTP_UPDATER_SUPPORT_FORCE_DASHNOTICE') && SSH_SFTP_UPDATER_SUPPORT_FORCE_DASHNOTICE)) {
+			
+			$dismissed_until = get_site_option('ssh_sftp_updater_support_dismiss_dash_notice_until', 0);
+
+			if (file_exists(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH . '/index.html')) {
+				$installed = filemtime(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH . '/index.html');
+				$installed_for = (time() - $installed);
+			}
+			if (($installed && time() > $dismissed_until && $installed_for < (14 * 86400) && !defined('SSH_SFTP_UPDATER_SUPPORT_NOADS_B')) || (defined('SSH_SFTP_UPDATER_SUPPORT_FORCE_DASHNOTICE') && SSH_SFTP_UPDATER_SUPPORT_FORCE_DASHNOTICE)) {
+				add_action('all_admin_notices', array($this, 'show_admin_notice_upgradead'));
+			} else {
+				// These are not desired.
+				// add_action('all_admin_notices', array($this->get_notices(), 'do_notice'));
+			}
+		}
+	}
+
+	public function show_admin_notice_upgradead() {
+		$this->include_template('notices/thanks-for-using-main-dash.php');
+	}
+	
+	public function capability_required() {
+		return apply_filters('ssh_sftp_updater_support_capability_required', 'manage_options');
+	}
+	
+	public function ssh_sftp_updater_support_ajax_handler() {
+		$nonce = empty($_POST['nonce']) ? '' : $_POST['nonce'];
+
+		if (!wp_verify_nonce($nonce, 'ssh-sftp-updater-support-ajax-nonce') || empty($_POST['subaction'])) die('Security check');
+
+		$subaction = $_POST['subaction'];
+		$data = isset($_POST['data']) ? $_POST['data'] : null;
+
+		if (!current_user_can($this->capability_required())) die('Security check');
+
+		$results = array();
+
+		// Some commands that are available via AJAX only.
+		if ('dismiss_dash_notice_until' == $subaction) {
+			update_site_option('ssh_sftp_updater_support_dismiss_dash_notice_until', (time() + 366 * 86400));
+		} elseif ('dismiss_page_notice_until' == $subaction) {
+			update_site_option('ssh_sftp_updater_support_dismiss_page_notice_until', (time() + 84 * 86400));
+		}
+
+		echo json_encode($results);
+
+		die;
+	}
+	
+	private function wp_normalize_path($path) {
+		// Wp_normalize_path is not present before WP 3.9.
+		if (function_exists('wp_normalize_path')) return wp_normalize_path($path);
+		// Taken from WP 4.6.
+		$path = str_replace('\\', '/', $path);
+		$path = preg_replace('|(?<=.)/+|', '/', $path);
+		if (':' === substr($path, 1, 1)) {
+			$path = ucfirst($path);
+		}
+		return $path;
+	}
+	
+	public function get_templates_dir() {
+		return apply_filters('ssh_sftp_updater_support_templates_dir', $this->wp_normalize_path(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH.'/templates'));
+	}
+
+	public function get_templates_url() {
+		return apply_filters('ssh_sftp_updater_support_templates_url', SSH_SFTP_UPDATER_SUPPORT_URL.'/templates');
+	}
+
+	public function include_template($path, $return_instead_of_echo = false, $extract_these = array()) {
+		if ($return_instead_of_echo) ob_start();
+
+		if (preg_match('#^([^/]+)/(.*)$#', $path, $matches)) {
+			$prefix = $matches[1];
+			$suffix = $matches[2];
+			if (isset($this->template_directories[$prefix])) {
+				$template_file = $this->template_directories[$prefix].'/'.$suffix;
+			}
+		}
+
+		if (!isset($template_file)) {
+			$template_file = SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH.'/templates/'.$path;
+		}
+
+		$template_file = apply_filters('ssh_sftp_updater_support_template', $template_file, $path);
+
+		do_action('ssh_sftp_updater_support_before_template', $path, $template_file, $return_instead_of_echo, $extract_these);
+
+		if (!file_exists($template_file)) {
+			error_log("SSH SFTP Updater Support: template not found: ".$template_file);
+			echo __('Error:', 'ssh-sftp-updater-support').' '.__('template not found', 'ssh-sftp-updater-support')." (".$path.")";
+		} else {
+			extract($extract_these);
+			$wpdb = $GLOBALS['wpdb'];
+			$ssh_sftp_updater_support = $this;
+			$ssh_sftp_updater_support_notices = $this->get_notices();
+			include $template_file;
+		}
+
+		do_action('ssh_sftp_updater_support_after_template', $path, $template_file, $return_instead_of_echo, $extract_these);
+
+		if ($return_instead_of_echo) return ob_get_clean();
+	}
+
+	/**
+	 * Build a list of template directories (stored in self::$template_directories)
+	 */
+	private function register_template_directories() {
+
+		$template_directories = array();
+
+		$templates_dir = $this->get_templates_dir();
+
+		if ($dh = opendir($templates_dir)) {
+			while (($file = readdir($dh)) !== false) {
+				if ('.' == $file || '..' == $file) continue;
+				if (is_dir($templates_dir.'/'.$file)) {
+					$template_directories[$file] = $templates_dir.'/'.$file;
+				}
+			}
+			closedir($dh);
+		}
+
+		// Optimal hook for most extensions to hook into.
+		$this->template_directories = apply_filters('ssh_sftp_updater_support_template_directories', $template_directories);
+
+	}
+	
+	/**
+	 * This will customize a URL with a correct Affiliate link
+	 * This function can be update to suit any URL as longs as the URL is passed
+	 *
+	 * @param String  $url					  - URL to be check to see if it an updraftplus match.
+	 * @param String  $text					  - Text to be entered within the href a tags.
+	 * @param String  $html					  - Any specific HTML to be added.
+	 * @param String  $class				  - Specify a class for the href (including the attribute label)
+	 * @param Boolean $return_instead_of_echo - if set, then the result will be returned, not echo-ed.
+	 *
+	 * @return String|void
+	 */
+	public function ssh_sftp_updater_support_url($url, $text, $html = '', $class = '', $return_instead_of_echo = false) {
+		// Check if the URL is UpdraftPlus.
+		if (false !== strpos($url, '//updraftplus.com')) {
+			// Set URL with Affiliate ID.
+			$url = $url.'?ref='.$this->get_notices()->get_affiliate_id().'&source=sshsmtp';
+
+			// Apply filters.
+			$url = apply_filters('ssh_sftp_updater_support_updraftplus_com_link', $url);
+		}
+		// Return URL - check if there is HTML such as images.
+		if ('' != $html) {
+			$result = '<a '.$class.' href="'.esc_attr($url).'">'.$html.'</a>';
+		} else {
+			$result = '<a '.$class.' href="'.esc_attr($url).'">'.htmlspecialchars($text).'</a>';
+		}
+		if ($return_instead_of_echo) return $result;
+		echo $result;
+	}
+}
+
+function SSH_SFTP_Updater_Support() {
+	return SSH_SFTP_Updater_Support::instance();
+}
+
+endif;
+
+$GLOBALS['ssh_sftp_updater_support'] = SSH_SFTP_Updater_Support();

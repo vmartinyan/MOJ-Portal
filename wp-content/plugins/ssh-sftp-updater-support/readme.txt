@@ -1,10 +1,10 @@
 === SSH SFTP Updater Support ===
-Contributors: TerraFrost
+Contributors: TerraFrost, DavidAnderson
 Donate link: http://sourceforge.net/donate/index.php?group_id=198487
 Tags: ssh, sftp
 Requires at least: 3.1
-Tested up to: 4.9.1
-Stable tag: 0.7.2
+Tested up to: 4.9
+Stable tag: 0.7.3
 
 "SSH SFTP Updater Support" is the easiest way to keep your Wordpress installation up-to-date with SFTP.
 
@@ -18,6 +18,13 @@ Keeping your Wordpress install up-to-date and installing plugins in a hassle-fre
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 0.7.3 =
+
+* TWEAK: Update phpseclib to latest version (1.0.10)
+* TWEAK: Ship complete phpseclib library so that other plugins using it after we have loaded it don't have problems
+* TWEAK: Some minor internal re-factoring
+* TWEAK: Adds a dismissable (and won't reappear for 12 months) notice about other plugins users may be interested in.
 
 = 0.7.2 =
 * update phpseclib to latest version
@@ -56,3 +63,6 @@ Keeping your Wordpress install up-to-date and installing plugins in a hassle-fre
 
 = 0.1 =
 * Initial Release
+
+== Upgrade Notice ==
+* 1.14.4: Update phpseclib to latest version (1.0.10)
