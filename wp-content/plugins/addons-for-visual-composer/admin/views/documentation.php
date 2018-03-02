@@ -1210,6 +1210,12 @@ else {
 
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
+                <h3>1.8.2</h3>
+                <ul>
+                    <li>Fixed – Livemesh Grid columns can break in certain resolutions in FireFox.</li>
+                    <li>Fixed - The piechart value is not being rounded.</li>
+                    <li>Fixed - The post grid and posts carousel date format not reflecting the user preference specified in Settings page.</li>
+                </ul>
                 <h3>1.8.1</h3>
                 <ul>
                     <li>Fixed – Some themes have trouble rendering grid columns</li>

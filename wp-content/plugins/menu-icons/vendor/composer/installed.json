@@ -6,15 +6,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Codeinwp/themeisle-sdk.git",
-            "reference": "ae69f3966081f0a7c7c468c00275c411cc0be063"
+            "reference": "9d866559c6090f0e7e70fe3e5a4be8672461a11a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/ae69f3966081f0a7c7c468c00275c411cc0be063",
-            "reference": "ae69f3966081f0a7c7c468c00275c411cc0be063",
+            "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/9d866559c6090f0e7e70fe3e5a4be8672461a11a",
+            "reference": "9d866559c6090f0e7e70fe3e5a4be8672461a11a",
             "shasum": ""
         },
-        "time": "2018-01-04 13:30:43",
+        "time": "2018-02-16 16:31:29",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -85,7 +85,8 @@
             "icons",
             "plugin",
             "wordpress"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "kucrut/menu-item-custom-fields",

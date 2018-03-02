@@ -97,9 +97,9 @@ class LVCA_Piecharts {
         <div class="lvca-piechart <?php echo $column_style; ?>">
 
             <div class="lvca-percentage" <?php echo $bar_color; ?> <?php echo $track_color; ?>
-                 data-percent="<?php echo intval($percentage); ?>">
+                 data-percent="<?php echo round($percentage); ?>">
 
-                <span><?php echo intval($percentage); ?><sup>%</sup></span>
+                <span><?php echo round($percentage); ?><sup>%</sup></span>
 
             </div>
 

@@ -7,14 +7,14 @@ Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.6.16
+Version: 1.6.17
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.6.16';
+$EWD_UFAQ_Version = '1.6.17';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -38,28 +38,31 @@ function EWD_UFAQ_Enable_Sub_Menu() {
 	global $submenu;
 
 	$Admin_Approval = get_option("EWD_UFAQ_Admin_Approval");
+	$Access_Role = get_option("UPCP_Access_Role");
+
+	if ($Access_Role == "") {$Access_Role = "edit_posts";}
 
 	remove_menu_page('edit.php?post_type=ufaq');
 
-	add_menu_page( 'Ultimate FAQs', 'FAQs', 'edit_posts', 'EWD-UFAQ-Options', 'EWD_UFAQ_Output_Pages', 'dashicons-format-chat', '49.1' );
-	add_submenu_page('EWD-UFAQ-Options', 'FAQ Options', 'FAQ Settings', 'edit_posts', 'EWD-UFAQ-Options&DisplayPage=Options', 'EWD_UFAQ_Output_Pages');
+	add_menu_page( 'Ultimate FAQs', 'FAQs', $Access_Role, 'EWD-UFAQ-Options', 'EWD_UFAQ_Output_Pages', 'dashicons-format-chat', '49.1' );
+	add_submenu_page('EWD-UFAQ-Options', 'FAQ Options', 'FAQ Settings', $Access_Role, 'EWD-UFAQ-Options&DisplayPage=Options', 'EWD_UFAQ_Output_Pages');
 	if ($Admin_Approval == "Yes") {
 		$submenu['EWD-UFAQ-Options'][6] = $submenu['EWD-UFAQ-Options'][1];
-		$submenu['EWD-UFAQ-Options'][1] = array( 'Approved FAQs', 'edit_posts', "edit.php?post_type=ufaq&post_status=publish", "Approved FAQs" );
-		$submenu['EWD-UFAQ-Options'][2] = array( 'Awaiting Approval', 'edit_posts', "edit.php?post_type=ufaq&post_status=draft", "Awaiting Approval" );
-		$submenu['EWD-UFAQ-Options'][3] = array( 'Add New', 'edit_posts', "post-new.php?post_type=ufaq", "Add New" );
-		$submenu['EWD-UFAQ-Options'][4] = array( 'FAQ Categories', 'manage_categories', "edit-tags.php?taxonomy=ufaq-category&post_type=ufaq", "FAQ Categories" );
-		$submenu['EWD-UFAQ-Options'][5] = array( 'FAQ Tags', 'manage_categories', "edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq", "FAQ Tags" );
+		$submenu['EWD-UFAQ-Options'][1] = array( 'Approved FAQs', $Access_Role, "edit.php?post_type=ufaq&post_status=publish", "Approved FAQs" );
+		$submenu['EWD-UFAQ-Options'][2] = array( 'Awaiting Approval', $Access_Role, "edit.php?post_type=ufaq&post_status=draft", "Awaiting Approval" );
+		$submenu['EWD-UFAQ-Options'][3] = array( 'Add New', $Access_Role, "post-new.php?post_type=ufaq", "Add New" );
+		$submenu['EWD-UFAQ-Options'][4] = array( 'FAQ Categories', $Access_Role, "edit-tags.php?taxonomy=ufaq-category&post_type=ufaq", "FAQ Categories" );
+		$submenu['EWD-UFAQ-Options'][5] = array( 'FAQ Tags', $Access_Role, "edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq", "FAQ Tags" );
 	}
 	else {
 		$submenu['EWD-UFAQ-Options'][5] = $submenu['EWD-UFAQ-Options'][1];
-		$submenu['EWD-UFAQ-Options'][1] = array( 'FAQs', 'edit_posts', "edit.php?post_type=ufaq", "FAQs" );
-		$submenu['EWD-UFAQ-Options'][2] = array( 'Add New', 'edit_posts', "post-new.php?post_type=ufaq", "Add New" );
-		$submenu['EWD-UFAQ-Options'][3] = array( 'FAQ Categories', 'manage_categories', "edit-tags.php?taxonomy=ufaq-category&post_type=ufaq", "FAQ Categories" );
-		$submenu['EWD-UFAQ-Options'][4] = array( 'FAQ Tags', 'manage_categories', "edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq", "FAQ Tags" );
+		$submenu['EWD-UFAQ-Options'][1] = array( 'FAQs', $Access_Role, "edit.php?post_type=ufaq", "FAQs" );
+		$submenu['EWD-UFAQ-Options'][2] = array( 'Add New', $Access_Role, "post-new.php?post_type=ufaq", "Add New" );
+		$submenu['EWD-UFAQ-Options'][3] = array( 'FAQ Categories', $Access_Role, "edit-tags.php?taxonomy=ufaq-category&post_type=ufaq", "FAQ Categories" );
+		$submenu['EWD-UFAQ-Options'][4] = array( 'FAQ Tags', $Access_Role, "edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq", "FAQ Tags" );
 	}
-	add_submenu_page('EWD-UFAQ-Options', 'FAQ Export', 'FAQ Export', 'edit_posts', 'EWD-UFAQ-Options&DisplayPage=Export', 'EWD_UFAQ_Output_Pages');
-	add_submenu_page('EWD-UFAQ-Options', 'FAQ Import', 'FAQ Import', 'edit_posts', 'EWD-UFAQ-Options&DisplayPage=ImportPosts', 'EWD_UFAQ_Output_Pages');
+	add_submenu_page('EWD-UFAQ-Options', 'FAQ Export', 'FAQ Export', $Access_Role, 'EWD-UFAQ-Options&DisplayPage=Export', 'EWD_UFAQ_Output_Pages');
+	add_submenu_page('EWD-UFAQ-Options', 'FAQ Import', 'FAQ Import', $Access_Role, 'EWD-UFAQ-Options&DisplayPage=ImportPosts', 'EWD_UFAQ_Output_Pages');
 
 	$submenu['EWD-UFAQ-Options'][0][0] = "Dashboard";
 	ksort($submenu['EWD-UFAQ-Options']);
@@ -186,6 +189,7 @@ function Set_EWD_UFAQ_Options() {
 	if (get_option("EWD_UFAQ_Permalink_Type") == "") {update_option("EWD_UFAQ_Permalink_Type", "SamePage");}
 	if (get_option("EWD_UFAQ_Show_TinyMCE") == "") {update_option("EWD_UFAQ_Show_TinyMCE", "Yes");}
 	if (get_option("EWD_UFAQ_Comments_On") == "") {update_option("EWD_UFAQ_Comments_On", "Yes");}
+	if (get_option("EWD_UFAQ_Access_Role") == "") {update_option("EWD_UFAQ_Access_Role", "edit_posts");}
 
 	if (get_option("EWD_UFAQ_Display_Style") == "") {update_option("EWD_UFAQ_Display_Style", "Default");}
 	if (get_option("EWD_UFAQ_Color_Block_Shape") == "") {update_option("EWD_UFAQ_Color_Block_Shape", "Square");}

@@ -266,6 +266,9 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.6.17 =
+- Added an option to change who has access to the FAQ admin area
+
 = 1.6.16 =
 - Added in an option to have the category toggles accordion
 

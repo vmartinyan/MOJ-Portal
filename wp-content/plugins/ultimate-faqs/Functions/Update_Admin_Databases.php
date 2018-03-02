@@ -17,6 +17,8 @@ function EWD_UFAQ_UpdateOptions() {
 
     if ( ! wp_verify_nonce( $_POST['EWD_UFAQ_Save_Options_Nonce'], 'EWD_UFAQ_Save_Options' ) ) {return;}
 
+    if (get_option("EWD_UFAQ_Access_Role") != '' and !current_user_can(get_option("EWD_UFAQ_Access_Role"))) {return;}
+
     $Custom_CSS = (isset($_POST['custom_css']) ? EWD_UFAQ_Validate_CSS($_POST['custom_css']) : null);
     $Social_Media_Array = (isset($_POST['Socialmedia']) ? $_POST['Socialmedia'] : array());
     array_walk($Social_Media_Array, 'sanitize_text_field');
@@ -42,6 +44,7 @@ function EWD_UFAQ_UpdateOptions() {
     if (isset($_POST['permalink_type'])) {update_option('EWD_UFAQ_Permalink_Type', sanitize_text_field($_POST['permalink_type']));}
     if (isset($_POST['show_tinymce'])) {update_option('EWD_UFAQ_Show_TinyMCE', sanitize_text_field($_POST['show_tinymce']));}
     if (isset($_POST['comments_on'])) {update_option('EWD_UFAQ_Comments_On', sanitize_text_field($_POST['comments_on']));}
+    if (isset($_POST['access_role'])) {update_option('EWD_UFAQ_Access_Role', sanitize_text_field($_POST['access_role']));}
 
     if (isset($_POST['display_style']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Display_Style',  sanitize_text_field($_POST['display_style']));}
     if (isset($_POST['color_block_shape']) and $UFAQ_Full_Version == "Yes") {update_option('EWD_UFAQ_Color_Block_Shape',  sanitize_text_field($_POST['color_block_shape']));}

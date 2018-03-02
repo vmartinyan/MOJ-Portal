@@ -16,6 +16,7 @@
 	$Permalink_Type = get_option("EWD_UFAQ_Permalink_Type");
 	$Show_TinyMCE = get_option("EWD_UFAQ_Show_TinyMCE");
 	$Comments_On = get_option("EWD_UFAQ_Comments_On");
+	$Access_Role = get_option("EWD_UFAQ_Access_Role");
 
 	$Display_Style = get_option("EWD_UFAQ_Display_Style");
 	$Color_Block_Shape = get_option("EWD_UFAQ_Color_Block_Shape");
@@ -204,6 +205,22 @@
 	</fieldset>
 </td>
 </tr>
+<tr>
+	<th scope="row"><?php _e("Set Access Role", 'ultimate-faqs')?> <br/>
+	</th>
+	<td>
+		<fieldset><legend class="screen-reader-text"><span>Set Access Role</span></legend>
+		<label title='Access Role'></label><select name='access_role'>
+			<option value="administrator"<?php if($Access_Role == "administrator") {echo " selected=selected";} ?>>Administrator</option>
+			<option value="delete_others_pages"<?php if($Access_Role == "delete_others_pages") {echo " selected=selected";} ?>>Editor</option>
+			<option value="delete_published_posts"<?php if($Access_Role == "delete_published_posts") {echo " selected=selected";} ?>>Author</option>
+			<option value="delete_posts"<?php if($Access_Role == "edit_posts") {echo " selected=selected";} ?>>Contributor</option>
+			<option value="read"<?php if($Access_Role == "read") {echo " selected=selected";} ?>>Subscriber</option>
+		</select>
+		<p><?php _e("Which level of user should have access to FAQs, Settings, etc.?", 'ultimate-faqs')?></p>
+		</fieldset>
+	</td>
+	</tr>
 </table>
 
 <br />

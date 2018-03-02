@@ -135,7 +135,7 @@ if (!function_exists('lvca_entry_published')) {
     function lvca_entry_published($format = null) {
 
         if (empty($format))
-            $format = esc_html__("M d, Y", 'livemesh-vc-addons');
+            $format = get_option('date_format');
 
         $published = '<span class="published"><abbr title="' . sprintf(get_the_time(esc_html__('l, F, Y, g:i a', 'livemesh-vc-addons'))) . '">' . sprintf(get_the_time($format)) . '</abbr></span>';
 

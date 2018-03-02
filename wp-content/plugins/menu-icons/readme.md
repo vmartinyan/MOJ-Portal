@@ -1,5 +1,5 @@
-# Menu Icons #
-**Contributors:** [kucrut](https://profiles.wordpress.org/kucrut), [joshuairl](https://profiles.wordpress.org/joshuairl), [codeinwp](https://profiles.wordpress.org/codeinwp), [themeisle](https://profiles.wordpress.org/themeisle)  
+# Menu Icons by ThemeIsle #
+**Contributors:** [codeinwp](https://profiles.wordpress.org/codeinwp), [themeisle](https://profiles.wordpress.org/themeisle)  
 **Tags:** menu, nav-menu, icons, navigation  
 **Requires at least:** 4.3  
 **Tested up to:** 4.9  
@@ -44,6 +44,12 @@ https://www.youtube.com/watch?v=YcSotWXIczI
 Menu icons works with most of the themes out there, especially with popular ones like Twenty Seventeen or [Hestia](https://themeisle.com/themes/hestia/).
 
 Development of this plugin is done on [GitHub](https://github.com/codeinwp/wp-menu-icons). **Pull requests welcome**. Please see [issues reported](https://github.com/codeinwp/wp-menu-icons/issues) there before going to the plugin forum.
+
+## If you like this plugin, then consider checking out our other projects: ##
+
+[CodeinWP Blog](https://codeinwp.com/blog/) – Designer's Guide To WordPress
+[Revive.Social](https://revive.social) – Social Media Tools
+[JustFreeThemes](https://justfreethemes.com) - Free WordPress Themes directory
 
 
 
@@ -218,6 +224,11 @@ Add this block of code to your [mu-plugin file](http://codex.wordpress.org/Must_
 Read [this blog post](http://kucrut.org/add-custom-image-sizes-right-way/).
 
 ## Changelog ##
+### 0.11.1 - 2018-02-24  ###
+
+* Add recommendation boxes in the menu icon popup.
+
+
 ### 0.11.0 - 2018-01-05  ###
 
 * Change ownership to ThemeIsle.
