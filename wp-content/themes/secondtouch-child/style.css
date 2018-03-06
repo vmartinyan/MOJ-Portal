@@ -378,6 +378,70 @@ a[rel~="wp-video-lightbox"] {
     list-style-type:lower-alpha;
 }
 
+.tbpressRU tr td:nth-child(4) .price-item  ol,
+.tbpressRU tr td:nth-child(3) ol{
+    list-style-type:none; 
+    margin-left: -3px;
+}
+
+
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(1)::before { content: 'а) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(2)::before { content: 'б) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(3)::before { content: 'в) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(4)::before { content: 'г) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(5)::before { content: 'д) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(6)::before { content: 'е) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(7)::before { content: 'ж) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(8)::before { content: 'з) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(9)::before { content: 'и) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(10)::before { content: 'к) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(11)::before { content: 'л) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(12)::before { content: 'м) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(13)::before { content: 'н) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(14)::before { content: 'о) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(15)::before { content: 'п) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(16)::before { content: 'р) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(17)::before { content: 'с) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(18)::before { content: 'т) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(19)::before { content: 'у) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(20)::before { content: 'ф) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(21)::before { content: 'х) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(22)::before { content: 'ц) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(23)::before { content: 'ч) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(24)::before { content: 'ш) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(25)::before { content: 'э) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(26)::before { content: 'ю) '; }
+.tbpressRU tr td:nth-child(4) .price-item  ol li:nth-child(27)::before { content: 'я) '; }
+
+
+.tbpressRU tr td:nth-child(3) ol li:nth-child(1)::before { content: 'а) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(2)::before { content: 'б) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(3)::before { content: 'в) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(4)::before { content: 'г) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(5)::before { content: 'д) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(6)::before { content: 'е) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(7)::before { content: 'ж) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(8)::before { content: 'з) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(9)::before { content: 'и) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(10)::before { content: 'к) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(11)::before { content: 'л) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(12)::before { content: 'м) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(13)::before { content: 'н) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(14)::before { content: 'о) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(15)::before { content: 'п) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(16)::before { content: 'р) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(17)::before { content: 'с) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(18)::before { content: 'т) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(19)::before { content: 'у) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(20)::before { content: 'ф) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(21)::before { content: 'х) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(22)::before { content: 'ц) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(23)::before { content: 'ч) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(24)::before { content: 'ш) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(25)::before { content: 'э) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(26)::before { content: 'ю) '; }
+.tbpressRU tr td:nth-child(3) ol li:nth-child(27)::before { content: 'я) '; }
+
 .dataTables_length select {
     padding: 4px;
 }
