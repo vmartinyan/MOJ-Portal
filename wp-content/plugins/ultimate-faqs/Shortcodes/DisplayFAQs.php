@@ -80,6 +80,7 @@ function Display_FAQs($atts) {
 			'exclude_category' => "",
 			'include_category_ids' => "",
 			'exclude_category_ids' => "",
+			'include_category_children' => "Yes",
 			'no_comments' => "",
 			'orderby' => "",
 			'order' => "",
@@ -133,6 +134,8 @@ function Display_FAQs($atts) {
 	if ($post__in != "" and $Category_Array[0] != "EWD_UFAQ_ALL_CATEGORIES") {$Category_Array[] = "uncategorized";}
 
 	if (isset($_GET['include_category'])) {$include_category = $_GET['include_category'];}
+	if ($include_category_children == "No") {$include_children = false;}
+	else {$include_children = true;}
 	if (get_query_var('ufaq_category_slug') != "") {$include_category = get_query_var('ufaq_category_slug');}
 	if ($include_category_ids != "" ) {$include_category_ids_array = explode(",", $include_category_ids);}
 	if ($include_category_ids != "") {
@@ -147,7 +150,8 @@ function Display_FAQs($atts) {
 	if (sizeOf($include_category_array) > 0) {
 		$include_category_filter_array = array( 'taxonomy' => 'ufaq-category',
 								'field' => 'slug',
-								'terms' => $include_category_array
+								'terms' => $include_category_array,
+								'include_children' => $include_children
 		);
 	}
 	if ($exclude_category_ids != "" ) {$exclude_category_ids_array = explode(",", $exclude_category_ids);}
@@ -164,7 +168,8 @@ function Display_FAQs($atts) {
 		$exclude_category_filter_array = array( 'taxonomy' => 'ufaq-category',
 								'field' => 'slug',
 								'terms' => $exclude_category_array,
-								'operator' => 'NOT IN'
+								'operator' => 'NOT IN',
+								'include_children' => $include_children
 		);
 	}
 
@@ -264,15 +269,15 @@ function Display_FAQs($atts) {
 
 		if ($Category != "EWD_UFAQ_ALL_CATEGORIES" and $Category != 'uncategorized' and $FAQ_Query->post_count > 0) {
 			$ReturnString .= "<div class='ufaq-faq-category'>";
-			$ReturnString .= "<div class='ufaq-faq-category-title" . ($Category_Toggle == "Yes" ? " ufaq-faq-category-title-toggle" : "") . ($Category_Accordion == "Yes" ? " ufaq-faq-category-title-accordion" : "") . "' data-categoryid='" . $Category->term_id . "'>";
+			$ReturnString .= "<div class='ufaq-faq-category-title" . ($Category_Toggle == "Yes" ? " ufaq-faq-category-title-toggle" : "") . ($Category_Accordion == "Yes" ? " ufaq-faq-category-title-accordion" : "") . "' data-categoryid='" . $Category->term_id . "-" . $Unique_ID . "'>";
 			$ReturnString .= "<" . $UFAQ_Styling_Category_Heading_Type . ">" . $Category->name . ($Group_By_Category_Count == "Yes" ? " <span>(" . $FAQ_Query->post_count . ")" : "") . "</span></" . $UFAQ_Styling_Category_Heading_Type . ">";
 			$ReturnString .= "</div>";
 			$ReturnString .= "<div class='ufaq-faq-category-inner";
 			if ($Category_Toggle == "Yes") {$ReturnString .= " ufaq-faq-category-body-hidden";}
-			$ReturnString .= "' id='ufaq-faq-category-body-" . $Category->term_id . "'>";
+			$ReturnString .= "' id='ufaq-faq-category-body-" . $Category->term_id . "-" . $Unique_ID . "'>";
 
 			$HeaderString .= "<div class='ufaq-faq-header-category'>";
-			$HeaderString .= "<div class='ufaq-faq-header-category-title' data-categoryid='" . $Category->term_id . "'>";
+			$HeaderString .= "<div class='ufaq-faq-header-category-title' data-categoryid='" . $Category->term_id . "-" . $Unique_ID . "'>";
 			$HeaderString .= "<" . $UFAQ_Styling_Category_Heading_Type . ">" . $Category->name . "</" . $UFAQ_Styling_Category_Heading_Type . ">";
 			$HeaderString .= "</div>";
 	    }

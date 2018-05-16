@@ -23,7 +23,6 @@ function cf7_style_admin_scripts($hook){
 		wp_enqueue_script( 'media-upload' );
 	}
 	if( 'plugins.php'== $hook || 'cf7_style' == $post_type || 'toplevel_page_wpcf7' == $hook || 'cf7_style_page_cf7style-css-editor' == $hook || 'cf7_style_page_system-status' == $hook || 'cf7_style_page_cf7style-settings' == $hook ){
-		/*wp_enqueue_style('cf7-style-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');*/
 		wp_enqueue_style( "cf7-style-fontello-ie7", WPCF7S_LOCATION . "admin/css/fontello-ie7.css", false, WPCF7S_PLUGIN_VER, "all"); 
 		wp_enqueue_style( "cf7-style-fontello", WPCF7S_LOCATION . "admin/css/fontello.css", false, WPCF7S_PLUGIN_VER, "all"); 
 		wp_enqueue_style( "cf7-style-admin-style", WPCF7S_LOCATION . "admin/css/admin.css", false, WPCF7S_PLUGIN_VER, "all");  

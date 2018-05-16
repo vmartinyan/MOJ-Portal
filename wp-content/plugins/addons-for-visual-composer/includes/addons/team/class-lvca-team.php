@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Team Members
+Widget Name: Team Members
 Description: Display a list of your team members optionally in a multi-column grid.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -164,12 +164,12 @@ class LVCA_Team {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Team", "livemesh-vc-addons"),
+                "name" => __("Team Members", "livemesh-vc-addons"),
                 "base" => "lvca_team",
                 "as_parent" => array('only' => 'lvca_team_member'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Create team members.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -212,12 +212,12 @@ class LVCA_Team {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Team Member", "my-text-domain"),
+                    "name" => __("Team Member", "my-text-domain"),
                     "base" => "lvca_team_member",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_team'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-team-member',
-                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                    "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                     "params" => array(
                         // add params same as with any other content element
                         array(

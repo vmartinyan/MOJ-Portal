@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Testimonials
+Widget Name: Testimonials
 Description: Display testimonials from your clients/customers in a multi-column grid.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -115,12 +115,12 @@ class LVCA_Testimonials {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Testimonials", "livemesh-vc-addons"),
+                "name" => __("Testimonials", "livemesh-vc-addons"),
                 "base" => "lvca_testimonials",
                 "as_parent" => array('only' => 'lvca_testimonial'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display testimonials in a multi-column grid.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -147,12 +147,12 @@ class LVCA_Testimonials {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Testimonial", "my-text-domain"),
+                    "name" => __("Testimonial", "my-text-domain"),
                     "base" => "lvca_testimonial",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_testimonials'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-testimonial',
-                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                    "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                     "params" => array(
                         // add params same as with any other content element
                         array(

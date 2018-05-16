@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Tabs
+Widget Name: Tabs
 Description: Display tabbed content in variety of styles.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -225,12 +225,12 @@ class LVCA_Tabs {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Tabs", "livemesh-vc-addons"),
+                "name" => __("Tabs", "livemesh-vc-addons"),
                 "base" => "lvca_tabs",
                 "as_parent" => array('only' => 'lvca_tab'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => false,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display tabbed content in variety of styles.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -290,7 +290,7 @@ class LVCA_Tabs {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Tab", "my-text-domain"),
+                    "name" => __("Tab", "my-text-domain"),
                     "base" => "lvca_tab",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_tabs'), // Use only|except attributes to limit parent (separate multiple values with comma)

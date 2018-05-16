@@ -3,8 +3,8 @@ Contributors: shazdeh
 Plugin Name: Widget Shortcode
 Tags: widget, shortcode, theme, admin
 Requires at least: 3.0
-Tested up to: 4.7
-Stable tag: 0.3.0
+Tested up to: 4.9.4
+Stable tag: 0.3.2
 
 Adds [widget] shortcode which enables you to output widgets anywhere you like.
 
@@ -37,6 +37,9 @@ Additional Parameters:
 
 == Changelog ==
 
+= 0.3.2 =
+* Fix bug with getting correct widget instance. Thanks @frankieandshadow!
+
 = 0.3.0 =
 * Fix possible notice message
 
@@ -44,10 +47,10 @@ Additional Parameters:
 * Fix notice messages regarding unregistered widgets
 
 = 0.2.8 =
-* Fix bug where widget titles do not show. Thanks websitedons!
+* Fix bug where widget titles do not show. Thanks @websitedons!
 
 = 0.2.7 =
-* update how the shortcode code is displayed to avoid potential problems; thanks websitedons!
+* update how the shortcode code is displayed to avoid potential problems; thanks @websitedons!
 
 = 0.2.6 =
 * Fix for possible notice message

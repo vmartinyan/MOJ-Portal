@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Odometers
+Widget Name: Odometers
 Description: Display one or more animated odometer statistics in a multi-column grid.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -146,12 +146,12 @@ class LVCA_Odometers {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Odometers", "livemesh-vc-addons"),
+                "name" => __("Odometers", "livemesh-vc-addons"),
                 "base" => "lvca_odometers",
                 "as_parent" => array('only' => 'lvca_odometer_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display odometers in a multi-column grid.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -179,7 +179,7 @@ class LVCA_Odometers {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Odometer", "my-text-domain"),
+                    "name" => __("Odometer", "my-text-domain"),
                     "base" => "lvca_odometer_item",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_odometers'), // Use only|except attributes to limit parent (separate multiple values with comma)

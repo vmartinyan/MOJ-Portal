@@ -51,7 +51,7 @@ class init_sections_register_fields {
         add_filter( 'admin_init' , array( $this , 'register_new_fields' ) );
     }
     function cf7style_render_checkbox( $option, $args, $description, $tulip ){
-        $tulip = $tulip ? '<div class="cf7style-tooltip" title="more info"><i class="fa fa-question-circle" aria-hidden="true"></i><div class="cf7style-tooltip-content">'.$tulip.'<div/></div>' : '';
+        $tulip = $tulip ? '<div class="cf7style-tooltip" title="more info"><i class="fa fa-question-circle" aria-hidden="true">?</i><div class="cf7style-tooltip-content">'.$tulip.'<div/></div>' : '';
         return '<label><input type="checkbox" value="1" '.checked( 1, $option,false).' id="'.$args[0].'[' . $args[0] . ']" name="'.$args[0].'" />'.__( $description, 'contact-form-7-style' ).'</label>'.$tulip;
     }
     function cf7style_collection_structure( $args ) {
@@ -106,6 +106,20 @@ class init_sections_register_fields {
         return $html;
     }
 
+    function cf7style_adminbar_structure( $args ) {
+        $html = "";
+        $html .= '</tr>';
+        $html .= '<tr><td colspan="2">';
+        $option = get_option( $args[0] );
+        if( isset( $_POST[ 'cf7_style_adminbar' ] ) ) {
+            update_option( 'cf7_style_adminbar', '1' );
+
+        }
+        $html .= $this->cf7style_render_checkbox( $option, $args, 'Add Contact Form 7 Style in the adminbar', '' );
+        $html .= '</td></tr><tr><td colspan="2">';
+        return $html;
+    }
+
     function register_new_fields() {
         add_settings_section(  
             'cf7styleeditor',
@@ -128,6 +142,7 @@ class init_sections_register_fields {
             'cf7_style_deleted' =>  __('Import predefined Contact Form 7 Style templates', 'contact-form-7-style'),
             'cf7_style_form_tooltip'   => __( 'Display form edit tooltip on frontend?', 'contact-form-7-style' ),
             'cf7_style_forcecss'   => __( 'Active theme overrides your form styling?', 'contact-form-7-style' ),
+            'cf7_style_adminbar'   => __( 'Display Contact Form 7 Style in admin bar?', 'contact-form-7-style' )
             );
         foreach ( $set_fields as $field => $value ) {
                     add_settings_field(
@@ -158,13 +173,14 @@ class init_sections_register_fields {
 
             if(isset( $_POST[ $args[0] ] )){
                 update_option( $args[0],  1  );
+                echo "<script>location.reload();</script>";
             } else {
                 if(isset($_POST[ 'cf7styletracking' ])){
                     update_option( $args[0],  0  );
                 }
                 if( isset( $_POST['cf7_style_form_tooltip'] ) ) {
                     update_option( $args[0], 0 );
-                }    
+                }
             }
         switch($args[0]) {
             case 'cf7_style_allow_tracking' : 
@@ -179,7 +195,11 @@ class init_sections_register_fields {
             case 'cf7_style_forcecss' :
                 echo $this->cf7style_forcecss_structure( $args );
             break;
+            case 'cf7_style_adminbar' :
+                echo $this->cf7style_adminbar_structure( $args );
+            break;
         }
+
     }
     function text_inputs( $args ) {
         if ( isset( $_POST[ $args[0] ] ) ) {

@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Testimonials Slider
+Widget Name: Testimonials Slider
 Description: Display responsive touch friendly slider of testimonials from clients/customers.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -139,12 +139,12 @@ class LVCA_Testimonials_Slider {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Testimonials Slider", "livemesh-vc-addons"),
+                "name" => __("Testimonials Slider", "livemesh-vc-addons"),
                 "base" => "lvca_testimonials_slider",
                 "as_parent" => array('only' => 'lvca_testimonial_slide'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Capture client testimonials in a slider.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -210,12 +210,12 @@ class LVCA_Testimonials_Slider {
             $testimonial_params = vc_map_integrate_shortcode('lvca_testimonial', '', __('Testimonials', 'livemesh-vc-addons'));
 
             vc_map(array(
-                    "name" => __("Livemesh Testimonial Slide", "livemesh-vc-addons"),
+                    "name" => __("Testimonial Slide", "livemesh-vc-addons"),
                     "base" => "lvca_testimonial_slide",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_testimonials_slider'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-testimonials-slide',
-                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                    "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                     "params" => $testimonial_params
                 )
 

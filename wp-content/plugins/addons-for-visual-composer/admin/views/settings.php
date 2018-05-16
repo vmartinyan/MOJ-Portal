@@ -134,7 +134,7 @@ $deactivate_element_testimonials_slider = lvca_get_option('lvca_deactivate_eleme
 
                 <div class="lvca-tab-content elements">
 
-                    <!---- Auto activate VC Addons -->
+                    <!---- Auto activate WPBakery Addons -->
                     <div class="lvca-box-side">
 
                         <h3><?php echo __('Optimize Plugin', 'livemesh-vc-addons') ?></h3>
@@ -461,32 +461,32 @@ $deactivate_element_testimonials_slider = lvca_get_option('lvca_deactivate_eleme
 
                             <label class="lvca-label">New Premium Widgets</label>
 
-                            <p>Although the free version of the Addons for Visual Composer features a large repertoire of
+                            <p>Although the free version of the Addons for WPBakery Page Builder features a large repertoire of
                                 premium quality elements with its numerous styles, the premium version does even more.</p>
 
                             <ul>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/" title="Post Blocks Addon" target="_blank">Post
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/posts-block/" title="Post Blocks Addon" target="_blank">Post
                                         Blocks!</a> - Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering,
                                     pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and
                                     their categories without reloading the page.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/sliders/" title="Image Slider Widget" target="_blank">Image
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/sliders/" title="Image Slider Widget" target="_blank">Image
                                         Slider</a> - Create a responsive slider of images with support
                                     for captions,
                                     multiple slider types like Nivo, Flex, Slick and lightweight sliders, thumbnail
                                     navigation etc.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/image-gallery/" title="Image Gallery Widget" target="_blank">Image
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/image-gallery/" title="Image Gallery Widget" target="_blank">Image
                                         Gallery</a> - Create a gallery of images with options for masonry
                                     or fit rows, pagination, lazy load, lightbox support etc.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/video-gallery/" title="Video Gallery Widget" target="_blank">Video
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/video-gallery/" title="Video Gallery Widget" target="_blank">Video
                                         Gallery</a> - Create a beautiful gallery of videos to help
                                     showcase a collection of YouTube/Vimeo videos on your site.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/gallery-carousel/" title="Image Carousel" target="_blank">Image
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/gallery-carousel/" title="Image Carousel" target="_blank">Image
                                         Carousel</a> - Build a responsive carousel of images.</li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/gallery-carousel/" title="Video Carousel" target="_blank">Video
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/gallery-carousel/" title="Video Carousel" target="_blank">Video
                                         Carousel</a> - Build a responsive carousel of YouTube/Vimeo
                                     videos.
                                 </li>
@@ -494,21 +494,21 @@ $deactivate_element_testimonials_slider = lvca_get_option('lvca_deactivate_eleme
                                     your site pages such as those that feature events or under construction/coming soon
                                     pages.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/buttons/" title="Buttons Addon" target="_blank">Buttons</a> - Animated buttons with great choice of colors.
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/buttons/" title="Buttons Addon" target="_blank">Buttons</a> - Animated buttons with great choice of colors.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/icon-lists/" title="Icon List" target="_blank">Icon List</a> - - Create a list of icons with description and link - for social media profiles,
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/icon-lists/" title="Icon List" target="_blank">Icon List</a> - - Create a list of icons with description and link - for social media profiles,
                                     for showcasing services or features as well with icons or images.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/faq-element/" title="FAQ Addon" target="_blank">FAQ</a> - Create a set of Frequently Asked Questions for display in a
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/faq-element/" title="FAQ Addon" target="_blank">FAQ</a> - Create a set of Frequently Asked Questions for display in a
                                     page.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/features/" title="Features Addon" target="_blank">Features Addon</a> for showcasing product features or services provided by an agency/business.
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/features/" title="Features Addon" target="_blank">Features Addon</a> for showcasing product features or services provided by an agency/business.
                                 </li>
                             </ul>
 
                             <div class="lvca-spacer" style="height: 15px"></div>
 
-                            <a class="lvca-button purchase" href="https://www.livemeshthemes.com/visual-composer-addons/pricing/"><i class="dashicons dashicons-cart"></i><?php echo __('Purchase Now', 'livemesh-vc-addons'); ?></a>
+                            <a class="lvca-button purchase" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/"><i class="dashicons dashicons-cart"></i><?php echo __('Purchase Now', 'livemesh-vc-addons'); ?></a>
 
                             <div class="lvca-spacer" style="height: 25px"></div>
 
@@ -518,10 +518,10 @@ $deactivate_element_testimonials_slider = lvca_get_option('lvca_deactivate_eleme
                                 updated with additional features for existing elements -</p>
 
                             <ul>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/" title="Livemesh Grid" target="_blank">Lazy Load</a> - The portfolio/post grid and image gallery elements
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/portfolio-grid-pro/" title="Posts Grid" target="_blank">Lazy Load</a> - The portfolio/post grid and image gallery elements
                                     incorporate option to lazy load posts/images with the click of a Load More button.
                                 </li>
-                                <li><a href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/" title="Livemesh Grid" target="_blank">Pagination</a> - Create a grid of posts or custom post types with AJAX
+                                <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/portfolio-grid-pro/" title="Posts Grid" target="_blank">Pagination</a> - Create a grid of posts or custom post types with AJAX
                                     based pagination support.
                                 </li>
                                 <li><strong>Lightbox Support</strong> - The premium version comes with support for
@@ -570,7 +570,7 @@ $deactivate_element_testimonials_slider = lvca_get_option('lvca_deactivate_eleme
 
                             <div class="lvca-spacer" style="height: 25px"></div>
 
-                            <a class="lvca-button purchase" href="https://www.livemeshthemes.com/visual-composer-addons/pricing/"><i class="dashicons dashicons-cart"></i><?php echo __('Go Premium', 'livemesh-vc-addons'); ?></a>
+                            <a class="lvca-button purchase" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/"><i class="dashicons dashicons-cart"></i><?php echo __('Go Premium', 'livemesh-vc-addons'); ?></a>
 
                         </div>
 

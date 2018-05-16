@@ -54,7 +54,7 @@ class LVCA_Admin {
 
     public function remove_admin_notices($screen) {
 
-        // If this screen is Livemesh VC Addons plugin options page, remove annoying admin notices
+        // If this screen is Livemesh Addons plugin options page, remove annoying admin notices
         if (strpos($screen->id, $this->plugin_slug) !== false) {
             add_action('admin_notices', array(&$this, 'remove_notices_start'));
             add_action('admin_notices', array(&$this, 'remove_notices_end'), 999);
@@ -79,8 +79,8 @@ class LVCA_Admin {
     public function add_plugin_admin_menu() {
 
         add_menu_page(
-            'Visual Composer Addons',
-            __('VC Addons', 'livemesh-vc-addons'),
+            'WPBakery Page Builder Addons',
+            __('WPBakery Addons', 'livemesh-vc-addons'),
             'manage_options',
             $this->plugin_slug,
             array($this, 'display_settings_page'),
@@ -90,7 +90,7 @@ class LVCA_Admin {
         // add plugin settings submenu page
         add_submenu_page(
             $this->plugin_slug,
-            'VC Addons Settings',
+            'WPBakery Page Builder Addons Settings',
             __('Settings', 'livemesh-vc-addons'),
             'manage_options',
             $this->plugin_slug,
@@ -100,7 +100,7 @@ class LVCA_Admin {
         // add import/export submenu page
         add_submenu_page(
             $this->plugin_slug,
-            'VC Addons Documentation',
+            'WPBakery Page Builder Addons Documentation',
             __('Documentation', 'livemesh-vc-addons'),
             'manage_options',
             $this->plugin_slug . '_documentation',
@@ -159,7 +159,7 @@ class LVCA_Admin {
         // get current admin screen
         $screen = get_current_screen();
 
-        // If screen is a part of Livemesh Visual Composer Addons plugin options page
+        // If screen is a part of Livemesh WPBakery Page Builder Addons plugin options page
         if (strpos($screen->id, $this->plugin_slug) !== false) {
 
             wp_enqueue_script('jquery-ui-datepicker');

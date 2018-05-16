@@ -21,7 +21,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
             <div class="plans-wrapper clear">
                 <div class="plan-intro">
                     <div class="w100 clear"><img src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/dashboard/logo-light.png" class="mb30">
-                        <p>A huge collection of Premium addons for Visual Composer. Building a beautiful website is as easy as drag and drop.</p></div>
+                        <p>A huge collection of Premium addons for WPBakery Page Builder. Building a beautiful website is as easy as drag and drop.</p></div>
                 </div>
                 <div class="plans">
                     <div class="content-wrapper flex-wrap">
@@ -29,14 +29,14 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                             <div class="w100 clear"><h3>Lite</h3>
                                 <p class="mb20 text">All the great features and addons you need to get started on creating a beautiful website.</p>
                                 <h4 class="b c-wh price">FREE</h4>
-                                <div class="action clear"><a href="https://wordpress.org/plugins/addons-for-visual-composer/" class="btn bg-gr center" title="Addons for Visual Composer Download">Download now</a></div>
+                                <div class="action clear"><a href="https://wordpress.org/plugins/addons-for-visual-composer/" class="btn bg-gr center" title="Addons for WPBakery Page Builder Download">Download now</a></div>
                             </div>
                         </div>
                         <div class="plan plan2 flex-col">
                             <div class="w100 clear"><h3>Premium</h3>
                                 <p class="mb20 text">More features and additional addons to build a professional website without switching your WP theme.</p>
                                 <h4 class="b price c-wh">$19</h4>
-                                <div class="action clear"><a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" class="btn center bg-cy">Purchase Now</a></div>
+                                <div class="action clear"><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" class="btn center bg-cy">Purchase Now</a></div>
                             </div>
                         </div>
                     </div>
@@ -52,13 +52,13 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Premium quality Addons</div>
                             <div class="tooltip hide">
-                                <div><p>Exquisitely designed premium quality addons for Visual Composer Page Builder.</div>
+                                <div><p>Exquisitely designed premium quality addons for WPBakery Page Builder.</div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Page Builder Elements</div>
                             <div class="tooltip hide">
-                                <div><p>Large collection of plugin addons with their multiple styles are page builder elements that provide ALL the tools you need to come up with a dream website of yours by just drag, drop and configure. &nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/">Live Demo</a></p></div>
+                                <div><p>Large collection of plugin addons with their multiple styles are page builder elements that provide ALL the tools you need to come up with a dream website of yours by just drag, drop and configure. &nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
@@ -70,13 +70,13 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Posts/Portfolio Grid</div>
                             <div class="tooltip hide">
-                                <div><p>The PRO version comes with advanced grid functions like multiple styles, AJAX filtering, pagination, lazy load via AJAX, lightbox support etc.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/">Live Demo</a></p></div>
+                                <div><p>The PRO version comes with advanced grid functions like multiple styles, AJAX filtering, pagination, lazy load via AJAX, lightbox support etc.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/portfolio-grid-pro/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Post Blocks!</div>
                             <div class="tooltip hide">
-                                <div><p>Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/">Live Demo</a></p>
+                                <div><p>Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/posts-block/">Live Demo</a></p>
                                 </div>
                             </div>
                         </li>
@@ -89,13 +89,13 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Grids with AJAX Pagination</div>
                             <div class="tooltip hide">
-                                <div><p>Multiple pages of posts/portfolio/image/video grid loaded inline without page refresh. Showcase your entire work anywhere on the site.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/">Live Demo</a></p></div>
+                                <div><p>Multiple pages of posts/portfolio/image/video grid loaded inline without page refresh. Showcase your entire work anywhere on the site.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/portfolio-grid-pro/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Advanced Grid with Lazy Load</div>
                             <div class="tooltip hide">
-                                <div><p>The grid elements are loaded on demand with each press of a Load More button that displays a count of remaining posts.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/">Live Demo</a></p></div>
+                                <div><p>The grid elements are loaded on demand with each press of a Load More button that displays a count of remaining posts.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/portfolio-grid-pro/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
@@ -115,38 +115,38 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Advanced Image Slider</div>
                             <div class="tooltip hide">
-                                <div><p>Responsive slider with choice of Nivo, Flex, Slick and Ultra Lightweight slider types. Comes with multiple caption styles, thumbnail navigation and detailed customization of slider speed and controls.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/livemesh-sliders/">Live Demo</a></p>
+                                <div><p>Responsive slider with choice of Nivo, Flex, Slick and Ultra Lightweight slider types. Comes with multiple caption styles, thumbnail navigation and detailed customization of slider speed and controls.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/livemesh-sliders/">Live Demo</a></p>
                                 </div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Image Gallery</div>
                             <div class="tooltip hide">
-                                <div><p>Create a beautiful yet responsive gallery with support for tagging, linking, filtering, labels, lazy load of images with Load More and pagination.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/image-gallery/">Live Demo</a></p></div>
+                                <div><p>Create a beautiful yet responsive gallery with support for tagging, linking, filtering, labels, lazy load of images with Load More and pagination.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/image-gallery/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">YouTube/Vimeo Video Gallery</div>
                             <div class="tooltip hide">
-                                <div><p>Essential tool for video bloggers, video marketers, musicians and other sites with video content. Tags, filters, external linking, labels, pagination and lazy load via AJAX supported.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/video-gallery/">Live Demo</a></p></div>
+                                <div><p>Essential tool for video bloggers, video marketers, musicians and other sites with video content. Tags, filters, external linking, labels, pagination and lazy load via AJAX supported.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/video-gallery/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Advanced Image Carousel</div>
                             <div class="tooltip hide">
-                                <div><p>Advanced carousel with touch/swipe/drag/paged/click navigation. Extensive customization for responsiveness, animation/slideshow speed, gutter, looping etc.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/gallery-carousel/">Live Demo</a></p></div>
+                                <div><p>Advanced carousel with touch/swipe/drag/paged/click navigation. Extensive customization for responsiveness, animation/slideshow speed, gutter, looping etc.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/gallery-carousel/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">YouTube/Vimeo Video Carousel</div>
                             <div class="tooltip hide">
-                                <div><p>Perfect for showcasing a select collection of videos with filters, tags, external links, labels, touch/swipe/mouse drag/click navigation, paging and lightbox support.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/gallery-carousel/">Live Demo</a></p></div>
+                                <div><p>Perfect for showcasing a select collection of videos with filters, tags, external links, labels, touch/swipe/mouse drag/click navigation, paging and lightbox support.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/gallery-carousel/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
                             <div class="text">Features List</div>
                             <div class="tooltip hide">
-                                <div><p>List the product features or services offered in style.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/features/">Live Demo</a></p></div>
+                                <div><p>List the product features or services offered in style.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/features/">Live Demo</a></p></div>
                             </div>
                         </li>
                         <li><span class="help dashicons dashicons-editor-help"></span>
@@ -171,7 +171,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     <div class="dashicons dashicons-yes"></div>
                                     <span class="m-feature m">Premium quality Addons</span>
                                     <div class="tooltip hide">
-                                        <p>Exquisitely designed premium quality addons for Visual Composer Page Builder.</p>
+                                        <p>Exquisitely designed premium quality addons for WPBakery Page Builder.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -203,7 +203,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     <div class="dashicons dashicons-no-alt"></div>
                                     <span class="m-feature m">Post Blocks!</span>
                                     <div class="tooltip hide">
-                                        <p>Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/">Live Demo</a></p>
+                                        <p>Present your blog posts, events, news items or portfolio in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.&nbsp;<a target="_blank" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/posts-block/">Live Demo</a></p>
                                     </div>
                                 </li>
                                 <li>
@@ -298,7 +298,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     </div>
                                 </li>
                             </ul>
-                            <div class="action clear"><a href="https://wordpress.org/plugins/addons-for-visual-composer/" class="btn bg-gr center" title="Addons for Visual Composer Download">Download now</a></div>
+                            <div class="action clear"><a href="https://wordpress.org/plugins/addons-for-visual-composer/" class="btn bg-gr center" title="Addons for WPBakery Page Builder Download">Download now</a></div>
                         </div>
                         <div class="plan plan2"><h4>PRO</h4>
                             <ul>
@@ -306,7 +306,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     <div class="dashicons dashicons-yes"></div>
                                     <span class="m-feature m">Premium quality Addons</span>
                                     <div class="tooltip hide">
-                                        <p>Exquisitely designed premium quality addons for Visual Composer Page Builder..</p>
+                                        <p>Exquisitely designed premium quality addons for WPBakery Page Builder..</p>
                                     </div>
                                 </li>
                                 <li>
@@ -433,7 +433,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                                     </div>
                                 </li>
                             </ul>
-                            <div class="action clear"><a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" class="btn center bg-cy">Purchase Now</a></div>
+                            <div class="action clear"><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" class="btn center bg-cy">Purchase Now</a></div>
                         </div>
                     </div>
                 </div>
@@ -446,7 +446,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
 
     <div class="button-wrap">
 
-        <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Purchase Now">
+        <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Purchase Now">
 
             <img class="button-image" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/dashboard/purchase-button.png" alt="Purchase Button">
 
@@ -482,30 +482,30 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
 
                 <h3 id="item-description__features-overview">New Premium Addons</h3>
 
-                <p>Although the free version of the Addons for Visual Composer features a large repertoire of premium quality addons, the premium
+                <p>Although the free version of the Addons for WPBakery Page Builder features a large repertoire of premium quality addons, the premium
                     version does even more.</p>
 
                 <ul>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/posts-block/" title="Livemesh Post Blocks" target="_blank">Post Blocks</a> - Present your blog posts, events, news items or portfolio
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/posts-block/" title="Post Blocks" target="_blank">Post Blocks</a> - Present your blog posts, events, news items or portfolio
                         in a dozen creative ways. Comes with AJAX filtering, pagination and load more features to help visitors navigate your entire collection of blog posts or custom post types and their categories without reloading the page.
                     </li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/sliders/" title="Image Slider Addon" target="_blank">Image
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/sliders/" title="Image Slider Addon" target="_blank">Image
                             Slider</a> - Create a responsive slider of images with support
                         for captions,
                         multiple slider types like Nivo, Flex, Slick and lightweight sliders, thumbnail
                         navigation etc.
                     </li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/image-gallery/" title="Image Gallery Addon" target="_blank">Image
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/image-gallery/" title="Image Gallery Addon" target="_blank">Image
                             Gallery</a> - Create a gallery of images with options for masonry
                         or fit rows, pagination, lazy load, lightbox support etc.
                     </li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/video-gallery/" title="Video Gallery Addon" target="_blank">Video
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/video-gallery/" title="Video Gallery Addon" target="_blank">Video
                             Gallery</a> - Create a beautiful gallery of videos to help
                         showcase a collection of YouTube/Vimeo videos on your site.
                     </li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/gallery-carousel/" title="Image Carousel" target="_blank">Image
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/gallery-carousel/" title="Image Carousel" target="_blank">Image
                             Carousel</a> - Build a responsive carousel of images.</li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/gallery-carousel/" title="Video Carousel" target="_blank">Video
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/gallery-carousel/" title="Video Carousel" target="_blank">Video
                             Carousel</a> - Build a responsive carousel of YouTube/Vimeo
                         videos.
                     </li>
@@ -513,10 +513,10 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                         your site pages
                         such as those that feature events or under construction/coming soon pages.
                     </li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/faq-element/" title="FAQ Addon" target="_blank">FAQ</a> - Create a set of Frequently Asked Questions for display in a
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/faq-element/" title="FAQ Addon" target="_blank">FAQ</a> - Create a set of Frequently Asked Questions for display in a
                         page.
                     </li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/features/" title="Features Addon" target="_blank">Features Addon</a> - Showcase product features or services provided by your agency/business.
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/features/" title="Features Addon" target="_blank">Features Addon</a> - Showcase product features or services provided by your agency/business.
                     </li>
                 </ul>
 
@@ -526,10 +526,10 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                     updated with additional features for existing addons -</p>
 
                 <ul>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/" title="Livemesh Grid" target="_blank">Lazy Load</a> - The portfolio/post grid and image gallery addons
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/portfolio-grid-pro/" title="Posts Grid" target="_blank">Lazy Load</a> - The portfolio/post grid and image gallery addons
                         incorporate option to lazy load posts/images with the click of a Load More button.
                     </li>
-                    <li><a href="https://www.livemeshthemes.com/visual-composer-addons/portfolio-grid-pro/" title="Livemesh Grid" target="_blank">Pagination</a> - Create a grid of posts or custom post types with AJAX
+                    <li><a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/portfolio-grid-pro/" title="Posts Grid" target="_blank">Pagination</a> - Create a grid of posts or custom post types with AJAX
                         based pagination support.
                     </li>
                     <li><strong>Lightbox Support</strong> - The premium version comes with support for
@@ -578,7 +578,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
 
                 <div class="button-wrap">
 
-                    <a class="button-wrap" href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Purchase Now">
+                    <a class="button-wrap" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Purchase Now">
 
                         <img class="button-image" style="border:none" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/dashboard/purchase-button.png" alt="Purchase Button">
 
@@ -593,7 +593,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                 <div class="panel-inner">
 
                     <div class="panel-aside banner">
-                        <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Purchase Now"><img class="dashboard-image" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/dashboard/purchase-banner2.jpg" alt="Sale Banner"></a>
+                        <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Purchase Now"><img class="dashboard-image" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/dashboard/purchase-banner2.jpg" alt="Sale Banner"></a>
                     </div>
 
                     <!-- Knowledge base -->
@@ -602,7 +602,7 @@ $plugin = get_plugin_data(LVCA_PLUGIN_FILE);
                         <h4>Have questions regarding premium version of the plugin?</h4>
                         <p>If you have pre-sales questions related to the paid version of this plugin, feel free to get in touch with us via contact form on our website.</p>
 
-                        <a class="button button-primary" href="https://www.livemeshthemes.com/visual-composer-addons/contact-us/"
+                        <a class="button button-primary" href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/contact-us/"
                            title="<?php esc_attr_e('Contact Us', 'livemesh-vc-addons'); ?>"><?php _e('Write to Us', 'livemesh-vc-addons'); ?></a>
 
                     </div><!-- .panel-aside knowledge base -->

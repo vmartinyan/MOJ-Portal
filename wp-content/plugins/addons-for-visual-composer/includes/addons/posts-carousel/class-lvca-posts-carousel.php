@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Posts Carousel
+Widget Name: Posts Carousel
 Description: Display blog posts or custom post types as a carousel.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -287,11 +287,11 @@ class LVCA_Posts_Carousel {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Posts Carousel", "livemesh-vc-addons"),
+                "name" => __("Posts Carousel", "livemesh-vc-addons"),
                 "base" => "lvca_posts_carousel",
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 'description' => __('Display posts or post types as a carousel.', 'livemesh-vc-addons'),
                 "icon" => 'icon-lvca-posts-carousel',
                 "params" => $carousel_params

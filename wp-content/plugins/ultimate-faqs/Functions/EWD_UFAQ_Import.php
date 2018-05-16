@@ -40,6 +40,9 @@ function EWD_UFAQ_Import(){
 function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
     global $wpdb;
 
+    $FAQ_Fields_Array = get_option("EWD_UFAQ_FAQ_Fields");
+    if (!is_array($FAQ_Fields_Array)) {$FAQ_Fields_Array = array();}
+
     $Excel_URL = EWD_UFAQ_CD_PLUGIN_PATH . 'faq-sheets/' . $Excel_File_Name;
 
     // Uses the PHPExcel class to simplify the file parsing process
@@ -54,8 +57,10 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
     $sheet = $objWorkBook->getActiveSheet();
 
     $Allowable_Custom_Fields = array();
+    foreach ($FAQ_Fields_Array as $FAQ_Field_Item) {$Allowable_Custom_Fields[] = $FAQ_Field_Item['FieldName'];}
     //List of fields that can be accepted via upload
-    $Allowed_Fields = array("Question", "Answer", "Categories", "Tags");
+    $Allowed_Fields = array("Question", "Answer", "Categories", "Tags", "Post Date");
+
 
     // Get column names
     $highestColumn = $sheet->getHighestColumn();
@@ -65,7 +70,13 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
         if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Answer") {$Answer_Column = $column;}
         if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Categories") {$Categories_Column = $column;}
         if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Tags") {$Tags_Column = $column;}
+        if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == "Post Date") {$Date_Column = $column;}
+
+        foreach ($FAQ_Fields_Array as $key => $FAQ_Field_Item) {
+            if (trim($sheet->getCellByColumnAndRow($column, 1)->getValue()) == $FAQ_Field_Item['FieldName']) {$FAQ_Fields_Array[$key]['FieldColumn'] = $column;}
+        }
     }
+
 
     // Put the spreadsheet data into a multi-dimensional array to facilitate processing
     $highestRow = $sheet->getHighestRow();
@@ -81,11 +92,15 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
         // Create an array of the values that are being inserted for each order,
         // edit if it's a current order, otherwise add it
         foreach ($FAQ as $Col_Index => $Value) {
-            if ($Col_Index == $Question_Column) {$Post['post_title'] = esc_sql($Value);}
-            if ($Col_Index == $Answer_Column) {$Post['post_content'] = esc_sql($Value);}
-            if ($Col_Index == $Categories_Column) {$Post_Categories = explode(",", esc_sql($Value));}
-            if ($Col_Index == $Tags_Column) {$Post_Tags = explode(",", esc_sql($Value));}
+            if ($Col_Index == $Question_Column and $Question_Column !== null) {$Post['post_title'] = esc_sql($Value);}
+            if ($Col_Index == $Answer_Column and $Answer_Column !== null) {$Post['post_content'] = esc_sql($Value);}
+            if ($Col_Index == $Categories_Column and $Categories_Column !== null) {$Post_Categories = explode(",", esc_sql($Value));}
+            if ($Col_Index == $Tags_Column and $Tags_Column !== null) {$Post_Tags = explode(",", esc_sql($Value));}
+            if ($Col_Index == $Date_Column and $Date_Column !== null) {$Post['post_date'] = esc_sql($Value);}
         }
+
+        if ($Post['post_title'] == '') {continue;}
+
         $Post['post_status'] = 'publish';
         $Post['post_type'] = 'ufaq';
 
@@ -100,7 +115,12 @@ function Add_EWD_UFAQs_From_Spreadsheet($Excel_File_Name){
                 $Term = term_exists($Tag, 'ufaq-tag');
                 if ($Term !== 0 && $Term !== null) {$Tag_IDs[] = (int) $Term['term_id'];}
             }
-            if (is_array($Category_IDs)) {wp_set_object_terms($Post_ID, $Tag_IDs, 'ufaq-tag');}
+            if (is_array($Tag_IDs)) {wp_set_object_terms($Post_ID, $Tag_IDs, 'ufaq-tag');}
+
+            foreach ($FAQ_Fields_Array as $FAQ_Field_Item) {
+                $Value = esc_sql($FAQ[$FAQ_Field_Item['FieldColumn']]);
+                update_post_meta($Post_ID, "Custom_Field_" . $FAQ_Field_Item['FieldID'], $Value);
+            }
         }
 
         unset($Post);

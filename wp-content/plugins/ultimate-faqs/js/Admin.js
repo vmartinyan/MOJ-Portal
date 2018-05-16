@@ -169,3 +169,35 @@ function EWD_UFAQ_hexToRgb(hex) {
         b: parseInt(result[3], 16)
     } : null;
 }
+
+//NEW DASHBOARD MOBILE MENU AND WIDGET TOGGLING
+jQuery(document).ready(function($){
+	$('#ewd-ufaq-dash-mobile-menu-open').click(function(){
+		$('.EWD_UFAQ_Menu .nav-tab:nth-of-type(1n+2)').toggle();
+		$('#ewd-ufaq-dash-mobile-menu-up-caret').toggle();
+		$('#ewd-ufaq-dash-mobile-menu-down-caret').toggle();
+		return false;
+	});
+	$(function(){
+		$(window).resize(function(){
+			if($(window).width() > 800){
+				$('.EWD_UFAQ_Menu .nav-tab:nth-of-type(1n+2)').show();
+			}
+			else{
+				$('.EWD_UFAQ_Menu .nav-tab:nth-of-type(1n+2)').hide();
+				$('#ewd-ufaq-dash-mobile-menu-up-caret').hide();
+				$('#ewd-ufaq-dash-mobile-menu-down-caret').show();
+			}
+		}).resize();
+	});	
+	$('#ewd-ufaq-dashboard-support-widget-box .ewd-ufaq-dashboard-new-widget-box-top').click(function(){
+		$('#ewd-ufaq-dashboard-support-widget-box .ewd-ufaq-dashboard-new-widget-box-bottom').toggle();
+		$('#ewd-ufaq-dash-mobile-support-up-caret').toggle();
+		$('#ewd-ufaq-dash-mobile-support-down-caret').toggle();
+	});
+	$('#ewd-ufaq-dashboard-optional-table .ewd-ufaq-dashboard-new-widget-box-top').click(function(){
+		$('#ewd-ufaq-dashboard-optional-table .ewd-ufaq-dashboard-new-widget-box-bottom').toggle();
+		$('#ewd-ufaq-dash-optional-table-up-caret').toggle();
+		$('#ewd-ufaq-dash-optional-table-down-caret').toggle();
+	});
+});

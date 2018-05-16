@@ -520,7 +520,7 @@
 	<fieldset><legend class="screen-reader-text"><span>Submit Custom Fields</span></legend>
 	<label title='Yes'><input type='radio' name='submit_custom_fields' value='Yes' <?php if($Submit_Custom_Fields == "Yes") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='submit_custom_fields' value='No' <?php if($Submit_Custom_Fields == "No") {echo "checked='checked'";} ?> <?php if ($UFAQ_Full_Version != "Yes") {echo "disabled";} ?> /> <span>No</span></label><br />
-	<p>When using the user-submitted question shortcode, should users be able to fill in custom fields for the question they're submitting? File type custom fields cannot be submitted.</p>
+	<p>When using the user-submitted question shortcode, should users be able to fill in custom fields for the question they're submitting? File type custom fields cannot be submitted for security reasons.</p>
 	</fieldset>
 </td>
 </tr>

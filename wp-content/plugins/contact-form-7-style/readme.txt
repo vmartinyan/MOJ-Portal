@@ -3,8 +3,8 @@ Contributors: ionut.iclanzan, dorumarginean, mlehelsz, mircear
 Donate link: http://cf7style.com/back-this-project/
 Tags: contact form 7, contact form 7 style, contact form 7 templates, contact form 7 styling, CF7, CF7 style, styling contact form, styling contact form 7, multiple form styling, custom form styling, CF7 addon, customize, templates, valentine's day templates, Christmas templates, manual styling, live preview, hover state styling, CF7 form messages styling
 Requires at least: 3.0.1
-Tested up to: 4.9
-Stable tag: 3.1.6
+Tested up to: 4.9.4
+Stable tag: 3.1.7
 Requires PHP: 5.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -76,6 +76,15 @@ Please check our FAQ page where you'll find answers to some of your questions on
 
 == Changelog ==
 
+= 3.1.7 = 
+
+Release Date: March 6th, 2018
+
+* [Major Fix](https://wordpress.org/support/topic/increased-i-o/) Fixed I/O process with reducing the json requests from the servers
+* [Major Fix] Fixed the problem where the form was missing some settings when multiple form were selected in the custom style part
+* [Improvement](https://wordpress.org/support/topic/hide-contact-form-7-style-from-admin-bar/) Added settings to hide/show Contact Form 7 Style link
+
+
 = 3.1.6 = 
 
 Release Date: November 7th, 2017
@@ -93,7 +102,6 @@ Release Date: November 6th, 2017
 Release Date: November 4th, 2017
 
 * [Major Fix](https://wordpress.org/support/topic/dont-show-background-image/) Background image rendering fixed ( added "url()" )
-
 
 = 3.1.3 = 
 
@@ -265,6 +273,8 @@ Release Date: November 3rd, 2017
 * First plugin version.
 
 == Upgrade Notice ==
-= Contact Form 7 Style Version 3.1.6 =
+= Contact Form 7 Style Version 3.1.7 =
 
-* [Major Fix](https://wordpress.org/support/topic/u-have-a-problem-with-ure-update/) Fixed slash error and added extra condition to check for response
+* [Major Fix](https://wordpress.org/support/topic/increased-i-o/) Fixed I/O process with reducing the json requests from the servers
+* [Major Fix] Fixed the problem where the form was missing some settings when multiple form were selected in the custom style part
+* [Improvement](https://wordpress.org/support/topic/hide-contact-form-7-style-from-admin-bar/) Added settings to hide/show Contact Form 7 Style link

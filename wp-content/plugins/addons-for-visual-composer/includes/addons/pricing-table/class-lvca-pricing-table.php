@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Pricing Table
+Widget Name: Pricing Table
 Description: Display pricing plans in a multi-column grid.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -191,12 +191,12 @@ class LVCA_Pricing_Table {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Pricing Table", "livemesh-vc-addons"),
+                "name" => __("Pricing Table", "livemesh-vc-addons"),
                 "base" => "lvca_pricing_table",
                 "as_parent" => array('only' => 'lvca_pricing_plan'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display pricing table in a multi-column grid.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -224,7 +224,7 @@ class LVCA_Pricing_Table {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Pricing Plan", "my-text-domain"),
+                    "name" => __("Pricing Plan", "my-text-domain"),
                     "base" => "lvca_pricing_plan",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_pricing_table'), // Use only|except attributes to limit parent (separate multiple values with comma)

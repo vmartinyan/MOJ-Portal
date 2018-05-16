@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Heading
+Widget Name: Heading
 Description: Create heading for display on the top of a section.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -76,11 +76,11 @@ class LVCA_Heading {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Heading", "livemesh-vc-addons"),
+                "name" => __("Heading", "livemesh-vc-addons"),
                 "base" => "lvca_heading",
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 'description' => __('Create heading for a section.', 'livemesh-vc-addons'),
                 "icon" => 'icon-lvca-heading',
                 "params" => array(

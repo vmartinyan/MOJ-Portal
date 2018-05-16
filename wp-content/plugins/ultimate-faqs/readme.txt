@@ -55,12 +55,16 @@ With the smart [submit-question] FAQ shortcode (premium), you can let your custo
 * Toggle FAQ accordion (close open FAQ when a new one is opened) behaviour on/off
 * Allow people to comment on individual FAQ
 * Microdata question schema, to help with SEO
-* Responsive FAQ design
+* Responsive FAQ design that looks great on all screen sizes
 * Group FAQs by category for easy FAQ navigation
 
 This FAQ frequently asked questions plugin is great for combining with our <a href='https://wordpress.org/plugins/front-end-only-users/'>user management plugin </a> to create a member's only FAQ area.
 
 Ultimate FAQ uses the WordPress custom post type functionality to create an FAQ post type, allowing for smart and easy FAQ integration.
+
+Ultimate FAQ can do more than just FAQs. If you have a help desk or knowledge base and need to pass on information to your visitors and/or users, the question/answer formatting is perfect. With the various options related to toggling, as well as the custom fields functionality, you can easily create an in-depth knowledge base and help desk.
+
+Ultimate FAQ has a responsive design that makes your FAQs look good on all screen sizes and all devices. No more worrying about what your mobile FAQs might look like. All FAQ options and styling will be applied accross all devices, so you can focus on your FAQ content.
 
 = Premium FAQ features include =
 
@@ -266,6 +270,25 @@ Video 3 - FAQs Ordering
 
 
 == Changelog ==
+= 1.7.0 =
+- Added the ability to include a "Post Date" and any custom fields when importing or exporting FAQs to a spreadsheet
+- Added an attribute so that only FAQ posts in a parent category is displayed instead of all of the FAQ posts in child categories as welll
+- Added UTF-8 support for PDF exports
+- Fixed a problem where only the top category could be opened if the FAQ shortcode was included twice on a page
+- Fixed an issue where the menu bar wasn't displayed on the edit FAQ screen
+- Fixed an error where blank lines could be imported via spreadsheet as blank FAQs
+- "File" type custom field labels no longer display on the submit FAQ form
+
+= 1.6.20 =
+- Updated the free trial button
+
+= 1.6.19 =
+- Small update to fix the broken dashboard image links
+
+= 1.6.18 =
+- We're doing a big FAQ admin area styling update, first up is the dashboard!
+- Clarified the 'file' field type restriction for the submit FAQ shortcode
+
 = 1.6.17 =
 - Added an option to change who has access to the FAQ admin area
 

@@ -4,7 +4,7 @@
 
 	<div class="lvca-notice-rate-content">
 
-		<p><?php _e( 'Hello!', 'livemesh-vc-addons' ); ?> <?php _e( 'I see that you have the plugin <strong>Addons for Visual Composer by Livemesh</strong> installed for some time now.', 'livemesh-vc-addons' ); ?></p>
+		<p><?php _e( 'Hello!', 'livemesh-vc-addons' ); ?> <?php _e( 'I see that you have the plugin <strong>Addons for WPBakery Page Builder by Livemesh</strong> installed for some time now.', 'livemesh-vc-addons' ); ?></p>
         <p><?php _e( 'If you like this plugin, please write a few words about it at wordpress.org or social media. Your opinion will help others discover our plugin.', 'livemesh-vc-addons' ); ?></p>
         <p><?php _e( 'Thank you!', 'livemesh-vc-addons' ); ?></p>
 

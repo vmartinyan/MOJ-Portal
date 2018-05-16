@@ -7,14 +7,14 @@ Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/wordpress-plugins/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-faqs
-Version: 1.6.17
+Version: 1.7.0
 */
 
 global $ewd_ufaq_message;
 global $UFAQ_Full_Version;
 global $EWD_UFAQ_Version;
 
-$EWD_UFAQ_Version = '1.6.17';
+$EWD_UFAQ_Version = '1.7.0';
 if (get_option("EWD_UFAQ_Version") == "") {update_option("EWD_UFAQ_Version", $EWD_UFAQ_Version);}
 
 define( 'EWD_UFAQ_CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -70,14 +70,15 @@ function EWD_UFAQ_Enable_Sub_Menu() {
 add_action('admin_menu' , 'EWD_UFAQ_Enable_Sub_Menu', 1);
 
 function EWD_UFAQ_Add_Header_Bar($Called = "No") {
-	global $pagenow;
+	global $pagenow, $post;
 
-	if ($Called != "Yes" and (!isset($_GET['post_type']) or $_GET['post_type'] != "ufaq")) {return;}
+	if ($Called != "Yes" and (!isset($_GET['post_type']) or $_GET['post_type'] != "ufaq") and (!is_object($post) or $post->post_type != 'ufaq')) {return;}
 
 	$Admin_Approval = get_option("EWD_UFAQ_Admin_Approval"); ?>
 
 	<div class="EWD_UFAQ_Menu">
 		<h2 class="nav-tab-wrapper">
+		<a id="ewd-ufaq-dash-mobile-menu-open" href="#" class="MenuTab nav-tab"><?php _e("MENU", 'ultimate-faqs'); ?><span id="ewd-ufaq-dash-mobile-menu-down-caret">&nbsp;&nbsp;&#9660;</span><span id="ewd-ufaq-dash-mobile-menu-up-caret">&nbsp;&nbsp;&#9650;</span></a>
 		<a id="Dashboard_Menu" href='admin.php?page=EWD-UFAQ-Options' class="MenuTab nav-tab <?php if (!isset($_GET['post_type']) and ($_GET['DisplayPage'] == '' or $_GET['DisplayPage'] == 'Dashboard')) {echo 'nav-tab-active';}?>"><?php _e("Dashboard", 'ultimate-faqs'); ?></a>
 		<?php if ($Admin_Approval == "Yes") { ?>
 			<a id="Approved_FAQs_Menu" href='edit.php?post_type=ufaq&post_status=publish' class="MenuTab nav-tab <?php if (isset($_GET['post_type']) and $_GET['post_type'] == 'ufaq' and $pagenow == 'edit.php' and (!isset($_GET['post_status']) or $_GET['post_status'] == 'publish')) {echo 'nav-tab-active';}?>"><?php _e("Approved FAQs", 'ultimate-faqs'); ?></a>
@@ -166,7 +167,7 @@ function EWD_UFAQ_Add_Stylesheet() {
     wp_enqueue_style( 'ewd-ufaq-rrssb' );
 }
 
-add_action('activated_plugin','save_ufaq_error');
+//add_action('activated_plugin','save_ufaq_error');
 function save_ufaq_error(){
 		update_option('plugin_error',  ob_get_contents());
 		file_put_contents("Error.txt", ob_get_contents());

@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Grid
+Widget Name: Posts Grid
 Description: Display posts or custom post types in a multi-column grid.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -46,14 +46,14 @@ class LVCA_Portfolio {
                 $chosen_terms[] = get_term($term_id, 'post_tag');
             }
         }
-        elseif (!empty($query_args['tax_query'])) {
-            $terms_query = $query_args['tax_query'];
-            foreach ($terms_query as $term_query) {
-                if (is_array($term_query) && ($term_query['field'] == 'term_id')) {
-                    $chosen_terms[] = get_term($term_query['terms'], $term_query['taxonomy']);
-                    $this->_taxonomy_filter = $term_query['taxonomy'];
-                }
+        elseif (isset($query_args['tax_query'][0])) {
+            $terms_query = $query_args['tax_query'][0];
+            $taxonomy_filter = $terms_query['taxonomy'];
+            $terms = $terms_query['terms'];
+            foreach ($terms as $term_id) {
+                $chosen_terms[] = get_term_by('id', $term_id, $taxonomy_filter);
             }
+            $this->_taxonomy_filter = $taxonomy_filter;
         }
         return $chosen_terms;
     }
@@ -475,12 +475,12 @@ class LVCA_Portfolio {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Grid", "livemesh-vc-addons"),
+                "name" => __("Posts Grid", "livemesh-vc-addons"),
                 "base" => "lvca_portfolio",
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
-                'description' => __('Display work or posts with a filterable grid.', 'livemesh-vc-addons'),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
+                'description' => __('Display posts or post types with a filterable grid.', 'livemesh-vc-addons'),
                 "icon" => 'icon-lvca-portfolio',
                 "params" => $params
             ));

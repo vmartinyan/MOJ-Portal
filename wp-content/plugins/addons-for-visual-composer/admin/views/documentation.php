@@ -26,7 +26,7 @@ else {
 
     <div class="intro-wrap">
 
-        <img class="plugin-image" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/plugin-screenshot.jpg" alt="Addons for Visual Composer">
+        <img class="plugin-image" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/plugin-screenshot.jpg" alt="Addons for WPBakery Page Builder">
 
         <div class="intro">
             <h3><?php printf(__('Getting started with %1$s v%2$s', 'livemesh-vc-addons'), $plugin['Name'], $plugin['Version']); ?></h3>
@@ -76,7 +76,7 @@ else {
                     <li><a href="#testimonials-elements">Testimonials Addons</a></li>
                     <li><a href="#posts-carousel">Posts Carousel</a></li>
                     <li><a href="#carousel-element">Carousel Addon</a></li>
-                    <li><a href="#grid-element">Livemesh Grid</a></li>
+                    <li><a href="#grid-element">Posts Grid</a></li>
                     <li><a href="#clients-element">Clients</a></li>
                     <li><a href="#pricing-table">Pricing Table</a></li>
                     <li><a href="#tabs-accordions">Tabs and Accordions</a></li>
@@ -91,40 +91,40 @@ else {
                 </ul>
                 <h3 id="getting-started">Getting Started<a class="back-to-top" href="#panel"><span
                             class="dashicons dashicons-arrow-up-alt2"></span> Back to top</a></h3>
-                <p>Thanks for choosing Addons for Visual Composer plugin. This help file aims to provide you with all the information you need to make the best use of this powerful plugin. The aim of the plugin to make the task of building a website effortless and pleasurable. Towards that end, we have built a number of elements most commonly used across most of the websites of small businesses, corporates, design agencies, freelancers, artists etc.</p>
+                <p>Thanks for choosing Addons for WPBakery Page Builder plugin. This help file aims to provide you with all the information you need to make the best use of this powerful plugin. The aim of the plugin to make the task of building a website effortless and pleasurable. Towards that end, we have built a number of elements most commonly used across most of the websites of small businesses, corporates, design agencies, freelancers, artists etc.</p>
 <p>Do follow the steps below to get started - </p>
                 <ol>
                     <li>Install and activate the <strong>required plugin</strong> <a
-                            href="https://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431?ref=livemesh" rel="nofollow" target="_blank">Visual Composer</a>.
-                        Visual Composer is a premium WordPress page builder plugin available for purchase from <a
+                            href="https://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431?ref=livemesh" rel="nofollow" target="_blank">WPBakery Page Builder</a>.
+                        WPBakery Page Builder is a premium WordPress page builder plugin available for purchase from <a
                                 href="https://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431?ref=livemesh" rel="nofollow" target="_blank">CodeCanyon</a>.
                         With over 1.5m installed sites, VC is certainly the most popular page builder plugin for WordPress.
                     </li>
                     <li>Unzip the downloaded addons-for-visual-composer.zip file and upload to the <code>/wp-content/plugins/</code>
                         directory or upload the plugin zip with the help of Plugins→Installed Plugins→Add New button.<br>
                         Activate the plugin through the 'Plugins' menu in WordPress. If you are viewing this help page
-                        in WordPress admin under VC Addons→Documentation, you have already activated the plugin.
+                        in WordPress admin under WPBakery Addons→Documentation, you have already activated the plugin.
                     </li>
                     <li>Once the plugin is activated, all of the elements part of the plugin are available in Visual
-                        Composer 'Add Element' window, grouped under 'Livemesh VC Addons' tab.
+                        Composer 'Add Element' window, grouped under 'Livemesh Addons' tab.
 
-                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/add-element-window.png" alt="Visual Composer Addons Add Element Window"></p>
+                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/add-element-window.png" alt="WPBakery Page Builder Addons Add Element Window"></p>
 
 
                         <p>Once you are done with developing the site, for performance gains, you can selectively deactivate
                         the unused elements in 'Elements' tab of
                         <strong> <a href="<?php echo admin_url() . 'admin.php?page=livemesh_vc_addons'; ?>"
-                                          target="_blank"><?php echo __('VC Addons→Settings', 'livemesh-vc-addons') ?></a></strong>
+                                          target="_blank"><?php echo __('WPBakery Addons→Settings', 'livemesh-vc-addons') ?></a></strong>
                             page. This will ensure that scripts and files relating to the deactivated elements do not load on your site.</p>
                     </li>
-                    <li>If you plan to build a portfolio site and plan to use Livemesh Grid element for the same, install
+                    <li>If you plan to build a portfolio site and plan to use Posts Grid element for the same, install
                         and activate the optional plugin <a
                             href="https://wordpress.org/plugins/portfolio-post-type/" rel="nofollow" target="_blank">Portfolio
                             Post Type</a>.
-                        The portfolio examples of Livemesh Grid element is built using custom post type registered by
+                        The portfolio examples of Posts Grid element is built using custom post type registered by
                         this plugin.
                     </li>
-                    <li>Optionally, if you have <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Addons for Visual Composer Pro" target="_blank">premium version</a> of the plugin installed, you can import the sample data
+                    <li>Optionally, if you have <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of the plugin installed, you can import the sample data
                         that replicates the demo site for you by importing the
                         file sample-data.xml file located in the plugin directory. The import option is available under
                         <strong> <a href="<?php echo admin_url() . 'import.php'; ?>"
@@ -140,22 +140,22 @@ else {
                 <p>Below is a list of required/recommended plugins to install that will help you get the most out of this plugin.
                     Although some of these plugins are optional, we recommend that you install these popular plugins if
                     you plan to install the demo data and get most out of this plugin. The demo site and the sample data
-                    provided with the <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/"
-                                         title="Addons for Visual Composer Pro" target="_blank">premium version</a> of
+                    provided with the <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/"
+                                         title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of
                     the plugin utilizes all of these plugins including the Portfolio Post type plugin.</p>
-                <p>These plugins are also listed in the Plugins tab of this help file under VC Addons →
+                <p>These plugins are also listed in the Plugins tab of this help file under WPBakery Addons →
                     Documentation, and you can install the plugins directly from there.</p>
                 <ul>
-                    <li><p><strong>Visual Composer</strong> is perhaps the most popular page builder tool for WordPress powering
+                    <li><p><strong>WPBakery Page Builder</strong> is perhaps the most popular page builder tool for WordPress powering
                             over 1.5+ million sites. You can build any layout you can imagine with intuitive drag and drop builder
                             with little or no programming knowledge.</p>
-                        <p>All of the elements part of Addons for Visual Composer plugin were built using the API provided
-                            by the Visual Composer plugin and hence this plugin must be installed and activated on the site prior
+                        <p>All of the elements part of Addons for WPBakery Page Builder plugin were built using the API provided
+                            by the WPBakery Page Builder plugin and hence this plugin must be installed and activated on the site prior
                             to using our plugin.</p>
                         <p>All of the pages of our demo site for
                             the plugin have been built using this page builder. You should install and activate this plugin
                             prior to replicating the plugin demo site by importing the sample data provided.</p>
-                        <p><a href="<?php echo esc_url($visualComposerUrl); ?>" target="_blank">More about Visual Composer →</a></p></li>
+                        <p><a href="<?php echo esc_url($visualComposerUrl); ?>" target="_blank">More about WPBakery Page Builder →</a></p></li>
                     <li><strong>Portfolio Post Type</strong> is a free plugin that registers a custom post type for
                         portfolio items. It also registers separate portfolio taxonomies for tags and categories. The
                         Portfolio grid instances showcased on our demo site was built using custom post types registered
@@ -167,7 +167,7 @@ else {
                 <hr>
                 <h3 id="demo-data">Installing Demo Data<a class="back-to-top" href="#panel"><span
                             class="dashicons dashicons-arrow-up-alt2"></span> Back to top</a></h3>
-                <p>If you have <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Addons for Visual Composer Pro" target="_blank">premium version</a> of the plugin installed, you can install the demo data to replicate the
+                <p>If you have <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of the plugin installed, you can install the demo data to replicate the
                     plugin demo site to get a head start on building your site. Installing demo data reduces the
                     learning curve associated with trying out the powerful elements part of this plugin.</p>
                 <p>The sample data imports the pages, posts and portfolio items part of the demo site. Once you are done with playing around the
@@ -185,35 +185,35 @@ else {
                             class="dashicons dashicons-arrow-up-alt2"></span> Back to top</a></h3>
 
                 <ul>
-                    <li>If you are new to drag and drop page building functions of <a href="<?php echo esc_url($visualComposerUrl); ?>" target="_blank">Visual Composer</a> and need help, make sure you checkout the <a
+                    <li>If you are new to drag and drop page building functions of <a href="<?php echo esc_url($visualComposerUrl); ?>" target="_blank">WPBakery Page Builder</a> and need help, make sure you checkout the <a
                             href="https://wpbakery.atlassian.net/wiki/display/VC/Visual+Composer+Pagebuilder+for+WordPress"
-                            title="Visual Composer Documentation" target="_blank">documentation of the Visual Composer</a> before
+                            title="WPBakery Page Builder Documentation" target="_blank">documentation of the WPBakery Page Builder</a> before
                         starting to use this plugin. The site has numerous text as well as video tutorials to help you
                         get a head start on using the plugin.
                     </li>
 
-                    <li>Once the Addons for Visual Composer plugin is activated, you should see a menu item <strong> <a href="<?php echo admin_url() . 'admin.php?page=livemesh_vc_addons'; ?>"
-                                            target="_blank"><?php echo __('VC Addons', 'livemesh-vc-addons') ?></a></strong> in WordPress admin with four sections - Settings, Elements, Debugging and Premium Upgrade.
-                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/plugin-settings.png" alt="Visual Composer Addons Settings"></p>
+                    <li>Once the Addons for WPBakery Page Builder plugin is activated, you should see a menu item <strong> <a href="<?php echo admin_url() . 'admin.php?page=livemesh_vc_addons'; ?>"
+                                            target="_blank"><?php echo __('WPBakery Addons', 'livemesh-vc-addons') ?></a></strong> in WordPress admin with four sections - Settings, Elements, Debugging and Premium Upgrade.
+                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/plugin-settings.png" alt="WPBakery Page Builder Addons Settings"></p>
 
                         <p>The settings screen <strong> <a href="<?php echo admin_url() . 'admin.php?page=livemesh_vc_addons'; ?>"
-                                                           target="_blank"><?php echo __('VC Addons→Settings', 'livemesh-vc-addons') ?></a></strong> for the plugin is self-documenting with minimal
+                                                           target="_blank"><?php echo __('WPBakery Addons→Settings', 'livemesh-vc-addons') ?></a></strong> for the plugin is self-documenting with minimal
                         options. Make sure you choose the theme color scheme in the 'General' tab to help ensure the plugin takes this as the default color for elements like buttons and links which have default color set.</p>
                         <p>During the development phase, it is recommended to not have any of the elements deactivated in the 'Elements' tab of the settings screen.</p>
 
                     </li>
 
-                    <li>Once the Addons for Visual Composer plugin is activated, all of the elements built by the plugin become available for drag and drop in the Visual Composer. In
+                    <li>Once the Addons for WPBakery Page Builder plugin is activated, all of the elements built by the plugin become available for drag and drop in the WPBakery Page Builder. In
                         the Page edit window, click on the <strong>'Backend Editor'</strong> button below the title field of the page edit window to bring up the page builder controls on
                         the page edit screen.
-                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/page-builder-screen.png" alt="Visual Composer Page Builder Screen"></p>
+                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/page-builder-screen.png" alt="WPBakery Page Builder Screen"></p>
                     </li>
 
-                    <li>To add a Livemesh VC addon element, just click on the <strong>'Add Element'</strong> button to bring up the 'Add Element'
-                        popup screen of the page builder. The plugin elements are grouped under <strong>'Livemesh VC
+                    <li>To add a Livemesh WPBakery Page Builder addon element, just click on the <strong>'Add Element'</strong> button to bring up the 'Add Element'
+                        popup screen of the page builder. The plugin elements are grouped under <strong>'Livemesh
                         Addons'</strong> tab on the top. Clicking on a element listed in the popup adds the
                         element to the page builder.
-                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/add-element-window.png" alt="Visual Composer Page Builder Addons"></p>
+                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/add-element-window.png" alt="WPBakery Page Builder Addons"></p>
                     </li>
 
                     <li>Hovering over the element added to the page builder, you can view the Edit link. Clicking the
@@ -223,18 +223,18 @@ else {
 
                         <p>Once the data required for configuring a element is entered, you can save the changes by
                         clicking on the <strong>'Save Changes'</strong> button for the element.</p>
-                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/addon-edit-screen.png" alt="Visual Composer Element Edit Window"></p>
+                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/addon-edit-screen.png" alt="WPBakery Page Builder Element Edit Window"></p>
 
                     </li>
 
                     <li>Many of the plugin elements part of this plugin are container elements that involve a child element to be added to the it. For eg., Team element needs multiple team member elements
                         added to it, Testimonials element is made of multiple child testiominial elements, Services element require that you add multiple service elements individually to make up the list of services.
 
-                        <p>The container elements are listed under 'Livemesh VC Addons' tab in the 'Add Element' popup screen. Once you add a container element (e.g., Livemesh Testimonials,
-                        Livemesh Servies, Livemesh FAQ, Livemesh Features, Livemesh Team etc.), the element display a big plus(+) icon in the page to help add child elements. Clicking on the plus(+) button
+                        <p>The container elements are listed under 'Livemesh Addons' tab in the 'Add Element' popup screen. Once you add a container element (e.g., Livemesh Testimonials,
+                         Services, FAQ, Features, Team Members etc.), the element display a big plus(+) icon in the page to help add child elements. Clicking on the plus(+) button
                             brings up child element editor popup window. Once you configure and save changes to the child element, the element gets added to the page builder window as contained
                         element part of the parent container element as seen below.</p>
-                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/page-builder-screen.png" alt="Visual Composer Addon Edit Window"></p>
+                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/page-builder-screen.png" alt="WPBakery Page Builder Addon Edit Window"></p>
 
                         <p>In the page edit screen of the page builder, while the settings for the container element itself can be changed by clicking on the edit icon at the top of the element added,
                         the child elements can be edited by clicking on the edit option available upon hovering over the child elements in the page edit window.</p>
@@ -243,14 +243,14 @@ else {
 
                     <li>After you hit the <strong>Update</strong> or <strong>Publish</strong> button on the page,the element is then ready for viewing on
                         the frontend page.
-                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/addon-rendered.png" alt="Visual Composer Addon Rendered"></p>
+                        <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/addon-rendered.png" alt="WPBakery Page Builder Addon Rendered"></p>
 
                     </li>
 
                 </ul>
 
 
-                <p>The below sections provide help on each of the elements built as part of Addons for Visual Composer
+                <p>The below sections provide help on each of the elements built as part of Addons for WPBakery Page Builder
                     plugin.</p>
 
                 <hr>
@@ -281,7 +281,7 @@ else {
                 <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/services-addon-edit.png" alt="Services Addon Container Element"></p>
                 <p>The services element is a container element that requires you to input multiple child service elements
                     that make up the list of services offered by a business or a community.</p>
-                <p>The element supports about 3 different styles (with 2 additional styles in <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Addons for Visual Composer Pro" target="_blank">premium version</a> of the
+                <p>The element supports about 3 different styles (with 2 additional styles in <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of the
                     plugin) and each of these styles can be customized further by choosing the type of icon desired to
                     represent the service – a font icon or an custom image icon. While the choice of font icons is huge
                     in number and perhaps sufficient for most common services, the icon images can help present the
@@ -298,7 +298,7 @@ else {
                     <li><strong>Icon Custom Hover Color</strong> – Specify a custom hover color for the font icon.</li>
                 </ul>
 
-                <p>The <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Addons for Visual Composer Pro" target="_blank">premium version</a> of the plugin allows you specify a custom font size, font color and and hover
+                <p>The <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of the plugin allows you specify a custom font size, font color and and hover
                     color for the font icon along with providing two additional styles of services/features.</p>
 
 
@@ -316,9 +316,9 @@ else {
 
                 <p>This element provides an easy way to capture the team members of your organization or an agency.</p>
                 <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/team-members-edit.png" alt="Team Members Addon Container Element"></p>
-                <p>The Livemesh Team element is a container element that requires you to input multiple child elements for
+                <p>The Team Members element is a container element that requires you to input multiple child elements for
                     team members that are part of the team/organization.</p>
-                <p>Two different styles are provided with more styles planned in the <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Addons for Visual Composer Pro" target="_blank">premium version</a> of the plugin. Most
+                <p>Two different styles are provided with more styles planned in the <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of the plugin. Most
                     of the styles display the team members in a multi-column grid. The option to specify the number of
                     columns is provided that helps to control the number of team members displayed per row of the team
                     members.</p>
@@ -333,7 +333,7 @@ else {
                 <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/statsbars-piecharts.png" alt="Statistics Addons"></p>
 
                 <p>The plugin features a number of elements that help display statistical information in the form of
-                    odometers, piecharts and stats bars. The <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Addons for Visual Composer Pro" target="_blank">premium version</a> of the plugin also includes a countdown
+                    odometers, piecharts and stats bars. The <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of the plugin also includes a countdown
                     element that displays a countdown timer for planned events such as product launches or website going
                     live.</p>
 
@@ -431,7 +431,7 @@ else {
                     <li><strong>Post Count</strong> – Set the number of posts you wish you display in the element. If
                         the element does not support pagination, the number of posts displayed is limited by the number
                         specified here. This is also the number of posts to display per page when the element supports
-                        pagination as is the case with Livemesh Grid element. Enter "All" to display all posts.
+                        pagination as is the case with Posts Grid element. Enter "All" to display all posts.
                     </li>
                     <li><strong>Order By</strong> – Specify the order of the posts displayed - by post date, title, modified date, author
                         menu order, comment count etc.
@@ -516,7 +516,7 @@ else {
                 <h3 id="carousel-element">Carousel<a class="back-to-top" href="#panel"> Back to top</a></h3>
                 <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/generic-carousel.jpg" alt="Generic Carousel Addon"></p>
 
-                <p>Livemesh Carousel is a generic carousel of custom HTML content of your choice. Possibilities are endless – image
+                <p>Carousel is a generic carousel of custom HTML content of your choice. Possibilities are endless – image
                     carousels with textual content describing the images, video carousels, event carousels with link to
                     the events, a carousel of team of volunteers, a collection of books sold on Amazon etc.</p>
                 <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-carousel-edit.png" alt="Generic Carousel Addon Edit Window"></p>
@@ -534,26 +534,26 @@ else {
                     for carousel, number of columns or items to display before making the user to scroll for additional
                     items etc. The carousel settings are explained in the help section above for Posts Carousel.</p>
                 <hr>
-                <h3 id="grid-element">Livemesh Grid<a class="back-to-top" href="#panel"> Back to top</a></h3>
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid.jpg" alt="Livemesh Grid Addon"></p>
+                <h3 id="grid-element">Posts Grid<a class="back-to-top" href="#panel"> Back to top</a></h3>
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid.jpg" alt="Posts Grid Addon"></p>
 
                 <p>Perhaps the most popular and most important of all elements part of all elements part of this plugin,
-                    Livemesh Grid helps you build a multi-column grid of posts or custom post types. The posts displayed
+                    Posts Grid helps you build a multi-column grid of posts or custom post types. The posts displayed
                     are filterable by taxonomy terms.</p>
 
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid2.jpg" alt="Livemesh Grid Addon"></p>
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid2.jpg" alt="Posts Grid Addon"></p>
                 <p>Using the Grid element, you can construct a portfolio of your work/services/products. We recommend you
                     use the popular plugin – <a title="Portfolio Post Type Plugin"
                                                 href="https://wordpress.org/plugins/portfolio-post-type/">https://wordpress.org/plugins/portfolio-post-type/</a>
                     for building a collection of portfolio entries. Once the portfolio entries are in place, make sure
                     you select Portfolio Post type under Post Type entry in Build Tools window as explained below.</p>
 
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-pagination.jpg" alt="Livemesh Grid Pagination"></p>
-                <p>The <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Addons for Visual Composer Pro" target="_blank">premium version</a> of the plugin has support for pagination, lazy load with load more button and
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-pagination.jpg" alt="Posts Grid Pagination"></p>
+                <p>The <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Addons for WPBakery Page Builder Pro" target="_blank">premium version</a> of the plugin has support for pagination, lazy load with load more button and
                     lightbox option for images. The additional posts are loaded via AJAX when the user navigates through
                     the pages populated or when the user hits the Load More button.</p>
 
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-loadmore.jpg" alt="Livemesh Grid AJAX Load More"></p>
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-loadmore.jpg" alt="Posts Grid AJAX Load More"></p>
                 
                 <p>The element features a Posts Query section to help choose posts or custom posts to display. This
                     powerful tool has number of fields to control what gets displayed and in what order.</p>
@@ -567,7 +567,7 @@ else {
                     <li><strong>Post Count</strong> – Set the number of posts you wish you display in the element. If
                         the element does not support pagination, the number of posts displayed is  limited by the number
                         specified here. This is also the number of posts to display per page when the element supports
-                        pagination as is the case with Livemesh Grid element. Enter "All" to display all posts.
+                        pagination as is the case with Posts Grid element. Enter "All" to display all posts.
                     </li>
                     <li><strong>Order By</strong> – Specify the order of the posts displayed - by post date, title, modified date, author
                         menu order, comment count etc.
@@ -591,12 +591,12 @@ else {
                         use this field to specify the chosen authors here by specifying their names.
                     </li>
                 </ol>
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit1.png" alt="Livemesh Grid Edit Window"></p>
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit2.png" alt="Livemesh Grid Edit Window"></p>
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit1.png" alt="Posts Grid Edit Window"></p>
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit2.png" alt="Posts Grid Edit Window"></p>
 
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit3.png" alt="Livemesh Grid Edit Window"></p>
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit3.png" alt="Posts Grid Edit Window"></p>
 
-                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit4.png" alt="Livemesh Grid Edit Window"></p>
+                <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/livemesh-grid-edit4.png" alt="Posts Grid Edit Window"></p>
 
 
                 <p>The grid element has numerous other options to control the display of posts or custom post types. Some
@@ -776,8 +776,8 @@ else {
                 <p>You can choose to display an icon along with the button text. The icon can be a icon font or an
                     image.</p>
                 <p>The element options are mostly self-explanatory and you can view a live preview of the buttons <a
-                        title="Visual Composer Button Addon Demo"
-                        href="https://www.livemeshthemes.com/visual-composer-addons/buttons/">here</a>.</p>
+                        title="WPBakery Page Builder Button Addon Demo"
+                        href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/buttons/">here</a>.</p>
 
 
                 <hr>
@@ -928,7 +928,7 @@ else {
                     video tutorial sites, video marketers, small businesses or websites with a major presence on
                     YouTube/Vimeo. The videos can be played with a single click of the play button on the gallery item
                     as seen in this <a title="Video Gallery"
-                                       href="https://www.livemeshthemes.com/visual-composer-addons/video-gallery/">demo page</a>.
+                                       href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/video-gallery/">demo page</a>.
                 </p>
                 <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/image-gallery-edit1.png" alt="Image Gallery Addon Edit Window"></p>
                 <p>The image gallery element is a container element that requires you to add child elements representing gallery items.</p>
@@ -995,7 +995,7 @@ else {
                     video tutorial sites, video marketers, small businesses or websites with a major presence on
                     YouTube/Vimeo. The videos can be played with a single click of the play button on the gallery item
                     as seen in this <a title="Video Gallery"
-                                       href="https://www.livemeshthemes.com/visual-composer-addons/video-gallery/">demo page</a>.
+                                       href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/video-gallery/">demo page</a>.
                 </p>
                 <p><img class="alignnone size-large" src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/image-carousel-edit1.png" alt="Image Carousel Addon Edit Window"></p>
 
@@ -1116,14 +1116,14 @@ else {
             <div id="plugins-panel" class="panel-left">
                 <h4>Required/Recommended Plugins</h4>
 
-                <p>Below is a list of required/recommended plugins to install that will help you get the most out of the plugin. While Visual Composer plugin is required, the rest of the plugins are optional but we recommend you install these plugins if you plan to replicate the plugin demo site by importing the sample data.</p>
+                <p>Below is a list of required/recommended plugins to install that will help you get the most out of the plugin. While WPBakery Page Builder plugin is required, the rest of the plugins are optional but we recommend you install these plugins if you plan to replicate the plugin demo site by importing the sample data.</p>
 
                 <hr/>
 
-                <h4><?php _e('Visual Composer', 'livemesh-vc-addons'); ?>
+                <h4><?php _e('WPBakery Page Builder', 'livemesh-vc-addons'); ?>
                     <?php if (!class_exists('Vc_Manager')) { ?>
                         <a class="button button-secondary thickbox onclick" href="<?php echo esc_url($visualComposerUrl); ?>"
-                           title="<?php esc_attr_e('Install Visual Composer', 'livemesh-vc-addons'); ?>"><span
+                           title="<?php esc_attr_e('Install WPBakery Page Builder', 'livemesh-vc-addons'); ?>"><span
                                 class="dashicons dashicons-download"></span> <?php _e('Install Now', 'livemesh-vc-addons'); ?></a>
                     <?php }
                     else { ?>
@@ -1132,11 +1132,11 @@ else {
                     <?php } ?>
                 </h4>
 
-                <p><strong>Visual Composer</strong> is perhaps the most popular page builder tool for WordPress powering
+                <p><strong>WPBakery Page Builder</strong> is perhaps the most popular page builder tool for WordPress powering
                     over 1.5+ million sites. You can build any layout you can imagine with intuitive drag and drop builder
                     with little or no programming knowledge.</p>
-                <p>All of the elements part of Addons for Visual Composer plugin were built using the API provided
-                    by the Visual Composer plugin and hence this plugin must be installed and activated on the site prior
+                <p>All of the elements part of Addons for WPBakery Page Builder plugin were built using the API provided
+                    by the WPBakery Page Builder plugin and hence this plugin must be installed and activated on the site prior
                     to using our plugin.</p>
                 <p>All of the pages of our demo site for
                     the plugin have been built using this page builder. You should install and activate this plugin
@@ -1181,7 +1181,7 @@ else {
                 <p>Our tests indicate that the elements work well with most themes that are well coded. You may need some
                     minor custom CSS with themes that hijack the styling for heading tags by using !important
                     keyword.</p>
-                <p>Some themes override default templates provided by Visual Composer. The themes that override VC Row
+                <p>Some themes override default templates provided by WPBakery Page Builder. The themes that override VC Row
                     template may require you to manually set the attributes required for the dark version (see below).</p>
 
                 <p>The demo site is best recreated with a theme that supports a full width page template without
@@ -1192,7 +1192,7 @@ else {
 
                 <h3 id="faq-dark-version">How to enable the dark version for any element?</h3>
 
-                <p>In Visual Composer page builder, add a row wrapper for the element, edit row and check the option
+                <p>In WPBakery Page Builder, add a row wrapper for the element, edit row and check the option
                     ‘Dark Background?’ at the end of General tab of the row or an inner row element.</p>
 
                 <p>For themes that override the VC row template with one of their own, you may need to add a custom
@@ -1210,9 +1210,21 @@ else {
 
             <!-- Updates panel -->
             <div id="updates-panel" class="panel-left">
+                <h3>1.9.1</h3>
+                <ul>
+                    <li>Rolled back – Update done to WayPoints script since WPBakery Page Builder is yet to upgrade to new version. Some reports have come in which suggests that the change broke some pages with certain WPBakery page builder elements.</li>
+                </ul>
+                <h3>1.9.0</h3>
+                <ul>
+                    <li>Updated – Changed plugin name to Addons for WPBakery Page Builder to help reflect recent renaming of Visual Composer to WPBakery Page Builder.</li>
+                    <li>Updated - Changed plugin options menu title from VC Addons to WPBakery Addons in WordPress admin.</li>
+                    <li>Updated - Removed annoying Livemesh prefix from all elements. For example, Livemesh Services is now named Services, Livemesh Tabs is now Tabs, Livemesh Grid is now Posts Grid etc.</li>
+                    <li>Updated - Moved to latest version of waypoints script.</li>
+                    <li>Fixed - The grid won't display filters when specific taxonomy terms are chosen in the build query</li>
+                </ul>
                 <h3>1.8.2</h3>
                 <ul>
-                    <li>Fixed – Livemesh Grid columns can break in certain resolutions in FireFox.</li>
+                    <li>Fixed – Posts Grid columns can break in certain resolutions in FireFox.</li>
                     <li>Fixed - The piechart value is not being rounded.</li>
                     <li>Fixed - The post grid and posts carousel date format not reflecting the user preference specified in Settings page.</li>
                 </ul>
@@ -1235,7 +1247,7 @@ else {
                     <li>Fixed – The post image in a grid or posts carousel was not clickable to the link specified</li>
                     <li>Fixed – The grid filters would not center when a heading was not specified.</li>
                     <li>Fixed – The grid filters will not display multi-line on devices of lower resolutions like mobile devices.</li>
-                    <li>Fixed – The plugin caused some minor styling changes to occur in Visual Composer backend.</li>
+                    <li>Fixed – The plugin caused some minor styling changes to occur in WPBakery Page Builder backend.</li>
                     <li>Updated - Compatibility with WordPress 4.9 version.</li>
                 </ul>
                 <h4>1.6.1</h4>
@@ -1305,7 +1317,7 @@ else {
                 <div class="panel-inner">
 
                     <div class="panel-aside banner">
-                        <a href="https://www.livemeshthemes.com/visual-composer-addons/pricing/" title="Purchase Now"><img class="dashboard-image"
+                        <a href="https://www.livemeshthemes.com/wpbakery-page-builder-addons/pricing/" title="Purchase Now"><img class="dashboard-image"
                                                                                         src="https://www.livemeshthemes.com/wp-content/uploads/plugin-doc/livemesh-vc-addons/dashboard/purchase-banner1.jpg"
                                                                                         alt="Sale Banner"></a>
                     </div>

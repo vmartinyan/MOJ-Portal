@@ -1,6 +1,12 @@
 
+.wrap.lvca-license-wrap form.lvca-license-box {
+  max-width: 700px;
+  background: white;
+  margin: 20px 0;
+  padding: 20px 30px;
+  }
 
-/* =============== Visual Composer Elements ==================== */
+/* =============== WPBakery Page Builder Elements ==================== */
 
 
 [class*=vc_element-icon][class*=icon-lvca-] {
@@ -13,7 +19,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   margin-right: 10px;
   }
 
-.icon-lvca-services.vc_element-icon {
+.icon-lvca-services.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/services.png);
   }
 
@@ -21,7 +27,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/service-add.png);
   }
 
-.icon-lvca-statsbars.vc_element-icon {
+.icon-lvca-statsbars.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/stats-bar.png);
   }
 
@@ -29,7 +35,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/stats-bar.png);
   }
 
-.icon-lvca-piecharts.vc_element-icon {
+.icon-lvca-piecharts.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/piecharts.png);
   }
 
@@ -37,7 +43,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/piechart-add.png);
   }
 
-.icon-lvca-odometers.vc_element-icon {
+.icon-lvca-odometers.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/odometers.png);
   }
 
@@ -45,7 +51,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/odometer-add.png);
   }
 
-.icon-lvca-clients.vc_element-icon {
+.icon-lvca-clients.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/clients.png);
   }
 
@@ -57,7 +63,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/heading.png);
   }
 
-.icon-lvca-team.vc_element-icon {
+.icon-lvca-team.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/team.png);
   }
 
@@ -65,7 +71,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/team-member-add.png);
   }
 
-.icon-lvca-testimonials.vc_element-icon {
+.icon-lvca-testimonials.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/testimonials.png);
   }
 
@@ -73,7 +79,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/testimonial-add.png);
   }
 
-.icon-lvca-testimonials-slider.vc_element-icon {
+.icon-lvca-testimonials-slider.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/testimonials-slider.png);
   }
 
@@ -81,7 +87,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/testimonials-slider-add.png);
   }
 
-.icon-lvca-carousel.vc_element-icon {
+.icon-lvca-carousel.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/generic-carousel.png);
   }
 
@@ -97,7 +103,11 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/grid-alt.png);
   }
 
-.icon-lvca-pricing-table.vc_element-icon {
+.icon-lvca-posts-block.vc_element-icon {
+  background-image: url(../images/admin/grid.png);
+  }
+
+.icon-lvca-pricing-table.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/pricing-table.png);
   }
 
@@ -109,7 +119,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/spacer.png);
   }
 
-.icon-lvca-accordion.vc_element-icon {
+.icon-lvca-accordion.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/accordion.png);
   }
 
@@ -117,7 +127,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/accordion-add.png);
   }
 
-.icon-lvca-tabs.vc_element-icon {
+.icon-lvca-tabs.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/tabs.png);
   }
 
@@ -129,7 +139,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/countdown.png);
   }
 
-.icon-lvca-features.vc_element-icon {
+.icon-lvca-features.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/features.png);
   }
 
@@ -137,7 +147,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/feature-add.png);
   }
 
-.icon-lvca-faq.vc_element-icon {
+.icon-lvca-faq.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/faq.png);
   }
 
@@ -149,7 +159,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/button.png);
   }
 
-.icon-lvca-gallery.vc_element-icon {
+.icon-lvca-gallery.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/gallery.png);
   }
 
@@ -157,11 +167,11 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/gallery-add.png);
   }
 
-.icon-lvca-gallery-carousel.vc_element-icon {
+.icon-lvca-gallery-carousel.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/carousel.png);
   }
 
-.icon-lvca-image-slider.vc_element-icon {
+.icon-lvca-image-slider.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/sliders2.png);
   }
 
@@ -169,7 +179,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/slider-add2.png);
   }
 
-.icon-lvca-slider.vc_element-icon {
+.icon-lvca-slider.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/sliders.png);
   }
 
@@ -177,7 +187,7 @@ input[type=number].wpb_vc_param_value.lvca_number {
   background-image: url(../images/admin/slider-add.png);
   }
 
-.icon-lvca-icons.vc_element-icon {
+.icon-lvca-icons.vc_element-icon[data-is-container=true] {
   background-image: url(../images/admin/icons.png);
   }
 

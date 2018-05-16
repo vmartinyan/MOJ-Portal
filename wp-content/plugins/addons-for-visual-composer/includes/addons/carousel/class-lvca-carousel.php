@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Carousel
+Widget Name: Carousel
 Description: Display a list of custom HTML content as a carousel.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -107,14 +107,14 @@ class LVCA_Carousel {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Carousel", "livemesh-vc-addons"),
+                "name" => __("Carousel", "livemesh-vc-addons"),
                 "base" => "lvca_carousel",
                 "as_parent" => array('only' => 'lvca_carousel_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
-                'description' => __('Display a carousel of html elements.', 'livemesh-vc-addons'),
+                'description' => __('Display a carousel of HTML elements.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
                 "icon" => 'icon-lvca-carousel',
                 "params" => $carousel_params
@@ -129,12 +129,12 @@ class LVCA_Carousel {
         if (function_exists("vc_map")) {
 
             vc_map(array(
-                    "name" => __("Livemesh Carousel", "livemesh-vc-addons"),
+                    "name" => __("Carousel", "livemesh-vc-addons"),
                     "base" => "lvca_carousel_item",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_carousel'), // Use only|except attributes to limit parent (separate multiple values with comma)
                     "icon" => 'icon-lvca-carousel-item',
-                    "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                    "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                     "params" => array(
                         array(
                             'type' => 'textfield',

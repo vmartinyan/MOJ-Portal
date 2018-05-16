@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Clients
+Widget Name: Clients
 Description: Display list of your clients in a multi-column grid.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -112,12 +112,12 @@ class LVCA_Clients {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Clients", "livemesh-vc-addons"),
+                "name" => __("Clients", "livemesh-vc-addons"),
                 "base" => "lvca_clients",
                 "as_parent" => array('only' => 'lvca_single_client'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display clients in a multi-column grid.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -145,7 +145,7 @@ class LVCA_Clients {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Client", "my-text-domain"),
+                    "name" => __("Client", "my-text-domain"),
                     "base" => "lvca_single_client",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_clients'), // Use only|except attributes to limit parent (separate multiple values with comma)

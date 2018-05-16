@@ -4,7 +4,7 @@ Donate link: https://petersplugins.com/make-a-donation/
 Tags: page, 404, error, error page, 404 page, page not found, page not found error, 404 error page, missing, broken link, template, 404 link, seo, custom 404, custom 404 page, custom 404 error, custom 404 error page, customize 404, customize 404 page, customize 404 error page
 Requires at least: 3.0
 Tested up to: 4.9
-Stable tag: 3.3
+Stable tag: 5
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,32 +17,39 @@ Custom 404 the easy way! Set any page as custom 404 error page. No coding needed
 
 It allows you to easily create your own 404 error page without any effort and it works with almost every theme.
 
-<blockquote>
-If you like this plugin please do me favor and leave a review here on wordpress.org so that other people know it is helpful for you. Thanks!
-</blockquote>
+<strong>If you like this plugin</strong> please do me favor and leave a review here on wordpress.org so that other people know it is helpful for you. Thanks!
 
-[youtube https://youtu.be/HygoFMwdIuY]
-
-= Usage =
+== Usage ==
 
 Create your custom 404 error page just like any other page using the WordPress Page Editor. Then go to 'Appearance' -> '404 Error Page' and select the created page as your custom 404 error page. That's it!
 
-* Different from other similar plugins the 404page plugin **does not create redirects**. That’s **quite important** because a correct code 404 is delivered which tells search engines that the page does not exist and has to be removed from the index. A redirect would result in a HTTP code 301 or 302 and the URL would remain in the search index.
-* Different from other similar plugins the 404page plugin **does not create additional server requests**. 
+== Why use this plugin? ==
 
-= Docs & Support =
+Different from other similar plugins the 404page plugin **does not create redirects**. That’s **quite important** because a correct code 404 is delivered which tells search engines that the page does not exist and has to be removed from the index.
+
+Different from other similar plugins the 404page plugin **does not create additional server requests**. 
+
+== Docs & Support ==
+
+Video: [A brief Introduction to the free WordPress Plugin 404page](https://youtu.be/HygoFMwdIuY)
 
 Video: [A quick Overview over the Advanced Settings](https://youtu.be/9rL9LbYiSJk=)
 
-More detailed information about the 404page plugin can be found in the [Plugin Manual](http://petersplugins.com/docs/404page/). For support check the [Support Forum](https://wordpress.org/support/plugin/404page).
+[Plugin Manual](http://petersplugins.com/docs/404page/)
 
+[Support Forum](https://wordpress.org/support/plugin/404page)
+
+== GDPR Info ==
+
+This plugin is fully GDPR compliant. It does not set cookies. It does not collect or store any data. It does not send any data to external servers.
+
+[Peters' Plugins GDPR Compliance Information Page](https://petersplugins.com/gdpr-compliance-information/)
 
 == Compatibility ==
 
 = The 404page plugin was sucessfully tested by the author with the following themes =
 * [Athena](https://wordpress.org/themes/athena/)
 * [Customizr](https://wordpress.org/themes/customizr/) (Read more about [Customizr Compatibility Mode](http://petersplugins.com/docs/404page/#settings_operating_method))
-* [Enfold](https://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990?ref=petersplugins)
 * [evolve](https://wordpress.org/themes/evolve/)
 * [GeneratePress](https://wordpress.org/themes/generatepress/)
 * [Graphene](https://wordpress.org/themes/graphene/)
@@ -63,6 +70,7 @@ More detailed information about the 404page plugin can be found in the [Plugin M
 * [Vantage](https://wordpress.org/themes/vantage/)
 * [Virtue](https://wordpress.org/themes/virtue/)
 * [Zerif Lite](http://themeisle.com/themes/zerif-lite/)
+**Note**: The [Enfold](https://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990?ref=petersplugins) Theme is no longer supported because the Theme now has its own custom 404 error page feature.
 
 = The 404page plugin was sucessfully tested by the author with the following starter themes =
 * [Bones](http://themble.com/bones/)
@@ -78,8 +86,8 @@ More detailed information about the 404page plugin can be found in the [Plugin M
 * [Polylang](https://wordpress.org/plugins/polylang/)
 * [User Submitted Posts](https://wordpress.org/plugins/user-submitted-posts/)
 * [WooCommerce](https://wordpress.org/plugins/woocommerce/)
-* [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)(Read more about [WP Super Cache Compatibility](http://petersplugins.com/docs/404page/#wp_super_cache)
-* [WPML WordPress Multilingual Plugin](https://wpml.org/)([officially approved by WPML team](https://wpml.org/plugin/404page/))
+* [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)(Read more about [WP Super Cache Compatibility](http://petersplugins.com/docs/404page/#wp_super_cache))
+* [WPML WordPress Multilingual Plugin](https://wpml.org/) ([officially approved by WPML team](https://wpml.org/plugin/404page/))
 
 == For developers ==
 
@@ -96,12 +104,14 @@ If you are a theme developer you can add native support for the 404page plugin t
 * **[smart User Slug Hider](https://wordpress.org/plugins/smart-user-slug-hider/)** - Hide usernames in author pages URLs to enhance security 
 * [See all](https://profiles.wordpress.org/petersplugins/#content-plugins)
 
+== Stay up to date ==
+
+[Follow me on Google+](https://plus.google.com/+petersplugins)
+[Follow me on Facebook](https://www.facebook.com/petersplugins/)
+
 == Screenshots ==
 
-1. Create your costom 404 Error Page as a normal WordPress Page
-2. Set the created Page as 404 Error Page
-3. Advanced Settings
-4. Advanced Settings with WPML plugin installed (Compatibility Mode is not available, because the 404page plugin automatically switches to WMPL mode)
+1. How to easily create your custom 404 error page
 
 == Frequently Asked Questions ==
 
@@ -118,6 +128,13 @@ No, there is no redirection! The chosen page is delivered as a 'real' 404 error 
 The 404page plugin adds a CSS class `error404` to the `<body>` tag which can be used for extra styling.
 
 == Changelog ==
+
+= 5 (2018-03-05) =
+* show an indicator if the currently edited page is a 404 error page
+* minor code- & UI-improvements
+
+= 4 (2018-03-05) =
+* bugfix for bbPress ([See Topic](https://wordpress.org/support/topic/not-fully-bbpress-compatible/)
 
 = 3.3 (2017-11-16) =
 * support for right-to-left-languages added
@@ -206,6 +223,12 @@ The 404page plugin adds a CSS class `error404` to the `<body>` tag which can be 
 * Initial Release
 
 == Upgrade Notice ==
+
+= 5 =
+show an indicator if the currently edited page is a 404 error page
+
+= 4 =
+bugfix for bbPress
 
 = 3.3 =
 support for right-to-left-languages

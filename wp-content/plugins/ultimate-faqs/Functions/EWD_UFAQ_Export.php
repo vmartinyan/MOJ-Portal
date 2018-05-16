@@ -10,9 +10,9 @@ function EWD_UFAQ_Export_To_PDF() {
 		// }
 
 		$params = array(
-										'posts_per_page' => -1,
-										'post_type' => 'ufaq'
-									 );
+			'posts_per_page' => -1,
+			'post_type' => 'ufaq'
+		);
 		$faqs = get_posts($params);
 
 		$PDFPasses = array("FirstPageRun", "SecondPageRun", "Final");
@@ -69,6 +69,9 @@ function EWD_UFAQ_Export_To_PDF() {
 }
 
 function EWD_UFAQ_Export_To_Excel() {
+	$FAQ_Fields_Array = get_option("EWD_UFAQ_FAQ_Fields");
+	if (!is_array($FAQ_Fields_Array)) {$FAQ_Fields_Array = array();}
+
 	include_once('../wp-content/plugins/ultimate-faqs/PHPExcel/Classes/PHPExcel.php');
 
 		// Instantiate a new PHPExcel object
@@ -81,6 +84,13 @@ function EWD_UFAQ_Export_To_Excel() {
 		$objPHPExcel->getActiveSheet()->setCellValue("B1", "Answer");
 		$objPHPExcel->getActiveSheet()->setCellValue("C1", "Categories");
 		$objPHPExcel->getActiveSheet()->setCellValue("D1", "Tags");
+		$objPHPExcel->getActiveSheet()->setCellValue("E1", "Post Date");
+
+		$column = 'F';
+		foreach ($FAQ_Fields_Array as $FAQ_Field_Item) {
+     		$objPHPExcel->getActiveSheet()->setCellValue($column."1", $FAQ_Field_Item['FieldName']);
+    		$column++;
+		}  
 
 		//start while loop to get data
 		$rowCount = 2;
@@ -92,7 +102,7 @@ function EWD_UFAQ_Export_To_Excel() {
 		foreach ($Posts as $Post)
 		{
     	 	$Categories = get_the_terms($Post->ID, "ufaq-category");
-$Category_String = '';
+			$Category_String = '';
 				if (is_array($Categories)) {
     	 		foreach ($Categories  as $Category) {
     	 			$Category_String .= $Category->name . ",";
@@ -114,6 +124,14 @@ $Category_String = '';
 			$objPHPExcel->getActiveSheet()->setCellValue("B" . $rowCount, $Post->post_content);
 			$objPHPExcel->getActiveSheet()->setCellValue("C" . $rowCount, $Category_String);
 			$objPHPExcel->getActiveSheet()->setCellValue("D" . $rowCount, $Tag_String);
+			$objPHPExcel->getActiveSheet()->setCellValue("E" . $rowCount, $Post->post_date);
+
+			$column = 'F';
+			foreach ($FAQ_Fields_Array as $FAQ_Field_Item) {
+     			$Value = get_post_meta($Post->ID, "Custom_Field_" . $FAQ_Field_Item['FieldID'], true);
+     			$objPHPExcel->getActiveSheet()->setCellValue($column . $rowCount, $Value);
+    			$column++;
+			}  
 
     		$rowCount++;
 

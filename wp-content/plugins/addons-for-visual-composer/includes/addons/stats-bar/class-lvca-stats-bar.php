@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Stats Bars
+Widget Name: Stats Bars
 Description: Display multiple stats bars that talk about skills or other percentage stats.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -111,12 +111,12 @@ class LVCA_Stats_Bars {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Stats Bars", "livemesh-vc-addons"),
+                "name" => __("Stats Bars", "livemesh-vc-addons"),
                 "base" => "lvca_statsbars",
                 "as_parent" => array('only' => 'lvca_statsbar_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => false,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display stats bars of skills or percentage stats.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -141,7 +141,7 @@ class LVCA_Stats_Bars {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Stats Bar", "my-text-domain"),
+                    "name" => __("Stats Bar", "my-text-domain"),
                     "base" => "lvca_statsbar_item",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_statsbars'), // Use only|except attributes to limit parent (separate multiple values with comma)

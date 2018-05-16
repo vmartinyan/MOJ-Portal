@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Piecharts
+Widget Name: Piecharts
 Description: Display one or more piecharts depicting a percentage value in a multi-column grid.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -115,12 +115,12 @@ class LVCA_Piecharts {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Piecharts", "livemesh-vc-addons"),
+                "name" => __("Piecharts", "livemesh-vc-addons"),
                 "base" => "lvca_piecharts",
                 "as_parent" => array('only' => 'lvca_piechart_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => true,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display piecharts in a multi-column grid.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -161,7 +161,7 @@ class LVCA_Piecharts {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Pierchart", "my-text-domain"),
+                    "name" => __("Pierchart", "my-text-domain"),
                     "base" => "lvca_piechart_item",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_piecharts'), // Use only|except attributes to limit parent (separate multiple values with comma)

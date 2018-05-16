@@ -36,15 +36,16 @@ if ( !class_exists( 'PP_404Page' ) ) {
     private $postid;
     private $admin_handle;
     
-    
     /**
 	   * here we go
      */
-    public function __construct( $file ) {
-      $this->_file = $file;
-      $this->plugin_name = '404page';
-      $this->plugin_slug = '404page';
-      $this->version = '3.3';
+    public function __construct( $settings ) {
+      
+      $this->_file       = $settings['file'];
+      $this->plugin_slug = $settings['slug'];
+      $this->plugin_name = $settings['name'];
+      $this->version     = $settings['version'];
+      
       $this->get_settings();
       $this->load();
     } 
@@ -202,10 +203,32 @@ if ( !class_exists( 'PP_404Page' ) ) {
     function show404_standard_mode( $template ) {
       
       global $wp_query;
+      
+      // @since 4
+      // fix for an ugly bbPress problem
+      // see https://wordpress.org/support/topic/not-fully-bbpress-compatible/
+      // see https://bbpress.trac.wordpress.org/ticket/3161
+      // if a bbPress member page is shown and the member has no topics created yet the 404_template filter hook fires
+      // this is a bbPress problem but it has not been fixed since 6 months
+      // so let's bypass the problem
+      if ( function_exists( 'bbp_is_single_user' ) ) {
+        
+        if ( bbp_is_single_user() ) {
+          
+          return $template;
+          
+        }
+      
+      }
+      // that's it   
+      
       if ( ! $this->settings['404page_native'] ) {
+        
         $wp_query = null;
         $wp_query = new WP_Query();
         $wp_query->query( 'page_id=' . $this->get_page_id() );
+        
+        
         $wp_query->the_post();
         $template = get_page_template();
         rewind_posts();
@@ -216,6 +239,7 @@ if ( !class_exists( 'PP_404Page' ) ) {
       return $template;
       
     }
+
     
     /**
      * show 404 page
@@ -225,6 +249,20 @@ if ( !class_exists( 'PP_404Page' ) ) {
       
       // remove the filter so we handle only the first query - no custom queries
       remove_filter( 'the_posts', array( $this, 'show404_compatiblity_mode' ), 999 ); 
+      
+      // @since 4
+      // fix for an ugly bbPress problem
+      // see show404_standard_mode()
+      if ( function_exists( 'bbp_is_single_user' ) ) {
+        
+        if ( bbp_is_single_user() ) {
+          
+          return $posts;
+          
+        }
+      
+      }
+      // that's it   
       
       $pageid = $this->get_page_id();
       if ( ! $this->settings['404page_native'] ) {
@@ -239,7 +277,7 @@ if ( !class_exists( 'PP_404Page' ) ) {
           
           remove_action( 'pre_get_posts', array ( $this, 'exclude_404page' ) );
           remove_filter( 'get_pages', array ( $this, 'remove_404page_from_array' ), 10, 2 );
-          
+         
           global $wp_query;
           $wp_query = null;
           $wp_query = new WP_Query();
@@ -538,19 +576,70 @@ if ( !class_exists( 'PP_404Page' ) ) {
      */
     function admin_style() {
       
-      echo '<style type="text/css">#pp-plugin-info-404page { background-image: url(' . plugins_url( 'assets/pluginicon.png', $this->_file ) .'); }';
+      if ( get_current_screen()->id == $this->admin_handle ) {
+      
+        ?>
+        <style type="text/css">
+          #pp-404page-settings h1 span {
+            display: block;
+            line-height: 48px; 
+            padding-left: 60px; 
+            background-image: url(<?php echo plugins_url( 'assets/pluginicon.png', $this->_file ); ?>);
+            background-repeat: no-repeat; 
+            background-color: #4B6F87;
+            color: #fff;
+          }
+          #pp-404page-settings h1 nav {
+            background-color: #fff;
+            text-align: right;
+            line-height: 1;
+          }
+          #pp-404page-settings h1 nav a {
+            display: inline-block;
+            padding: 6px;
+            color: #4B6F87;
+          }
+          #pp-404page-settings h1 nav a:hover, #pp-404page-settings h1 nav a:focus {
+            color: #104060;
+          }
+          
+        </style>
+        
+        <?php
+      
+      }
       
       if ( $this->settings['404page_page_id'] > 0 ) {
         
+        echo '<style type="text/css">';
+        
         foreach ( $this->get_all_page_ids() as $pid ) {
           
-          echo ' #the-list #post-' . $pid . ' .column-title .row-title:before { content: "404"; background-color: #333; color: #FFF; display: inline-block; padding: 0 5px; margin-right: 10px; }';
+          echo '#the-list #post-' . $pid . ' .column-title .row-title:before { content: "404"; background-color: #333; color: #FFF; display: inline-block; padding: 0 5px; margin-right: 10px; }';
           
         }
         
+        echo '</style>';
+        
       }
       
-      echo '</style>';
+      // the currently edited page is a 404 error page
+      // @since 5
+      if ( get_current_screen()->id == 'page' && $this->settings['404page_page_id'] > 0 ) {
+        
+        global $post;
+        
+        $all404pages = $this->get_all_page_ids();
+        if ( in_array( $post->ID, $all404pages  ) ) {
+          
+          ?>
+          <style type="text/css">
+            h1.wp-heading-inline:before { content: "404"; background-color: #333; color: #FFF; display: inline-block; padding: 0 5px; margin-right: 10px; }';
+          </style>
+          <?php
+          
+        }
+      }
       
     }
     
@@ -1014,8 +1103,11 @@ if ( !class_exists( 'PP_404Page' ) ) {
         
       }
       ?>
-      <div class="wrap" id="pp-404page-settings">
-        <h1 id="pp-plugin-info-404page"><?php echo $this->plugin_name; ?> <?php _e( 'Settings', '404page' ); ?><span><a class="dashicons dashicons-wordpress" href="<?php echo $this->wp_url; ?>/" title="<?php _e( 'wordpress.org plugin directory', '404page' ); ?>"></a> <a class="dashicons dashicons-admin-home" href="https://petersplugins.com/" title="<?php _e( 'Author homepage', '404page' );?>"></a> <a class="dashicons dashicons-googleplus" href="https://plus.google.com/+petersplugins" title="<?php _e( 'Authors Google+ Page', '404page' ); ?>"></a> <a class="dashicons dashicons-facebook-alt" href="https://www.facebook.com/petersplugins" title="<?php _e( 'Authors facebook Page', '404page' ); ?>"></a> <a class="dashicons dashicons-book-alt" href="<?php echo $this->dc_url; ?>" title="<?php _e( 'Plugin Doc', '404page' ); ?>"></a> <a class="dashicons dashicons-editor-help" href="https://wordpress.org/support/plugin/<?php echo $this->plugin_slug; ?>/" title="<?php _e( 'Support', '404page'); ?>"></a> <a class="dashicons dashicons-admin-comments" href="https://petersplugins.com/contact/" title="<?php _e( 'Contact Author', '404page' ); ?>"></a></span></h1>
+      <div class="wrap 404page" id="pp-404page-settings">
+        <h1>
+          <span><?php echo $this->plugin_name; ?></span>
+          <nav><a class="dashicons dashicons-star-filled" href="https://wordpress.org/support/plugin/<?php echo $this->plugin_slug; ?>/reviews/" title="<?php _e( 'Please rate plugin', '404page' ); ?>"></a><a class="dashicons dashicons-wordpress" href="<?php echo $this->wp_url; ?>/" title="<?php _e( 'wordpress.org plugin directory', '404page' ); ?>"></a><a class="dashicons dashicons-admin-home" href="https://petersplugins.com/" title="<?php _e( 'Author homepage', '404page' );?>"></a><a class="dashicons dashicons-googleplus" href="https://plus.google.com/+petersplugins" title="<?php _e( 'Authors Google+ Page', '404page' ); ?>"></a><a class="dashicons dashicons-facebook-alt" href="https://www.facebook.com/petersplugins/" title="<?php _e( 'Authors facebook Page', '404page' ); ?>"></a><a class="dashicons dashicons-book-alt" href="<?php echo $this->dc_url; ?>" title="<?php _e( 'Plugin Doc', '404page' ); ?>"></a><a class="dashicons dashicons-editor-help" href="https://wordpress.org/support/plugin/<?php echo $this->plugin_slug; ?>/" title="<?php _e( 'Support', '404page'); ?>"></a><a class="dashicons dashicons-admin-comments" href="https://petersplugins.com/contact/" title="<?php _e( 'Contact Author', '404page' ); ?>"></a></span>
+        </h1>
         <?php settings_errors(); ?>
         <form method="post" action="options.php">
           <?php settings_fields( '404page_settings' ); ?>
@@ -1089,13 +1181,13 @@ if ( !class_exists( 'PP_404Page' ) ) {
       
       if ( $pageid != 0 ) {
         
-        $page = get_post( $pageid );
+       $page = get_post( $pageid );
         
         if ( !$page || $page->post_status != 'publish' ) {
           
           $pageid = -1;
           
-        }
+        } 
         
       }
       

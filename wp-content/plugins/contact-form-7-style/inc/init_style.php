@@ -23,21 +23,10 @@ function get_predefined_cf7_style_template_data() {
 }// end of get_predefined_cf7_style_template_data
 
 function cf7_style_set_style_category_on_publish(  $ID, $post ) {
-	$temporizator = 0;
-	$tpl_data = get_predefined_cf7_style_template_data();
-	if( $tpl_data ){
-		foreach ( $tpl_data as $predefined_post_titles ) {
-			if( $post->post_title == $predefined_post_titles[ "title" ] ){
-				$temporizator++;
-			}	
-		}
-	}
-	if( 0 == $temporizator ) {
-		wp_set_object_terms( $ID, 'custom style', 'style_category' );
-	}
+	wp_set_object_terms( $ID, 'custom style', 'style_category' );
 } // end cf7_style_set_style_category_on_publish
 
-function cf7_style_create_post( $slug, $title, $image) {
+function cf7_style_create_post( $slug, $title, $image, $temp_cat) {
 	// Initialize the page ID to -1. This indicates no action has been taken.
 	$post_id = -1;
 	$was_deleted = get_option('cf7_style_deleted'); 
@@ -60,8 +49,8 @@ function cf7_style_create_post( $slug, $title, $image) {
 				echo $error . '<br>'; 
 			}
 		} else {
-			//wp_set_object_terms( $post_id, $category, 'style_category', false );
 			update_post_meta( $post_id, 'cf7_style_image_preview', $image );
+			wp_set_object_terms( $post_id, $temp_cat, 'style_category' );
 		}
 	// Otherwise, we'll stop
 	} else {
@@ -138,35 +127,18 @@ function cf7style_load_elements(){
 	);
 	//register tax
 	register_taxonomy( 'style_category', array( 'cf7_style' ), $args );
-	$tpl_data = get_predefined_cf7_style_template_data();
-	if( $tpl_data ){
-		foreach ( $tpl_data as $style ) {
-			cf7_style_create_post( strtolower( str_replace( " ", "-", $style['title'] ) ), $style['title'], $style['image'] );
-		}
-		if( get_option( 'cf7_style_add_categories', 0 ) == 0 ){
-			$cf7_style_args = array(
-				'post_type' => 'cf7_style',
-				'posts_per_page' => '-1'
-			);
-			
-			$cf7_style_query = new WP_Query( $cf7_style_args );
-			if ( $cf7_style_query->have_posts() ) {
-				while ( $cf7_style_query->have_posts() ) {
-					$cf7_style_query->the_post();
-					$temp_title = get_the_title();
-					$temp_ID = get_the_ID();
-
-					foreach ( $tpl_data as $style ) {
-						if( $temp_title == wptexturize( $style[ 'title' ] ) ) {
-							wp_set_object_terms( $temp_ID, $style[ 'category' ], 'style_category' );
-						}
-					}
-				}
-				wp_reset_postdata();
-				update_option( 'cf7_style_add_categories', 1 );
+	$add_post_or_not = get_option( 'cf7_style_add_categories', 0 );
+	if( $add_post_or_not == 0 ){
+		$tpl_data = get_predefined_cf7_style_template_data();
+		if( $tpl_data ){
+			foreach ( $tpl_data as $style ) {
+				cf7_style_create_post( strtolower( str_replace( " ", "-", $style['title'] ) ), $style['title'], $style['image'], $style[ 'category' ] );
 			}
+			update_option( 'cf7_style_add_categories', 1 );
 		}
+		
 	}
+
 	$cf7_style_update_saved = get_option( 'cf7_style_update_saved' );
 	if( $cf7_style_update_saved == "yes" ) {
 			$cf7_style_args = array(

@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Spacer
+Widget Name: Spacer
 Description: Add spacer between rows and elements that changes based on device resolution.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -63,11 +63,11 @@ class LVCA_Spacer {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Spacer", "livemesh-vc-addons"),
+                "name" => __("Spacer", "livemesh-vc-addons"),
                 "base" => "lvca_spacer",
                 "content_element" => true,
                 "show_settings_on_create" => false,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 'description' => __('Add spacer between rows and elements.', 'livemesh-vc-addons'),
                 "icon" => 'icon-lvca-spacer',
                 "params" => array(

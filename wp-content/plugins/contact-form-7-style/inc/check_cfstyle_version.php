@@ -10,6 +10,7 @@ function cf7_style_create_posts(){
 	update_option( 'cf7_style_update_saved', 'yes' );
 	update_option( 'cf7_style_allow_tracking', '5' );
 	update_option( 'cf7_style_add_categories', '0' );
+	update_option( 'cf7_style_adminbar', '1' );
 }
 
 function cf7style_update_db_check() {

@@ -2,17 +2,18 @@
 function EWD_UFAQ_Export_To_PDF() {
 		require_once(EWD_UFAQ_CD_PLUGIN_PATH . '/FPDF/fpdf.php');
 		
-		if ($Category != "EWD_UFAQ_ALL_CATEGORIES") {$category_array = array( 'taxonomy' => 'ufaq-category',
-					 							 																			 	 					'field' => 'slug',
-																																					'terms' => $Category->slug
-																																 			  );
-
+		if ($Category != "EWD_UFAQ_ALL_CATEGORIES") {
+			$category_array = array( 
+				'taxonomy' => 'ufaq-category',
+				'field' => 'slug',
+				'terms' => $Category->slug
+			);
 		}
 
 		$params = array(
-										'posts_per_page' => -1,
-										'post_type' => 'ufaq'
-									 );
+			'posts_per_page' => -1,
+			'post_type' => 'ufaq'
+		);
 		$faqs = get_posts($params);
 
 		$PDFPasses = array("FirstPageRun", "SecondPageRun", "Final");
@@ -28,8 +29,8 @@ function EWD_UFAQ_Export_To_PDF() {
 						$pdf->SetFont('Arial','',12);
 
 						foreach ($ToC as $entry) {
-								$pdf->Cell(20, 5, "  " . $entry['page']);
-								$pdf->MultiCell(0, 5, $entry['title']);
+								$pdf->Cell(20, 5, "  " . utf8_decode($entry['page']));
+								$pdf->MultiCell(0, 5, utf8_decode($entry['title']));
 								$pdf->Ln();
 						}
 
@@ -37,9 +38,9 @@ function EWD_UFAQ_Export_To_PDF() {
 				}
 
 				foreach ($faqs as $faq) {
-						$PostTitle = strip_tags(html_entity_decode($faq->post_title));
+						$PostTitle = utf8_decode(strip_tags(html_entity_decode($faq->post_title)));
 
-						$PostText = strip_tags(html_entity_decode($faq->post_content));
+						$PostText = utf8_decode(strip_tags(html_entity_decode($faq->post_content)));
 						$PostText = str_replace("&#91;", "[", $PostText);
 						$PostText = str_replace("&#93;", "]", $PostText);
 

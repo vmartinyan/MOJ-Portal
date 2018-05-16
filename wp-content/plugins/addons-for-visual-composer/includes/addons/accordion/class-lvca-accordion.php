@@ -1,7 +1,7 @@
 <?php
 
 /*
-Widget Name: Livemesh Accordion
+Widget Name: Accordion
 Description: Displays collapsible content panels to help display information when space is limited.
 Author: LiveMesh
 Author URI: https://www.livemeshthemes.com
@@ -90,12 +90,12 @@ class LVCA_Accordion {
 
             //Register "container" content element. It will hold all your inner (child) content elements
             vc_map(array(
-                "name" => __("Livemesh Accordion", "livemesh-vc-addons"),
+                "name" => __("Accordion", "livemesh-vc-addons"),
                 "base" => "lvca_accordion",
                 "as_parent" => array('only' => 'lvca_panel'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
                 "content_element" => true,
                 "show_settings_on_create" => false,
-                "category" => __("Livemesh VC Addons", "livemesh-vc-addons"),
+                "category" => __("Livemesh Addons", "livemesh-vc-addons"),
                 "is_container" => true,
                 'description' => __('Display collapsible content panels.', 'livemesh-vc-addons'),
                 "js_view" => 'VcColumnView',
@@ -134,7 +134,7 @@ class LVCA_Accordion {
     function map_child_vc_element() {
         if (function_exists("vc_map")) {
             vc_map(array(
-                    "name" => __("Livemesh Panel", "my-text-domain"),
+                    "name" => __("Panel", "my-text-domain"),
                     "base" => "lvca_panel",
                     "content_element" => true,
                     "as_child" => array('only' => 'lvca_accordion'), // Use only|except attributes to limit parent (separate multiple values with comma)

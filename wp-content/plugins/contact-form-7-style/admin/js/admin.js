@@ -15,21 +15,33 @@ jQuery(document).ready(function($) {
     function hideShowBtns(previewForm) {
         if (previewForm.find('label').length < 1) {
             $('.button[data-property="label"]').hide();
+        } else {
+            $('.button[data-property="label"]').show();
         }
         if (previewForm.find('p').length < 1) {
             $('.button[data-property="p"]').hide();
+        } else {
+            $('.button[data-property="p"]').show();
         }
         if (previewForm.find('fieldset').length < 1) {
             $('.button[data-property="fieldset"]').hide();
+        } else {
+            $('.button[data-property="fieldset"]').show();
         }
         if (previewForm.find('select').length < 1) {
             $('.button[data-property="select"]').hide();
+        } else {
+            $('.button[data-property="select"]').show();
         }
         if (previewForm.find('input[type="checkbox"]').length < 1) {
             $('.button[data-property="checkbox"]').hide();
+        } else {
+            $('.button[data-property="checkbox"]').show();
         }
         if (previewForm.find('input[type="radio"]').length < 1) {
             $('.button[data-property="radio"]').hide();
+        } else {
+            $('.button[data-property="radio"]').show();
         }
     }
 
@@ -431,6 +443,7 @@ jQuery(document).ready(function($) {
         $('#form-preview').on('change', function() {
             $('.preview-form-container').addClass('hidden');
             $('.preview-form-container').eq($(this).val()).removeClass('hidden');
+            hideShowBtns( $('.preview-form-container').eq($(this).val()) );
         });
         var once = 0;
         $(document).on("change", '[name^="cf7stylecustom"]', function() {

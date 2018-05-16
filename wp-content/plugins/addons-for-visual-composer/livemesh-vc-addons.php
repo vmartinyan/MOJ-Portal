@@ -1,28 +1,28 @@
 <?php
 /**
- * Plugin Name: Addons for Visual Composer
- * Plugin URI: https://www.livemeshthemes.com/visual-composer-addons
- * Description: A collection of premium quality addons or extensions for use in Visual Composer page builder. Visual composer must be installed and activated.
+ * Plugin Name: Addons for WPBakery Page Builder
+ * Plugin URI: https://www.livemeshthemes.com/wpbakery-page-builder-addons
+ * Description: A collection of premium quality addons or extensions for use in WPBakery Page Builder. WPBakery Page Builder must be installed and activated.
  * Author: Livemesh
- * Author URI: https://www.livemeshthemes.com/visual-composer-addons
+ * Author URI: https://www.livemeshthemes.com/wpbakery-page-builder-addons
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Version: 1.8.2
+ * Version: 1.9.1
  * Text Domain: livemesh-vc-addons
  * Domain Path: languages
  *
- * Addons for Visual Composer is free software: you can redistribute it and/or modify
+ * Addons for WPBakery Page Builder is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
  * any later version.
  *
- * Addons for Visual Composer is distributed in the hope that it will be useful,
+ * Addons for WPBakery Page Builder is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Addons for Visual Composer. If not, see <http://www.gnu.org/licenses/>.
+ * along with Addons for WPBakery Page Builder. If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -75,7 +75,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         public function __clone() {
             // Cloning instances of the class is forbidden
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.8.2');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.9.1');
         }
 
         /**
@@ -84,7 +84,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
          */
         public function __wakeup() {
             // Unserializing instances of the class is forbidden
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.8.2');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'livemesh-vc-addons'), '1.9.1');
         }
 
         /**
@@ -95,7 +95,7 @@ if (!class_exists('Livemesh_VC_Addons')) :
 
             // Plugin version
             if (!defined('LVCA_VERSION')) {
-                define('LVCA_VERSION', '1.8.2');
+                define('LVCA_VERSION', '1.9.1');
             }
 
             // Plugin Folder Path

@@ -3,7 +3,7 @@
 Plugin Name: Contact Form 7 Style
 Plugin URI: http://wordpress.reea.net/contact-form-7-style/
 Description: Simple style customization and templating for Contact Form 7 forms. Requires Contact Form 7 plugin installed.
-Version: 3.1.6
+Version: 3.1.7
 Author: Johnny, dorumarginean, mlehelsz, MirceaR
 Author URI: http://cf7style.com
 License: GPL2
@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'WPCF7S_PLUGIN', __FILE__ );	
 define( 'WPCF7S_PLUGIN_DIR', untrailingslashit( dirname( WPCF7S_PLUGIN ) ) );
 define( 'WPCF7S_LOCATION',plugin_dir_url( WPCF7S_PLUGIN ) );
-define( 'WPCF7S_PLUGIN_VER', '3.1.6' );
+define( 'WPCF7S_PLUGIN_VER', '3.1.7' );
 define( 'WPCF7S_REQ_PLUGIN', 'contact-form-7/wp-contact-form-7.php' );
 
 /*

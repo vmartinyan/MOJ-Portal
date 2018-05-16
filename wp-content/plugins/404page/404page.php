@@ -9,7 +9,7 @@
  * Plugin Name: 404page - your smart custom 404 error page
  * Plugin URI: https://petersplugins.com/free-wordpress-plugins/404page/
  * Description: Custom 404 the easy way! Set any page as custom 404 error page. No coding needed. Works with (almost) every Theme.
- * Version: 3.3
+ * Version: 5
  * Author: Peter Raschendorfer
  * Author URI: https://petersplugins.com
  * Text Domain: 404page
@@ -28,12 +28,19 @@ if ( ! defined( 'WPINC' ) ) {
  * Load core plugin class and run the plugin
  */
 require_once( plugin_dir_path( __FILE__ ) . '/inc/class-404page.php' );
-$pp_404page = new PP_404Page( __FILE__ );
+$pp_404page = new PP_404Page( array(
+  'file'    => __FILE__,
+  'slug'    => pathinfo( __FILE__, PATHINFO_FILENAME ),
+  'name'    => '404page - your smart custom 404 error page',
+  'version' => '5'
+  )  
+);
 
 
 /**
  * Theme functions
  */
+ 
 
 // this function can be used by a theme to check if there's an active custom 404 page
 function pp_404_is_active() {

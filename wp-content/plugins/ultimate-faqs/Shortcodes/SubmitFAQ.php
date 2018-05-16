@@ -82,6 +82,8 @@ function Insert_Question_Form($atts) {
 
 	if ($Submit_Custom_Fields == "Yes") {
 		foreach ($FAQ_Fields_Array as $FAQ_Field_Item) {
+			if ($FAQ_Field_Item['FieldType'] == 'file') {continue;}
+
 			$ReturnString .= "<div class='form-field'>";
 			$ReturnString .= "<div class='ufaq-submit-custom-field-label'>" . $FAQ_Field_Item['FieldName'] . ": </div>";
 			if ($FAQ_Field_Item['FieldType'] == 'text') {$ReturnString .= "<input type='text' name='Custom_Field_" . $FAQ_Field_Item['FieldID'] . "' />";}
